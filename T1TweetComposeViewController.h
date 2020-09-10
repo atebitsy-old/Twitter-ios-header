@@ -22,7 +22,7 @@
 #import <T1Twitter/T1VoiceRecordingViewControllerDelegate-Protocol.h>
 #import <T1Twitter/TFNInputAccessoryViewDelegate-Protocol.h>
 
-@class NSArray, NSString, T1AutocompleteController, T1ComposeDropManager, T1ComposeSessionConfig, T1CompositionState, T1ConversationControlTypeSelectionController, T1FoundMediaController, T1PhotoGalleryViewController, T1PhotoMediaRailViewController, T1TweetComposeAutocompleteViewController, T1TweetComposeConversationControlButton, T1TweetComposeTableViewController, T1TweetComposeTooltipper, T1VoiceRecordingPlaybackController, TFNBarButtonItem, TFNButton, TFNButtonBarView, TFNCircularCountProgressView, TFNDragDropIndicationView, TFNTwitterAccount, TFNTwitterComposition, TFNTwitterStatus, UIView;
+@class NSArray, NSString, T1AutocompleteController, T1ComposeDropManager, T1ComposeSessionConfig, T1CompositionState, T1ConversationControlTypeSelectionController, T1FoundMediaController, T1PhotoGalleryViewController, T1PhotoMediaRailViewController, T1TweetComposeAutocompleteViewController, T1TweetComposeConversationControlButton, T1TweetComposeTableViewController, T1TweetComposeTooltipper, T1VoiceRecordingPlaybackController, TFNBarButtonItem, TFNButtonBarView, TFNCircularCountProgressView, TFNDragDropIndicationView, TFNLegacyButton, TFNTwitterAccount, TFNTwitterComposition, TFNTwitterStatus, UIView;
 @protocol T1TweetComposeViewControllerDelegate;
 
 @interface T1TweetComposeViewController : TFNViewController <T1AltTextEducationPromptViewControllerDelegate, T1AltTextViewControllerDelegate, T1AutocompleteControllerDelegate, T1ComposeDropManagerDelegate, T1FiltersViewControllerDelegate, T1FoundMediaControllerDelegate, T1PeriscopeBroadcastViewControllerDelegate, T1PhotoGalleryViewControllerDelegate, T1PhotoMediaRailViewControllerDelegate, T1TweetComposeAutocompleteViewControllerDelegate, T1TweetComposeTableViewControllerDelegate, T1TweetDraftsViewControllerDelegate, T1VideoTrimmerViewControllerDelegate, TFNInputAccessoryViewDelegate, T1VoiceRecordingViewControllerDelegate>
@@ -32,6 +32,7 @@
     _Bool _updatingCurrentComposeState;
     _Bool _isInWindowScene;
     _Bool _twitterTextEditorEnabled;
+    _Bool _mixedMediaGIFCreationEnabled;
     _Bool _keyboardDocked;
     _Bool _keyboardAnimating;
     _Bool _shouldFocusPollOnShow;
@@ -51,19 +52,19 @@
     UIView *_accessorySafeAreaMaskView;
     unsigned long long _accessoryViewState;
     T1PhotoMediaRailViewController *_mediaRailViewController;
-    TFNButton *_draftsButton;
-    TFNButton *_voiceButton;
-    TFNButton *_galleryButton;
-    TFNButton *_geoButton;
-    TFNButton *_foundMediaButton;
-    TFNButton *_pollButton;
+    TFNLegacyButton *_draftsButton;
+    TFNLegacyButton *_voiceButton;
+    TFNLegacyButton *_galleryButton;
+    TFNLegacyButton *_geoButton;
+    TFNLegacyButton *_foundMediaButton;
+    TFNLegacyButton *_pollButton;
     UIView *_conversationControlContainer;
     T1TweetComposeConversationControlButton *_conversationControlButton;
     UIView *_conversationControlTopSeparator;
     UIView *_conversationControlBottomSeparator;
-    TFNButton *_addTweetButton;
+    TFNLegacyButton *_addTweetButton;
     UIView *_buttonBarDividerView;
-    TFNButton *_sendButton;
+    TFNLegacyButton *_sendButton;
     T1TweetComposeTooltipper *_tooltipper;
     TFNCircularCountProgressView *_progressView;
     UIView *_inputAccessoryView;
@@ -90,19 +91,19 @@
 @property(nonatomic) _Bool keyboardDocked; // @synthesize keyboardDocked=_keyboardDocked;
 @property(retain, nonatomic) TFNCircularCountProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) T1TweetComposeTooltipper *tooltipper; // @synthesize tooltipper=_tooltipper;
-@property(retain, nonatomic) TFNButton *sendButton; // @synthesize sendButton=_sendButton;
+@property(retain, nonatomic) TFNLegacyButton *sendButton; // @synthesize sendButton=_sendButton;
 @property(retain, nonatomic) UIView *buttonBarDividerView; // @synthesize buttonBarDividerView=_buttonBarDividerView;
-@property(retain, nonatomic) TFNButton *addTweetButton; // @synthesize addTweetButton=_addTweetButton;
+@property(retain, nonatomic) TFNLegacyButton *addTweetButton; // @synthesize addTweetButton=_addTweetButton;
 @property(retain, nonatomic) UIView *conversationControlBottomSeparator; // @synthesize conversationControlBottomSeparator=_conversationControlBottomSeparator;
 @property(retain, nonatomic) UIView *conversationControlTopSeparator; // @synthesize conversationControlTopSeparator=_conversationControlTopSeparator;
 @property(retain, nonatomic) T1TweetComposeConversationControlButton *conversationControlButton; // @synthesize conversationControlButton=_conversationControlButton;
 @property(retain, nonatomic) UIView *conversationControlContainer; // @synthesize conversationControlContainer=_conversationControlContainer;
-@property(retain, nonatomic) TFNButton *pollButton; // @synthesize pollButton=_pollButton;
-@property(retain, nonatomic) TFNButton *foundMediaButton; // @synthesize foundMediaButton=_foundMediaButton;
-@property(retain, nonatomic) TFNButton *geoButton; // @synthesize geoButton=_geoButton;
-@property(retain, nonatomic) TFNButton *galleryButton; // @synthesize galleryButton=_galleryButton;
-@property(retain, nonatomic) TFNButton *voiceButton; // @synthesize voiceButton=_voiceButton;
-@property(retain, nonatomic) TFNButton *draftsButton; // @synthesize draftsButton=_draftsButton;
+@property(retain, nonatomic) TFNLegacyButton *pollButton; // @synthesize pollButton=_pollButton;
+@property(retain, nonatomic) TFNLegacyButton *foundMediaButton; // @synthesize foundMediaButton=_foundMediaButton;
+@property(retain, nonatomic) TFNLegacyButton *geoButton; // @synthesize geoButton=_geoButton;
+@property(retain, nonatomic) TFNLegacyButton *galleryButton; // @synthesize galleryButton=_galleryButton;
+@property(retain, nonatomic) TFNLegacyButton *voiceButton; // @synthesize voiceButton=_voiceButton;
+@property(retain, nonatomic) TFNLegacyButton *draftsButton; // @synthesize draftsButton=_draftsButton;
 @property(retain, nonatomic) T1PhotoMediaRailViewController *mediaRailViewController; // @synthesize mediaRailViewController=_mediaRailViewController;
 @property(nonatomic) unsigned long long accessoryViewState; // @synthesize accessoryViewState=_accessoryViewState;
 @property(retain, nonatomic) UIView *accessorySafeAreaMaskView; // @synthesize accessorySafeAreaMaskView=_accessorySafeAreaMaskView;
@@ -113,6 +114,7 @@
 @property(retain, nonatomic) T1AutocompleteController *autocompleteController; // @synthesize autocompleteController=_autocompleteController;
 @property(retain, nonatomic) T1TweetComposeAutocompleteViewController *autocompleteViewController; // @synthesize autocompleteViewController=_autocompleteViewController;
 @property(nonatomic) __weak T1PhotoGalleryViewController *currentPhotoGalleryViewController; // @synthesize currentPhotoGalleryViewController=_currentPhotoGalleryViewController;
+@property(nonatomic, getter=isMixedMediaGIFCreationEnabled) _Bool mixedMediaGIFCreationEnabled; // @synthesize mixedMediaGIFCreationEnabled=_mixedMediaGIFCreationEnabled;
 @property(readonly, nonatomic, getter=isTwitterTextEditorEnabled) _Bool twitterTextEditorEnabled; // @synthesize twitterTextEditorEnabled=_twitterTextEditorEnabled;
 @property(readonly, nonatomic) _Bool isInWindowScene; // @synthesize isInWindowScene=_isInWindowScene;
 @property(retain, nonatomic) T1CompositionState *compositionState; // @synthesize compositionState=_compositionState;
@@ -183,6 +185,7 @@
 - (void)_t1_presentModalViewController:(id)arg1 fromRect:(struct CGRect)arg2 inView:(id)arg3 preferredPresentationStyle:(long long)arg4 layoutDelegate:(id)arg5;
 - (void)_t1_presentPopoverModalViewController:(id)arg1 fromRect:(struct CGRect)arg2 inView:(id)arg3;
 - (void)_t1_presentModalViewController:(id)arg1;
+- (_Bool)_t1_hasAttachmentAndIsMixedMediaGIFCreationEnabled;
 - (void)_t1_addOrReplaceAttachment:(id)arg1 scribeWithSource:(id)arg2;
 - (void)addOrReplaceAttachment:(id)arg1;
 - (void)periscopeBroadcastViewControllerDismissTweetComposer;
@@ -278,6 +281,8 @@
 - (_Bool)_t1_shouldEnableAttachmentButtonsForActiveTweetViewController;
 - (_Bool)_t1_shouldEnableGeoButton;
 - (_Bool)_t1_shouldEnablePollComposeButton;
+- (_Bool)_t1_shouldEnableGalleryButtonForMixedMediaOrDefault;
+- (_Bool)_t1_shouldEnableFoundMediaButtonForMixedMediaOrDefault;
 - (_Bool)_t1_shouldEnableGalleryButton;
 - (_Bool)_t1_shouldEnableFoundMediaButton;
 - (id)_t1_sendButtonTitleForSendButtonState:(unsigned long long)arg1;

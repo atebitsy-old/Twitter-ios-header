@@ -9,18 +9,15 @@
 #import <T1Twitter/T1ComposeViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1ComposerPresenting-Protocol.h>
 #import <T1Twitter/T1DataViewControllerRenderPerformanceLoggerDataSource-Protocol.h>
-#import <T1Twitter/T1DisplayTweetTranslationDelegate-Protocol.h>
 #import <T1Twitter/T1ErrorDataViewAdapterDelegate-Protocol.h>
 #import <T1Twitter/T1FeedbackActionProvider-Protocol.h>
 #import <T1Twitter/T1ImageTransitionDelegate-Protocol.h>
 #import <T1Twitter/T1JumpBackToHomeTimelineBehavior-Protocol.h>
 #import <T1Twitter/T1PersistentComposeAccountProvider-Protocol.h>
 #import <T1Twitter/T1PersistentComposeViewControllerDelegate-Protocol.h>
-#import <T1Twitter/T1SlideshowBuilder-Protocol.h>
 #import <T1Twitter/T1SlideshowViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1TweetDetailsFocalStatusTableRowAdapterDelegate-Protocol.h>
 #import <T1Twitter/T1TweetDetailsSharedBehavior-Protocol.h>
-#import <T1Twitter/T1TweetDetailsTweetBodyItemsDelegate-Protocol.h>
 #import <T1Twitter/T1URTConversationTimelineObserver-Protocol.h>
 #import <T1Twitter/T1URTTimelineTombstoneItemViewModelDelegate-Protocol.h>
 #import <T1Twitter/T1VideoMonetizationSettingsViewControllerDelegate-Protocol.h>
@@ -29,15 +26,14 @@
 #import <T1Twitter/TFNTooltipDelegate-Protocol.h>
 #import <T1Twitter/UIResponderStandardEditActions-Protocol.h>
 
-@class NSDate, NSMutableSet, NSString, T1AppNavigationContext, T1CardItem, T1CardItemTableRowAdapter, T1DataViewControllerRenderPerformanceLogger, T1NavigationMetadata, T1PersistentComposeViewController, T1QuotedStatusItem, T1ShowStatusNavigationContext, T1StatusLiveEngagementManager, T1StatusMediaHandler, T1StatusTableSlideshowManager, T1TweetDetailsActionContextItem, T1TweetDetailsActionView, T1TweetDetailsFetcher, T1TweetDetailsFocalStatusTableRowAdapter, T1TweetDetailsMultiPhotoItem, T1TweetDetailsNativeVideoItem, T1TweetDetailsNewsCameraMediaStatusItem, T1TweetDetailsTweetBodyItems, T1TweetDetailsUserRecommendationItem, T1URTConversationTimeline, T1URTTimelineCursorTableRowAdapter, T1UnifiedCardItem, T1UnifiedCardItemTableRowAdapter, TFNBarButtonItem, TFNGenericItem, TFNTwitterAccount, TFNTwitterStatus, TFSTwitterScribeContext, TFSTwitterVideoMonetizationSettings, TIPImagePipeline, UIPopoverPresentationController, UIView;
+@class NSDate, NSMutableSet, NSString, T1AppNavigationContext, T1DataViewControllerRenderPerformanceLogger, T1NavigationMetadata, T1PersistentComposeViewController, T1ShowStatusNavigationContext, T1StatusLiveEngagementManager, T1StatusMediaHandler, T1StatusTableSlideshowManager, T1TweetDetailsActionContextItem, T1TweetDetailsActionView, T1TweetDetailsFetcher, T1TweetDetailsFocalStatusTableRowAdapter, T1URTConversationTimeline, T1URTTimelineCursorTableRowAdapter, TFNBarButtonItem, TFNGenericItem, TFNTwitterAccount, TFNTwitterStatus, TFSTwitterScribeContext, TFSTwitterVideoMonetizationSettings, TIPImagePipeline, UIPopoverPresentationController, UIView;
 @protocol T1StatusViewInlineActions, T1StatusViewModel, T1TweetDetailsViewControllerDelegate;
 
-@interface T1TweetDetailsViewController : TFNItemsDataViewController <TFNTooltipDelegate, T1PersistentComposeViewControllerDelegate, T1ComposerPresenting, T1ComposeViewControllerDelegate, T1SlideshowBuilder, T1TweetDetailsTweetBodyItemsDelegate, T1ImageTransitionDelegate, T1DisplayTweetTranslationDelegate, T1ErrorDataViewAdapterDelegate, T1VideoMonetizationSettingsViewControllerDelegate, T1URTConversationTimelineObserver, T1URTTimelineTombstoneItemViewModelDelegate, T1DataViewControllerRenderPerformanceLoggerDataSource, T1FeedbackActionProvider, TFNDataViewKeyboardSelectionDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, UIResponderStandardEditActions, T1JumpBackToHomeTimelineBehavior, TFNLayoutMetricsEnvironment, T1SlideshowViewControllerDelegate, T1PersistentComposeAccountProvider, T1TweetDetailsSharedBehavior>
+@interface T1TweetDetailsViewController : TFNItemsDataViewController <TFNTooltipDelegate, T1PersistentComposeViewControllerDelegate, T1ComposerPresenting, T1ComposeViewControllerDelegate, T1ImageTransitionDelegate, T1ErrorDataViewAdapterDelegate, T1VideoMonetizationSettingsViewControllerDelegate, T1URTConversationTimelineObserver, T1URTTimelineTombstoneItemViewModelDelegate, T1DataViewControllerRenderPerformanceLoggerDataSource, T1FeedbackActionProvider, TFNDataViewKeyboardSelectionDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, UIResponderStandardEditActions, T1JumpBackToHomeTimelineBehavior, TFNLayoutMetricsEnvironment, T1SlideshowViewControllerDelegate, T1PersistentComposeAccountProvider, T1TweetDetailsSharedBehavior>
 {
     double _allRequiredPartsCompleteDuration;
     double _conversationCompleteDuration;
     T1DataViewControllerRenderPerformanceLogger *_perfLogger;
-    T1TweetDetailsTweetBodyItems *_bodyItems;
     id _firstBodyItem;
     id _lastBodyItem;
     UIView<T1StatusViewInlineActions> *_tweetDetailsActionView;
@@ -55,7 +51,6 @@
         unsigned int didScribeReply:1;
         unsigned int shouldForceScrollToBottomWhenFinishedUpdating:1;
         unsigned int shouldRenderUnifiedCard:1;
-        unsigned int shouldSuppressText:1;
         unsigned int shouldSuppressSensitiveContent:1;
         unsigned int focalTweetWasDeleted:1;
         unsigned int shouldScrollToInsertedTweet:1;
@@ -65,7 +60,8 @@
     } _tweetDetailsFlags;
     NSDate *_initialViewConversationDate;
     _Bool _isPresentingBookmark;
-    _Bool _showingDescendantsOnly;
+    _Bool _displayingCard;
+    _Bool _displayingUnifiedCard;
     _Bool _holdUpdatesUntilScrollComplete;
     _Bool _intentBlockDidRun;
     _Bool _keyboardDocked;
@@ -87,17 +83,8 @@
     TFSTwitterScribeContext *_controllerScribeContext;
     T1NavigationMetadata *_navigationMetadata;
     T1NavigationMetadata *_sourceNavigationMetadata;
-    T1TweetDetailsUserRecommendationItem *_userRecommendationItem;
-    T1CardItem *_cardItem;
-    T1UnifiedCardItem *_unifiedCardItem;
-    T1TweetDetailsNativeVideoItem *_nativeVideoItem;
-    T1QuotedStatusItem *_quotedStatusItem;
-    T1CardItemTableRowAdapter *_cardRowAdapter;
-    T1UnifiedCardItemTableRowAdapter *_unifiedCardRowAdapter;
     T1TweetDetailsFocalStatusTableRowAdapter *_focalStatusTableRowAdapter;
     T1TweetDetailsActionContextItem *_actionContextItem;
-    T1TweetDetailsMultiPhotoItem *_mediaItem;
-    T1TweetDetailsNewsCameraMediaStatusItem *_ncMediaItem;
     UIPopoverPresentationController *_autocompletePopoverController;
     T1URTConversationTimeline *_conversationTimeline;
     T1TweetDetailsFetcher *_tweetDetailsFetcher;
@@ -114,8 +101,6 @@
     NSMutableSet *_compositionReplyChainUniqueIDs;
     T1URTTimelineCursorTableRowAdapter *_urtCursorAdapter;
     unsigned long long _translationState;
-    id _conversationObserver;
-    long long _conversationID;
     unsigned long long _loadState;
     TFNBarButtonItem *_subscribeButton;
     struct CGRect _currentKeyboardFrame;
@@ -126,8 +111,6 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNBarButtonItem *subscribeButton; // @synthesize subscribeButton=_subscribeButton;
 @property(nonatomic) unsigned long long loadState; // @synthesize loadState=_loadState;
-@property(nonatomic) long long conversationID; // @synthesize conversationID=_conversationID;
-@property(retain, nonatomic) id conversationObserver; // @synthesize conversationObserver=_conversationObserver;
 @property(nonatomic) unsigned long long translationState; // @synthesize translationState=_translationState;
 @property(retain, nonatomic) T1URTTimelineCursorTableRowAdapter *urtCursorAdapter; // @synthesize urtCursorAdapter=_urtCursorAdapter;
 @property(nonatomic) _Bool isAutoTranslationImpressionScribed; // @synthesize isAutoTranslationImpressionScribed=_isAutoTranslationImpressionScribed;
@@ -157,22 +140,14 @@
 @property(retain, nonatomic) T1URTConversationTimeline *conversationTimeline; // @synthesize conversationTimeline=_conversationTimeline;
 @property(nonatomic) __weak UIPopoverPresentationController *autocompletePopoverController; // @synthesize autocompletePopoverController=_autocompletePopoverController;
 @property(nonatomic) _Bool holdUpdatesUntilScrollComplete; // @synthesize holdUpdatesUntilScrollComplete=_holdUpdatesUntilScrollComplete;
-@property(retain, nonatomic) T1TweetDetailsNewsCameraMediaStatusItem *ncMediaItem; // @synthesize ncMediaItem=_ncMediaItem;
-@property(retain, nonatomic) T1TweetDetailsMultiPhotoItem *mediaItem; // @synthesize mediaItem=_mediaItem;
 @property(retain, nonatomic) T1TweetDetailsActionContextItem *actionContextItem; // @synthesize actionContextItem=_actionContextItem;
 @property(retain, nonatomic) T1TweetDetailsFocalStatusTableRowAdapter *focalStatusTableRowAdapter; // @synthesize focalStatusTableRowAdapter=_focalStatusTableRowAdapter;
-@property(retain, nonatomic) T1UnifiedCardItemTableRowAdapter *unifiedCardRowAdapter; // @synthesize unifiedCardRowAdapter=_unifiedCardRowAdapter;
-@property(retain, nonatomic) T1CardItemTableRowAdapter *cardRowAdapter; // @synthesize cardRowAdapter=_cardRowAdapter;
-@property(retain, nonatomic) T1QuotedStatusItem *quotedStatusItem; // @synthesize quotedStatusItem=_quotedStatusItem;
-@property(retain, nonatomic) T1TweetDetailsNativeVideoItem *nativeVideoItem; // @synthesize nativeVideoItem=_nativeVideoItem;
-@property(retain, nonatomic) T1UnifiedCardItem *unifiedCardItem; // @synthesize unifiedCardItem=_unifiedCardItem;
-@property(retain, nonatomic) T1CardItem *cardItem; // @synthesize cardItem=_cardItem;
-@property(retain, nonatomic) T1TweetDetailsUserRecommendationItem *userRecommendationItem; // @synthesize userRecommendationItem=_userRecommendationItem;
 @property(readonly, nonatomic) T1NavigationMetadata *sourceNavigationMetadata; // @synthesize sourceNavigationMetadata=_sourceNavigationMetadata;
 @property(readonly, nonatomic) T1NavigationMetadata *navigationMetadata; // @synthesize navigationMetadata=_navigationMetadata;
 @property(readonly, copy, nonatomic) TFSTwitterScribeContext *controllerScribeContext; // @synthesize controllerScribeContext=_controllerScribeContext;
 @property(nonatomic) __weak id <T1TweetDetailsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-@property(nonatomic, getter=isShowingDescendantsOnly) _Bool showingDescendantsOnly; // @synthesize showingDescendantsOnly=_showingDescendantsOnly;
+@property(readonly, nonatomic, getter=isDisplayingUnifiedCard) _Bool displayingUnifiedCard; // @synthesize displayingUnifiedCard=_displayingUnifiedCard;
+@property(readonly, nonatomic, getter=isDisplayingCard) _Bool displayingCard; // @synthesize displayingCard=_displayingCard;
 @property(nonatomic) _Bool isPresentingBookmark; // @synthesize isPresentingBookmark=_isPresentingBookmark;
 @property(retain, nonatomic) T1AppNavigationContext *navigationContext; // @synthesize navigationContext=_navigationContext;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
@@ -187,7 +162,6 @@
 - (void)keyboardHighlightCell:(id)arg1 highlighted:(_Bool)arg2;
 - (id)keyboardHighlightIndexPathsForIndexPath:(id)arg1;
 - (long long)isCellKeyboardHighlightableAtIndexPath:(id)arg1;
-- (void)_t1_observeConversationID:(long long)arg1;
 - (CDUnknownBlockType)didProvideModerateFeedbackBlockForStatus:(id)arg1;
 - (CDUnknownBlockType)didProvideShowLessOftenFeedbackForStatus:(id)arg1;
 - (id)negativeFeedbackActionsForStatus:(id)arg1;
@@ -198,13 +172,10 @@
 - (void)tfn_fontSizeChanged;
 - (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (_Bool)isLayoutMetricsCanvasInheritedByChildViewController;
-- (void)configureActionView:(id)arg1 createButtons:(_Bool)arg2;
-- (void)configureActivitySummaryView:(id)arg1;
 - (CDUnknownBlockType)_t1_showDisabledEngagementEducationBlockOrNilForType:(unsigned long long)arg1;
 - (_Bool)tfn_prefersTabBarShadowHidden;
 - (void)layoutGuidesDidChange:(long long)arg1;
 - (_Bool)allowsJumpBackToHomeTimeline;
-- (void)_t1_initializeStatusMediaHandlerAndDependentRowAdapters;
 - (void)_t1_showAuthorCanModerateTooltip;
 - (void)_t1_showModeratedRepliesTimelineTooltip;
 - (void)hiddenRepliesEducationTakeoverViewControllerDidDismiss;
@@ -213,35 +184,19 @@
 - (id)_t1_inlineActionOfType:(unsigned long long)arg1;
 - (_Bool)t1_shouldShowSocialContextForFocalStatus;
 - (_Bool)_t1_shouldShowActivitySummary;
-- (void)_t1_hideTranslatingIndicatorAndShowTranslatedTweet;
-- (void)_t1_hideTranslatingIndicator;
-- (void)_t1_showTranslatingIndicator;
-- (void)_t1_showTranslatingLogo:(_Bool)arg1 indexPath:(id)arg2;
-- (void)_t1_hideTranslatedTweet;
-- (void)_t1_showTranslatedTweet;
-- (void)_t1_didFinishLoadingTranslatedStatus:(id)arg1;
-- (void)toggleTranslatedTweet;
 - (void)_t1_keyboardWillHide:(id)arg1;
 - (void)_t1_keyboardWillChangeFrame:(id)arg1;
 - (void)_t1_keyboardWillShow:(id)arg1;
 - (void)_t1_updateKeyboardFrameWithUserInfo:(id)arg1;
-- (void)_t1_resetBodyItemsAndUpdateWithAnimation:(_Bool)arg1;
 - (void)_t1_accountSettingsDidUpdate:(id)arg1;
-- (_Bool)_t1_shouldShowUserRecommendationItem;
 - (void)slideshow:(id)arg1 didSelectStatusReply:(id)arg2;
 - (void)slideshow:(id)arg1 dismissAndPresentViewController:(id)arg2;
 - (void)slideshow:(id)arg1 status:(id)arg2 didSelectActiveRange:(id)arg3;
 - (void)slideshow:(id)arg1 didSelectUser:(id)arg2;
 - (void)slideshow:(id)arg1 didSelectStatus:(id)arg2;
 - (void)slideshow:(id)arg1 didDeleteStatusID:(id)arg2;
-- (id)slideshowControllerWithDataSource:(id)arg1 index:(long long)arg2 transitionDelegate:(id)arg3;
 - (void)toggleRetweetOnCurrentStatusFromRect:(struct CGRect)arg1 inView:(id)arg2;
 - (void)toggleFavorited;
-- (id)_t1_imageItemWithURLForEntity:(id)arg1 getIndex:(long long *)arg2;
-- (void)_t1_setupSlideshowViewController:(id)arg1;
-- (id)_t1_openUrl:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 fromSourceStatus:(id)arg4 sourceUser:(id)arg5;
-- (id)t1_openURL:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 fromSourceUser:(id)arg4;
-- (id)t1_openURL:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 fromSourceStatus:(id)arg4;
 - (id)t1_scribeContextForActiveRange:(id)arg1 status:(id)arg2 account:(id)arg3 withDefault:(id)arg4;
 - (_Bool)imageTransitionViewController:(id)arg1 shouldDismissPresentingViewControllerForObject:(id)arg2;
 - (void)imageTransitionViewController:(id)arg1 willTransition:(_Bool)arg2 object:(id)arg3;
@@ -256,14 +211,6 @@
 - (void)_t1_cardLogAppDownload:(id)arg1;
 - (void)_t1_retweetFailed;
 - (void)_t1_favoriteFailed;
-- (void)_t1_cardViewNeedsLayout:(id)arg1;
-@property(readonly, nonatomic, getter=isDisplayingUnifiedCard) _Bool displayingUnifiedCard;
-@property(readonly, nonatomic, getter=isDisplayingCard) _Bool displayingCard;
-- (_Bool)_shouldShowInnerTombstoneItem;
-- (id)innerTombstoneItem;
-- (id)_t1_multiPhotoItemForStatus:(id)arg1;
-- (_Bool)_t1_hasImageEntity;
-- (id)nativeMediaItem;
 - (void)_t1_updateMonetizationSettings;
 - (void)videoMonetizationSettingsViewController:(id)arg1 didUpdateSettings:(id)arg2;
 - (void)_t1_didTapMonetizationSettings;
@@ -273,10 +220,6 @@
 - (void)_t1_fetchMonetizationSettingsDefaults;
 - (void)_t1_fetchMonetizationSettingsIfNeeded;
 - (_Bool)_t1_shouldShowMonetizationSettings;
-- (void)_t1_animateOutItem:(id)arg1;
-- (void)_t1_animateOutActivitySummary;
-- (void)_t1_animateInActivitySummary;
-- (void)_t1_animateInActivity;
 - (void)_t1_didTapViewTweetActivity;
 - (id)viewTweetActivityItem;
 - (void)scrollViewWillProgrammaticallyScrollToTop:(id)arg1;
@@ -317,7 +260,6 @@
 - (id)scribeSection;
 - (id)scribePage;
 - (id)scribe;
-- (void)didReceiveMemoryWarning;
 - (id)calculatedLayoutMetrics;
 - (_Bool)_t1_cancelEditingIfAppropriateForTraitCollection:(id)arg1;
 - (_Bool)_t1_shouldDisplayReplyBarWithTraitCollection:(id)arg1;
@@ -374,8 +316,6 @@
 - (void)_t1_setupReplyControllerIfNecessary;
 - (id)scribeSectionForIndexPath:(id)arg1;
 - (void)didRotateFromInterfaceOrientation:(long long)arg1;
-- (void)_t1_showRetweetsAction:(id)arg1;
-- (void)_t1_showFavoritesAction:(id)arg1;
 - (void)_t1_reloadConversationAfterNotification;
 - (void)_t1_blockedAccountsDidChange:(id)arg1;
 - (void)_t1_tweetDeleted:(id)arg1;
@@ -396,7 +336,6 @@
 - (_Bool)retweetDisabled;
 @property(readonly, nonatomic) _Bool replyDisabled;
 - (void)_t1_showHiddenRepliesEducationPromptIfNecessary;
-- (void)_t1_updateHiddenRepliesIconLegacy;
 - (void)_t1_updateForwardPivot;
 - (void)_t1_updateHiddenRepliesIcon;
 - (void)_t1_updateReplyBadge;
@@ -424,14 +363,9 @@
 - (void)_t1_scrollToTopOfReplies;
 - (void)_t1_scrollToTopOfBodyAndPeek;
 - (void)_t1_scrollToBottom;
-- (_Bool)_t1_tableViewIsScrolledToTop;
 - (id)_t1_replyPlaceholderTextForStatus:(id)arg1;
 - (void)update:(_Bool)arg1;
 - (void)_t1_didFinishLoadingRelationship:(id)arg1;
-- (void)_t1_didTapTag:(id)arg1 inCell:(id)arg2 itemForImage:(id)arg3 itemForVideo:(id)arg4;
-- (id)_t1_itemForTagSet:(id)arg1 itemForImage:(id)arg2 itemForVideo:(id)arg3;
-- (id)_t1_itemForTagSet:(id)arg1 withItemForImage:(id)arg2;
-- (id)_t1_itemForTagSet:(id)arg1 withItemForVideo:(id)arg2;
 - (_Bool)_t1_navigationContextTypeIsMagicRecsNotification;
 - (void)errorItemTapped:(id)arg1;
 @property(readonly, nonatomic) unsigned long long displayType;
@@ -447,8 +381,6 @@
 - (void)_t1_checkIfTweetComplete;
 - (_Bool)_t1_areAllFetchesComplete;
 - (_Bool)_t1_areAllRequiredPartsReady;
-- (void)_t1_updateActivitySummaryViewForActivityCellAtIndexPath:(id)arg1;
-- (void)_t1_updateActionViewForActivityCellAtIndexPath:(id)arg1;
 - (void)_t1_dynamicColorsDidReload:(id)arg1;
 - (void)_t1_hashflagsDidChange:(id)arg1;
 - (void)_t1_tweetUpdated:(id)arg1;
@@ -456,14 +388,10 @@
 - (void)_t1_tweetUnhidden:(id)arg1;
 - (void)_t1_tweetHidden:(id)arg1;
 - (void)_t1_tweetUpdated;
-- (void)_t1_addAttachmentItemsToTweetBodyItems:(id)arg1;
-- (id)_t1_legacyTweetBodyItems;
 - (id)_t1_tweetBodyItems;
-- (_Bool)_t1_shouldUseLegacyTweetBodyItems;
 - (void)_t1_handleNavigationContextWithTweetBodyArray:(id)arg1;
 - (_Bool)_t1_isConversationOwnedByCurrentUserWithUserID:(long long)arg1;
 @property(readonly, nonatomic) T1TweetDetailsActionView *tweetDetailsActionView;
-@property(readonly, nonatomic) T1TweetDetailsTweetBodyItems *bodyItems;
 - (id)tfs_debugStrings;
 - (void)_t1_featureSwitchesDidUpdate:(id)arg1;
 - (void)_t1_accountDidUpdate:(id)arg1;

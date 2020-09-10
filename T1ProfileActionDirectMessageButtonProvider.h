@@ -6,19 +6,19 @@
 
 #import <T1Twitter/T1ProfileActionDataSourceButtonProvider.h>
 
-@class TFNButton, UIViewController;
+@class TFNLegacyButton, UIViewController;
 
 @interface T1ProfileActionDirectMessageButtonProvider : T1ProfileActionDataSourceButtonProvider
 {
     _Bool _shouldShowDirectMessageButton;
-    TFNButton *_directMessageButton;
+    TFNLegacyButton *_directMessageButton;
     UIViewController *_controller;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak UIViewController *controller; // @synthesize controller=_controller;
 @property(nonatomic) _Bool shouldShowDirectMessageButton; // @synthesize shouldShowDirectMessageButton=_shouldShowDirectMessageButton;
-@property(retain, nonatomic) TFNButton *directMessageButton; // @synthesize directMessageButton=_directMessageButton;
+@property(retain, nonatomic) TFNLegacyButton *directMessageButton; // @synthesize directMessageButton=_directMessageButton;
 - (void)_directMessageButtonTapped:(id)arg1;
 - (void)dataSourceDidInvalidateForReason:(long long)arg1;
 - (id)buttonView;

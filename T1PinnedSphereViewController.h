@@ -8,7 +8,7 @@
 
 @interface T1PinnedSphereViewController : TFNViewController
 {
-    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: dataModel
     // Error parsing type: , name: viewController
     // Error parsing type: , name: stateManager
     // Error parsing type: , name: networkingDelegate
@@ -25,7 +25,7 @@
 @property(nonatomic, readonly) _Bool canBecomeFirstResponder;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccount:(id)arg1 viewModel:(id)arg2;
+- (id)initWithAccount:(id)arg1 dataModel:(id)arg2;
 
 @end
 

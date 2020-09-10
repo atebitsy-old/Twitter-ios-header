@@ -6,12 +6,12 @@
 
 #import <T1Twitter/T1ProfileActionDataSourceButtonProvider.h>
 
-@class TFNButton, UIViewController;
+@class TFNLegacyButton, UIViewController;
 
 @interface T1ProfileActionMuteButtonProvider : T1ProfileActionDataSourceButtonProvider
 {
     _Bool _shouldShowMuteButton;
-    TFNButton *_muteButton;
+    TFNLegacyButton *_muteButton;
     UIViewController *_controller;
 }
 
@@ -21,7 +21,7 @@
 + (void)_t1_muteUserReference:(id)arg1 account:(id)arg2 scribeParameters:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void).cxx_destruct;
 @property(nonatomic) __weak UIViewController *controller; // @synthesize controller=_controller;
-@property(retain, nonatomic) TFNButton *muteButton; // @synthesize muteButton=_muteButton;
+@property(retain, nonatomic) TFNLegacyButton *muteButton; // @synthesize muteButton=_muteButton;
 @property(nonatomic) _Bool shouldShowMuteButton; // @synthesize shouldShowMuteButton=_shouldShowMuteButton;
 - (void)_t1_showFleetsAmbientNotificationForUserReference:(id)arg1 fleetsMuted:(_Bool)arg2;
 - (void)_t1_showAmbientNotificationForUserReference:(id)arg1 scribeParameters:(id)arg2 muted:(_Bool)arg3;

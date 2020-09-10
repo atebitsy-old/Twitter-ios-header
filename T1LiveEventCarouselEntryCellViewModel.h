@@ -13,6 +13,8 @@
 @interface T1LiveEventCarouselEntryCellViewModel : NSObject <TFSTwitterScribableItem>
 {
     _Bool _verified;
+    _Bool _protectedUser;
+    _Bool _usernameless;
     _Bool _isGIF;
     _Bool _displaysNowPlaying;
     _Bool _socialProofViewHidden;
@@ -22,6 +24,8 @@
     TFSTwitterRects *_focusRects;
     NSString *_displayName;
     NSString *_username;
+    long long _identityType;
+    long long _translatorType;
     NSNumber *_count;
     NSNumber *_duration;
     long long _contentType;
@@ -52,6 +56,10 @@
 @property(readonly, nonatomic) long long contentType; // @synthesize contentType=_contentType;
 @property(readonly, nonatomic) NSNumber *duration; // @synthesize duration=_duration;
 @property(readonly, nonatomic) NSNumber *count; // @synthesize count=_count;
+@property(readonly, nonatomic) long long translatorType; // @synthesize translatorType=_translatorType;
+@property(readonly, nonatomic, getter=isUsernameless) _Bool usernameless; // @synthesize usernameless=_usernameless;
+@property(readonly, nonatomic, getter=isProtectedUser) _Bool protectedUser; // @synthesize protectedUser=_protectedUser;
+@property(readonly, nonatomic) long long identityType; // @synthesize identityType=_identityType;
 @property(readonly, nonatomic, getter=isVerified) _Bool verified; // @synthesize verified=_verified;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;

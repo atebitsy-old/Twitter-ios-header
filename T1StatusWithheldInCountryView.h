@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNAttributedTextViewDelegate-Protocol.h>
 
-@class NSString, TFNAttributedTextView, TFNButton, TFNSolidColorView, TFNTwitterAccount, TFSTwitterEntitySet;
+@class NSString, TFNAttributedTextView, TFNLegacyButton, TFNSolidColorView, TFNTwitterAccount, TFSTwitterEntitySet;
 @protocol T1StatusViewModel, T1StatusWithheldInCountryViewDelegate;
 
 @interface T1StatusWithheldInCountryView : UIView <TFNAttributedTextViewDelegate>
@@ -23,7 +23,7 @@
     TFNAttributedTextView *_textView;
     NSString *_displayText;
     TFSTwitterEntitySet *_entities;
-    TFNButton *_undoButton;
+    TFNLegacyButton *_undoButton;
     double _calculatedTextWidth;
 }
 
@@ -32,7 +32,7 @@
 + (double)heightForStatusViewModel:(id)arg1 width:(double)arg2 layoutMetrics:(id)arg3 showsUndoButton:(_Bool)arg4 displayType:(unsigned long long)arg5 account:(id)arg6;
 - (void).cxx_destruct;
 @property(nonatomic) double calculatedTextWidth; // @synthesize calculatedTextWidth=_calculatedTextWidth;
-@property(retain, nonatomic) TFNButton *undoButton; // @synthesize undoButton=_undoButton;
+@property(retain, nonatomic) TFNLegacyButton *undoButton; // @synthesize undoButton=_undoButton;
 @property(retain, nonatomic) TFSTwitterEntitySet *entities; // @synthesize entities=_entities;
 @property(retain, nonatomic) NSString *displayText; // @synthesize displayText=_displayText;
 @property(retain, nonatomic) TFNAttributedTextView *textView; // @synthesize textView=_textView;

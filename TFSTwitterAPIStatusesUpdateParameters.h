@@ -14,6 +14,8 @@
 {
     _Bool _earned;
     _Bool _periscopeBroadcastIsLive;
+    _Bool _nudgeEnabled;
+    _Bool _nudgeTestingKeywordEnabled;
     NSString *_status;
     NSNumber *_inReplyToStatusID;
     NSArray *_excludeReplyUserIDs;
@@ -31,6 +33,8 @@
     NSString *_semanticAnnotationIds;
     NSString *_periscopeBroadcastID;
     NSString *_periscopeBroadcastCreatorID;
+    NSString *_previousNudgeID;
+    NSArray *_nudgeTypes;
     unsigned long long _batchMode;
     unsigned long long _conversationControlType;
 }
@@ -38,6 +42,10 @@
 - (void).cxx_destruct;
 @property(nonatomic) unsigned long long conversationControlType; // @synthesize conversationControlType=_conversationControlType;
 @property(nonatomic) unsigned long long batchMode; // @synthesize batchMode=_batchMode;
+@property(copy, nonatomic) NSArray *nudgeTypes; // @synthesize nudgeTypes=_nudgeTypes;
+@property(copy, nonatomic) NSString *previousNudgeID; // @synthesize previousNudgeID=_previousNudgeID;
+@property(nonatomic, getter=isNudgeTestingKeywordEnabled) _Bool nudgeTestingKeywordEnabled; // @synthesize nudgeTestingKeywordEnabled=_nudgeTestingKeywordEnabled;
+@property(nonatomic, getter=isNudgeEnabled) _Bool nudgeEnabled; // @synthesize nudgeEnabled=_nudgeEnabled;
 @property(nonatomic) _Bool periscopeBroadcastIsLive; // @synthesize periscopeBroadcastIsLive=_periscopeBroadcastIsLive;
 @property(copy, nonatomic) NSString *periscopeBroadcastCreatorID; // @synthesize periscopeBroadcastCreatorID=_periscopeBroadcastCreatorID;
 @property(copy, nonatomic) NSString *periscopeBroadcastID; // @synthesize periscopeBroadcastID=_periscopeBroadcastID;

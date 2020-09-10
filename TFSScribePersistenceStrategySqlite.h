@@ -8,23 +8,24 @@
 
 #import <TFSScribe/TFSScribePersistenceStrategy-Protocol.h>
 
-@class NSString, TFSDatabase, TFSScribe, TFSScribeConfiguration, TFSScribeDatabaseLog;
-@protocol OS_dispatch_queue, TFSScribeErrorDelegate;
+@class NSString, TFSDatabase, TFSDatabaseUIApplicationLink, TFSScribeDatabaseLog;
+@protocol OS_dispatch_queue, TFSLogger;
 
 @interface TFSScribePersistenceStrategySqlite : NSObject <TFSScribePersistenceStrategy>
 {
+    NSString *_sqlitePath;
+    TFSDatabaseUIApplicationLink *_applicationLink;
+    double _shelfLife;
+    TFSScribeDatabaseLog *_log;
     NSObject<OS_dispatch_queue> *_queue;
     NSObject<OS_dispatch_queue> *_openQueue;
     NSObject<OS_dispatch_queue> *_delegateQueue;
-    NSString *_sqlitePath;
     // Error parsing type: AB, name: _isOpen
     TFSDatabase *_db;
-    TFSScribeDatabaseLog *_log;
-    TFSScribeConfiguration *_config;
-    double _shelfLife;
     _Bool _debugEnabled;
-    id <TFSScribeErrorDelegate> _errorDelegate;
-    TFSScribe *_scribe;
+    CDUnknownBlockType _errorLogger;
+    id <TFSLogger> _debugLogger;
+    CDUnknownBlockType _didEnqueueEvent;
 }
 
 + (id)_expectedColumnsForTable:(id)arg1;
@@ -35,9 +36,10 @@
 + (id)_createSqliteImpressionTableString;
 + (id)_createSqliteEventTableString;
 - (void).cxx_destruct;
-@property(nonatomic) __weak TFSScribe *scribe; // @synthesize scribe=_scribe;
-@property(readonly, nonatomic) __weak id <TFSScribeErrorDelegate> errorDelegate; // @synthesize errorDelegate=_errorDelegate;
+@property(copy) CDUnknownBlockType didEnqueueEvent; // @synthesize didEnqueueEvent=_didEnqueueEvent;
 @property _Bool debugEnabled; // @synthesize debugEnabled=_debugEnabled;
+@property(readonly, nonatomic) id <TFSLogger> debugLogger; // @synthesize debugLogger=_debugLogger;
+@property(readonly, copy, nonatomic) CDUnknownBlockType errorLogger; // @synthesize errorLogger=_errorLogger;
 - (id)_argListString:(id)arg1;
 - (void)_handleScribeError:(id)arg1 message:(id)arg2;
 - (void)_handleScribeErrorWithMessage:(id)arg1;
@@ -68,7 +70,7 @@
 - (void)_didFlushEvents:(id)arg1 behavior:(unsigned long long)arg2;
 - (id)_flushEventsWithGroups:(id)arg1 fetchLimit:(unsigned long long)arg2;
 - (void)_batchImpressionsForGroups:(id)arg1 requestHandler:(id)arg2;
-- (void)flushGroups:(id)arg1 token:(id)arg2 fetchLimit:(unsigned long long)arg3 batchSize:(unsigned long long)arg4 eventsHandler:(id)arg5 impressionsHandler:(id)arg6;
+- (void)flushGroups:(id)arg1 fetchLimit:(unsigned long long)arg2 batchSize:(unsigned long long)arg3 eventsHandler:(id)arg4 impressionsHandler:(id)arg5 didFlushBatch:(CDUnknownBlockType)arg6 completion:(CDUnknownBlockType)arg7;
 - (void)_enqueueImpression:(id)arg1 eventName:(id)arg2 query:(id)arg3 timestamp:(id)arg4 group:(id)arg5;
 - (void)enqueueImpression:(id)arg1 eventName:(id)arg2 query:(id)arg3 group:(id)arg4 timestamp:(id)arg5;
 - (void)_enqueueEvents:(id)arg1 timestamp:(id)arg2;
@@ -78,7 +80,7 @@
 - (void)closeWithStartBlock:(CDUnknownBlockType)arg1 completionBlock:(CDUnknownBlockType)arg2;
 - (void)openWithStartBlock:(CDUnknownBlockType)arg1 completionBlock:(CDUnknownBlockType)arg2;
 - (void)dealloc;
-- (id)initWithConfiguration:(id)arg1 scribe:(id)arg2 errorDelegate:(id)arg3;
+- (id)initWithStoreURL:(id)arg1 applicationLink:(id)arg2 shelfLife:(double)arg3 errorLogger:(CDUnknownBlockType)arg4 debugLogger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

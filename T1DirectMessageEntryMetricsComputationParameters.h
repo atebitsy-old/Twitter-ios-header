@@ -15,6 +15,7 @@
     _Bool _shouldRenderCard;
     _Bool _isLastInGroup;
     _Bool _shouldRenderInterstitial;
+    _Bool _isAudioPlaying;
     _Bool _shouldShowSupersizedEmoji;
     id <TFNDirectMessageEntry> _messageEntry;
     TFNTwitterAccount *_account;
@@ -33,6 +34,7 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldShowSupersizedEmoji; // @synthesize shouldShowSupersizedEmoji=_shouldShowSupersizedEmoji;
+@property(readonly, nonatomic) _Bool isAudioPlaying; // @synthesize isAudioPlaying=_isAudioPlaying;
 @property(readonly, nonatomic) _Bool shouldRenderInterstitial; // @synthesize shouldRenderInterstitial=_shouldRenderInterstitial;
 @property(readonly, nonatomic) long long ctasCount; // @synthesize ctasCount=_ctasCount;
 @property(readonly, nonatomic) _Bool isLastInGroup; // @synthesize isLastInGroup=_isLastInGroup;
@@ -50,7 +52,7 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) _Bool isOutgoingMessage; // @synthesize isOutgoingMessage=_isOutgoingMessage;
 @property(readonly, nonatomic) id <TFNDirectMessageEntry> messageEntry; // @synthesize messageEntry=_messageEntry;
-- (id)initWithMessageEntry:(id)arg1 textModel:(id)arg2 interstitialTextModel:(id)arg3 seenByParticipantNamesTextModel:(id)arg4 mediaAttachment:(id)arg5 tweetAttachment:(id)arg6 cardAttachment:(id)arg7 textSize:(struct CGSize)arg8 outgoing:(_Bool)arg9 lastInGroup:(_Bool)arg10 shouldRenderCard:(_Bool)arg11 shouldRenderInterstitial:(_Bool)arg12 ctasCount:(long long)arg13 maxContentWidth:(double)arg14 maxTextWidth:(double)arg15 layoutMetrics:(id)arg16 account:(id)arg17 shouldShowSupersizedEmoji:(_Bool)arg18;
+- (id)initWithMessageEntry:(id)arg1 textModel:(id)arg2 interstitialTextModel:(id)arg3 seenByParticipantNamesTextModel:(id)arg4 mediaAttachment:(id)arg5 tweetAttachment:(id)arg6 cardAttachment:(id)arg7 textSize:(struct CGSize)arg8 outgoing:(_Bool)arg9 lastInGroup:(_Bool)arg10 shouldRenderCard:(_Bool)arg11 shouldRenderInterstitial:(_Bool)arg12 ctasCount:(long long)arg13 maxContentWidth:(double)arg14 maxTextWidth:(double)arg15 layoutMetrics:(id)arg16 account:(id)arg17 isAudioPlaying:(_Bool)arg18 shouldShowSupersizedEmoji:(_Bool)arg19;
 
 @end
 

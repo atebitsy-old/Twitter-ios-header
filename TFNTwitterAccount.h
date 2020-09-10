@@ -397,6 +397,8 @@
 - (_Bool)isAutoTranslateExpandedViewEnabled;
 - (_Bool)isAutoTranslateEnabled;
 - (_Bool)isQuoteTweetLabelEnabled;
+- (_Bool)isSimpleQuoteActionLabelEnabled;
+- (_Bool)isQuoteStatRearrangeEnabled;
 - (_Bool)isQuoteLabelEnabled;
 - (_Bool)isRetweetsAndCommentsLabelEnabled;
 - (_Bool)isConversationControlHighlightedEducationEnabled;
@@ -409,7 +411,6 @@
 - (_Bool)canShareStatus:(id)arg1;
 - (_Bool)canQuoteStatus:(id)arg1;
 - (_Bool)canRetweetStatus:(id)arg1;
-@property(readonly, nonatomic, getter=isExpandedTapTargetsEnabled) _Bool expandedTapTargetsEnabled;
 @property(readonly, nonatomic, getter=isDisplayTextCachingEnabled) _Bool displayTextCachingEnabled;
 @property(readonly, nonatomic) _Bool isSlideshowStatusTextEnabled;
 - (_Bool)isExploreAssociatedTweetMediaVisible;
@@ -485,6 +486,7 @@
 - (_Bool)isTweetDetailsRichTextPrototypeViewEnabled;
 - (_Bool)isHomeTimelineEarlyStartupEnabled;
 - (_Bool)isTIPImageUnloadingOptimizationEnabled;
+- (_Bool)isMediaRailAsyncAssetLibraryLoadingEnabled;
 - (_Bool)isIgnoreTraitCollectionUIStyleInEqualityEnabled;
 - (_Bool)isAttributedTextModelColorDifferenceOptimizationEnabled;
 - (long long)_tfn_isLaunchSwitchEnabled:(id)arg1 withImpression:(_Bool)arg2;
@@ -504,7 +506,7 @@
 - (_Bool)isUserViewUsernameHeightCachingEnabled;
 - (_Bool)isUserViewBioTextCachingEnabled;
 - (_Bool)isAdsInfoAsyncLoadingEnabled;
-- (_Bool)isTFNButtonSynchronousStyleCachingEnabled;
+- (_Bool)isTFNLegacyButtonSynchronousStyleCachingEnabled;
 - (_Bool)isURTEntryCollectionDiffingEnabled;
 - (_Bool)isNetworkMonitorFilterQueueEnabled;
 - (unsigned long long)dataViewModelBoundViewCacheLimit;
@@ -534,6 +536,8 @@
 - (_Bool)isTOTPGeneratorEnabled;
 - (_Bool)isSMS2faEnabled;
 - (unsigned long long)_t1_conversationThreadingStyle;
+- (_Bool)isConversationConnectorLinesToSelectedStateContainerEnabled;
+- (_Bool)isConversationEmphasizedConnectorLinesEnabled;
 - (_Bool)isConversationThreadingAQCursorsAlwaysVisible;
 - (_Bool)isConversationThreadingLQCursorsAlwaysVisible;
 - (_Bool)isConversationThreadingCaretAlwaysVisible;
@@ -570,7 +574,6 @@
 @property(readonly, nonatomic) _Bool isVideoWebsiteCardBannerlessWebViewEnabled;
 @property(readonly, nonatomic) _Bool isVideoWebsiteCardSafariViewControllerEnabled;
 - (_Bool)isConversationCardCTAHashflagsEnabled;
-- (_Bool)isSuppressingTextOnDynamicAdsEnabledForViewModel:(id)arg1;
 @property(readonly, nonatomic) _Bool isHashflagsInTrendsEnabled;
 @property(readonly, nonatomic) _Bool isAdImpressionScrollToTopHandlerEnabled;
 - (double)webViewDwellIntervalForKey:(id)arg1 withFallback:(double)arg2;
@@ -602,6 +605,9 @@
 - (_Bool)isHomeTimelineFeedbackImmediateDismissEnabled;
 - (_Bool)isHomeTimelineFeedbackMoreIconEnabled;
 - (_Bool)showCaretAlignedWithSocialProof;
+- (_Bool)isTopicsFollowedGraphQLMigrationEnabled;
+- (_Bool)isTopicUnFollowGraphQLMigrationEnabled;
+- (_Bool)isTopicFollowGraphQLMigrationEnabled;
 - (_Bool)isTopicsNewSocialContextIconColorEnabled;
 - (_Bool)isTopicsNewSocialContextEnabled;
 - (_Bool)isTopicsMenuSeparatorEnabled;
@@ -682,6 +688,7 @@
 - (unsigned long long)playerFactoryThresholdForCacheSizeOne;
 - (unsigned long long)playerFactoryThresholdForCacheSizeTwo;
 - (id)playerCacheResizingPolicy;
+@property(readonly, nonatomic) double autoplayBitRateForHighQuality;
 @property(readonly, nonatomic) double networkBandwidthFractionForMp4VariantSelection;
 @property(readonly, nonatomic) double networkBandwidthFractionForInitialVariantSelection;
 @property(readonly, nonatomic) _Bool isVODAttributionSourceTweetDetailPivotEnabled;
@@ -752,9 +759,6 @@
 - (_Bool)isReactionCreationEnabled;
 - (double)inboxPollingInterval;
 - (double)conversationPollingInterval;
-- (_Bool)isPreventImageFlickerEnabled;
-- (_Bool)isImageDimmedWhileUploading;
-- (_Bool)isProgressIndicatorViewHidden;
 - (long long)directMessageMaxGroupSize;
 - (_Bool)isIOS13ShareSheetDonationEnabled;
 - (_Bool)isDMConversationGroupJoinedEntryEnabled;
@@ -766,14 +770,11 @@
 - (_Bool)isDMConversationSocialProofEnabled;
 - (_Bool)isRequestProfileInfoEnabled;
 - (double)typingIndicatorDuration;
-- (_Bool)isDMConversationFooterContainerEnabled;
-- (_Bool)isDMConversationRefreshLoadingIndicatorEnabled;
 - (_Bool)isDMExpandedInfoAvailable;
 - (_Bool)isDMConversationInfoSharedContentEnabled;
 - (_Bool)isDMBadgeExcludeUntrustedEnabled;
 - (_Bool)isDMBadgeExcludeMutedEnabled;
 - (_Bool)isDMBadgeClientCalculationEnabled;
-- (_Bool)isDMBackgroundConversationFetchEnabled;
 @property(readonly, nonatomic) id <T1CardViewRegistry> cardRegistry;
 - (_Bool)isBetaBugButtonEnabled;
 - (void)unmuteUserWithUserReference:(id)arg1 unmuteFleets:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;

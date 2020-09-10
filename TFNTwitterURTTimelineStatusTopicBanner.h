@@ -17,8 +17,6 @@
 @property(readonly, nonatomic) TFSTwitterTopic *topic; // @synthesize topic=_topic;
 - (id)landingURL;
 - (id)associatedTopic;
-- (void)_tfn_handleTopicToggleUpdateNotification:(id)arg1;
-- (void)dealloc;
 - (id)initWithBannerText:(id)arg1 badgeName:(id)arg2 topic:(id)arg3;
 
 @end

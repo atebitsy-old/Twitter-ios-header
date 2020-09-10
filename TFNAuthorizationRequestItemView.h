@@ -9,7 +9,7 @@
 #import <T1Twitter/TFNDismissableView-Protocol.h>
 #import <T1Twitter/UIGestureRecognizerDelegate-Protocol.h>
 
-@class NSString, TFNButton, UIImageView, UILabel, UITapGestureRecognizer;
+@class NSString, TFNLegacyButton, UIImageView, UILabel, UITapGestureRecognizer;
 @protocol TFNAuthorizationRequestItem, TFNDismissDelegate;
 
 @interface TFNAuthorizationRequestItemView : UIView <UIGestureRecognizerDelegate, TFNDismissableView>
@@ -18,8 +18,8 @@
     UILabel *_titleLabel;
     UILabel *_descriptionLabel;
     UILabel *_learnMoreLabel;
-    TFNButton *_notNowButton;
-    TFNButton *_acceptButton;
+    TFNLegacyButton *_notNowButton;
+    TFNLegacyButton *_acceptButton;
     UITapGestureRecognizer *_tapGestureRecognizer;
     id <TFNDismissDelegate> _dismissDelegate;
     id _learnMoreTarget;

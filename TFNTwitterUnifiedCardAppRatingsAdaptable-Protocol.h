@@ -9,7 +9,7 @@
 @class NSString;
 
 @protocol TFNTwitterUnifiedCardAppRatingsAdaptable <TFNTwitterUnifiedCardComponentModel>
-@property(readonly, nonatomic) long long appRatingsType;
+@property(readonly, nonatomic) _Bool shouldShowAppRatings;
 @property(readonly, copy, nonatomic) NSString *ratingCount;
 @property(readonly, copy, nonatomic) NSString *ratingStars;
 @end

@@ -22,6 +22,7 @@
     // Error parsing type: , name: dmLowQualityFilterEnabled
     // Error parsing type: , name: connectToPeriscopeEnabled
     // Error parsing type: , name: safetySectionHeader
+    // Error parsing type: , name: markMediaSensitiveEnabledItem
 }
 
 - (void).cxx_destruct;

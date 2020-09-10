@@ -9,7 +9,7 @@
 #import <T1Twitter/T1UserViewActionControl-Protocol.h>
 #import <T1Twitter/TFNBinaryChoiceDelegate-Protocol.h>
 
-@class NSNumber, NSString, T1FollowerRequestControl, TFNButtonAnimator, TFNFollowButton, TFNTwitterAccount, TFNTwitterUserDataSource, TFSTwitterRelationship, TFSTwitterScribeContext, UIButton, UISwitch;
+@class NSNumber, NSString, T1FollowerRequestControl, TFNFollowButton, TFNLegacyButtonAnimator, TFNTwitterAccount, TFNTwitterUserDataSource, TFSTwitterRelationship, TFSTwitterScribeContext, UIButton, UISwitch;
 @protocol T1FollowControlDelegate, TFNTwitterPromotedEventMetadata, TFNTwitterUserContext;
 
 @interface T1FollowControl : UIView <TFNBinaryChoiceDelegate, T1UserViewActionControl>
@@ -28,7 +28,7 @@
     id <T1FollowControlDelegate> _delegate;
     long long _state;
     TFNFollowButton *_followButton;
-    TFNButtonAnimator *_followButtonAnimator;
+    TFNLegacyButtonAnimator *_followButtonAnimator;
     UISwitch *_deviceFollowSwitch;
     UIButton *_emailFollowButton;
     T1FollowerRequestControl *_followerRequestControl;
@@ -51,7 +51,7 @@
 @property(retain, nonatomic) T1FollowerRequestControl *followerRequestControl; // @synthesize followerRequestControl=_followerRequestControl;
 @property(retain, nonatomic) UIButton *emailFollowButton; // @synthesize emailFollowButton=_emailFollowButton;
 @property(retain, nonatomic) UISwitch *deviceFollowSwitch; // @synthesize deviceFollowSwitch=_deviceFollowSwitch;
-@property(retain, nonatomic) TFNButtonAnimator *followButtonAnimator; // @synthesize followButtonAnimator=_followButtonAnimator;
+@property(retain, nonatomic) TFNLegacyButtonAnimator *followButtonAnimator; // @synthesize followButtonAnimator=_followButtonAnimator;
 @property(retain, nonatomic) TFNFollowButton *followButton; // @synthesize followButton=_followButton;
 @property(nonatomic) long long state; // @synthesize state=_state;
 @property(nonatomic) struct UIEdgeInsets touchInsets; // @synthesize touchInsets=_touchInsets;

@@ -30,7 +30,7 @@
 @property(readonly, nonatomic) TFNTwitterUnifiedCardDominantColorConfig *dominantColorConfig; // @synthesize dominantColorConfig=_dominantColorConfig;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
-@property(readonly, nonatomic) long long appRatingsType;
+@property(readonly, nonatomic) _Bool shouldShowAppRatings;
 @property(readonly, copy, nonatomic) NSString *ratingCount;
 @property(readonly, copy, nonatomic) NSString *ratingStars;
 @property(readonly, nonatomic) long long appMetadataLineTwoType;

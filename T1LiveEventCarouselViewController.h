@@ -40,7 +40,7 @@
 @property(retain, nonatomic) NSNumber *selectedCarouselIndex;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithCarousel:(id)arg1 imagePipeline:(id)arg2 scribe:(id)arg3 impressionLogger:(id)arg4;
+- (id)initWithCarousel:(id)arg1 imagePipeline:(id)arg2 userBadger:(id)arg3 scribe:(id)arg4 impressionLogger:(id)arg5;
 - (id)initWithCollectionViewLayout:(id)arg1;
 - (id)init;
 

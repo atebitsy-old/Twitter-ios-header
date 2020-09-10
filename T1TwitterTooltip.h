@@ -6,7 +6,7 @@
 
 #import <TFNUI/TFNTooltip.h>
 
-@class NSString, TFNButton, TFNTextTooltipContentView, UIColor, UIFont;
+@class NSString, TFNLegacyButton, TFNTextTooltipContentView, UIColor, UIFont;
 
 @interface T1TwitterTooltip : TFNTooltip
 {
@@ -19,7 +19,7 @@
 + (id)tooltipWithText:(id)arg1;
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNTextTooltipContentView *textContentView; // @synthesize textContentView=_textContentView;
-@property(readonly, nonatomic) TFNButton *button;
+@property(readonly, nonatomic) TFNLegacyButton *button;
 @property(retain, nonatomic) UIFont *labelFont;
 @property(retain, nonatomic) UIColor *labelColor;
 @property(copy, nonatomic) NSString *buttonText;

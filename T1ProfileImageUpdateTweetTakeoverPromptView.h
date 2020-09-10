@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class NSArray, TFNButton, UIButton, UIImage, UIImageView, UILabel;
+@class NSArray, TFNLegacyButton, UIButton, UIImage, UIImageView, UILabel;
 @protocol T1ProfileImageUpdateTweetTakeoverPromptViewDelegate, TFSTwitterCanonicalUser;
 
 @interface T1ProfileImageUpdateTweetTakeoverPromptView : UIView
@@ -24,9 +24,9 @@
     UIImageView *_mediaView;
     UIView *_mediaContainerView;
     UIView *_buttonsContainerView;
-    TFNButton *_editButton;
-    TFNButton *_notNowButton;
-    TFNButton *_tweetItButton;
+    TFNLegacyButton *_editButton;
+    TFNLegacyButton *_notNowButton;
+    TFNLegacyButton *_tweetItButton;
     UIButton *_closeButton;
     NSArray *_layoutConstraints;
     NSArray *_profileImageUpdateButtons;
@@ -36,9 +36,9 @@
 @property(retain, nonatomic) NSArray *profileImageUpdateButtons; // @synthesize profileImageUpdateButtons=_profileImageUpdateButtons;
 @property(retain, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
-@property(retain, nonatomic) TFNButton *tweetItButton; // @synthesize tweetItButton=_tweetItButton;
-@property(retain, nonatomic) TFNButton *notNowButton; // @synthesize notNowButton=_notNowButton;
-@property(retain, nonatomic) TFNButton *editButton; // @synthesize editButton=_editButton;
+@property(retain, nonatomic) TFNLegacyButton *tweetItButton; // @synthesize tweetItButton=_tweetItButton;
+@property(retain, nonatomic) TFNLegacyButton *notNowButton; // @synthesize notNowButton=_notNowButton;
+@property(retain, nonatomic) TFNLegacyButton *editButton; // @synthesize editButton=_editButton;
 @property(retain, nonatomic) UIView *buttonsContainerView; // @synthesize buttonsContainerView=_buttonsContainerView;
 @property(retain, nonatomic) UIView *mediaContainerView; // @synthesize mediaContainerView=_mediaContainerView;
 @property(retain, nonatomic) UIImageView *mediaView; // @synthesize mediaView=_mediaView;

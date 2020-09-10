@@ -6,7 +6,7 @@
 
 #import <T1Twitter/TFNFormViewController.h>
 
-@class TFNButton, UIBarButtonItem;
+@class TFNLegacyButton, UIBarButtonItem;
 
 @interface T1CreateAndEditSphereViewController : TFNFormViewController
 {
@@ -31,7 +31,7 @@
 - (void)didTapDoneWithSender:(id)arg1;
 - (void)didTapCancelWithSender:(id)arg1;
 - (void)submitForm;
-@property(nonatomic, readonly) TFNButton *submitButton;
+@property(nonatomic, readonly) TFNLegacyButton *submitButton;
 @property(nonatomic, readonly) UIBarButtonItem *doneBarButtonItem;
 @property(nonatomic, readonly) _Bool includesSubmitButtonAsItem;
 @property(nonatomic, readonly) long long tfn_preferredToolbarVisibility;

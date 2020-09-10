@@ -6,7 +6,7 @@
 
 #import <T1Twitter/T1FlexibleLayoutView.h>
 
-@class TFNButton;
+@class TFNLegacyButton;
 @protocol T1OnboardingTopicCategoryBranchViewDelegate;
 
 @interface T1OnboardingTopicCategoryBranchView : T1FlexibleLayoutView
@@ -15,8 +15,8 @@
     id _userInfo;
     _Bool _expanded;
     T1FlexibleLayoutView *_buttonRotationWrapper;
-    TFNButton *_expandedButton;
-    TFNButton *_unexpandedButton;
+    TFNLegacyButton *_expandedButton;
+    TFNLegacyButton *_unexpandedButton;
 }
 
 - (void).cxx_destruct;

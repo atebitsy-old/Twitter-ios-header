@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1TweetComposeSocialContextTextViewDelegate-Protocol.h>
 
-@class NSString, T1AvatarImageView, T1ComposeRichTextView, T1ConversationInlineComposeAccountView, T1TweetComposeSocialContextTextView, TFNButton, TFNButtonBarView, TFNPlaceholderTextView, TFNTwitterAccount, UIFont, UITapGestureRecognizer;
+@class NSString, T1AvatarImageView, T1ComposeRichTextView, T1ConversationInlineComposeAccountView, T1TweetComposeSocialContextTextView, TFNButtonBarView, TFNLegacyButton, TFNPlaceholderTextView, TFNTwitterAccount, UIFont, UITapGestureRecognizer;
 @protocol T1ConversationInlineComposeViewDelgate;
 
 @interface T1ConversationInlineComposeView : UIView <T1TweetComposeSocialContextTextViewDelegate>
@@ -28,7 +28,7 @@
     T1ConversationInlineComposeAccountView *_accountView;
     T1TweetComposeSocialContextTextView *_replySocialContextTextView;
     TFNPlaceholderTextView *_placeholderTextView;
-    TFNButton *_fullComposeButton;
+    TFNLegacyButton *_fullComposeButton;
     UITapGestureRecognizer *_tapGestureRecognizer;
 }
 
@@ -36,7 +36,7 @@
 + (struct CGSize)sizeForComposition:(id)arg1 width:(double)arg2 isFocused:(_Bool)arg3;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
-@property(readonly, nonatomic) TFNButton *fullComposeButton; // @synthesize fullComposeButton=_fullComposeButton;
+@property(readonly, nonatomic) TFNLegacyButton *fullComposeButton; // @synthesize fullComposeButton=_fullComposeButton;
 @property(readonly, nonatomic) TFNPlaceholderTextView *placeholderTextView; // @synthesize placeholderTextView=_placeholderTextView;
 @property(readonly, nonatomic) T1TweetComposeSocialContextTextView *replySocialContextTextView; // @synthesize replySocialContextTextView=_replySocialContextTextView;
 @property(readonly, nonatomic) T1ConversationInlineComposeAccountView *accountView; // @synthesize accountView=_accountView;

@@ -121,8 +121,6 @@
 - (void)URLSession:(id)arg1 taskIsWaitingForConnectivity:(id)arg2;
 - (void)handler:(id)arg1 didCancelAuthenticationChallenge:(id)arg2 forURLSession:(id)arg3 context:(id)arg4;
 - (void)URLSession:(id)arg1 didBecomeInvalidWithError:(id)arg2;
-- (void)_handleTaskResponseObservation:(id)arg1 task:(id)arg2;
-- (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)start;
 - (_Bool)isExecuting;
 - (_Bool)isCancelled;
@@ -184,7 +182,6 @@
 - (float)_network_uploadProgress;
 - (id)network_taskMetrics;
 - (id)network_metaDataWithLowerCaseHeaderFields:(id)arg1;
-- (void)_network_setObservingURLSessionTask:(_Bool)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

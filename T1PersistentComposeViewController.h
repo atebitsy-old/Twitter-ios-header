@@ -10,7 +10,7 @@
 #import <T1Twitter/T1PersistentComposeViewDelgate-Protocol.h>
 #import <T1Twitter/TFNModalSheetViewControllerDelegate-Protocol.h>
 
-@class NSString, T1AutocompleteViewController, T1PersistentComposeView, TFNButton, TFSMainThreadRunLoopDeferredTask, UITextView;
+@class NSString, T1AutocompleteViewController, T1PersistentComposeView, TFNLegacyButton, TFSMainThreadRunLoopDeferredTask, UITextView;
 @protocol T1PersistentComposeViewControllerDelegate;
 
 @interface T1PersistentComposeViewController : T1ComposeViewController <T1PersistentComposeViewDelgate, T1JumpBackToHomeTimelineBehavior, TFNModalSheetViewControllerDelegate>
@@ -21,7 +21,7 @@
     _Bool _needsToStartEditing;
     _Bool _needsToTriggerReplySocialContextTooltip;
     _Bool _shouldIgnoreButtonHiddenUpdates;
-    TFNButton *_sendReplyButton;
+    TFNLegacyButton *_sendReplyButton;
     T1AutocompleteViewController *_autocompleteViewController;
     T1PersistentComposeView *_composeView;
     TFSMainThreadRunLoopDeferredTask *_deferredStartEditingTask;
@@ -105,7 +105,7 @@
 - (void)_t1_sendReply;
 - (void)_t1_didTapReply:(id)arg1;
 - (void)_t1_updateComposeButtonBarButtons;
-@property(readonly, nonatomic) TFNButton *sendReplyButton; // @synthesize sendReplyButton=_sendReplyButton;
+@property(readonly, nonatomic) TFNLegacyButton *sendReplyButton; // @synthesize sendReplyButton=_sendReplyButton;
 - (id)sendButton;
 @property(readonly, nonatomic) UITextView *textView;
 - (id)richTextView;

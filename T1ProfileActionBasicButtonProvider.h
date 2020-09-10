@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1ProfileActionButtonProvider-Protocol.h>
 
-@class NSString, TFNButton, UIImageView, UIView;
+@class NSString, TFNLegacyButton, UIImageView, UIView;
 @protocol T1ProfileActionButtonProviderDelegate, T1ProfileDataSource;
 
 @interface T1ProfileActionBasicButtonProvider : NSObject <T1ProfileActionButtonProvider>
@@ -22,7 +22,7 @@
     NSString *_title;
     SEL _action;
     CDUnknownBlockType _stateCalculator;
-    TFNButton *_actionButton;
+    TFNLegacyButton *_actionButton;
     UIImageView *_unreadIndicatorImageView;
     unsigned long long _variant;
     id _target;
@@ -36,7 +36,7 @@
 @property(nonatomic) __weak id target; // @synthesize target=_target;
 @property(nonatomic) unsigned long long variant; // @synthesize variant=_variant;
 @property(retain, nonatomic) UIImageView *unreadIndicatorImageView; // @synthesize unreadIndicatorImageView=_unreadIndicatorImageView;
-@property(retain, nonatomic) TFNButton *actionButton; // @synthesize actionButton=_actionButton;
+@property(retain, nonatomic) TFNLegacyButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(copy, nonatomic) CDUnknownBlockType stateCalculator; // @synthesize stateCalculator=_stateCalculator;
 @property(nonatomic) SEL action; // @synthesize action=_action;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;

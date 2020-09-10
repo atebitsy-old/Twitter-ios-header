@@ -20,10 +20,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: broadcast
     // Error parsing type: , name: shouldDeleteBroadcast
     // Error parsing type: , name: didDetectAuthenticationError
-    // Error parsing type: , name: closeButton
     // Error parsing type: , name: stopBroadcastButton
-    // Error parsing type: , name: stopButtonDidTransitionToIcon
-    // Error parsing type: , name: stopLiveButtonWidthAnchor
     // Error parsing type: , name: panGestureRecognizer
     // Error parsing type: , name: preBroadcastDoubleTapRecognizer
     // Error parsing type: , name: currentEventHashtags
@@ -49,7 +46,6 @@ __attribute__((visibility("hidden")))
 - (void)inviteGuestsDidTouchUpWithButton:(id)arg1;
 - (void)goLiveButtonDidTouchUpWithButton:(id)arg1;
 - (void)stopBroadcastButtonDidTouchUpInside:(id)arg1 event:(id)arg2;
-- (void)closeButtonDidTouchUpInside:(id)arg1;
 - (void)updateViewConstraints;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewControllerDidPresentAnimated:(_Bool)arg1;

@@ -51,8 +51,6 @@
 - (_Bool)shouldForceForwardDisplayModeRenderingForLegacyCard:(long long)arg1;
 @property(readonly, nonatomic) _Bool useNonFSOCompatibleLegacyCardRegistryKeys;
 @property(readonly, nonatomic, getter=isLegacyCardRegistryEnabled) _Bool legacyCardRegistryEnabled;
-- (long long)_t1_mapRatingsTypeFromString:(id)arg1;
-@property(readonly, nonatomic) long long unifiedCardAppRatingsType;
 @property(readonly, nonatomic) unsigned long long edgeToEdgePresentation;
 @property(readonly, nonatomic) unsigned long long videoCarouselPresentation;
 @property(readonly, nonatomic) unsigned long long carouselPresentation;

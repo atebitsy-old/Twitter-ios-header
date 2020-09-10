@@ -4,13 +4,13 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <TFNUI/TFNButton.h>
+#import <TFNUI/TFNLegacyButton.h>
 
-#import <T1Twitter/TFNButtonAnimationCoordinator-Protocol.h>
+#import <T1Twitter/TFNLegacyButtonAnimationCoordinator-Protocol.h>
 
 @class NSString;
 
-@interface T1AccordionButton : TFNButton <TFNButtonAnimationCoordinator>
+@interface T1AccordionButton : TFNLegacyButton <TFNLegacyButtonAnimationCoordinator>
 {
     _Bool _open;
     unsigned long long _customState;

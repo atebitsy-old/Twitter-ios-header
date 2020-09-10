@@ -6,21 +6,22 @@
 
 #import <objc/NSObject.h>
 
-@protocol TFSLogger, TFSScribePersistenceStrategy;
+@class TFSScribeConfiguration;
+@protocol TFSScribePersistenceStrategy;
 
 @interface TFSScribe : NSObject
 {
-    id <TFSLogger> _logger;
+    TFSScribeConfiguration *_configuration;
     id <TFSScribePersistenceStrategy> _persistenceStrategy;
 }
 
 - (void).cxx_destruct;
-- (id)persistenceStrategy;
+@property(readonly, nonatomic) id <TFSScribePersistenceStrategy> persistenceStrategy; // @synthesize persistenceStrategy=_persistenceStrategy;
+@property(readonly, nonatomic) TFSScribeConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(getter=isDebugEnabled) _Bool debugEnabled;
 - (void)clearScribeDatabase;
 - (void)deleteGroups:(id)arg1;
 - (void)deleteGroup:(id)arg1;
-- (void)_flushGroupsWithNoLimits:(id)arg1 token:(id)arg2 fetchLimit:(unsigned long long)arg3 batchSize:(unsigned long long)arg4 eventsHandler:(id)arg5 impressionsHandler:(id)arg6;
 - (void)flushGroups:(id)arg1 token:(id)arg2 fetchLimit:(unsigned long long)arg3 batchSize:(unsigned long long)arg4 eventsHandler:(id)arg5 impressionsHandler:(id)arg6;
 - (void)flushGroups:(id)arg1 token:(id)arg2 eventsHandler:(id)arg3 impressionsHandler:(id)arg4;
 - (void)flushGroups:(id)arg1 token:(id)arg2 eventsHandler:(id)arg3;
@@ -37,7 +38,7 @@
 - (void)close;
 - (void)openWithStartBlock:(CDUnknownBlockType)arg1 completionBlock:(CDUnknownBlockType)arg2;
 - (void)open;
-- (id)initWithConfiguration:(id)arg1 logger:(id)arg2 errorDelegate:(id)arg3;
+- (id)initWithConfiguration:(id)arg1;
 
 @end
 

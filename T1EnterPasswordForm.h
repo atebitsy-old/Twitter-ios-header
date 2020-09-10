@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNAttributedTextViewDelegate-Protocol.h>
 
-@class NSDictionary, NSString, T1AuthenticationFormTogglePasswordTextView, T1SignUpFormField;
+@class NSString, T1AuthenticationFormTogglePasswordTextView, T1SignUpFormField, TFSTwitterOnboardingUserIdentifierCollection;
 
 @interface T1EnterPasswordForm : TFNForm <TFNAttributedTextViewDelegate>
 {
@@ -17,7 +17,7 @@
     NSString *_hintText;
     NSString *_confirmationHintText;
     NSString *_confirmationMismatchMessage;
-    NSDictionary *_userIdentifiers;
+    TFSTwitterOnboardingUserIdentifierCollection *_userIdentifierCollection;
     long long _userIdentifierDisplayType;
     T1SignUpFormField *_identifierField;
     T1SignUpFormField *_passwordField;
@@ -34,7 +34,7 @@
 - (void)attributedTextView:(id)arg1 didTapRange:(id)arg2 rect:(struct CGRect)arg3;
 @property(retain, nonatomic) NSString *password;
 - (id)sections;
-- (id)initWithUserIdentifiers:(id)arg1 userIdentifierDisplayType:(long long)arg2 hintText:(id)arg3 confirmationHintText:(id)arg4 confirmationMismatchMessage:(id)arg5 showConfirmation:(_Bool)arg6 skipValidation:(_Bool)arg7;
+- (id)initWithUserIdentifierCollection:(id)arg1 userIdentifierDisplayType:(long long)arg2 hintText:(id)arg3 confirmationHintText:(id)arg4 confirmationMismatchMessage:(id)arg5 showConfirmation:(_Bool)arg6 skipValidation:(_Bool)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

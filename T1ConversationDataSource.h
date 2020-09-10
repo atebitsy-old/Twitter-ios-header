@@ -31,6 +31,7 @@
     NSMutableDictionary *_statusIDToEntryIDCache;
     NSMutableDictionary *_nodeCache;
     NSArray *_cachedFlattenedNodeTreeNodes;
+    NSArray *_entryIDsForAncestorWithConnectorsConnectingToSelectedStatus;
     NSMutableSet *_orphanNodes;
     NSMutableSet *_moderatedEntryIDs;
 }
@@ -38,6 +39,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *moderatedEntryIDs; // @synthesize moderatedEntryIDs=_moderatedEntryIDs;
 @property(retain, nonatomic) NSMutableSet *orphanNodes; // @synthesize orphanNodes=_orphanNodes;
+@property(retain, nonatomic) NSArray *entryIDsForAncestorWithConnectorsConnectingToSelectedStatus; // @synthesize entryIDsForAncestorWithConnectorsConnectingToSelectedStatus=_entryIDsForAncestorWithConnectorsConnectingToSelectedStatus;
 @property(retain, nonatomic) NSArray *cachedFlattenedNodeTreeNodes; // @synthesize cachedFlattenedNodeTreeNodes=_cachedFlattenedNodeTreeNodes;
 @property(retain, nonatomic) NSMutableDictionary *nodeCache; // @synthesize nodeCache=_nodeCache;
 @property(retain, nonatomic) NSMutableDictionary *statusIDToEntryIDCache; // @synthesize statusIDToEntryIDCache=_statusIDToEntryIDCache;
@@ -70,6 +72,9 @@
 - (id)entryIDForStatusID:(long long)arg1;
 - (id)nodeForStatusID:(long long)arg1;
 - (id)nodeForEntryID:(id)arg1;
+- (id)_t1_entryIDForNodeConnectedToSelectedStatus:(id)arg1;
+- (id)_t1_entryIDsForNodeConnectedToSelectedStatus;
+@property(readonly, nonatomic) NSArray *entryIDsForDecendentWithConnectorsConnectingToSelectedStatus;
 - (void)_t1_setVisibleSiblingConnectorLevels:(id)arg1 entryIDs:(id)arg2 forNode:(id)arg3;
 - (id)_t1_connectorLevelForNode:(id)arg1;
 - (void)_t1_trimSucceedingNodes:(id)arg1 upToLevel:(long long)arg2;

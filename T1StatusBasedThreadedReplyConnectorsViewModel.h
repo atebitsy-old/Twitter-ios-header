@@ -20,12 +20,14 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) __weak UIView<T1ConversationThreadedReplyConnectorsHost> *hostView; // @synthesize hostView=_hostView;
 @property(readonly, nonatomic) T1ConversationNode *node; // @synthesize node=_node;
-- (double)ancestorConnectorViewOffsetForLayoutMetrics:(id)arg1 isSelected:(_Bool)arg2;
+- (double)ancestorConnectorViewOffsetForLayoutMetrics:(id)arg1;
 @property(readonly, nonatomic) double ancestorConnectorViewHeight;
 @property(readonly, nonatomic) double ancestorConnectorViewOriginY;
 @property(readonly, nonatomic) double elbowParentConnectorViewHeight;
 @property(readonly, nonatomic) double elbowParentConnectorViewWidth;
 @property(readonly, nonatomic) double verticalParentConnectorViewHeight;
+- (_Bool)shouldShowAncestorHighlightingAtLevel:(unsigned long long)arg1;
+- (_Bool)shouldShowParentHighlighting;
 - (_Bool)shouldShowAncestorConnectorAtLevel:(unsigned long long)arg1;
 @property(readonly, nonatomic) _Bool shouldShowElbowParentConnectorView;
 @property(readonly, nonatomic) _Bool shouldShowVerticalParentConnectorView;

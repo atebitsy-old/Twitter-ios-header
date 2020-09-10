@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1MediaAttachmentViewDelegate-Protocol.h>
 
-@class NSMutableArray, NSString, T1MediaAttachmentAttributionView, T1MediaAttachmentView, T1MediaAttachmentViewLivePhotoRenderCache, TFNButton, TFNCustomHitTestView, TFNPaddedButton, TFNTwitterMediaAsset, TIPImagePipeline, UILongPressGestureRecognizer, UITapGestureRecognizer, UIView;
+@class NSMutableArray, NSString, T1MediaAttachmentAttributionView, T1MediaAttachmentView, T1MediaAttachmentViewLivePhotoRenderCache, TFNCustomHitTestView, TFNLegacyButton, TFNPaddedButton, TFNTwitterMediaAsset, TIPImagePipeline, UILongPressGestureRecognizer, UITapGestureRecognizer, UIView;
 @protocol T1MediaAttachmentsViewCellDelegate;
 
 @interface T1MediaAttachmentsViewCell : UICollectionViewCell <T1MediaAttachmentViewDelegate>
@@ -18,9 +18,9 @@
     T1MediaAttachmentAttributionView *_attributionView;
     TFNPaddedButton *_removeButton;
     TFNCustomHitTestView *_buttonsContainerView;
-    TFNButton *_livePhotoToggleButton;
-    TFNButton *_editButton;
-    TFNButton *_altTextButton;
+    TFNLegacyButton *_livePhotoToggleButton;
+    TFNLegacyButton *_editButton;
+    TFNLegacyButton *_altTextButton;
     UITapGestureRecognizer *_tapGestureRecognizer;
     UILongPressGestureRecognizer *_longPressGestureRecognizer;
     NSMutableArray *_customAccessiblityActions;

@@ -25,9 +25,10 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: subscriberCountHighlightView
     // Error parsing type: , name: userHighlightView
     // Error parsing type: , name: headerTitleLabel
-    // Error parsing type: , name: account
     // Error parsing type: , name: imageViewFetchHelper
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: imagePipeline
+    // Error parsing type: , name: userBadger
     // Error parsing type: , name: spheresFeatureSwitches
     // Error parsing type: , name: $__lazy_storage_$_placeholderBannerImage
 }

@@ -10,17 +10,17 @@
 {
     _Bool _shouldShowAppIcon;
     _Bool _shouldUseSingleLineTitle;
-    long long _appMetadataLineOneAppRatingType;
+    _Bool _shouldShowAppRatingsInAppMetadataLineOne;
     long long _appMetadataLineTwoType;
 }
 
 + (id)defaultConfig;
 @property(readonly, nonatomic) long long appMetadataLineTwoType; // @synthesize appMetadataLineTwoType=_appMetadataLineTwoType;
-@property(readonly, nonatomic) long long appMetadataLineOneAppRatingType; // @synthesize appMetadataLineOneAppRatingType=_appMetadataLineOneAppRatingType;
+@property(readonly, nonatomic) _Bool shouldShowAppRatingsInAppMetadataLineOne; // @synthesize shouldShowAppRatingsInAppMetadataLineOne=_shouldShowAppRatingsInAppMetadataLineOne;
 @property(readonly, nonatomic) _Bool shouldUseSingleLineTitle; // @synthesize shouldUseSingleLineTitle=_shouldUseSingleLineTitle;
 @property(readonly, nonatomic) _Bool shouldShowAppIcon; // @synthesize shouldShowAppIcon=_shouldShowAppIcon;
 @property(readonly, nonatomic) _Bool isDefaultConfig;
-- (id)initWithShouldShowAppIcon:(_Bool)arg1 shouldUseSingleLineTitle:(_Bool)arg2 appMetadataLineOneAppRatingType:(long long)arg3 appMetadataLineTwoType:(long long)arg4;
+- (id)initWithShouldShowAppIcon:(_Bool)arg1 shouldUseSingleLineTitle:(_Bool)arg2 shouldShowAppRatingsInAppMetadataLineOne:(_Bool)arg3 appMetadataLineTwoType:(long long)arg4;
 - (id)init;
 
 @end

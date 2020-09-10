@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNPreviewable-Protocol.h>
 
-@class NSString, T1DismissButton, T1TimelinesItemProminentSocialContextViewModel, TFNButton, TFNTappableHighlightView, UIImageView, UILabel;
+@class NSString, T1DismissButton, T1TimelinesItemProminentSocialContextViewModel, TFNLegacyButton, TFNTappableHighlightView, UIImageView, UILabel;
 @protocol T1TimelinesItemProminentSocialContextViewDelegate;
 
 @interface T1TimelinesItemProminentSocialContextView : UIView <TFNPreviewable>
@@ -21,12 +21,12 @@
     UILabel *_subtextLabel;
     TFNTappableHighlightView *_highlightView;
     T1DismissButton *_caretButton;
-    TFNButton *_followButton;
+    TFNLegacyButton *_followButton;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool socialContextUserInteractionEnabled; // @synthesize socialContextUserInteractionEnabled=_socialContextUserInteractionEnabled;
-@property(retain, nonatomic) TFNButton *followButton; // @synthesize followButton=_followButton;
+@property(retain, nonatomic) TFNLegacyButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) T1DismissButton *caretButton; // @synthesize caretButton=_caretButton;
 @property(retain, nonatomic) TFNTappableHighlightView *highlightView; // @synthesize highlightView=_highlightView;
 @property(retain, nonatomic) UILabel *subtextLabel; // @synthesize subtextLabel=_subtextLabel;

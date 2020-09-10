@@ -56,10 +56,6 @@
     struct CGRect _sourceRect;
 }
 
-+ (id)defaultSlideoverHandleColor;
-+ (void)setDefaultSlideoverHandleColor:(id)arg1;
-+ (id)defaultChromeColor;
-+ (void)setDefaultChromeColor:(id)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) double dismissAnimationDuration; // @synthesize dismissAnimationDuration=_dismissAnimationDuration;
 @property(nonatomic) double dismissAnimationVelocity; // @synthesize dismissAnimationVelocity=_dismissAnimationVelocity;
@@ -88,8 +84,6 @@
 @property(retain, nonatomic) UIView *sourceView; // @synthesize sourceView=_sourceView;
 @property(nonatomic) __weak id <TFNModalContainerViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (_Bool)accessibilityPerformEscape;
-- (void)_updateModalContentSafeAreaInsets;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (void)tfnPresentedCustomDismissAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)tfnPresentedCustomPresentFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
@@ -110,6 +104,7 @@
 - (void)_updateModalContentViewControllerTraitCollection;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)willTransitionToTraitCollection:(id)arg1 withTransitionCoordinator:(id)arg2;
+- (void)_updateModalContentSafeAreaInsets;
 - (long long)preferredInterfaceOrientationForPresentation;
 - (unsigned long long)supportedInterfaceOrientations;
 - (struct CGSize)sizeForChildContentContainer:(id)arg1 withParentContainerSize:(struct CGSize)arg2;

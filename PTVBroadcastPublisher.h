@@ -6,7 +6,7 @@
 
 #import <PeriscopeSDK/PTVBroadcastController.h>
 
-@class NSTimer, PTVAccessBroadcaster, PTVAsyncLog, PTVBroadcasterSurvey, PTVCreateBroadcastAnalyticsManager;
+@class NSString, NSTimer, PTVAccessBroadcaster, PTVAsyncLog, PTVBroadcasterSurvey, PTVCreateBroadcastAnalyticsManager;
 @protocol PTVChatRoomAccess;
 
 @interface PTVBroadcastPublisher : PTVBroadcastController
@@ -16,6 +16,7 @@
     _Bool _canShowSurveys;
     _Bool _shouldShowBroadcasterSurvey;
     PTVAccessBroadcaster *_publishingAccess;
+    NSString *_broadcastCreationAppComponent;
     NSTimer *_uploadLogsTimer;
     PTVAsyncLog *_publishingLogs;
     PTVBroadcasterSurvey *_broadcasterSurvey;
@@ -27,6 +28,7 @@
 @property(readonly, nonatomic) PTVAsyncLog *publishingLogs; // @synthesize publishingLogs=_publishingLogs;
 @property(retain, nonatomic) NSTimer *uploadLogsTimer; // @synthesize uploadLogsTimer=_uploadLogsTimer;
 @property(nonatomic) _Bool canShowSurveys; // @synthesize canShowSurveys=_canShowSurveys;
+@property(retain, nonatomic) NSString *broadcastCreationAppComponent; // @synthesize broadcastCreationAppComponent=_broadcastCreationAppComponent;
 @property(retain, nonatomic) PTVAccessBroadcaster *publishingAccess; // @synthesize publishingAccess=_publishingAccess;
 - (void)_didReceiveBroadcasterSurvey:(id)arg1;
 - (void)checkIfSelectedForBroadcasterSurvey;

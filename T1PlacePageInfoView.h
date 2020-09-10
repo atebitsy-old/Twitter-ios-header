@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class TFNButton, UILabel;
+@class TFNLegacyButton, UILabel;
 @protocol T1PlacePageInfoViewDelegate;
 
 @interface T1PlacePageInfoView : UIView
@@ -15,11 +15,11 @@
     UILabel *_placeNameLabel;
     UILabel *_placeAddressLabel;
     UIView *_placeAttributionView;
-    TFNButton *_ctaButton;
+    TFNLegacyButton *_ctaButton;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) TFNButton *ctaButton; // @synthesize ctaButton=_ctaButton;
+@property(retain, nonatomic) TFNLegacyButton *ctaButton; // @synthesize ctaButton=_ctaButton;
 @property(retain, nonatomic) UIView *placeAttributionView; // @synthesize placeAttributionView=_placeAttributionView;
 @property(retain, nonatomic) UILabel *placeAddressLabel; // @synthesize placeAddressLabel=_placeAddressLabel;
 @property(retain, nonatomic) UILabel *placeNameLabel; // @synthesize placeNameLabel=_placeNameLabel;

@@ -96,7 +96,6 @@
 - (void)showSearchFromBarButtonItem:(id)arg1;
 @property(readonly, nonatomic) _Bool isShowingSearchTypeahead;
 - (void)performSearchTextViewTapAction;
-- (void)backButtonLongPressAction:(id)arg1;
 - (void)tabWasLongPressed;
 - (void)handleTabSelectionIfAlreadySelected;
 - (void)tabWasSelectedWithOptions:(long long)arg1;

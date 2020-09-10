@@ -6,12 +6,14 @@
 
 #import <UIKit/UIView.h>
 
-@class NSArray, NSLayoutConstraint, NSString, T1AvatarImageView, TIPImagePipeline, UIColor, UIImage;
+@class NSArray, NSLayoutConstraint, NSString, T1AvatarImageView, T1AvatarImageViewModel, TIPImagePipeline, UIColor, UIImage;
 @protocol TFSTwitterCanonicalUser;
 
 @interface T1VoiceAvatarView : UIView
 {
     _Bool _ambientAnimationEnabled;
+    T1AvatarImageViewModel *_avatarViewModel;
+    double _circleMaxOffset;
     UIColor *_circlesColor;
     T1AvatarImageView *_profileImageView;
     NSArray *_circlesLayers;
@@ -25,6 +27,8 @@
 @property(retain, nonatomic) NSArray *circlesLayers; // @synthesize circlesLayers=_circlesLayers;
 @property(retain, nonatomic) T1AvatarImageView *profileImageView; // @synthesize profileImageView=_profileImageView;
 @property(retain, nonatomic) UIColor *circlesColor; // @synthesize circlesColor=_circlesColor;
+@property(nonatomic) double circleMaxOffset; // @synthesize circleMaxOffset=_circleMaxOffset;
+@property(retain, nonatomic) T1AvatarImageViewModel *avatarViewModel; // @synthesize avatarViewModel=_avatarViewModel;
 @property(nonatomic, getter=ambientAnimationIsEnabled) _Bool ambientAnimationEnabled; // @synthesize ambientAnimationEnabled=_ambientAnimationEnabled;
 - (void)tfx_voicePlaybackCircleOpacityFactorParameterChanged;
 - (void)tfx_voicePlaybackCircleCountParameterChanged;

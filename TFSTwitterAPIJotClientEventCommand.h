@@ -24,6 +24,7 @@
 @property(copy, nonatomic) NSArray *retryDistribution; // @synthesize retryDistribution=_retryDistribution;
 @property(copy, nonatomic) NSString *language; // @synthesize language=_language;
 @property(copy, nonatomic) NSString *log; // @synthesize log=_log;
+- (_Bool)supportsExecutionViaActionService;
 - (id)request;
 - (id)initWithAccountID:(id)arg1 log:(id)arg2 language:(id)arg3 retryDistribution:(id)arg4 isDebug:(_Bool)arg5 context:(id)arg6 responseModelBuilder:(id)arg7 completionBlock:(CDUnknownBlockType)arg8;
 - (id)initWithAccountID:(id)arg1 context:(id)arg2 authContext:(id)arg3 networkTransactionMetrics:(id)arg4 source:(unsigned long long)arg5 completionBlock:(CDUnknownBlockType)arg6;

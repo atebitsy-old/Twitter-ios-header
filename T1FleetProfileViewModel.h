@@ -8,7 +8,6 @@
 
 @interface T1FleetProfileViewModel : NSObject
 {
-    // Error parsing type: , name: avatarPresentationRect
     // Error parsing type: , name: delegate
     // Error parsing type: , name: userDataSource
     // Error parsing type: , name: context

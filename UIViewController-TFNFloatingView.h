@@ -66,6 +66,8 @@
 - (id)tfn_ownedViewControllers;
 - (id)initAndRecordWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)setLayoutMetrics:(id)arg1;
+@property(retain, nonatomic, setter=tfn_setBackMenuTitle:) NSString *tfn_backMenuTitle;
+- (void)tfn_setupMinimalBackButton;
 @property(readonly, nonatomic) _Bool tfn_prefersMacToolbarHidden;
 @property(readonly, nonatomic) UIViewController *tfn_childViewControllerForMacToolbarHidden;
 @property(readonly, nonatomic, getter=tfn_isMovingToParentViewController) _Bool tfn_movingToParentViewController;
@@ -88,13 +90,9 @@
 - (long long)tfn_previewingGestureRecognizerState;
 - (void)tfn_previewingStateDidChange;
 @property(readonly, nonatomic) long long tfn_previewingState;
-- (id)_tfn_layoutGuidesState;
 @property(nonatomic) __weak id <TFNLayoutGuidesSource> layoutGuidesSource;
 - (void)sendLayoutGuidesDidChange:(long long)arg1;
 - (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
-- (double)_tfn_defaultLengthForLayoutGuide:(long long)arg1;
-- (double)_tfn_lengthForLayoutGuide:(long long)arg1;
-- (id)_tfn_layoutSupportForLayoutGuide:(long long)arg1;
 - (double)systemSafeAreaInsetForLayoutGuide:(long long)arg1;
 - (void)layoutGuidesDidChange:(long long)arg1;
 @property(readonly, nonatomic) id <UILayoutSupport> bottomVisibleLayoutGuide;

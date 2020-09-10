@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, TFNTwitterStatus, TFSTwitterUserReference;
-@protocol T1AbstractSphereListViewModel, T1FleetReportContext, TFNDirectMessageConversation, TFNDirectMessageEntry, TFNTwitterUserContext, TFSTwitterCanonicalUser;
+@class NSString, T1BlockOrReportActionContextTargetList, TFNTwitterStatus, TFSTwitterUserReference;
+@protocol T1FleetReportContext, TFNDirectMessageConversation, TFNDirectMessageEntry, TFNTwitterUserContext, TFSTwitterCanonicalUser;
 
 @interface T1BlockOrReportActionContext : NSObject
 {
@@ -20,7 +20,7 @@
     NSString *_targetMomentID;
     id <TFNDirectMessageConversation> _targetDirectMessageConversation;
     id <TFNDirectMessageEntry> _targetDirectMessage;
-    id <T1AbstractSphereListViewModel> _targetSphere;
+    T1BlockOrReportActionContextTargetList *_targetList;
     id <T1FleetReportContext> _targetFleet;
     NSString *_reportFlowID;
     NSString *_scribePage;
@@ -32,7 +32,7 @@
 }
 
 + (id)contextForReportingFleetReportContext:(id)arg1 scribePage:(id)arg2 scribeSection:(id)arg3 scribeComponent:(id)arg4 completion:(CDUnknownBlockType)arg5;
-+ (id)contextForReportingSphereViewModel:(id)arg1 scribePage:(id)arg2 scribeSection:(id)arg3 scribeComponent:(id)arg4 completion:(CDUnknownBlockType)arg5;
++ (id)contextForReportingList:(id)arg1 scribePage:(id)arg2 scribeSection:(id)arg3 scribeComponent:(id)arg4 completion:(CDUnknownBlockType)arg5;
 + (id)contextForReportingDirectMessageConversation:(id)arg1 directMessage:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4 scribeComponent:(id)arg5 completion:(CDUnknownBlockType)arg6;
 + (id)contextForReportingMomentID:(id)arg1 status:(id)arg2 user:(id)arg3 scribePage:(id)arg4 scribeSection:(id)arg5 scribeComponent:(id)arg6 completion:(CDUnknownBlockType)arg7;
 + (id)contextForReportingStatus:(id)arg1 scribePage:(id)arg2 scribeSection:(id)arg3 scribeComponent:(id)arg4 completion:(CDUnknownBlockType)arg5;
@@ -42,8 +42,8 @@
 + (id)contextForBlockingUserReference:(id)arg1 userContext:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4 scribeComponent:(id)arg5 completion:(CDUnknownBlockType)arg6;
 + (id)contextForBlockingUser:(id)arg1 userContext:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4 scribeComponent:(id)arg5 completion:(CDUnknownBlockType)arg6;
 + (void)_configureScribeElementForReportingContext:(id)arg1;
-+ (id)_t1_contextWithTargetUserReference:(id)arg1 targetUser:(id)arg2 targetUserContext:(id)arg3 targetStatus:(id)arg4 targetMomentID:(id)arg5 targetDirectMessageConversation:(id)arg6 targetDirectMessage:(id)arg7 targetSphere:(id)arg8 scribePage:(id)arg9 scribeSection:(id)arg10 scribeComponent:(id)arg11 mode:(unsigned long long)arg12 contextType:(unsigned long long)arg13 completion:(CDUnknownBlockType)arg14;
-+ (id)_t1_contextWithTargetUserReference:(id)arg1 targetUser:(id)arg2 targetUserContext:(id)arg3 targetStatus:(id)arg4 targetMomentID:(id)arg5 targetDirectMessageConversation:(id)arg6 targetDirectMessage:(id)arg7 targetSphere:(id)arg8 targetFleet:(id)arg9 scribePage:(id)arg10 scribeSection:(id)arg11 scribeComponent:(id)arg12 mode:(unsigned long long)arg13 contextType:(unsigned long long)arg14 completion:(CDUnknownBlockType)arg15;
++ (id)_t1_contextWithTargetUserReference:(id)arg1 targetUser:(id)arg2 targetUserContext:(id)arg3 targetStatus:(id)arg4 targetMomentID:(id)arg5 targetDirectMessageConversation:(id)arg6 targetDirectMessage:(id)arg7 targetList:(id)arg8 scribePage:(id)arg9 scribeSection:(id)arg10 scribeComponent:(id)arg11 mode:(unsigned long long)arg12 contextType:(unsigned long long)arg13 completion:(CDUnknownBlockType)arg14;
++ (id)_t1_contextWithTargetUserReference:(id)arg1 targetUser:(id)arg2 targetUserContext:(id)arg3 targetStatus:(id)arg4 targetMomentID:(id)arg5 targetDirectMessageConversation:(id)arg6 targetDirectMessage:(id)arg7 targetList:(id)arg8 targetFleet:(id)arg9 scribePage:(id)arg10 scribeSection:(id)arg11 scribeComponent:(id)arg12 mode:(unsigned long long)arg13 contextType:(unsigned long long)arg14 completion:(CDUnknownBlockType)arg15;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool shouldDismissModals; // @synthesize shouldDismissModals=_shouldDismissModals;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
@@ -54,7 +54,7 @@
 @property(copy, nonatomic) NSString *scribePage; // @synthesize scribePage=_scribePage;
 @property(retain, nonatomic) NSString *reportFlowID; // @synthesize reportFlowID=_reportFlowID;
 @property(retain, nonatomic) id <T1FleetReportContext> targetFleet; // @synthesize targetFleet=_targetFleet;
-@property(retain, nonatomic) id <T1AbstractSphereListViewModel> targetSphere; // @synthesize targetSphere=_targetSphere;
+@property(retain, nonatomic) T1BlockOrReportActionContextTargetList *targetList; // @synthesize targetList=_targetList;
 @property(retain, nonatomic) id <TFNDirectMessageEntry> targetDirectMessage; // @synthesize targetDirectMessage=_targetDirectMessage;
 @property(retain, nonatomic) id <TFNDirectMessageConversation> targetDirectMessageConversation; // @synthesize targetDirectMessageConversation=_targetDirectMessageConversation;
 @property(copy, nonatomic) NSString *targetMomentID; // @synthesize targetMomentID=_targetMomentID;

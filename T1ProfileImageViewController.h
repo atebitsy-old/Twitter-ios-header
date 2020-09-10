@@ -6,7 +6,7 @@
 
 #import <T1Twitter/T1SlideshowViewController.h>
 
-@class NSArray, NSLayoutConstraint, TFNButton, UILayoutGuide, UIView;
+@class NSArray, NSLayoutConstraint, TFNLegacyButton, UILayoutGuide, UIView;
 @protocol T1ProfileImageViewControllerDelegate;
 
 @interface T1ProfileImageViewController : T1SlideshowViewController
@@ -18,7 +18,7 @@
     UILayoutGuide *_containerViewLayoutMarginsGuide;
     NSArray *_visibleChromeContainerViewLayoutMarginsGuideConstraints;
     NSArray *_hiddenChromeContainerViewLayoutMarginsGuideConstraints;
-    TFNButton *_editButton;
+    TFNLegacyButton *_editButton;
     NSLayoutConstraint *_editButtonBottomAnchorConstraint;
     NSLayoutConstraint *_editButtonTopAnchorConstraint;
 }
@@ -26,7 +26,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *editButtonTopAnchorConstraint; // @synthesize editButtonTopAnchorConstraint=_editButtonTopAnchorConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *editButtonBottomAnchorConstraint; // @synthesize editButtonBottomAnchorConstraint=_editButtonBottomAnchorConstraint;
-@property(retain, nonatomic) TFNButton *editButton; // @synthesize editButton=_editButton;
+@property(retain, nonatomic) TFNLegacyButton *editButton; // @synthesize editButton=_editButton;
 @property(retain, nonatomic) NSArray *hiddenChromeContainerViewLayoutMarginsGuideConstraints; // @synthesize hiddenChromeContainerViewLayoutMarginsGuideConstraints=_hiddenChromeContainerViewLayoutMarginsGuideConstraints;
 @property(retain, nonatomic) NSArray *visibleChromeContainerViewLayoutMarginsGuideConstraints; // @synthesize visibleChromeContainerViewLayoutMarginsGuideConstraints=_visibleChromeContainerViewLayoutMarginsGuideConstraints;
 @property(retain, nonatomic) UILayoutGuide *containerViewLayoutMarginsGuide; // @synthesize containerViewLayoutMarginsGuide=_containerViewLayoutMarginsGuide;

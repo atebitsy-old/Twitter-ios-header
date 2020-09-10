@@ -6,6 +6,7 @@
 
 #import <objc/NSObject.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter23T1ActivityCellViewModel : NSObject
 {
     // Error parsing type: , name: socialTextModel

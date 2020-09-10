@@ -7,10 +7,9 @@
 #import <T1Twitter/NSCoding-Protocol.h>
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSString, TFSTwitterUserReference;
+@class NSString;
 
 @protocol T1AbstractSphereListViewModel <NSObject, NSCoding>
-@property(nonatomic, readonly) TFSTwitterUserReference *userReference;
 @property(nonatomic, readonly) NSString *listName;
 @property(nonatomic, readonly) long long listID;
 @property(nonatomic, readonly) long long ownerUserID;

@@ -6,17 +6,14 @@
 
 #import <TFSTwitterCore/TFSTwitterOnboardingSubtask.h>
 
-@class NSDictionary, NSString, TFSTwitterOnboardingHeader, TFSTwitterOnboardingNavigationLink, TFSTwitterOnboardingRichText;
+@class NSString, TFSTwitterOnboardingHeader, TFSTwitterOnboardingNavigationLink, TFSTwitterOnboardingRichText, TFSTwitterOnboardingUserIdentifierCollection;
 
 @interface TFSTwitterOnboardingEnterPasswordSubtask : TFSTwitterOnboardingSubtask
 {
     _Bool _skipPasswordValidation;
     _Bool _showPasswordConfirmation;
     TFSTwitterOnboardingHeader *_header;
-    NSString *_name;
-    NSString *_email;
-    NSString *_username;
-    NSString *_phoneNumber;
+    TFSTwitterOnboardingUserIdentifierCollection *_userIdentifierCollection;
     long long _userIdentifierDisplayType;
     NSString *_hint;
     NSString *_passwordConfirmationHint;
@@ -36,12 +33,8 @@
 @property(readonly, nonatomic) NSString *passwordConfirmationHint; // @synthesize passwordConfirmationHint=_passwordConfirmationHint;
 @property(readonly, nonatomic) NSString *hint; // @synthesize hint=_hint;
 @property(readonly, nonatomic) long long userIdentifierDisplayType; // @synthesize userIdentifierDisplayType=_userIdentifierDisplayType;
-@property(readonly, nonatomic) NSString *phoneNumber; // @synthesize phoneNumber=_phoneNumber;
-@property(readonly, nonatomic) NSString *username; // @synthesize username=_username;
-@property(readonly, nonatomic) NSString *email; // @synthesize email=_email;
-@property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
+@property(readonly, nonatomic) TFSTwitterOnboardingUserIdentifierCollection *userIdentifierCollection; // @synthesize userIdentifierCollection=_userIdentifierCollection;
 @property(readonly, nonatomic) TFSTwitterOnboardingHeader *header; // @synthesize header=_header;
-@property(readonly, nonatomic) NSDictionary *userIdentifiers;
 - (id)initWithJSONDictionary:(id)arg1 subtaskID:(id)arg2 typeName:(id)arg3 backNavigationType:(long long)arg4 backNavigationLink:(id)arg5 error:(id *)arg6;
 
 @end

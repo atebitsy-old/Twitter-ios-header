@@ -12,5 +12,6 @@
 @property(readonly, nonatomic) NSURL *tfn_stringAsURL;
 @property(readonly, nonatomic) NSURL *tfn_URL;
 - (_Bool)_tfn_hasInaccessibleNSURLs;
+@property(readonly, nonatomic) _Bool tfn_hasURLs;
 @end
 

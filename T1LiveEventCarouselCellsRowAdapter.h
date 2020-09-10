@@ -8,13 +8,14 @@
 
 #import <T1Twitter/TFNCellVisibilityBroadcasterDelegate-Protocol.h>
 
-@class NSString, TFNTwitterScribeImpressionLogger, TIPImagePipeline;
+@class NSString, T1UserBadger, TFNTwitterScribeImpressionLogger, TIPImagePipeline;
 @protocol T1LiveEventCarouselCellsRowAdapterDelegate, TFNTwitterScribeImpressionCache, TFSTwitterLegacyScribeLogMethods;
 
 @interface T1LiveEventCarouselCellsRowAdapter : TFNItemsTableRowAdapter <TFNCellVisibilityBroadcasterDelegate>
 {
     id <T1LiveEventCarouselCellsRowAdapterDelegate> _delegate;
     TIPImagePipeline *_imagePipeline;
+    T1UserBadger *_userBadger;
     id <TFSTwitterLegacyScribeLogMethods> _scribe;
     id <TFNTwitterScribeImpressionCache> _scribeImpressionCache;
     TFNTwitterScribeImpressionLogger *_impressionLogger;
@@ -24,6 +25,7 @@
 @property(readonly, nonatomic) TFNTwitterScribeImpressionLogger *impressionLogger; // @synthesize impressionLogger=_impressionLogger;
 @property(readonly, nonatomic) id <TFNTwitterScribeImpressionCache> scribeImpressionCache; // @synthesize scribeImpressionCache=_scribeImpressionCache;
 @property(readonly, nonatomic) id <TFSTwitterLegacyScribeLogMethods> scribe; // @synthesize scribe=_scribe;
+@property(readonly, nonatomic) T1UserBadger *userBadger; // @synthesize userBadger=_userBadger;
 @property(readonly, nonatomic) TIPImagePipeline *imagePipeline; // @synthesize imagePipeline=_imagePipeline;
 @property(nonatomic) __weak id <T1LiveEventCarouselCellsRowAdapterDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)broadcaster:(id)arg1 focalViewForCell:(id)arg2;
@@ -31,7 +33,7 @@
 - (struct CGSize)dataViewController:(id)arg1 collectionViewSizeForItem:(id)arg2 constrainedToSize:(struct CGSize)arg3 withOptions:(id)arg4 atIndexPath:(id)arg5;
 - (id)dataViewController:(id)arg1 collectionViewCellForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (id)init;
-- (id)initWithImagePipeline:(id)arg1 scribe:(id)arg2 scribeImpressionCache:(id)arg3 impressionLogger:(id)arg4;
+- (id)initWithImagePipeline:(id)arg1 userBadger:(id)arg2 scribe:(id)arg3 scribeImpressionCache:(id)arg4 impressionLogger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

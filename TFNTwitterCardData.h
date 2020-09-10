@@ -15,6 +15,7 @@
 @interface TFNTwitterCardData : NSObject <NSCoding, NSCopying, TFSModel>
 {
     TFNTwitterUnifiedCard *_unifiedCard;
+    _Bool _isUnifiedCardMigratedFromLegacyCards;
     NSString *_primaryCoreImageSpecKey;
     NSSet *_allCoreImageSpecKeys;
     NSDictionary *_coreImageSpecs;
@@ -27,7 +28,6 @@
     NSDictionary *_instanceData;
     NSString *_compiledCardURL;
     NSDictionary *_bindingsToScribe;
-    NSSet *_legacyCardTypesToMigrateToUC;
     // Error parsing type: {?="lock"{os_unfair_lock_s="_os_unfair_lock_opaque"I}"predicate"{atomic_flag="_Value"AB}}, name: _unifiedCardParsingToken
 }
 
@@ -47,7 +47,7 @@
 // Error parsing type for property unifiedCardParsingToken:
 // Property attributes: T{?={os_unfair_lock_s=I}{atomic_flag=AB}},R,N,V_unifiedCardParsingToken
 
-@property(readonly, nonatomic) NSSet *legacyCardTypesToMigrateToUC; // @synthesize legacyCardTypesToMigrateToUC=_legacyCardTypesToMigrateToUC;
+@property(readonly, nonatomic) _Bool isUnifiedCardMigratedFromLegacyCards; // @synthesize isUnifiedCardMigratedFromLegacyCards=_isUnifiedCardMigratedFromLegacyCards;
 @property(copy, nonatomic) NSDictionary *bindingsToScribe; // @synthesize bindingsToScribe=_bindingsToScribe;
 @property(copy, nonatomic) NSString *compiledCardURL; // @synthesize compiledCardURL=_compiledCardURL;
 @property(copy, nonatomic) NSDictionary *instanceData; // @synthesize instanceData=_instanceData;
@@ -255,12 +255,6 @@
 @property(readonly, nonatomic) _Bool hasDirectMessageCardPrimaryImageSpec;
 @property(readonly, copy, nonatomic) TFNTwitterUser *directMessageCardRecipientUserFromCard;
 @property(readonly, copy, nonatomic) NSNumber *directMessageCardRecipientID;
-- (_Bool)shouldSuppressTweetText;
-- (id)callToAction;
-- (id)domainUrl;
-- (id)currency;
-- (id)price;
-- (id)dynamicProductAdDisplayText;
 - (_Bool)isRevenueCardType;
 - (long long)siteUserID;
 - (id)userForKey:(id)arg1;

@@ -27,6 +27,16 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_nextIndexes
     // Error parsing type: , name: $__lazy_storage_$_nextEntries
     // Error parsing type: , name: _loops
+    // Error parsing type: , name: threadLifetime
+    // Error parsing type: , name: setProgress
+    // Error parsing type: , name: active
+    // Error parsing type: , name: threadPlaying
+    // Error parsing type: , name: parentIsForeground
+    // Error parsing type: , name: showsAddButton
+    // Error parsing type: , name: canTapNavigateNext
+    // Error parsing type: , name: onCloseTapped
+    // Error parsing type: , name: didNavigate
+    // Error parsing type: , name: didTapAddButton
     // Error parsing type: , name: $__lazy_storage_$__safeAreaInsets
 }
 

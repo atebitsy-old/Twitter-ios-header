@@ -14,8 +14,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: textButton
     // Error parsing type: , name: cameraButton
     // Error parsing type: , name: galleryButton
-    // Error parsing type: , name: fleetcastButton
-    // Error parsing type: , name: isFleetcastEnabled
     // Error parsing type: , name: voiceRoomButton
     // Error parsing type: , name: isVoiceRoomEnabled
     // Error parsing type: , name: $__lazy_storage_$_inputSelectionView

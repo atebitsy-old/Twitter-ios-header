@@ -9,7 +9,7 @@
 #import <T1Twitter/TFNPresented-Protocol.h>
 #import <T1Twitter/UIScrollViewDelegate-Protocol.h>
 
-@class NSString, T1AnimatedGIFImageView, T1FoundMediaImagePreviewOverlayView, T1FoundMediaItemAttributionView, T1FullscreenMediaTransition, T1MediaAttachmentProgressView, TFNAnimatedGifImage, TFNAnimatedGifImageView, TFNButton, TFNFoundMediaFetchOperation, TFNPaddedButton, TFNTwitterAccount, TFSTwitterFoundMediaItem, UIImage, UILongPressGestureRecognizer, UIScrollView, UITapGestureRecognizer, UIView, UIViewController;
+@class NSString, T1AnimatedGIFImageView, T1FoundMediaImagePreviewOverlayView, T1FoundMediaItemAttributionView, T1FullscreenMediaTransition, T1MediaAttachmentProgressView, TFNAnimatedGifImage, TFNAnimatedGifImageView, TFNFoundMediaFetchOperation, TFNLegacyButton, TFNPaddedButton, TFNTwitterAccount, TFSTwitterFoundMediaItem, UIImage, UILongPressGestureRecognizer, UIScrollView, UITapGestureRecognizer, UIView, UIViewController;
 @protocol T1FoundMediaImagePreviewViewControllerDelegate, T1ImageTransitionDelegate;
 
 @interface T1FoundMediaImagePreviewViewController : TFNViewController <TFNPresented, UIScrollViewDelegate>
@@ -22,7 +22,7 @@
     T1MediaAttachmentProgressView *_progressView;
     double _imageFetchOperationProgress;
     TFNPaddedButton *_closeButton;
-    TFNButton *_addButton;
+    TFNLegacyButton *_addButton;
     T1FoundMediaItemAttributionView *_attributionView;
     T1FoundMediaImagePreviewOverlayView *_overlayView;
     UITapGestureRecognizer *_imagePreviewViewTapGestureRecognizer;
@@ -52,7 +52,7 @@
 @property(retain, nonatomic) UITapGestureRecognizer *imagePreviewViewTapGestureRecognizer; // @synthesize imagePreviewViewTapGestureRecognizer=_imagePreviewViewTapGestureRecognizer;
 @property(retain, nonatomic) T1FoundMediaImagePreviewOverlayView *overlayView; // @synthesize overlayView=_overlayView;
 @property(retain, nonatomic) T1FoundMediaItemAttributionView *attributionView; // @synthesize attributionView=_attributionView;
-@property(retain, nonatomic) TFNButton *addButton; // @synthesize addButton=_addButton;
+@property(retain, nonatomic) TFNLegacyButton *addButton; // @synthesize addButton=_addButton;
 @property(retain, nonatomic) TFNPaddedButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(nonatomic) double imageFetchOperationProgress; // @synthesize imageFetchOperationProgress=_imageFetchOperationProgress;
 @property(nonatomic) _Bool imageFetchOperationFailed; // @synthesize imageFetchOperationFailed=_imageFetchOperationFailed;

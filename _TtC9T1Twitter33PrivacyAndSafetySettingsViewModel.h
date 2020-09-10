@@ -15,6 +15,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: queue
     // Error parsing type: , name: communicationAgent
     // Error parsing type: , name: weakSelfQueueSettingValueErrorNotificationIfNeeded
+    // Error parsing type: , name: $__lazy_storage_$_internal_markMediaSensitiveEnabled
     // Error parsing type: , name: $__lazy_storage_$_internal_protectTweetsEnabled
     // Error parsing type: , name: $__lazy_storage_$_internal_connectToPeriscopeEnabled
     // Error parsing type: , name: $__lazy_storage_$_internal_findByEmailEnabled

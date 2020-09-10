@@ -24,7 +24,8 @@
 - (void)didReceiveNudgeDuringCompositionUpload;
 - (void)didExcludeCreateNudgeOperationFromCompositionUpload;
 - (void)didIncludeCreateNudgeOperationInCompositionUpload;
-- (_Bool)shouldCheckForNudgeInCompositionUploadOperation;
+- (_Bool)shouldIncludeCreateNudgeOperationInCompositionUpload;
+- (_Bool)shouldCheckForNudgeDuringUpdateStatusOperation;
 - (id)initWithAccount:(id)arg1 composition:(id)arg2;
 
 @end

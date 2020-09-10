@@ -15,6 +15,7 @@
 }
 
 + (id)sharedLayoutDelegate;
+- (_Bool)shouldShowForwardPivotForViewModel:(id)arg1 account:(id)arg2;
 - (_Bool)shouldShowAvatarForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
 
 // Remaining properties

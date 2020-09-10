@@ -38,12 +38,13 @@
     // Error parsing type: , name: seenByParticipantNamesTextView
     // Error parsing type: , name: $__lazy_storage_$_seenByParticipantNamesTextViewDelegate
     // Error parsing type: , name: seenByParticipantNamesContainer
+    // Error parsing type: , name: attachmentContainerWidthConstraint
+    // Error parsing type: , name: avatarImageViewHeightConstraint
+    // Error parsing type: , name: avatarImageViewTrailingConstraint
+    // Error parsing type: , name: contentWidthConstraint
     // Error parsing type: , name: messageTextHeightConstraint
     // Error parsing type: , name: messageTextWidthConstraint
-    // Error parsing type: , name: contentWidthConstraint
-    // Error parsing type: , name: attachmentContainerWidthConstraint
     // Error parsing type: , name: avatarVerticalConstraint
-    // Error parsing type: , name: avatarHeightConstraint
     // Error parsing type: , name: bubbleGapHeightConstraint
     // Error parsing type: , name: interstitialHeightConstraint
     // Error parsing type: , name: accessibilityItems

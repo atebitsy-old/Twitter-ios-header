@@ -11,7 +11,6 @@
 
 @interface T1UnifiedCardAppRatingsView : UIView
 {
-    _Bool _isLabelBeforeRatings;
     id <TFNTwitterUnifiedCardAppRatingsAdaptable> _ratingsViewModel;
     NSMutableArray *_starSubviews;
     UILabel *_ratingsLabel;
@@ -21,7 +20,6 @@
 + (double)expectedHeight;
 + (id)font;
 - (void).cxx_destruct;
-@property(nonatomic) _Bool isLabelBeforeRatings; // @synthesize isLabelBeforeRatings=_isLabelBeforeRatings;
 @property(retain, nonatomic) UILabel *ratingsLabel; // @synthesize ratingsLabel=_ratingsLabel;
 @property(retain, nonatomic) NSMutableArray *starSubviews; // @synthesize starSubviews=_starSubviews;
 @property(retain, nonatomic) id <TFNTwitterUnifiedCardAppRatingsAdaptable> ratingsViewModel; // @synthesize ratingsViewModel=_ratingsViewModel;

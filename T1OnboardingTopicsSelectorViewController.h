@@ -14,7 +14,7 @@
 #import <T1Twitter/TFNModalSheetViewControllerDelegate-Protocol.h>
 #import <T1Twitter/TFNModalSheetViewControllerLayoutDelegate-Protocol.h>
 
-@class NSArray, NSHashTable, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableSet, NSString, T1FlexibleLayoutView, T1OnboardingHeaderViewModel, T1OnboardingSearchView, TFNBadgeView, TFNButton, UIActivityIndicatorView, UIView;
+@class NSArray, NSHashTable, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableSet, NSString, T1FlexibleLayoutView, T1OnboardingHeaderViewModel, T1OnboardingSearchView, TFNBadgeView, TFNLegacyButton, UIActivityIndicatorView, UIView;
 @protocol T1OnboardingTopicsSelectorViewControllerDelegate;
 
 @interface T1OnboardingTopicsSelectorViewController : T1OnboardingItemsDataViewController <T1OnboardingTopicCategoryRowViewDelegate, T1OnboardingTopicCategoryBranchViewDelegate, T1OnboardingTopicsSelectorViewControllerDelegate, T1OnboardingTopicViewDelegate, T1OnboardingSearchViewDelegate, TFNModalSheetViewControllerDelegate, TFNModalSheetViewControllerLayoutDelegate>
@@ -47,7 +47,7 @@
     T1OnboardingSearchView *_searchView;
     long long _style;
     TFNBadgeView *_cartBadgeView;
-    TFNButton *_cartButton;
+    TFNLegacyButton *_cartButton;
     UIActivityIndicatorView *_loadingView;
     UIView *_headerDividerView;
 }

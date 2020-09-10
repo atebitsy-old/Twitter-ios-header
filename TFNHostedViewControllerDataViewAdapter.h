@@ -6,11 +6,7 @@
 
 #import <TFNUI/TFNItemsDataViewAdapter.h>
 
-#import <TFNUI/TFNLayoutGuidesSource-Protocol.h>
-
-@class NSString;
-
-@interface TFNHostedViewControllerDataViewAdapter : TFNItemsDataViewAdapter <TFNLayoutGuidesSource>
+@interface TFNHostedViewControllerDataViewAdapter : TFNItemsDataViewAdapter
 {
 }
 
@@ -22,15 +18,8 @@
 - (id)dataViewController:(id)arg1 tableViewCellForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (id)dataViewController:(id)arg1 cachedHostedControllerForItem:(id)arg2 cell:(id)arg3 atIndexPath:(id)arg4;
 - (id)dataViewController:(id)arg1 hostedControllerForItem:(id)arg2 atIndexPath:(id)arg3;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)dealloc;
 - (id)init;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

@@ -14,6 +14,7 @@
 }
 
 - (id)init;
+- (_Bool)isEqual:(id)arg1;
 @property(nonatomic, readonly) NSString *badgeAccessibilityIdentifier;
 @property(nonatomic, readonly) NSString *badgeAccessibilityLabel;
 @property(nonatomic, readonly) struct CGSize standardSize;

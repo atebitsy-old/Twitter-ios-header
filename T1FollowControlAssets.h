@@ -21,7 +21,7 @@
 + (void)_getTitle:(out id *)arg1 imageName:(out id *)arg2 image:(out id *)arg3 forButtonState:(long long)arg4 variant:(unsigned long long)arg5;
 + (unsigned long long)followButtonStateForFollowControlButtonState:(long long)arg1;
 + (struct CGSize)customFrameSizeForVariant:(unsigned long long)arg1;
-+ (void)getTFNButtonSize:(out unsigned long long *)arg1 strength:(out unsigned long long *)arg2 variant:(out unsigned long long *)arg3 presentation:(out unsigned long long *)arg4 tintColor:(out id *)arg5 forFollowControlButtonState:(in long long)arg6 followControlVariant:(in unsigned long long)arg7;
++ (void)getTFNLegacyButtonSize:(out unsigned long long *)arg1 strength:(out unsigned long long *)arg2 variant:(out unsigned long long *)arg3 presentation:(out unsigned long long *)arg4 tintColor:(out id *)arg5 forFollowControlButtonState:(in long long)arg6 followControlVariant:(in unsigned long long)arg7;
 + (id)_axStringForName:(id)arg1 formatString:(id)arg2 defaultString:(id)arg3;
 + (void)getAccessibilityLabel:(out id *)arg1 accessibilityHint:(out id *)arg2 forButtonState:(long long)arg3 fullName:(id)arg4 variant:(unsigned long long)arg5;
 + (double)typographyScaleFactor;

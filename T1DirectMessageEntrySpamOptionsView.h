@@ -6,12 +6,12 @@
 
 #import <UIKit/UIView.h>
 
-@class TFNButton;
+@class TFNLegacyButton;
 
 @interface T1DirectMessageEntrySpamOptionsView : UIView
 {
-    TFNButton *_markAsSpamButton;
-    TFNButton *_unmarkAsSpamButton;
+    TFNLegacyButton *_markAsSpamButton;
+    TFNLegacyButton *_unmarkAsSpamButton;
     double _preferredMaxLayoutWidth;
 }
 
@@ -19,8 +19,8 @@
 + (struct CGSize)spamOptionsViewSizeThatFits:(double)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) double preferredMaxLayoutWidth; // @synthesize preferredMaxLayoutWidth=_preferredMaxLayoutWidth;
-@property(readonly, nonatomic) TFNButton *unmarkAsSpamButton; // @synthesize unmarkAsSpamButton=_unmarkAsSpamButton;
-@property(readonly, nonatomic) TFNButton *markAsSpamButton; // @synthesize markAsSpamButton=_markAsSpamButton;
+@property(readonly, nonatomic) TFNLegacyButton *unmarkAsSpamButton; // @synthesize unmarkAsSpamButton=_unmarkAsSpamButton;
+@property(readonly, nonatomic) TFNLegacyButton *markAsSpamButton; // @synthesize markAsSpamButton=_markAsSpamButton;
 - (struct CGSize)intrinsicContentSize;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -6,10 +6,10 @@
 
 #import <TFNUI/NSObject-Protocol.h>
 
-@protocol TFNButtonFontGroup, TFNUIColorPalette, TFNUIFontGroup;
+@protocol TFNLegacyButtonFontGroup, TFNUIColorPalette, TFNUIFontGroup;
 
 @protocol TFNUIConfiguration <NSObject>
-@property(readonly, nonatomic) id <TFNButtonFontGroup> buttonFontGroup;
+@property(readonly, nonatomic) id <TFNLegacyButtonFontGroup> buttonFontGroup;
 @property(readonly, nonatomic) id <TFNUIFontGroup> fontGroup;
 @property(readonly, nonatomic) id <TFNUIColorPalette> colorPalette;
 @property(readonly, nonatomic) _Bool isReduceMotionSettingEnabled;

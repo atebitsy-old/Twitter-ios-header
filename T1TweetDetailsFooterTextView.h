@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNAttributedTextViewDelegate-Protocol.h>
 
-@class NSString, T1TweetDetailsFooterItem, T1TweetDetailsFooterItemPlaceRange, T1TweetDetailsFooterItemSourceRange, T1TweetDetailsFooterItemTimestampRange, TFNAttributedTextView, TFNButton, TFNTwitterAccount;
+@class NSString, T1TweetDetailsFooterItem, T1TweetDetailsFooterItemPlaceRange, T1TweetDetailsFooterItemSourceRange, T1TweetDetailsFooterItemTimestampRange, TFNAttributedTextView, TFNLegacyButton, TFNTwitterAccount;
 @protocol T1StatusViewModel, T1TweetDetailsFooterTextViewDelegate;
 
 @interface T1TweetDetailsFooterTextView : UIView <TFNAttributedTextViewDelegate>
@@ -22,12 +22,12 @@
     T1TweetDetailsFooterItemPlaceRange *_activePlaceRange;
     T1TweetDetailsFooterItemSourceRange *_activeSourceRange;
     TFNAttributedTextView *_textView;
-    TFNButton *_hiddenRepliesButton;
+    TFNLegacyButton *_hiddenRepliesButton;
 }
 
 + (struct CGSize)sizeForViewModel:(id)arg1 footerItem:(id)arg2 maximumWidth:(double)arg3;
 - (void).cxx_destruct;
-@property(retain, nonatomic) TFNButton *hiddenRepliesButton; // @synthesize hiddenRepliesButton=_hiddenRepliesButton;
+@property(retain, nonatomic) TFNLegacyButton *hiddenRepliesButton; // @synthesize hiddenRepliesButton=_hiddenRepliesButton;
 @property(retain, nonatomic) TFNAttributedTextView *textView; // @synthesize textView=_textView;
 @property(retain, nonatomic) T1TweetDetailsFooterItemSourceRange *activeSourceRange; // @synthesize activeSourceRange=_activeSourceRange;
 @property(retain, nonatomic) T1TweetDetailsFooterItemPlaceRange *activePlaceRange; // @synthesize activePlaceRange=_activePlaceRange;

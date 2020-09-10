@@ -8,12 +8,17 @@
 
 #import <T1Twitter/T1TimelinesItemProminentSocialContextViewDelegate-Protocol.h>
 
-@class NSString;
+@class NSString, TFSObservable;
 
 @interface T1StandardStatusProminentSocialContextViewAdapter : TFNComposableViewAdapter <T1TimelinesItemProminentSocialContextViewDelegate>
 {
+    TFSObservable *_topicObservable;
+    id _topicFollowObserver;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) id topicFollowObserver; // @synthesize topicFollowObserver=_topicFollowObserver;
+@property(retain, nonatomic) TFSObservable *topicObservable; // @synthesize topicObservable=_topicObservable;
 - (id)_t1_handleEventWithType:(id)arg1 sender:(id)arg2;
 - (id)previewConfigurationForSocialContextView:(id)arg1;
 - (void)prominentSocialContextView:(id)arg1 didTapToggleTopicFollowButtonWithViewModel:(id)arg2;
@@ -23,7 +28,6 @@
 - (void)socialContextView:(id)arg1 didTapCaret:(id)arg2;
 - (void)socialContextViewDidTap:(id)arg1;
 - (id)_t1_socialBadgeColorForName:(id)arg1;
-- (void)_t1_postTopicFollowingChangeNotificationForViewModel:(id)arg1;
 - (void)_t1_toggleTopicFollowUIState:(id)arg1 forViewModel:(id)arg2;
 - (void)_t1_updateView:(id)arg1 forViewModel:(id)arg2;
 - (id)_t1_viewModelWithToggledTopicFollowState:(id)arg1;
@@ -37,6 +41,7 @@
 - (id)legacyLayoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2;
 - (void)viewModel:(id)arg1 didUpdateWithInfo:(id)arg2 forView:(id)arg3;
 - (void)setViewModel:(id)arg1 forView:(id)arg2;
+- (void)unsetViewModelForView:(id)arg1;
 - (void)view:(id)arg1 willMoveToHostView:(id)arg2;
 - (id)initializeView;
 - (_Bool)shouldBeVisibleForViewModel:(id)arg1;

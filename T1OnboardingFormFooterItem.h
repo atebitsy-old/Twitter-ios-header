@@ -6,12 +6,12 @@
 
 #import <T1Twitter/TFNFormCustomItem.h>
 
-@class NSString, TFNButton;
+@class NSString, TFNLegacyButton;
 
 @interface T1OnboardingFormFooterItem : TFNFormCustomItem
 {
-    TFNButton *_submitButton;
-    TFNButton *_secondaryButton;
+    TFNLegacyButton *_submitButton;
+    TFNLegacyButton *_secondaryButton;
     NSString *_submitButtonLabel;
     NSString *_secondaryButtonLabel;
 }
@@ -19,8 +19,8 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *secondaryButtonLabel; // @synthesize secondaryButtonLabel=_secondaryButtonLabel;
 @property(copy, nonatomic) NSString *submitButtonLabel; // @synthesize submitButtonLabel=_submitButtonLabel;
-@property(retain, nonatomic) TFNButton *secondaryButton; // @synthesize secondaryButton=_secondaryButton;
-@property(retain, nonatomic) TFNButton *submitButton; // @synthesize submitButton=_submitButton;
+@property(retain, nonatomic) TFNLegacyButton *secondaryButton; // @synthesize secondaryButton=_secondaryButton;
+@property(retain, nonatomic) TFNLegacyButton *submitButton; // @synthesize submitButton=_submitButton;
 - (id)initWithSubmitButtonLabel:(id)arg1 secondaryButtonLabel:(id)arg2 action:(SEL)arg3;
 
 @end

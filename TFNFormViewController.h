@@ -11,7 +11,7 @@
 #import <T1Twitter/TFNFormViewAdapterAppearanceProvider-Protocol.h>
 #import <T1Twitter/UICollectionViewDelegateFlowLayout-Protocol.h>
 
-@class NSArray, NSMutableDictionary, NSString, TFNButton, TFNForm, TFNFormAppearance, TFNFormField, TFNFormFieldCell, TFNFormView, UIBarButtonItem, UICollectionViewFlowLayout;
+@class NSArray, NSMutableDictionary, NSString, TFNForm, TFNFormAppearance, TFNFormField, TFNFormFieldCell, TFNFormView, TFNLegacyButton, UIBarButtonItem, UICollectionViewFlowLayout;
 
 @interface TFNFormViewController : TFNItemsDataViewController <TFNFormViewAdapterAppearanceProvider, TFNFormFieldCellDelegate, UICollectionViewDelegateFlowLayout, TFNFormDelegate>
 {
@@ -22,14 +22,14 @@
     _Bool _rotating;
     _Bool _insetting;
     _Bool _settingSections;
-    TFNButton *_submitButton;
+    TFNLegacyButton *_submitButton;
     unsigned long long _inputRequiredBehavior;
     unsigned long long _keyboardDismissTriggers;
     TFNForm *_form;
     TFNFormAppearance *_appearance;
     NSArray *_footerItems;
     double _topInset;
-    TFNButton *_preparedSubmitButton;
+    TFNLegacyButton *_preparedSubmitButton;
     UIBarButtonItem *_preparedDoneBarButtonItem;
     double _keyboardAnimationDuration;
     NSMutableDictionary *_sectionTitleWidths;
@@ -46,7 +46,7 @@
 @property(readonly, nonatomic) NSMutableDictionary *sectionTitleWidths; // @synthesize sectionTitleWidths=_sectionTitleWidths;
 @property(readonly, nonatomic) double keyboardAnimationDuration; // @synthesize keyboardAnimationDuration=_keyboardAnimationDuration;
 @property(retain, nonatomic) UIBarButtonItem *preparedDoneBarButtonItem; // @synthesize preparedDoneBarButtonItem=_preparedDoneBarButtonItem;
-@property(retain, nonatomic) TFNButton *preparedSubmitButton; // @synthesize preparedSubmitButton=_preparedSubmitButton;
+@property(retain, nonatomic) TFNLegacyButton *preparedSubmitButton; // @synthesize preparedSubmitButton=_preparedSubmitButton;
 @property(nonatomic) struct CGRect topGutterFrame; // @synthesize topGutterFrame=_topGutterFrame;
 @property(nonatomic, getter=isSettingSections) _Bool settingSections; // @synthesize settingSections=_settingSections;
 @property(nonatomic, getter=isInsetting) _Bool insetting; // @synthesize insetting=_insetting;
@@ -61,7 +61,7 @@
 @property(nonatomic) _Bool disableContentOffsetAdjustment; // @synthesize disableContentOffsetAdjustment=_disableContentOffsetAdjustment;
 @property(readonly, nonatomic) _Bool addsDoneBarButtonButtonItemToNavigationBar; // @synthesize addsDoneBarButtonButtonItemToNavigationBar=_addsDoneBarButtonButtonItemToNavigationBar;
 @property(readonly, nonatomic) _Bool includesSubmitButtonAsItem; // @synthesize includesSubmitButtonAsItem=_includesSubmitButtonAsItem;
-@property(readonly, nonatomic) TFNButton *submitButton; // @synthesize submitButton=_submitButton;
+@property(readonly, nonatomic) TFNLegacyButton *submitButton; // @synthesize submitButton=_submitButton;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (double)formFieldCell:(id)arg1 maximumWidthForTitleAtIndexPath:(id)arg2;
 - (_Bool)formFieldCellShouldBecomeFirstResponderOnAppearance:(id)arg1;

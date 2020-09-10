@@ -10,7 +10,6 @@
 + (_Bool)tnl_URLSessionCanUseWaitsForConnectivity;
 + (_Bool)tnl_URLSessionSupportsDecodingBrotliContentEncoding;
 + (_Bool)tnl_URLSessionCanUseTaskTransactionMetrics;
-+ (_Bool)tnl_URLSessionCanReceiveResponseViaDelegate;
 + (id)tnl_backgroundSessionConfigurationWithTaggedIdentifier:(id)arg1;
 + (id)tnl_defaultSessionConfigurationWithNilPersistence;
 + (id)sessionConfigurationWithConfiguration:(id)arg1;

@@ -14,7 +14,6 @@
     // Error parsing type: , name: spheresFeatureSwitches
     // Error parsing type: , name: pinnedListsObserver
     // Error parsing type: , name: pinnedLists
-    // Error parsing type: , name: sphereDetailsViewController
     // Error parsing type: , name: dataFetcher
     // Error parsing type: , name: dataSource
     // Error parsing type: , name: loadingViewController

@@ -11,6 +11,7 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: bottomVisibility
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: didTapAddButton
     // Error parsing type: , name: isActive
     // Error parsing type: , name: account
     // Error parsing type: , name: actionsView

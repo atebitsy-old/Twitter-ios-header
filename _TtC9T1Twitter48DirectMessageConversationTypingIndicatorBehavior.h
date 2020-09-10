@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: typingIndicatorView
     // Error parsing type: , name: typingIndicatorController
-    // Error parsing type: , name: isDMConversationFooterContainerEnabled
     // Error parsing type: , name: delegate
 }
 

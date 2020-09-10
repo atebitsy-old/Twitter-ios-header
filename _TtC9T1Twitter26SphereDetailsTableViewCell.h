@@ -29,7 +29,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: style
     // Error parsing type: , name: stringsProvider
     // Error parsing type: , name: viewModel
-    // Error parsing type: , name: persistentListObserver
 }
 
 - (void).cxx_destruct;

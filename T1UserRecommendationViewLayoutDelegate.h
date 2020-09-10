@@ -18,7 +18,7 @@
 - (void)layoutSubviewsForLayoutableView:(id)arg1;
 - (double)_t1_maxYForLayoutState:(id)arg1;
 - (double)_t1_layoutBio:(id)arg1 user:(id)arg2 width:(double)arg3 yCoordinate:(double)arg4;
-- (double)_t1_layoutAuthor:(id)arg1 user:(id)arg2 followControlSize:(struct CGSize)arg3 width:(double)arg4 yCoordinate:(double)arg5;
+- (double)_t1_layoutAuthor:(id)arg1 user:(id)arg2 userBadger:(id)arg3 followControlSize:(struct CGSize)arg4 width:(double)arg5 yCoordinate:(double)arg6;
 - (double)_t1_layoutFollowControl:(id)arg1 followControlSize:(struct CGSize)arg2 width:(double)arg3 yCoordinate:(double)arg4;
 - (double)_t1_layoutAvatar:(id)arg1 followControlMaxY:(double)arg2 account:(id)arg3;
 - (double)_t1_layoutBannerImage:(id)arg1 width:(double)arg2;

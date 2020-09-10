@@ -26,7 +26,7 @@
 - (void)showConversationViewControllerForViewModel:(id <T1StatusViewModel>)arg1 statusID:(long long)arg2 account:(TFNTwitterAccount *)arg3 statusNavigationContext:(T1ShowStatusNavigationContext *)arg4 scribeContext:(TFSTwitterScribeContext *)arg5 sourceNavigationMetadata:(T1NavigationMetadata *)arg6 fromViewController:(UIViewController *)arg7 animated:(_Bool)arg8;
 - (void)showGenericURTPage:(NSString *)arg1 title:(NSString *)arg2 subtitle:(NSString *)arg3 cacheID:(NSString *)arg4 queryParameters:(TNLParameterCollection *)arg5 source:(long long)arg6 completion:(void (^)(void))arg7;
 - (void)showQRProfileWithSource:(long long)arg1 sourceNavigationMetadata:(T1NavigationMetadata *)arg2 completion:(void (^)(void))arg3;
-- (void)showTopicLandingForTopicID:(NSString *)arg1 withSource:(long long)arg2 referringEvent:(NSString *)arg3 prefersPeekPresentation:(_Bool)arg4 completion:(void (^)(void))arg5;
+- (void)showTopicLandingForTopicID:(NSString *)arg1 withSource:(long long)arg2 referringEvent:(NSString *)arg3 completion:(void (^)(void))arg4;
 - (void)showFollowedTopicsForUsername:(NSString *)arg1 withSource:(long long)arg2 completion:(void (^)(void))arg3;
 - (void)showTopicEducationForTopicName:(NSString *)arg1 source:(long long)arg2 completion:(void (^)(void))arg3;
 - (void)showTopicForTaxonomy:(NSString *)arg1 topicID:(NSString *)arg2 topicImpressionID:(NSString *)arg3 panel:(long long)arg4 source:(long long)arg5 completion:(void (^)(void))arg6;

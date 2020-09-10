@@ -7,19 +7,43 @@
 #import <T1Twitter/T1DirectMessageEntryBaseCell.h>
 
 @class T1DirectMessageAbstractConversationEntryViewModel;
+@protocol T1DirectMessageAbstractEntryCellDelegate;
 
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter27DirectMessageEntryAudioCell : T1DirectMessageEntryBaseCell
 {
+    // Error parsing type: , name: bubbleHeightWhilePlaying
+    // Error parsing type: , name: bubbleWidthWhilePlaying
+    // Error parsing type: , name: bubbleHeightWhileStopped
+    // Error parsing type: , name: bubbleWidthWhileStopped
+    // Error parsing type: , name: avatarImageViewTrailingConstraintPadding
+    // Error parsing type: , name: incomingBubbleEdgePaddingStopped
+    // Error parsing type: , name: outgoingBubbleEdgePaddingStopped
+    // Error parsing type: , name: labelControlPaddingStopped
+    // Error parsing type: , name: outgoingPulsingAvatarPadding
+    // Error parsing type: , name: bubbleWidthConstraint
+    // Error parsing type: , name: bubbleHeightConstraint
+    // Error parsing type: , name: timerLabelHorizontalEdgeConstraint
+    // Error parsing type: , name: audioControlButtonHorizontalEdgeConstraint
+    // Error parsing type: , name: outgoingPulsingAvatarImageViewHeightConstraint
+    // Error parsing type: , name: playbackState
+    // Error parsing type: , name: audioLevelsTimer
     // Error parsing type: , name: $__lazy_storage_$_backgroundBubbleView
     // Error parsing type: , name: $__lazy_storage_$_audioControlButton
     // Error parsing type: , name: $__lazy_storage_$_timerLabel
+    // Error parsing type: , name: pulsingAvatarImageView
+    // Error parsing type: , name: audioDelegate
 }
 
 - (void).cxx_destruct;
+- (void)backgroundLongPressed:(id)arg1;
+- (void)backgroundDoubleTapped;
+- (void)updateAudioLevel;
 - (void)audioControlButtonTapped;
+- (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;
 @property(nonatomic, retain) T1DirectMessageAbstractConversationEntryViewModel *entryViewModel;
+@property(nonatomic) __weak id <T1DirectMessageAbstractEntryCellDelegate> delegate;
 
 @end
 

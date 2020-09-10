@@ -12,6 +12,7 @@
     // Error parsing type: , name: urtTimelineUID
     // Error parsing type: , name: requestCursor
     // Error parsing type: , name: feedbackActionReferenceBuilder
+    // Error parsing type: , name: immediateReactionReferenceBuilder
     // Error parsing type: , name: timelineEncodingPolicy
     // Error parsing type: , name: assimilationOptions
     // Error parsing type: , name: allSeenTweetIDs

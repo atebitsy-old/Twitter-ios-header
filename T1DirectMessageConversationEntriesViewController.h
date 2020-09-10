@@ -35,8 +35,6 @@
     // Error parsing type: , name: slideshowManager
     // Error parsing type: , name: mediaEventHandler
     // Error parsing type: , name: statusEventHandler
-    // Error parsing type: , name: isDMConversationFooterContainerEnabled
-    // Error parsing type: , name: isDMConversationRefreshing
     // Error parsing type: , name: isReactionUserEducationEnabled
     // Error parsing type: , name: didRegisterUserEducationImpression
     // Error parsing type: , name: requestProfileInfoHeaderView
@@ -63,7 +61,7 @@
 - (id)initWithCollectionViewLayout:(id)arg1;
 - (void)userDataSourceDidUpdate;
 - (void)playIncomingMessageSound;
-- (void)synchronizedUpdatesBehaviorCanProcessUpdates:(id)arg1;
+- (void)synchronizedUpdatesBehaviorCanProcessUpdates:(id)arg1 shouldUpdateView:(_Bool)arg2;
 - (void)didEndScrollingAnimation;
 - (void)scrollToEntry:(id)arg1;
 - (void)scrollToTop;

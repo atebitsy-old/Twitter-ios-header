@@ -19,6 +19,7 @@
 {
     _Bool _loadedCompositionFromDrafts;
     _Bool _isInWindowScene;
+    _Bool _mixedMediaGIFCreationEnabled;
     _Bool _twitterTextEditorEnabled;
     _Bool _didLoadLatestTweets;
     TFSTwitterScribeContext *_scribeContext;
@@ -60,6 +61,7 @@
 @property(nonatomic) long long activeTweetIndex; // @synthesize activeTweetIndex=_activeTweetIndex;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic, getter=isTwitterTextEditorEnabled) _Bool twitterTextEditorEnabled; // @synthesize twitterTextEditorEnabled=_twitterTextEditorEnabled;
+@property(readonly, nonatomic, getter=isMixedMediaGIFCreationEnabled) _Bool mixedMediaGIFCreationEnabled; // @synthesize mixedMediaGIFCreationEnabled=_mixedMediaGIFCreationEnabled;
 @property(readonly, nonatomic) _Bool isInWindowScene; // @synthesize isInWindowScene=_isInWindowScene;
 @property(nonatomic) unsigned long long replyContextViewState; // @synthesize replyContextViewState=_replyContextViewState;
 @property(nonatomic) double visibleContentBottom; // @synthesize visibleContentBottom=_visibleContentBottom;
@@ -154,7 +156,7 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithAccount:(id)arg1 scribeContext:(id)arg2 delegate:(id)arg3 compositions:(id)arg4 twitterTextEditorEnabled:(_Bool)arg5 inWindowScene:(_Bool)arg6;
+- (id)initWithAccount:(id)arg1 scribeContext:(id)arg2 delegate:(id)arg3 compositions:(id)arg4 mixedMediaGIFCreationEnabled:(_Bool)arg5 twitterTextEditorEnabled:(_Bool)arg6 inWindowScene:(_Bool)arg7;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 

@@ -11,6 +11,7 @@
     // Error parsing type: , name: composer
     // Error parsing type: , name: threadView
     // Error parsing type: , name: swipeInteractionController
+    // Error parsing type: , name: pool
 }
 
 - (void).cxx_destruct;

@@ -15,9 +15,11 @@
 @interface TFNTwitterCompositionAttachments : NSObject <NSCopying, NSCoding, NSFastEnumeration>
 {
     NSMutableArray *_attachments;
+    long long _behavior;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) long long behavior; // @synthesize behavior=_behavior;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
@@ -39,7 +41,9 @@
 @property(readonly, nonatomic) unsigned long long count;
 @property(readonly, nonatomic) NSArray *attachments;
 - (id)initWithAttachments:(id)arg1;
+- (id)initWithBehavior:(long long)arg1;
 - (id)init;
+- (id)initWithAttachments:(id)arg1 behavior:(long long)arg2;
 - (unsigned long long)_indexOfAttachmentForObjectIdentifier:(id)arg1;
 - (unsigned long long)indexOfAttachmentForPhotoAsset:(id)arg1;
 - (_Bool)canAddPhotoAsset:(id)arg1 withAttachmentType:(unsigned long long)arg2;

@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1UnifiedCardComponentView-Protocol.h>
 
-@class NSString, T1AvatarImageView, TFNAttributedTextView, TFNTappableHighlightView, TFNTwitterUnifiedCard, TFSTwitterScribeContext, TIPImagePipeline, UIImageView, UILabel, UIView;
+@class NSString, T1AvatarImageView, T1UserBadger, TFNAttributedTextView, TFNTappableHighlightView, TFNTwitterUnifiedCard, TFSTwitterScribeContext, TIPImagePipeline, UIImageView, UILabel, UIView;
 @protocol T1ListCopyStringsProvider, T1UnifiedCardComponentViewEventDelegate, TFNTwitterUnifiedCardComponentModel;
 
 @interface T1UnifiedCardTwitterListDetailsComponentView : TFNLayoutableView <T1UnifiedCardComponentView>
@@ -17,6 +17,7 @@
     id <TFNTwitterUnifiedCardComponentModel> _component;
     id <T1UnifiedCardComponentViewEventDelegate> _eventDelegate;
     id <T1ListCopyStringsProvider> _stringsProvider;
+    T1UserBadger *_userBadger;
     TFSTwitterScribeContext *_scribeContext;
     TFNTappableHighlightView *_highlightView;
     UIImageView *_titleIconView;
@@ -36,6 +37,7 @@
 @property(retain, nonatomic) UIImageView *titleIconView; // @synthesize titleIconView=_titleIconView;
 @property(retain, nonatomic) TFNTappableHighlightView *highlightView; // @synthesize highlightView=_highlightView;
 @property(copy, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
+@property(retain, nonatomic) T1UserBadger *userBadger; // @synthesize userBadger=_userBadger;
 @property(retain, nonatomic) id <T1ListCopyStringsProvider> stringsProvider; // @synthesize stringsProvider=_stringsProvider;
 @property(nonatomic) __weak id <T1UnifiedCardComponentViewEventDelegate> eventDelegate; // @synthesize eventDelegate=_eventDelegate;
 @property(retain, nonatomic) id <TFNTwitterUnifiedCardComponentModel> component; // @synthesize component=_component;

@@ -12,7 +12,6 @@
 {
     // Error parsing type: , name: list
     // Error parsing type: , name: urtTwitterList
-    // Error parsing type: , name: bannerImageURL
 }
 
 - (void).cxx_destruct;

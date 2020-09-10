@@ -25,8 +25,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: showWhiteBorder
     // Error parsing type: , name: account
     // Error parsing type: , name: state
-    // Error parsing type: , name: bubbleSmallView
-    // Error parsing type: , name: bubbleMediumView
     // Error parsing type: , name: bubbleLargeView
     // Error parsing type: , name: bubbleLargeBorderShape
     // Error parsing type: , name: bubbleLargeFillShape

@@ -50,6 +50,7 @@
 - (id)indexPathsForSelectedItems;
 - (void)deselectItemAtIndexPath:(id)arg1 animated:(_Bool)arg2;
 - (void)selectItemAtIndexPath:(id)arg1 animated:(_Bool)arg2 scrollPosition:(unsigned long long)arg3;
+- (void)selectAllDuringEditingAnimated:(_Bool)arg1;
 - (void)performBatchUpdates:(CDUnknownBlockType)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)deleteSections:(id)arg1;
 - (void)insertSections:(id)arg1;

@@ -9,7 +9,7 @@
 #import <T1Twitter/T1CardMediaViewDataSource-Protocol.h>
 #import <T1Twitter/T1CardMediaViewDelegate-Protocol.h>
 
-@class T1CardImageView, T1CardMediaView, T1WebCardViewEventRegistry, T1WebCardViewModel, TFNAttributedTextView, TFNButton, TFNSolidColorView, TFNTappableHighlightView, UIView;
+@class T1CardImageView, T1CardMediaView, T1WebCardViewEventRegistry, T1WebCardViewModel, TFNAttributedTextView, TFNLegacyButton, TFNSolidColorView, TFNTappableHighlightView, UIView;
 @protocol T1CardViewDelegate;
 
 @interface T1WebCardView : T1CardViewAccessible <T1CardMediaViewDataSource, T1CardMediaViewDelegate>
@@ -29,11 +29,11 @@
     UIView *_imageInfoAreaBorderView;
     TFNTappableHighlightView *_fallbackHighlightView;
     UIView *_proxyHighlightView;
-    TFNButton *_callToActionButton;
+    TFNLegacyButton *_callToActionButton;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) TFNButton *callToActionButton; // @synthesize callToActionButton=_callToActionButton;
+@property(retain, nonatomic) TFNLegacyButton *callToActionButton; // @synthesize callToActionButton=_callToActionButton;
 @property(retain, nonatomic) UIView *proxyHighlightView; // @synthesize proxyHighlightView=_proxyHighlightView;
 @property(retain, nonatomic) TFNTappableHighlightView *fallbackHighlightView; // @synthesize fallbackHighlightView=_fallbackHighlightView;
 @property(retain, nonatomic) UIView *imageInfoAreaBorderView; // @synthesize imageInfoAreaBorderView=_imageInfoAreaBorderView;

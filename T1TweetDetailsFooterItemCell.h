@@ -8,12 +8,12 @@
 
 #import <T1Twitter/TFNAttributedTextViewDelegate-Protocol.h>
 
-@class NSString, T1TweetDetailsFooterTextView, TFNButton;
+@class NSString, T1TweetDetailsFooterTextView, TFNLegacyButton;
 
 @interface T1TweetDetailsFooterItemCell : TFNTableViewCell <TFNAttributedTextViewDelegate>
 {
     T1TweetDetailsFooterTextView *_footerTextView;
-    TFNButton *_hiddenRepliesButton;
+    TFNLegacyButton *_hiddenRepliesButton;
     CDUnknownBlockType _footerPlaceTappedBlock;
     CDUnknownBlockType _footerTimestampTappedBlock;
     CDUnknownBlockType _footerSourceTappedBlock;
@@ -25,7 +25,7 @@
 @property(copy, nonatomic) CDUnknownBlockType footerSourceTappedBlock; // @synthesize footerSourceTappedBlock=_footerSourceTappedBlock;
 @property(copy, nonatomic) CDUnknownBlockType footerTimestampTappedBlock; // @synthesize footerTimestampTappedBlock=_footerTimestampTappedBlock;
 @property(copy, nonatomic) CDUnknownBlockType footerPlaceTappedBlock; // @synthesize footerPlaceTappedBlock=_footerPlaceTappedBlock;
-@property(retain, nonatomic) TFNButton *hiddenRepliesButton; // @synthesize hiddenRepliesButton=_hiddenRepliesButton;
+@property(retain, nonatomic) TFNLegacyButton *hiddenRepliesButton; // @synthesize hiddenRepliesButton=_hiddenRepliesButton;
 @property(retain, nonatomic) T1TweetDetailsFooterTextView *footerTextView; // @synthesize footerTextView=_footerTextView;
 - (void)attributedTextView:(id)arg1 didTapRange:(id)arg2 rect:(struct CGRect)arg3;
 - (void)_t1_didTapHiddenRepliesButton:(id)arg1;

@@ -6,12 +6,12 @@
 
 #import <T1Twitter/T1ProfileActionDataSourceButtonProvider.h>
 
-@class T1AccountNotificationSettingsProperty, TFNButton, TFNTwitterStatus, UIViewController;
+@class T1AccountNotificationSettingsProperty, TFNLegacyButton, TFNTwitterStatus, UIViewController;
 
 @interface T1ProfileActionTweetNotificationsButtonProvider : T1ProfileActionDataSourceButtonProvider
 {
     _Bool _shouldShowButton;
-    TFNButton *_notificationsButton;
+    TFNLegacyButton *_notificationsButton;
     TFNTwitterStatus *_sourceStatus;
     unsigned long long _tweetNotificationState;
     UIViewController *_controller;
@@ -24,7 +24,7 @@
 @property(nonatomic) unsigned long long tweetNotificationState; // @synthesize tweetNotificationState=_tweetNotificationState;
 @property(nonatomic) _Bool shouldShowButton; // @synthesize shouldShowButton=_shouldShowButton;
 @property(retain, nonatomic) TFNTwitterStatus *sourceStatus; // @synthesize sourceStatus=_sourceStatus;
-@property(retain, nonatomic) TFNButton *notificationsButton; // @synthesize notificationsButton=_notificationsButton;
+@property(retain, nonatomic) TFNLegacyButton *notificationsButton; // @synthesize notificationsButton=_notificationsButton;
 - (void)_notificationsButtonTapped:(id)arg1;
 - (id)_promotedContent;
 - (void)dataSourceDidInvalidateForReason:(long long)arg1;

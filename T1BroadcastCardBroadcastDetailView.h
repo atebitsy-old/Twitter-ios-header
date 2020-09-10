@@ -20,7 +20,7 @@
     UILabel *_fullNameLabel;
     UILabel *_usernameLabel;
     UILabel *_titleLabel;
-    UIImageView *_verifiedBadgeImageView;
+    UIImageView *_badgeImageView;
     UIView *_spacerView;
     NSLayoutConstraint *_stackViewTopConstraint;
     NSLayoutConstraint *_stackViewBottomConstraint;
@@ -35,7 +35,7 @@
 @property(readonly, nonatomic) NSLayoutConstraint *stackViewBottomConstraint; // @synthesize stackViewBottomConstraint=_stackViewBottomConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *stackViewTopConstraint; // @synthesize stackViewTopConstraint=_stackViewTopConstraint;
 @property(retain, nonatomic) UIView *spacerView; // @synthesize spacerView=_spacerView;
-@property(retain, nonatomic) UIImageView *verifiedBadgeImageView; // @synthesize verifiedBadgeImageView=_verifiedBadgeImageView;
+@property(retain, nonatomic) UIImageView *badgeImageView; // @synthesize badgeImageView=_badgeImageView;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UILabel *usernameLabel; // @synthesize usernameLabel=_usernameLabel;
 @property(retain, nonatomic) UILabel *fullNameLabel; // @synthesize fullNameLabel=_fullNameLabel;

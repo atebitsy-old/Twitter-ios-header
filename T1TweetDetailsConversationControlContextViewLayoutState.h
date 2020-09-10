@@ -6,21 +6,15 @@
 
 #import <TFNUI/TFNComposableViewLayoutState.h>
 
-@class NSString, UIFont;
+@class TFSURTRichText;
 
 @interface T1TweetDetailsConversationControlContextViewLayoutState : TFNComposableViewLayoutState
 {
-    NSString *_conversationControlText;
-    UIFont *_conversationControlTextFont;
-    NSString *_conversationControlTitle;
-    UIFont *_conversationControlTitleFont;
+    TFSURTRichText *_richText;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIFont *conversationControlTitleFont; // @synthesize conversationControlTitleFont=_conversationControlTitleFont;
-@property(copy, nonatomic) NSString *conversationControlTitle; // @synthesize conversationControlTitle=_conversationControlTitle;
-@property(retain, nonatomic) UIFont *conversationControlTextFont; // @synthesize conversationControlTextFont=_conversationControlTextFont;
-@property(copy, nonatomic) NSString *conversationControlText; // @synthesize conversationControlText=_conversationControlText;
+@property(retain, nonatomic) TFSURTRichText *richText; // @synthesize richText=_richText;
 
 @end
 

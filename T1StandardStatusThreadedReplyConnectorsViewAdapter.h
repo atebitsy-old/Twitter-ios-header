@@ -8,8 +8,12 @@
 
 @interface T1StandardStatusThreadedReplyConnectorsViewAdapter : TFNComposableViewAdapter
 {
+    long long _highlightedConnectorStatusID;
+    long long _selectedStatusID;
 }
 
+@property(nonatomic) long long selectedStatusID; // @synthesize selectedStatusID=_selectedStatusID;
+@property(nonatomic) long long highlightedConnectorStatusID; // @synthesize highlightedConnectorStatusID=_highlightedConnectorStatusID;
 - (void)unsetViewModelForView:(id)arg1;
 - (void)setViewModel:(id)arg1 forView:(id)arg2;
 - (void)layoutReplyConnectors:(id)arg1;

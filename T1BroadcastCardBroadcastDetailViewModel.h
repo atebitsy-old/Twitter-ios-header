@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, TFNTwitterUser;
+@class NSString, T1UserBadge, T1UserBadger, TFNTwitterUser;
 
 @interface T1BroadcastCardBroadcastDetailViewModel : NSObject
 {
@@ -17,9 +17,13 @@
     NSString *_title;
     NSString *_adString;
     TFNTwitterUser *_attributedTwitterUser;
+    long long _identityType;
+    T1UserBadger *_userBadger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) T1UserBadger *userBadger; // @synthesize userBadger=_userBadger;
+@property(readonly, nonatomic) long long identityType; // @synthesize identityType=_identityType;
 @property(readonly, nonatomic, getter=isVerified) _Bool verified; // @synthesize verified=_verified;
 @property(readonly, nonatomic) TFNTwitterUser *attributedTwitterUser; // @synthesize attributedTwitterUser=_attributedTwitterUser;
 @property(readonly, nonatomic) _Bool isInvitation; // @synthesize isInvitation=_isInvitation;
@@ -29,13 +33,13 @@
 @property(readonly, copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToViewModel:(id)arg1;
+@property(readonly, nonatomic) T1UserBadge *userBadge;
 @property(readonly, nonatomic) _Bool showTitle;
 @property(readonly, nonatomic) _Bool showDisplayUsername;
 @property(readonly, nonatomic) _Bool showDisplayName;
-@property(readonly, nonatomic) _Bool showVerified;
 @property(readonly, nonatomic, getter=isShowingAd) _Bool showingAd;
-- (id)initWithDisplayName:(id)arg1 displayUsername:(id)arg2 verified:(_Bool)arg3 title:(id)arg4 adString:(id)arg5 isInvitation:(_Bool)arg6;
-- (id)initWithAttributedUser:(id)arg1 title:(id)arg2 adString:(id)arg3 isInvitation:(_Bool)arg4;
+- (id)initWithDisplayName:(id)arg1 displayUsername:(id)arg2 verified:(_Bool)arg3 identityType:(long long)arg4 title:(id)arg5 adString:(id)arg6 isInvitation:(_Bool)arg7 featureSwitches:(id)arg8;
+- (id)initWithAttributedUser:(id)arg1 title:(id)arg2 adString:(id)arg3 isInvitation:(_Bool)arg4 featureSwitches:(id)arg5;
 
 @end
 

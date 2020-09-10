@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 
-@class NSString, T1AppCardDetailsView, T1AppCardRatingsView, T1AvatarImageView, T1BasicAppCardViewEventRegistry, T1BasicAppCardViewModel, TFNButton, TFNSolidColorView, TFNTappableHighlightView, UIImageView, UILabel, UIView;
+@class NSString, T1AppCardDetailsView, T1AppCardRatingsView, T1AvatarImageView, T1BasicAppCardViewEventRegistry, T1BasicAppCardViewModel, TFNLegacyButton, TFNSolidColorView, TFNTappableHighlightView, UIImageView, UILabel, UIView;
 @protocol T1CardViewDelegate;
 
 @interface T1BasicAppCardView : T1CardView <T1ImageViewFetchHelperDelegate>
@@ -29,7 +29,7 @@
     UILabel *_detailLabel;
     UILabel *_secondDetailLabel;
     TFNTappableHighlightView *_titleHighlightView;
-    TFNButton *_callToActionButton;
+    TFNLegacyButton *_callToActionButton;
     TFNTappableHighlightView *_infoAndActionHighlightView;
     UILabel *_descriptionLabel;
     T1AppCardDetailsView *_detailsView;
@@ -39,7 +39,7 @@
 @property(retain, nonatomic) T1AppCardDetailsView *detailsView; // @synthesize detailsView=_detailsView;
 @property(retain, nonatomic) UILabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) TFNTappableHighlightView *infoAndActionHighlightView; // @synthesize infoAndActionHighlightView=_infoAndActionHighlightView;
-@property(retain, nonatomic) TFNButton *callToActionButton; // @synthesize callToActionButton=_callToActionButton;
+@property(retain, nonatomic) TFNLegacyButton *callToActionButton; // @synthesize callToActionButton=_callToActionButton;
 @property(retain, nonatomic) TFNTappableHighlightView *titleHighlightView; // @synthesize titleHighlightView=_titleHighlightView;
 @property(retain, nonatomic) UILabel *secondDetailLabel; // @synthesize secondDetailLabel=_secondDetailLabel;
 @property(retain, nonatomic) UILabel *detailLabel; // @synthesize detailLabel=_detailLabel;

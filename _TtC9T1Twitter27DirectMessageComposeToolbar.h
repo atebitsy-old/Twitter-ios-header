@@ -6,7 +6,7 @@
 
 #import <TFNUI/TFNButtonBarView.h>
 
-@class T1DirectMessageComposeTextView, TFNButton, UIButton, _TtC9T1Twitter32DirectMessageSwipeToSendPillView;
+@class T1DirectMessageComposeTextView, TFNLegacyButton, UIButton, _TtC9T1Twitter32DirectMessageSwipeToSendPillView;
 
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter27DirectMessageComposeToolbar : TFNButtonBarView
@@ -35,8 +35,8 @@ __attribute__((visibility("hidden")))
 - (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
-@property(nonatomic, readonly) TFNButton *sendButton; // @synthesize sendButton;
-@property(nonatomic, readonly) TFNButton *mediaAttachButton; // @synthesize mediaAttachButton;
+@property(nonatomic, readonly) TFNLegacyButton *sendButton; // @synthesize sendButton;
+@property(nonatomic, readonly) TFNLegacyButton *mediaAttachButton; // @synthesize mediaAttachButton;
 @property(nonatomic, readonly) UIButton *voiceAttachButton; // @synthesize voiceAttachButton;
 @property(nonatomic, readonly) _TtC9T1Twitter32DirectMessageSwipeToSendPillView *swipeToSendPillView; // @synthesize swipeToSendPillView;
 @property(nonatomic, readonly) T1DirectMessageComposeTextView *textView; // @synthesize textView;

@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNAttributedTextViewDelegate-Protocol.h>
 
-@class NSString, TFNAttributedTextView, TFNButton, UILabel, UIView;
+@class NSString, TFNAttributedTextView, TFNLegacyButton, UILabel, UIView;
 @protocol T1SecurityGeneratePasscodeViewDelegate;
 
 @interface T1SecurityGeneratePasscodeView : UIScrollView <TFNAttributedTextViewDelegate>
@@ -18,15 +18,15 @@
     UILabel *_primaryExplanationTextLabel;
     TFNAttributedTextView *_secondaryExplanationTextLabel;
     UILabel *_backupCodeLabel;
-    TFNButton *_generateBackupCodeButton;
-    TFNButton *_takeScreenshotButton;
+    TFNLegacyButton *_generateBackupCodeButton;
+    TFNLegacyButton *_takeScreenshotButton;
     UIView *_contentView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
-@property(retain, nonatomic) TFNButton *takeScreenshotButton; // @synthesize takeScreenshotButton=_takeScreenshotButton;
-@property(retain, nonatomic) TFNButton *generateBackupCodeButton; // @synthesize generateBackupCodeButton=_generateBackupCodeButton;
+@property(retain, nonatomic) TFNLegacyButton *takeScreenshotButton; // @synthesize takeScreenshotButton=_takeScreenshotButton;
+@property(retain, nonatomic) TFNLegacyButton *generateBackupCodeButton; // @synthesize generateBackupCodeButton=_generateBackupCodeButton;
 @property(retain, nonatomic) UILabel *backupCodeLabel; // @synthesize backupCodeLabel=_backupCodeLabel;
 @property(retain, nonatomic) TFNAttributedTextView *secondaryExplanationTextLabel; // @synthesize secondaryExplanationTextLabel=_secondaryExplanationTextLabel;
 @property(retain, nonatomic) UILabel *primaryExplanationTextLabel; // @synthesize primaryExplanationTextLabel=_primaryExplanationTextLabel;

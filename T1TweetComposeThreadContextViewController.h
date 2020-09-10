@@ -10,7 +10,7 @@
 #import <T1Twitter/T1TweetComposeThreadContextNUXViewDelegate-Protocol.h>
 #import <T1Twitter/TFNModalSheetViewControllerLayoutDelegate-Protocol.h>
 
-@class NSString, T1ThreadTweetsViewController, T1TweetComposeContextStatusView, T1TweetComposeThreadContextConnectorView, T1TweetComposeThreadContextLoadingStatusView, T1TweetComposeThreadContextMoreButton, T1TweetComposeThreadContextNUXView, T1TwitterTooltip, TFNButton, TFNTwitterAccount, TFNTwitterComposition, TFNTwitterStatus, TFSTimer, TFSTwitterScribeContext, UIButton, UIView;
+@class NSString, T1ThreadTweetsViewController, T1TweetComposeContextStatusView, T1TweetComposeThreadContextConnectorView, T1TweetComposeThreadContextLoadingStatusView, T1TweetComposeThreadContextMoreButton, T1TweetComposeThreadContextNUXView, T1TwitterTooltip, TFNLegacyButton, TFNTwitterAccount, TFNTwitterComposition, TFNTwitterStatus, TFSTimer, TFSTwitterScribeContext, UIButton, UIView;
 @protocol T1TweetComposeThreadContextViewControllerDelegate;
 
 @interface T1TweetComposeThreadContextViewController : UIViewController <T1ThreadTweetsViewControllerDelegate, TFNModalSheetViewControllerLayoutDelegate, T1TweetComposeThreadContextNUXViewDelegate>
@@ -28,7 +28,7 @@
     UIView *_nuxEnclosingView;
     T1TweetComposeThreadContextNUXView *_nuxView;
     T1TweetComposeContextStatusView *_statusView;
-    TFNButton *_addRemoveButton;
+    TFNLegacyButton *_addRemoveButton;
     T1TweetComposeThreadContextMoreButton *_moreButton;
     T1TweetComposeThreadContextConnectorView *_connectorView;
     UIButton *_overlayButton;
@@ -45,7 +45,7 @@
 @property(retain, nonatomic) UIButton *overlayButton; // @synthesize overlayButton=_overlayButton;
 @property(retain, nonatomic) T1TweetComposeThreadContextConnectorView *connectorView; // @synthesize connectorView=_connectorView;
 @property(retain, nonatomic) T1TweetComposeThreadContextMoreButton *moreButton; // @synthesize moreButton=_moreButton;
-@property(retain, nonatomic) TFNButton *addRemoveButton; // @synthesize addRemoveButton=_addRemoveButton;
+@property(retain, nonatomic) TFNLegacyButton *addRemoveButton; // @synthesize addRemoveButton=_addRemoveButton;
 @property(nonatomic) _Bool contextTweetAdded; // @synthesize contextTweetAdded=_contextTweetAdded;
 @property(retain, nonatomic) T1TweetComposeContextStatusView *statusView; // @synthesize statusView=_statusView;
 @property(retain, nonatomic) T1TweetComposeThreadContextNUXView *nuxView; // @synthesize nuxView=_nuxView;

@@ -44,7 +44,6 @@
 + (void)accessFeatureSwitchValueOnce:(long long *)arg1 valueAccessBlock:(CDUnknownBlockType)arg2;
 + (_Bool)animationDecodingLogErrors;
 + (double)animationDecodingWarningDuration;
-+ (_Bool)isDashOpenOnLongPressBackEnabled;
 + (_Bool)isDashContentSFSVCEnabled;
 + (_Bool)isBetaBugButtonEmailFlowEnabled;
 + (_Bool)isTNLForPeriscopePluginEnabled;
@@ -64,6 +63,7 @@
 + (id)bouncerAllowedEntrances;
 + (_Bool)isMaxPasswordLengthCheckEnabled;
 + (_Bool)isMacTestExperimentLoggedOutEnabled;
++ (_Bool)isMacSceneReconnectEnabled;
 + (_Bool)isLoginJSInstrumentationEnabled;
 + (id)phoneSignupCountriesNotificationsAllowList;
 + (id)phoneSignupCountriesDenyList;

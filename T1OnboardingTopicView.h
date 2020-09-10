@@ -6,14 +6,14 @@
 
 #import <T1Twitter/T1FlexibleLayoutView.h>
 
-@class TFNButton;
+@class TFNLegacyButton;
 @protocol T1OnboardingTopicViewDelegate;
 
 @interface T1OnboardingTopicView : T1FlexibleLayoutView
 {
     id <T1OnboardingTopicViewDelegate> _delegate;
     id _userInfo;
-    TFNButton *_selectButton;
+    TFNLegacyButton *_selectButton;
 }
 
 - (void).cxx_destruct;

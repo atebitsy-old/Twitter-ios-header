@@ -14,6 +14,7 @@
     // Error parsing type: , name: URTMomentDataWrapperType
     // Error parsing type: , name: URTNotificationType
     // Error parsing type: , name: URTFeedbackActionType
+    // Error parsing type: , name: URTImmediateReactionCollectionType
     // Error parsing type: , name: URTTimelineType
     // Error parsing type: , name: URTTimelineScrollStateType
     // Error parsing type: , name: URTTwitterListType

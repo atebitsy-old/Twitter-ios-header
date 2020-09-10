@@ -15,7 +15,9 @@
 + (double)edgePadding;
 + (unsigned long long)followControlVariant;
 + (id)bioTruncationString;
-+ (id)verifiedBadgeImage;
++ (id)badgeImageFrom:(id)arg1;
++ (id)userBadgerForAccount:(id)arg1;
++ (double)badgeImageHeight;
 + (id)bioFont;
 + (id)usernameFont;
 + (id)fullNameFont;

@@ -7,6 +7,7 @@
 #import <T1Twitter/_TtC9T1Twitter42SphereDetailsResizableHeaderViewController.h>
 
 @interface _TtC9T1Twitter42SphereDetailsResizableHeaderViewController (T1Twitter1)
+- (void)blockListDidChangeWithNotification:(id)arg1;
 - (void)resizableHeaderView:(id)arg1 didTapMoreActionsButton:(id)arg2;
 - (void)resizableHeaderView:(id)arg1 didTapShareHeaderButton:(id)arg2;
 - (void)resizableHeaderViewDidTapBackButton:(id)arg1;

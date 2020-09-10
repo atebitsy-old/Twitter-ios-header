@@ -20,7 +20,6 @@
 - (id)replaceTopViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)replaceTopViewController:(id)arg1 animated:(_Bool)arg2;
 - (void)pushViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (_Bool)tfn_presentAsModal;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 

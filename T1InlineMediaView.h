@@ -11,7 +11,7 @@
 #import <T1Twitter/TAVUIAutoplayable-Protocol.h>
 #import <T1Twitter/TIPImageFetchable-Protocol.h>
 
-@class NSString, T1DeadVideoErrorView, T1DynamicVideoAdViewModel, T1EqualizerChromeComponentWrapper, T1PrerollCTAModel, T1TimeChromeComponentWrapper, T1VideoAdButton, T1VideoBitRateManager, T1VideoCaptionsView, T1VideoSkipCountdownLabel, TAVPlaybackState, TAVPlayerView, TAVScribeContext, TAVUIVideoButtonOverlay, TFNButton, TFNSolidColorView, TFNTwitterAccount, TFSKVODispatcher, TFSTimer, TIPImageContainer, UIActivityIndicatorView, UIButton, UIColor, UIImage, UIImageView, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class NSString, T1DeadVideoErrorView, T1DynamicVideoAdViewModel, T1EqualizerChromeComponentWrapper, T1PrerollCTAModel, T1TimeChromeComponentWrapper, T1VideoAdButton, T1VideoBitRateManager, T1VideoCaptionsView, T1VideoSkipCountdownLabel, TAVPlaybackState, TAVPlayerView, TAVScribeContext, TAVUIVideoButtonOverlay, TFNLegacyButton, TFNSolidColorView, TFNTwitterAccount, TFSKVODispatcher, TFSTimer, TIPImageContainer, UIActivityIndicatorView, UIButton, UIColor, UIImage, UIImageView, UILongPressGestureRecognizer, UITapGestureRecognizer;
 @protocol T1InlineMediaViewDelegate, T1InlineMediaViewModel, T1InlineMediaViewPrerollDelegate;
 
 @interface T1InlineMediaView : UIView <TAVUIAutoplayable, TAVPlaybackObserver, T1VideoCaptionsViewDelegate, TIPImageFetchable>
@@ -57,7 +57,7 @@
     T1VideoCaptionsView *_captionsView;
     TFSTimer *_timePillFadeTimer;
     T1PrerollCTAModel *_ctaModel;
-    TFNButton *_audioToggleButton;
+    TFNLegacyButton *_audioToggleButton;
     T1DynamicVideoAdViewModel *_adViewModel;
     TFSKVODispatcher *_outputVolumeKVODispatcher;
     NSString *_periscopeTotalParticipants;
@@ -65,7 +65,7 @@
     UITapGestureRecognizer *_doubleTapGestureRecognizer;
     UILongPressGestureRecognizer *_longPressGestureRecognizer;
     UIView *_watchAgainButtonContainer;
-    TFNButton *_watchAgainButton;
+    TFNLegacyButton *_watchAgainButton;
     TAVUIVideoButtonOverlay *_contentGuardOverlay;
     TAVPlaybackState *_previousPlaybackState;
     T1DeadVideoErrorView *_deadVideoErrorView;
@@ -77,7 +77,7 @@
 @property(nonatomic) _Bool animatingPlayerView; // @synthesize animatingPlayerView=_animatingPlayerView;
 @property(retain, nonatomic) TAVPlaybackState *previousPlaybackState; // @synthesize previousPlaybackState=_previousPlaybackState;
 @property(retain, nonatomic) TAVUIVideoButtonOverlay *contentGuardOverlay; // @synthesize contentGuardOverlay=_contentGuardOverlay;
-@property(retain, nonatomic) TFNButton *watchAgainButton; // @synthesize watchAgainButton=_watchAgainButton;
+@property(retain, nonatomic) TFNLegacyButton *watchAgainButton; // @synthesize watchAgainButton=_watchAgainButton;
 @property(retain, nonatomic) UIView *watchAgainButtonContainer; // @synthesize watchAgainButtonContainer=_watchAgainButtonContainer;
 @property(nonatomic) _Bool playbackDesired; // @synthesize playbackDesired=_playbackDesired;
 @property(nonatomic) _Bool shouldAlwaysHidePlayButton; // @synthesize shouldAlwaysHidePlayButton=_shouldAlwaysHidePlayButton;
@@ -88,7 +88,7 @@
 @property(copy, nonatomic) NSString *periscopeTotalParticipants; // @synthesize periscopeTotalParticipants=_periscopeTotalParticipants;
 @property(retain, nonatomic) TFSKVODispatcher *outputVolumeKVODispatcher; // @synthesize outputVolumeKVODispatcher=_outputVolumeKVODispatcher;
 @property(retain, nonatomic) T1DynamicVideoAdViewModel *adViewModel; // @synthesize adViewModel=_adViewModel;
-@property(retain, nonatomic) TFNButton *audioToggleButton; // @synthesize audioToggleButton=_audioToggleButton;
+@property(retain, nonatomic) TFNLegacyButton *audioToggleButton; // @synthesize audioToggleButton=_audioToggleButton;
 @property(retain, nonatomic) T1PrerollCTAModel *ctaModel; // @synthesize ctaModel=_ctaModel;
 @property(retain, nonatomic) TFSTimer *timePillFadeTimer; // @synthesize timePillFadeTimer=_timePillFadeTimer;
 @property(nonatomic) _Bool isTimePillViewHidden; // @synthesize isTimePillViewHidden=_isTimePillViewHidden;

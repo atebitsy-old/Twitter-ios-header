@@ -4,13 +4,13 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <TFNUI/TFNButton.h>
+#import <TFNUI/TFNLegacyButton.h>
 
-#import <T1Twitter/TFNButtonImageProvider-Protocol.h>
+#import <T1Twitter/TFNLegacyButtonImageProvider-Protocol.h>
 
 @class NSString;
 
-@interface T1MessageMePromptButton : TFNButton <TFNButtonImageProvider>
+@interface T1MessageMePromptButton : TFNLegacyButton <TFNLegacyButtonImageProvider>
 {
 }
 

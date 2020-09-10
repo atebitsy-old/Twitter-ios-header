@@ -8,12 +8,12 @@
 
 #import <T1Twitter/T1SignupFormFieldUsernameFieldDelegate-Protocol.h>
 
-@class NSString, T1SignUpFormField, T1SignUpFormFieldInfo, TFNActiveTextItem, TFSTwitterSignUpAvailability, TFSTwitterSignUpSuggestions;
+@class NSString, T1SignUpFormField, TFNActiveTextItem, TFSTwitterOnboardingUserIdentifierCollection, TFSTwitterSignUpAvailability, TFSTwitterSignUpSuggestions;
 
 @interface T1ChangeUsernameForm : TFNForm <T1SignupFormFieldUsernameFieldDelegate>
 {
     TFSTwitterSignUpAvailability *_availability;
-    T1SignUpFormFieldInfo *_formFieldInfo;
+    TFSTwitterOnboardingUserIdentifierCollection *_userIdentifierCollection;
     long long _options;
     T1SignUpFormField *_usernameField;
     TFSTwitterSignUpSuggestions *_usernameSuggestions;
@@ -27,14 +27,13 @@
 @property(retain, nonatomic) TFSTwitterSignUpSuggestions *usernameSuggestions; // @synthesize usernameSuggestions=_usernameSuggestions;
 @property(retain, nonatomic) T1SignUpFormField *usernameField; // @synthesize usernameField=_usernameField;
 @property(readonly, nonatomic) long long options; // @synthesize options=_options;
-@property(readonly, nonatomic) T1SignUpFormFieldInfo *formFieldInfo; // @synthesize formFieldInfo=_formFieldInfo;
+@property(readonly, nonatomic) TFSTwitterOnboardingUserIdentifierCollection *userIdentifierCollection; // @synthesize userIdentifierCollection=_userIdentifierCollection;
 - (void)signupFormField:(id)arg1 usernameFieldDidUpdateAvailability:(id)arg2;
 @property(readonly, nonatomic) NSString *newValue;
 - (_Bool)isSubmittable;
 - (id)sections;
-- (id)init;
-- (id)initWithFormFieldInfo:(id)arg1 options:(long long)arg2;
-- (id)initWithFormFieldInfo:(id)arg1 userInput:(id)arg2 options:(long long)arg3;
+- (id)initWithUserIdentifierCollection:(id)arg1 options:(long long)arg2;
+- (id)initWithUserIdentifierCollection:(id)arg1 userInput:(id)arg2 options:(long long)arg3;
 
 @end
 

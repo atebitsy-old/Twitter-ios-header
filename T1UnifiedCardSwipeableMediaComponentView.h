@@ -45,6 +45,8 @@
 - (void)setupActions;
 - (id)t1_accessibilityCustomActions;
 - (id)autoplayable;
+- (_Bool)accessibilityScroll:(long long)arg1;
+- (void)accessibilityElementDidBecomeFocused;
 - (id)accessibilityLabel;
 - (id)initWithFrame:(struct CGRect)arg1;
 

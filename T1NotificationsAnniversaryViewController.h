@@ -8,11 +8,11 @@
 
 #import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 
-@class NSString, NSURL, TFNButton, TFNHUD, TFNTwitterAccount, UIActivityIndicatorView, UIImageView;
+@class NSString, NSURL, TFNHUD, TFNLegacyButton, TFNTwitterAccount, UIActivityIndicatorView, UIImageView;
 
 @interface T1NotificationsAnniversaryViewController : TFNItemsDataViewController <T1ImageViewFetchHelperDelegate>
 {
-    TFNButton *_actionButton;
+    TFNLegacyButton *_actionButton;
     UIImageView *_imageView;
     UIActivityIndicatorView *_activityIndicator;
     TFNHUD *_hud;

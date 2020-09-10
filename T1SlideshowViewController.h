@@ -20,7 +20,7 @@
 #import <T1Twitter/TLPSubscriptionDelegate-Protocol.h>
 #import <T1Twitter/UIScrollViewDelegate-Protocol.h>
 
-@class CAGradientLayer, NSArray, NSMutableArray, NSString, T1AmbientNotificationViewController, T1AmplifyCTATempImageTapHandler, T1AmplifyUIEventHandler, T1FullscreenMediaTransition, T1MediaInlineComposeController, T1SlideshowMediaAssetRenderer, T1SlideshowScrollView, T1SlideshowSeekController, T1SlideshowSlide, T1SlideshowStatusView, T1VideoBitRateManager, T1VideoDockContainerViewController, T1VolumeView, TAVPlaybackState, TAVPlayerViewConfiguration, TDTBatteryMonitorHandle, TFNButton, TFNCustomHitTestView, TFNPaddedButton, TFNTwitterAccount, TFNTwitterStatus, TFSTimer, TFSTwitterScribeContext, TLPSubscription, UIImageView, UIImpactFeedbackGenerator, UILabel, UINotificationFeedbackGenerator, UISelectionFeedbackGenerator, UIView, UIViewController;
+@class CAGradientLayer, NSArray, NSMutableArray, NSString, T1AmbientNotificationViewController, T1AmplifyCTATempImageTapHandler, T1AmplifyUIEventHandler, T1FullscreenMediaTransition, T1MediaInlineComposeController, T1SlideshowMediaAssetRenderer, T1SlideshowScrollView, T1SlideshowSeekController, T1SlideshowSlide, T1SlideshowStatusView, T1VideoBitRateManager, T1VideoDockContainerViewController, T1VolumeView, TAVPlaybackState, TAVPlayerViewConfiguration, TDTBatteryMonitorHandle, TFNCustomHitTestView, TFNLegacyButton, TFNPaddedButton, TFNTwitterAccount, TFNTwitterStatus, TFSTimer, TFSTwitterScribeContext, TLPSubscription, UIImageView, UIImpactFeedbackGenerator, UILabel, UINotificationFeedbackGenerator, UISelectionFeedbackGenerator, UIView, UIViewController;
 @protocol T1ImageTransitionDelegate, T1SlideshowViewControllerDataSource, T1SlideshowViewControllerDelegate, T1SlideshowViewControllerLoadingDelegate;
 
 @interface T1SlideshowViewController : TFNViewController <T1ZoomableImageViewZoomDelegate, T1SlideshowUserListViewControllerDelegate, T1AmplifyUIEventHandlerDelegate, TFNTooltipDelegate, TLPSubscriptionDelegate, T1MediaInlineComposeControllerDelegate, TAVPlaybackObserver, T1SlideshowSeekControllerDelegate, UIScrollViewDelegate, TFNPresented, TFNLayoutMetricsEnvironment, T1ImageDisplayViewDelegate, T1SlideshowSlideDelegate>
@@ -33,8 +33,8 @@
     TFNPaddedButton *_closeButton;
     TFNPaddedButton *_moreButton;
     TFNPaddedButton *_dockButton;
-    TFNButton *_retryButton;
-    TFNButton *_attributionButton;
+    TFNLegacyButton *_retryButton;
+    TFNLegacyButton *_attributionButton;
     TFNCustomHitTestView *_topChromeView;
     UIView *_fullScreenRasterization;
     long long _fullScreenRasterizationOrientation;

@@ -14,6 +14,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: modeTitles
     // Error parsing type: , name: _selectedIndex
     // Error parsing type: , name: selectionHandler
+    // Error parsing type: , name: $__lazy_storage_$_scrollX
+    // Error parsing type: , name: $__lazy_storage_$_scrollIndex
     // Error parsing type: , name: feedbackGenerator
     // Error parsing type: , name: $__lazy_storage_$_scrollView
     // Error parsing type: , name: $__lazy_storage_$_stack
@@ -30,9 +32,8 @@ __attribute__((visibility("hidden")))
 @property(nonatomic, copy) NSString *accessibilityValue;
 @property(nonatomic, copy) NSString *accessibilityLabel;
 @property(nonatomic) _Bool isAccessibilityElement;
-- (void)scrollViewDidEndDecelerating:(id)arg1;
-- (void)scrollViewWillEndDragging:(id)arg1 withVelocity:(struct CGPoint)arg2 targetContentOffset:(struct CGPoint *)arg3;
-- (void)scrollViewWillBeginDragging:(id)arg1;
+- (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
+- (void)handleSwipe:(id)arg1;
 - (void)handleTap:(id)arg1;
 - (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;

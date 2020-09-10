@@ -8,11 +8,11 @@
 
 #import <T1Twitter/TFNLayoutMetricsSizing-Protocol.h>
 
-@class NSArray, NSMutableArray, NSString, T1FlexibleLayout;
+@class NSArray, NSMutableArray, NSString, T1FlexibleLayoutHelper;
 
 @interface T1FlexibleLayoutView : UIView <TFNLayoutMetricsSizing>
 {
-    T1FlexibleLayout *_layoutHelper;
+    T1FlexibleLayoutHelper *_layoutHelper;
     _Bool _ignoreTopOriginWhenSizing;
     _Bool _ignoreLeftOriginWhenSizing;
     CDUnknownBlockType _contentEdgeInsetsCalculator;

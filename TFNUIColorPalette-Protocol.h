@@ -9,14 +9,15 @@
 @class UIColor;
 
 @protocol TFNUIColorPalette <NSObject>
-@property(readonly, nonatomic) UIColor *selectedCheckmarkColor;
-@property(readonly, nonatomic) UIColor *dataViewModalBackgroundColor;
-@property(readonly, nonatomic) UIColor *dataViewBackgroundColor;
-@property(readonly, nonatomic) UIColor *groupedCellBorderColor;
+@property(readonly, nonatomic) UIColor *cellAccessorySuccessColor;
 @property(readonly, nonatomic) UIColor *cellAccessoryColor;
-@property(readonly, nonatomic) UIColor *cellSeparatorColor;
-@property(readonly, nonatomic) UIColor *highlightCellBackgroundColor;
-@property(readonly, nonatomic) UIColor *cellBackgroundColor;
+@property(readonly, nonatomic) UIColor *groupedDividerColor;
+@property(readonly, nonatomic) UIColor *dividerColor;
+@property(readonly, nonatomic) UIColor *shadowColor;
+@property(readonly, nonatomic) UIColor *handleColor;
+@property(readonly, nonatomic) UIColor *highlightBackgroundColor;
+@property(readonly, nonatomic) UIColor *appBackgroundColor;
+@property(readonly, nonatomic) UIColor *backgroundColor;
 @property(readonly, nonatomic) UIColor *textDetailsColor;
 @property(readonly, nonatomic) UIColor *textColor;
 @end

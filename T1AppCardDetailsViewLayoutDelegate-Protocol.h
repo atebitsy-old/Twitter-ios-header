@@ -15,7 +15,7 @@
 - (UIColor *)titleTextColorForUnifiedCards:(_Bool)arg1;
 - (UIFont *)titleFont;
 - (struct UIEdgeInsets)contentEdgeInsets;
-- (unsigned long long)tfnButtonSizeForViewModel:(id <T1AppCardDetailsViewModel>)arg1;
+- (unsigned long long)TFNLegacyButtonSizeForViewModel:(id <T1AppCardDetailsViewModel>)arg1;
 - (T1AppCardDetailsViewLayoutState *)layoutForViewModel:(id <T1AppCardDetailsViewModel>)arg1 layoutMetrics:(TFNLayoutMetrics *)arg2;
 @end
 

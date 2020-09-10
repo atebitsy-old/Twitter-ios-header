@@ -7,8 +7,6 @@
 #import <T1Twitter/T1DirectMessageConversationFormatter.h>
 
 @interface T1DirectMessageConversationFormatter (T1Twitter)
-+ (id)generatedGroupTitleForParticipants:(id)arg1;
-+ (id)sharedGeneratedTitleFormatter;
-+ (id)sharedTitleFormatter;
+- (id)initPreviewTextFormatterWithAccount:(id)arg1;
 @end
 

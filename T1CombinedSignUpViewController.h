@@ -9,13 +9,13 @@
 #import <T1Twitter/T1CombinedSignUpFormDelegate-Protocol.h>
 #import <T1Twitter/T1UIInstrumentationWebViewControllerDelegate-Protocol.h>
 
-@class NSString, T1CombinedSignUpForm, T1UIInstrumentationWebViewController, TFNButton, TFNFlexibleSpaceItem;
+@class NSString, T1CombinedSignUpForm, T1UIInstrumentationWebViewController, TFNFlexibleSpaceItem, TFNLegacyButton;
 @protocol T1CombinedSignUpViewControllerDelegate;
 
 @interface T1CombinedSignUpViewController : T1OnboardingFormViewController <T1CombinedSignUpFormDelegate, T1UIInstrumentationWebViewControllerDelegate>
 {
     T1CombinedSignUpForm *_form;
-    TFNButton *_submitButton;
+    TFNLegacyButton *_submitButton;
     TFNFlexibleSpaceItem *_topSpaceItem;
     TFNFlexibleSpaceItem *_bottomSpaceItem;
     T1UIInstrumentationWebViewController *_instrumentationViewController;

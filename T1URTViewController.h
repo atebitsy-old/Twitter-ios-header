@@ -35,9 +35,10 @@
     // Error parsing type: , name: feedbackExecutor
     // Error parsing type: , name: feedbackPresenter
     // Error parsing type: , name: feedbackConfirmationSink
+    // Error parsing type: , name: reactor
     // Error parsing type: , name: renderPerformanceLogger
     // Error parsing type: , name: scribeConfiguration
-    // Error parsing type: , name: viewModelEntryMap
+    // Error parsing type: , name: viewModelIndex
     // Error parsing type: , name: urtWhoToFollowBlender
     // Error parsing type: , name: tweetCompositionUpdateListener
     // Error parsing type: , name: bottomLoadBackoffManager

@@ -9,7 +9,7 @@
 #import <TFNUI/TFNUIConfiguration-Protocol.h>
 
 @class NSString;
-@protocol TFNButtonFontGroup, TFNUIColorPalette, TFNUIFontGroup;
+@protocol TFNLegacyButtonFontGroup, TFNUIColorPalette, TFNUIFontGroup;
 
 @interface TFNUIConfiguration : NSObject <TFNUIConfiguration>
 {
@@ -17,7 +17,7 @@
 
 + (void)setCurrentConfiguration:(id)arg1;
 + (id)currentConfiguration;
-@property(readonly, nonatomic) id <TFNButtonFontGroup> buttonFontGroup;
+@property(readonly, nonatomic) id <TFNLegacyButtonFontGroup> buttonFontGroup;
 @property(readonly, nonatomic) id <TFNUIFontGroup> fontGroup;
 @property(readonly, nonatomic) id <TFNUIColorPalette> colorPalette;
 @property(readonly, nonatomic) _Bool isIgnoreTraitCollectionUIStyleInEqualityEnabled;

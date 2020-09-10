@@ -33,6 +33,7 @@
 - (unsigned long long)hash;
 - (_Bool)isEqualToBroadcastGuestSession:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
+@property(readonly, nonatomic, getter=isActive) _Bool active;
 - (id)bestKnownDisplayName;
 - (id)guestSessionJSON;
 - (id)initWithDictionary:(id)arg1;

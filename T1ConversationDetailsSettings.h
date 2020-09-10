@@ -10,6 +10,7 @@
 {
 }
 
++ (_Bool)emphasizedConnectorLinesEnabled;
 + (double)inlineActionRightMargin;
 + (_Bool)inlineActionsVerticallyAligned;
 + (double)selectedStateShadowOffsetHeight;
@@ -37,6 +38,7 @@
 + (_Bool)showMoreCoalescingDebugLabelsEnabled;
 + (long long)showMoreCoalescingLoadLimit;
 + (_Bool)showMoreCoalescingEnabled;
++ (_Bool)connectorEmphasisInBlueEnabled;
 
 @end
 

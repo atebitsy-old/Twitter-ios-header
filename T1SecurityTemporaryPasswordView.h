@@ -6,7 +6,7 @@
 
 #import <UIKit/UIScrollView.h>
 
-@class NSString, TFNButton, UILabel, UIView;
+@class NSString, TFNLegacyButton, UILabel, UIView;
 @protocol T1SecurityTemporaryPasswordViewDelegate;
 
 @interface T1SecurityTemporaryPasswordView : UIScrollView
@@ -17,13 +17,13 @@
     UILabel *_temporaryPasswordLabel;
     UILabel *_secondaryExplanationTextLabel;
     UILabel *_passwordExpirationTextLabel;
-    TFNButton *_generateTemporaryPasswordButton;
+    TFNLegacyButton *_generateTemporaryPasswordButton;
     UIView *_contentView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
-@property(retain, nonatomic) TFNButton *generateTemporaryPasswordButton; // @synthesize generateTemporaryPasswordButton=_generateTemporaryPasswordButton;
+@property(retain, nonatomic) TFNLegacyButton *generateTemporaryPasswordButton; // @synthesize generateTemporaryPasswordButton=_generateTemporaryPasswordButton;
 @property(retain, nonatomic) UILabel *passwordExpirationTextLabel; // @synthesize passwordExpirationTextLabel=_passwordExpirationTextLabel;
 @property(retain, nonatomic) UILabel *secondaryExplanationTextLabel; // @synthesize secondaryExplanationTextLabel=_secondaryExplanationTextLabel;
 @property(retain, nonatomic) UILabel *temporaryPasswordLabel; // @synthesize temporaryPasswordLabel=_temporaryPasswordLabel;

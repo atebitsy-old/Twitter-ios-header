@@ -8,12 +8,11 @@
 
 #import <T1Twitter/NSCoding-Protocol.h>
 #import <T1Twitter/NSCopying-Protocol.h>
-#import <T1Twitter/T1ListViewModel-Protocol.h>
 #import <T1Twitter/TFSModel-Protocol.h>
 
 @class NSNumber, NSString, TFNTwitterUser, TFSTwitterEntityMedia, TFSTwitterUserReference;
 
-@interface TFNTwitterList : NSObject <T1ListViewModel, NSCoding, NSCopying, TFSModel>
+@interface TFNTwitterList : NSObject <NSCoding, NSCopying, TFSModel>
 {
     NSString *_displayName;
     _Bool _isPrivate;
@@ -44,7 +43,7 @@
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-@property(readonly, copy) NSString *description;
+- (id)description;
 - (id)init;
 - (void)assimilateList:(id)arg1;
 - (void)_listDidChangeUserCountBy:(long long)arg1 notification:(id)arg2;
@@ -54,6 +53,9 @@
 @property(readonly, nonatomic) NSString *displayName;
 @property(readonly, nonatomic) NSString *fullName;
 @property(readonly, nonatomic) NSNumber *listIDNumber;
+@property(readonly, nonatomic) long long ownerTranslatorType;
+@property(readonly, nonatomic) _Bool ownerIsUsernameless;
+@property(readonly, nonatomic) long long ownerIdentityType;
 @property(readonly, nonatomic) _Bool ownerIsProtectedUser;
 @property(readonly, nonatomic) _Bool ownerIsVerifiedUser;
 @property(readonly, nonatomic) TFSTwitterEntityMedia *ownerAvatar;
@@ -61,15 +63,10 @@
 @property(readonly, nonatomic) NSNumber *ownerUserIDNumber;
 @property(readonly, nonatomic) NSString *ownerUsername;
 @property(readonly, nonatomic) long long ownerUserID;
-@property(readonly) unsigned long long hash;
+- (unsigned long long)hash;
 - (long long)compare:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithListID:(long long)arg1 name:(id)arg2 desc:(id)arg3 isPrivate:(_Bool)arg4 slug:(id)arg5 subscriberCount:(long long)arg6 memberCount:(long long)arg7 followingState:(unsigned long long)arg8 requiresLegacyHydration:(_Bool)arg9 user:(id)arg10;
-- (id)legacyList;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly) Class superclass;
 
 @end
 

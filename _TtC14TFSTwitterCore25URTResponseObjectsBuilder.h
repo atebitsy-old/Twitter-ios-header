@@ -9,6 +9,7 @@
 @interface _TtC14TFSTwitterCore25URTResponseObjectsBuilder : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: feedbackActionReferenceBuilder
+    // Error parsing type: , name: immediateReactionReferenceBuilder
 }
 
 @end

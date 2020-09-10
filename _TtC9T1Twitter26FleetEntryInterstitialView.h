@@ -10,13 +10,16 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter26FleetEntryInterstitialView : UIView
 {
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: interstitial
+    // Error parsing type: , name: contentView
     // Error parsing type: , name: titleLabel
-    // Error parsing type: , name: descriptionLabel
-    // Error parsing type: , name: $__lazy_storage_$_urlButton
+    // Error parsing type: , name: $__lazy_storage_$_firstActionButton
+    // Error parsing type: , name: $__lazy_storage_$_secondActionButton
 }
 
 - (void).cxx_destruct;
-- (void)didTapURLButton:(id)arg1;
+- (void)didTapSecondActionButton:(id)arg1;
+- (void)didTapFirstActionButton:(id)arg1;
 - (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

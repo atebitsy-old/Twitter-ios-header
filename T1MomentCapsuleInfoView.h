@@ -8,11 +8,12 @@
 
 #import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 
-@class CALayer, NSString, T1MomentCalculatedMediaRenderLayoutView, T1MomentCapsuleInfoViewTheme, T1MomentCapsuleLoadingView, TFNAttributedTextView, TFNButton, TFNTwitterAccount, TFNTwitterMomentCapsule, TIPImagePipeline, UIButton, UIImage, UIImageView, UILabel;
+@class CALayer, NSString, T1MomentCalculatedMediaRenderLayoutView, T1MomentCapsuleInfoViewTheme, T1MomentCapsuleLoadingView, T1UserBadge, T1UserBadger, TFNAttributedTextView, TFNLegacyButton, TFNTwitterAccount, TFNTwitterMomentCapsule, TIPImagePipeline, UIButton, UIImage, UIImageView, UILabel;
 @protocol T1MomentCapsuleInfoViewDelegate, T1MomentCapsuleInfoViewLayoutDelegate;
 
 @interface T1MomentCapsuleInfoView : UIView <T1ImageViewFetchHelperDelegate>
 {
+    T1UserBadger *_userBadger;
     TIPImagePipeline *_imagePipeline;
     UILabel *_titleLabel;
     TFNAttributedTextView *_descriptionAttributedTextView;
@@ -21,11 +22,11 @@
     UILabel *_categoryLabel;
     UILabel *_authorUsernameLabel;
     UIImageView *_categoryIconImageView;
-    UIImageView *_verifiedBadgeImageView;
+    UIImageView *_badgeImageView;
     UILabel *_liveBadgeLabel;
     UIImageView *_cardImageView;
     UIView *_thumbnailView;
-    TFNButton *_followButton;
+    TFNLegacyButton *_followButton;
     T1MomentCapsuleLoadingView *_loadingView;
     TFNTwitterMomentCapsule *_momentViewModel;
     TFNTwitterAccount *_account;
@@ -44,7 +45,6 @@
 + (id)followButtonTitle;
 + (id)_visiblityTextForMomentViewModel:(id)arg1;
 + (id)detailStringForMomentViewModel:(id)arg1 theme:(id)arg2 ownCapsule:(_Bool)arg3 account:(id)arg4;
-+ (struct CGSize)verifiedBadgeImageSize;
 + (struct CGSize)categoryIconImageSize;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *thumbnailImageView; // @synthesize thumbnailImageView=_thumbnailImageView;
@@ -58,11 +58,11 @@
 @property(readonly, nonatomic) __weak TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) TFNTwitterMomentCapsule *momentViewModel; // @synthesize momentViewModel=_momentViewModel;
 @property(retain, nonatomic) T1MomentCapsuleLoadingView *loadingView; // @synthesize loadingView=_loadingView;
-@property(retain, nonatomic) TFNButton *followButton; // @synthesize followButton=_followButton;
+@property(retain, nonatomic) TFNLegacyButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) UIView *thumbnailView; // @synthesize thumbnailView=_thumbnailView;
 @property(retain, nonatomic) UIImageView *cardImageView; // @synthesize cardImageView=_cardImageView;
 @property(retain, nonatomic) UILabel *liveBadgeLabel; // @synthesize liveBadgeLabel=_liveBadgeLabel;
-@property(retain, nonatomic) UIImageView *verifiedBadgeImageView; // @synthesize verifiedBadgeImageView=_verifiedBadgeImageView;
+@property(retain, nonatomic) UIImageView *badgeImageView; // @synthesize badgeImageView=_badgeImageView;
 @property(retain, nonatomic) UIImageView *categoryIconImageView; // @synthesize categoryIconImageView=_categoryIconImageView;
 @property(retain, nonatomic) UILabel *authorUsernameLabel; // @synthesize authorUsernameLabel=_authorUsernameLabel;
 @property(retain, nonatomic) UILabel *categoryLabel; // @synthesize categoryLabel=_categoryLabel;
@@ -74,6 +74,8 @@
 - (_Bool)_t1_shouldHideBadgeForPremadeMomentData;
 - (void)t1_fetchHelper:(id)arg1 readyToConfigureView:(id)arg2 state:(long long)arg3;
 - (void)cleanup;
+@property(readonly, nonatomic) T1UserBadge *userBadge;
+- (id)userBadger;
 - (void)setMomentViewModel:(id)arg1 account:(id)arg2;
 - (void)_didTapFollow:(id)arg1;
 - (void)layoutSubviews;

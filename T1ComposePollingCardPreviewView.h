@@ -6,14 +6,14 @@
 
 #import <UIKit/UIView.h>
 
-@class NSArray, T1AccordionButton, T1DurationPickerView, TFNButton, TFNPaddedButton, UILabel;
+@class NSArray, T1AccordionButton, T1DurationPickerView, TFNLegacyButton, TFNPaddedButton, UILabel;
 
 @interface T1ComposePollingCardPreviewView : UIView
 {
     _Bool _durationPickerVisible;
     NSArray *_textFields;
     TFNPaddedButton *_removeButton;
-    TFNButton *_addChoiceButton;
+    TFNLegacyButton *_addChoiceButton;
     T1AccordionButton *_durationButton;
     T1DurationPickerView *_durationPicker;
     unsigned long long _numberOfVisibleChoices;
@@ -28,7 +28,7 @@
 @property(nonatomic) unsigned long long numberOfVisibleChoices; // @synthesize numberOfVisibleChoices=_numberOfVisibleChoices;
 @property(retain, nonatomic) T1DurationPickerView *durationPicker; // @synthesize durationPicker=_durationPicker;
 @property(readonly, nonatomic) T1AccordionButton *durationButton; // @synthesize durationButton=_durationButton;
-@property(readonly, nonatomic) TFNButton *addChoiceButton; // @synthesize addChoiceButton=_addChoiceButton;
+@property(readonly, nonatomic) TFNLegacyButton *addChoiceButton; // @synthesize addChoiceButton=_addChoiceButton;
 @property(readonly, nonatomic) TFNPaddedButton *removeButton; // @synthesize removeButton=_removeButton;
 @property(retain, nonatomic) NSArray *textFields; // @synthesize textFields=_textFields;
 - (id)accessibilityElements;

@@ -6,8 +6,6 @@
 
 #import <UIKit/UIView.h>
 
-@class NSArray;
-
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter33URTTimelineTopicLandingHeaderView : UIView
 {
@@ -27,6 +25,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: leadinglayoutMarginConstraint
     // Error parsing type: , name: trailinglayoutMarginConstraint
     // Error parsing type: , name: actionBlock
+    // Error parsing type: , name: accessibilityActions
     // Error parsing type: , name: viewModel
 }
 
@@ -34,7 +33,6 @@ __attribute__((visibility("hidden")))
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)actionButtonTapped:(id)arg1;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
-@property(nonatomic, copy) NSArray *accessibilityElements;
 - (id)init;
 - (id)initWithCoder:(id)arg1;
 

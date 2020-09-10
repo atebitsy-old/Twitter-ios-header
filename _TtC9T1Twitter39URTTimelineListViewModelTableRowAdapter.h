@@ -10,14 +10,15 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter39URTTimelineListViewModelTableRowAdapter : TFNItemsDataViewAdapter
 {
     // Error parsing type: , name: prototypeView
-    // Error parsing type: , name: feedbackPresenter
-    // Error parsing type: , name: $__lazy_storage_$_imagePipeline
     // Error parsing type: , name: account
     // Error parsing type: , name: style
+    // Error parsing type: , name: feedbackPresenter
+    // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: spheresFeatureSwitches
     // Error parsing type: , name: listMutationsManager
     // Error parsing type: , name: $__lazy_storage_$_cellStyle
     // Error parsing type: , name: $__lazy_storage_$_stringsProvider
+    // Error parsing type: , name: $__lazy_storage_$_userBadger
 }
 
 - (void).cxx_destruct;

@@ -9,7 +9,7 @@
 #import <T1Twitter/T1CustomerFeedbackRatingViewDelegate-Protocol.h>
 #import <T1Twitter/TFNHTMLTextViewDelegate-Protocol.h>
 
-@class NSString, T1CustomerFeedbackCardViewModel, T1CustomerFeedbackRatingViewsContainerView, TFNButton, TFNHTMLTextView, UIButton, UILabel, UIView;
+@class NSString, T1CustomerFeedbackCardViewModel, T1CustomerFeedbackRatingViewsContainerView, TFNHTMLTextView, TFNLegacyButton, UIButton, UILabel, UIView;
 
 @interface T1CustomerFeedbackCardView : T1CardView <TFNHTMLTextViewDelegate, T1CustomerFeedbackRatingViewDelegate>
 {
@@ -20,13 +20,13 @@
     UILabel *_titleLabel;
     TFNHTMLTextView *_privacyPolicyTextView;
     T1CustomerFeedbackRatingViewsContainerView *_ratingViewsContainer;
-    TFNButton *_addCommentButton;
-    TFNButton *_tweetButton;
+    TFNLegacyButton *_addCommentButton;
+    TFNLegacyButton *_tweetButton;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) TFNButton *tweetButton; // @synthesize tweetButton=_tweetButton;
-@property(readonly, nonatomic) TFNButton *addCommentButton; // @synthesize addCommentButton=_addCommentButton;
+@property(readonly, nonatomic) TFNLegacyButton *tweetButton; // @synthesize tweetButton=_tweetButton;
+@property(readonly, nonatomic) TFNLegacyButton *addCommentButton; // @synthesize addCommentButton=_addCommentButton;
 @property(readonly, nonatomic) T1CustomerFeedbackRatingViewsContainerView *ratingViewsContainer; // @synthesize ratingViewsContainer=_ratingViewsContainer;
 @property(readonly, nonatomic) TFNHTMLTextView *privacyPolicyTextView; // @synthesize privacyPolicyTextView=_privacyPolicyTextView;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;

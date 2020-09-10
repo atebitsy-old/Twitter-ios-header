@@ -15,16 +15,18 @@
     NSString *_username;
     NSString *_fullName;
     NSString *_faviconURL;
+    long long _identityType;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) long long identityType; // @synthesize identityType=_identityType;
 @property(readonly, nonatomic, getter=isVerified) _Bool verified; // @synthesize verified=_verified;
 @property(readonly, nonatomic) NSString *faviconURL; // @synthesize faviconURL=_faviconURL;
 @property(readonly, nonatomic) NSString *fullName; // @synthesize fullName=_fullName;
 @property(readonly, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, nonatomic) NSNumber *userID; // @synthesize userID=_userID;
 - (id)initWithJSONDictionary:(id)arg1;
-- (id)initWithUserID:(id)arg1 username:(id)arg2 fullName:(id)arg3 verified:(_Bool)arg4 faviconURL:(id)arg5;
+- (id)initWithUserID:(id)arg1 username:(id)arg2 fullName:(id)arg3 verified:(_Bool)arg4 identityType:(long long)arg5 faviconURL:(id)arg6;
 
 @end
 

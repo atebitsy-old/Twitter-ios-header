@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import <T1Twitter/TFNButtonImageProvider-Protocol.h>
+#import <T1Twitter/TFNLegacyButtonImageProvider-Protocol.h>
 
 @class NSString, UIImage;
 
-@interface T1StickerCategoryButtonImageProvider : NSObject <TFNButtonImageProvider>
+@interface T1StickerCategoryButtonImageProvider : NSObject <TFNLegacyButtonImageProvider>
 {
     UIImage *_image;
 }

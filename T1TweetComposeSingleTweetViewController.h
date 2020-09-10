@@ -22,7 +22,7 @@
 #import <T1Twitter/TFNLayoutMetricsEnvironment-Protocol.h>
 #import <T1Twitter/UIGestureRecognizerDelegate-Protocol.h>
 
-@class NSArray, NSString, T1AutocompleteTextInputUITextView, T1ComposeAccountAvatarImageView, T1ComposeCardPreviewController, T1ComposePollingCardPreviewController, T1ComposeRTLTextViewDelegate, T1ComposeTagLocationViewController, T1ComposeTextView, T1ConversationConnectorView, T1MediaAttachmentsViewController, T1QuotedStatusView, T1TaggingPromptButton, T1TweetComposeLocator, T1TweetComposeTextEditorView, TFNButton, TFNTwitterAccount, TFNTwitterComposePlaceStore, TFNTwitterComposition, TFSMainThreadRunLoopDeferredTask, TFSTwitterLocation, TFSTwitterPlace, TFSTwitterScribeContext, UIButton, UIColor, UIFont, UIImage, UIView, UIViewController;
+@class NSArray, NSString, T1AutocompleteTextInputUITextView, T1ComposeAccountAvatarImageView, T1ComposeCardPreviewController, T1ComposePollingCardPreviewController, T1ComposeRTLTextViewDelegate, T1ComposeTagLocationViewController, T1ComposeTextView, T1ConversationConnectorView, T1MediaAttachmentsViewController, T1QuotedStatusView, T1TaggingPromptButton, T1TweetComposeLocator, T1TweetComposeTextEditorView, TFNLegacyButton, TFNTwitterAccount, TFNTwitterComposePlaceStore, TFNTwitterComposition, TFSMainThreadRunLoopDeferredTask, TFSTwitterLocation, TFSTwitterPlace, TFSTwitterScribeContext, UIButton, UIColor, UIFont, UIImage, UIView, UIViewController;
 @protocol T1AutocompleteTextInput, T1ComposeTextView, T1TweetComposeSingleTweetViewControllerDelegate, T1TweetComposeSingleTweetViewControllerTextView;
 
 @interface T1TweetComposeSingleTweetViewController : TFNViewController <NSLayoutManagerDelegate, T1ComposeCardPreviewControllerDelegate, T1ComposePollingCardPreviewControllerDelegate, T1ComposeTagLocationViewControllerDelegate, T1ComposeTextViewDelegate, T1MediaAttachmentsViewControllerDelegate, T1TaggingViewControllerDelegate, T1TweetComposeLocatorDelegate, T1TweetComposeTextEditorViewAttachmentPasteObserverDelegate, T1TweetComposeTextEditorViewURLPasteObserverDelegate, T1TweetComposeTextEditorViewDelegate, T1VideoMonetizationSettingsViewControllerDelegate, TFNLayoutMetricsEnvironment, UIGestureRecognizerDelegate, TFNCircularCountProgressDataSource>
@@ -34,6 +34,7 @@
     _Bool _twitterTextEditorEnabled;
     _Bool _needsLayout;
     _Bool _deleting;
+    _Bool _mixedMediaGIFCreationEnabled;
     int _displayStyle;
     TFNTwitterAccount *_account;
     id <T1TweetComposeSingleTweetViewControllerDelegate> _delegate;
@@ -50,7 +51,7 @@
     T1ComposePollingCardPreviewController *_pollingCardPreviewController;
     T1ComposeTagLocationViewController *_tagLocationViewController;
     T1TaggingPromptButton *_peopleInAttachmentsButton;
-    TFNButton *_deleteButton;
+    TFNLegacyButton *_deleteButton;
     UIButton *_monetizationPromptButton;
     T1QuotedStatusView *_quotedStatusView;
     T1ComposeCardPreviewController *_cardPreviewController;
@@ -68,6 +69,7 @@
 @property(copy, nonatomic) NSArray *overflowViewsArray; // @synthesize overflowViewsArray=_overflowViewsArray;
 @property(readonly, nonatomic) UIColor *defaultTextForegroundColor; // @synthesize defaultTextForegroundColor=_defaultTextForegroundColor;
 @property(readonly, nonatomic) UIFont *defaultTextFont; // @synthesize defaultTextFont=_defaultTextFont;
+@property(nonatomic, getter=isMixedMediaGIFCreationEnabled) _Bool mixedMediaGIFCreationEnabled; // @synthesize mixedMediaGIFCreationEnabled=_mixedMediaGIFCreationEnabled;
 @property(nonatomic, getter=isDeleting) _Bool deleting; // @synthesize deleting=_deleting;
 @property(nonatomic) _Bool needsLayout; // @synthesize needsLayout=_needsLayout;
 @property(nonatomic) long long firstBaseWritingDirection; // @synthesize firstBaseWritingDirection=_firstBaseWritingDirection;
@@ -76,7 +78,7 @@
 @property(retain, nonatomic) T1ComposeCardPreviewController *cardPreviewController; // @synthesize cardPreviewController=_cardPreviewController;
 @property(retain, nonatomic) T1QuotedStatusView *quotedStatusView; // @synthesize quotedStatusView=_quotedStatusView;
 @property(retain, nonatomic) UIButton *monetizationPromptButton; // @synthesize monetizationPromptButton=_monetizationPromptButton;
-@property(retain, nonatomic) TFNButton *deleteButton; // @synthesize deleteButton=_deleteButton;
+@property(retain, nonatomic) TFNLegacyButton *deleteButton; // @synthesize deleteButton=_deleteButton;
 @property(retain, nonatomic) T1TaggingPromptButton *peopleInAttachmentsButton; // @synthesize peopleInAttachmentsButton=_peopleInAttachmentsButton;
 @property(retain, nonatomic) T1ComposeTagLocationViewController *tagLocationViewController; // @synthesize tagLocationViewController=_tagLocationViewController;
 @property(retain, nonatomic) T1ComposePollingCardPreviewController *pollingCardPreviewController; // @synthesize pollingCardPreviewController=_pollingCardPreviewController;
@@ -163,6 +165,7 @@
 - (void)_t1_updatePollComposeWithComposition:(id)arg1;
 - (void)_t1_resetBaseTypingAttributes:(id)arg1;
 - (void)_t1_highlightEntities:(id)arg1;
+- (_Bool)hasAttachmentsAndMixedMediaGIFCreationIsEnabled;
 - (_Bool)_t1_areAttachmentsAllowed;
 - (void)_t1_scribeRemovedAttachment:(id)arg1;
 - (void)_t1_scribeAddedAttachment:(id)arg1;
@@ -280,7 +283,7 @@
 - (void)viewDidLoad;
 - (void)loadView;
 - (void)tfn_fontSizeChanged;
-- (id)initWithComposition:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 twitterTextEditorEnabled:(_Bool)arg4 inWindowScene:(_Bool)arg5;
+- (id)initWithComposition:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 mixedMediaGIFCreationEnabled:(_Bool)arg4 twitterTextEditorEnabled:(_Bool)arg5 inWindowScene:(_Bool)arg6;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 

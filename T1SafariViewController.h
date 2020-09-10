@@ -47,7 +47,8 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) NSURL *rootURL; // @synthesize rootURL=_rootURL;
 @property(readonly, nonatomic, getter=isVisible) _Bool visible; // @synthesize visible=_visible;
-- (_Bool)_t1_shouldUseUnanimatedContainerPresentation;
+- (_Bool)_t1_isUsingUnanimatedContainerPresentation;
+- (_Bool)_t1_pageLoadBeginsOnViewWillAppear;
 - (void)_t1_performViewLayout;
 - (void)_t1_userDidTakeScreenshot;
 - (void)_t1_applicationDidEnterBackground;

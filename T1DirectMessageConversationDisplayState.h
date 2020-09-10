@@ -20,11 +20,9 @@
     NSMutableSet *_detailsShownEntryIDs;
     NSMutableSet *_messageRevealedEntryIDs;
     NSMutableDictionary *_readReceiptDisplayModeByEntryIDs;
-    NSMutableDictionary *_messageSendProgressIndicatorDisplayProgressByMediaAssetIDs;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSMutableDictionary *messageSendProgressIndicatorDisplayProgressByMediaAssetIDs; // @synthesize messageSendProgressIndicatorDisplayProgressByMediaAssetIDs=_messageSendProgressIndicatorDisplayProgressByMediaAssetIDs;
 @property(readonly, nonatomic) NSMutableDictionary *readReceiptDisplayModeByEntryIDs; // @synthesize readReceiptDisplayModeByEntryIDs=_readReceiptDisplayModeByEntryIDs;
 @property(readonly, nonatomic) NSMutableSet *messageRevealedEntryIDs; // @synthesize messageRevealedEntryIDs=_messageRevealedEntryIDs;
 @property(readonly, nonatomic) NSMutableSet *detailsShownEntryIDs; // @synthesize detailsShownEntryIDs=_detailsShownEntryIDs;
@@ -35,8 +33,6 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) id <TFNDirectMessageConversation> conversation; // @synthesize conversation=_conversation;
 - (id)_cacheKeyForEntry:(id)arg1;
-- (void)setProgressIndicatorDisplayProgress:(id)arg1 forMediaAssetID:(id)arg2;
-- (id)progressIndicatorDisplayProgressForMediaAssetID:(id)arg1;
 - (void)setReadReceiptDisplayMode:(unsigned long long)arg1 forEntry:(id)arg2;
 - (unsigned long long)readReceiptDisplayModeForEntry:(id)arg1;
 - (void)setMessageRevealed:(_Bool)arg1 forFilteredEntry:(id)arg2;

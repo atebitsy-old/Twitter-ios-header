@@ -6,13 +6,13 @@
 
 #import <UIKit/UIView.h>
 
-@class NSString, TFNAttributedTextView, TFNButton, UIButton, UILabel;
+@class NSString, TFNAttributedTextView, TFNLegacyButton, UIButton, UILabel;
 
 @interface T1SignUpFormFooterView : UIView
 {
     UIButton *_button;
     UIButton *_secondaryButton;
-    TFNButton *_submitButton;
+    TFNLegacyButton *_submitButton;
     id _target;
     id _secondaryTarget;
     SEL _action;
@@ -32,7 +32,7 @@
 @property(nonatomic) SEL action; // @synthesize action=_action;
 @property(nonatomic) __weak id secondaryTarget; // @synthesize secondaryTarget=_secondaryTarget;
 @property(nonatomic) __weak id target; // @synthesize target=_target;
-@property(readonly, nonatomic) TFNButton *submitButton; // @synthesize submitButton=_submitButton;
+@property(readonly, nonatomic) TFNLegacyButton *submitButton; // @synthesize submitButton=_submitButton;
 - (id)_linkButtonWithLabel:(id)arg1;
 @property(readonly, nonatomic) UIButton *secondaryButton; // @synthesize secondaryButton=_secondaryButton;
 @property(readonly, nonatomic) UIButton *button; // @synthesize button=_button;

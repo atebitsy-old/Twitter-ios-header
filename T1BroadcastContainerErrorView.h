@@ -8,7 +8,7 @@
 
 #import <T1Twitter/UIGestureRecognizerDelegate-Protocol.h>
 
-@class NSLayoutConstraint, NSString, TFNButton, UIImageView, UILabel, UIStackView, UITapGestureRecognizer;
+@class NSLayoutConstraint, NSString, TFNLegacyButton, UIImageView, UILabel, UIStackView, UITapGestureRecognizer;
 @protocol T1BroadcastContainerErrorConfiguration, T1BroadcastContainerErrorViewDelegate;
 
 @interface T1BroadcastContainerErrorView : UIView <UIGestureRecognizerDelegate>
@@ -17,9 +17,9 @@
     long long _style;
     long long _controlType;
     UIStackView *_stackView;
-    TFNButton *_reloadButton;
+    TFNLegacyButton *_reloadButton;
     UILabel *_errorLabel;
-    TFNButton *_geoPermissionsButton;
+    TFNLegacyButton *_geoPermissionsButton;
     UIImageView *_imageView;
     NSLayoutConstraint *_centerYConstraint;
     UITapGestureRecognizer *_tapRecognizer;
@@ -31,9 +31,9 @@
 @property(retain, nonatomic) UITapGestureRecognizer *tapRecognizer; // @synthesize tapRecognizer=_tapRecognizer;
 @property(retain, nonatomic) NSLayoutConstraint *centerYConstraint; // @synthesize centerYConstraint=_centerYConstraint;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
-@property(readonly, nonatomic) TFNButton *geoPermissionsButton; // @synthesize geoPermissionsButton=_geoPermissionsButton;
+@property(readonly, nonatomic) TFNLegacyButton *geoPermissionsButton; // @synthesize geoPermissionsButton=_geoPermissionsButton;
 @property(readonly, nonatomic) UILabel *errorLabel; // @synthesize errorLabel=_errorLabel;
-@property(readonly, nonatomic) TFNButton *reloadButton; // @synthesize reloadButton=_reloadButton;
+@property(readonly, nonatomic) TFNLegacyButton *reloadButton; // @synthesize reloadButton=_reloadButton;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(nonatomic) long long controlType; // @synthesize controlType=_controlType;
 @property(nonatomic) long long style; // @synthesize style=_style;

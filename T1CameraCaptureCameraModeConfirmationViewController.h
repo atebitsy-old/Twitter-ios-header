@@ -6,7 +6,7 @@
 
 #import <TFNUI/TFNViewController.h>
 
-@class NSLayoutConstraint, T1CameraCaptureOutput, T1CameraCapturePreviewView, T1CameraControlButton, TFNButton, UIView;
+@class NSLayoutConstraint, T1CameraCaptureOutput, T1CameraCapturePreviewView, T1CameraControlButton, TFNLegacyButton, UIView;
 @protocol T1CameraCaptureCameraModeConfirmationViewControllerDelegate;
 
 @interface T1CameraCaptureCameraModeConfirmationViewController : TFNViewController
@@ -15,8 +15,8 @@
     T1CameraCaptureOutput *_captureOutput;
     T1CameraCapturePreviewView *_previewView;
     UIView *_controlsContainerView;
-    TFNButton *_retakeButton;
-    TFNButton *_useButton;
+    TFNLegacyButton *_retakeButton;
+    TFNLegacyButton *_useButton;
     T1CameraControlButton *_muteButton;
     NSLayoutConstraint *_previewTopConstraintFull;
     NSLayoutConstraint *_previewTopConstraintSixteenByNine;
@@ -30,8 +30,8 @@
 @property(retain, nonatomic) NSLayoutConstraint *previewTopConstraintSixteenByNine; // @synthesize previewTopConstraintSixteenByNine=_previewTopConstraintSixteenByNine;
 @property(retain, nonatomic) NSLayoutConstraint *previewTopConstraintFull; // @synthesize previewTopConstraintFull=_previewTopConstraintFull;
 @property(retain, nonatomic) T1CameraControlButton *muteButton; // @synthesize muteButton=_muteButton;
-@property(retain, nonatomic) TFNButton *useButton; // @synthesize useButton=_useButton;
-@property(retain, nonatomic) TFNButton *retakeButton; // @synthesize retakeButton=_retakeButton;
+@property(retain, nonatomic) TFNLegacyButton *useButton; // @synthesize useButton=_useButton;
+@property(retain, nonatomic) TFNLegacyButton *retakeButton; // @synthesize retakeButton=_retakeButton;
 @property(retain, nonatomic) UIView *controlsContainerView; // @synthesize controlsContainerView=_controlsContainerView;
 @property(retain, nonatomic) T1CameraCapturePreviewView *previewView; // @synthesize previewView=_previewView;
 @property(retain, nonatomic) T1CameraCaptureOutput *captureOutput; // @synthesize captureOutput=_captureOutput;

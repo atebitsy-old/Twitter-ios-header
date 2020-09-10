@@ -13,8 +13,6 @@
 
 @interface TFNTwitterCoreServicesConfiguration : NSObject <TFNTwitterCoreServicesConfiguration, NSCopying>
 {
-    _Bool _actionServiceIntegrationEnabled;
-    _Bool _actionServiceLoggedOutIntegrationEnabled;
     _Bool _disableInlinePhotosInstagram;
     long long _shortenedURLLengthSecure;
     long long _mediaURLLength;
@@ -29,12 +27,16 @@
     NSNumber *_coreServices2TNLForegroundIdleTimeout;
     NSNumber *_coreServices2TNLBackgroundIdleTimeout;
     unsigned long long _maxNumberDiscountedURLs;
+    CDUnknownBlockType _actionServiceIntegrationEnabledProvider;
+    CDUnknownBlockType _actionServiceLoggedOutIntegrationEnabledProvider;
 }
 
 + (id)_queue;
 + (void)updateConfiguration:(id)arg1;
 + (id)currentConfiguration;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType actionServiceLoggedOutIntegrationEnabledProvider; // @synthesize actionServiceLoggedOutIntegrationEnabledProvider=_actionServiceLoggedOutIntegrationEnabledProvider;
+@property(copy, nonatomic) CDUnknownBlockType actionServiceIntegrationEnabledProvider; // @synthesize actionServiceIntegrationEnabledProvider=_actionServiceIntegrationEnabledProvider;
 @property(nonatomic) unsigned long long maxNumberDiscountedURLs; // @synthesize maxNumberDiscountedURLs=_maxNumberDiscountedURLs;
 @property(retain, nonatomic) NSNumber *coreServices2TNLBackgroundIdleTimeout; // @synthesize coreServices2TNLBackgroundIdleTimeout=_coreServices2TNLBackgroundIdleTimeout;
 @property(retain, nonatomic) NSNumber *coreServices2TNLForegroundIdleTimeout; // @synthesize coreServices2TNLForegroundIdleTimeout=_coreServices2TNLForegroundIdleTimeout;
@@ -49,8 +51,8 @@
 @property(nonatomic) _Bool disableInlinePhotosInstagram; // @synthesize disableInlinePhotosInstagram=_disableInlinePhotosInstagram;
 @property(nonatomic) long long mediaURLLength; // @synthesize mediaURLLength=_mediaURLLength;
 @property(nonatomic) long long shortenedURLLengthSecure; // @synthesize shortenedURLLengthSecure=_shortenedURLLengthSecure;
-@property(nonatomic, getter=isActionServiceLoggedOutIntegrationEnabled) _Bool actionServiceLoggedOutIntegrationEnabled; // @synthesize actionServiceLoggedOutIntegrationEnabled=_actionServiceLoggedOutIntegrationEnabled;
-@property(nonatomic, getter=isActionServiceIntegrationEnabled) _Bool actionServiceIntegrationEnabled; // @synthesize actionServiceIntegrationEnabled=_actionServiceIntegrationEnabled;
+@property(readonly, nonatomic, getter=isActionServiceLoggedOutIntegrationEnabled) _Bool actionServiceLoggedOutIntegrationEnabled;
+@property(readonly, nonatomic, getter=isActionServiceIntegrationEnabled) _Bool actionServiceIntegrationEnabled;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithConfiguration:(id)arg1;
 

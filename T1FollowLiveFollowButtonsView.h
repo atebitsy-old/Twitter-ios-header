@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class TFNButton, UIActivityIndicatorView, UIColor, UILabel;
+@class TFNLegacyButton, UIActivityIndicatorView, UIColor, UILabel;
 @protocol T1FollowLiveFollowButtonsProtocol, TFSTwitterCanonicalUser;
 
 @interface T1FollowLiveFollowButtonsView : UIView
@@ -16,8 +16,8 @@
     _Bool _presentedOverLightBackground;
     id <T1FollowLiveFollowButtonsProtocol> _delegate;
     id <TFSTwitterCanonicalUser> _user;
-    TFNButton *_followButton;
-    TFNButton *_liveFollowButton;
+    TFNLegacyButton *_followButton;
+    TFNLegacyButton *_liveFollowButton;
     UIColor *_buttonTintColor;
     unsigned long long _buttonSize;
     UIActivityIndicatorView *_activityIndicatorView;
@@ -31,8 +31,8 @@
 @property(nonatomic) unsigned long long buttonSize; // @synthesize buttonSize=_buttonSize;
 @property(retain, nonatomic) UIColor *buttonTintColor; // @synthesize buttonTintColor=_buttonTintColor;
 @property(nonatomic) _Bool fillWidth; // @synthesize fillWidth=_fillWidth;
-@property(retain, nonatomic) TFNButton *liveFollowButton; // @synthesize liveFollowButton=_liveFollowButton;
-@property(retain, nonatomic) TFNButton *followButton; // @synthesize followButton=_followButton;
+@property(retain, nonatomic) TFNLegacyButton *liveFollowButton; // @synthesize liveFollowButton=_liveFollowButton;
+@property(retain, nonatomic) TFNLegacyButton *followButton; // @synthesize followButton=_followButton;
 @property(nonatomic) _Bool failedToLoadUser; // @synthesize failedToLoadUser=_failedToLoadUser;
 @property(retain, nonatomic) id <TFSTwitterCanonicalUser> user; // @synthesize user=_user;
 @property(nonatomic) __weak id <T1FollowLiveFollowButtonsProtocol> delegate; // @synthesize delegate=_delegate;

@@ -6,12 +6,13 @@
 
 #import <TFNUI/TFNDataViewController.h>
 
+#import <T1Twitter/TFNDataViewKeyboardSelectionDelegate-Protocol.h>
 #import <T1Twitter/TFNModalSheetViewControllerDelegate-Protocol.h>
 
 @class NSArray, NSString, TFNBarButtonItem, TFNTwitterAccount, TFNTwitterComposition;
 @protocol T1TweetDraftsViewControllerDelegate;
 
-@interface T1TweetDraftsViewController : TFNDataViewController <TFNModalSheetViewControllerDelegate>
+@interface T1TweetDraftsViewController : TFNDataViewController <TFNDataViewKeyboardSelectionDelegate, TFNModalSheetViewControllerDelegate>
 {
     _Bool _showsComposeTweetButton;
     _Bool _tableViewIsEditingRow;
@@ -34,6 +35,9 @@
 - (id)scribe;
 - (void)modalSheetViewControllerDidDismiss:(id)arg1 fromGesture:(_Bool)arg2;
 - (void)modalSheetViewController:(id)arg1 willTransitionToLayoutMode:(long long)arg2 withTransitionCoordinator:(id)arg3;
+- (void)keyboardHighlightCell:(id)arg1 highlighted:(_Bool)arg2;
+- (id)keyboardHighlightIndexPathsForIndexPath:(id)arg1;
+- (long long)isCellKeyboardHighlightableAtIndexPath:(id)arg1;
 - (void)tableView:(id)arg1 didEndEditingRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 willBeginEditingRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 didDeselectRowAtIndexPath:(id)arg2;

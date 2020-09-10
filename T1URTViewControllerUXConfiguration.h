@@ -24,7 +24,6 @@
     // Error parsing type: , name: supportsSwipingBetweenStatusesInSlideshow
     // Error parsing type: , name: loadTopControlShouldUpdateContentInsetWhenUpdatingProgrammatically
     // Error parsing type: , name: alwaysShowActivityIndicatorWhenLoading
-    // Error parsing type: , name: preferredTopicPagePresentationStyle
 }
 
 - (void).cxx_destruct;

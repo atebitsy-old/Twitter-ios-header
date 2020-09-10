@@ -15,8 +15,8 @@
 #import <T1Twitter/UICollectionViewDelegate-Protocol.h>
 #import <T1Twitter/UICollectionViewDelegateFlowLayout-Protocol.h>
 
-@class NSArray, NSString, PHFetchResult, T1PhotoCachingImageManagerHelper, TFNTwitterAccount, UICollectionView, UIView;
-@protocol T1PhotoMediaRailViewControllerDelegate;
+@class NSArray, NSObject, NSString, PHFetchResult, T1PhotoCachingImageManagerHelper, TFNTwitterAccount, UICollectionView, UIView;
+@protocol OS_dispatch_queue, T1PhotoMediaRailViewControllerDelegate;
 
 @interface T1PhotoMediaRailViewController : TFNViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, PHPhotoLibraryChangeObserver, T1NativeCameraViewControllerDelegate, T1CameraCaptureViewControllerDelegate, T1VideoTrimmerViewControllerDelegate, T1PhotoCachingImageManagerHelperDelegate>
 {
@@ -27,6 +27,7 @@
     _Bool _voiceButtonHidden;
     _Bool _livePhotoAttachmentEnabled;
     _Bool _selecting;
+    _Bool _hasPerformedInitialPhotoFetch;
     id <T1PhotoMediaRailViewControllerDelegate> _delegate;
     TFNTwitterAccount *_account;
     UICollectionView *_collectionView;
@@ -35,10 +36,13 @@
     NSArray *_buttonsBeforePhotos;
     NSArray *_buttonsAfterPhotos;
     T1PhotoCachingImageManagerHelper *_cachingImageManagerHelper;
+    NSObject<OS_dispatch_queue> *_photoFetchQueue;
     struct CGSize _cachedItemSize;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *photoFetchQueue; // @synthesize photoFetchQueue=_photoFetchQueue;
+@property(nonatomic) _Bool hasPerformedInitialPhotoFetch; // @synthesize hasPerformedInitialPhotoFetch=_hasPerformedInitialPhotoFetch;
 @property(readonly, nonatomic) T1PhotoCachingImageManagerHelper *cachingImageManagerHelper; // @synthesize cachingImageManagerHelper=_cachingImageManagerHelper;
 @property(nonatomic, getter=isSelecting) _Bool selecting; // @synthesize selecting=_selecting;
 @property(readonly, nonatomic) NSArray *buttonsAfterPhotos; // @synthesize buttonsAfterPhotos=_buttonsAfterPhotos;

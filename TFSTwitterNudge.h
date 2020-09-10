@@ -16,6 +16,7 @@
     NSString *_nudgeIdentifier;
 }
 
++ (id)nudgeFromError:(id)arg1 createNudgeOperationErrorKey:(id)arg2;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *nudgeIdentifier; // @synthesize nudgeIdentifier=_nudgeIdentifier;
 @property(readonly, nonatomic) unsigned long long nudgeType; // @synthesize nudgeType=_nudgeType;

@@ -8,7 +8,7 @@
 
 @interface _TtC9T1Twitter55SpheresUserRecommendationsEndpointParametersTransformer : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: dataModel
     // Error parsing type: , name: stateManager
     // Error parsing type: , name: displayLocation
 }

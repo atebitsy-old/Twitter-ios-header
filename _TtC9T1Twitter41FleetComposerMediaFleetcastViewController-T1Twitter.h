@@ -12,7 +12,6 @@
 - (long long)twitterCameraLiveClient;
 - (_Bool)twitterCameraLiveShouldUseModalSheetForUserProfile;
 - (_Bool)twitterCameraLiveIsGuestBroadcastingCreationEnabled;
-- (double)twitterCameraLiveGuestViewsTopMargin;
 - (void)twitterCameraLiveDeleteBroadcast:(id)arg1;
 - (void)twitterCameraLiveDidStopBroadcast:(id)arg1;
 - (void)twitterCameraLiveDidStartBroadcast:(id)arg1;

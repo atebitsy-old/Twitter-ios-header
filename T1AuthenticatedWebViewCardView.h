@@ -6,7 +6,7 @@
 
 #import <T1Twitter/T1CardView.h>
 
-@class T1AuthenticatedWebViewCardEventRegistry, T1AuthenticatedWebViewCardModel, TFNButton, TFNTappableHighlightView, UIImageView, UILabel, UIView;
+@class T1AuthenticatedWebViewCardEventRegistry, T1AuthenticatedWebViewCardModel, TFNLegacyButton, TFNTappableHighlightView, UIImageView, UILabel, UIView;
 @protocol T1CardViewDelegate;
 
 @interface T1AuthenticatedWebViewCardView : T1CardView
@@ -25,11 +25,11 @@
     UILabel *_titleLabel;
     UILabel *_labelByline;
     TFNTappableHighlightView *_titleHighlightView;
-    TFNButton *_callToActionButton;
+    TFNLegacyButton *_callToActionButton;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) TFNButton *callToActionButton; // @synthesize callToActionButton=_callToActionButton;
+@property(retain, nonatomic) TFNLegacyButton *callToActionButton; // @synthesize callToActionButton=_callToActionButton;
 @property(retain, nonatomic) TFNTappableHighlightView *titleHighlightView; // @synthesize titleHighlightView=_titleHighlightView;
 @property(retain, nonatomic) UILabel *labelByline; // @synthesize labelByline=_labelByline;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;

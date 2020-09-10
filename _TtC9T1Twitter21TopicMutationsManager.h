@@ -8,7 +8,7 @@
 
 @interface _TtC9T1Twitter21TopicMutationsManager : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: accountID
+    // Error parsing type: , name: account
     // Error parsing type: , name: modelContext
     // Error parsing type: , name: $__lazy_storage_$_service
     // Error parsing type: , name: $__lazy_storage_$_context

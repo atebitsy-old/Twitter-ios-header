@@ -7,27 +7,28 @@
 #import <objc/NSObject.h>
 
 @class NSURL, TFSDatabaseUIApplicationLink;
+@protocol TFSLogger, TFSScribeErrorDelegate;
 
 @interface TFSScribeConfiguration : NSObject
 {
     NSURL *_storeURL;
-    double _shelfLife;
     TFSDatabaseUIApplicationLink *_applicationLink;
-    CDUnknownBlockType _debugBlock;
-    CDUnknownBlockType _errorBlock;
+    double _shelfLife;
+    id <TFSScribeErrorDelegate> _errorDelegate;
+    id <TFSLogger> _debugLogger;
 }
 
-+ (id)configurationWithStoreURL:(id)arg1 shelfLife:(double)arg2 applicationLink:(id)arg3 errorBlock:(CDUnknownBlockType)arg4 debugBlock:(CDUnknownBlockType)arg5;
-+ (id)configurationWithStoreURL:(id)arg1 applicationLink:(id)arg2 errorBlock:(CDUnknownBlockType)arg3 debugBlock:(CDUnknownBlockType)arg4;
-+ (id)inMemoryConfigurationWithShelfLife:(double)arg1 errorBlock:(CDUnknownBlockType)arg2 debugBlock:(CDUnknownBlockType)arg3;
-+ (id)inMemoryConfigurationWithErrorBlock:(CDUnknownBlockType)arg1 debugBlock:(CDUnknownBlockType)arg2;
++ (id)configurationWithStoreURL:(id)arg1 applicationLink:(id)arg2 shelfLife:(double)arg3 errorDelegate:(id)arg4 debugLogger:(id)arg5;
++ (id)configurationWithStoreURL:(id)arg1 applicationLink:(id)arg2 errorDelegate:(id)arg3 debugLogger:(id)arg4;
++ (id)inMemoryConfigurationWithShelfLife:(double)arg1 errorDelegate:(id)arg2 debugLogger:(id)arg3;
++ (id)inMemoryConfigurationWithErrorDelegate:(id)arg1 debugLogger:(id)arg2;
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) CDUnknownBlockType errorBlock; // @synthesize errorBlock=_errorBlock;
-@property(readonly, copy, nonatomic) CDUnknownBlockType debugBlock; // @synthesize debugBlock=_debugBlock;
-@property(readonly, nonatomic) TFSDatabaseUIApplicationLink *applicationLink; // @synthesize applicationLink=_applicationLink;
+@property(readonly, nonatomic) id <TFSLogger> debugLogger; // @synthesize debugLogger=_debugLogger;
+@property(readonly, nonatomic) __weak id <TFSScribeErrorDelegate> errorDelegate; // @synthesize errorDelegate=_errorDelegate;
 @property(readonly, nonatomic) double shelfLife; // @synthesize shelfLife=_shelfLife;
+@property(readonly, nonatomic) TFSDatabaseUIApplicationLink *applicationLink; // @synthesize applicationLink=_applicationLink;
 @property(readonly, nonatomic) NSURL *storeURL; // @synthesize storeURL=_storeURL;
-- (id)initWithStoreURL:(id)arg1 shelfLife:(double)arg2 applicationLink:(id)arg3 errorBlock:(CDUnknownBlockType)arg4 debugBlock:(CDUnknownBlockType)arg5;
+- (id)initWithStoreURL:(id)arg1 applicationLink:(id)arg2 shelfLife:(double)arg3 errorDelegate:(id)arg4 debugLogger:(id)arg5;
 
 @end
 

@@ -453,6 +453,8 @@
 - (id)_t1_sharableStatusViewForAccount:(id)arg1 layoutMetrics:(id)arg2;
 - (id)snapshotAssistantForAccount:(id)arg1 title:(id)arg2 layoutMetrics:(id)arg3;
 - (void)renderSharableStatusView:(id)arg1 withTitle:(id)arg2 layoutMetrics:(id)arg3 completion:(CDUnknownBlockType)arg4;
+@property(readonly, copy, nonatomic) NSString *twitterURLForLine;
+@property(readonly, copy, nonatomic) NSString *twitterURLForTelegram;
 @property(readonly, copy, nonatomic) NSString *twitterURLForGmail;
 @property(readonly, copy, nonatomic) NSString *twitterURLForWhatsApp;
 @property(readonly, copy, nonatomic) NSString *twitterURLForFacebookMessenger;

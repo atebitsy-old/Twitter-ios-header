@@ -56,7 +56,6 @@
         unsigned int didScribeReply:1;
         unsigned int shouldForceScrollToBottomWhenFinishedUpdating:1;
         unsigned int shouldRenderUnifiedCard:1;
-        unsigned int shouldSuppressText:1;
         unsigned int shouldSuppressSensitiveContent:1;
         unsigned int focalTweetWasDeleted:1;
         unsigned int shouldScrollToInsertedTweet:1;
@@ -308,6 +307,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (id)indexPathForItem:(id)arg1;
 - (_Bool)_t1_touchOccurredOnInteractiveElement:(id)arg1;
+- (void)_t1_updateVisibleConnectorLines;
 - (void)didSelectItem:(id)arg1 atIndexPath:(id)arg2;
 - (void)_t1_didLongPressStatusCell:(id)arg1;
 - (void)_t1_didTapStatusCell:(id)arg1;

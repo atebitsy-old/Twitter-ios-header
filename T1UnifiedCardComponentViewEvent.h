@@ -31,7 +31,7 @@
 - (id)eventMetadataWithDestinationPresenterResult:(id)arg1;
 - (id)promotedLoggingParametersWithDestinationPresenterResult:(id)arg1;
 - (id)engagementDetailsDictionaryWithDestinationPresenterResult:(id)arg1;
-- (id)ucEventDictionary;
+@property(readonly, nonatomic) NSDictionary *ucEventDictionary;
 @property(readonly, nonatomic) NSString *eventTypeString;
 - (id)initWithComponentView:(id)arg1 eventType:(unsigned long long)arg2 destination:(id)arg3;
 - (id)initWithComponentView:(id)arg1 eventType:(unsigned long long)arg2;

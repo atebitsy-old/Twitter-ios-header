@@ -6,17 +6,17 @@
 
 #import <objc/NSObject.h>
 
-@class TFNButton;
+@class TFNLegacyButton;
 
 @interface _TFNAnimationState : NSObject
 {
-    TFNButton *_button;
+    TFNLegacyButton *_button;
     CDUnknownBlockType _completionBlock;
 }
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
-@property(nonatomic) __weak TFNButton *button; // @synthesize button=_button;
+@property(nonatomic) __weak TFNLegacyButton *button; // @synthesize button=_button;
 
 @end
 

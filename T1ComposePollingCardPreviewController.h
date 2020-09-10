@@ -9,7 +9,7 @@
 #import <T1Twitter/T1DurationPickerViewDelegate-Protocol.h>
 #import <T1Twitter/UITextFieldDelegate-Protocol.h>
 
-@class NSMutableArray, NSMutableSet, NSString, T1AccordionButton, T1ComposePollingCardPreviewView, TFNButton, TFNPaddedButton, TFNTwitterAccount, TFNTwitterCompositionPollingCard, UITextField;
+@class NSMutableArray, NSMutableSet, NSString, T1AccordionButton, T1ComposePollingCardPreviewView, TFNLegacyButton, TFNPaddedButton, TFNTwitterAccount, TFNTwitterCompositionPollingCard, UITextField;
 @protocol T1ComposePollingCardPreviewControllerDelegate;
 
 @interface T1ComposePollingCardPreviewController : TFNViewController <UITextFieldDelegate, T1DurationPickerViewDelegate>
@@ -18,19 +18,19 @@
     TFNTwitterCompositionPollingCard *_pollingCard;
     TFNTwitterAccount *_account;
     TFNPaddedButton *_removeButton;
-    TFNButton *_addChoiceButton;
+    TFNLegacyButton *_addChoiceButton;
     T1AccordionButton *_durationButton;
     NSMutableArray *_textFields;
     NSMutableSet *_textFieldFocusMap;
-    TFNButton *_altTextButton;
+    TFNLegacyButton *_altTextButton;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) __weak TFNButton *altTextButton; // @synthesize altTextButton=_altTextButton;
+@property(nonatomic) __weak TFNLegacyButton *altTextButton; // @synthesize altTextButton=_altTextButton;
 @property(retain, nonatomic) NSMutableSet *textFieldFocusMap; // @synthesize textFieldFocusMap=_textFieldFocusMap;
 @property(retain, nonatomic) NSMutableArray *textFields; // @synthesize textFields=_textFields;
 @property(nonatomic) __weak T1AccordionButton *durationButton; // @synthesize durationButton=_durationButton;
-@property(nonatomic) __weak TFNButton *addChoiceButton; // @synthesize addChoiceButton=_addChoiceButton;
+@property(nonatomic) __weak TFNLegacyButton *addChoiceButton; // @synthesize addChoiceButton=_addChoiceButton;
 @property(nonatomic) __weak TFNPaddedButton *removeButton; // @synthesize removeButton=_removeButton;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(retain, nonatomic) TFNTwitterCompositionPollingCard *pollingCard; // @synthesize pollingCard=_pollingCard;

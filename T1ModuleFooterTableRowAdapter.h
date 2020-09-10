@@ -7,17 +7,14 @@
 #import <TFNUI/TFNItemsTableRowAdapter.h>
 
 @class TFNTwitterAccount;
-@protocol URTModuleHeaderDataViewAdapterActionIntercepting;
 
 @interface T1ModuleFooterTableRowAdapter : TFNItemsTableRowAdapter
 {
-    id <URTModuleHeaderDataViewAdapterActionIntercepting> _actionInterceptingDelegate;
     TFNTwitterAccount *_account;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
-@property(nonatomic) __weak id <URTModuleHeaderDataViewAdapterActionIntercepting> actionInterceptingDelegate; // @synthesize actionInterceptingDelegate=_actionInterceptingDelegate;
 - (CDUnknownBlockType)_t1_openURLActionBlockForFooter:(id)arg1 controller:(id)arg2 scribeSection:(id)arg3 scribeComponent:(id)arg4;
 - (void)_t1_didSelectFooter:(id)arg1;
 - (void)dataViewController:(id)arg1 commitPreviewingViewController:(id)arg2 forItem:(id)arg3 withOptions:(id)arg4 atIndexPath:(id)arg5;

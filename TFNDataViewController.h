@@ -176,9 +176,6 @@
 - (void)setNeedsUpdate:(_Bool)arg1;
 - (id)scrollPositionIdentifierForElementAtIndexPath:(id)arg1 inView:(id)arg2;
 - (id)indexPathForElementWithScrollPositionIdentifier:(id)arg1 inView:(id)arg2;
-- (void)_tfn_viewSafeAreaInsetsDidChange;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (id)calculatedLayoutMetrics;
 - (double)viewPercentageInVisibleCellsRect:(id)arg1;
@@ -231,6 +228,8 @@
 - (void)previewingContext:(id)arg1 commitViewController:(id)arg2;
 - (id)previewingContext:(id)arg1 viewControllerForLocation:(struct CGPoint)arg2;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
+- (void)_tfn_viewSafeAreaInsetsDidChange;
+- (void)viewSafeAreaInsetsDidChange;
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)setEditing:(_Bool)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;

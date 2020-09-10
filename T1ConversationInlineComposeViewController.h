@@ -10,7 +10,7 @@
 #import <T1Twitter/T1JumpBackToHomeTimelineBehavior-Protocol.h>
 #import <T1Twitter/TFNModalSheetViewControllerDelegate-Protocol.h>
 
-@class NSString, T1AutocompleteViewController, T1ConversationInlineComposeView, TFNButton, TFSMainThreadRunLoopDeferredTask, UITextView;
+@class NSString, T1AutocompleteViewController, T1ConversationInlineComposeView, TFNLegacyButton, TFSMainThreadRunLoopDeferredTask, UITextView;
 @protocol T1ConversationInlineComposeViewControllerDelgate;
 
 @interface T1ConversationInlineComposeViewController : T1ComposeViewController <T1ConversationInlineComposeViewDelgate, T1JumpBackToHomeTimelineBehavior, TFNModalSheetViewControllerDelegate>
@@ -21,7 +21,7 @@
     _Bool _needsToStartEditing;
     _Bool _needsToTriggerReplySocialContextTooltip;
     _Bool _shouldIgnoreButtonHiddenUpdates;
-    TFNButton *_sendReplyButton;
+    TFNLegacyButton *_sendReplyButton;
     T1AutocompleteViewController *_autocompleteViewController;
     T1ConversationInlineComposeView *_composeView;
     unsigned long long _displayType;
@@ -110,7 +110,7 @@
 - (void)_t1_sendReply;
 - (void)_t1_didTapReply:(id)arg1;
 - (void)_t1_updateComposeButtonBarButtons;
-@property(readonly, nonatomic) TFNButton *sendReplyButton; // @synthesize sendReplyButton=_sendReplyButton;
+@property(readonly, nonatomic) TFNLegacyButton *sendReplyButton; // @synthesize sendReplyButton=_sendReplyButton;
 - (id)sendButton;
 @property(readonly, nonatomic) UITextView *textView;
 - (id)richTextView;

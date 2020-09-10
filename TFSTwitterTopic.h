@@ -13,6 +13,7 @@
     // Error parsing type: , name: twitterTopic
 }
 
++ (id)observableForIsFollowingTopicID:(id)arg1 modelContext:(id)arg2;
 - (void).cxx_destruct;
 - (id)init;
 - (id)topicWithUpdatedFollowedByCurrentAccount:(_Bool)arg1;

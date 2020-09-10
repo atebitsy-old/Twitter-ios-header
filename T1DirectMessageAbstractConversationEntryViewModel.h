@@ -43,11 +43,13 @@
 @property(nonatomic) _Bool impressionScribed; // @synthesize impressionScribed=_impressionScribed;
 @property(readonly, nonatomic) T1DirectMessageConversationDisplayState *displayState; // @synthesize displayState=_displayState;
 @property(copy, nonatomic) NSString *accessibilityIdentifier; // @synthesize accessibilityIdentifier=_accessibilityIdentifier;
+- (id)viewModelBySettingShowCurrentlyPlayingAudio:(_Bool)arg1;
 - (id)viewModelBySettingShowDetails:(_Bool)arg1;
 - (id)viewModelBySettingFirstEntryInGroup:(_Bool)arg1 lastEntryInGroup:(_Bool)arg2;
 - (_Bool)isEqualToEntryViewModel:(id)arg1;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
+@property(readonly, nonatomic) _Bool showCurrentlyPlayingAudio;
 @property(readonly, nonatomic) _Bool showDetails;
 @property(readonly, nonatomic, getter=isFirstEntryInGroup) _Bool firstEntryInGroup;
 @property(readonly, nonatomic, getter=isLastEntryInGroup) _Bool lastEntryInGroup;

@@ -54,11 +54,12 @@
 - (void)tweetDraftsViewController:(id)arg1 didSelectComposition:(id)arg2;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (id)navigationControllerTransitionForOperation:(long long)arg1 fromViewController:(id)arg2 toViewController:(id)arg3;
+- (void)popHistoryStackForResizableHeaderView:(id)arg1 targetIndex:(unsigned long long)arg2;
+- (id)backMenuNavigationHistoryForResizableHeaderView:(id)arg1;
 - (void)resizableHeaderView:(id)arg1 didTapMoreActionsButton:(id)arg2;
 - (void)resizableHeaderView:(id)arg1 didTapLikeButton:(id)arg2;
 - (void)resizableHeaderViewDidUpdateHeight:(id)arg1;
 - (void)resizableHeaderView:(id)arg1 didRequestPullToLoadTopFromControl:(id)arg2;
-- (void)resizableHeaderView:(id)arg1 didLongPressBackButton:(id)arg2;
 - (void)resizableHeaderViewDidTapBackButton:(id)arg1;
 - (void)resizableHeaderViewDidTapBannerImage:(id)arg1;
 - (void)resizableHeaderViewDidLongPressComposeButton:(id)arg1;

@@ -15,13 +15,11 @@
     // Error parsing type: , name: inlineMediaView
     // Error parsing type: , name: mediaPreviewContainer
     // Error parsing type: , name: altTextBadge
-    // Error parsing type: , name: mediaBubbleDimmingView
     // Error parsing type: , name: mediaBubbleView
     // Error parsing type: , name: mediaPreviewHeightConstraint
 }
 
 - (void).cxx_destruct;
-- (void)mediaUploadProgress:(id)arg1;
 @property(nonatomic, readonly) T1InlineMediaView *inlineMediaView; // @synthesize inlineMediaView;
 - (void)updateConstraints;
 @property(nonatomic, retain) T1DirectMessageAbstractConversationEntryViewModel *entryViewModel;

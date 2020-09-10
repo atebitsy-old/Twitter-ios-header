@@ -8,13 +8,14 @@
 
 #import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 
-@class NSString, T1LiveEventCarouselChromeView, T1LiveEventCarouselEntryCellViewModel, T1LiveEventRoundedPaddedView, TIPImagePipeline, UIImageView, UILabel, UIView;
+@class NSString, T1LiveEventCarouselChromeView, T1LiveEventCarouselEntryCellViewModel, T1LiveEventRoundedPaddedView, T1UserBadger, TIPImagePipeline, UIImageView, UILabel, UIView;
 
 @interface T1LiveEventCarouselCollectionViewCell : TFNCollectionViewCell <T1ImageViewFetchHelperDelegate>
 {
     _Bool _nowSelected;
     T1LiveEventCarouselEntryCellViewModel *_entryCellViewModel;
     TIPImagePipeline *_imagePipeline;
+    T1UserBadger *_userBadger;
     UIImageView *_entryImageView;
     UIView *_containerView;
     UILabel *_displayNameLabel;
@@ -37,6 +38,7 @@
 @property(readonly, nonatomic) UILabel *displayNameLabel; // @synthesize displayNameLabel=_displayNameLabel;
 @property(readonly, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, nonatomic) UIImageView *entryImageView; // @synthesize entryImageView=_entryImageView;
+@property(retain, nonatomic) T1UserBadger *userBadger; // @synthesize userBadger=_userBadger;
 @property(retain, nonatomic) TIPImagePipeline *imagePipeline; // @synthesize imagePipeline=_imagePipeline;
 @property(nonatomic, getter=isNowSelected) _Bool nowSelected; // @synthesize nowSelected=_nowSelected;
 @property(retain, nonatomic) T1LiveEventCarouselEntryCellViewModel *entryCellViewModel; // @synthesize entryCellViewModel=_entryCellViewModel;

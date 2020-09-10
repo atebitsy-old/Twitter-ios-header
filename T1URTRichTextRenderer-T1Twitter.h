@@ -7,7 +7,6 @@
 #import <T1Twitter/T1URTRichTextRenderer.h>
 
 @interface T1URTRichTextRenderer (T1Twitter)
-+ (id)tombstoneActionRenderer;
-+ (id)tombstoneTextRendererWithParagraphSpacing:(double)arg1;
++ (id)conversationControlEducationRendererWithParagraphSpacing:(double)arg1;
 @end
 

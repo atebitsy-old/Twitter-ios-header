@@ -24,7 +24,7 @@
     T1ProfileAvatarImageView *_avatarImageView;
     UILabel *_fullNameLabel;
     UILabel *_usernameLabel;
-    UIImageView *_verifiedBadgeImageView;
+    UIImageView *_badgeImageView;
     T1FollowControl *_followControl;
     TFNAttributedTextView *_bioView;
     TFNTappableHighlightView *_bannerImageHighlightView;
@@ -45,7 +45,7 @@
 @property(retain, nonatomic) TFNTappableHighlightView *bannerImageHighlightView; // @synthesize bannerImageHighlightView=_bannerImageHighlightView;
 @property(retain, nonatomic) TFNAttributedTextView *bioView; // @synthesize bioView=_bioView;
 @property(retain, nonatomic) T1FollowControl *followControl; // @synthesize followControl=_followControl;
-@property(retain, nonatomic) UIImageView *verifiedBadgeImageView; // @synthesize verifiedBadgeImageView=_verifiedBadgeImageView;
+@property(retain, nonatomic) UIImageView *badgeImageView; // @synthesize badgeImageView=_badgeImageView;
 @property(retain, nonatomic) UILabel *usernameLabel; // @synthesize usernameLabel=_usernameLabel;
 @property(retain, nonatomic) UILabel *fullNameLabel; // @synthesize fullNameLabel=_fullNameLabel;
 @property(retain, nonatomic) T1ProfileAvatarImageView *avatarImageView; // @synthesize avatarImageView=_avatarImageView;
@@ -64,6 +64,7 @@
 - (void)_t1_didTapAvatar:(id)arg1;
 - (void)_t1_didTapBannerImage:(id)arg1;
 - (void)_t1_didTapHighlightView:(id)arg1;
+- (void)_t1_updateBadgeImage;
 - (void)_t1_updateFollowControl;
 - (void)_t1_updateText;
 - (void)_t1_updateSubviews;

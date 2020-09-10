@@ -15,6 +15,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: account
     // Error parsing type: , name: $__lazy_storage_$_spheresFeatureSwitches
     // Error parsing type: , name: $__lazy_storage_$_stringsProvider
+    // Error parsing type: , name: $__lazy_storage_$_userBadger
 }
 
 - (void).cxx_destruct;

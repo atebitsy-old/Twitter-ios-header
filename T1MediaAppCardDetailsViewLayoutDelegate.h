@@ -18,7 +18,7 @@
 - (struct CGRect)_layoutVerticallyWithLayoutState:(id)arg1 viewModel:(id)arg2 contentWidth:(double)arg3 atPoint:(struct CGPoint)arg4;
 - (struct CGRect)_layoutHorizontallyWithLayoutState:(id)arg1 viewModel:(id)arg2 contentWidth:(double)arg3 atPoint:(struct CGPoint)arg4;
 - (struct CGSize)_sizeOfCTAButtonForViewModel:(id)arg1;
-- (unsigned long long)tfnButtonSizeForViewModel:(id)arg1;
+- (unsigned long long)TFNLegacyButtonSizeForViewModel:(id)arg1;
 - (id)subtitleFontForUnifiedCards:(_Bool)arg1;
 - (id)titleTextColorForUnifiedCards:(_Bool)arg1;
 - (id)titleFont;

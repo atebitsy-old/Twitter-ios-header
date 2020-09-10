@@ -9,14 +9,10 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter44DirectMessageConversationFooterContainerView : UICollectionReusableView
 {
-    // Error parsing type: , name: isLoadingIndicatorEnabled
-    // Error parsing type: , name: isRefreshing
     // Error parsing type: , name: typingIndicatorView
-    // Error parsing type: , name: loadingIndicator
 }
 
 - (void).cxx_destruct;
-- (void)conversationDidRefresh;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

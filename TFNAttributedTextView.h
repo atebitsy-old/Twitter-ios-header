@@ -17,7 +17,6 @@
 {
     _Bool _updateForFontSizeChanges;
     _Bool _updateForHashflagChanges;
-    _Bool _hasExternalAccessibilityElements;
     CDUnknownBlockType _updateTextAndRangesBlock;
     TFNAttributedTextRenderer *_textRenderer;
     NSArray *_activeRanges;
@@ -56,8 +55,7 @@
 - (_Bool)private_hasAccessibleFullText;
 - (_Bool)private_hasAccessibleSubranges;
 - (void)_updateAccessibilityProxy;
-- (void)_updateAccessibilityElements;
-- (void)setAccessibilityElements:(id)arg1;
+- (id)accessibilityElements;
 - (unsigned long long)accessibilityTraits;
 - (void)setIsAccessibilityElement:(_Bool)arg1;
 - (id)accessibilityLabel;

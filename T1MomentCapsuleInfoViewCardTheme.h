@@ -22,7 +22,6 @@
 - (id)thumbnailPlaceholderColor;
 - (id)liveBadgeColor;
 - (id)categoryIconImagePlaceholderColor;
-- (id)authorVerifiedBadgeColor;
 - (id)authorFullNameColor;
 - (id)categoryWithIconColor;
 - (id)categoryColor;

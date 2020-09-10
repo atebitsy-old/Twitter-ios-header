@@ -16,6 +16,7 @@
 @interface T1UnifiedCardCarouselViewController : TFNItemsDataViewController <TAVUIAutoplayable, T1UnifiedCardVideoCarouselObserver, T1UnifiedCardSwipeableCollectionViewCellEventDelegate>
 {
     _Bool _playbackDesired;
+    _Bool _isActiveAutoplayable;
     double _mediaWidth;
     TFNTwitterAccount *_account;
     NSNumber *_mediaLeadingInset;
@@ -33,6 +34,7 @@
 + (Class)collectionViewClass;
 + (id)indexCache;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isActiveAutoplayable; // @synthesize isActiveAutoplayable=_isActiveAutoplayable;
 @property(retain, nonatomic) NSArray *mediaIDs; // @synthesize mediaIDs=_mediaIDs;
 @property(nonatomic) __weak id <T1UnifiedCardCarouselViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) T1AdFormatsFeatures *featureSwitches; // @synthesize featureSwitches=_featureSwitches;
@@ -47,11 +49,12 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(nonatomic) double mediaWidth; // @synthesize mediaWidth=_mediaWidth;
 - (struct CGRect)tav_boundsForClippingDescendantsOfScrollView:(id)arg1;
-- (void)_t1_animateAdvanceToNextCellWithPageIndex:(unsigned long long)arg1 currentPageIndex:(unsigned long long)arg2;
+- (void)_t1_advanceToCellWithPageIndex:(long long)arg1;
 - (void)videoDidPlayToEndWithCurrentPlaybackState:(id)arg1;
 - (id)didHapticTouchMediaOnCell:(id)arg1;
 - (void)didLongPressMediaOnCell:(id)arg1;
 - (void)didTapMediaOnCell:(id)arg1;
+- (void)_t1_handleAccessibilityVoiceOverStatusChanged:(id)arg1;
 @property(readonly, nonatomic) UIView *autoplayableView;
 - (void)willResignAsActiveAutoplayableWithManager:(id)arg1;
 - (void)didBecomeActiveAutoplayableWithManager:(id)arg1;
@@ -71,9 +74,11 @@
 - (void)_t1_setupCollectionView;
 - (id)_t1_layoutForCurrentBoundsWithLeadingInset:(double)arg1 trailingInset:(double)arg2;
 - (void)_t1_updateCollectionViewLayout;
+- (_Bool)accessibilityScroll:(long long)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
+- (void)dealloc;
 - (id)initWithSwipeableComponent:(id)arg1 imagePipeline:(id)arg2 account:(id)arg3 scribeContext:(id)arg4 delegate:(id)arg5 mediaLeadingInset:(id)arg6;
 - (id)initWithCollectionViewLayout:(id)arg1;
 - (id)init;

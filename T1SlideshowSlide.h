@@ -9,7 +9,7 @@
 #import <T1Twitter/T1ImageDisplayViewDownloadDelegate-Protocol.h>
 #import <T1Twitter/TAVPlaybackObserver-Protocol.h>
 
-@class NSString, T1AnimatedGIFImageView, T1ImageDisplayView, T1PlayerSessionProducer, T1SlideshowSeekView, T1SlideshowSlideViewModel, TAVPlaybackState, TAVPlayerView, TFNButton, UIActivityIndicatorView, UIView;
+@class NSString, T1AnimatedGIFImageView, T1ImageDisplayView, T1PlayerSessionProducer, T1SlideshowSeekView, T1SlideshowSlideViewModel, TAVPlaybackState, TAVPlayerView, TFNLegacyButton, UIActivityIndicatorView, UIView;
 @protocol T1SlideshowSlideDelegate;
 
 @interface T1SlideshowSlide : NSObject <TAVPlaybackObserver, T1ImageDisplayViewDownloadDelegate>
@@ -24,11 +24,11 @@
     TAVPlaybackState *_previousPlaybackState;
     UIActivityIndicatorView *_spinner;
     id <T1SlideshowSlideDelegate> _delegate;
-    TFNButton *_watchAgainButton;
+    TFNLegacyButton *_watchAgainButton;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) TFNButton *watchAgainButton; // @synthesize watchAgainButton=_watchAgainButton;
+@property(readonly, nonatomic) TFNLegacyButton *watchAgainButton; // @synthesize watchAgainButton=_watchAgainButton;
 @property(nonatomic) __weak id <T1SlideshowSlideDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) UIActivityIndicatorView *spinner; // @synthesize spinner=_spinner;
 @property(retain, nonatomic) TAVPlaybackState *previousPlaybackState; // @synthesize previousPlaybackState=_previousPlaybackState;

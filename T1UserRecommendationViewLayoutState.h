@@ -18,7 +18,7 @@
     struct CGRect _avatarFrame;
     struct CGRect _fullNameFrame;
     struct CGRect _usernameFrame;
-    struct CGRect _verifiedBadgeFrame;
+    struct CGRect _badgeFrame;
     struct CGRect _followControlFrame;
     struct CGRect _bioFrame;
 }
@@ -26,7 +26,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) struct CGRect bioFrame; // @synthesize bioFrame=_bioFrame;
 @property(nonatomic) struct CGRect followControlFrame; // @synthesize followControlFrame=_followControlFrame;
-@property(nonatomic) struct CGRect verifiedBadgeFrame; // @synthesize verifiedBadgeFrame=_verifiedBadgeFrame;
+@property(nonatomic) struct CGRect badgeFrame; // @synthesize badgeFrame=_badgeFrame;
 @property(nonatomic) struct CGRect usernameFrame; // @synthesize usernameFrame=_usernameFrame;
 @property(nonatomic) struct CGRect fullNameFrame; // @synthesize fullNameFrame=_fullNameFrame;
 @property(nonatomic) struct CGRect avatarFrame; // @synthesize avatarFrame=_avatarFrame;

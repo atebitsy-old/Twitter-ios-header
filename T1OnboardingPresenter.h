@@ -52,7 +52,8 @@
 - (void)private_presentingViewControllerWillShow:(id)arg1;
 - (void)private_dismissModalOnboardingPresenter;
 - (void)private_dismissPushOnboardingPresenter;
-- (void)private_updateViewController:(id)arg1 leftBarButtonItemForPush:(_Bool)arg2 presentingViewController:(id)arg3;
+- (id)private_cancelItemForViewController:(id)arg1 presentedByViewController:(id)arg2 push:(_Bool)arg3;
+- (void)private_updateViewController:(id)arg1 leftBarButtonItemForPush:(_Bool)arg2 showCancelButton:(_Bool)arg3 presentingViewController:(id)arg4;
 - (id)animationControllerForPresentedController:(id)arg1 presentingController:(id)arg2 sourceController:(id)arg3;
 - (id)animationControllerForDismissedController:(id)arg1;
 @property(readonly, nonatomic) _Bool shouldAnimateAccountChangeTransitions;
@@ -69,7 +70,7 @@
 - (void)handleWebURL:(id)arg1 withTitle:(id)arg2 forAccount:(id)arg3 chromeless:(_Bool)arg4;
 - (id)private_currentViewController;
 - (void)presentViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)pushViewController:(id)arg1 withPresentationType:(long long)arg2 hideBackButton:(_Bool)arg3 backNavigationLinkBlock:(CDUnknownBlockType)arg4 completion:(CDUnknownBlockType)arg5;
+- (id)pushViewController:(id)arg1 withPresentationType:(long long)arg2 hideBackButton:(_Bool)arg3 showCancelButton:(_Bool)arg4 backNavigationLinkBlock:(CDUnknownBlockType)arg5 completion:(CDUnknownBlockType)arg6;
 - (id)initInternalCancellable:(_Bool)arg1;
 - (id)initWithPresentingViewController:(id)arg1 cancellable:(_Bool)arg2;
 - (id)initWithPresentingViewController:(id)arg1;

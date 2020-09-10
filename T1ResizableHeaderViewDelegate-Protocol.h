@@ -6,7 +6,7 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSString, T1ResizableHeaderView, TFNButton, UIButton, UIControl, UIGestureRecognizer;
+@class NSArray, NSString, T1ResizableHeaderView, TFNLegacyButton, UIButton, UIControl;
 @protocol TFNPullToLoadTopControl;
 
 @protocol T1ResizableHeaderViewDelegate <NSObject>
@@ -19,11 +19,12 @@
 - (void)resizableHeaderViewDidUpdateActionButtons:(T1ResizableHeaderView *)arg1;
 
 @optional
+- (void)popHistoryStackForResizableHeaderView:(T1ResizableHeaderView *)arg1 targetIndex:(unsigned long long)arg2;
+- (NSArray *)backMenuNavigationHistoryForResizableHeaderView:(T1ResizableHeaderView *)arg1;
 - (NSString *)bannerAccessibilityLabelForResizableHeaderView:(T1ResizableHeaderView *)arg1;
 - (NSString *)bannerAccessibilityHintForResizableHeaderView:(T1ResizableHeaderView *)arg1;
 - (void)bannerAccessibilityElementWillUpdateForResizableHeaderView:(T1ResizableHeaderView *)arg1;
-- (void)resizableHeaderView:(T1ResizableHeaderView *)arg1 didLongPressBackButton:(UIGestureRecognizer *)arg2;
-- (void)resizableHeaderView:(T1ResizableHeaderView *)arg1 didTapLikeButton:(TFNButton *)arg2;
+- (void)resizableHeaderView:(T1ResizableHeaderView *)arg1 didTapLikeButton:(TFNLegacyButton *)arg2;
 - (void)resizableHeaderView:(T1ResizableHeaderView *)arg1 didTapMoreActionsButton:(UIButton *)arg2;
 - (void)resizableHeaderView:(T1ResizableHeaderView *)arg1 didTapShareHeaderButton:(UIButton *)arg2;
 - (void)dismissResizableHeaderView:(T1ResizableHeaderView *)arg1;

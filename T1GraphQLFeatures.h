@@ -21,6 +21,7 @@
 @property(readonly, nonatomic, getter=isUrtConversationTimelineEnabled) _Bool urtConversationTimelineEnabled;
 @property(readonly, nonatomic, getter=isEmailNotificationSettingsMutationEnabled) _Bool emailNotificationSettingsMutationEnabled;
 @property(readonly, nonatomic, getter=isComposeReplyUsersLookupEnabled) _Bool composeReplyUsersLookupEnabled;
+@property(readonly, nonatomic, getter=isBookmarkTimelineEnabled) _Bool bookmarkTimelineEnabled;
 - (id)init;
 - (id)initWithFeatureSwitches:(id)arg1;
 

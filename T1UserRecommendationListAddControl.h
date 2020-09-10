@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <TFNUI/TFNButton.h>
+#import <TFNUI/TFNLegacyButton.h>
 
 #import <T1Twitter/T1UserRecommendationListCheckableActionControl-Protocol.h>
 
 @class NSString, TFNTwitterAccount, TFNTwitterUserDataSource, TFSTwitterScribeContext;
 @protocol TFNTwitterUserContext;
 
-@interface T1UserRecommendationListAddControl : TFNButton <T1UserRecommendationListCheckableActionControl>
+@interface T1UserRecommendationListAddControl : TFNLegacyButton <T1UserRecommendationListCheckableActionControl>
 {
     CDUnknownBlockType _updateBlock;
     _Bool _checked;

@@ -10,7 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter33FleetsStoriesThreadViewController : TFNViewController
 {
     // Error parsing type: , name: _hideStatusBar
-    // Error parsing type: , name: delegate
+    // Error parsing type: , name: dismissEndRect
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: account
     // Error parsing type: , name: $__lazy_storage_$_transitionHandler
@@ -39,6 +39,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: panning
     // Error parsing type: , name: progressReset
     // Error parsing type: , name: forceComposerStart
+    // Error parsing type: , name: $__lazy_storage_$_pool
     // Error parsing type: , name: $__lazy_storage_$_pageViewsChanges
     // Error parsing type: , name: $__lazy_storage_$_pageViews
     // Error parsing type: , name: $__lazy_storage_$_pageViewsContainer
@@ -56,6 +57,7 @@ __attribute__((visibility("hidden")))
 - (id)scribePage;
 - (void)viewSafeAreaInsetsDidChange;
 - (void)viewDidLayoutSubviews;
+- (void)dealloc;
 - (void)applicationDidBecomeActive:(id)arg1;
 - (void)applicationWillResignActive:(id)arg1;
 - (void)viewControllerDidPresentAnimated:(_Bool)arg1;

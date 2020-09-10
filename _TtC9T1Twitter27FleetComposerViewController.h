@@ -26,6 +26,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_postFleetButton
     // Error parsing type: , name: $__lazy_storage_$_assetLibraryViewController
     // Error parsing type: , name: $__lazy_storage_$_assetLibraryNavigationController
+    // Error parsing type: , name: $__lazy_storage_$_isFullscreen
     // Error parsing type: , name: $__lazy_storage_$_cameraInputView
     // Error parsing type: , name: $__lazy_storage_$_textBackgroundView
     // Error parsing type: , name: $__lazy_storage_$_mediaPreviewInputView

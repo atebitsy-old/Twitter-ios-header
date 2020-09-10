@@ -12,7 +12,7 @@
 #import <TFNUI/UIGestureRecognizerDelegate-Protocol.h>
 #import <TFNUI/UINavigationControllerDelegate-Protocol.h>
 
-@class NSString, TFNFloatingToolbarController, TFNNavigationBar, TFNNavigationControllerTransitionAnimator, UILongPressGestureRecognizer, UITapGestureRecognizer, UIViewController;
+@class NSString, TFNFloatingToolbarController, TFNNavigationBar, TFNNavigationControllerTransitionAnimator, UITapGestureRecognizer, UIViewController;
 @protocol TFNNavigationControllerTransitionProvider, UIViewControllerAnimatedTransitioning;
 
 @interface TFNNavigationController : UINavigationController <TFNKeyboardShortcutDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, TFNLayoutMetricsEnvironment, TFNViewControllerVisibility>
@@ -22,11 +22,9 @@
     id <TFNNavigationControllerTransitionProvider> _currentTransitionAnimatorProvider;
     long long _currentTransitionOperation;
     UITapGestureRecognizer *_titleTapGestureRecognizer;
-    UILongPressGestureRecognizer *_backButtonLongPressGestureRecognizer;
     TFNFloatingToolbarController *_floatingToolbarController;
     long long _previousToolbarVisibility;
     struct {
-        unsigned int inHideToolbar:1;
         unsigned int popping:1;
         unsigned int pushing:1;
         unsigned int settingViewControllers:1;
@@ -40,10 +38,6 @@
     _Bool _supportsInteractivePops;
     _Bool _logoTitleViewShown;
     _Bool _contentScrollViewWasScrolledToTop;
-    double _additionalTopFixedLayoutGuideLength;
-    double _additionalTopVisibleLayoutGuideLength;
-    double _additionalBottomFixedLayoutGuideLength;
-    double _additionalBottomVisibleLayoutGuideLength;
     CDUnknownBlockType _popToRootCompletionBlock;
     UIViewController *_outgoingViewController;
     UIViewController *_forcedShowCallbacksOnViewController;
@@ -62,10 +56,6 @@
 @property(nonatomic) _Bool supportsInteractivePops; // @synthesize supportsInteractivePops=_supportsInteractivePops;
 @property(nonatomic) _Bool showDismissButtonWhenRightBarButtonIsEmpty; // @synthesize showDismissButtonWhenRightBarButtonIsEmpty=_showDismissButtonWhenRightBarButtonIsEmpty;
 @property(nonatomic, getter=isCollapsingNavigationBarEnabled) _Bool collapsingNavigationBarEnabled; // @synthesize collapsingNavigationBarEnabled=_collapsingNavigationBarEnabled;
-@property(readonly, nonatomic) double additionalBottomVisibleLayoutGuideLength; // @synthesize additionalBottomVisibleLayoutGuideLength=_additionalBottomVisibleLayoutGuideLength;
-@property(readonly, nonatomic) double additionalBottomFixedLayoutGuideLength; // @synthesize additionalBottomFixedLayoutGuideLength=_additionalBottomFixedLayoutGuideLength;
-@property(readonly, nonatomic) double additionalTopVisibleLayoutGuideLength; // @synthesize additionalTopVisibleLayoutGuideLength=_additionalTopVisibleLayoutGuideLength;
-@property(readonly, nonatomic) double additionalTopFixedLayoutGuideLength; // @synthesize additionalTopFixedLayoutGuideLength=_additionalTopFixedLayoutGuideLength;
 @property(nonatomic) _Bool forceTopAttachedNavigationBarPosition; // @synthesize forceTopAttachedNavigationBarPosition=_forceTopAttachedNavigationBarPosition;
 @property(readonly, nonatomic, getter=isVisible) _Bool visible; // @synthesize visible=_visible;
 - (id)_tfn_closeBarButtonItem;
@@ -83,18 +73,6 @@
 - (void)willAnimateRotationToInterfaceOrientation:(long long)arg1 duration:(double)arg2;
 @property(readonly, nonatomic) _Bool isTransitioning;
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
-- (double)_tfn_bottomVisibleLayoutGuideLengthForViewController:(id)arg1;
-- (double)_tfn_topVisibleLayoutGuideLengthForViewController:(id)arg1;
-- (double)_tfn_bottomFixedLayoutGuideLengthForViewController:(id)arg1;
-- (double)_tfn_bottomLayoutGuideLengthForViewController:(id)arg1 withAdditionalLength:(double)arg2;
-- (double)_tfn_topFixedLayoutGuideLengthForViewController:(id)arg1;
-- (double)_tfn_topLayoutGuideLengthForViewController:(id)arg1 withAdditionalLength:(double)arg2;
-- (void)_tfn_updateFixedLayoutGuideLengths:(_Bool)arg1 visibleLayoutGuideLengths:(_Bool)arg2;
-- (void)sendLayoutGuidesDidChange:(long long)arg1;
-- (void)_tfn_updateRelativeVisibleSafeAreaInset;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 @property(readonly, nonatomic) double navigationBarExpandedHeight;
 @property(readonly, nonatomic) double navigationBarCollapsedHeight;
 - (double)_tfn_navigationBarInitialOriginY;
@@ -137,9 +115,10 @@
 - (void)setTfn_sendContentScrollEventsToParentViewController:(_Bool)arg1;
 - (id)tfn_contentScrollView;
 - (void)_tfn_applicationWillEnterForeground:(id)arg1;
-- (void)_tfn_addInvisibleBackButtonToViewController:(id)arg1;
 - (_Bool)accessibilityPerformEscape;
 - (void)didMoveToParentViewController:(id)arg1;
+- (void)_tfn_updateRelativeVisibleSafeAreaInset;
+- (void)viewSafeAreaInsetsDidChange;
 - (long long)preferredInterfaceOrientationForPresentation;
 - (unsigned long long)supportedInterfaceOrientations;
 - (id)_tfn_viewControllerForStatusBarProperties;
@@ -156,7 +135,6 @@
 - (id)navigationController:(id)arg1 animationControllerForOperation:(long long)arg2 fromViewController:(id)arg3 toViewController:(id)arg4;
 - (void)navigationController:(id)arg1 didShowViewController:(id)arg2 animated:(_Bool)arg3;
 - (void)navigationController:(id)arg1 willShowViewController:(id)arg2 animated:(_Bool)arg3;
-- (void)setToolbarHidden:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)dismissViewControllerAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)_tfn_viewControllerOrChildPassingTest:(CDUnknownBlockType)arg1 startingFrom:(id)arg2;
 - (void)_tfn_detectAndLogSimultaneousPushPopOrModalPresentationForPush:(_Bool)arg1;
@@ -171,11 +149,8 @@
 - (void)pushViewController:(id)arg1 animated:(_Bool)arg2;
 - (void)setViewControllers:(id)arg1 animated:(_Bool)arg2;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
-- (void)backButtonLongPressAction:(id)arg1;
 - (void)titleTapAction:(id)arg1;
 - (_Bool)scrollToTopAnimated:(_Bool)arg1 options:(unsigned long long)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)setAdditionalBottomFixedLayoutGuideLength:(double)arg1 bottomVisibleLayoutGuideLength:(double)arg2;
-- (void)setAdditionalTopFixedLayoutGuideLength:(double)arg1 topVisibleLayoutGuideLength:(double)arg2;
 - (void)dealloc;
 - (id)initWithNavigationBarClass:(Class)arg1 toolbarClass:(Class)arg2;
 - (id)initWithRootViewController:(id)arg1;

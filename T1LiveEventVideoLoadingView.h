@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class CAAnimation, CALayer, CAShapeLayer, TFNButton;
+@class CAAnimation, CALayer, CAShapeLayer, TFNLegacyButton;
 @protocol T1LiveEventVideoLoadingViewDelegate;
 
 @interface T1LiveEventVideoLoadingView : UIView
@@ -18,13 +18,13 @@
     CAShapeLayer *_maskLayer;
     CAShapeLayer *_backgroundLayer;
     CAShapeLayer *_progressLayer;
-    TFNButton *_playButton;
+    TFNLegacyButton *_playButton;
     CAAnimation *_progressAnimation;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CAAnimation *progressAnimation; // @synthesize progressAnimation=_progressAnimation;
-@property(retain, nonatomic) TFNButton *playButton; // @synthesize playButton=_playButton;
+@property(retain, nonatomic) TFNLegacyButton *playButton; // @synthesize playButton=_playButton;
 @property(retain, nonatomic) CAShapeLayer *progressLayer; // @synthesize progressLayer=_progressLayer;
 @property(retain, nonatomic) CAShapeLayer *backgroundLayer; // @synthesize backgroundLayer=_backgroundLayer;
 @property(retain, nonatomic) CAShapeLayer *maskLayer; // @synthesize maskLayer=_maskLayer;

@@ -10,7 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter17FleetsPagedViewer : TFNViewController
 {
     // Error parsing type: , name: swipeInteractionController
-    // Error parsing type: , name: delegate
+    // Error parsing type: , name: dismissEndRect
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: account
     // Error parsing type: , name: $__lazy_storage_$_transitionHandler

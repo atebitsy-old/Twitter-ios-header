@@ -61,7 +61,7 @@
 - (id)mediaComponentModel;
 - (id)appStoreDetailComponentModel;
 - (_Bool)meetsExperiment10890Criteria;
-- (_Bool)meetsExperiment10193And10536Criteria;
+- (_Bool)meetsExperiment10536Criteria;
 - (_Bool)meetsExperiment10704CriteriaForImageWebsiteCards;
 - (_Bool)meetsExperiment10704CriteriaForImageAppCards;
 - (_Bool)temp_blueButtonValidator;

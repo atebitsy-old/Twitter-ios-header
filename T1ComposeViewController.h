@@ -27,7 +27,7 @@
 #import <T1Twitter/TPXAnimationObserver-Protocol.h>
 #import <T1Twitter/UIDropInteractionDelegate-Protocol.h>
 
-@class NSArray, NSString, T1AutocompleteController, T1AutocompleteViewController, T1ComposeAccountAvatarImageView, T1ComposeCardPreviewController, T1ComposePollingCardPreviewController, T1ComposeSessionConfig, T1ComposeTagLocationViewController, T1ComposeTextViewDelegate, T1ComposeTooltipViewController, T1FoundMediaController, T1MediaAttachmentsViewController, TFNButton, TFNCircularCountProgressView, TFNTwitterAccount, TFNTwitterAutoGeotagger, TFNTwitterComposePlaceStore, TFNTwitterComposition, TFNTwitterCompositionAttachments, TFNTwitterCompositionGeotagSession, TFNTwitterPOISuggester, TFSMainThreadRunLoopDeferredTask, TFSTwitterLocation, UIViewController;
+@class NSArray, NSString, T1AutocompleteController, T1AutocompleteViewController, T1ComposeAccountAvatarImageView, T1ComposeCardPreviewController, T1ComposePollingCardPreviewController, T1ComposeSessionConfig, T1ComposeTagLocationViewController, T1ComposeTextViewDelegate, T1ComposeTooltipViewController, T1FoundMediaController, T1MediaAttachmentsViewController, TFNCircularCountProgressView, TFNLegacyButton, TFNTwitterAccount, TFNTwitterAutoGeotagger, TFNTwitterComposePlaceStore, TFNTwitterComposition, TFNTwitterCompositionAttachments, TFNTwitterCompositionGeotagSession, TFNTwitterPOISuggester, TFSMainThreadRunLoopDeferredTask, TFSTwitterLocation, UIViewController;
 @protocol T1ComposeViewControllerDelegate;
 
 @interface T1ComposeViewController : TFNViewController <T1ComposeCardPreviewControllerDelegate, T1ComposeRichTextViewDelegate, TFNLayoutMetricsEnvironment, T1PlacePickerViewControllerDelegate, T1ComposeRichTextViewPlaceDataSource, TFNTwitterAutoGeotaggerDelegate, TPXAnimationObserver, T1VideoTrimmerViewControllerDelegate, T1MediaAttachmentsViewControllerDelegate, T1AltTextViewControllerDelegate, T1AltTextEducationPromptViewControllerDelegate, T1ComposeTagLocationViewControllerDelegate, T1ComposeReplyUsersTableViewControllerDelegate, TFNTwitterPOISuggesterDelegate, T1VideoMonetizationSettingsViewControllerDelegate, TFNTooltipDelegate, NSLayoutManagerDelegate, TFNCircularCountProgressDataSource, T1JumpBackToHomeTimelineBehavior, UIDropInteractionDelegate>
@@ -47,13 +47,13 @@
     T1ComposePollingCardPreviewController *_pollingCardPreviewController;
     double _topSpringScrollOffset;
     T1ComposeAccountAvatarImageView *_avatarImageView;
-    TFNButton *_draftsButton;
-    TFNButton *_foundMediaButton;
-    TFNButton *_galleryButton;
-    TFNButton *_geoButton;
-    TFNButton *_pollButton;
-    TFNButton *_sendButton;
-    TFNButton *_retweetButton;
+    TFNLegacyButton *_draftsButton;
+    TFNLegacyButton *_foundMediaButton;
+    TFNLegacyButton *_galleryButton;
+    TFNLegacyButton *_geoButton;
+    TFNLegacyButton *_pollButton;
+    TFNLegacyButton *_sendButton;
+    TFNLegacyButton *_retweetButton;
     _Bool _disablePollsSupport;
     _Bool _cardPreviewTombstoneIfNotDisplayed;
     _Bool _autocompleteSearchEnabled;

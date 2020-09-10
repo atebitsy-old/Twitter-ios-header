@@ -6,32 +6,22 @@
 
 #import <UIKit/UIView.h>
 
-@class NSString, UIColor, UIFont, UIImage, UIImageView, UILabel;
-
 @interface T1TweetDetailsConversationControlContextView : UIView
 {
-    UIImageView *_badgeImageView;
-    UILabel *_textLabel;
-    UILabel *_titleLabel;
+    // Error parsing type: , name: textView
+    // Error parsing type: , name: badgeImageView
 }
 
-+ (struct CGSize)sizeWithTitleText:(id)arg1 titleFont:(id)arg2 LabelText:(id)arg3 labelFont:(id)arg4 maximumWidth:(double)arg5;
++ (struct CGSize)sizeThatFits:(double)arg1 for:(id)arg2;
++ (id)TextFont;
++ (id)TitleFont;
++ (struct CGSize)BadgeImageSize;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property(readonly, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
-@property(readonly, nonatomic) UIImageView *badgeImageView; // @synthesize badgeImageView=_badgeImageView;
+- (void)updateWith:(id)arg1 iconImage:(id)arg2 backgroundColor:(id)arg3;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)layoutSubviews;
-@property(retain, nonatomic) UIImage *badgeImage;
-@property(retain, nonatomic) UIFont *textFont;
-@property(retain, nonatomic) UIColor *textColor;
-@property(copy, nonatomic) NSString *text;
-@property(retain, nonatomic) UIColor *titleColor;
-@property(retain, nonatomic) UIFont *titleFont;
-@property(copy, nonatomic) NSString *title;
-- (void)_t1_tweetDetailsConversationControlContextView_initialize;
-- (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;
+- (id)initWithFrame:(struct CGRect)arg1;
 
 @end
 

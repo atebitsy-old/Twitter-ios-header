@@ -12,16 +12,17 @@
 
 @interface TFSScribeDatabaseLog : NSObject <TFSDatabaseLog>
 {
+    _Bool _debugEnabled;
     NSMutableArray *_errors;
     CDUnknownBlockType _errorBlock;
     CDUnknownBlockType _debugBlock;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool debugEnabled; // @synthesize debugEnabled=_debugEnabled;
 @property(copy, nonatomic) CDUnknownBlockType debugBlock; // @synthesize debugBlock=_debugBlock;
 @property(copy, nonatomic) CDUnknownBlockType errorBlock; // @synthesize errorBlock=_errorBlock;
 @property(retain, nonatomic) NSMutableArray *errors; // @synthesize errors=_errors;
-- (_Bool)debugEnabled;
 - (void)logDebug:(id)arg1;
 - (void)logError:(id)arg1;
 - (id)initWithDebugBlock:(CDUnknownBlockType)arg1 errorBlock:(CDUnknownBlockType)arg2;

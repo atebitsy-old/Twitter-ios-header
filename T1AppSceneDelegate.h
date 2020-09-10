@@ -22,6 +22,7 @@
 - (void)windowScene:(id)arg1 performActionForShortcutItem:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)scene:(id)arg1 continueUserActivity:(id)arg2;
 - (void)scene:(id)arg1 openURLContexts:(id)arg2;
+- (void)_t1_destroyInvalidSession:(id)arg1;
 - (void)scene:(id)arg1 willConnectToSession:(id)arg2 options:(id)arg3;
 
 // Remaining properties

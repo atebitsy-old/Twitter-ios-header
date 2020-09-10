@@ -20,6 +20,7 @@
 @property(retain, nonatomic) id <TFSModelBuilder> modelBuilder; // @synthesize modelBuilder=_modelBuilder;
 @property(nonatomic) _Bool debug; // @synthesize debug=_debug;
 @property(retain, nonatomic) NSData *data; // @synthesize data=_data;
+- (_Bool)supportsExecutionViaActionService;
 - (id)request;
 - (id)initWithAccountID:(id)arg1 data:(id)arg2 context:(id)arg3 modelBuilder:(id)arg4 completionBlock:(CDUnknownBlockType)arg5;
 - (id)initWithAccountID:(id)arg1 context:(id)arg2 authContext:(id)arg3 networkTransactionMetrics:(id)arg4 source:(unsigned long long)arg5 completionBlock:(CDUnknownBlockType)arg6;

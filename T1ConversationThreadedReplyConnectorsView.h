@@ -6,32 +6,34 @@
 
 #import <UIKit/UIView.h>
 
-@class NSMutableArray, T1ReplyConnectorsViewCurvedLine, TFNRoundedCornerView;
+@class NSMutableArray, T1ReplyConnectorCurvedLineView, TFNRoundedCornerView;
 @protocol T1ConversationThreadedReplyConnectorsViewModel;
 
 @interface T1ConversationThreadedReplyConnectorsView : UIView
 {
     id <T1ConversationThreadedReplyConnectorsViewModel> _viewModel;
     TFNRoundedCornerView *_verticalParentConnectorView;
-    T1ReplyConnectorsViewCurvedLine *_elbowParentConnectorView;
+    T1ReplyConnectorCurvedLineView *_elbowParentConnectorView;
     NSMutableArray *_ancestorConnectorViews;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *ancestorConnectorViews; // @synthesize ancestorConnectorViews=_ancestorConnectorViews;
-@property(readonly, nonatomic) T1ReplyConnectorsViewCurvedLine *elbowParentConnectorView; // @synthesize elbowParentConnectorView=_elbowParentConnectorView;
+@property(readonly, nonatomic) T1ReplyConnectorCurvedLineView *elbowParentConnectorView; // @synthesize elbowParentConnectorView=_elbowParentConnectorView;
 @property(readonly, nonatomic) TFNRoundedCornerView *verticalParentConnectorView; // @synthesize verticalParentConnectorView=_verticalParentConnectorView;
 @property(retain, nonatomic) id <T1ConversationThreadedReplyConnectorsViewModel> viewModel; // @synthesize viewModel=_viewModel;
 - (void)_t1_setFrame:(struct CGRect)arg1 forView:(id)arg2 forceNoAnimation:(_Bool)arg3;
-- (void)_t1_layoutConnectorView:(id)arg1 atLevel:(long long)arg2 withHeight:(double)arg3 layoutMetrics:(id)arg4 isSelected:(_Bool)arg5;
+- (void)_t1_layoutConnectorView:(id)arg1 atLevel:(long long)arg2 withHeight:(double)arg3 layoutMetrics:(id)arg4;
 - (void)_t1_layoutLastAncestorConnectorView;
-- (void)_t1_layoutAncestorConnectorView:(id)arg1 atLevel:(long long)arg2 withLayoutMetrics:(id)arg3 isSelected:(_Bool)arg4;
+- (void)_t1_layoutAncestorConnectorView:(id)arg1 atLevel:(long long)arg2 withLayoutMetrics:(id)arg3;
 - (void)_t1_layoutElbowParentConnectorView;
-- (void)_t1_layoutVerticalParentConnectorViewWithLayoutMetrics:(id)arg1 isSelected:(_Bool)arg2;
+- (void)_t1_layoutVerticalParentConnectorViewWithLayoutMetrics:(id)arg1;
 - (void)_t1_updateSubviewVisiblity;
+- (id)emphasizedConnectorColor;
+- (void)setNeedsDisplay;
 - (id)_t1_newConnectorView;
 @property(nonatomic) long long ancestorConnectorViewsCount;
-- (void)layoutWithMetrics:(id)arg1 isSelected:(_Bool)arg2;
+- (void)layoutWithMetrics:(id)arg1;
 - (id)init;
 
 @end

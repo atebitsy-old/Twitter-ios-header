@@ -6,20 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, TFNTwitterStatus;
-
 @interface T1DirectMessageQuickShareItem : NSObject
 {
-    TFNTwitterStatus *_status;
-    NSString *_link;
+    // Error parsing type: , name: status
+    // Error parsing type: , name: link
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *link; // @synthesize link=_link;
-@property(retain, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
-- (id)init;
 - (id)initWithStatus:(id)arg1;
 - (id)initWithAttachmentLink:(id)arg1;
+- (id)init;
 
 @end
 

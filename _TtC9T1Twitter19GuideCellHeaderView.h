@@ -14,7 +14,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: style
     // Error parsing type: , name: contentStackView
     // Error parsing type: , name: authorAvatarView
-    // Error parsing type: , name: verifiedImageView
+    // Error parsing type: , name: badgeImageView
     // Error parsing type: , name: authorFullNameView
     // Error parsing type: , name: categoryView
     // Error parsing type: , name: badgeView

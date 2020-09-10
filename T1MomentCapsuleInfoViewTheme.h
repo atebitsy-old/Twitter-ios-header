@@ -48,7 +48,6 @@
 - (id)_cardImageWithColor:(id)arg1;
 @property(readonly, nonatomic) UIFont *liveBadgeFont;
 @property(readonly, nonatomic) UIColor *updateDotColor;
-@property(readonly, nonatomic) UIColor *authorVerifiedBadgeColor;
 @property(readonly, nonatomic) UIFont *authorUsernameFont;
 @property(readonly, nonatomic) UIFont *authorFullNameFont;
 @property(readonly, nonatomic) UIColor *authorFullNameColor;

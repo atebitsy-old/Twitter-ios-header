@@ -6,14 +6,13 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, TFNTwitterLiveEventCarouselEntry, TFSTwitterEntityImageInfo;
+@class NSString, T1UserBadge, TFNTwitterLiveEventCarouselEntry, TFSTwitterEntityImageInfo;
 
 @interface T1LiveEventCarouselTransitionViewModel : NSObject
 {
     _Bool _showTransitionTitle;
     _Bool _showDisplayName;
     _Bool _showDisplayUsername;
-    _Bool _showVerifiedIcon;
     _Bool _showVideoDurationString;
     _Bool _showBroadcastBadgeView;
     _Bool _broadcastLive;
@@ -23,12 +22,13 @@
     TFSTwitterEntityImageInfo *_thumbnailImageInfo;
     NSString *_displayName;
     NSString *_displayUsername;
+    T1UserBadge *_userBadge;
     NSString *_displayVideoDurationString;
     NSString *_broadcastTypeString;
     unsigned long long _displayMode;
 }
 
-+ (id)viewModelWithCarouselEntry:(id)arg1 allowReplayOfCurrentItem:(_Bool)arg2 displayMode:(unsigned long long)arg3;
++ (id)viewModelWithCarouselEntry:(id)arg1 allowReplayOfCurrentItem:(_Bool)arg2 displayMode:(unsigned long long)arg3 featureSwitches:(id)arg4;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long displayMode; // @synthesize displayMode=_displayMode;
 @property(readonly, nonatomic) _Bool allowReplayOfCurrentItem; // @synthesize allowReplayOfCurrentItem=_allowReplayOfCurrentItem;
@@ -38,7 +38,7 @@
 @property(readonly, copy, nonatomic) NSString *broadcastTypeString; // @synthesize broadcastTypeString=_broadcastTypeString;
 @property(readonly, nonatomic) _Bool showVideoDurationString; // @synthesize showVideoDurationString=_showVideoDurationString;
 @property(readonly, copy, nonatomic) NSString *displayVideoDurationString; // @synthesize displayVideoDurationString=_displayVideoDurationString;
-@property(readonly, nonatomic) _Bool showVerifiedIcon; // @synthesize showVerifiedIcon=_showVerifiedIcon;
+@property(readonly, nonatomic) T1UserBadge *userBadge; // @synthesize userBadge=_userBadge;
 @property(readonly, nonatomic) _Bool showDisplayUsername; // @synthesize showDisplayUsername=_showDisplayUsername;
 @property(readonly, copy, nonatomic) NSString *displayUsername; // @synthesize displayUsername=_displayUsername;
 @property(readonly, nonatomic) _Bool showDisplayName; // @synthesize showDisplayName=_showDisplayName;
@@ -47,9 +47,9 @@
 @property(readonly, nonatomic) TFSTwitterEntityImageInfo *thumbnailImageInfo; // @synthesize thumbnailImageInfo=_thumbnailImageInfo;
 @property(retain, nonatomic) TFNTwitterLiveEventCarouselEntry *carouselEntry; // @synthesize carouselEntry=_carouselEntry;
 - (_Bool)isEqualToViewModel:(id)arg1;
-- (id)initWithCarouselEntryBroadcast:(id)arg1 allowReplayOfCurrentItem:(_Bool)arg2 displayMode:(unsigned long long)arg3;
-- (id)initWithCarouselEntryVideo:(id)arg1 allowReplayOfCurrentItem:(_Bool)arg2 displayMode:(unsigned long long)arg3;
-- (id)initWithCarouselEntrySlate:(id)arg1 allowReplayOfCurrentItem:(_Bool)arg2 displayMode:(unsigned long long)arg3;
+- (id)initWithCarouselEntryBroadcast:(id)arg1 allowReplayOfCurrentItem:(_Bool)arg2 displayMode:(unsigned long long)arg3 userBadger:(id)arg4;
+- (id)initWithCarouselEntryVideo:(id)arg1 allowReplayOfCurrentItem:(_Bool)arg2 displayMode:(unsigned long long)arg3 userBadger:(id)arg4;
+- (id)initWithCarouselEntrySlate:(id)arg1 allowReplayOfCurrentItem:(_Bool)arg2 displayMode:(unsigned long long)arg3 userBadger:(id)arg4;
 
 @end
 

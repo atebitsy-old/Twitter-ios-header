@@ -6,7 +6,7 @@
 
 #import <TFNUI/TFNViewController.h>
 
-@class TFNButton, UIActivityIndicatorView, UILabel;
+@class TFNLegacyButton, UIActivityIndicatorView, UILabel;
 @protocol T1StickerCategoryEmptyViewControllerDelegate;
 
 @interface T1StickerCategoryEmptyViewController : TFNViewController
@@ -14,7 +14,7 @@
     UIActivityIndicatorView *_indicatorView;
     UILabel *_errorTitleLabel;
     UILabel *_errorMessageLabel;
-    TFNButton *_retryButton;
+    TFNLegacyButton *_retryButton;
     _Bool _shouldShowError;
     id <T1StickerCategoryEmptyViewControllerDelegate> _delegate;
     long long _catalogType;

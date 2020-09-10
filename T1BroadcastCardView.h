@@ -10,7 +10,7 @@
 #import <T1Twitter/T1BroadcastCardViewModelDelegate-Protocol.h>
 #import <T1Twitter/T1BroadcastContainerViewDelegate-Protocol.h>
 
-@class CALayer, NSError, NSString, T1BroadcastCardBroadcastDetailView, T1BroadcastCardErrorView, T1BroadcastCardViewModel, T1BroadcastContainerView, T1LiveEventCardViewLifecycleObserver, T1LiveEventRoundedPaddedView, T1VideoBitRateManager, TFNButton, TFNSolidColorView, TFNTappableHighlightView, TFNTwitterUser, UIImageView, UIView;
+@class CALayer, NSError, NSString, T1BroadcastCardBroadcastDetailView, T1BroadcastCardErrorView, T1BroadcastCardViewModel, T1BroadcastContainerView, T1LiveEventCardViewLifecycleObserver, T1LiveEventRoundedPaddedView, T1VideoBitRateManager, TFNLegacyButton, TFNSolidColorView, TFNTappableHighlightView, TFNTwitterUser, UIImageView, UIView;
 
 @interface T1BroadcastCardView : T1CardViewAccessible <T1BroadcastContainerViewDelegate, T1BroadcastCardViewModelDelegate, T1BroadcastCardBroadcastDetailViewDelegate>
 {
@@ -26,7 +26,7 @@
     TFNTappableHighlightView *_highlightView;
     T1BroadcastCardErrorView *_errorView;
     T1BroadcastCardBroadcastDetailView *_detailsView;
-    TFNButton *_broadcastCTAButton;
+    TFNLegacyButton *_broadcastCTAButton;
     CALayer *_detailsSeparator;
     UIView *_broadcastContentView;
 }
@@ -34,7 +34,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) UIView *broadcastContentView; // @synthesize broadcastContentView=_broadcastContentView;
 @property(readonly, nonatomic) CALayer *detailsSeparator; // @synthesize detailsSeparator=_detailsSeparator;
-@property(readonly, nonatomic) TFNButton *broadcastCTAButton; // @synthesize broadcastCTAButton=_broadcastCTAButton;
+@property(readonly, nonatomic) TFNLegacyButton *broadcastCTAButton; // @synthesize broadcastCTAButton=_broadcastCTAButton;
 @property(readonly, nonatomic) T1BroadcastCardBroadcastDetailView *detailsView; // @synthesize detailsView=_detailsView;
 @property(retain, nonatomic) T1BroadcastCardErrorView *errorView; // @synthesize errorView=_errorView;
 @property(readonly, nonatomic) TFNTappableHighlightView *highlightView; // @synthesize highlightView=_highlightView;

@@ -14,12 +14,14 @@
 {
     // Error parsing type: , name: messageText
     // Error parsing type: , name: iconName
+    // Error parsing type: , name: identifier
     // Error parsing type: , name: alternateAction
 }
 
 - (void).cxx_destruct;
 - (id)init;
 @property(nonatomic, readonly) T1ToastAction *alternateAction; // @synthesize alternateAction;
+@property(nonatomic, readonly) NSString *identifier;
 @property(nonatomic, readonly) NSString *iconName;
 @property(nonatomic, readonly) NSString *messageText;
 

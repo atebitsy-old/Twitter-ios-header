@@ -9,6 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter21FleetEntryContentView : UIView
 {
+    // Error parsing type: , name: delegate
     // Error parsing type: , name: mediaView
     // Error parsing type: , name: textView
     // Error parsing type: , name: interstitalView

@@ -21,9 +21,6 @@
 @property(readonly, nonatomic) _Bool t1_isStatusViewCombinedViewModelStatusOptionsUpdate;
 @property(readonly, nonatomic) _Bool t1_isStatusViewCombinedViewModelStatusUpdate;
 - (id)tfn_directMessageConversationEntryIdentifierForKey:(id)arg1;
-- (id)tfn_peopleDiscoveryModuleLayoutHeader;
-@property(readonly, copy, nonatomic) NSArray *tfn_peopleDiscoveryStatuses;
-@property(readonly, copy, nonatomic) NSArray *tfn_peopleDiscoveryUserRecommendations;
 - (long long)tfn_directMessageEventLastReadEventID;
 - (id)tfn_directMessageEventMessageIDs;
 - (id)tfn_directMessageEventConversationAvatarURL;
@@ -33,5 +30,8 @@
 - (id)tfn_directMessageEventRequestID;
 - (id)tfn_directMessageEventTime;
 - (long long)tfn_directMessageEventID;
+- (id)tfn_peopleDiscoveryModuleLayoutHeader;
+@property(readonly, copy, nonatomic) NSArray *tfn_peopleDiscoveryStatuses;
+@property(readonly, copy, nonatomic) NSArray *tfn_peopleDiscoveryUserRecommendations;
 @end
 

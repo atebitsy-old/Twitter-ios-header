@@ -24,7 +24,7 @@
     // Error parsing type: {?="lock"{os_unfair_lock_s="_os_unfair_lock_opaque"I}"predicate"{atomic_flag="_Value"AB}}, name: _defaultMigrationTransientDispatchOnceToken
 }
 
-+ (_Bool)_t1_containsListID:(id)arg1 inUserLists:(id)arg2;
++ (_Bool)_t1_containsListID:(long long)arg1 inUserLists:(id)arg2;
 - (void).cxx_destruct;
 // Error parsing type for property defaultMigrationTransientDispatchOnceToken:
 // Property attributes: T{?={os_unfair_lock_s=I}{atomic_flag=AB}},R,N,V_defaultMigrationTransientDispatchOnceToken
@@ -43,7 +43,7 @@
 - (_Bool)isLatestRankingModeActiveForListID:(long long)arg1 memberCount:(long long)arg2;
 - (void)spheresUserSettingsRepositoryPinnedListsDidChange:(id)arg1;
 - (void)_t1_userDidAddUserToList:(id)arg1;
-- (void)_t1_removeListIDFromUserLists:(id)arg1;
+- (void)_t1_removeListIDFromUserLists:(long long)arg1;
 - (void)_t1_userDidUpdateList:(id)arg1;
 - (void)_t1_userUnsubscribedFromList:(id)arg1;
 - (void)_t1_userDidDeleteList:(id)arg1;

@@ -18,6 +18,7 @@
     NSArray *_deepLinkQueryParameters;
 }
 
++ (id)telegramConfigurationWithStatus:(id)arg1;
 + (id)gmailConfigurationWithStatus:(id)arg1;
 + (id)whatsAppConfigurationWithStatus:(id)arg1;
 + (id)facebookMessengerConfigurationWithStatus:(id)arg1;

@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <TFNUI/TFNButton.h>
+#import <TFNUI/TFNLegacyButton.h>
 
-@interface TFNFollowButton : TFNButton
+@interface TFNFollowButton : TFNLegacyButton
 {
     unsigned long long _customState;
 }

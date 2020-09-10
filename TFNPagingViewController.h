@@ -86,10 +86,6 @@
 - (_Bool)canPerformAction:(SEL)arg1 withSender:(id)arg2;
 - (_Bool)becomeFirstResponder;
 - (_Bool)canBecomeFirstResponder;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
-- (void)_updateSafeAreaInsetsForViewController:(id)arg1;
-- (void)setAdditionalSafeAreaInsets:(struct UIEdgeInsets)arg1;
-- (void)layoutGuidesDidChange:(long long)arg1;
 @property(nonatomic, getter=isScrollEnabled) _Bool scrollEnabled;
 - (_Bool)_viewController:(id)arg1 containsViewController:(id)arg2;
 - (id)_pageViewControllerContainingViewController:(id)arg1;
@@ -157,6 +153,8 @@
 - (_Bool)tfn_isContentScrolledToBottom;
 - (_Bool)tfn_prefersNavigationBarExpandedWhenScrolledToBottom;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
+- (void)_updateSafeAreaInsetsForViewController:(id)arg1;
+- (void)setAdditionalSafeAreaInsets:(struct UIEdgeInsets)arg1;
 - (void)_layoutChildren;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)viewDidDisappear:(_Bool)arg1;

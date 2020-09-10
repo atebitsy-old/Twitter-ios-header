@@ -8,7 +8,7 @@
 
 @interface _TtC9T1Twitter44SpheresDefaultStateManagerNetworkingDelegate : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: listID
     // Error parsing type: , name: mutationsManager
 }
 

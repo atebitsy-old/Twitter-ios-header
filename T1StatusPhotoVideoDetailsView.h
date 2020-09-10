@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class NSArray, NSLayoutConstraint, TFNTappableHighlightView, TFSTwitterEntityMedia, UIImageView, UILabel, UIStackView;
+@class NSArray, NSLayoutConstraint, T1UserBadge, TFNTappableHighlightView, TFSTwitterEntityMedia, UIImageView, UILabel, UIStackView;
 @protocol T1StatusPhotoVideoDetailsViewDelegate, TFSTwitterCanonicalUser;
 
 @interface T1StatusPhotoVideoDetailsView : UIView
@@ -27,20 +27,22 @@
     UILabel *_titleLabel;
     UILabel *_descriptionLabel;
     UIView *_separatorView;
-    UIImageView *_verifiedBadgeImageView;
+    UIImageView *_badgeImageView;
     UIView *_spacerView;
     NSArray *_highlightViewConstraints;
-    NSLayoutConstraint *_horizontalContainerViewWidthConstraint;
+    NSLayoutConstraint *_horizontalStackViewWidthConstraint;
+    T1UserBadge *_userBadge;
 }
 
 + (id)prefixFontForDisplayStyle:(unsigned long long)arg1;
 + (struct CGSize)preferredSizeForMaxWidth:(unsigned long long)arg1 mediaEntity:(id)arg2 displayStyle:(unsigned long long)arg3;
 + (struct CGSize)preferredSizeForMaxWidth:(unsigned long long)arg1;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSLayoutConstraint *horizontalContainerViewWidthConstraint; // @synthesize horizontalContainerViewWidthConstraint=_horizontalContainerViewWidthConstraint;
+@property(retain, nonatomic) T1UserBadge *userBadge; // @synthesize userBadge=_userBadge;
+@property(readonly, nonatomic) NSLayoutConstraint *horizontalStackViewWidthConstraint; // @synthesize horizontalStackViewWidthConstraint=_horizontalStackViewWidthConstraint;
 @property(retain, nonatomic) NSArray *highlightViewConstraints; // @synthesize highlightViewConstraints=_highlightViewConstraints;
 @property(retain, nonatomic) UIView *spacerView; // @synthesize spacerView=_spacerView;
-@property(retain, nonatomic) UIImageView *verifiedBadgeImageView; // @synthesize verifiedBadgeImageView=_verifiedBadgeImageView;
+@property(retain, nonatomic) UIImageView *badgeImageView; // @synthesize badgeImageView=_badgeImageView;
 @property(retain, nonatomic) UIView *separatorView; // @synthesize separatorView=_separatorView;
 @property(retain, nonatomic) UILabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
@@ -57,17 +59,19 @@
 @property(retain, nonatomic) id <TFSTwitterCanonicalUser> user; // @synthesize user=_user;
 @property(retain, nonatomic) TFSTwitterEntityMedia *mediaEntity; // @synthesize mediaEntity=_mediaEntity;
 @property(nonatomic) __weak id <T1StatusPhotoVideoDetailsViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)_t1_updateBadgeImageView;
+- (id)_t1_userBadgeForFeatureSwitches:(id)arg1 isVerified:(_Bool)arg2 identityType:(long long)arg3;
 - (void)_t1_updateDisplayStyle;
 - (void)_t1_didTapAttribution;
-- (void)_t1_setPrefixString:(id)arg1 displayName:(id)arg2 username:(id)arg3 isVerified:(_Bool)arg4 titleString:(id)arg5 descriptionString:(id)arg6;
+- (void)_t1_setPrefixString:(id)arg1 displayName:(id)arg2 username:(id)arg3 isVerified:(_Bool)arg4 identityType:(long long)arg5 titleString:(id)arg6 descriptionString:(id)arg7 featureSwitches:(id)arg8;
 - (id)_t1_stringForListenCount:(unsigned long long)arg1;
 - (id)_t1_stringForViewCount:(unsigned long long)arg1;
 - (void)reset;
-- (void)configureWithListenCount:(unsigned long long)arg1;
-- (void)configureWithViewCount:(unsigned long long)arg1;
-- (void)configureWithAdString:(id)arg1;
-- (void)configureWithUser:(id)arg1 prefixString:(id)arg2;
-- (void)configureWithMediaEntity:(id)arg1 displayViewCount:(_Bool)arg2;
+- (void)configureWithListenCount:(unsigned long long)arg1 featureSwitches:(id)arg2;
+- (void)configureWithViewCount:(unsigned long long)arg1 featureSwitches:(id)arg2;
+- (void)configureWithAdString:(id)arg1 featureSwitches:(id)arg2;
+- (void)configureWithUser:(id)arg1 prefixString:(id)arg2 featureSwitches:(id)arg3;
+- (void)configureWithMediaEntity:(id)arg1 displayViewCount:(_Bool)arg2 featureSwitches:(id)arg3;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithDisplayStyle:(unsigned long long)arg1;
 

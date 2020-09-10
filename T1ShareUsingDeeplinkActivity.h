@@ -6,19 +6,23 @@
 
 #import <T1Twitter/T1Activity.h>
 
-@class T1ShareUsingDeeplinkConfiguration;
+@class NSURL;
 
 @interface T1ShareUsingDeeplinkActivity : T1Activity
 {
-    T1ShareUsingDeeplinkConfiguration *_configuration;
+    NSURL *_deepLinkInstallationCheckURL;
+    NSURL *_deepLinkURL;
 }
 
++ (id)lineActivityWithStatus:(id)arg1;
++ (id)telegramActivityWithStatus:(id)arg1;
 + (id)gmailActivityWithStatus:(id)arg1;
 + (id)whatsAppActivityWithStatus:(id)arg1;
 + (id)facebookMessengerActivityWithStatus:(id)arg1;
 - (void).cxx_destruct;
 - (void)performActivity;
 - (_Bool)isSupported;
+- (id)initWithTwitterStatus:(id)arg1 identifier:(id)arg2 title:(id)arg3 imageName:(id)arg4 deepLinkInstallationCheckURL:(id)arg5 deepLinkURL:(id)arg6;
 - (id)initWithConfiguration:(id)arg1;
 
 @end

@@ -6,33 +6,33 @@
 
 #import <UIKit/UIView.h>
 
-@class CAGradientLayer, NSArray, TFNButton, UIScrollView;
+@class CAGradientLayer, NSArray, TFNLegacyButton, UIScrollView;
 @protocol T1ComposeTagLocationViewDelegate;
 
 @interface T1ComposeTagLocationView : UIView
 {
     id <T1ComposeTagLocationViewDelegate> _delegate;
-    TFNButton *_addLocationButton;
+    TFNLegacyButton *_addLocationButton;
     NSArray *_filteredPlaces;
     UIScrollView *_scrollView;
     CAGradientLayer *_gradientLayer;
     UIView *_placeButtonsView;
     NSArray *_buttons;
     NSArray *_placeButtons;
-    TFNButton *_pinButton;
-    TFNButton *_searchButton;
+    TFNLegacyButton *_pinButton;
+    TFNLegacyButton *_searchButton;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) TFNButton *searchButton; // @synthesize searchButton=_searchButton;
-@property(retain, nonatomic) TFNButton *pinButton; // @synthesize pinButton=_pinButton;
+@property(retain, nonatomic) TFNLegacyButton *searchButton; // @synthesize searchButton=_searchButton;
+@property(retain, nonatomic) TFNLegacyButton *pinButton; // @synthesize pinButton=_pinButton;
 @property(retain, nonatomic) NSArray *placeButtons; // @synthesize placeButtons=_placeButtons;
 @property(retain, nonatomic) NSArray *buttons; // @synthesize buttons=_buttons;
 @property(retain, nonatomic) UIView *placeButtonsView; // @synthesize placeButtonsView=_placeButtonsView;
 @property(retain, nonatomic) CAGradientLayer *gradientLayer; // @synthesize gradientLayer=_gradientLayer;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(retain, nonatomic) NSArray *filteredPlaces; // @synthesize filteredPlaces=_filteredPlaces;
-@property(retain, nonatomic) TFNButton *addLocationButton; // @synthesize addLocationButton=_addLocationButton;
+@property(retain, nonatomic) TFNLegacyButton *addLocationButton; // @synthesize addLocationButton=_addLocationButton;
 @property(nonatomic) __weak id <T1ComposeTagLocationViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)accessibilityElements;
 - (_Bool)isAccessibilityElement;

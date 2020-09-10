@@ -64,6 +64,7 @@
 - (id)viewModelBySettingReadReceiptDisplayMode:(unsigned long long)arg1 forEntry:(id)arg2;
 - (id)viewModelWithPagedInEntries:(id)arg1;
 - (id)viewModelByReplacingEntry:(id)arg1 withEntry:(id)arg2;
+- (id)viewModelByChangingAudioStateForEntry:(id)arg1 isPlaying:(_Bool)arg2;
 - (id)viewModelByShowingDetailsForEntry:(id)arg1;
 - (id)viewModelByRemovingEntry:(id)arg1;
 - (id)viewModelByReloadingEntry:(id)arg1;

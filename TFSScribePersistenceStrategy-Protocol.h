@@ -6,24 +6,25 @@
 
 #import <TFSScribe/NSObject-Protocol.h>
 
-@class NSArray, NSData, NSDate, NSString, TFSScribe, TFSScribeConfiguration;
-@protocol TFSScribeErrorDelegate, TFSScribeEventSerializer, TFSScribeOutgoingEventsHandler, TFSScribeOutgoingImpressionsHandler;
+@class NSArray, NSData, NSDate, NSString, NSURL, TFSDatabaseUIApplicationLink;
+@protocol TFSLogger, TFSScribeEventSerializer, TFSScribeOutgoingEventsHandler, TFSScribeOutgoingImpressionsHandler;
 
 @protocol TFSScribePersistenceStrategy <NSObject>
 + (id)new;
-@property(nonatomic) __weak TFSScribe *scribe;
-@property(readonly, nonatomic) __weak id <TFSScribeErrorDelegate> errorDelegate;
 @property _Bool debugEnabled;
+@property(copy) CDUnknownBlockType didEnqueueEvent;
+@property(readonly, nonatomic) id <TFSLogger> debugLogger;
+@property(readonly, copy, nonatomic) CDUnknownBlockType errorLogger;
 - (void)clearScribeDatabase;
 - (void)enqueueImpression:(NSData *)arg1 eventName:(NSString *)arg2 query:(NSString *)arg3 group:(NSString *)arg4 timestamp:(NSDate *)arg5;
 - (void)enqueueCompletionBlock:(void (^)(void))arg1;
 - (void)enqueueEvent:(id <TFSScribeEventSerializer>)arg1 timestamp:(NSDate *)arg2;
 - (void)deleteGroups:(NSArray *)arg1;
-- (void)flushGroups:(NSArray *)arg1 token:(NSString *)arg2 fetchLimit:(unsigned long long)arg3 batchSize:(unsigned long long)arg4 eventsHandler:(id <TFSScribeOutgoingEventsHandler>)arg5 impressionsHandler:(id <TFSScribeOutgoingImpressionsHandler>)arg6;
+- (void)flushGroups:(NSArray *)arg1 fetchLimit:(unsigned long long)arg2 batchSize:(unsigned long long)arg3 eventsHandler:(id <TFSScribeOutgoingEventsHandler>)arg4 impressionsHandler:(id <TFSScribeOutgoingImpressionsHandler>)arg5 didFlushBatch:(void (^)(NSArray *, unsigned long long))arg6 completion:(void (^)(void))arg7;
 - (void)closeWithStartBlock:(void (^)(void))arg1 completionBlock:(void (^)(void))arg2;
 - (void)openWithStartBlock:(void (^)(void))arg1 completionBlock:(void (^)(void))arg2;
 - (_Bool)isOpen;
-- (id)initWithConfiguration:(TFSScribeConfiguration *)arg1 scribe:(TFSScribe *)arg2 errorDelegate:(id <TFSScribeErrorDelegate>)arg3;
+- (id)initWithStoreURL:(NSURL *)arg1 applicationLink:(TFSDatabaseUIApplicationLink *)arg2 shelfLife:(double)arg3 errorLogger:(void (^)(NSError *))arg4 debugLogger:(id <TFSLogger>)arg5;
 - (id)init;
 @end
 

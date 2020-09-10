@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class TFNButton, TFNButtonAnimator, TFNNavigationBar, TFNPaddedButton, UIButton, UIControl, UIImage, UIImageView, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class TFNLegacyButton, TFNLegacyButtonAnimator, TFNNavigationBar, TFNPaddedButton, UIButton, UIControl, UIImage, UIImageView, UILongPressGestureRecognizer, UITapGestureRecognizer;
 @protocol T1ResizableHeaderViewDelegate, TFNPullToLoadTopControl;
 
 @interface T1ResizableHeaderView : UIView
@@ -38,8 +38,8 @@
     UIButton *_closeButton;
     UIButton *_shareHeaderButton;
     UIButton *_moreActionsButton;
-    TFNButton *_likeButton;
-    TFNButtonAnimator *_likeButtonAnimator;
+    TFNLegacyButton *_likeButton;
+    TFNLegacyButtonAnimator *_likeButtonAnimator;
     UIView *_likeButtonCircleBackgroundView;
     UIView *_bannerImageContainer;
     TFNNavigationBar *_containerNavigationBar;
@@ -54,8 +54,8 @@
 @property(retain, nonatomic) UIView *bannerOverlayGradient; // @synthesize bannerOverlayGradient=_bannerOverlayGradient;
 @property(retain, nonatomic) UIView *bannerImageContainer; // @synthesize bannerImageContainer=_bannerImageContainer;
 @property(retain, nonatomic) UIView *likeButtonCircleBackgroundView; // @synthesize likeButtonCircleBackgroundView=_likeButtonCircleBackgroundView;
-@property(retain, nonatomic) TFNButtonAnimator *likeButtonAnimator; // @synthesize likeButtonAnimator=_likeButtonAnimator;
-@property(retain, nonatomic) TFNButton *likeButton; // @synthesize likeButton=_likeButton;
+@property(retain, nonatomic) TFNLegacyButtonAnimator *likeButtonAnimator; // @synthesize likeButtonAnimator=_likeButtonAnimator;
+@property(retain, nonatomic) TFNLegacyButton *likeButton; // @synthesize likeButton=_likeButton;
 @property(retain, nonatomic) UIButton *moreActionsButton; // @synthesize moreActionsButton=_moreActionsButton;
 @property(retain, nonatomic) UIButton *shareHeaderButton; // @synthesize shareHeaderButton=_shareHeaderButton;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
@@ -85,6 +85,8 @@
 @property(nonatomic) __weak id <T1ResizableHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)tfn_previewingStateDidChange;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
+- (id)_tfn_backMenuActions;
+- (void)_t1_updateBackButtonMenu;
 - (void)_t1_updateLikeAnimator;
 - (double)_t1_bannerAspectRatio:(id)arg1;
 - (void)_t1_updateBannerBlur;
@@ -99,7 +101,6 @@
 - (void)_t1_didTapMoreActionsButton:(id)arg1;
 - (void)_t1_didTapShareHeaderButton:(id)arg1;
 - (void)_t1_didTapCloseButton:(id)arg1;
-- (void)_t1_didLongPressBackButton:(id)arg1;
 - (void)_t1_didTapBackButton:(id)arg1;
 - (void)_t1_didLongPressComposeNavigationButton:(id)arg1;
 - (void)_t1_didTapComposeNavigationButton:(id)arg1;

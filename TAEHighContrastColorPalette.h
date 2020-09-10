@@ -79,8 +79,6 @@
 @property(readonly, nonatomic) UIColor *twitterColorUnifiedCardAppRatingsStarColorBackground;
 - (id)_twitterColorUnifiedCardAppRatingsStarColorGray;
 @property(readonly, nonatomic) UIColor *twitterColorUnifiedCardAppRatingsStarColorGray;
-- (id)_twitterColorUnifiedCardAppRatingsStarColorOrange;
-@property(readonly, nonatomic) UIColor *twitterColorUnifiedCardAppRatingsStarColorOrange;
 - (id)_twitterColorQROrange;
 @property(readonly, nonatomic) UIColor *twitterColorQROrange;
 - (id)_twitterColorQRBlue;
@@ -151,12 +149,12 @@
 @property(readonly, nonatomic) UIColor *twitterColorVoicePaused;
 - (id)_twitterColorVoiceRecording;
 @property(readonly, nonatomic) UIColor *twitterColorVoiceRecording;
-- (id)_twitterColorVoicePrimaryLight;
-@property(readonly, nonatomic) UIColor *twitterColorVoicePrimaryLight;
 - (id)_twitterColorVoicePrimary;
 @property(readonly, nonatomic) UIColor *twitterColorVoicePrimary;
 - (id)_twitterColorMessagingBackground;
 @property(readonly, nonatomic) UIColor *twitterColorMessagingBackground;
+- (id)_twitterColorSelectedTweetOutline;
+@property(readonly, nonatomic) UIColor *twitterColorSelectedTweetOutline;
 - (id)_twitterColorSelectedTweetShadow;
 @property(readonly, nonatomic) UIColor *twitterColorSelectedTweetShadow;
 - (id)_twitterColorGenericNotificationTrendingFire;
@@ -169,6 +167,8 @@
 @property(readonly, nonatomic) UIColor *twitterColorUnmuted;
 - (id)_twitterColorVerified;
 @property(readonly, nonatomic) UIColor *twitterColorVerified;
+- (id)_twitterColorConversationHighlitedReplyConnector;
+@property(readonly, nonatomic) UIColor *twitterColorConversationHighlitedReplyConnector;
 - (id)_twitterColorConversationReplyConnector;
 @property(readonly, nonatomic) UIColor *twitterColorConversationReplyConnector;
 - (id)_twitterColorConversationLine;
@@ -219,6 +219,8 @@
 @property(readonly, nonatomic) UIColor *twitterColorSliderThumbGripper;
 - (id)_twitterColorLive;
 @property(readonly, nonatomic) UIColor *twitterColorLive;
+- (id)_twitterColorDMComposerComponentBorder;
+@property(readonly, nonatomic) UIColor *twitterColorDMComposerComponentBorder;
 - (id)_twitterColorDMReactionPickerHighlight;
 @property(readonly, nonatomic) UIColor *twitterColorDMReactionPickerHighlight;
 - (id)_twitterColorDMTypingIndicatorBigger;

@@ -14,11 +14,9 @@
     UIView *_backgroundView;
     _Bool _isActive;
     UIToolbar *_toolbar;
-    double _additionalBottomVisibleLayoutGuideLength;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) double additionalBottomVisibleLayoutGuideLength; // @synthesize additionalBottomVisibleLayoutGuideLength=_additionalBottomVisibleLayoutGuideLength;
 @property(nonatomic) _Bool isActive; // @synthesize isActive=_isActive;
 @property(readonly, nonatomic) __weak UIToolbar *toolbar; // @synthesize toolbar=_toolbar;
 - (void)private_layoutToolbarWithAnimationParametersFromNotification:(id)arg1;

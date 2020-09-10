@@ -16,8 +16,8 @@
 }
 
 - (struct CGSize)_t1_nameLabelSizeForAvailableWidth:(double)arg1 model:(id)arg2;
-- (struct CGSize)_t1_userTextViewSizeForAvailableWidth:(double)arg1 model:(id)arg2;
-- (id)_t1_attributedUserTextModelForModel:(id)arg1;
+- (struct CGSize)_t1_userTextViewSizeForAvailableWidth:(double)arg1 model:(id)arg2 userBadger:(id)arg3;
+- (id)_t1_attributedUserTextModelForModel:(id)arg1 userBadger:(id)arg2;
 - (id)_t1_attributedTitleTextModelForModel:(id)arg1 stringsProvider:(id)arg2;
 - (struct CGSize)_t1_userAvatarImageViewSizeForLayoutMetrics:(id)arg1;
 - (struct CGSize)_t1_titleTextViewSizeForAvailableWidth:(double)arg1 model:(id)arg2 stringsProvider:(id)arg3;

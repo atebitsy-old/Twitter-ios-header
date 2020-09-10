@@ -10,6 +10,7 @@
 {
 }
 
++ (id)preferredContentEncodingTypesForContentType:(id)arg1;
 + (long long)expectedRequestAnatomy;
 + (unsigned long long)responseHydrationFlags;
 + (unsigned long long)supportedAuthenticationTypes;

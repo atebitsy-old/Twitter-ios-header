@@ -120,6 +120,7 @@
 - (id)onApplicationDidEnterBackground;
 - (void)onApplicationWillEnterForegroundFromBackground;
 - (void)onApplicationWillResignActive;
+- (void)onApplicationReconnectWithOptions:(id)arg1;
 - (void)onApplicationDidBecomeActive;
 - (_Bool)onApplicationStartWithOptions:(id)arg1;
 - (void)onApplicationDidFinishLaunching:(_Bool)arg1;

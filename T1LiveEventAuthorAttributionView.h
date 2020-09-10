@@ -8,13 +8,14 @@
 
 #import <T1Twitter/TFNLayoutMetricsEnvironment-Protocol.h>
 
-@class NSLayoutConstraint, NSString, T1AvatarImageView, TIPImagePipeline, UIImageView, UILabel;
+@class NSLayoutConstraint, NSString, T1AvatarImageView, T1UserBadger, TIPImagePipeline, UIImageView, UILabel;
 @protocol T1LiveEventAuthorAttributionTheme, TFSTwitterCanonicalUser;
 
 @interface T1LiveEventAuthorAttributionView : UIView <TFNLayoutMetricsEnvironment>
 {
     id <T1LiveEventAuthorAttributionTheme> _theme;
     TIPImagePipeline *_imagePipeline;
+    T1UserBadger *_userBadger;
     UIView *_contentView;
     NSLayoutConstraint *_avatarHeightConstraint;
     T1AvatarImageView *_avatarImageView;
@@ -30,6 +31,7 @@
 @property(retain, nonatomic) T1AvatarImageView *avatarImageView; // @synthesize avatarImageView=_avatarImageView;
 @property(retain, nonatomic) NSLayoutConstraint *avatarHeightConstraint; // @synthesize avatarHeightConstraint=_avatarHeightConstraint;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
+@property(retain, nonatomic) T1UserBadger *userBadger; // @synthesize userBadger=_userBadger;
 @property(retain, nonatomic) TIPImagePipeline *imagePipeline; // @synthesize imagePipeline=_imagePipeline;
 @property(retain, nonatomic) id <T1LiveEventAuthorAttributionTheme> theme; // @synthesize theme=_theme;
 - (void)fontSizeChanged;

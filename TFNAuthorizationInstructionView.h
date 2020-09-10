@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNDismissableView-Protocol.h>
 
-@class NSArray, TFNButton, UILabel;
+@class NSArray, TFNLegacyButton, UILabel;
 @protocol TFNDismissDelegate;
 
 @interface TFNAuthorizationInstructionView : UIView <TFNDismissableView>
@@ -17,7 +17,7 @@
     UILabel *_messageLabel;
     NSArray *_itemImages;
     NSArray *_itemLabels;
-    TFNButton *_gotItButton;
+    TFNLegacyButton *_gotItButton;
     _Bool _hidesGotItButton;
     id <TFNDismissDelegate> _dismissDelegate;
 }

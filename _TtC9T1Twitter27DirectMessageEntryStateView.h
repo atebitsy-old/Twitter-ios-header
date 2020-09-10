@@ -11,7 +11,6 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: labelContainer
     // Error parsing type: , name: iconView
-    // Error parsing type: , name: progressView
     // Error parsing type: , name: stackView
     // Error parsing type: , name: viewModel
 }

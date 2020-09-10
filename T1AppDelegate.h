@@ -118,6 +118,7 @@
 - (void)performActionForShortcutItem:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)continueUserActivity:(id)arg1;
 - (void)openURL:(id)arg1 options:(id)arg2;
+- (void)reconnectWithOptions:(id)arg1;
 - (void)startWithOptions:(id)arg1;
 @property(readonly, nonatomic) UIViewController *topViewController;
 - (id)init;

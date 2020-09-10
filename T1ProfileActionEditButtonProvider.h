@@ -6,7 +6,7 @@
 
 #import <T1Twitter/T1ProfileActionDataSourceButtonProvider.h>
 
-@class TFNButton;
+@class TFNLegacyButton;
 
 @interface T1ProfileActionEditButtonProvider : T1ProfileActionDataSourceButtonProvider
 {
@@ -17,11 +17,11 @@
     SEL _editAction;
     SEL _setupAction;
     SEL _disabledAction;
-    TFNButton *_actionButton;
+    TFNLegacyButton *_actionButton;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) TFNButton *actionButton; // @synthesize actionButton=_actionButton;
+@property(retain, nonatomic) TFNLegacyButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(nonatomic) SEL disabledAction; // @synthesize disabledAction=_disabledAction;
 @property(nonatomic) SEL setupAction; // @synthesize setupAction=_setupAction;
 @property(nonatomic) SEL editAction; // @synthesize editAction=_editAction;

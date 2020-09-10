@@ -7,6 +7,6 @@
 #import <T1Twitter/T1CompactMomentView.h>
 
 @interface T1CompactMomentView (T1Twitter)
-- (void)setMomentCapsule:(id)arg1;
+- (void)setMomentCapsule:(id)arg1 featureSwitches:(id)arg2;
 @end
 

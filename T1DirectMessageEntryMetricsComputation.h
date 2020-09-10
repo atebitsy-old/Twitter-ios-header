@@ -20,8 +20,8 @@
 + (struct CGSize)_textSizeWithTextModel:(id)arg1 maxTextWidth:(double)arg2;
 + (double)_maxTextWidthForContentWidth:(double)arg1;
 + (struct UIEdgeInsets)textMargins;
-+ (id)entryMetricsComputationWithMessageEntry:(id)arg1 textModel:(id)arg2 interstitialTextModel:(id)arg3 seenByParticipantNamesTextModel:(id)arg4 outgoing:(_Bool)arg5 lastInGroup:(_Bool)arg6 layoutMetrics:(id)arg7 account:(id)arg8 shouldRenderCard:(_Bool)arg9 shouldRenderInterstitial:(_Bool)arg10 shouldRenderCTAButtons:(_Bool)arg11 mediaForward:(_Bool)arg12;
-+ (id)supersizedEmojiMetricsComputationWithMessageEntry:(id)arg1 textModel:(id)arg2 interstitialTextModel:(id)arg3 seenByParticipantNamesTextModel:(id)arg4 outgoing:(_Bool)arg5 lastInGroup:(_Bool)arg6 layoutMetrics:(id)arg7 account:(id)arg8 shouldRenderCard:(_Bool)arg9 shouldRenderInterstitial:(_Bool)arg10 mediaForward:(_Bool)arg11;
++ (id)entryMetricsComputationWithMessageEntry:(id)arg1 textModel:(id)arg2 interstitialTextModel:(id)arg3 seenByParticipantNamesTextModel:(id)arg4 outgoing:(_Bool)arg5 lastInGroup:(_Bool)arg6 layoutMetrics:(id)arg7 account:(id)arg8 shouldRenderCard:(_Bool)arg9 shouldRenderInterstitial:(_Bool)arg10 shouldRenderCTAButtons:(_Bool)arg11 mediaForward:(_Bool)arg12 isAudioPlaying:(_Bool)arg13;
++ (id)supersizedEmojiMetricsComputationWithMessageEntry:(id)arg1 textModel:(id)arg2 interstitialTextModel:(id)arg3 seenByParticipantNamesTextModel:(id)arg4 outgoing:(_Bool)arg5 lastInGroup:(_Bool)arg6 layoutMetrics:(id)arg7 account:(id)arg8 shouldRenderCard:(_Bool)arg9 shouldRenderInterstitial:(_Bool)arg10 mediaForward:(_Bool)arg11 isAudioPlaying:(_Bool)arg12;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <T1StatusViewLayoutState> previousStatusLayoutState; // @synthesize previousStatusLayoutState=_previousStatusLayoutState;
 - (struct CGSize)_scaledPreviewImageSize:(struct CGSize)arg1 maxWidth:(double)arg2;

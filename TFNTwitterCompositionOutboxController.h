@@ -42,6 +42,7 @@
 - (void)_tfn_main_willUploadComposition:(id)arg1 index:(unsigned long long)arg2 count:(unsigned long long)arg3;
 - (void)_tfn_main_enqueueUploadCompositions:(id)arg1;
 - (void)_tfn_main_didFailSendExpiredCompositions:(id)arg1;
+- (void)_tfn_main_addNudgeToFailedCompositionIfNeeded:(id)arg1 failureError:(id)arg2;
 - (void)_tfn_main_processFailedNudgeDraftCompositions;
 - (void)_tfn_main_processOutbox;
 - (void)_tfn_main_deleteCompositionInOutbox:(id)arg1;

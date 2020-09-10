@@ -15,7 +15,7 @@
     // Error parsing type: , name: endpointConfig
     // Error parsing type: , name: uxConfig
     // Error parsing type: , name: cursorErrorTranslator
-    // Error parsing type: , name: cacheID
+    // Error parsing type: , name: timelineIdentifierType
     // Error parsing type: , name: scribeContext
     // Error parsing type: , name: renderPerformanceEventName
     // Error parsing type: , name: performanceMetricScreenIdentifier
@@ -32,14 +32,13 @@
 + (id)draftTweetPreviewsTimelineConfigurationForParameters:(id)arg1 account:(id)arg2;
 + (id)listConfigurationForListID:(long long)arg1 title:(id)arg2 isPinned:(_Bool)arg3 account:(id)arg4;
 + (id)quoteTweetConfigurationForQuotedStatusID:(long long)arg1 title:(id)arg2 geoDataProvider:(id)arg3;
-+ (id)searchConfigurationForParameters:(id)arg1 resultFilter:(long long)arg2 tweetSearchMode:(long long)arg3 title:(id)arg4 emptyContentMessage:(id)arg5 scribeContext:(id)arg6 geoDataProvider:(id)arg7;
++ (id)searchConfigurationForParameters:(id)arg1 resultFilter:(long long)arg2 tweetSearchMode:(long long)arg3 title:(id)arg4 emptyContentMessage:(id)arg5 scribeContext:(id)arg6 geoDataProvider:(id)arg7 account:(id)arg8;
 - (void).cxx_destruct;
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
 @property(nonatomic, readonly) long long hash;
 @property(nonatomic, readonly) NSString *renderPerformanceEventName;
 @property(nonatomic, readonly) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext;
-@property(nonatomic, readonly) NSString *cacheID;
 @property(nonatomic, readonly) TNLParameterCollection *parameters; // @synthesize parameters;
 @property(nonatomic, readonly) NSString *path;
 

@@ -14,10 +14,12 @@
     // Error parsing type: , name: shouldRecognizeSimultaneously
     // Error parsing type: , name: shouldReceiveTouch
     // Error parsing type: , name: shouldRequireFailureOf
+    // Error parsing type: , name: shouldBeRequiredToFailBy
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (_Bool)gestureRecognizer:(id)arg1 shouldBeRequiredToFailByGestureRecognizer:(id)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRequireFailureOfGestureRecognizer:(id)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
