@@ -6,31 +6,25 @@
 
 #import <objc/NSObject.h>
 
-#import <TFNUI/NSCopying-Protocol.h>
 #import <TFNUI/TFNUIConfiguration-Protocol.h>
 
 @class NSString;
-@protocol TFNFontGroup, TFNUIConfiguration;
+@protocol TFNButtonFontGroup, TFNUIColorPalette, TFNUIFontGroup;
 
-@interface TFNUIConfiguration : NSObject <TFNUIConfiguration, NSCopying>
+@interface TFNUIConfiguration : NSObject <TFNUIConfiguration>
 {
-    id <TFNUIConfiguration> _storedConfiguration;
 }
 
-+ (id)_tfnui_queue;
-+ (void)setUpWithConfiguration:(id)arg1;
++ (void)setCurrentConfiguration:(id)arg1;
 + (id)currentConfiguration;
-- (void).cxx_destruct;
-@property(readonly, nonatomic) id <TFNUIConfiguration> storedConfiguration; // @synthesize storedConfiguration=_storedConfiguration;
-@property(readonly, nonatomic) _Bool isLayoutGuideSafeAreaMigrationEnabled;
-@property(readonly, nonatomic) _Bool isUndoScrollToTopEnabled;
-@property(readonly, nonatomic) id <TFNFontGroup> fontGroup;
-@property(readonly, nonatomic) _Bool isNestedActionButtonEnabled;
+@property(readonly, nonatomic) id <TFNButtonFontGroup> buttonFontGroup;
+@property(readonly, nonatomic) id <TFNUIFontGroup> fontGroup;
+@property(readonly, nonatomic) id <TFNUIColorPalette> colorPalette;
+@property(readonly, nonatomic) _Bool isIgnoreTraitCollectionUIStyleInEqualityEnabled;
 @property(readonly, nonatomic) _Bool isReduceMotionSettingEnabled;
-@property(readonly, nonatomic) long long engagementAnimationType;
-- (id)copyWithZone:(struct _NSZone *)arg1;
-- (id)initWithConfiguration:(id)arg1;
-- (id)init;
+@property(readonly, nonatomic) _Bool isUndoScrollToTopEnabled;
+@property(readonly, nonatomic) _Bool isNestedActionButtonEnabled;
+@property(readonly, nonatomic) _Bool isLayoutGuideSafeAreaMigrationEnabled;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

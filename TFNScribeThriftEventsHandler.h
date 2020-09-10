@@ -19,7 +19,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) __weak TFNTwitterScribeFlush *scribeFlush; // @synthesize scribeFlush=_scribeFlush;
 @property(copy, nonatomic) NSString *accountID; // @synthesize accountID=_accountID;
-- (void)handleScribeOutgoingEvents:(id)arg1 eventParameters:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)handleScribeOutgoingEvents:(id)arg1 retryDistribution:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 
 @end
 

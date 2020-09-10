@@ -9,6 +9,7 @@
 #import <T1Twitter/T1ComposeViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1ComposerPresenting-Protocol.h>
 #import <T1Twitter/T1ConversationDataSourceDelegate-Protocol.h>
+#import <T1Twitter/T1ConversationPersistentReplyBarViewDelegate-Protocol.h>
 #import <T1Twitter/T1ConversationThreadedShowMoreViewAdapterDelegate-Protocol.h>
 #import <T1Twitter/T1ConversationThreadedTombstoneTableRowAdapterDelegate-Protocol.h>
 #import <T1Twitter/T1DataViewControllerRenderPerformanceLoggerDataSource-Protocol.h>
@@ -32,7 +33,7 @@
 @class NSDate, NSMutableDictionary, NSMutableSet, NSString, T1AppNavigationContext, T1AutocompleteViewController, T1CardItem, T1CardItemTableRowAdapter, T1ConversationDataSource, T1ConversationInlineComposeViewController, T1ConversationPersistentReplyBarView, T1ConversationRepliableStatus, T1DataViewControllerRenderPerformanceLogger, T1NavigationMetadata, T1ShowStatusNavigationContext, T1StatusLiveEngagementManager, T1StatusMediaHandler, T1StatusTableSlideshowManager, T1TweetDetailsActionContextItem, T1TweetDetailsActionView, T1TweetDetailsFetcher, T1TweetDetailsFocalStatusTableRowAdapter, T1TweetDetailsMultiPhotoItem, T1TweetDetailsNativeVideoItem, T1TweetDetailsUserRecommendationItem, T1URTTimelineCursorTableRowAdapter, T1UnifiedCardItem, T1UnifiedCardItemTableRowAdapter, TFNBarButtonItem, TFNGenericItem, TFNTwitterAccount, TFNTwitterStatus, TFSTwitterScribeContext, TFSTwitterVideoMonetizationSettings, TIPImagePipeline, UIPopoverPresentationController, UIView;
 @protocol T1StatusViewModel;
 
-@interface T1ConversationDetailsViewController : TFNItemsDataViewController <TFNTooltipDelegate, T1ComposerPresenting, T1ComposeViewControllerDelegate, T1SlideshowBuilder, T1ImageTransitionDelegate, T1ErrorDataViewAdapterDelegate, T1VideoMonetizationSettingsViewControllerDelegate, T1URTTimelineTombstoneItemViewModelDelegate, T1DataViewControllerRenderPerformanceLoggerDataSource, T1FeedbackActionProvider, TFNDataViewKeyboardSelectionDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, UIResponderStandardEditActions, T1ConversationDataSourceDelegate, T1ConversationThreadedShowMoreViewAdapterDelegate, T1ConversationThreadedTombstoneTableRowAdapterDelegate, UIGestureRecognizerDelegate, T1JumpBackToHomeTimelineBehavior, TFNLayoutMetricsEnvironment, T1SlideshowViewControllerDelegate, T1PersistentComposeAccountProvider, T1TweetDetailsSharedBehavior>
+@interface T1ConversationDetailsViewController : TFNItemsDataViewController <TFNTooltipDelegate, T1ComposerPresenting, T1ComposeViewControllerDelegate, T1SlideshowBuilder, T1ImageTransitionDelegate, T1ErrorDataViewAdapterDelegate, T1VideoMonetizationSettingsViewControllerDelegate, T1URTTimelineTombstoneItemViewModelDelegate, T1DataViewControllerRenderPerformanceLoggerDataSource, T1FeedbackActionProvider, TFNDataViewKeyboardSelectionDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, UIResponderStandardEditActions, T1ConversationDataSourceDelegate, T1ConversationPersistentReplyBarViewDelegate, T1ConversationThreadedShowMoreViewAdapterDelegate, T1ConversationThreadedTombstoneTableRowAdapterDelegate, UIGestureRecognizerDelegate, T1JumpBackToHomeTimelineBehavior, TFNLayoutMetricsEnvironment, T1SlideshowViewControllerDelegate, T1PersistentComposeAccountProvider, T1TweetDetailsSharedBehavior>
 {
     double _allRequiredPartsCompleteDuration;
     double _conversationCompleteDuration;
@@ -76,6 +77,8 @@
     _Bool _shouldDisplayContent;
     _Bool _shouldPreventFetchOnScroll;
     _Bool _isLoadingAncestors;
+    _Bool _isPersistentReplyBarViewAnimating;
+    _Bool _wasRootTweetInlineReplyBarVisible;
     _Bool _isTranslationImpressionScribed;
     _Bool _isAutoTranslationImpressionScribed;
     TFNTwitterAccount *_composingAccount;
@@ -121,6 +124,7 @@
     T1URTTimelineCursorTableRowAdapter *_urtCursorAdapter;
     id _conversationObserver;
     long long _conversationID;
+    unsigned long long _loadState;
     TFNBarButtonItem *_subscribeButton;
     struct CGPoint _inlineReplyInitialContentOffset;
     struct CGRect _currentKeyboardFrame;
@@ -133,6 +137,7 @@
 + (id)conversationDetailsViewControllerForStatus:(id)arg1 account:(id)arg2 sourceScribeContext:(id)arg3 sourceNavigationMetadata:(id)arg4;
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNBarButtonItem *subscribeButton; // @synthesize subscribeButton=_subscribeButton;
+@property(nonatomic) unsigned long long loadState; // @synthesize loadState=_loadState;
 @property(nonatomic) _Bool isAutoTranslationImpressionScribed; // @synthesize isAutoTranslationImpressionScribed=_isAutoTranslationImpressionScribed;
 @property(nonatomic) _Bool isTranslationImpressionScribed; // @synthesize isTranslationImpressionScribed=_isTranslationImpressionScribed;
 @property(nonatomic) long long conversationID; // @synthesize conversationID=_conversationID;
@@ -142,6 +147,8 @@
 @property(retain, nonatomic) T1AutocompleteViewController *autocompleteViewController; // @synthesize autocompleteViewController=_autocompleteViewController;
 @property(retain, nonatomic) id <T1StatusViewModel> storedInlineReplyStatusViewModel; // @synthesize storedInlineReplyStatusViewModel=_storedInlineReplyStatusViewModel;
 @property(retain, nonatomic) T1ConversationInlineComposeViewController *storedInlineReplyComposeController; // @synthesize storedInlineReplyComposeController=_storedInlineReplyComposeController;
+@property(nonatomic) _Bool wasRootTweetInlineReplyBarVisible; // @synthesize wasRootTweetInlineReplyBarVisible=_wasRootTweetInlineReplyBarVisible;
+@property(nonatomic) _Bool isPersistentReplyBarViewAnimating; // @synthesize isPersistentReplyBarViewAnimating=_isPersistentReplyBarViewAnimating;
 @property(retain, nonatomic) T1ConversationPersistentReplyBarView *persistentReplyBarView; // @synthesize persistentReplyBarView=_persistentReplyBarView;
 @property(nonatomic) struct CGRect inlineReplyLastKnownCellRect; // @synthesize inlineReplyLastKnownCellRect=_inlineReplyLastKnownCellRect;
 @property(nonatomic) struct CGRect inlineReplyInitialCellRect; // @synthesize inlineReplyInitialCellRect=_inlineReplyInitialCellRect;
@@ -193,6 +200,7 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, copy, nonatomic) TFSTwitterScribeContext *sourceScribeContext; // @synthesize sourceScribeContext=_sourceScribeContext;
 @property(retain, nonatomic) TFNTwitterAccount *composingAccount; // @synthesize composingAccount=_composingAccount;
+- (void)dataViewDidDisplay;
 @property(readonly, nonatomic) id <T1StatusViewModel> initialFocusedStatus;
 @property(readonly, nonatomic) id <T1StatusViewModel> focalStatus;
 - (id)tweetDetailsFocalStatusTableRowAdapterCompositionForReplyAction:(id)arg1;
@@ -299,6 +307,7 @@
 - (id)indexPathForItem:(id)arg1;
 - (_Bool)_t1_touchOccurredOnInteractiveElement:(id)arg1;
 - (void)didSelectItem:(id)arg1 atIndexPath:(id)arg2;
+- (void)_t1_didLongPressStatusCell:(id)arg1;
 - (void)_t1_didTapStatusCell:(id)arg1;
 - (void)_enterInlineSelectedStateForStatusCell:(id)arg1 atIndexPath:(id)arg2 previousSelectedIndexPath:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)_t1_selectedStateAnimationCompleted;
@@ -331,6 +340,12 @@
 - (void)hideAutocompleteViewController:(id)arg1 forComposeBarViewController:(id)arg2;
 - (void)showAutocompleteViewController:(id)arg1 forComposeBarViewController:(id)arg2;
 - (void)_t1_updateAutocompleteViewControllerFrame;
+- (void)didTapPersistentReplyBarMockTextFieldView:(id)arg1;
+- (_Bool)isPersistentReplyBarVisible;
+- (void)_t1_updatePersistentReplyBarViewVisibilityAnimated:(_Bool)arg1;
+- (void)_t1_hidePersistentReplyBarViewAnimated:(_Bool)arg1;
+- (void)_t1_showPersistentReplyBarViewAnimated:(_Bool)arg1;
+- (struct CGRect)_t1_persistentReplyBarFrameAboveTabBar:(_Bool)arg1;
 - (void)_t1_updatePersistentReplyBarView;
 - (void)_t1_setupPersistentReplyBarIfNecessary;
 - (void)willShowFullScreenComposerForComposition:(id)arg1 inReplyToStatus:(id)arg2 statusView:(id)arg3;
@@ -341,6 +356,7 @@
 - (void)_t1_storeCurrentInlineCompositionControllerState;
 - (_Bool)_t1_isInlineReplyTextFieldCompletelyVisibleInComposeController:(id)arg1;
 - (void)_t1_updateScrollPositionForInlineComposeController:(id)arg1 statusViewModel:(id)arg2;
+- (_Bool)isInlineReplyActive;
 - (void)stopInlineReplyWithInlineCompositionController:(id)arg1;
 - (void)updateInlineReplyWithInlineCompositionController:(id)arg1;
 - (void)startInlineReplyWithInlineCompositionController:(id)arg1 forStatusViewModel:(id)arg2;
@@ -424,6 +440,7 @@
 - (double)tableViewHeightForItem:(id)arg1 atIndexPath:(id)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRequireFailureOfGestureRecognizer:(id)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
+- (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
 - (_Bool)repliesDisabledForRepliableItem:(id)arg1;
 - (id)compositionForRepliableItem:(id)arg1;
 - (void)conversationDataSourceUpdated:(id)arg1;
@@ -440,7 +457,6 @@
 - (void)_t1_scrollToTopOfReplies;
 - (void)_t1_scrollToBottom;
 - (_Bool)_t1_tableViewIsScrolledToTop;
-- (id)_t1_replyPlaceholderTextForStatus:(id)arg1;
 - (void)update:(_Bool)arg1;
 - (void)_t1_didFinishLoadingRelationship:(id)arg1;
 - (void)_t1_didTapTag:(id)arg1 inCell:(id)arg2 itemForImage:(id)arg3 itemForVideo:(id)arg4;

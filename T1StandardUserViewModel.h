@@ -49,6 +49,7 @@
 @property(readonly, nonatomic) TFSTwitterRelationship *relationship;
 @property(readonly, nonatomic) unsigned int profileLinkColorHexTriplet;
 @property(readonly, nonatomic) _Bool affiliated;
+@property(readonly, nonatomic) long long identityType;
 @property(readonly, nonatomic) _Bool verified;
 @property(readonly, copy, nonatomic) NSString *designatorUrl;
 @property(readonly, nonatomic) unsigned long long designatorLabelType;

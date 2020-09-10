@@ -6,17 +6,16 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class T1MomentCapsuleInfoView, T1MomentCapsuleInfoViewTheme, TFNLayoutMetrics, TFNTwitterAccount;
-@protocol T1MomentViewModel;
+@class T1MomentCapsuleInfoView, T1MomentCapsuleInfoViewTheme, TFNLayoutMetrics, TFNTwitterAccount, TFNTwitterMomentCapsule;
 
 @protocol T1MomentCapsuleInfoViewLayoutDelegate <NSObject>
 @property(nonatomic) _Bool hidesFollowButton;
 - (void)layoutView:(T1MomentCapsuleInfoView *)arg1 withLayoutMetrics:(TFNLayoutMetrics *)arg2;
-- (struct CGSize)sizeOfViewWithMomentViewModel:(id <T1MomentViewModel>)arg1 width:(double)arg2 theme:(T1MomentCapsuleInfoViewTheme *)arg3 account:(TFNTwitterAccount *)arg4 layoutMetrics:(TFNLayoutMetrics *)arg5;
+- (struct CGSize)sizeOfViewWithMomentViewModel:(TFNTwitterMomentCapsule *)arg1 width:(double)arg2 theme:(T1MomentCapsuleInfoViewTheme *)arg3 account:(TFNTwitterAccount *)arg4 layoutMetrics:(TFNLayoutMetrics *)arg5;
 
 @optional
 - (struct CGSize)sizeOfLoadingViewForView:(T1MomentCapsuleInfoView *)arg1;
 - (void)layoutLoadingViewForView:(T1MomentCapsuleInfoView *)arg1;
-- (struct CGSize)estimatedSizeOfViewWithMomentViewModel:(id <T1MomentViewModel>)arg1 theme:(T1MomentCapsuleInfoViewTheme *)arg2 account:(TFNTwitterAccount *)arg3 layoutMetrics:(TFNLayoutMetrics *)arg4;
+- (struct CGSize)estimatedSizeOfViewWithMomentViewModel:(TFNTwitterMomentCapsule *)arg1 theme:(T1MomentCapsuleInfoViewTheme *)arg2 account:(TFNTwitterAccount *)arg3 layoutMetrics:(TFNLayoutMetrics *)arg4;
 @end
 

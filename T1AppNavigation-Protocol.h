@@ -44,7 +44,6 @@
 - (void)showListDiscoveryPageFromSource:(long long)arg1 completion:(void (^)(void))arg2;
 - (void)showListCreationFlowFromSource:(long long)arg1 completion:(void (^)(void))arg2;
 - (void)showListWithID:(long long)arg1 onPage:(unsigned long long)arg2 source:(long long)arg3 completion:(void (^)(void))arg4;
-- (void)showList:(NSString *)arg1 forUsername:(NSString *)arg2 onPage:(unsigned long long)arg3 source:(long long)arg4 sourceNavigationMetadata:(T1NavigationMetadata *)arg5 completion:(void (^)(void))arg6;
 - (void)startAdaptiveFlowWithWizardFlow:(TFNAdaptiveWizardFlow *)arg1 source:(long long)arg2;
 - (void)muteActionForConversation:(TFNTwitterStatus *)arg1 isMuting:(_Bool)arg2 showAmbientNotification:(_Bool)arg3 scribePage:(NSString *)arg4 scribeSection:(NSString *)arg5 scribeComponent:(NSString *)arg6 scribeParameters:(NSDictionary *)arg7 completion:(void (^)(void))arg8;
 - (void)muteActionForUser:(id <TFSTwitterCanonicalUser>)arg1 isMuting:(_Bool)arg2 showConfirmationIfNeeded:(_Bool)arg3 scribePage:(NSString *)arg4 scribeSection:(NSString *)arg5 scribeComponent:(NSString *)arg6 scribeParameters:(NSDictionary *)arg7;

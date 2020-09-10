@@ -10,6 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter15SimpleBadgeable : NSObject
 {
     // Error parsing type: , name: verified
+    // Error parsing type: , name: identityType
     // Error parsing type: , name: protectedUser
     // Error parsing type: , name: usernameless
     // Error parsing type: , name: translatorType

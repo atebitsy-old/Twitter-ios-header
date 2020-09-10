@@ -33,6 +33,9 @@
     struct _NSRange _truncationStringHighlightRange;
 }
 
++ (_Bool)useAttributedStringColorDifferenceOptimization;
++ (void)setUseAttributedStringColorDifferenceOptimizationBlock:(CDUnknownBlockType)arg1;
++ (id)useAttributedStringColorDifferenceOptimizationFeatureSwitch;
 + (double)maxHeight;
 - (void).cxx_destruct;
 @property(nonatomic) unsigned long long truncationType; // @synthesize truncationType=_truncationType;

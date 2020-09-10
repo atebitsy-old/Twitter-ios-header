@@ -22,7 +22,7 @@
 - (void)onError:(id)arg1 error:(id)arg2;
 - (void)onData:(id)arg1 data:(id)arg2;
 - (void)onResponse:(id)arg1 bytesExpected:(long long)arg2;
-- (unique_ptr_b1b907a0)requestWithUrl:(const char *)arg1 listenerDispatcher:(CallbackDispatcher_923886d7)arg2 session:(id)arg3;
+- (unique_ptr_b1b907a0)requestWithUrl:(const char *)arg1 listenerDispatcher:(CallbackDispatcher_15e2a758)arg2 session:(id)arg3;
 - (id)init;
 
 // Remaining properties

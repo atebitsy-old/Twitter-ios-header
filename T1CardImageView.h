@@ -16,6 +16,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *dominantBackgroundColor; // @synthesize dominantBackgroundColor=_dominantBackgroundColor;
 - (void)setBackgroundColor:(id)arg1;
+- (id)init;
 
 @end
 

@@ -31,6 +31,7 @@
 + (double)tfn_maxFontSize;
 + (double)tfn_minFontSize;
 + (void)tfn_setReferenceFontSize:(double)arg1 min:(double)arg2 max:(double)arg3;
++ (id)tfnuiFonts;
 - (const struct __CTFont *)tfn_CTFont;
 - (double)tfn_heightForVerticalCentering;
 - (double)tfn_minimumScaleFactorFromFont:(id)arg1;

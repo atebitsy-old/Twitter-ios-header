@@ -87,13 +87,14 @@
 @property(nonatomic, readonly) _Bool suspended;
 @property(nonatomic, readonly) TFSTwitterEntityMedia *profileImageMediaEntity;
 @property(nonatomic, readonly) _Bool protectedUser;
+@property(nonatomic, readonly) long long identityType;
 @property(nonatomic, readonly) _Bool verified;
 @property(nonatomic, readonly) NSString *fullName;
 @property(nonatomic, readonly) NSString *username;
 @property(nonatomic, readonly) long long userID;
 - (id)initWithUser:(id)arg1 accountUserDetails:(id)arg2;
 - (id)initWithUser:(id)arg1;
-- (id)initWithUserID:(long long)arg1 username:(id)arg2 fullName:(id)arg3 profileImageMediaEntity:(id)arg4 verified:(_Bool)arg5 protected:(_Bool)arg6 partial:(_Bool)arg7 url:(id)arg8 urlEntities:(id)arg9 suspended:(id)arg10 numberOfFollowing:(id)arg11 numberOfFollowers:(id)arg12 numberOfFollowersNormal:(id)arg13 numberOfFollowersFast:(id)arg14 statusesCountNumber:(id)arg15 mediaCountNumber:(id)arg16 favoritesCountNumber:(id)arg17 pinnedTweetIDNumber:(id)arg18 createdDate:(id)arg19 nsfw:(id)arg20 translatorType:(id)arg21 profileInterstitialType:(id)arg22 profileLinkColorHexTriplet:(id)arg23 profileBannerMediaEntity:(id)arg24 bio:(id)arg25 bioEntities:(id)arg26 location:(id)arg27 withheldBio:(id)arg28 withheldBioEntities:(id)arg29 withheldInCountries:(id)arg30 hasStructuredLocation:(_Bool)arg31 structuredLocation:(id)arg32 usernameless:(id)arg33 hasExtendedProfileBirthday:(id)arg34 extendedProfile:(id)arg35 highlightedDesignatorInfo:(id)arg36 relationship:(id)arg37 isProfileBioTranslatable:(id)arg38 lastUpdated:(id)arg39 accountUserDetails:(id)arg40;
+- (id)initWithUserID:(long long)arg1 username:(id)arg2 fullName:(id)arg3 profileImageMediaEntity:(id)arg4 verified:(_Bool)arg5 identityType:(long long)arg6 protected:(_Bool)arg7 partial:(_Bool)arg8 url:(id)arg9 urlEntities:(id)arg10 suspended:(id)arg11 numberOfFollowing:(id)arg12 numberOfFollowers:(id)arg13 numberOfFollowersNormal:(id)arg14 numberOfFollowersFast:(id)arg15 statusesCountNumber:(id)arg16 mediaCountNumber:(id)arg17 favoritesCountNumber:(id)arg18 pinnedTweetIDNumber:(id)arg19 createdDate:(id)arg20 nsfw:(id)arg21 translatorType:(id)arg22 profileInterstitialType:(id)arg23 profileLinkColorHexTriplet:(id)arg24 profileBannerMediaEntity:(id)arg25 bio:(id)arg26 bioEntities:(id)arg27 location:(id)arg28 withheldBio:(id)arg29 withheldBioEntities:(id)arg30 withheldInCountries:(id)arg31 hasStructuredLocation:(_Bool)arg32 structuredLocation:(id)arg33 usernameless:(id)arg34 hasExtendedProfileBirthday:(id)arg35 extendedProfile:(id)arg36 highlightedDesignatorInfo:(id)arg37 relationship:(id)arg38 isProfileBioTranslatable:(id)arg39 lastUpdated:(id)arg40 accountUserDetails:(id)arg41;
 @property(nonatomic, readonly) TFSTwitterAccountUserDetails *accountUserDetails;
 @property(nonatomic) _Bool partial; // @synthesize partial;
 @property(nonatomic, readonly) id updateEventDispatcher; // @synthesize updateEventDispatcher;

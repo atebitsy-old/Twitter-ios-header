@@ -56,6 +56,7 @@
 - (void).cxx_destruct;
 - (id)initWithCollectionViewLayout:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
+- (void)dataViewDidDisplay;
 - (void)willDisplayCell:(id)arg1 forItem:(id)arg2 atIndexPath:(id)arg3;
 - (id)tableViewCellForItem:(id)arg1 atIndexPath:(id)arg2;
 - (void)debugTimelineGestureUpdated:(id)arg1;

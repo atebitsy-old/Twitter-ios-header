@@ -11,6 +11,7 @@
 }
 
 + (_Bool)supportSharedCaching;
++ (unsigned long long)responseHydrationFlags;
 + (unsigned long long)baseURLType;
 - (id)initWithEndpointPath:(id)arg1 parameters:(id)arg2 multipartFormData:(id)arg3 bodyData:(id)arg4 bodyFilePath:(id)arg5 headerFields:(id)arg6 context:(id)arg7 responseModelBuilder:(id)arg8 emptyResponseDataExpected:(_Bool)arg9;
 

@@ -10,6 +10,7 @@
 
 @interface TFSTwitterAPIOnboardingPostAttributionEventCommand : TFSTwitterAPICommandWithResponseModelBuilder
 {
+    _Bool _isFirstOpen;
     NSString *_eventString;
     NSString *_referringLinkURL;
     NSDictionary *_headerFields;

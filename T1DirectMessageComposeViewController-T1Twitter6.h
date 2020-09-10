@@ -6,29 +6,10 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-#import <T1Twitter/TFNDropDataSource-Protocol.h>
+#import <T1Twitter/T1VideoTrimmerViewControllerDelegate-Protocol.h>
 
-@class NSArray, NSString;
-
-@interface T1DirectMessageComposeViewController (T1Twitter6) <TFNDropDataSource>
-@property(nonatomic, readonly) NSString *localizedDropIndicationTooManyVideos;
-@property(nonatomic, readonly) NSString *localizedDropIndicationTooManyImages;
-@property(nonatomic, readonly) NSString *localizedDropIndicationTooManyGIFs;
-@property(nonatomic, readonly) NSString *localizedDropIndicationMixedMedia;
-@property(nonatomic, readonly) NSString *localizedDropIndicationVideos;
-@property(nonatomic, readonly) NSString *localizedDropIndicationURL;
-@property(nonatomic, readonly) NSString *localizedDropIndicationText;
-@property(nonatomic, readonly) NSString *localizedDropIndicationStatus;
-@property(nonatomic, readonly) NSString *localizedDropIndicationImages;
-@property(nonatomic, readonly) NSString *localizedDropIndicationGIFs;
-@property(nonatomic, readonly) _Bool hasVideoAttachments;
-@property(nonatomic, readonly) _Bool hasImageAttachments;
-@property(nonatomic, readonly) _Bool hasAnimatedImageAttachments;
-- (_Bool)canDropVideosCount:(unsigned long long)arg1;
-- (_Bool)canDropImagesCount:(unsigned long long)arg1;
-- (_Bool)canDropAnimatedGIFsCount:(unsigned long long)arg1;
-@property(nonatomic, readonly) _Bool hasAttachments;
-@property(nonatomic, readonly) unsigned long long maxNumberOfPhotos;
-@property(nonatomic, readonly) NSArray *attachments;
+@interface T1DirectMessageComposeViewController (T1Twitter6) <T1VideoTrimmerViewControllerDelegate>
+- (void)videoTrimmerViewControllerDidCancel:(id)arg1;
+- (void)videoTrimmerViewController:(id)arg1 didTrimVideo:(id)arg2;
 @end
 

@@ -33,8 +33,8 @@
 @property long long thriftFlushState; // @synthesize thriftFlushState=_thriftFlushState;
 @property long long jsonFlushState; // @synthesize jsonFlushState=_jsonFlushState;
 - (id)eventsForImpressionsBatch:(id)arg1;
-- (void)handleScribeOutgoingEvents:(id)arg1 eventParameters:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)flushWithToken:(id)arg1 thriftToken:(id)arg2;
+- (void)handleScribeOutgoingEvents:(id)arg1 retryDistribution:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)flushWithToken:(id)arg1 thriftToken:(id)arg2 clientEventsToken:(id)arg3;
 - (void)flush;
 @property(readonly, nonatomic) TFSScribe *scribeService; // @synthesize scribeService=_scribeService;
 - (id)_tfn_scribeThriftGroups;

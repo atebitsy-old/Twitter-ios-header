@@ -6,7 +6,8 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSArray, NSString, NSURL, TAVPlayer, UIColor;
+@class NSArray, NSString, TAVPlayer, UIColor;
+@protocol TFSTwitterCanonicalUser;
 
 @protocol T1VoiceViewModel <NSObject>
 @property(readonly, nonatomic) unsigned long long brightnessOffset;
@@ -16,7 +17,7 @@
 @property(readonly, nonatomic) double totalDuration;
 @property(readonly, nonatomic) double duration;
 @property(readonly, nonatomic) NSString *durationString;
-@property(readonly, nonatomic) NSURL *imageURL;
+@property(readonly, nonatomic) id <TFSTwitterCanonicalUser> representedUser;
 @property(readonly, nonatomic) UIColor *color;
 - (NSString *)playerFactoryIdentifier;
 - (TAVPlayer *)player;

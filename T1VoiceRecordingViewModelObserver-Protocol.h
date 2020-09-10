@@ -12,8 +12,8 @@
 @protocol T1VoiceRecordingViewModelObserver <NSObject>
 
 @optional
-- (void)voiceRecordingViewModel:(T1VoiceRecordingViewModel *)arg1 didEndRecordingAudiowaveViewModel:(id <T1VoiceAudiowaveViewModel>)arg2 recordingWillEnd:(_Bool)arg3;
 - (void)voiceRecordingViewModelDidUpdateTimer:(T1VoiceRecordingViewModel *)arg1;
 - (void)voiceRecordingViewModelDidUpdateStep:(T1VoiceRecordingViewModel *)arg1;
+- (void)voiceRecordingViewModel:(T1VoiceRecordingViewModel *)arg1 didEndRecordingAudiowaveViewModel:(id <T1VoiceAudiowaveViewModel>)arg2 recordingWillEnd:(_Bool)arg3;
 @end
 

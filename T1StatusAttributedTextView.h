@@ -19,6 +19,7 @@
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <T1StatusBodyTextDisplayableDelegate> textViewDelegate; // @synthesize textViewDelegate=_textViewDelegate;
+- (void)attributedTextView:(id)arg1 didCopyString:(id)arg2;
 - (void)attributedTextView:(id)arg1 didTapTruncationTokenAreaWithRect:(struct CGRect)arg2;
 - (void)attributedTextView:(id)arg1 didLongPressRange:(id)arg2 rect:(struct CGRect)arg3;
 - (void)attributedTextView:(id)arg1 didTapRange:(id)arg2 rect:(struct CGRect)arg3;

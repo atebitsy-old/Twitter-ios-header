@@ -130,9 +130,9 @@
 - (void)tip_fetchHelperDidStartLoading:(id)arg1;
 - (id)imageVariantForSelectionBehavior:(CDStruct_c8a718ae)arg1 ignoringMaximumDimensions:(_Bool)arg2;
 - (id)imageVariantForSelectionBehavior:(CDStruct_c8a718ae)arg1;
+- (_Bool)attemptToSetImageWithEntityMedia:(id)arg1;
 - (void)setImageWithMediaInfo:(id)arg1;
 - (void)setImageWithTemplateURL:(id)arg1 originalDimensions:(struct CGSize)arg2;
-- (void)setImageWithBaseURLString:(id)arg1 format:(id)arg2 originalDimensions:(struct CGSize)arg3 category:(id)arg4;
 - (void)setImageWithURL:(id)arg1;
 - (void)setImageContainerAsIfPlaceholder:(id)arg1;
 - (void)setImageAsIfPlaceholder:(id)arg1;

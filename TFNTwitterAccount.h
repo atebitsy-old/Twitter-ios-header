@@ -11,11 +11,12 @@
 #import <T1Twitter/TBCTwitterAccount-Protocol.h>
 #import <T1Twitter/TFNTwitterAPIConfiguration-Protocol.h>
 #import <T1Twitter/TFNTwitterMediaUploadConfiguration-Protocol.h>
+#import <T1Twitter/TFSTwitterAccountContext-Protocol.h>
 
-@class NSArray, NSDate, NSDictionary, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableSet, NSNumber, NSString, T1AccountNotificationSettingsManager, T1AdaptiveMediaParameters, TBCPeriscopeAccount, TBCPeriscopeAccountManager, TFNDirectMessageService, TFNTwitterAPIConfiguration, TFNTwitterAccountModel, TFNTwitterCachableVideoMonetizationSettings, TFNTwitterCardPersistedStateManager, TFNTwitterCompositionOutboxController, TFNTwitterCompositionPersistenceManager, TFNTwitterDynamicVideoAdManager, TFNTwitterHomeMutingSet, TFNTwitterLoginVerification, TFNTwitterPromotedEventLogger, TFNTwitterScribe, TFNTwitterScribeFlush, TFNTwitterScribeImpressionLogger, TFNTwitterSearchTypeaheadStore, TFNTwitterSettings, TFNTwitterTeams, TFNTwitterTimelineManager, TFNTwitterUser, TFNTwitterUserDataSource, TFSObservable, TFSObservableInput, TFSTwitterAPICommandService, TFSTwitterAccountUserDetails, TFSTwitterUserReference;
+@class NSArray, NSDate, NSDictionary, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableSet, NSNumber, NSString, T1AccountNotificationSettingsManager, T1AdaptiveMediaParameters, TBCPeriscopeAccount, TBCPeriscopeAccountManager, TFNDirectMessageService, TFNTwitterAPIConfiguration, TFNTwitterAccountModel, TFNTwitterCachableVideoMonetizationSettings, TFNTwitterCardPersistedStateManager, TFNTwitterCompositionOutboxController, TFNTwitterCompositionPersistenceManager, TFNTwitterDynamicVideoAdManager, TFNTwitterHomeMutingSet, TFNTwitterLoginVerification, TFNTwitterPromotedEventLogger, TFNTwitterScribe, TFNTwitterScribeFlush, TFNTwitterScribeImpressionLogger, TFNTwitterSearchTypeaheadStore, TFNTwitterSettings, TFNTwitterTeams, TFNTwitterTimelineManager, TFNTwitterUser, TFNTwitterUserDataSource, TFSModelContext, TFSObservable, TFSObservableInput, TFSTwitterAPICommandService, TFSTwitterAccountUserDetails, TFSTwitterFeatureAccountScopedData, TFSTwitterUserReference;
 @protocol OS_dispatch_queue, T1CardViewRegistry, TFNTwitterAccountPushSettingsManager, TFNTwitterAccountPushSettingsProvider, TFNTwitterAuthenticatedScribeDelegate, TFNTwitterFeatureSwitches, TFNTwitterGeoDataProvider, TFNTwitterPromotableTrend, TFSTwitterAPICommandContext, TFSTwitterCanonicalUser, TFSTwitterLegacyScribeLogMethods, _TtP9T1Twitter24PeopleAddressBookService_;
 
-@interface TFNTwitterAccount : NSObject <T1TimelinesFeatureSwitches, TAVTwitterFeatures, TFNTwitterMediaUploadConfiguration, TBCTwitterAccount, TFNTwitterAPIConfiguration>
+@interface TFNTwitterAccount : NSObject <T1TimelinesFeatureSwitches, TAVTwitterFeatures, TFNTwitterMediaUploadConfiguration, TBCTwitterAccount, TFNTwitterAPIConfiguration, TFSTwitterAccountContext>
 {
     NSMutableDictionary *_followCountUpdaters;
     NSMutableDictionary *_unfollowCountUpdaters;
@@ -88,6 +89,8 @@
     TFNTwitterCompositionOutboxController *_outboxController;
     TFSObservable *_pinnedTweetIDObservable;
     TFNTwitterDynamicVideoAdManager *_dynamicVideoAdManager;
+    TFSTwitterFeatureAccountScopedData *_accountScopedData;
+    long long _identityType;
     NSString *_username;
     NSDate *_lastActiveDate;
     long long _lastScribeFlushId;
@@ -134,6 +137,9 @@
 + (id)twitterFollowArticleURL;
 + (id)twitterRulesURL;
 + (void)updateBadgingFromServerForAccounts:(id)arg1 maxConcurrentRequests:(long long)arg2 completion:(CDUnknownBlockType)arg3;
++ (id)darkreadLifecycleShutdownInfoURL;
++ (long long)darkreadLifecycleShutdownLevel;
++ (_Bool)darkreadLifecycleShutdownEnabled;
 + (void)_tfs_apiInputInvalidWithDescription:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;
 + (id)guestScribeThriftGroups;
 + (id)guestScribeGroups;
@@ -201,7 +207,9 @@
 @property(nonatomic) long long lastScribeFlushId; // @synthesize lastScribeFlushId=_lastScribeFlushId;
 @property(retain, nonatomic) NSDate *lastActiveDate; // @synthesize lastActiveDate=_lastActiveDate;
 @property(readonly, nonatomic) NSString *username; // @synthesize username=_username;
+@property(nonatomic) long long identityType; // @synthesize identityType=_identityType;
 @property(nonatomic) _Bool verified; // @synthesize verified=_verified;
+@property(retain, nonatomic) TFSTwitterFeatureAccountScopedData *accountScopedData; // @synthesize accountScopedData=_accountScopedData;
 @property(readonly, nonatomic) TFSObservable *pinnedTweetIDObservable; // @synthesize pinnedTweetIDObservable=_pinnedTweetIDObservable;
 @property(readonly, copy, nonatomic) NSString *accountID; // @synthesize accountID=_accountID;
 - (id)pinnedTweetIDObservableInput;
@@ -301,6 +309,7 @@
 - (_Bool)myUserIsEqualToUser:(id)arg1;
 @property(readonly, nonatomic) TBCPeriscopeAccount *periscopeAccount;
 @property(readonly, nonatomic) _Bool isPeriscopeAuthenticationAllowed;
+@property(readonly, nonatomic) TFSModelContext *modelContext;
 - (void)flushScribe;
 - (void)updateSettings:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)updateCurrentPassword:(id)arg1 updatedPassword:(id)arg2 passwordConfirmation:(id)arg3 responseBlock:(CDUnknownBlockType)arg4;
@@ -319,6 +328,7 @@
 @property(readonly, nonatomic) int loginVerificationMode;
 @property(readonly, nonatomic) _Bool isLoginVerificationEnabled;
 - (id)autosaveName;
+- (id)accountScopedFeatureForIdentifier:(id)arg1;
 - (void)updateUserInfoAndCredentialsWithToken:(id)arg1 secret:(id)arg2 username:(id)arg3 userID:(long long)arg4;
 - (id)deleteOAuthCredentialsInKeychain;
 - (void)_timelineManagerDidDeserializeTimeline:(id)arg1;
@@ -457,6 +467,7 @@
 - (unsigned long long)cardComposePreviewPermittedRetryCount;
 - (_Bool)shouldCardComposePreviewTombstoneIfNotDisplayed;
 - (long long)cardComposePreviewFetchDelayMsec;
+- (_Bool)isMixedMediaGIFCreationEnabled;
 - (_Bool)isComposerTwitterTextEditorEnabled;
 - (_Bool)isComposerPulldownThreadingLookbackLimited;
 - (_Bool)isComposerProtectedAccountPulldownThreadingEnabled;
@@ -473,6 +484,8 @@
 - (_Bool)isTweetDetailsRichTextPrototypeViewEnabled;
 - (_Bool)isHomeTimelineEarlyStartupEnabled;
 - (_Bool)isTIPImageUnloadingOptimizationEnabled;
+- (_Bool)isIgnoreTraitCollectionUIStyleInEqualityEnabled;
+- (_Bool)isAttributedTextModelColorDifferenceOptimizationEnabled;
 - (long long)_tfn_isLaunchSwitchEnabled:(id)arg1 withImpression:(_Bool)arg2;
 - (long long)isAppShortcutAsyncCameraLoadingEnabledWithImpression:(_Bool)arg1;
 - (long long)isCanaryAsyncKeychainLoadingEnabledWithImpression:(_Bool)arg1;
@@ -537,7 +550,7 @@
 - (_Bool)isTweetDetailsReplyLabelsEnabled;
 - (_Bool)isMacTestExperimentEnabled;
 - (_Bool)isOpenLinksInNativeAppsFailureDebuggingEnabled;
-- (_Bool)isOpenLinksInNativeAppsEnabled;
+- (_Bool)canOpenDomainInExternalApp:(id)arg1;
 - (_Bool)isSafariViewControllerModalEnabled;
 - (_Bool)isSafariViewControllerDisabledForPromotedWebsiteClicks;
 - (_Bool)isSafariViewControllerEnabled;
@@ -548,8 +561,6 @@
 @property(readonly, nonatomic) _Bool isTweetViewInGalleryEnabled;
 @property(readonly, nonatomic) double promotedImageRatio;
 @property(readonly, nonatomic) _Bool isImageWebsiteCardFullscreenEnabled;
-@property(readonly, nonatomic) _Bool isAdDisplaySessionGranularityReduced;
-@property(readonly, nonatomic) _Bool isAdDisplaySessionEnabled;
 @property(readonly, nonatomic) _Bool isLoggingPromotedTweetsOrderEnabled;
 @property(readonly, nonatomic) _Bool isMediaAppCardRatingsViewEnabled;
 @property(readonly, nonatomic) _Bool isSkipTalonURLVerificationEnabled;
@@ -600,7 +611,6 @@
 @property(readonly, nonatomic) _Bool isTopicsDescriptionsEnabled;
 @property(readonly, nonatomic) _Bool isTopicsProfileEntryPointEnabled;
 @property(readonly, nonatomic) _Bool isTopicsDashItemEnabled;
-- (_Bool)isURTSortIndexCorrectionEnforcementEnabled;
 - (_Bool)isURTEmptyCursorChunkClearingEnabled;
 - (double)latestTimelineProgressiveAutoSwitchThresholdMultiplier;
 - (double)latestTimelineProgressiveAutoSwitchHalfLife;
@@ -633,7 +643,7 @@
 - (_Bool)_isJumpBackToHomeEnabled;
 - (_Bool)_inactivePeriodSatisfiesJumpBackIntervalWithActiveTimeStamp:(double)arg1 inactiveTimeStamp:(double)arg2;
 - (_Bool)shouldJumpBackToHomeWithActiveTimeStamp:(double)arg1 inactiveTimeStamp:(double)arg2;
-- (_Bool)isTVConnectionEnabled;
+- (_Bool)isTVConnectionDeprecationEnabled;
 - (_Bool)isEdgeProfileDominantColorEnabled;
 - (_Bool)isHashflagsAnimationLikeButtonEnabled;
 - (_Bool)isHashflagsEnabled;
@@ -750,6 +760,8 @@
 - (_Bool)isIOS13ShareSheetDonationEnabled;
 - (_Bool)isDMConversationGroupJoinedEntryEnabled;
 - (_Bool)isDMConversationNavBarAvatarEnabled;
+- (_Bool)isDMRequestsInboxActionsButtonEnabled;
+- (_Bool)isTopRequestsHideHeadersEnabled;
 - (_Bool)isTopRequestsSectionEnabled;
 - (_Bool)isDMRequestConsolidatedButtonsEnabled;
 - (_Bool)isDMConversationSocialProofEnabled;
@@ -770,6 +782,9 @@
 - (void)muteFleetsForUserID:(long long)arg1 completion:(CDUnknownBlockType)arg2;
 @property(nonatomic, readonly) id <_TtP9T1Twitter24PeopleAddressBookService_> addressBookService;
 @property(nonatomic, readonly) T1AccountNotificationSettingsManager *notificationSettingsManager;
+- (unsigned long long)unseenDMCountForBadgingExcludingMuted:(_Bool)arg1 excludingUntrusted:(_Bool)arg2;
+@property(nonatomic, readonly) _Bool countOfUnseenConversationsForBadgingDiffersFromLegacy;
+@property(nonatomic, readonly) TFNDirectMessageService *directMessages;
 - (void)markAllFollowerRequestsAsRead;
 - (void)_tfn_setNeedsFollowerRequestsRefresh;
 - (_Bool)hasFollowerRequestFromUserWithUserID:(long long)arg1;
@@ -914,9 +929,6 @@
 - (void)logPromotedEventIfNeeded:(long long)arg1 onStatus:(id)arg2 extraParameters:(id)arg3;
 - (void)logPromotedEventIfNeeded:(long long)arg1 onStatus:(id)arg2;
 - (void)logPromotedEventIfNeeded:(long long)arg1 onUserPromotedContent:(id)arg2;
-- (unsigned long long)unseenDMCountForBadgingExcludingMuted:(_Bool)arg1 excludingUntrusted:(_Bool)arg2;
-@property(readonly, nonatomic) _Bool countOfUnseenConversationsForBadgingDiffersFromLegacy;
-@property(readonly, nonatomic) TFNDirectMessageService *directMessages;
 - (void)_getTOTPKeyRemote:(CDUnknownBlockType)arg1;
 - (void)updateTOTPKey;
 - (void)qrLoginSubmitWithQRCode:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;

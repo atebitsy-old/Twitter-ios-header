@@ -6,7 +6,7 @@
 
 #import <TFSTwitterAPICommand/TFSTwitterAPICommand.h>
 
-@class NSDictionary, NSString;
+@class NSArray, NSString;
 @protocol TFSModelBuilder;
 
 @interface TFSTwitterAPIJotClientEventCommand : TFSTwitterAPICommand
@@ -14,18 +14,18 @@
     _Bool _debug;
     NSString *_log;
     NSString *_language;
-    NSDictionary *_eventParameters;
+    NSArray *_retryDistribution;
     id <TFSModelBuilder> _responseModelBuilder;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <TFSModelBuilder> responseModelBuilder; // @synthesize responseModelBuilder=_responseModelBuilder;
 @property(nonatomic) _Bool debug; // @synthesize debug=_debug;
-@property(retain, nonatomic) NSDictionary *eventParameters; // @synthesize eventParameters=_eventParameters;
-@property(retain, nonatomic) NSString *language; // @synthesize language=_language;
-@property(retain, nonatomic) NSString *log; // @synthesize log=_log;
+@property(copy, nonatomic) NSArray *retryDistribution; // @synthesize retryDistribution=_retryDistribution;
+@property(copy, nonatomic) NSString *language; // @synthesize language=_language;
+@property(copy, nonatomic) NSString *log; // @synthesize log=_log;
 - (id)request;
-- (id)initWithAccountID:(id)arg1 log:(id)arg2 language:(id)arg3 eventParameters:(id)arg4 isDebug:(_Bool)arg5 context:(id)arg6 responseModelBuilder:(id)arg7 completionBlock:(CDUnknownBlockType)arg8;
+- (id)initWithAccountID:(id)arg1 log:(id)arg2 language:(id)arg3 retryDistribution:(id)arg4 isDebug:(_Bool)arg5 context:(id)arg6 responseModelBuilder:(id)arg7 completionBlock:(CDUnknownBlockType)arg8;
 - (id)initWithAccountID:(id)arg1 context:(id)arg2 authContext:(id)arg3 networkTransactionMetrics:(id)arg4 source:(unsigned long long)arg5 completionBlock:(CDUnknownBlockType)arg6;
 
 @end

@@ -4,11 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <T1Twitter/T1UIActivity.h>
+#import <T1Twitter/T1Activity.h>
 
 @class TFNActivityViewController, UIViewController;
 
-@interface T1SystemShareSheetActivity : T1UIActivity
+@interface T1SystemShareSheetActivity : T1Activity
 {
     UIViewController *_presenterViewController;
     TFNActivityViewController *_activityViewController;
@@ -16,6 +16,7 @@
 
 - (void).cxx_destruct;
 - (void)performActivity;
+- (id)scribeAction;
 - (_Bool)isSupported;
 - (id)initWithStatus:(id)arg1 presenterViewController:(id)arg2 activityViewController:(id)arg3;
 

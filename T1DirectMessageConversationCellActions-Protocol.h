@@ -7,7 +7,7 @@
 @class T1DirectMessageConversation;
 
 @protocol T1DirectMessageConversationCellActions
-- (void)didTapTrashButtonForConversation:(T1DirectMessageConversation *)arg1 sender:(id)arg2;
+- (void)didTapActionButtonForConversation:(T1DirectMessageConversation *)arg1 sender:(id)arg2;
 - (void)didTapAvatarForConversation:(T1DirectMessageConversation *)arg1 sender:(id)arg2;
 - (void)showContextMenuForConversation:(T1DirectMessageConversation *)arg1 sender:(id)arg2;
 @end

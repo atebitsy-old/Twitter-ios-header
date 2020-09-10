@@ -13,7 +13,7 @@
 #import <T1Twitter/TFNTwitterDismissibleItem-Protocol.h>
 #import <T1Twitter/TFSTwitterScribableItem-Protocol.h>
 
-@class NSArray, NSDate, NSDictionary, NSString, TFNAttributedTextModel, TFNTwitterAccount, TFNTwitterCardData, TFNTwitterFeedbackInfo, TFNTwitterGeotag, TFNTwitterStatus, TFNTwitterStatusConversationContext, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterMediaInfo, TFSTwitterVideoMonetizationSettings, TFSURTImageVariant, TFSURTRichText, UIColor, UIFont;
+@class NSArray, NSDate, NSDictionary, NSString, TFNAttributedTextModel, TFNTwitterAccount, TFNTwitterCardData, TFNTwitterFeedbackInfo, TFNTwitterGeotag, TFNTwitterStatus, TFNTwitterStatusConversationContext, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterVideoMonetizationSettings, TFSURTRichText, UIColor, UIFont;
 @protocol T1PlayerFactoryIdentifiable, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFNTwitterStatusConversationTreeContext;
 
 @protocol T1StatusViewModel <NSObject, TFSTwitterScribableItem, TFNTwitterDismissibleItem, T1StatusViewModelExperimentAdditions, T1StatusViewModelCardAdditions, T1StatusViewModelPromotedLoggingAdditions, TFNTwitterCardDataSourceProvider, TFNTwitterConversationTreeContextProvider>
@@ -37,6 +37,7 @@
 @property(nonatomic, readonly) _Bool isTweetedByAuthenticatedAccount;
 @property(nonatomic, readonly) _Bool isFromUserUsernameless;
 @property(nonatomic, readonly) _Bool isFromUserAffiliated;
+@property(nonatomic, readonly) long long fromUserIdentityType;
 @property(nonatomic, readonly) _Bool isFromUserVerified;
 @property(nonatomic, readonly) _Bool isFromUserProtected;
 - (TFNAttributedTextModel *)attributedTextModelForOptions:(unsigned long long)arg1 width:(double)arg2 withFont:(UIFont *)arg3 boldFont:(UIFont *)arg4 lineHeight:(double)arg5 lineSpacing:(double)arg6 emptyLineMaxHeight:(double)arg7 darkBackground:(_Bool)arg8 defaultTextColor:(UIColor *)arg9 linkTextColor:(UIColor *)arg10 highlighted:(_Bool)arg11 truncationString:(NSString *)arg12 cachingEnabled:(_Bool)arg13;
@@ -48,16 +49,8 @@
 - (NSArray *)displayTextRangesForOptions:(unsigned long long)arg1;
 - (NSString *)displayTextForOptions:(unsigned long long)arg1;
 - (NSString *)accessibilityTextForOptions:(unsigned long long)arg1;
-@property(nonatomic, readonly) UIColor *forwardPivotBackgroundColor;
-@property(nonatomic, readonly) NSString *forwardPivotAccessibilityString;
-@property(nonatomic, readonly) NSString *forwardPivotDisplayType;
-@property(nonatomic, readonly) NSString *forwardPivotLandingUrlString;
-@property(nonatomic, readonly) NSString *forwardPivotBadgeTextColorName;
-@property(nonatomic, readonly) UIColor *forwardPivotBadgeTextColor;
-@property(nonatomic, readonly) NSString *forwardPivotBadgeText;
-@property(nonatomic, readonly) TFSURTImageVariant *forwardPivotImageVariant;
-@property(nonatomic, readonly) TFSURTRichText *forwardPivotSubtext;
-@property(nonatomic, readonly) TFSURTRichText *forwardPivotText;
+@property(nonatomic, readonly) TFSTwitterForwardPivot *innerForwardPivot;
+@property(nonatomic, readonly) TFSTwitterForwardPivot *forwardPivot;
 @property(nonatomic, readonly) NSString *ruxContext;
 @property(nonatomic, readonly) _Bool hasSoftIntervention;
 @property(nonatomic, readonly) _Bool hasForwardPivot;

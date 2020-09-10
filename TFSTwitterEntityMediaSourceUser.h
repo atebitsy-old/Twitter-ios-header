@@ -14,12 +14,14 @@
 @interface TFSTwitterEntityMediaSourceUser : NSObject <NSCoding, TFSEncodable>
 {
     _Bool _verified;
+    long long _identityType;
     TFSTwitterUserReference *_userReference;
 }
 
 + (id)encodableName;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFSTwitterUserReference *userReference; // @synthesize userReference=_userReference;
+@property(readonly, nonatomic) long long identityType; // @synthesize identityType=_identityType;
 @property(readonly, nonatomic, getter=isVerified) _Bool verified; // @synthesize verified=_verified;
 - (id)description;
 - (unsigned long long)hash;
@@ -30,7 +32,7 @@
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithJSONDictionary:(id)arg1 fromGraphQL:(_Bool)arg2;
-- (id)initWithUserReference:(id)arg1 verified:(_Bool)arg2;
+- (id)initWithUserReference:(id)arg1 verified:(_Bool)arg2 identityType:(long long)arg3;
 
 @end
 

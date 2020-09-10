@@ -7,6 +7,6 @@
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
 @interface T1DirectMessageComposeViewController (T1Twitter15)
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
+- (void)pickerViewController:(id)arg1 didPickValue:(id)arg2 inSectionAtIndex:(unsigned long long)arg3 willConfirm:(_Bool)arg4 willDismiss:(_Bool)arg5;
 @end
 

@@ -10,7 +10,7 @@
 #import <T1Twitter/TFNLayoutMetricsEnvironment-Protocol.h>
 
 @class NSArray, NSString, UIImageView, UILabel, UIStackView, UITapGestureRecognizer;
-@protocol T1ForwardPivotViewConfiguration, T1ForwardPivotViewDelegate;
+@protocol T1ForwardPivotViewDelegate, T1ForwardPivotViewModel;
 
 @interface T1ForwardPivotView : TFNSolidColorView <TFNLayoutMetricsEnvironment, T1ImageViewFetchHelperDelegate>
 {
@@ -23,12 +23,12 @@
     UIStackView *_stackView;
     UITapGestureRecognizer *_singleTapRecognizer;
     NSArray *_currentConstraints;
-    id <T1ForwardPivotViewConfiguration> _viewConfiguration;
+    id <T1ForwardPivotViewModel> _viewModel;
 }
 
-+ (double)preferredHeightForViewConfiguration:(id)arg1;
++ (double)preferredHeightForViewModel:(id)arg1;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <T1ForwardPivotViewConfiguration> viewConfiguration; // @synthesize viewConfiguration=_viewConfiguration;
+@property(retain, nonatomic) id <T1ForwardPivotViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) NSArray *currentConstraints; // @synthesize currentConstraints=_currentConstraints;
 @property(retain, nonatomic) UITapGestureRecognizer *singleTapRecognizer; // @synthesize singleTapRecognizer=_singleTapRecognizer;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
@@ -40,8 +40,8 @@
 @property(nonatomic) __weak id <T1ForwardPivotViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)_t1_updateConstraints;
 - (void)_t1_didSingleTap:(id)arg1;
-- (void)_t1_applyViewConfiguration:(id)arg1;
-- (void)setViewConfiguration:(id)arg1 account:(id)arg2;
+- (void)_t1_applyViewModel:(id)arg1;
+- (void)setViewModel:(id)arg1 account:(id)arg2;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (void)updateConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

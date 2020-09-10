@@ -14,7 +14,7 @@
 + (unsigned long long)responseHydrationFlags;
 + (long long)HTTPMethodValue;
 + (id)endpointPath;
-- (id)initWithEvent:(id)arg1 referringLinkURL:(id)arg2 headerFields:(id)arg3 context:(id)arg4 responseModelBuilder:(id)arg5;
+- (id)initWithEvent:(id)arg1 referringLinkURL:(id)arg2 isFirstOpen:(_Bool)arg3 headerFields:(id)arg4 context:(id)arg5 responseModelBuilder:(id)arg6;
 
 @end
 

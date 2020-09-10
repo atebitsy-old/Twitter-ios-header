@@ -8,8 +8,8 @@
 
 #import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 
-@class CALayer, NSString, T1MomentCalculatedMediaRenderLayoutView, T1MomentCapsuleInfoViewTheme, T1MomentCapsuleLoadingView, TFNAttributedTextView, TFNButton, TFNTwitterAccount, TIPImagePipeline, UIButton, UIImage, UIImageView, UILabel;
-@protocol T1MomentCapsuleInfoViewDelegate, T1MomentCapsuleInfoViewLayoutDelegate, T1MomentViewModel;
+@class CALayer, NSString, T1MomentCalculatedMediaRenderLayoutView, T1MomentCapsuleInfoViewTheme, T1MomentCapsuleLoadingView, TFNAttributedTextView, TFNButton, TFNTwitterAccount, TFNTwitterMomentCapsule, TIPImagePipeline, UIButton, UIImage, UIImageView, UILabel;
+@protocol T1MomentCapsuleInfoViewDelegate, T1MomentCapsuleInfoViewLayoutDelegate;
 
 @interface T1MomentCapsuleInfoView : UIView <T1ImageViewFetchHelperDelegate>
 {
@@ -27,7 +27,7 @@
     UIView *_thumbnailView;
     TFNButton *_followButton;
     T1MomentCapsuleLoadingView *_loadingView;
-    id <T1MomentViewModel> _momentViewModel;
+    TFNTwitterMomentCapsule *_momentViewModel;
     TFNTwitterAccount *_account;
     id <T1MomentCapsuleInfoViewDelegate> _delegate;
     T1MomentCapsuleInfoViewTheme *_theme;
@@ -56,7 +56,7 @@
 @property(retain, nonatomic) T1MomentCapsuleInfoViewTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <T1MomentCapsuleInfoViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) __weak TFNTwitterAccount *account; // @synthesize account=_account;
-@property(readonly, nonatomic) id <T1MomentViewModel> momentViewModel; // @synthesize momentViewModel=_momentViewModel;
+@property(readonly, nonatomic) TFNTwitterMomentCapsule *momentViewModel; // @synthesize momentViewModel=_momentViewModel;
 @property(retain, nonatomic) T1MomentCapsuleLoadingView *loadingView; // @synthesize loadingView=_loadingView;
 @property(retain, nonatomic) TFNButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) UIView *thumbnailView; // @synthesize thumbnailView=_thumbnailView;

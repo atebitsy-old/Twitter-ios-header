@@ -6,10 +6,13 @@
 
 #import <UIKit/UIView.h>
 
-@class T1AvatarImageView, UIButton;
+@class NSString, T1AvatarImageView, UIButton;
+@protocol T1ConversationPersistentReplyBarViewDelegate;
 
 @interface T1ConversationPersistentReplyBarView : UIView
 {
+    NSString *_placeholderText;
+    id <T1ConversationPersistentReplyBarViewDelegate> _delegate;
     T1AvatarImageView *_avatarImageView;
     UIButton *_mockTextFieldButton;
     UIView *_topBorder;
@@ -20,11 +23,14 @@
 @property(retain, nonatomic) UIView *topBorder; // @synthesize topBorder=_topBorder;
 @property(retain, nonatomic) UIButton *mockTextFieldButton; // @synthesize mockTextFieldButton=_mockTextFieldButton;
 @property(retain, nonatomic) T1AvatarImageView *avatarImageView; // @synthesize avatarImageView=_avatarImageView;
+@property(nonatomic) __weak id <T1ConversationPersistentReplyBarViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property(retain, nonatomic) NSString *placeholderText; // @synthesize placeholderText=_placeholderText;
+- (void)_t1_didTapMockTextFieldButton;
 - (struct CGSize)_t1_avatarSize;
 - (id)calculatedLayoutMetrics;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)layoutSubviews;
-- (id)initWithAccount:(id)arg1;
+- (id)initWithAccount:(id)arg1 delegate:(id)arg2;
 
 @end
 

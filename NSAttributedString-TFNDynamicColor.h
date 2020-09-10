@@ -15,6 +15,7 @@
 - (id)_tfn_dynamicColorForAttributeName:(id)arg1 inAttributes:(id)arg2;
 - (_Bool)_tfn_hasDynamicColors:(_Bool)arg1 forObject:(id)arg2;
 - (_Bool)tfn_hasDynamicColorsForObject:(id)arg1;
+- (_Bool)tfn_isEqualToAttributedStringIgnoringDynamicColor:(id)arg1;
 - (id)tfn_dynamicColorAttributedStringForObject:(id)arg1;
 - (double)tfn_lineHeightAtIndex:(long long)arg1;
 - (id)tfn_fontAtIndex:(long long)arg1;

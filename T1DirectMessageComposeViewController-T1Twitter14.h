@@ -7,6 +7,6 @@
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
 @interface T1DirectMessageComposeViewController (T1Twitter14)
-- (void)willTransitionToTraitCollection:(id)arg1 withTransitionCoordinator:(id)arg2;
+- (void)scrollViewWillBeginDragging:(id)arg1;
 @end
 

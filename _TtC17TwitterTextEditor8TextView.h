@@ -6,7 +6,7 @@
 
 #import <UIKit/UITextView.h>
 
-@class NSString, UIColor, UIFont, UIPasteConfiguration, UITextInputMode;
+@class NSString, UIPasteConfiguration, UITextInputMode;
 
 __attribute__((visibility("hidden")))
 @interface _TtC17TwitterTextEditor8TextView : UITextView
@@ -15,21 +15,12 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: shouldWorkaroundTextInputModeBug
     // Error parsing type: , name: changeTextWritingDirectionActionsEnabled
     // Error parsing type: , name: pasteboardObserverCache
-    // Error parsing type: , name: placeholderTextView
-    // Error parsing type: , name: textStorageDidProcessEditingObserverToken
-    // Error parsing type: , name: placeholderText
-    // Error parsing type: , name: placeholderTextColor
-    // Error parsing type: , name: maximumNumberOfLinesForPlaceholderText
     // Error parsing type: , name: preferredTextInputModeContextIdentifier
 }
 
 - (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1 textContainer:(id)arg2;
-@property(nonatomic, copy) NSString *accessibilityLabel;
-@property(nonatomic) long long textAlignment;
-@property(nonatomic, retain) UIColor *textColor;
-@property(nonatomic, retain) UIFont *font;
 - (_Bool)canPasteItemProviders:(id)arg1;
 - (void)setBaseWritingDirection:(long long)arg1 forRange:(id)arg2;
 - (void)unmarkText;

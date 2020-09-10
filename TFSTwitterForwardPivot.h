@@ -16,14 +16,15 @@
 - (void).cxx_destruct;
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
-@property(nonatomic, readonly) TFSURTRichText *forwardPivotSubtext;
-@property(nonatomic, readonly) NSString *forwardPivotDisplayType;
-@property(nonatomic, readonly) NSString *forwardPivotLandingUrlString;
-@property(nonatomic, readonly) NSString *forwardPivotBadgeTextColorName;
-@property(nonatomic, readonly) NSString *forwardPivotBadgeText;
-@property(nonatomic, readonly) TFSURTRichText *forwardPivotText;
-@property(nonatomic, readonly) TFSURTImageVariant *forwardPivotImageVariant;
-@property(nonatomic, readonly) _Bool hasSoftIntervention;
+@property(nonatomic, readonly) TFSURTRichText *subtext;
+@property(nonatomic, readonly) NSString *landingUrlString;
+@property(nonatomic, readonly) NSString *displayType;
+@property(nonatomic, readonly) NSString *badgeTextColorName;
+@property(nonatomic, readonly) NSString *badgeText;
+@property(nonatomic, readonly) NSString *backgroundColorName;
+@property(nonatomic, readonly) TFSURTRichText *richText;
+@property(nonatomic, readonly) TFSURTImageVariant *imageVariant;
+@property(nonatomic, readonly) _Bool isSoftIntervention;
 
 @end
 

@@ -38,9 +38,10 @@
 - (id)_t1_compositionStatusTextItem;
 - (id)_t1_compositionStatusIcon;
 - (void)_t1_nudgeMenuSheetViewControllerDidDismiss;
-- (void)_t1_cancelFeedbackNudgeAndRecordAction:(_Bool)arg1;
 - (void)_t1_presentFeedbackSurveyFromViewController:(id)arg1;
 - (void)_t1_nudgeControllerDidEnterBackground:(id)arg1;
+- (void)_t1_recordDismissFeedbackRequestFromGesture;
+- (void)_t1_recordCancelFeedbackRequestFromActionItem;
 - (void)_t1_recordNudgeResult:(unsigned long long)arg1;
 - (void)_t1_recordNudgeAction:(unsigned long long)arg1;
 - (void)menuSheetViewController:(id)arg1 willDismissFromGesture:(_Bool)arg2;

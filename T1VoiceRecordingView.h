@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1VoiceRecordingViewModelObserver-Protocol.h>
 
-@class NSString, PTVGuestAudioView, T1VoiceRecordingAudiowavesView, T1VoiceRecordingButton, T1VoiceRecordingViewModel, UIImage, UILabel;
+@class NSString, T1VoiceAvatarView, T1VoiceRecordingAudiowavesView, T1VoiceRecordingButton, T1VoiceRecordingViewModel, UIImage, UILabel;
 @protocol T1VoiceRecordingViewDelegate;
 
 @interface T1VoiceRecordingView : UIView <T1VoiceRecordingViewModelObserver>
@@ -19,14 +19,16 @@
     T1VoiceRecordingAudiowavesView *_audiowavesView;
     UIView *_audiowaveBaselineView;
     UIView *_avatarContainerView;
-    PTVGuestAudioView *_avatarView;
+    T1VoiceAvatarView *_avatarView;
+    unsigned long long _avatarAnimationCurrentStepCount;
     UILabel *_initialPromptLabel;
 }
 
 + (id)new;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *initialPromptLabel; // @synthesize initialPromptLabel=_initialPromptLabel;
-@property(retain, nonatomic) PTVGuestAudioView *avatarView; // @synthesize avatarView=_avatarView;
+@property(nonatomic) unsigned long long avatarAnimationCurrentStepCount; // @synthesize avatarAnimationCurrentStepCount=_avatarAnimationCurrentStepCount;
+@property(retain, nonatomic) T1VoiceAvatarView *avatarView; // @synthesize avatarView=_avatarView;
 @property(retain, nonatomic) UIView *avatarContainerView; // @synthesize avatarContainerView=_avatarContainerView;
 @property(retain, nonatomic) UIView *audiowaveBaselineView; // @synthesize audiowaveBaselineView=_audiowaveBaselineView;
 @property(retain, nonatomic) T1VoiceRecordingAudiowavesView *audiowavesView; // @synthesize audiowavesView=_audiowavesView;
@@ -41,8 +43,7 @@
 - (void)voiceRecordingViewModelDidUpdatePlaybackState:(id)arg1;
 - (void)voiceRecordingViewModelDidUpdateStep:(id)arg1;
 @property(readonly, nonatomic) UIImage *avatarImage;
-- (void)setAvatarImage:(id)arg1;
-- (id)initWithViewModel:(id)arg1;
+- (id)initWithViewModel:(id)arg1 imagePipeline:(id)arg2;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)init;

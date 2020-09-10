@@ -11,25 +11,26 @@
     // Error parsing type: , name: moreButton
     // Error parsing type: , name: SortChronologicallyKey
     // Error parsing type: , name: InboxSortingTooltipEvent
-    // Error parsing type: , name: didRegisterTopRequestsImpression
     // Error parsing type: , name: $__lazy_storage_$_headerItem
-    // Error parsing type: , name: $__lazy_storage_$_topRequestsItem
+    // Error parsing type: , name: $__lazy_storage_$_topRequestsHeaderItem
     // Error parsing type: , name: $__lazy_storage_$_emptyTopRequestsItem
-    // Error parsing type: , name: $__lazy_storage_$_otherRequestsItem
+    // Error parsing type: , name: $__lazy_storage_$_otherRequestsHeaderItem
     // Error parsing type: , name: $__lazy_storage_$_emptyOtherRequestsItem
     // Error parsing type: , name: $__lazy_storage_$_footerIntroItem
     // Error parsing type: , name: $__lazy_storage_$_lowQualityPivotItem
+    // Error parsing type: , name: didRegisterTopRequestsImpression
 }
 
 - (void).cxx_destruct;
+- (id)scribeComponent;
 - (void)showMoreOptions;
 - (void)dealloc;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (void)viewDidLoad;
 - (void)didMoveToParentViewController:(id)arg1;
 - (_Bool)shouldShowLowQualityPivotForConversationCount:(long long)arg1 filteringEnabled:(_Bool)arg2 atEndOfInbox:(_Bool)arg3;
 - (id)initWithAccount:(id)arg1;
+@property(nonatomic) _Bool didRegisterTopRequestsImpression; // @synthesize didRegisterTopRequestsImpression;
 
 @end
 

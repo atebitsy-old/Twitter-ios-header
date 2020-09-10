@@ -66,7 +66,6 @@
 - (void)_updateShortenedURLLengthConfigurations:(id)arg1;
 - (void)_configureDeviceTokenManager:(_Bool)arg1;
 - (void)_configureAuthorizationManager:(id)arg1 switches:(id)arg2;
-- (void)_setUpTFNUIConfiguration;
 - (void)_updateCoreServicesConfiguration;
 - (void)_startTFSCredentialsManager:(id)arg1;
 - (void)_setUpGraphicsFilters;

@@ -31,7 +31,7 @@
 + (id)placePageConfigurationForPlaceID:(id)arg1 placeName:(id)arg2;
 + (id)draftTweetPreviewsTimelineConfigurationForParameters:(id)arg1 account:(id)arg2;
 + (id)listConfigurationForListID:(long long)arg1 title:(id)arg2 isPinned:(_Bool)arg3 account:(id)arg4;
-+ (id)quoteTweetConfigurationForQuotedStatusID:(long long)arg1 geoDataProvider:(id)arg2;
++ (id)quoteTweetConfigurationForQuotedStatusID:(long long)arg1 title:(id)arg2 geoDataProvider:(id)arg3;
 + (id)searchConfigurationForParameters:(id)arg1 resultFilter:(long long)arg2 tweetSearchMode:(long long)arg3 title:(id)arg4 emptyContentMessage:(id)arg5 scribeContext:(id)arg6 geoDataProvider:(id)arg7;
 - (void).cxx_destruct;
 - (id)init;

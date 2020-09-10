@@ -10,11 +10,15 @@
 
 @interface TFNMenuCenteredIconItem : NSObject
 {
+    _Bool _adjustImageSizeForContentSizeCategory;
     NSString *_iconImageName;
     UIColor *_iconFillColor;
+    struct CGSize _iconImageSize;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool adjustImageSizeForContentSizeCategory; // @synthesize adjustImageSizeForContentSizeCategory=_adjustImageSizeForContentSizeCategory;
+@property(nonatomic) struct CGSize iconImageSize; // @synthesize iconImageSize=_iconImageSize;
 @property(retain, nonatomic) UIColor *iconFillColor; // @synthesize iconFillColor=_iconFillColor;
 @property(copy, nonatomic) NSString *iconImageName; // @synthesize iconImageName=_iconImageName;
 - (id)initWithIconImageName:(id)arg1;

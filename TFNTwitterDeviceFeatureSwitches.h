@@ -54,6 +54,7 @@
 + (id)CDNFileExtensionList;
 + (id)CDNHostRootList;
 + (long long)CDNSampleSize;
++ (_Bool)isOnboardingAttributionServiceMigrationEnabled;
 + (_Bool)isOnboardingPreferredLanguageSelectorEnabled;
 + (id)appEventTrackingShortenedTrackingParameters;
 + (double)appEventTrackingNonReferredOpenInterval;
@@ -83,11 +84,8 @@
 + (id)protectedUserKeysRedactionList;
 + (id)HTTPHeaderFieldRedactionList;
 + (id)userDefaultsKeysRedactionList;
-+ (_Bool)isUndoScrollToTopEnabled;
 + (_Bool)isProvisionalAuthorizationEnabled;
 + (_Bool)isUNUserNotificationCenterEnabled;
-+ (_Bool)isNestedActionButtonEnabled;
-+ (_Bool)isLayoutGuideSafeAreaMigrationEnabled;
 + (double)_CGFloatForKey:(id)arg1 minValue:(double)arg2 maxValue:(double)arg3;
 + (long long)_integerForKey:(id)arg1 minValue:(long long)arg2 maxValue:(long long)arg3;
 + (id)nonUsernamePaths;

@@ -36,7 +36,13 @@
 @property(retain, nonatomic) TAVPlayer *player; // @synthesize player=_player;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(retain, nonatomic) T1VoiceStatusViewModel *viewModel; // @synthesize viewModel=_viewModel;
+- (long long)_t1_handleSkipBackwardCommand:(id)arg1;
+- (long long)_t1_handleSkipForwardCommand:(id)arg1;
+- (long long)_t1_handleChangePlaybackPositionCommand:(id)arg1;
+- (long long)_t1_handlePauseCommand:(id)arg1;
+- (long long)_t1_handlePlayCommand:(id)arg1;
 - (void)_t1_updateControlCenterWithPlaybackState:(id)arg1;
+- (void)_t1_removeControlCenter;
 - (void)_t1_attachControlCenter;
 - (void)voiceDockView:(id)arg1 didSeekToTimeSecs:(double)arg2;
 - (void)voiceDockViewCloseButtonWasTapped:(id)arg1;
@@ -64,6 +70,7 @@
 - (id)_t1_voiceStatusesCorrespondingToStatus:(id)arg1 inTimelineItems:(id)arg2;
 - (void)timelineDidUpdate:(id)arg1;
 - (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
+- (void)_t1_skipToNextClip;
 - (id)_t1_calculateNextViewModel;
 - (double)_t1_calculatePreviousDuration;
 - (double)_t1_calculateTotalDuration;
@@ -73,6 +80,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)loadView;
 - (void)viewDidLoad;
+- (void)dealloc;
 - (id)initWithAccount:(id)arg1;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;

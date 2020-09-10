@@ -7,6 +7,7 @@
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
 @interface T1DirectMessageComposeViewController (T1Twitter11)
-- (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
+- (void)quickReplyPresentationBehaviorHideQuickReply:(id)arg1;
+- (void)quickReplyPresentationBehavior:(id)arg1 presentOptionsQuickReplyWithID:(id)arg2 options:(id)arg3 selectedOption:(id)arg4 shouldFocus:(_Bool)arg5;
 @end
 

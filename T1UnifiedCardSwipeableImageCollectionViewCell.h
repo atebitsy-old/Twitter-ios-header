@@ -9,17 +9,17 @@
 #import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 #import <T1Twitter/TFNPreviewable-Protocol.h>
 
-@class NSString, TFNTappableHighlightView, UIImageView;
+@class NSString, T1CardImageView, TFNTappableHighlightView;
 
 @interface T1UnifiedCardSwipeableImageCollectionViewCell : T1UnifiedCardSwipeableCollectionViewCell <TFNPreviewable, T1ImageViewFetchHelperDelegate>
 {
-    UIImageView *_imageView;
+    T1CardImageView *_imageView;
     TFNTappableHighlightView *_imageHighlightView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNTappableHighlightView *imageHighlightView; // @synthesize imageHighlightView=_imageHighlightView;
-@property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
+@property(retain, nonatomic) T1CardImageView *imageView; // @synthesize imageView=_imageView;
 - (void)t1_fetchHelper:(id)arg1 didFailToLoadImageWithError:(id)arg2;
 - (void)configureSwipeableCollectionViewCellWithData:(id)arg1 imagePipeline:(id)arg2 cellPosition:(long long)arg3 account:(id)arg4 scribeContext:(id)arg5;
 - (void)prepareForReuse;

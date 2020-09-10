@@ -7,6 +7,8 @@
 #import <UIKit/UITraitCollection.h>
 
 @interface UITraitCollection (TFNAdditions)
+- (unsigned long long)tfn_hashIgnoringUIStyle;
+- (_Bool)tfn_isEqualToTraitCollectionIgnoringUIStyle:(id)arg1;
 - (unsigned long long)tfn_hash;
 - (_Bool)tfn_isEqualToTraitCollection:(id)arg1;
 @end

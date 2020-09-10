@@ -6,7 +6,10 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-@interface T1DirectMessageComposeViewController (T1Twitter5)
-@property(nonatomic, readonly) unsigned long long composeViewState;
+#import <T1Twitter/T1FoundMediaControllerDelegate-Protocol.h>
+
+@interface T1DirectMessageComposeViewController (T1Twitter5) <T1FoundMediaControllerDelegate>
+- (void)foundMediaController:(id)arg1 viewControllerDidCancel:(id)arg2;
+- (void)foundMediaController:(id)arg1 viewController:(id)arg2 didSelectFoundMediaItem:(id)arg3;
 @end
 

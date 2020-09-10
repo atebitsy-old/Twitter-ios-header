@@ -17,6 +17,7 @@
     // Error parsing type: , name: relationship
     // Error parsing type: , name: protected
     // Error parsing type: , name: verified
+    // Error parsing type: , name: identityType
     // Error parsing type: , name: _profileImageMediaEntity
     // Error parsing type: , name: profileImageURL
     // Error parsing type: , name: profileBannerURL
@@ -30,6 +31,7 @@
 @property(nonatomic, copy) NSString *profileBannerURL;
 @property(nonatomic, copy) NSString *profileImageURL;
 @property(nonatomic, retain) TFSTwitterEntityMedia *profileImageMediaEntity;
+@property(nonatomic) long long identityType; // @synthesize identityType;
 @property(nonatomic) _Bool verified; // @synthesize verified;
 @property(nonatomic) _Bool protected; // @synthesize protected;
 @property(nonatomic, retain) TFSTwitterRelationship *relationship; // @synthesize relationship;

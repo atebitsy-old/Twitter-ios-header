@@ -7,15 +7,16 @@
 #import <T1Twitter/T1VoicePlaybackView.h>
 
 #import <T1Twitter/T1VideoCaptionsViewDelegate-Protocol.h>
+#import <T1Twitter/TAVUIAutoplayable-Protocol.h>
 
-@class NSTimer, PTVGuestAudioView, T1VideoCaptionsView, UIButton, UIImageView, UILabel, UITapGestureRecognizer;
+@class NSString, NSTimer, T1VideoCaptionsView, T1VoiceAvatarView, UIButton, UIImageView, UILabel, UITapGestureRecognizer, UIView;
 @protocol T1VoiceViewDelegate, T1VoiceViewModel;
 
-@interface T1VoiceView : T1VoicePlaybackView <T1VideoCaptionsViewDelegate>
+@interface T1VoiceView : T1VoicePlaybackView <T1VideoCaptionsViewDelegate, TAVUIAutoplayable>
 {
     id <T1VoiceViewDelegate> _delegate;
     id <T1VoiceViewModel> _viewModel;
-    PTVGuestAudioView *_avatarView;
+    T1VoiceAvatarView *_avatarView;
     UILabel *_positionLabel;
     UILabel *_brandingLabel;
     UILabel *_durationLabel;
@@ -37,20 +38,31 @@
 @property(retain, nonatomic) UILabel *durationLabel; // @synthesize durationLabel=_durationLabel;
 @property(retain, nonatomic) UILabel *brandingLabel; // @synthesize brandingLabel=_brandingLabel;
 @property(retain, nonatomic) UILabel *positionLabel; // @synthesize positionLabel=_positionLabel;
-@property(retain, nonatomic) PTVGuestAudioView *avatarView; // @synthesize avatarView=_avatarView;
+@property(retain, nonatomic) T1VoiceAvatarView *avatarView; // @synthesize avatarView=_avatarView;
 @property(retain, nonatomic) id <T1VoiceViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <T1VoiceViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)_t1_updateSubviewsVisibility;
 - (void)_t1_handleTapEvent;
 - (void)_t1_updateAudioLevelValue;
-- (void)_t1_updateAudioLevelTimer;
+- (void)_t1_endAudioLevelUpdates;
+- (void)_t1_beginAudioLevelUpdates;
+- (void)willResignAsActiveAutoplayableWithManager:(id)arg1;
+- (void)didBecomeActiveAutoplayableWithManager:(id)arg1;
+@property(readonly, nonatomic) UIView *autoplayableView;
 - (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 - (void)videoCaptionsView:(id)arg1 legibleMediaSelectionOption:(id)arg2;
 - (void)videoCaptionsView:(id)arg1 enableCaptions:(_Bool)arg2;
 - (long long)t1_playerViewAttachmentPriority;
 - (void)_t1_createCaptionsViewIfNeeded;
 - (void)layoutSubviews;
-- (id)init;
+- (void)dealloc;
+- (id)initWithImagePipeline:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

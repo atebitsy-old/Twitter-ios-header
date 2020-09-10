@@ -42,8 +42,10 @@
 - (id)previewingContext:(id)arg1 viewControllerForLocation:(struct CGPoint)arg2;
 - (void)contextMenuInteraction:(id)arg1 willPerformPreviewActionForMenuWithConfiguration:(id)arg2 animator:(id)arg3;
 - (id)contextMenuInteraction:(id)arg1 configurationForMenuAtLocation:(struct CGPoint)arg2;
-- (double)topPaddingAdjustmentForProfileUserInfoView:(id)arg1;
+- (void)_t1_loadBioTranslation;
 - (void)profileUserInfoViewDidTapTranslateBio:(id)arg1;
+- (void)profileUserInfoView:(id)arg1 bioTranslationStateDidChange:(unsigned long long)arg2 previousState:(unsigned long long)arg3;
+- (double)topPaddingAdjustmentForProfileUserInfoView:(id)arg1;
 - (void)profileUserInfoView:(id)arg1 didTapStructuredLocation:(id)arg2;
 - (void)profileUserInfoView:(id)arg1 didTapBioActiveRange:(id)arg2;
 - (void)profileUserInfoView:(id)arg1 didTapContributorLearnMore:(id)arg2;

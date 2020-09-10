@@ -18,8 +18,7 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (void)conversationMetadataDidUpdateWithNotification:(id)arg1;
-- (void)didTapWithTrashButton:(id)arg1;
-- (void)didTapWithCaretButton:(id)arg1;
+- (void)didTapWithActionButton:(id)arg1;
 - (void)didTapWithThumbnailImageView:(id)arg1;
 - (void)willDisplayInDataViewController:(id)arg1 atIndexPath:(id)arg2;
 - (id)initWithCoder:(id)arg1;

@@ -84,6 +84,7 @@
 @property(readonly, copy, nonatomic) NSArray *withheldInCountries;
 @property(readonly, nonatomic) _Bool nsfw;
 @property(readonly, nonatomic) _Bool suspended;
+@property(readonly, nonatomic) long long identityType;
 @property(readonly, nonatomic) _Bool verified;
 @property(readonly, nonatomic) _Bool protectedUser;
 @property(readonly, copy, nonatomic) NSDate *createdDate;

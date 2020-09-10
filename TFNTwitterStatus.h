@@ -24,7 +24,7 @@
 #import <T1Twitter/TFSModel-Protocol.h>
 #import <T1Twitter/TFSTwitterScribableItem-Protocol.h>
 
-@class NSArray, NSDate, NSDictionary, NSNumber, NSString, T1PlayerSessionProducer, TAVAnalyticsMediaIdentifier, TFNTwitterCanonicalStatus, TFNTwitterCardData, TFNTwitterDisplayTextModel, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterRelevancePrompt, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFNTwitterTweetDetailsScribeItem, TFNTwitterTweetPrompt, TFNTwitterUser, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterDynamicVideoAd, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterMediaInfo, TFSTwitterPromotedContent, TFSTwitterUserReference, TFSTwitterVideoMonetizationSettings, TFSTwitterVoiceInfo, TFSURTImageVariant, TFSURTRichText, UIColor, UIDragItem;
+@class NSArray, NSDate, NSDictionary, NSNumber, NSString, T1PlayerSessionProducer, TAVAnalyticsMediaIdentifier, TFNTwitterCanonicalStatus, TFNTwitterCardData, TFNTwitterDisplayTextModel, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterRelevancePrompt, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFNTwitterTweetDetailsScribeItem, TFNTwitterTweetPrompt, TFNTwitterUser, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterDynamicVideoAd, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterPromotedContent, TFSTwitterUserReference, TFSTwitterVideoMonetizationSettings, TFSTwitterVoiceInfo, TFSURTRichText, UIColor, UIDragItem;
 @protocol T1PlayerFactoryIdentifiable, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFNTwitterCardDataSource, TFNTwitterConversationStructure, TFNTwitterStatusBanner, TFNTwitterStatusConversationTreeContext, TFNTwitterStatusSocialContext, TFNTwitterTimelineEntryContext;
 
 @interface TFNTwitterStatus : NSObject <T1StatusViewModel, T1PlayerFactoryIdentifiable, T1SharableProtocol, T1PeopleDiscoveryScribableItem, NSCoding, TFNTwitterCanonicalTimelineStatus, TFSTwitterScribableItem, TFSDateComparable, TFNTwitterUserRelatable, TFNTwitterMutableDismissibleItem, TFNTwitterCardDataSourceObject, TFNTwitterCardDataSourceProvider, TFNTwitterAVPlayerSessionSource, TFNTwitterTimelineObject, TFSModel, TFNTwitterFeedbackInfoSource, NSItemProviderWriting>
@@ -91,16 +91,8 @@
     NSString *_conversationSection;
     id <TFNTwitterConversationStructure> _conversationPayload;
     long long _conversationFocalStatusID;
-    TFSURTImageVariant *_forwardPivotImageVariant;
-    TFSURTRichText *_forwardPivotText;
-    TFSURTRichText *_forwardPivotSubtext;
-    NSString *_forwardPivotBadgeText;
-    UIColor *_forwardPivotBadgeTextColor;
-    NSString *_forwardPivotBadgeTextColorName;
-    NSString *_forwardPivotLandingUrlString;
-    NSString *_forwardPivotDisplayType;
-    NSString *_forwardPivotAccessibilityString;
-    UIColor *_forwardPivotBackgroundColor;
+    TFSTwitterForwardPivot *_forwardPivot;
+    TFSTwitterForwardPivot *_innerForwardPivot;
     long long _authenticatedUserID;
     CDStruct_c9ea5807 _flags;
     TFNTwitterCardData *_contextualCardData;
@@ -124,18 +116,10 @@
 @property(nonatomic) _Bool derivedSocialContextInitialized; // @synthesize derivedSocialContextInitialized=_derivedSocialContextInitialized;
 @property(nonatomic) CDStruct_c9ea5807 flags; // @synthesize flags=_flags;
 @property(readonly, nonatomic) long long authenticatedUserID; // @synthesize authenticatedUserID=_authenticatedUserID;
-@property(retain, nonatomic) UIColor *forwardPivotBackgroundColor; // @synthesize forwardPivotBackgroundColor=_forwardPivotBackgroundColor;
-@property(retain, nonatomic) NSString *forwardPivotAccessibilityString; // @synthesize forwardPivotAccessibilityString=_forwardPivotAccessibilityString;
-@property(retain, nonatomic) NSString *forwardPivotDisplayType; // @synthesize forwardPivotDisplayType=_forwardPivotDisplayType;
-@property(retain, nonatomic) NSString *forwardPivotLandingUrlString; // @synthesize forwardPivotLandingUrlString=_forwardPivotLandingUrlString;
-@property(retain, nonatomic) NSString *forwardPivotBadgeTextColorName; // @synthesize forwardPivotBadgeTextColorName=_forwardPivotBadgeTextColorName;
-@property(retain, nonatomic) UIColor *forwardPivotBadgeTextColor; // @synthesize forwardPivotBadgeTextColor=_forwardPivotBadgeTextColor;
-@property(retain, nonatomic) NSString *forwardPivotBadgeText; // @synthesize forwardPivotBadgeText=_forwardPivotBadgeText;
-@property(retain, nonatomic) TFSURTRichText *forwardPivotSubtext; // @synthesize forwardPivotSubtext=_forwardPivotSubtext;
-@property(retain, nonatomic) TFSURTRichText *forwardPivotText; // @synthesize forwardPivotText=_forwardPivotText;
-@property(retain, nonatomic) TFSURTImageVariant *forwardPivotImageVariant; // @synthesize forwardPivotImageVariant=_forwardPivotImageVariant;
+@property(retain, nonatomic) TFSTwitterForwardPivot *innerForwardPivot; // @synthesize innerForwardPivot=_innerForwardPivot;
 @property(nonatomic) _Bool hasSoftIntervention; // @synthesize hasSoftIntervention=_hasSoftIntervention;
 @property(nonatomic) _Bool hasForwardPivot; // @synthesize hasForwardPivot=_hasForwardPivot;
+@property(retain, nonatomic) TFSTwitterForwardPivot *forwardPivot; // @synthesize forwardPivot=_forwardPivot;
 @property(nonatomic) long long conversationFocalStatusID; // @synthesize conversationFocalStatusID=_conversationFocalStatusID;
 @property(nonatomic) _Bool isConversationRoot; // @synthesize isConversationRoot=_isConversationRoot;
 @property(nonatomic) _Bool isConversationPrecededByAncestor; // @synthesize isConversationPrecededByAncestor=_isConversationPrecededByAncestor;
@@ -427,6 +411,7 @@
 @property(readonly, nonatomic) NSString *advertiserName;
 @property(readonly, nonatomic) _Bool isFromUserAffiliated;
 @property(readonly, nonatomic) _Bool isFromUserUsernameless;
+@property(readonly, nonatomic) long long fromUserIdentityType;
 @property(readonly, nonatomic) _Bool isFromUserVerified;
 @property(readonly, nonatomic) _Bool isFromUserProtected;
 @property(readonly, nonatomic) _Bool isTweetedByAuthenticatedAccount;

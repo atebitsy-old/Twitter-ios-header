@@ -44,7 +44,6 @@
 @property(retain, nonatomic) TFNTwitterUnifiedCard *unifiedCard; // @synthesize unifiedCard=_unifiedCard;
 - (void)_t1_configureButtonWithComponent:(id)arg1;
 - (void)_t1_didTapButton:(id)arg1;
-- (void)_t1_setupHighlightView:(id)arg1 withAccessibilityIdentifier:(id)arg2;
 - (void)_t1_didTapDetail:(id)arg1;
 - (void)_t1_didLongPressDetail:(id)arg1;
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;

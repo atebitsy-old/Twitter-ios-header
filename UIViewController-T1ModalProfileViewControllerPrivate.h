@@ -168,7 +168,6 @@
 - (id)t1_scribeSectionForFollowAction;
 - (id)t1_menuSheetForElectionLabelWithURL:(id)arg1 account:(id)arg2 indexPath:(id)arg3 source:(id)arg4 doneBlock:(CDUnknownBlockType)arg5;
 - (id)t1_menuSheetForUser:(id)arg1 userContext:(id)arg2 type:(long long)arg3 source:(id)arg4 associatedStatus:(id)arg5 account:(id)arg6;
-- (id)t1_actionSheetForUser:(id)arg1 userContext:(id)arg2 type:(long long)arg3 source:(id)arg4 associatedStatus:(id)arg5 account:(id)arg6;
 - (id)t1_actionItemsForUser:(id)arg1 userContext:(id)arg2 type:(long long)arg3 source:(id)arg4 associatedStatus:(id)arg5 account:(id)arg6 scribeContext:(id)arg7;
 - (id)t1_actionItemsForUser:(id)arg1 userContext:(id)arg2 type:(long long)arg3 source:(id)arg4 associatedStatus:(id)arg5 account:(id)arg6;
 - (void)t1_showSuspendedAlertForAccount:(id)arg1 okOnly:(_Bool)arg2 phoneChallengeAcceptBlock:(CDUnknownBlockType)arg3;
@@ -190,10 +189,10 @@
 - (id)_t1_shareUserActionItemForUserReference:(id)arg1 account:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 scribeParameters:(id)arg5;
 - (id)_t1_showFullProfileActionItemForUserReference:(id)arg1 userContext:(id)arg2 account:(id)arg3 scribeContext:(id)arg4 scribeParameters:(id)arg5;
 - (id)_t1_followActionItemForUser:(id)arg1 userContext:(id)arg2 account:(id)arg3 associatedStatus:(id)arg4 scribeContext:(id)arg5 showConfirmation:(_Bool)arg6;
-- (void)_t1_presentUserMomentsFromViewController:(id)arg1 userID:(long long)arg2 displayUsername:(id)arg3 account:(id)arg4;
+- (void)t1_presentUserMomentsFromViewController:(id)arg1 userID:(long long)arg2 displayUsername:(id)arg3 account:(id)arg4;
 - (id)_t1_viewMomentsActionItemForUser:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 scribeParameters:(id)arg4;
 - (id)_t1_viewListsActionItemForUserReference:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 scribeParameters:(id)arg4;
-- (id)_t1_addToListsActionItemForUserReference:(id)arg1 account:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 scribeParameters:(id)arg5;
+- (id)t1_addToListsActionItemForUserReference:(id)arg1 account:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 scribeParameters:(id)arg5;
 - (id)_t1_showTopicsItemForUserReference:(id)arg1 account:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 scribeParameters:(id)arg5;
 - (id)_t1_directMessageActionForUserID:(long long)arg1 account:(id)arg2 scribeContext:(id)arg3 scribeParameters:(id)arg4;
 - (id)_t1_reportActionItemForUser:(id)arg1 userContext:(id)arg2 account:(id)arg3 status:(id)arg4 scribeContext:(id)arg5 scribeParameters:(id)arg6;

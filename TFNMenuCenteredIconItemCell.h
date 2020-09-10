@@ -11,9 +11,11 @@
 @interface TFNMenuCenteredIconItemCell : TFNTableViewCell
 {
     UIImageView *_iconImageView;
+    struct CGSize _iconImageSize;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) struct CGSize iconImageSize; // @synthesize iconImageSize=_iconImageSize;
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 - (void)layoutSubviews;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

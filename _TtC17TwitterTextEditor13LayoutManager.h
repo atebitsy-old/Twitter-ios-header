@@ -6,14 +6,19 @@
 
 #import <UIKit/NSLayoutManager.h>
 
+@protocol NSLayoutManagerDelegate;
+
 __attribute__((visibility("hidden")))
 @interface _TtC17TwitterTextEditor13LayoutManager : NSLayoutManager
 {
+    // Error parsing type: , name: glyphsCache
 }
 
+- (void).cxx_destruct;
+- (void)drawGlyphsForGlyphRange:(struct _NSRange)arg1 atPoint:(struct CGPoint)arg2;
+@property(nonatomic, retain) id <NSLayoutManagerDelegate> delegate;
 - (id)initWithCoder:(id)arg1;
 - (id)init;
-- (void)drawGlyphsForGlyphRange:(struct _NSRange)arg1 atPoint:(struct CGPoint)arg2;
 
 @end
 

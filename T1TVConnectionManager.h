@@ -9,14 +9,10 @@
 @interface T1TVConnectionManager : NSObject
 {
     // Error parsing type: , name: account
-    // Error parsing type: , name: settings
-    // Error parsing type: , name: connection
 }
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
-- (void)tnl_communicationAgent:(id)arg1 didUpdateReachabilityFromPreviousFlags:(unsigned int)arg2 previousStatus:(long long)arg3 toCurrentFlags:(unsigned int)arg4 currentStatus:(long long)arg5;
-- (void)settingsDidChange:(id)arg1;
 - (void)accountDidBecomeInactive:(id)arg1;
 - (void)accountDidBecomeActive:(id)arg1;
 - (void)startWithAccount:(id)arg1;

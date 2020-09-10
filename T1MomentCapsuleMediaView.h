@@ -8,14 +8,13 @@
 
 #import <T1Twitter/T1PlayerCardPlayerContainerViewDelegate-Protocol.h>
 
-@class NSString, T1MomentCapsulePageImageView, T1MomentCapsuleViewConfiguration, T1PlayerCardPlayerContainerView, TFNTwitterStatus;
-@protocol T1MomentViewModel;
+@class NSString, T1MomentCapsulePageImageView, T1MomentCapsuleViewConfiguration, T1PlayerCardPlayerContainerView, TFNTwitterMomentCapsule, TFNTwitterStatus;
 
 @interface T1MomentCapsuleMediaView : UIView <T1PlayerCardPlayerContainerViewDelegate>
 {
     T1MomentCapsuleViewConfiguration *_configuration;
     T1PlayerCardPlayerContainerView *_playerContainerView;
-    id <T1MomentViewModel> _momentViewModel;
+    TFNTwitterMomentCapsule *_momentViewModel;
     T1MomentCapsulePageImageView *_capsuleImageView;
     NSString *_currentVideoStatusID;
     TFNTwitterStatus *_currentVideoStatus;
@@ -25,7 +24,7 @@
 @property(retain, nonatomic) TFNTwitterStatus *currentVideoStatus; // @synthesize currentVideoStatus=_currentVideoStatus;
 @property(retain, nonatomic) NSString *currentVideoStatusID; // @synthesize currentVideoStatusID=_currentVideoStatusID;
 @property(readonly, nonatomic) T1MomentCapsulePageImageView *capsuleImageView; // @synthesize capsuleImageView=_capsuleImageView;
-@property(retain, nonatomic) id <T1MomentViewModel> momentViewModel; // @synthesize momentViewModel=_momentViewModel;
+@property(retain, nonatomic) TFNTwitterMomentCapsule *momentViewModel; // @synthesize momentViewModel=_momentViewModel;
 @property(readonly, nonatomic) T1PlayerCardPlayerContainerView *playerContainerView; // @synthesize playerContainerView=_playerContainerView;
 @property(retain, nonatomic) T1MomentCapsuleViewConfiguration *configuration; // @synthesize configuration=_configuration;
 - (void)_requestCoverStatusIfNeededForID:(id)arg1 account:(id)arg2 completion:(CDUnknownBlockType)arg3;

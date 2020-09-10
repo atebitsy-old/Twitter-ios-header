@@ -14,16 +14,18 @@
 
 @interface TFNTwitterUnifiedCardAppStoreDetailsComponentModel : TFNTwitterUnifiedCardBaseComponentModel <TFNTwitterUnifiedCardDetailsAdaptable, TFNTwitterUnifiedCardAppMetadataAdaptable, TFNTwitterUnifiedCardCTAButtonVariationsAdaptable>
 {
+    _Bool _useAppStoreAsSubtitle;
     TFNTwitterUnifiedCardDominantColorConfig *_dominantColorConfig;
     TFNTwitterUnifiedCardAppStoreDataEntryPlatformMap *_platformMap;
-    TFNTwitterUnifiedCardButtonData *_button;
     TFNTwitterUnifiedCardAppMetadataConfig *_appMetadataConfig;
+    TFNTwitterUnifiedCardButtonData *_button;
 }
 
 + (id)componentWithJSON:(id)arg1 destinationDict:(id)arg2 mediaEntitiesDict:(id)arg3 appStoreData:(id)arg4 promotedContent:(id)arg5 usersDict:(id)arg6;
 - (void).cxx_destruct;
-@property(retain, nonatomic) TFNTwitterUnifiedCardAppMetadataConfig *appMetadataConfig; // @synthesize appMetadataConfig=_appMetadataConfig;
 @property(readonly, nonatomic) TFNTwitterUnifiedCardButtonData *button; // @synthesize button=_button;
+@property(readonly, nonatomic) _Bool useAppStoreAsSubtitle; // @synthesize useAppStoreAsSubtitle=_useAppStoreAsSubtitle;
+@property(readonly, nonatomic) TFNTwitterUnifiedCardAppMetadataConfig *appMetadataConfig; // @synthesize appMetadataConfig=_appMetadataConfig;
 @property(retain, nonatomic) TFNTwitterUnifiedCardAppStoreDataEntryPlatformMap *platformMap; // @synthesize platformMap=_platformMap;
 @property(readonly, nonatomic) TFNTwitterUnifiedCardDominantColorConfig *dominantColorConfig; // @synthesize dominantColorConfig=_dominantColorConfig;
 @property(readonly) unsigned long long hash;
@@ -39,7 +41,7 @@
 @property(readonly, copy, nonatomic) NSString *subtitle;
 @property(readonly, copy, nonatomic) NSString *title;
 @property(readonly, nonatomic) unsigned long long type;
-- (id)initWithDestination:(id)arg1 shouldRenderFullBleed:(_Bool)arg2 platformMap:(id)arg3 appMetadataConfig:(id)arg4 dominantColorConfig:(id)arg5;
+- (id)initWithDestination:(id)arg1 shouldRenderFullBleed:(_Bool)arg2 platformMap:(id)arg3 appMetadataConfig:(id)arg4 dominantColorConfig:(id)arg5 useAppStoreAsSubtitle:(_Bool)arg6;
 - (id)initWithComponentJSON:(id)arg1 destinationDict:(id)arg2 platformMap:(id)arg3;
 - (id)withButton:(id)arg1;
 - (id)withPromotedContent:(id)arg1;

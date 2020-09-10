@@ -103,6 +103,7 @@
 - (id)convertingButtonsToStrength:(unsigned long long)arg1;
 - (id)modifyingMediaDestinationTo:(long long)arg1;
 - (id)addingWebsiteCTA;
+- (id)convertingUCAppStoreDetailsToUseAppStoreAsSubtitle:(_Bool)arg1;
 - (id)convertingUCAppStoreDetailsToAppMetadataConfig:(id)arg1;
 - (id)convertingUCCarouselsToSingleMedia;
 @property(readonly, nonatomic) TFNTwitterUnifiedCard *unifiedCard;

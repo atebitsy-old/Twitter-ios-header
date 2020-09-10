@@ -6,21 +6,9 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-#import <T1Twitter/T1AltTextViewControllerDelegate-Protocol.h>
-#import <T1Twitter/T1MediaAttachmentsViewControllerDelegate-Protocol.h>
-#import <T1Twitter/TFNModalContainerViewControllerDelegate-Protocol.h>
-
-@interface T1DirectMessageComposeViewController (T1Twitter) <T1MediaAttachmentsViewControllerDelegate, T1AltTextViewControllerDelegate, TFNModalContainerViewControllerDelegate>
-- (void)attachmentsViewControllerDidTapBackground:(id)arg1;
-- (void)attachmentsViewController:(id)arg1 didTapRemoveAttachment:(id)arg2;
-- (void)altTextViewController:(id)arg1 didCompleteWithAltText:(id)arg2;
-- (void)altTextViewControllerDidCancel:(id)arg1;
-- (void)attachmentsViewController:(id)arg1 didTapLivePhotoToggleButton:(id)arg2;
-- (void)attachmentsViewController:(id)arg1 didTapAltTextForAttachment:(id)arg2;
-- (void)attachmentsViewController:(id)arg1 didTapAttachment:(id)arg2;
-- (double)visibleLowerBoundForAttachmentsViewController:(id)arg1;
-- (_Bool)attachmentsViewController:(id)arg1 shouldShowLivePhotoToggleButtonForAttachment:(id)arg2;
-- (_Bool)attachmentsViewController:(id)arg1 shouldShowAltTextButtonForAttachment:(id)arg2;
-- (_Bool)attachmentsViewController:(id)arg1 shouldShowEditButtonForAttachment:(id)arg2;
+@interface T1DirectMessageComposeViewController (T1Twitter)
+- (void)playerDidFinishPlayingWithSender:(id)arg1;
+- (void)playbackVoiceRecordingTapped;
+- (void)removeVoiceRecordingTapped;
 @end
 

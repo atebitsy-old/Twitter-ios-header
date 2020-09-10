@@ -6,6 +6,8 @@
 
 #import <UIKit/UIView.h>
 
+@class NSArray;
+
 @interface T1FleetLineView : UIView
 {
     // Error parsing type: , name: delegate
@@ -18,10 +20,13 @@
     // Error parsing type: , name: showsStoriesComposer
     // Error parsing type: , name: timelinePollTimer
     // Error parsing type: , name: errorObserver
+    // Error parsing type: , name: fleetlineAccessibilityElement
+    // Error parsing type: , name: _accessibilityElements
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+@property(nonatomic, copy) NSArray *accessibilityElements;
 - (void)handleLongPress:(id)arg1;
 - (void)tfx_fleetUseSocialGraphEnabledParameterChanged;
 - (void)tfx_fleetsCanaryServiceEnabledParameterChanged;

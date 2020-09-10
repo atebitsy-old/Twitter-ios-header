@@ -6,10 +6,11 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-#import <T1Twitter/T1FoundMediaControllerDelegate-Protocol.h>
+#import <T1Twitter/T1FiltersViewControllerDelegate-Protocol.h>
 
-@interface T1DirectMessageComposeViewController (T1Twitter3) <T1FoundMediaControllerDelegate>
-- (void)foundMediaController:(id)arg1 viewControllerDidCancel:(id)arg2;
-- (void)foundMediaController:(id)arg1 viewController:(id)arg2 didSelectFoundMediaItem:(id)arg3;
+@interface T1DirectMessageComposeViewController (T1Twitter3) <T1FiltersViewControllerDelegate>
+- (id)scribeSectionForFiltersViewController:(id)arg1;
+- (void)filtersViewControllerDidCancel:(id)arg1;
+- (void)filtersViewController:(id)arg1 didEditImage:(id)arg2;
 @end
 

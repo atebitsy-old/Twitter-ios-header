@@ -29,7 +29,7 @@
 @property(readonly, nonatomic) __weak TFNTwitterAccount *account; // @synthesize account=_account;
 - (void)_wrapInBackgroundTask:(CDUnknownBlockType)arg1;
 - (void)_didFlush:(id)arg1;
-- (void)handleScribeOutgoingEvents:(id)arg1 eventParameters:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)handleScribeOutgoingEvents:(id)arg1 retryDistribution:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)_completeToken:(id)arg1;
 - (void)_flushWithEventHandler:(id)arg1 token:(id)arg2;
 - (void)flushWithEventHandler:(id)arg1;

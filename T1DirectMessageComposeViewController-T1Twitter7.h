@@ -6,17 +6,7 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-#import <T1Twitter/T1ComposeDropManagerDelegate-Protocol.h>
-
-@interface T1DirectMessageComposeViewController (T1Twitter7) <T1ComposeDropManagerDelegate>
-- (void)composeDropManager:(id)arg1 shouldUpdateDropIndicationViewText:(id)arg2 backgroundStyle:(unsigned long long)arg3;
-- (void)composeDropManager:(id)arg1 shouldUpdateDropIndicationViewHidden:(_Bool)arg2 animated:(_Bool)arg3;
-- (void)composeDropManager:(id)arg1 didDropVideoFile:(id)arg2;
-- (void)composeDropManager:(id)arg1 didDropText:(id)arg2;
-- (void)composeDropManager:(id)arg1 didDropURL:(id)arg2;
-- (void)composeDropManager:(id)arg1 didDropStatus:(id)arg2;
-- (void)composeDropManager:(id)arg1 didDropImages:(id)arg2;
-- (void)composeDropManager:(id)arg1 didDropAnimatedImage:(id)arg2;
-- (_Bool)composeDropManager:(id)arg1 canHandleLocalDragSession:(id)arg2;
+@interface T1DirectMessageComposeViewController (T1Twitter7)
+@property(nonatomic, readonly) unsigned long long composeViewState;
 @end
 

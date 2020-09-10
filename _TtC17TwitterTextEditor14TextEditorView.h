@@ -11,10 +11,9 @@
 @interface _TtC17TwitterTextEditor14TextEditorView : UIView
 {
     // Error parsing type: , name: textStorage
-    // Error parsing type: , name: layoutManagerDelegate
     // Error parsing type: , name: textView
-    // Error parsing type: , name: userInteractionDidChangeTextViewService
-    // Error parsing type: , name: textAttributesUpdateService
+    // Error parsing type: , name: userInteractionDidChangeTextViewScheduler
+    // Error parsing type: , name: updateTextAttributesScheduler
     // Error parsing type: , name: editingDelegate
     // Error parsing type: , name: textInputObserver
     // Error parsing type: , name: editingContentDelegate
@@ -28,6 +27,10 @@
     // Error parsing type: , name: isScrollEnabled
     // Error parsing type: , name: currentTextDragSessionLocalContext
     // Error parsing type: , name: isDropInteractionEnabled
+    // Error parsing type: , name: placeholderTextView
+    // Error parsing type: , name: placeholderText
+    // Error parsing type: , name: placeholderTextColor
+    // Error parsing type: , name: maximumNumberOfLinesForPlaceholderText
 }
 
 - (void).cxx_destruct;

@@ -42,6 +42,7 @@
 - (long long)_t1_unifiedCardMediaDestinationType;
 - (unsigned long long)_t1_ctaButtonVariation;
 - (_Bool)_t1_isCTAButtonVariationsExperimentEnabled;
+- (_Bool)_t1_useAppStoreAsSubtitle;
 @property(readonly, nonatomic) long long unifiedCardAppMetadataLineTwoType;
 @property(readonly, nonatomic) _Bool shouldShowRatingsForAppMetadata;
 @property(readonly, nonatomic) _Bool shouldUseSingleLineTitleForAppMetadata;

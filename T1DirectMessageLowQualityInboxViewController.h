@@ -10,6 +10,7 @@
 {
 }
 
+- (id)scribeComponent;
 - (id)initWithAccount:(id)arg1;
 
 @end

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class TFNHUD, TFSTimer;
+@class NSMutableDictionary, TFNHUD, TFSTimer;
 
 @interface T1AppEventTracking : NSObject
 {
@@ -15,7 +15,8 @@
     _Bool _didEnterBackground;
     _Bool _didHandleLaunchURL;
     _Bool _didHandleShortcutURL;
-    CDUnknownBlockType _deferredDispatchBlockForDidBecomeActive;
+    _Bool _didEnqueueVisibleAttributionOpenEvent;
+    NSMutableDictionary *_deferredDispatchBlocksForDidBecomeActive;
     TFNHUD *_postAttributionEventHUD;
     TFSTimer *_postAttributionEventTimeoutTimer;
 }
@@ -50,6 +51,7 @@
 - (void)private_postAttributionEventTimeoutTimerFired;
 - (void)private_didPostAttributionEventWithDeepLink:(id)arg1 error:(id)arg2;
 - (void)private_willPostAttributionEvent;
+- (void)private_dispatchBlockWhenActive:(CDUnknownBlockType)arg1 withDelay:(double)arg2;
 - (void)trackUserDidSignUpWithAccount:(id)arg1;
 - (void)trackUserDidSignInWithAccount:(id)arg1;
 - (void)trackAppWillHandleWebBrowsingURL:(id)arg1 withAccount:(id)arg2;
@@ -62,6 +64,7 @@
 - (void)trackAppDidUpgrade;
 - (void)trackAppDidFirstLaunch;
 - (id)attributionHeaderFields;
+- (void)private_postDeferredAttributionEvent:(long long)arg1 forAccount:(id)arg2 referringLinkURL:(id)arg3 parameters:(id)arg4 visible:(_Bool)arg5;
 - (void)postAttributionEventForAccount:(id)arg1 referringLinkURL:(id)arg2;
 
 @end

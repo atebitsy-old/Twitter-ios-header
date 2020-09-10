@@ -6,7 +6,16 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
+@class NSArray;
+
 @interface T1DirectMessageComposeViewController (T1Twitter12)
-- (void)scrollViewWillBeginDragging:(id)arg1;
+- (void)handleSendMessageKeyCommand;
+- (void)handleSelectKeyCommand;
+- (void)handleReplyToMessageKeyCommand;
+- (void)handleLineUpKeyCommand;
+- (void)handleLineDownKeyCommand;
+@property(nonatomic, readonly) NSArray *keyCommands;
+- (_Bool)canPerformAction:(SEL)arg1 withSender:(id)arg2;
+@property(nonatomic, readonly) _Bool canBecomeFirstResponder;
 @end
 

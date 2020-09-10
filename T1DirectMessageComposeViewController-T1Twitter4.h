@@ -6,10 +6,10 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-#import <T1Twitter/T1VideoTrimmerViewControllerDelegate-Protocol.h>
+#import <T1Twitter/T1PhotoGalleryViewControllerDelegate-Protocol.h>
 
-@interface T1DirectMessageComposeViewController (T1Twitter4) <T1VideoTrimmerViewControllerDelegate>
-- (void)videoTrimmerViewControllerDidCancel:(id)arg1;
-- (void)videoTrimmerViewController:(id)arg1 didTrimVideo:(id)arg2;
+@interface T1DirectMessageComposeViewController (T1Twitter4) <T1PhotoGalleryViewControllerDelegate>
+- (void)photoGalleryViewController:(id)arg1 didEndSessionWithAttachments:(id)arg2;
+- (void)photoGalleryViewControllerDidCancelSession:(id)arg1;
 @end
 

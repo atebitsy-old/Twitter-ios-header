@@ -64,7 +64,7 @@
 - (void)_deleteEventsForGroups:(id)arg1;
 - (void)deleteGroups:(id)arg1;
 - (void)_setSequenceTimestampAndNumberForSerializer:(id)arg1;
-- (id)_eventParametersForEvents:(id)arg1 token:(id)arg2;
+- (id)_retryDistributionForEvents:(id)arg1;
 - (void)_didFlushEvents:(id)arg1 behavior:(unsigned long long)arg2;
 - (id)_flushEventsWithGroups:(id)arg1 fetchLimit:(unsigned long long)arg2;
 - (void)_batchImpressionsForGroups:(id)arg1 requestHandler:(id)arg2;

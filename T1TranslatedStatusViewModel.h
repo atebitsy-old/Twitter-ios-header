@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1StatusViewModel-Protocol.h>
 
-@class NSArray, NSDate, NSDictionary, NSString, TFNTwitterCardData, TFNTwitterDisplayTextModel, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterStatus, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterMediaInfo, TFSTwitterTranslateTweetResponse, TFSTwitterVideoMonetizationSettings, TFSURTImageVariant, TFSURTRichText, UIColor;
+@class NSArray, NSDate, NSDictionary, NSString, TFNTwitterCardData, TFNTwitterDisplayTextModel, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterStatus, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterTranslateTweetResponse, TFSTwitterVideoMonetizationSettings, TFSURTRichText, UIColor;
 @protocol T1PlayerFactoryIdentifiable, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFNTwitterCardDataSource, TFNTwitterStatusConversationTreeContext;
 
 @interface T1TranslatedStatusViewModel : NSObject <T1StatusViewModel>
@@ -125,6 +125,7 @@
 @property(readonly, nonatomic) _Bool isIssueAd;
 @property(readonly, nonatomic) _Bool isIncompleteQuotedStatus;
 - (_Bool)isGIF;
+@property(readonly, nonatomic) long long fromUserIdentityType;
 @property(readonly, nonatomic) _Bool isFromUserVerified;
 @property(readonly, nonatomic) _Bool isFromUserUsernameless;
 @property(readonly, nonatomic) _Bool isFromUserProtected;
@@ -143,24 +144,16 @@
 @property(readonly, nonatomic, getter=isInnerTombstoneDismissed) _Bool innerTombstoneDismissed;
 @property(readonly, nonatomic) NSArray *inlineMediaInfos;
 @property(readonly, nonatomic) _Bool hasSoftIntervention;
+@property(readonly, nonatomic) _Bool hasForwardPivot;
 @property(readonly, nonatomic) _Bool hasReplyBadgeIcon;
 @property(readonly, nonatomic) _Bool hasReplyBadge;
 @property(readonly, nonatomic) _Bool hasModeratedReplies;
-@property(readonly, nonatomic) _Bool hasForwardPivot;
+@property(readonly, nonatomic) TFSTwitterForwardPivot *innerForwardPivot;
+@property(readonly, nonatomic) TFSTwitterForwardPivot *forwardPivot;
 @property(readonly, nonatomic) TFNTwitterGeotag *geotag;
 @property(readonly, nonatomic) NSString *fromUserName;
 @property(readonly, nonatomic) long long fromUserID;
 @property(readonly, nonatomic) NSString *fromUserFullName;
-@property(readonly, nonatomic) UIColor *forwardPivotBackgroundColor;
-@property(readonly, nonatomic) TFSURTRichText *forwardPivotSubtext;
-@property(readonly, nonatomic) TFSURTRichText *forwardPivotText;
-@property(readonly, nonatomic) NSString *forwardPivotLandingUrlString;
-@property(readonly, nonatomic) TFSURTImageVariant *forwardPivotImageVariant;
-@property(readonly, nonatomic) NSString *forwardPivotDisplayType;
-@property(readonly, nonatomic) NSString *forwardPivotBadgeTextColorName;
-@property(readonly, nonatomic) UIColor *forwardPivotBadgeTextColor;
-@property(readonly, nonatomic) NSString *forwardPivotBadgeText;
-@property(readonly, nonatomic) NSString *forwardPivotAccessibilityString;
 @property(readonly, nonatomic, getter=isFillerTweet) _Bool fillerTweet;
 @property(readonly, nonatomic) TFNTwitterFeedbackModule *feedbackModule;
 @property(readonly, nonatomic) TFNTwitterFeedbackInfo *feedbackInfo;

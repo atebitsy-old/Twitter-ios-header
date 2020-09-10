@@ -18,6 +18,7 @@
 - (id)_twitterColorLightRed;
 - (id)_twitterColorRed;
 - (id)_twitterColorDeepRed;
+- (id)_twitterColorFaintPurple;
 - (id)_twitterColorFadedPurple;
 - (id)_twitterColorLightPurple;
 - (id)_twitterColorPurple;

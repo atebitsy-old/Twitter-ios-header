@@ -19,6 +19,7 @@
     NSDate *_date;
     TFSTwitterUserReference *_fromUserReference;
     TFSTwitterEntityMedia *_fromUserProfileImageMediaEntity;
+    long long _fromUserIdentityType;
     TFNTwitterCompositionQuotedStatusInfo *_retweetingStatusInfo;
     NSString *_accessibilityText;
     NSString *_promotedContentImpressionID;
@@ -39,6 +40,7 @@
 @property(readonly, copy, nonatomic) NSString *promotedContentImpressionID; // @synthesize promotedContentImpressionID=_promotedContentImpressionID;
 @property(readonly, nonatomic) NSString *accessibilityText; // @synthesize accessibilityText=_accessibilityText;
 @property(readonly, nonatomic) TFNTwitterCompositionQuotedStatusInfo *retweetingStatusInfo; // @synthesize retweetingStatusInfo=_retweetingStatusInfo;
+@property(readonly, nonatomic) long long fromUserIdentityType; // @synthesize fromUserIdentityType=_fromUserIdentityType;
 @property(readonly, nonatomic) _Bool fromUserIsVerified; // @synthesize fromUserIsVerified=_fromUserIsVerified;
 @property(readonly, nonatomic) TFSTwitterEntityMedia *fromUserProfileImageMediaEntity; // @synthesize fromUserProfileImageMediaEntity=_fromUserProfileImageMediaEntity;
 @property(readonly, nonatomic) TFSTwitterUserReference *fromUserReference; // @synthesize fromUserReference=_fromUserReference;
@@ -51,7 +53,7 @@
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithStatus:(id)arg1 notificationDetail:(id)arg2;
-- (id)initWithStatusID:(long long)arg1 originalText:(id)arg2 date:(id)arg3 fromUserReference:(id)arg4 fromUserProfileImageMediaEntity:(id)arg5 fromUserIsVerified:(_Bool)arg6 retweetingStatusInfo:(id)arg7 accessibilityText:(id)arg8 promotedContentImpressionID:(id)arg9 limitedActionsPolicy:(id)arg10 isEarned:(_Bool)arg11 scribeItem:(id)arg12 text:(id)arg13 notificationDetail:(id)arg14;
+- (id)initWithStatusID:(long long)arg1 originalText:(id)arg2 date:(id)arg3 fromUserReference:(id)arg4 fromUserProfileImageMediaEntity:(id)arg5 fromUserIsVerified:(_Bool)arg6 fromUserIdentityType:(long long)arg7 retweetingStatusInfo:(id)arg8 accessibilityText:(id)arg9 promotedContentImpressionID:(id)arg10 limitedActionsPolicy:(id)arg11 isEarned:(_Bool)arg12 scribeItem:(id)arg13 text:(id)arg14 notificationDetail:(id)arg15;
 - (id)initWithStatus:(id)arg1;
 @property(readonly, nonatomic) _Bool hasPromotedContent;
 @property(readonly, nonatomic) NSString *twitterURL;

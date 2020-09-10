@@ -19,6 +19,8 @@
     // Error parsing type: , name: timelineObserver
     // Error parsing type: , name: inboxMetadataDataSource
     // Error parsing type: , name: inboxMetadataObserver
+    // Error parsing type: , name: scrollDistanceLogger
+    // Error parsing type: , name: didAddConversations
     // Error parsing type: , name: flipLayout
 }
 
@@ -27,6 +29,7 @@
 - (void)conversationMetadataDidUpdateWithNotification:(id)arg1;
 - (id)scribeSection;
 - (id)scribePage;
+- (id)scribe;
 - (void)tfn_fontSizeChanged;
 - (void)scrollToSelectedConversation;
 - (id)tableView:(id)arg1 trailingSwipeActionsConfigurationForRowAtIndexPath:(id)arg2;

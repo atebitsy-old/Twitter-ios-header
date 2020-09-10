@@ -14,6 +14,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: feedbackExecutor
     // Error parsing type: , name: scribeContext
     // Error parsing type: , name: topicFeatureSwitches
+    // Error parsing type: , name: topicMutationsManager
     // Error parsing type: , name: presentationViewController
     // Error parsing type: , name: buttonToViewModelMap
     // Error parsing type: , name: delegate

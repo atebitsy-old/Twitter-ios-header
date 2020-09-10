@@ -11,7 +11,7 @@
 #import <T1Twitter/TFSAuthGuestAuthAPI-Protocol.h>
 #import <T1Twitter/TFSAuthKeychainSupport-Protocol.h>
 
-@class NSArray, NSDictionary, NSMutableDictionary, NSMutableSet, NSOrderedSet, NSRecursiveLock, NSString, T1HashflagService, TFNTwitterScribe, TFNTwitterScribeFlush;
+@class NSArray, NSDictionary, NSMutableDictionary, NSMutableSet, NSOrderedSet, NSRecursiveLock, NSString, T1HashflagService, TFNTwitterScribe, TFNTwitterScribeFlush, TFSTwitterFeatureRegistry;
 @protocol TFSTwitterRecurringTask;
 
 @interface TFNTwitter : NSObject <TFSAuthAccountAuthService, TFSAuthGuestAuthAPI, TFSAuthKeychainSupport, TFNTwitterAccountPushSettingsProvider>
@@ -33,6 +33,7 @@
     NSOrderedSet *_secondaryRecurringTasks;
     id <TFSTwitterRecurringTask> _activeAccountReloadTypeaheadUserCacheRecurringTask;
     id _registrationRecurringTasksContext;
+    TFSTwitterFeatureRegistry *_featureRegistry;
 }
 
 + (void)setGeoDataProvider:(id)arg1;
@@ -47,6 +48,7 @@
 + (id)sharedTwitter;
 + (id)sharedTwitterPeek;
 - (void).cxx_destruct;
+@property(retain, nonatomic) TFSTwitterFeatureRegistry *featureRegistry; // @synthesize featureRegistry=_featureRegistry;
 @property(retain, nonatomic) id registrationRecurringTasksContext; // @synthesize registrationRecurringTasksContext=_registrationRecurringTasksContext;
 @property(retain, nonatomic) id <TFSTwitterRecurringTask> activeAccountReloadTypeaheadUserCacheRecurringTask; // @synthesize activeAccountReloadTypeaheadUserCacheRecurringTask=_activeAccountReloadTypeaheadUserCacheRecurringTask;
 @property(copy, nonatomic) NSOrderedSet *secondaryRecurringTasks; // @synthesize secondaryRecurringTasks=_secondaryRecurringTasks;
@@ -77,6 +79,8 @@
 - (void)_scribeOSLevelNotificationSettingsChange:(id)arg1 action:(id)arg2;
 - (void)_scribeNotificationSettingChangeOfCurrentRecord:(id)arg1 previousRecord:(id)arg2 key:(id)arg3 onEvent:(id)arg4 offEvent:(id)arg5;
 - (id)_activeAccount;
+- (id)_tfn_accountScopedDataWithContext:(id)arg1;
+- (void)registerFeatures:(id)arg1;
 - (id)accountDatabaseInstanceNames;
 - (void)scribeNotificationsAuthorizationChange:(id)arg1 previousRecord:(id)arg2;
 - (void)scribeOSLevelNotificationSettingsChange;

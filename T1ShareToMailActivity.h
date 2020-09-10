@@ -4,13 +4,13 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <T1Twitter/T1UIActivity.h>
+#import <T1Twitter/T1Activity.h>
 
 #import <T1Twitter/MFMailComposeViewControllerDelegate-Protocol.h>
 
 @class MFMailComposeViewController, NSString, TFNTwitterStatus, UIViewController;
 
-@interface T1ShareToMailActivity : T1UIActivity <MFMailComposeViewControllerDelegate>
+@interface T1ShareToMailActivity : T1Activity <MFMailComposeViewControllerDelegate>
 {
     TFNTwitterStatus *_status;
     UIViewController *_presenterViewController;

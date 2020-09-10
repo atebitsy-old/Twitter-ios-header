@@ -92,6 +92,7 @@
 @property(readonly, nonatomic) _Bool isPartialUser;
 - (id)accountUserDetails;
 @property(readonly, nonatomic) _Bool protectedUser;
+@property(readonly, nonatomic) long long identityType;
 @property(readonly, nonatomic) _Bool verified;
 @property(readonly, nonatomic) TFSTwitterEntityMedia *profileBannerMediaEntity;
 @property(readonly, nonatomic) TFSTwitterEntityMedia *profileImageMediaEntity;
@@ -100,9 +101,9 @@
 @property(readonly, nonatomic) long long userID;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initQuotedStatusInfoUserWithUserID:(long long)arg1 username:(id)arg2 fullName:(id)arg3 profileImageMediaEntity:(id)arg4 verified:(_Bool)arg5;
+- (id)initQuotedStatusInfoUserWithUserID:(long long)arg1 username:(id)arg2 fullName:(id)arg3 profileImageMediaEntity:(id)arg4 verified:(_Bool)arg5 identityType:(long long)arg6;
 - (id)initWithJSONDictionary:(id)arg1;
-- (id)initTestCanonicalUserWithUserID:(long long)arg1 username:(id)arg2 fullName:(id)arg3 profileImageMediaEntity:(id)arg4 profileBannerMediaEntity:(id)arg5 verified:(_Bool)arg6 protected:(_Bool)arg7 highlightedDesignatorInfo:(id)arg8 bio:(id)arg9 relationship:(id)arg10;
+- (id)initTestCanonicalUserWithUserID:(long long)arg1 username:(id)arg2 fullName:(id)arg3 profileImageMediaEntity:(id)arg4 profileBannerMediaEntity:(id)arg5 verified:(_Bool)arg6 identityType:(long long)arg7 protected:(_Bool)arg8 highlightedDesignatorInfo:(id)arg9 bio:(id)arg10 relationship:(id)arg11;
 - (id)initWithCanonicalUser:(id)arg1;
 - (id)initWithCS2User:(id)arg1 accountUserDetails:(id)arg2;
 - (id)initWithCS2User:(id)arg1;

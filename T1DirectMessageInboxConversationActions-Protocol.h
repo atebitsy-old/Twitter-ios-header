@@ -12,6 +12,8 @@
 - (void)disableNotificationsForConversation:(T1DirectMessageConversation *)arg1 sender:(UIView *)arg2;
 - (void)enableNotificationsForConversation:(T1DirectMessageConversation *)arg1;
 - (void)reportConversation:(T1DirectMessageConversation *)arg1;
+- (void)unblockConversation:(T1DirectMessageConversation *)arg1;
+- (void)blockConversation:(T1DirectMessageConversation *)arg1;
 - (void)deleteConversation:(T1DirectMessageConversation *)arg1;
 - (UIViewController *)previewConversation:(T1DirectMessageConversation *)arg1;
 - (void)viewConversation:(T1DirectMessageConversation *)arg1;

@@ -13,8 +13,9 @@
     NSNumber *_bitsPerSecond;
     NSNumber *_videoBitrateRatio;
     _Bool _isAudioOnly;
-    _Bool _isPrivateBroadcast;
+    _Bool _isPrivate;
     NSString *_roomID;
+    long long _roomBehavior;
     NSString *_vidManToken;
     NSString *_janusURL;
     NSString *_streamName;
@@ -24,15 +25,16 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSNumber *initialBitrate; // @synthesize initialBitrate=_initialBitrate;
-@property(readonly, nonatomic) _Bool isPrivateBroadcast; // @synthesize isPrivateBroadcast=_isPrivateBroadcast;
+@property(readonly, nonatomic) _Bool isPrivate; // @synthesize isPrivate=_isPrivate;
 @property(readonly, nonatomic) _Bool isAudioOnly; // @synthesize isAudioOnly=_isAudioOnly;
 @property(readonly, nonatomic) NSString *guestServicesSessionUUID; // @synthesize guestServicesSessionUUID=_guestServicesSessionUUID;
 @property(readonly, nonatomic) NSString *streamName; // @synthesize streamName=_streamName;
 @property(readonly, nonatomic) NSString *janusURL; // @synthesize janusURL=_janusURL;
 @property(readonly, nonatomic) NSString *vidManToken; // @synthesize vidManToken=_vidManToken;
+@property(readonly, nonatomic) long long roomBehavior; // @synthesize roomBehavior=_roomBehavior;
 @property(readonly, nonatomic) NSString *roomID; // @synthesize roomID=_roomID;
 - (void)calculateInitialBitrateIfNeeded;
-- (id)initWithRoomID:(id)arg1 streamName:(id)arg2 vidManToken:(id)arg3 bitsPerSecond:(id)arg4 videoBitrateRatio:(id)arg5 janusURL:(id)arg6 guestServicesSessionUUID:(id)arg7 isAudioOnly:(_Bool)arg8 isPrivateBroadcast:(_Bool)arg9;
+- (id)initWithRoomID:(id)arg1 roomBehavior:(long long)arg2 streamName:(id)arg3 vidManToken:(id)arg4 bitsPerSecond:(id)arg5 videoBitrateRatio:(id)arg6 janusURL:(id)arg7 guestServicesSessionUUID:(id)arg8 isAudioOnly:(_Bool)arg9 isPrivate:(_Bool)arg10;
 
 @end
 

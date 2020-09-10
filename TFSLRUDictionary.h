@@ -33,7 +33,7 @@
 - (void)_tfs_moveNodeToFront:(id)arg1;
 - (void)setObject:(id)arg1 forKey:(id)arg2 cost:(unsigned long long)arg3;
 @property(readonly, nonatomic) unsigned long long count;
-- (void)removeLeastRecentlyUsedObject;
+- (id)removeLeastRecentlyUsedObject;
 - (void)removeObjectForKey:(id)arg1;
 - (void)removeAllObjects;
 - (id)dictionaryRepresentation;

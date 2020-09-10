@@ -116,6 +116,7 @@
     unsigned long long _translationState;
     id _conversationObserver;
     long long _conversationID;
+    unsigned long long _loadState;
     TFNBarButtonItem *_subscribeButton;
     struct CGRect _currentKeyboardFrame;
 }
@@ -124,6 +125,7 @@
 + (id)tweetDetailsViewControllerForStatus:(id)arg1 account:(id)arg2 sourceScribeContext:(id)arg3 sourceNavigationMetadata:(id)arg4;
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNBarButtonItem *subscribeButton; // @synthesize subscribeButton=_subscribeButton;
+@property(nonatomic) unsigned long long loadState; // @synthesize loadState=_loadState;
 @property(nonatomic) long long conversationID; // @synthesize conversationID=_conversationID;
 @property(retain, nonatomic) id conversationObserver; // @synthesize conversationObserver=_conversationObserver;
 @property(nonatomic) unsigned long long translationState; // @synthesize translationState=_translationState;
@@ -177,6 +179,7 @@
 @property(retain, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
 @property(readonly, copy, nonatomic) TFSTwitterScribeContext *sourceScribeContext; // @synthesize sourceScribeContext=_sourceScribeContext;
 @property(retain, nonatomic) TFNTwitterAccount *composingAccount; // @synthesize composingAccount=_composingAccount;
+- (void)dataViewDidDisplay;
 @property(readonly, nonatomic) id <T1StatusViewModel> initialFocusedStatus;
 @property(readonly, nonatomic) id <T1StatusViewModel> focalStatus;
 - (id)tweetDetailsFocalStatusTableRowAdapterCompositionForReplyAction:(id)arg1;

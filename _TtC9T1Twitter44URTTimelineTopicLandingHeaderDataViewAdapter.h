@@ -11,9 +11,9 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: account
     // Error parsing type: , name: scribeContext
-    // Error parsing type: , name: actionExecutor
     // Error parsing type: , name: scribeActionExecutor
     // Error parsing type: , name: dispatchQueue
+    // Error parsing type: , name: topicMutationsManager
     // Error parsing type: , name: presentationViewController
     // Error parsing type: , name: reuseIdentifier
 }

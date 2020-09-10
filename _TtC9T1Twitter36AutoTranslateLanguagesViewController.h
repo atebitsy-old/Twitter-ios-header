@@ -9,8 +9,6 @@
 @interface _TtC9T1Twitter36AutoTranslateLanguagesViewController : TFNItemsDataViewController
 {
     // Error parsing type: , name: account
-    // Error parsing type: , name: bottomView
-    // Error parsing type: , name: doneButton
     // Error parsing type: , name: autoTranslateSettings
     // Error parsing type: , name: allLanguages
     // Error parsing type: , name: $__lazy_storage_$_headerItem
@@ -18,9 +16,9 @@
 
 - (void).cxx_destruct;
 - (id)initWithCollectionViewLayout:(id)arg1;
-- (void)didTapDoneButton:(id)arg1;
 - (void)update:(_Bool)arg1;
-- (void)viewDidLayoutSubviews;
+- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 
 @end

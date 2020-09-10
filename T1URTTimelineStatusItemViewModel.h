@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDate, NSDictionary, NSString, TFNTwitterCardData, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFNTwitterUser, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterMediaInfo, TFSTwitterPromotedContent, TFSTwitterVideoMonetizationSettings, TFSURTImageVariant, TFSURTRichText, UIColor;
+@class NSArray, NSDate, NSDictionary, NSString, TFNTwitterCardData, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFNTwitterUser, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterPromotedContent, TFSTwitterVideoMonetizationSettings, TFSURTRichText, UIColor;
 @protocol T1PlayerFactoryIdentifiable, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFNTwitterStatusConversationTreeContext;
 
 @interface T1URTTimelineStatusItemViewModel : NSObject
@@ -163,6 +163,7 @@
 @property(nonatomic, readonly) NSString *unifiedID;
 @property(nonatomic, readonly) _Bool isFromUserUsernameless;
 @property(nonatomic, readonly) _Bool isFromUserAffiliated;
+@property(nonatomic, readonly) long long fromUserIdentityType;
 @property(nonatomic, readonly) _Bool isFromUserVerified;
 @property(nonatomic, readonly) _Bool isFromUserProtected;
 @property(nonatomic, readonly) _Bool isTweetedByAuthenticatedAccount;
@@ -180,18 +181,10 @@
 @property(nonatomic, readonly) _Bool hasReplyBadge;
 @property(nonatomic, readonly) unsigned long long replyBadgeType;
 @property(nonatomic, readonly) _Bool hasModeratedReplies;
-@property(nonatomic, readonly) UIColor *forwardPivotBackgroundColor;
-@property(nonatomic, readonly) NSString *forwardPivotAccessibilityString;
-@property(nonatomic, readonly) NSString *forwardPivotDisplayType;
-@property(nonatomic, readonly) NSString *forwardPivotLandingUrlString;
-@property(nonatomic, readonly) TFSURTImageVariant *forwardPivotImageVariant;
-@property(nonatomic, readonly) NSString *forwardPivotBadgeTextColorName;
-@property(nonatomic, readonly) UIColor *forwardPivotBadgeTextColor;
-@property(nonatomic, readonly) NSString *forwardPivotBadgeText;
-@property(nonatomic, readonly) TFSURTRichText *forwardPivotSubtext;
-@property(nonatomic, readonly) TFSURTRichText *forwardPivotText;
 @property(nonatomic, readonly) _Bool hasSoftIntervention;
 @property(nonatomic, readonly) _Bool hasForwardPivot;
+@property(nonatomic, readonly) TFSTwitterForwardPivot *innerForwardPivot;
+@property(nonatomic, readonly) TFSTwitterForwardPivot *forwardPivot;
 @property(nonatomic, readonly) _Bool isPinned; // @synthesize isPinned;
 @property(nonatomic, readonly) id <TFNTwitterStatusConversationTreeContext> conversationTreeContext; // @synthesize conversationTreeContext;
 @property(nonatomic, readonly) TFSTwitterAutoTranslation *autoTranslation;

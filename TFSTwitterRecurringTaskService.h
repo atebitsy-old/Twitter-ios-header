@@ -37,6 +37,7 @@
 - (void)_tfs_service_triggerRecurringTask:(id)arg1 eventName:(id)arg2 context:(id)arg3;
 - (void)_tfs_service_unregisterRecurringTask:(id)arg1;
 - (void)_tfs_service_registerRecurringTask:(id)arg1 eventSources:(id)arg2 triggerOnRegistration:(_Bool)arg3 context:(id)arg4;
+- (void)unregisterAllRecurringTasks;
 - (void)triggerSingleShotRecurringTaskWithName:(id)arg1 context:(id)arg2 priority:(long long)arg3 triggerBlock:(CDUnknownBlockType)arg4;
 - (void)deferRecurringTask:(id)arg1;
 - (void)triggerRecurringTask:(id)arg1 eventName:(id)arg2 context:(id)arg3;

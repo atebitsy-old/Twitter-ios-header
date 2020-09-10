@@ -6,16 +6,15 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-@class NSArray;
+#import <T1Twitter/T1DirectMessageComposeTextViewDelegate-Protocol.h>
 
-@interface T1DirectMessageComposeViewController (T1Twitter10)
-- (void)handleSendMessageKeyCommand;
-- (void)handleSelectKeyCommand;
-- (void)handleReplyToMessageKeyCommand;
-- (void)handleLineUpKeyCommand;
-- (void)handleLineDownKeyCommand;
-@property(nonatomic, readonly) NSArray *keyCommands;
-- (_Bool)canPerformAction:(SEL)arg1 withSender:(id)arg2;
-@property(nonatomic, readonly) _Bool canBecomeFirstResponder;
+@interface T1DirectMessageComposeViewController (T1Twitter10) <T1DirectMessageComposeTextViewDelegate>
+- (_Bool)handlePasteImageForComposeTextView:(id)arg1;
+- (_Bool)imagePasteEnabledForComposeTextView:(id)arg1;
+- (_Bool)textViewShouldBeginEditing:(id)arg1;
+- (void)textViewDidEndEditing:(id)arg1;
+- (void)textViewDidBeginEditing:(id)arg1;
+- (void)textViewDidChange:(id)arg1;
+- (void)textViewDidChangeSelection:(id)arg1;
 @end
 

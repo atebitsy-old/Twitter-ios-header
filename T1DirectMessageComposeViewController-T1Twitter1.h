@@ -6,11 +6,15 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-#import <T1Twitter/T1FiltersViewControllerDelegate-Protocol.h>
+#import <T1Twitter/PTVAudioRecorderDelegate-Protocol.h>
 
-@interface T1DirectMessageComposeViewController (T1Twitter1) <T1FiltersViewControllerDelegate>
-- (id)scribeSectionForFiltersViewController:(id)arg1;
-- (void)filtersViewControllerDidCancel:(id)arg1;
-- (void)filtersViewController:(id)arg1 didEditImage:(id)arg2;
+@interface T1DirectMessageComposeViewController (T1Twitter1) <PTVAudioRecorderDelegate>
+- (void)audioRecorder:(id)arg1 didFailWithError:(id)arg2;
+- (void)audioRecorder:(id)arg1 didEndClipWithURL:(id)arg2 recordingWillEnd:(_Bool)arg3;
+- (void)audioRecorder:(id)arg1 didUpdateOverallDuration:(double)arg2 clipDuration:(double)arg3 currentAudioLevel:(double)arg4;
+- (void)audioRecorderDidCancelRecording:(id)arg1;
+- (void)audioRecorderDidEndRecording:(id)arg1;
+- (void)audioRecorderDidPauseRecording:(id)arg1;
+- (void)audioRecorderDidStartOrResumeRecording:(id)arg1;
 @end
 

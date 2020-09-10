@@ -24,6 +24,7 @@
 + (double)heightWithActionText:(id)arg1;
 + (id)calculatedLayoutMetricsForViewWithIndentationLevel:(double)arg1 layoutMetrics:(id)arg2;
 + (id)_t1_buttonTextFont;
++ (id)textLabelColor;
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNTouchDownGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(retain, nonatomic) T1ConversationShowMoreNode *showMoreNode; // @synthesize showMoreNode=_showMoreNode;

@@ -76,6 +76,7 @@
 @property(readonly, nonatomic) UIColor *twitterColorVoiceCardText;
 @property(readonly, nonatomic) UIColor *twitterColorVoicePaused;
 @property(readonly, nonatomic) UIColor *twitterColorVoiceRecording;
+@property(readonly, nonatomic) UIColor *twitterColorVoicePrimaryLight;
 @property(readonly, nonatomic) UIColor *twitterColorVoicePrimary;
 @property(readonly, nonatomic) UIColor *twitterColorMessagingBackground;
 @property(readonly, nonatomic) UIColor *twitterColorSelectedTweetShadow;

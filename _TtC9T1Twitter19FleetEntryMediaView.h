@@ -10,7 +10,6 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter19FleetEntryMediaView : UIView
 {
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: sensitiveMediaView
     // Error parsing type: , name: imageView
     // Error parsing type: , name: playerView
     // Error parsing type: , name: player

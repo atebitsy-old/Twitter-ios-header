@@ -10,6 +10,7 @@
 {
 }
 
++ (_Bool)longPressCopyForSelectedStateOnly;
 + (_Bool)persistentReplyBarEnabled;
 + (_Bool)replyInlineActionFocusesInTwoSteps;
 + (_Bool)replyInlineActionFocusesInlineReply;
@@ -21,6 +22,7 @@
 + (_Bool)tapToCollapseEnabled;
 + (_Bool)tweetTextSelectionEnabled;
 + (_Bool)showOverflowButtonsOnTombstones;
++ (_Bool)showMoreGrayThemeEnabled;
 + (_Bool)showMoreExpandedHitTestingEnabled;
 + (_Bool)showMoreCoalescingDebugLabelsEnabled;
 + (long long)showMoreCoalescingLoadLimit;

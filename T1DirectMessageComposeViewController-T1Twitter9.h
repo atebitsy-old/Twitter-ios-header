@@ -6,8 +6,17 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-@interface T1DirectMessageComposeViewController (T1Twitter9)
-- (void)quickReplyPresentationBehaviorHideQuickReply:(id)arg1;
-- (void)quickReplyPresentationBehavior:(id)arg1 presentOptionsQuickReplyWithID:(id)arg2 options:(id)arg3 selectedOption:(id)arg4 shouldFocus:(_Bool)arg5;
+#import <T1Twitter/T1ComposeDropManagerDelegate-Protocol.h>
+
+@interface T1DirectMessageComposeViewController (T1Twitter9) <T1ComposeDropManagerDelegate>
+- (void)composeDropManager:(id)arg1 shouldUpdateDropIndicationViewText:(id)arg2 backgroundStyle:(unsigned long long)arg3;
+- (void)composeDropManager:(id)arg1 shouldUpdateDropIndicationViewHidden:(_Bool)arg2 animated:(_Bool)arg3;
+- (void)composeDropManager:(id)arg1 didDropVideoFile:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropText:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropURL:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropStatus:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropImages:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropAnimatedImage:(id)arg2;
+- (_Bool)composeDropManager:(id)arg1 canHandleLocalDragSession:(id)arg2;
 @end
 

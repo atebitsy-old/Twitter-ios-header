@@ -10,6 +10,7 @@
 @protocol TFNTwitterUserContext;
 
 @protocol T1ProfileDataSource <NSObject>
+- (void)fetchTranslatedProfileBioIfNeeded:(void (^)(_Bool, TFSTwitterTranslatedProfileBioModel *))arg1;
 - (void)requestClusterFollowRecommendationsIfNeeded;
 - (void)invalidateDataForced:(_Bool)arg1;
 - (void)invalidateData;
@@ -67,9 +68,6 @@
 @property(nonatomic, readonly) TFSTwitterUserExtendedProfile *extendedProfile;
 @property(nonatomic, readonly) _Bool isUserInvalid;
 @property(nonatomic, readonly) TFNTwitterUserDataSource *userDataSource;
-
-@optional
-- (void)fetchTranslatedProfileBioIfNeeded:(void (^)(_Bool, TFSTwitterTranslatedProfileBioModel *))arg1;
 
 // Remaining properties
 @property(nonatomic, readonly) _Bool blockedByViewer;

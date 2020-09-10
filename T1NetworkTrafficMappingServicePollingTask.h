@@ -25,6 +25,7 @@
 - (id)tfs_errorDomain;
 - (id)tfs_taskState;
 - (void)tfs_triggerFromService:(id)arg1 event:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)invalidate;
 - (void)queue_cancel;
 - (void)cancel;
 - (id)initWithOwner:(id)arg1;

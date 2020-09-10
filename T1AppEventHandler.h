@@ -145,7 +145,7 @@
 - (_Bool)_t1_shouldUseCrashlyticsBetaButton;
 - (void)_t1_sanitizeAccountInfoFiles;
 - (void)_t1_scheduleFeatureSwitchesCrashlyticsLogger;
-- (void)_t1_scheduleTvConnectionManager;
+- (void)_t1_scheduleTvConnectionDeprecation;
 - (void)_t1_scheduleDeviceTokenRegistration;
 - (id)_t1_accountForStartUpUsingPushAccount:(_Bool)arg1;
 - (id)_t1_previousSessionAccount;
@@ -204,6 +204,7 @@
 - (id)_t1_pasteboardURL;
 - (void)_t1_toastOpenedPastedContent:(id)arg1 success:(_Bool)arg2;
 - (_Bool)canPerformAction:(SEL)arg1 withSender:(id)arg2;
+- (void)registerFeatures;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

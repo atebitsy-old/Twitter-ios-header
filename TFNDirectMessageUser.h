@@ -29,6 +29,7 @@
 @property(readonly, nonatomic) TFSTwitterUserReference *userReference;
 @property(readonly, nonatomic) TFSTwitterEntityMedia *profileImageMediaEntity;
 @property(readonly, nonatomic) _Bool blocking;
+@property(readonly, nonatomic) long long identityType;
 @property(readonly, nonatomic) _Bool verified;
 @property(readonly, nonatomic) _Bool protectedUser;
 @property(readonly, nonatomic) _Bool followRequestSent;

@@ -21,6 +21,7 @@
     // Error parsing type: , name: followersCount
     // Error parsing type: , name: protectedUser
     // Error parsing type: , name: verified
+    // Error parsing type: , name: identityType
     // Error parsing type: , name: followRequestSent
     // Error parsing type: , name: following
     // Error parsing type: , name: blocking
@@ -36,7 +37,7 @@
 - (void)assimilateIntoModelContext:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 @property(nonatomic, readonly) long long hash;
-- (id)initWithUserID:(long long)arg1 createdAt:(id)arg2 username:(id)arg3 fullName:(id)arg4 profileImageMediaEntity:(id)arg5 bio:(id)arg6 bioEntities:(id)arg7 followingCount:(id)arg8 followersCount:(id)arg9 protectedUser:(_Bool)arg10 verified:(_Bool)arg11 followRequestSent:(_Bool)arg12 following:(_Bool)arg13 blocking:(_Bool)arg14 updatedTimestamp:(id)arg15;
+- (id)initWithUserID:(long long)arg1 createdAt:(id)arg2 username:(id)arg3 fullName:(id)arg4 profileImageMediaEntity:(id)arg5 bio:(id)arg6 bioEntities:(id)arg7 followingCount:(id)arg8 followersCount:(id)arg9 protectedUser:(_Bool)arg10 verified:(_Bool)arg11 identityType:(long long)arg12 followRequestSent:(_Bool)arg13 following:(_Bool)arg14 blocking:(_Bool)arg15 updatedTimestamp:(id)arg16;
 @property(nonatomic, copy) NSString *displayFullName;
 @property(nonatomic, copy) NSString *displayUsername;
 @property(nonatomic, retain) NSNumber *userIDNumber;
@@ -44,6 +45,7 @@
 @property(nonatomic, readonly) _Bool blocking; // @synthesize blocking;
 @property(nonatomic, readonly) _Bool following; // @synthesize following;
 @property(nonatomic, readonly) _Bool followRequestSent; // @synthesize followRequestSent;
+@property(nonatomic, readonly) long long identityType; // @synthesize identityType;
 @property(nonatomic, readonly) _Bool verified; // @synthesize verified;
 @property(nonatomic, readonly) _Bool protectedUser; // @synthesize protectedUser;
 @property(nonatomic, readonly) NSNumber *followersCount; // @synthesize followersCount;

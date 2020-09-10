@@ -10,6 +10,7 @@
 {
 }
 
++ (void)_t1_setupUIAppearance;
 + (void)setupAppearance;
 
 @end

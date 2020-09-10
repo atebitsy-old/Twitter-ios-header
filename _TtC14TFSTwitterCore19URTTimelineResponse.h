@@ -16,6 +16,9 @@
     // Error parsing type: , name: responseObjects
     // Error parsing type: , name: metadata
     // Error parsing type: , name: timelineEncodingPolicy
+    // Error parsing type: , name: scribe
+    // Error parsing type: , name: scribeContext
+    // Error parsing type: , name: allSeenTweetIDs
     // Error parsing type: , name: assimilationOptions
     // Error parsing type: , name: responseIntegrityAnalyzer
     // Error parsing type: , name: sortIndexCorrectionAssimilation

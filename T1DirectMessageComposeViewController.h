@@ -13,9 +13,19 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: attachmentDelegate
     // Error parsing type: , name: quickReplyDelegate
+    // Error parsing type: , name: kClipMinimumDurationSeconds
+    // Error parsing type: , name: audioView
+    // Error parsing type: , name: audioViewTrailingConstraint
+    // Error parsing type: , name: player
+    // Error parsing type: , name: playbackTimeObserver
+    // Error parsing type: , name: recorder
+    // Error parsing type: , name: recordingQueue
+    // Error parsing type: , name: audioAutoSendEnabled
+    // Error parsing type: , name: intersectsAudioAutoSendButton
     // Error parsing type: , name: account
     // Error parsing type: , name: scribeContext
     // Error parsing type: , name: autocompleteBehavior
+    // Error parsing type: , name: typingIndicatorBehavior
     // Error parsing type: , name: quickReplyPresentationBehavior
     // Error parsing type: , name: quotedStatusPreviewEnabled
     // Error parsing type: , name: attachmentsDisabled
@@ -30,7 +40,7 @@
     // Error parsing type: , name: interstitialContainerBottomConstraint
     // Error parsing type: , name: composeBarMaxHeight
     // Error parsing type: , name: _composeBarHidden
-    // Error parsing type: , name: supportedComponents
+    // Error parsing type: , name: _supportedComponents
     // Error parsing type: , name: composition
     // Error parsing type: , name: state
     // Error parsing type: , name: _layoutIgnoresSafeArea
@@ -44,6 +54,7 @@
     // Error parsing type: , name: foundMediaController
     // Error parsing type: , name: fullScreenPhotoGallery
     // Error parsing type: , name: quickReplyOptionsPickerViewController
+    // Error parsing type: , name: voiceRecordingPlaybackController
     // Error parsing type: , name: userDismissedQuickReplyID
     // Error parsing type: , name: quickReplyOptionsPickerAutoDismissTimer
     // Error parsing type: , name: composeToolbarTopConstraint
@@ -66,6 +77,10 @@
 - (void)presentFoundMediaChooserTapped;
 - (void)mediaAttachButtonLongPressed;
 - (void)presentMediaGalleryTapped;
+- (void)stopVoiceRecording;
+- (void)presentVoiceTapped;
+- (void)voiceAttachButtonTapped;
+- (void)handleVoiceRecordLongPress:(id)arg1;
 - (void)quickReplyButtonTapped:(id)arg1;
 - (void)sendButtonTapped:(id)arg1;
 - (void)keyboardDidShowWithNotification:(id)arg1;
@@ -91,12 +106,12 @@
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccount:(id)arg1;
+- (id)initWithAccount:(id)arg1 conversation:(id)arg2;
 @property(nonatomic, readonly) double composeBarHeight;
 @property(nonatomic, copy) NSString *placeholderText;
 @property(nonatomic, readonly) _Bool stateIsQuickReply;
 @property(nonatomic, retain) TFNDirectMessageComposition *composition; // @synthesize composition;
-@property(nonatomic) unsigned long long supportedComponents; // @synthesize supportedComponents;
+@property(nonatomic) unsigned long long supportedComponents;
 @property(nonatomic) _Bool composeBarHidden;
 @property(nonatomic, retain) _TtC9T1Twitter40DirectMessageComposerInterstitialViewOld *untrustedInterstitialOld; // @synthesize untrustedInterstitialOld;
 @property(nonatomic, retain) _TtC9T1Twitter37DirectMessageComposerInterstitialView *untrustedInterstitial; // @synthesize untrustedInterstitial;

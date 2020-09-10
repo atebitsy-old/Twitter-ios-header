@@ -43,6 +43,7 @@
 @property(nonatomic, readonly) TFSTwitterEntityMedia *profileImageMediaEntity;
 @property(nonatomic, readonly) _Bool affiliated;
 @property(nonatomic, readonly) _Bool protectedUser;
+@property(nonatomic, readonly) long long identityType;
 @property(nonatomic, readonly) _Bool verified;
 @property(nonatomic, readonly) _Bool usernameless;
 @property(nonatomic, readonly) NSString *designatorUrl;

@@ -151,6 +151,8 @@
 @property(readonly, nonatomic) UIColor *twitterColorVoicePaused;
 - (id)_twitterColorVoiceRecording;
 @property(readonly, nonatomic) UIColor *twitterColorVoiceRecording;
+- (id)_twitterColorVoicePrimaryLight;
+@property(readonly, nonatomic) UIColor *twitterColorVoicePrimaryLight;
 - (id)_twitterColorVoicePrimary;
 @property(readonly, nonatomic) UIColor *twitterColorVoicePrimary;
 - (id)_twitterColorMessagingBackground;

@@ -36,6 +36,7 @@
 - (id)convertingButtonsToStrength:(unsigned long long)arg1;
 - (id)modifyingMediaDestinationTo:(long long)arg1;
 - (id)addingWebsiteCTA;
+- (id)convertingUCAppStoreDetailsToUseAppStoreAsSubtitle:(_Bool)arg1;
 - (id)convertingUCAppStoreDetailsToAppMetadataConfig:(id)arg1;
 - (id)convertingCarouselsToSingleMedia;
 - (id)_tfn_componentModelsFromJSONDict:(id)arg1 destinationsDict:(id)arg2 mediaEntitiesDict:(id)arg3 appStoreData:(id)arg4 promotedContent:(id)arg5 usersDict:(id)arg6;
@@ -59,6 +60,7 @@
 - (id)buttonGroupComponentModel;
 - (id)mediaComponentModel;
 - (id)appStoreDetailComponentModel;
+- (_Bool)meetsExperiment10890Criteria;
 - (_Bool)meetsExperiment10193And10536Criteria;
 - (_Bool)meetsExperiment10704CriteriaForImageWebsiteCards;
 - (_Bool)meetsExperiment10704CriteriaForImageAppCards;

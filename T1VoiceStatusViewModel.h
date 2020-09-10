@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1VoiceViewModel-Protocol.h>
 
-@class NSArray, NSString, NSURL, TFNTwitterAccount, UIColor;
+@class NSArray, NSString, TFNTwitterAccount, UIColor;
 @protocol T1StatusViewModel, TFSTwitterCanonicalUser;
 
 @interface T1VoiceStatusViewModel : NSObject <T1VoiceViewModel>
@@ -34,8 +34,8 @@
 @property(readonly, nonatomic) double totalDuration;
 @property(readonly, nonatomic) double duration;
 @property(readonly, nonatomic) NSString *durationString;
-@property(readonly, nonatomic) NSURL *imageURL;
 - (void)imageWithCompletion:(CDUnknownBlockType)arg1;
+@property(readonly, nonatomic) id <TFSTwitterCanonicalUser> representedUser;
 @property(readonly, nonatomic) UIColor *color;
 @property(readonly, nonatomic) id <TFSTwitterCanonicalUser> user;
 - (id)_t1_voiceInfo;

@@ -7,6 +7,7 @@
 #import <T1Twitter/T1FleetLineView.h>
 
 @interface T1FleetLineView (T1Twitter1)
+- (void)scrollViewDidScroll:(id)arg1;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 @end
 

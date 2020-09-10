@@ -14,6 +14,7 @@
     // Error parsing type: , name: username
     // Error parsing type: , name: fullName
     // Error parsing type: , name: verified
+    // Error parsing type: , name: identityType
     // Error parsing type: , name: protectedUser
     // Error parsing type: , name: profileImageMediaEntity
     // Error parsing type: , name: highlightedDesignatorInfo
@@ -36,7 +37,7 @@
 @property(nonatomic, readonly) NSString *displayFullName;
 @property(nonatomic, readonly) long long hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithUserID:(long long)arg1 username:(id)arg2 fullName:(id)arg3 verified:(_Bool)arg4 protectedUser:(_Bool)arg5 profileImageMediaEntity:(id)arg6 highlightedDesignatorInfo:(id)arg7 canDM:(_Bool)arg8 canMediaTag:(_Bool)arg9 socialContext:(id)arg10 resultContext:(id)arg11 score:(long long)arg12 tokens:(id)arg13;
+- (id)initWithUserID:(long long)arg1 username:(id)arg2 fullName:(id)arg3 verified:(_Bool)arg4 identityType:(long long)arg5 protectedUser:(_Bool)arg6 profileImageMediaEntity:(id)arg7 highlightedDesignatorInfo:(id)arg8 canDM:(_Bool)arg9 canMediaTag:(_Bool)arg10 socialContext:(id)arg11 resultContext:(id)arg12 score:(long long)arg13 tokens:(id)arg14;
 @property(nonatomic, readonly) NSArray *tokens;
 @property(nonatomic, readonly) long long score; // @synthesize score;
 @property(nonatomic, readonly) TFSTwitterTypeaheadResultContext *resultContext; // @synthesize resultContext;
@@ -46,6 +47,7 @@
 @property(nonatomic, readonly) TFSTwitterUserDesignatorInfo *highlightedDesignatorInfo; // @synthesize highlightedDesignatorInfo;
 @property(nonatomic, readonly) TFSTwitterEntityMedia *profileImageMediaEntity; // @synthesize profileImageMediaEntity;
 @property(nonatomic, readonly) _Bool protectedUser; // @synthesize protectedUser;
+@property(nonatomic, readonly) long long identityType; // @synthesize identityType;
 @property(nonatomic, readonly) _Bool verified; // @synthesize verified;
 @property(nonatomic, readonly) NSString *fullName;
 @property(nonatomic, readonly) NSString *username;

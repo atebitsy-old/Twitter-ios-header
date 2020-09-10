@@ -11,6 +11,7 @@
 
 @protocol T1ProfileUserInfoViewDelegate <NSObject>
 - (double)topPaddingAdjustmentForProfileUserInfoView:(T1ProfileUserInfoView *)arg1;
+- (void)profileUserInfoView:(T1ProfileUserInfoView *)arg1 bioTranslationStateDidChange:(unsigned long long)arg2 previousState:(unsigned long long)arg3;
 - (void)profileUserInfoViewDidTapTranslateBio:(T1ProfileUserInfoView *)arg1;
 - (void)profileUserInfoView:(T1ProfileUserInfoView *)arg1 didTapContributorLearnMore:(UIView *)arg2;
 - (void)profileUserInfoViewDidTapBirthday:(T1ProfileUserInfoView *)arg1;

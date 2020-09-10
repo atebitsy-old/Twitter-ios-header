@@ -10,7 +10,6 @@
 @protocol TNUNetworkQualityProvider;
 
 @protocol TFNTwitterHomeTimelineConfiguration <NSObject>
-@property(nonatomic, readonly) _Bool isHomeURTSortIndexCorrectionEnabled;
 @property(nonatomic, readonly) _Bool isHomeConversationHoistingPreventionEnabled;
 @property(nonatomic, readonly) _Bool isEmptyChunkClearingEnabled;
 @property(nonatomic, readonly) id <TNUNetworkQualityProvider> networkQualityProvider;

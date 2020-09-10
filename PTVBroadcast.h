@@ -96,7 +96,7 @@
     _Bool _copyright_violation_broadcaster_allowlisted;
     _Bool _copyright_violation_match_accepted;
     _Bool _copyright_violation_match_disputed;
-    NSNumber *_twitter_id;
+    NSString *_twitter_id;
     NSString *_media_key;
     UIImage *_thumbnail;
     NSDictionary *_share_image_url;
@@ -142,7 +142,7 @@
 - (void)setMedia_key:(id)arg1;
 - (void)setTwitter_id:(id)arg1;
 @property(readonly) NSString *media_key;
-@property(readonly) NSNumber *twitter_id;
+@property(readonly) NSString *twitter_id;
 - (void)unpackTwitterMetadataPropertiesFromDictionary:(id)arg1 dictionaryKeys:(id)arg2;
 - (void)repackTwitterMetadataPropertiesToMutableDictionary:(id)arg1;
 @property _Bool copyright_violation_match_disputed;

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: playbackObservableAttachment
     // Error parsing type: , name: styleProvider
+    // Error parsing type: , name: previewImageComponent
     // Error parsing type: , name: playButtonComponent
     // Error parsing type: , name: watchAgainButtonComponent
 }

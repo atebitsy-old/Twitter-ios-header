@@ -23,7 +23,7 @@
     TAVHydraMainBroadcaster *_mainBroadcaster;
     NSMutableDictionary *_guestPlayers;
     _Bool _audioIndicatorsEnabled;
-    UIViewController<PTVGuestCoordinatorDelegate> *_delegate;
+    id <PTVGuestCoordinatorDelegate> _delegate;
     long long _loggedInUserParticipantIndex;
     NSArray *_guestReconciliationArray;
     UIViewController *_mainPlayer;
@@ -34,7 +34,7 @@
 @property(nonatomic) _Bool audioIndicatorsEnabled; // @synthesize audioIndicatorsEnabled=_audioIndicatorsEnabled;
 @property(retain, nonatomic) NSArray *guestReconciliationArray; // @synthesize guestReconciliationArray=_guestReconciliationArray;
 @property(nonatomic) long long loggedInUserParticipantIndex; // @synthesize loggedInUserParticipantIndex=_loggedInUserParticipantIndex;
-@property(nonatomic) __weak UIViewController<PTVGuestCoordinatorDelegate> *delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) __weak id <PTVGuestCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)toggleAudioVideoForUserID:(id)arg1;
 - (_Bool)canToggleAudioVideoForUserID:(id)arg1;
 - (void)didSetPrimaryView:(id)arg1;

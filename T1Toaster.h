@@ -65,6 +65,7 @@
 - (_Bool)_t1_isThrottlingNormalToasts;
 - (id)_t1_popToastBox;
 - (void)_t1_insertToastBoxIntoQueue:(id)arg1;
+- (void)dequeueToastsPassingTest:(CDUnknownBlockType)arg1;
 - (void)pushToast:(id)arg1 withPriority:(unsigned long long)arg2;
 - (void)pushToast:(id)arg1;
 - (void)registerToastViewController:(id)arg1;

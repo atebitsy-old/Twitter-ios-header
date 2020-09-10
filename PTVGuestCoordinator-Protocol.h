@@ -6,13 +6,13 @@
 
 #import <PeriscopeSDK/NSObject-Protocol.h>
 
-@class NSArray, NSString, PTVGuestView, PTVMergeParticipantUser, UIViewController;
+@class NSArray, NSString, PTVGuestView, PTVMergeParticipantUser;
 @protocol PTVGuestCoordinatorDelegate;
 
 @protocol PTVGuestCoordinator <NSObject>
 @property(retain, nonatomic) NSArray *guestReconciliationArray;
 @property(nonatomic) long long loggedInUserParticipantIndex;
-@property(nonatomic) __weak UIViewController<PTVGuestCoordinatorDelegate> *delegate;
+@property(nonatomic) __weak id <PTVGuestCoordinatorDelegate> delegate;
 - (void)toggleAudioVideoForUserID:(NSString *)arg1;
 - (_Bool)canToggleAudioVideoForUserID:(NSString *)arg1;
 - (void)didSetPrimaryView:(PTVGuestView *)arg1;

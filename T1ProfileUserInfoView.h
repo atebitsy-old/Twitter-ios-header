@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNAttributedTextViewDelegate-Protocol.h>
 
-@class NSDate, NSString, T1TranslateButton, TFNAttributedTextView, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterPlace, TFSTwitterTranslatedProfileBioModel, TFSTwitterUserExtendedProfile, UIButton, UILongPressGestureRecognizer;
+@class NSDate, NSString, T1TranslateButton, TFNAttributedTextView, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterPlace, TFSTwitterTranslatedProfileBioModel, TFSTwitterUserExtendedProfile, UIActivityIndicatorView, UIButton, UILongPressGestureRecognizer;
 @protocol T1ProfileUserInfoViewDelegate;
 
 @interface T1ProfileUserInfoView : T1FlexibleLayoutView <TFNAttributedTextViewDelegate>
@@ -21,8 +21,6 @@
     _Bool _structuredLocationEnabled;
     _Bool _urlDisplayEnabled;
     _Bool _urlTappable;
-    _Bool _profileBioTranslatable;
-    _Bool _translatedBioShown;
     _Bool _partialUser;
     id <T1ProfileUserInfoViewDelegate> _delegate;
     NSString *_bio;
@@ -31,7 +29,8 @@
     TFSTwitterUserExtendedProfile *_extendedProfile;
     TFSTwitterPlace *_structuredLocation;
     TFSTwitterEntityURL *_url;
-    TFSTwitterTranslatedProfileBioModel *_translatedProfileBio;
+    TFSTwitterTranslatedProfileBioModel *_translatedBio;
+    unsigned long long _bioTranslationState;
     TFNAttributedTextView *_bioLabel;
     TFNAttributedTextView *_translatedBioLabel;
     UIButton *_birthdayButton;
@@ -42,10 +41,12 @@
     TFNAttributedTextView *_contributorIndicatorView;
     TFSTwitterEntitySet *_bioEntities;
     T1TranslateButton *_translateBioButton;
+    UIActivityIndicatorView *_translatingBioIndicator;
     struct UIEdgeInsets _contentEdgeInsets;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIActivityIndicatorView *translatingBioIndicator; // @synthesize translatingBioIndicator=_translatingBioIndicator;
 @property(retain, nonatomic) T1TranslateButton *translateBioButton; // @synthesize translateBioButton=_translateBioButton;
 @property(retain, nonatomic) TFSTwitterEntitySet *bioEntities; // @synthesize bioEntities=_bioEntities;
 @property(retain, nonatomic) TFNAttributedTextView *contributorIndicatorView; // @synthesize contributorIndicatorView=_contributorIndicatorView;
@@ -57,9 +58,8 @@
 @property(retain, nonatomic) TFNAttributedTextView *translatedBioLabel; // @synthesize translatedBioLabel=_translatedBioLabel;
 @property(retain, nonatomic) TFNAttributedTextView *bioLabel; // @synthesize bioLabel=_bioLabel;
 @property(nonatomic, getter=isPartialUser) _Bool partialUser; // @synthesize partialUser=_partialUser;
-@property(retain, nonatomic) TFSTwitterTranslatedProfileBioModel *translatedProfileBio; // @synthesize translatedProfileBio=_translatedProfileBio;
-@property(nonatomic, getter=isTranslatedBioShown) _Bool translatedBioShown; // @synthesize translatedBioShown=_translatedBioShown;
-@property(nonatomic, getter=isProfileBioTranslatable) _Bool profileBioTranslatable; // @synthesize profileBioTranslatable=_profileBioTranslatable;
+@property(nonatomic) unsigned long long bioTranslationState; // @synthesize bioTranslationState=_bioTranslationState;
+@property(retain, nonatomic) TFSTwitterTranslatedProfileBioModel *translatedBio; // @synthesize translatedBio=_translatedBio;
 @property(nonatomic, getter=isUrlTappable) _Bool urlTappable; // @synthesize urlTappable=_urlTappable;
 @property(nonatomic, getter=isUrlDisplayEnabled) _Bool urlDisplayEnabled; // @synthesize urlDisplayEnabled=_urlDisplayEnabled;
 @property(nonatomic, getter=isStructuredLocationEnabled) _Bool structuredLocationEnabled; // @synthesize structuredLocationEnabled=_structuredLocationEnabled;
@@ -80,6 +80,7 @@
 - (id)_buttonTitleForUrl:(id)arg1;
 - (id)_buttonBackgroundImageForColor:(id)arg1;
 - (void)_t1_hashflagVersionDidChange:(id)arg1;
+- (void)_t1_refreshTranslatingBioIndicator;
 - (void)_t1_refreshTranslateBioButton;
 - (void)_t1_refreshURLButton;
 - (void)_t1_refreshLocationButton;
@@ -87,12 +88,14 @@
 - (void)_t1_refreshCreatedDateButton;
 - (void)_t1_refreshBirthdayButton;
 - (void)_t1_refreshBioLabel:(id)arg1 withText:(id)arg2 entities:(id)arg3;
+- (id)_t1_buildTranslatingBioIndicator;
 - (id)_t1_buildTranslateBioButton;
 - (id)_t1_buildContributorIndicatorView;
 - (id)_t1_buildBulletpointButtonWithLineBreakMode:(long long)arg1 accessibilityIdentifier:(id)arg2 action:(SEL)arg3;
 - (id)_t1_buildBioLabel;
 - (id)_t1_layoutItemForContributorView:(id)arg1;
 - (id)_t1_layoutItemForBulletpointButton:(id)arg1;
+- (id)_t1_layoutItemForTranslatingBioIndicator:(id)arg1;
 - (id)_t1_layoutItemForTranslateBioButton:(id)arg1;
 - (id)_t1_layoutItemForBioView:(id)arg1;
 - (void)_t1_didHoverOverURLButton:(id)arg1;

@@ -13,7 +13,7 @@
 #import <PeriscopeSDK/PTVJanusClientDelegate-Protocol.h>
 #import <PeriscopeSDK/PTVPipelineUser-Protocol.h>
 
-@class NSArray, NSString, PTVGuestBroadcastingStatsCollector, PTVGuestCallerController, PTVGuestRoomConfiguration, PTVGuestView, PTVJanusClient, RTCAudioTrack, RTCMediaStream, RTCVideoCapturer, RTCVideoSource, TAVSharedAudioSessionConfigurationToken, UIViewController;
+@class NSArray, NSMutableArray, NSString, PTVGuestBroadcastingStatsCollector, PTVGuestCallerController, PTVGuestRoomConfiguration, PTVGuestView, PTVJanusClient, RTCAudioTrack, RTCVideoCapturer, RTCVideoSource, TAVSharedAudioSessionConfigurationToken;
 @protocol PTVGuestCoordinatorDelegate, PTVLoggedInUserProtocol, PTVPipelineOwner;
 
 @interface PTVGuestPublishingCoordinator : NSObject <PTVJanusClientDelegate, PTVGuestBroadcastingStatsCollectorDelegate, PTVGuestCallerControllerObserver, PTVCompositedVideoDelegate, PTVPipelineUser, PTVGuestCoordinator>
@@ -22,21 +22,19 @@
     unsigned long long _publisherRole;
     NSObject<PTVLoggedInUserProtocol> *_loggedInUser;
     RTCVideoSource *_localVideoSource;
-    RTCMediaStream *_guestMediaStream1;
-    RTCMediaStream *_guestMediaStream2;
-    RTCMediaStream *_guestMediaStream3;
+    NSMutableArray *_guestMediaStreams;
     id <PTVPipelineOwner> _pipelineOwner;
-    PTVGuestView *_localAudioGuestView;
+    PTVGuestView *_localGuestView;
     PTVGuestBroadcastingStatsCollector *_statsCollector;
     TAVSharedAudioSessionConfigurationToken *_sharedAudioSessionToken;
     _Bool _isObservingAVAudioSession;
     _Bool _isAudioScopeEnabled;
-    UIViewController<PTVGuestCoordinatorDelegate> *_delegate;
+    id <PTVGuestCoordinatorDelegate> _delegate;
     long long _loggedInUserParticipantIndex;
     PTVGuestRoomConfiguration *_configuration;
     PTVJanusClient *_janusClient;
     RTCVideoCapturer *_localCapturer;
-    RTCAudioTrack *_localAudioOnlyTrack;
+    RTCAudioTrack *_localAudioTrack;
     long long _rtcVideoRotation;
     double _currentRotation;
     PTVGuestCallerController *_guestCallerController;
@@ -48,13 +46,13 @@
 @property(retain, nonatomic) PTVGuestCallerController *guestCallerController; // @synthesize guestCallerController=_guestCallerController;
 @property double currentRotation; // @synthesize currentRotation=_currentRotation;
 @property long long rtcVideoRotation; // @synthesize rtcVideoRotation=_rtcVideoRotation;
-@property(retain, nonatomic) RTCAudioTrack *localAudioOnlyTrack; // @synthesize localAudioOnlyTrack=_localAudioOnlyTrack;
+@property(retain, nonatomic) RTCAudioTrack *localAudioTrack; // @synthesize localAudioTrack=_localAudioTrack;
 @property(retain) RTCVideoCapturer *localCapturer; // @synthesize localCapturer=_localCapturer;
 @property(retain, nonatomic) PTVJanusClient *janusClient; // @synthesize janusClient=_janusClient;
 @property(retain, nonatomic) PTVGuestRoomConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(nonatomic) _Bool isAudioScopeEnabled; // @synthesize isAudioScopeEnabled=_isAudioScopeEnabled;
 @property(nonatomic) long long loggedInUserParticipantIndex; // @synthesize loggedInUserParticipantIndex=_loggedInUserParticipantIndex;
-@property(nonatomic) __weak UIViewController<PTVGuestCoordinatorDelegate> *delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) __weak id <PTVGuestCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)toggleAudioVideoForUserID:(id)arg1;
 - (_Bool)canToggleAudioVideoForUserID:(id)arg1;
 - (void)visualizeIceConnectionState:(long long)arg1;
@@ -73,6 +71,7 @@
 - (void)sourcePipelineBroadcastingStateDidChange;
 - (void)rtcVideoRotationStateChanged;
 - (void)handleInterfaceOrientation:(long long)arg1;
+- (void)publishPixelBuffer:(struct __CVBuffer *)arg1 timeStampNs:(unsigned long long)arg2;
 - (void)pipeline:(id)arg1 videoFrame:(struct __CVBuffer *)arg2 at:(CDStruct_1b6d18a9)arg3 captureContext:(CDStruct_4508418e)arg4;
 - (void)publishingPipeline:(id)arg1 didReceiveLogEntry:(id)arg2;
 - (void)updateVideoOrientation;
@@ -85,6 +84,7 @@
 - (void)cameraStartComplete;
 - (void)attemptReconnect;
 @property(retain) RTCVideoSource *localVideoSource;
+@property(nonatomic) _Bool isMuted;
 - (long long)audioOutputMode;
 - (void)disableWebRTCAudioSessionIfNeeded;
 - (void)startPipeline;
@@ -101,7 +101,7 @@
 - (void)joinBroadcast;
 - (long long)participantIndexForUserID:(id)arg1;
 - (id)usernameForUserID:(id)arg1;
-- (id)userIDForGuestType:(unsigned long long)arg1;
+- (id)userIDForMediaStream:(id)arg1;
 @property(retain) NSObject<PTVPipelineOwner> *pipelineOwner;
 - (id)sourcePipeline;
 @property(readonly, nonatomic) _Bool isDisconnectedWithError;

@@ -24,6 +24,7 @@
 + (id)cancelActionItemWithTitle:(id)arg1;
 + (id)destructiveActionItemWithTitle:(id)arg1 action:(CDUnknownBlockType)arg2;
 + (id)destructiveActionItemWithTitle:(id)arg1 imageName:(id)arg2 action:(CDUnknownBlockType)arg3;
++ (id)destructiveActionItemWithTitle:(id)arg1 subtitle:(id)arg2 imageName:(id)arg3 action:(CDUnknownBlockType)arg4;
 + (id)actionItemWithTitle:(id)arg1 action:(CDUnknownBlockType)arg2;
 + (id)actionItemWithTitle:(id)arg1 imageName:(id)arg2 action:(CDUnknownBlockType)arg3;
 + (id)actionItemWithTitle:(id)arg1 subtitle:(id)arg2 imageName:(id)arg3 action:(CDUnknownBlockType)arg4;

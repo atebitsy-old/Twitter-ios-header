@@ -10,6 +10,6 @@
 
 @interface T1InlineVideoView (T1Twitter)
 @property(nonatomic, readonly) NSString *debugDescription;
-- (void)updateViewModelWith:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
+- (void)updateViewModelWith:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 imageFetchHelper:(id)arg4;
 @end
 

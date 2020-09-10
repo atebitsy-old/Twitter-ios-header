@@ -147,8 +147,9 @@
 - (void)sendScreenshotHeartMessage;
 - (id)sendCurrentGiftHeart;
 - (void)sendUserIsTypingMessage;
-- (id)sendDefaultHeartMessage;
+- (id)sendDefaultHeartMessageWithBody:(id)arg1;
 - (id)sendHeartMessage;
+- (id)sendEmojiMessage:(id)arg1;
 - (void)sendBlockMessageForMessage:(id)arg1;
 - (void)sendBroadcasterBlockMessageForUsername:(id)arg1 remoteUserID:(id)arg2;
 - (_Bool)isSuperfanOfBroadcaster;

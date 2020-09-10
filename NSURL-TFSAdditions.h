@@ -15,7 +15,6 @@
 - (id)tfs_URLByStrippingQueryParameters;
 - (id)tfs_URLBySanitizingEmptySchemeAndEmptyHost;
 - (_Bool)tfs_hasHTTPScheme;
-- (id)tfs_URLByAddingOrUpdatingQueryItems:(id)arg1;
 - (id)tfs_URLByAppendingQueryItems:(id)arg1;
 - (_Bool)tfs_hostIsSubDomainOfString:(id)arg1;
 - (_Bool)tfs_hasQueryItemWithName:(id)arg1;

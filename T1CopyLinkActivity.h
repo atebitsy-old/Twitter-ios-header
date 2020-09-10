@@ -4,17 +4,18 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <T1Twitter/T1UIActivity.h>
+#import <T1Twitter/T1Activity.h>
 
 @class TFNTwitterStatus;
 
-@interface T1CopyLinkActivity : T1UIActivity
+@interface T1CopyLinkActivity : T1Activity
 {
     TFNTwitterStatus *_status;
 }
 
 - (void).cxx_destruct;
 - (void)performActivity;
+- (id)scribeAction;
 - (id)activityType;
 - (_Bool)isSupported;
 - (id)initWithStatus:(id)arg1;

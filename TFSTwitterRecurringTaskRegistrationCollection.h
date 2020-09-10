@@ -14,6 +14,7 @@
 }
 
 - (void).cxx_destruct;
+- (id)allTasks;
 - (_Bool)handleEventObservedFromSource:(id)arg1 forTask:(id)arg2 shouldKeepObserving:(_Bool)arg3;
 - (_Bool)containsTask:(id)arg1;
 - (void)removeAllTasks;

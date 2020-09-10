@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class NSArray, NSDictionary;
+@class NSArray;
 
 @protocol TFSScribeOutgoingEventsHandler
-- (void)handleScribeOutgoingEvents:(NSArray *)arg1 eventParameters:(NSDictionary *)arg2 completionHandler:(void (^)(unsigned long long))arg3;
+- (void)handleScribeOutgoingEvents:(NSArray *)arg1 retryDistribution:(NSArray *)arg2 completionHandler:(void (^)(unsigned long long))arg3;
 @end
 

@@ -9,6 +9,7 @@
 @class NSString;
 
 @protocol T1ListCopyStringsProvider <NSObject>
+- (NSString *)listRearrangeHomeAlertMessage;
 - (NSString *)listTypeaheadEmptyQueryMessage;
 - (NSString *)listSearchPlaceholderText;
 - (NSString *)listTypeaheadEmptyStateMessage;

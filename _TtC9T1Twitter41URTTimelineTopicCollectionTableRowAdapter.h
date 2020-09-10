@@ -9,6 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter41URTTimelineTopicCollectionTableRowAdapter : TFNItemsDataViewAdapter
 {
+    // Error parsing type: , name: topicMutationsManager
     // Error parsing type: , name: accountID
     // Error parsing type: , name: scribe
     // Error parsing type: , name: impressionLogger

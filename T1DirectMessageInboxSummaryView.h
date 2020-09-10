@@ -6,21 +6,18 @@
 
 #import <UIKit/UIView.h>
 
-@class NSString, T1DirectMessageAvatarImageView, T1DismissButton, UIButton, UIColor, UIImageView, UILabel;
+@class T1DirectMessageAvatarImageView, UIButton, UIImageView, UILabel;
 
 __attribute__((visibility("hidden")))
 @interface T1DirectMessageInboxSummaryView : UIView
 {
     // Error parsing type: , name: thumbnailImageView
-    // Error parsing type: , name: defaultTrashVectorFillColor
-    // Error parsing type: , name: accessoryTrashButton
-    // Error parsing type: , name: accessoryTrashImageName
+    // Error parsing type: , name: accessoryActionButton
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: titleBadgeView
     // Error parsing type: , name: subtitleLabel
     // Error parsing type: , name: timestampLabel
     // Error parsing type: , name: bodyLabel
-    // Error parsing type: , name: caretButton
     // Error parsing type: , name: accessoryImageView
     // Error parsing type: , name: columns
     // Error parsing type: , name: bodyColumns
@@ -40,15 +37,12 @@ __attribute__((visibility("hidden")))
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 @property(nonatomic, readonly) UIImageView *accessoryImageView; // @synthesize accessoryImageView;
-@property(nonatomic, readonly) T1DismissButton *caretButton; // @synthesize caretButton;
 @property(nonatomic, readonly) UILabel *bodyLabel; // @synthesize bodyLabel;
 @property(nonatomic, readonly) UILabel *timestampLabel; // @synthesize timestampLabel;
 @property(nonatomic, readonly) UILabel *subtitleLabel; // @synthesize subtitleLabel;
 @property(nonatomic, readonly) UIImageView *titleBadgeView; // @synthesize titleBadgeView;
 @property(nonatomic, readonly) UILabel *titleLabel; // @synthesize titleLabel;
-@property(nonatomic, readonly) NSString *accessoryTrashImageName;
-@property(nonatomic, readonly) UIButton *accessoryTrashButton; // @synthesize accessoryTrashButton;
-@property(nonatomic, readonly) UIColor *defaultTrashVectorFillColor; // @synthesize defaultTrashVectorFillColor;
+@property(nonatomic, readonly) UIButton *accessoryActionButton; // @synthesize accessoryActionButton;
 @property(nonatomic, readonly) T1DirectMessageAvatarImageView *thumbnailImageView; // @synthesize thumbnailImageView;
 
 @end

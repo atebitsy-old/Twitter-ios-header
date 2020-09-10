@@ -22,6 +22,7 @@
 {
     _Bool _didShowAddressBookFollowAmbientNotification;
     _Bool _clearsSelectionOnViewWillAppear;
+    _Bool _shouldResetTopRequestsImpressionScribe;
     _Bool _showComposeNewDMActionButtonItem;
     TFNTwitterAccount *_account;
     UIBarButtonItem *_composeBarButtonItem;
@@ -49,6 +50,7 @@
 @property(nonatomic) __weak T1EmptyContentViewController *emptyInboxViewController; // @synthesize emptyInboxViewController=_emptyInboxViewController;
 @property(nonatomic) __weak T1DirectMessageInboxTimelineViewController *conversationsViewController; // @synthesize conversationsViewController=_conversationsViewController;
 @property(nonatomic) unsigned long long inboxType; // @synthesize inboxType=_inboxType;
+@property(nonatomic) _Bool shouldResetTopRequestsImpressionScribe; // @synthesize shouldResetTopRequestsImpressionScribe=_shouldResetTopRequestsImpressionScribe;
 @property(nonatomic) _Bool clearsSelectionOnViewWillAppear; // @synthesize clearsSelectionOnViewWillAppear=_clearsSelectionOnViewWillAppear;
 @property(nonatomic) _Bool didShowAddressBookFollowAmbientNotification; // @synthesize didShowAddressBookFollowAmbientNotification=_didShowAddressBookFollowAmbientNotification;
 @property(retain, nonatomic) T1DirectMessageConversation *selectedConversation; // @synthesize selectedConversation=_selectedConversation;
@@ -60,7 +62,7 @@
 - (id)t1_actionButtonItemCategoriesWithAccount:(id)arg1;
 - (_Bool)t1_showsActionButton;
 - (_Bool)toaster:(id)arg1 canDisplayToast:(id)arg2 withPriority:(unsigned long long)arg3;
-- (void)didTapTrashButtonForConversation:(id)arg1 sender:(id)arg2;
+- (void)didTapActionButtonForConversation:(id)arg1 sender:(id)arg2;
 - (void)didTapAvatarForConversation:(id)arg1 sender:(id)arg2;
 - (void)loadMoreConversationsWithCursor:(id)arg1;
 - (void)showContextMenuForConversation:(id)arg1 sender:(id)arg2;
@@ -69,6 +71,8 @@
 - (void)disableNotificationsForConversation:(id)arg1 sender:(id)arg2;
 - (void)enableNotificationsForConversation:(id)arg1;
 - (void)reportConversation:(id)arg1;
+- (void)unblockConversation:(id)arg1;
+- (void)blockConversation:(id)arg1;
 - (void)deleteConversation:(id)arg1;
 - (id)previewConversation:(id)arg1;
 - (void)viewConversation:(id)arg1;

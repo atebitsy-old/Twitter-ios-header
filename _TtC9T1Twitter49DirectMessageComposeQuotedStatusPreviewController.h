@@ -16,6 +16,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: textChangeDetectionTimer
     // Error parsing type: , name: pendingRequest
     // Error parsing type: , name: lastDetectedStatusIDs
+    // Error parsing type: , name: disableStatusPreviewUpdate
 }
 
 - (void).cxx_destruct;

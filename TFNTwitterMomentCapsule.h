@@ -6,12 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import <T1Twitter/TFNTwitterMomentContainer-Protocol.h>
 #import <T1Twitter/TFSModel-Protocol.h>
 
 @class NSArray, NSDate, NSString, TFNTwitterMoment, TFNTwitterMomentAccess, TFNTwitterMomentAuthor, TFNTwitterMomentCapsuleCTA, TFNTwitterMomentCurationMetadata, TFNTwitterMomentEvent, TFNTwitterMomentPage, TFNTwitterMomentPremadeMomentData, TFNTwitterSuggestsInfo, TFNTwitterUser, TFSTwitterPromotedContent;
 
-@interface TFNTwitterMomentCapsule : NSObject <TFNTwitterMomentContainer, TFSModel>
+@interface TFNTwitterMomentCapsule : NSObject <TFSModel>
 {
     _Bool _deleted;
     TFNTwitterMoment *_moment;
@@ -30,9 +29,9 @@
 @property(readonly, nonatomic) TFNTwitterMomentPage *coverPage; // @synthesize coverPage=_coverPage;
 @property(readonly, nonatomic) NSArray *pages; // @synthesize pages=_pages;
 @property(readonly, nonatomic) TFNTwitterMoment *moment; // @synthesize moment=_moment;
-@property(readonly, copy) NSString *description;
+- (id)description;
 - (_Bool)isEqual:(id)arg1;
-@property(readonly) unsigned long long hash;
+- (unsigned long long)hash;
 @property(readonly, nonatomic) TFNTwitterMomentAccess *momentAccess;
 @property(readonly, nonatomic) long long totalLikes;
 @property(readonly, nonatomic) _Bool isLiked;
@@ -55,7 +54,6 @@
 @property(readonly, nonatomic) NSString *momentDescription;
 @property(readonly, nonatomic) NSString *title;
 @property(readonly, nonatomic) NSString *momentID;
-- (void)updateMoment:(id)arg1;
 - (id)allStatuses;
 - (id)capsuleByReplacingStatuses:(id)arg1;
 - (_Bool)isVisibleByAccount:(id)arg1;
@@ -64,10 +62,6 @@
 @property(readonly, nonatomic) _Bool needsPageHydration;
 - (id)initWithJSONDictionary:(id)arg1;
 - (id)initWithMoment:(id)arg1 pages:(id)arg2 coverPage:(id)arg3 deleted:(_Bool)arg4 CTA:(id)arg5;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly) Class superclass;
 
 @end
 

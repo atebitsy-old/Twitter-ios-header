@@ -9,13 +9,14 @@
 #import <T1Twitter/TNLHostSanitizer-Protocol.h>
 #import <T1Twitter/TNLNetworkObserver-Protocol.h>
 
-@class NSDate, NSDictionary, NSMutableArray, NSSet, NSString, T1NetworkTrafficMappingServicePollingTask, TFSTimer, TFSTwitterAPICommandService, TFSTwitterTrafficMapModel, TNUTransactionMetrics;
+@class NSDate, NSDictionary, NSMutableArray, NSSet, NSString, T1NetworkTrafficMappingServicePollingTask, TFSTimer, TFSTwitterAPICommandService, TFSTwitterRecurringTaskService, TFSTwitterTrafficMapModel, TNUTransactionMetrics;
 @protocol OS_dispatch_queue, T1NetworkTrafficMappingServiceDelegate, TFSTwitterAPICommandCancellable, TFSTwitterAPICommandContext;
 
 @interface T1NetworkTrafficMappingService : NSObject <TNLNetworkObserver, TNLHostSanitizer>
 {
     NSString *_persistenceIdentifier;
     _Bool _didAttemptPersistenceLoad;
+    _Bool _didRegisterPollingTask;
     NSSet *_unmappablePaths;
     NSString *_accountID;
     NSString *_configurationKey;
@@ -34,19 +35,18 @@
     TNUTransactionMetrics *_probingCNOE;
     id <TFSTwitterAPICommandCancellable> _requestBeaconListOperation;
     _Bool _useBeaconList;
+    TFSTwitterAPICommandService *_commandService;
+    id <TFSTwitterAPICommandContext> _commandContext;
+    TFSTwitterRecurringTaskService *_recurringTaskService;
     id <T1NetworkTrafficMappingServiceDelegate> _delegate;
     unsigned long long _maxTimeoutsForTrafficMapping;
     unsigned long long _maxProbesPerSession;
     double _probeThrottleTimeInterval;
     NSObject<OS_dispatch_queue> *_queue;
     NSString *_probingRandomizationString;
-    TFSTwitterAPICommandService *_commandService;
-    id <TFSTwitterAPICommandContext> _commandContext;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <TFSTwitterAPICommandContext> commandContext; // @synthesize commandContext=_commandContext;
-@property(readonly, nonatomic) TFSTwitterAPICommandService *commandService; // @synthesize commandService=_commandService;
 @property(readonly, copy, nonatomic) NSString *probingRandomizationString; // @synthesize probingRandomizationString=_probingRandomizationString;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property double probeThrottleTimeInterval; // @synthesize probeThrottleTimeInterval=_probeThrottleTimeInterval;
@@ -90,17 +90,22 @@
 - (void)_t1_queue_tearDownPolling;
 - (void)_t1_queue_resetPolling;
 - (void)_t1_queue_updateNextPollingDateWithMinimumPollingInterval:(double)arg1;
+- (void)_t1_queue_registerRecurringTaskIfNecessary;
 - (void)_t1_queue_suspend:(_Bool)arg1;
 - (void)_t1_queue_resumeWithConfigurationKey:(id)arg1 configurationValue:(id)arg2 accountID:(id)arg3;
 @property(readonly, getter=isSuspended) _Bool suspended;
 - (void)updateWithConfigurationKey:(id)arg1 configurationValue:(id)arg2 accountID:(id)arg3;
+- (void)suspend;
 - (id)initWithDelegate:(id)arg1;
 - (id)init;
-- (id)initWithDelegate:(id)arg1 probingRandomizationString:(id)arg2 apiCommandService:(id)arg3 apiCommandContext:(id)arg4;
+- (id)initWithDelegate:(id)arg1 probingRandomizationString:(id)arg2 apiCommandService:(id)arg3 apiCommandContext:(id)arg4 recurringTaskService:(id)arg5;
 - (void)dealloc;
 @property(copy) NSSet *unmappablePaths;
 @property(copy) NSString *persistenceIdentifier;
 @property __weak id <T1NetworkTrafficMappingServiceDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) TFSTwitterRecurringTaskService *recurringTaskService; // @synthesize recurringTaskService=_recurringTaskService;
+@property(readonly, nonatomic) id <TFSTwitterAPICommandContext> commandContext; // @synthesize commandContext=_commandContext;
+@property(readonly, nonatomic) TFSTwitterAPICommandService *commandService; // @synthesize commandService=_commandService;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

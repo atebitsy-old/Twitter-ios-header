@@ -54,6 +54,7 @@
     // Error parsing type: , name: translatorType
     // Error parsing type: , name: url
     // Error parsing type: , name: verified
+    // Error parsing type: , name: verifiedType
     // Error parsing type: , name: withheldDescription
     // Error parsing type: , name: withheldEntities
     // Error parsing type: , name: withheldInCountries

@@ -50,6 +50,7 @@
 @property(nonatomic, readonly) NSString *designatorString;
 @property(nonatomic, readonly) _Bool affiliated;
 @property(nonatomic, readonly) TFSTwitterUserDesignatorInfo *highlightedDesignatorInfo;
+@property(nonatomic, readonly) long long identityType;
 @property(nonatomic, readonly) _Bool verified;
 @property(nonatomic, readonly) _Bool protectedUser;
 @property(nonatomic, readonly) long long profileImageState;

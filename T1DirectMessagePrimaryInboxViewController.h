@@ -11,11 +11,13 @@
     // Error parsing type: , name: mostRecentAcceptStatus
     // Error parsing type: , name: searchHelper
     // Error parsing type: , name: searchContainerView
+    // Error parsing type: , name: didFetchTopRequests
     // Error parsing type: , name: previouslyEmptyResults
     // Error parsing type: , name: $__lazy_storage_$_introItem
 }
 
 - (void).cxx_destruct;
+- (id)scribeComponent;
 - (void)searchAdditionalPages;
 - (void)didSelectItem:(id)arg1 atIndexPath:(id)arg2;
 - (void)accountSettingsDidUpdate:(id)arg1;

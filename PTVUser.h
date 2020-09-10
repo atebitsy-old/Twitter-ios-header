@@ -16,6 +16,7 @@
     NSString *_remoteID;
     NSString *_username;
     NSString *_display_name;
+    NSString *_twitter_id;
     NSString *_twitter_user_name;
     NSString *_user_description;
     long long _participant_index;
@@ -71,6 +72,7 @@
 @property(retain, nonatomic) NSString *user_description; // @synthesize user_description=_user_description;
 @property(nonatomic) _Bool has_digits_id; // @synthesize has_digits_id=_has_digits_id;
 @property(retain, nonatomic) NSString *twitter_user_name; // @synthesize twitter_user_name=_twitter_user_name;
+@property(retain, nonatomic) NSString *twitter_id; // @synthesize twitter_id=_twitter_id;
 @property(retain, nonatomic) NSString *display_name; // @synthesize display_name=_display_name;
 @property(retain, nonatomic) NSString *username; // @synthesize username=_username;
 @property(retain, nonatomic) NSString *remoteID; // @synthesize remoteID=_remoteID;

@@ -6,15 +6,29 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-#import <T1Twitter/T1DirectMessageComposeTextViewDelegate-Protocol.h>
+#import <T1Twitter/TFNDropDataSource-Protocol.h>
 
-@interface T1DirectMessageComposeViewController (T1Twitter8) <T1DirectMessageComposeTextViewDelegate>
-- (_Bool)handlePasteImageForComposeTextView:(id)arg1;
-- (_Bool)imagePasteEnabledForComposeTextView:(id)arg1;
-- (_Bool)textViewShouldBeginEditing:(id)arg1;
-- (void)textViewDidEndEditing:(id)arg1;
-- (void)textViewDidBeginEditing:(id)arg1;
-- (void)textViewDidChange:(id)arg1;
-- (void)textViewDidChangeSelection:(id)arg1;
+@class NSArray, NSString;
+
+@interface T1DirectMessageComposeViewController (T1Twitter8) <TFNDropDataSource>
+@property(nonatomic, readonly) NSString *localizedDropIndicationTooManyVideos;
+@property(nonatomic, readonly) NSString *localizedDropIndicationTooManyImages;
+@property(nonatomic, readonly) NSString *localizedDropIndicationTooManyGIFs;
+@property(nonatomic, readonly) NSString *localizedDropIndicationMixedMedia;
+@property(nonatomic, readonly) NSString *localizedDropIndicationVideos;
+@property(nonatomic, readonly) NSString *localizedDropIndicationURL;
+@property(nonatomic, readonly) NSString *localizedDropIndicationText;
+@property(nonatomic, readonly) NSString *localizedDropIndicationStatus;
+@property(nonatomic, readonly) NSString *localizedDropIndicationImages;
+@property(nonatomic, readonly) NSString *localizedDropIndicationGIFs;
+@property(nonatomic, readonly) _Bool hasVideoAttachments;
+@property(nonatomic, readonly) _Bool hasImageAttachments;
+@property(nonatomic, readonly) _Bool hasAnimatedImageAttachments;
+- (_Bool)canDropVideosCount:(unsigned long long)arg1;
+- (_Bool)canDropImagesCount:(unsigned long long)arg1;
+- (_Bool)canDropAnimatedGIFsCount:(unsigned long long)arg1;
+@property(nonatomic, readonly) _Bool hasAttachments;
+@property(nonatomic, readonly) unsigned long long maxNumberOfPhotos;
+@property(nonatomic, readonly) NSArray *attachments;
 @end
 

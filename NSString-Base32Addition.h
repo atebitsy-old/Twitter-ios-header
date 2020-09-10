@@ -22,6 +22,7 @@
 - (struct _NSRange)wordRangeForIndex:(long long)arg1;
 - (struct _NSRange)_tfs_wordRangeExpandRight:(struct _NSRange)arg1;
 - (struct _NSRange)_tfs_wordRangeExpandLeft:(struct _NSRange)arg1;
+- (id)tfs_directionSafeString;
 - (id)tfs_rangesByRemovingRanges:(id)arg1;
 - (id)tfs_stringByStrippingNonAlphanumericCharacters;
 - (id)tfs_stringByRemovingNullCharacters;
