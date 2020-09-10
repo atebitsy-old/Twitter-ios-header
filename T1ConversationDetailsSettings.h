@@ -10,6 +10,7 @@
 {
 }
 
++ (_Bool)maximumIndentationSentWithCursorsEnabled;
 + (_Bool)emphasizedConnectorLinesEnabled;
 + (double)inlineActionRightMargin;
 + (_Bool)inlineActionsVerticallyAligned;
@@ -31,6 +32,7 @@
 + (_Bool)tapToCollapseEnabled;
 + (_Bool)tweetTextSelectionEnabled;
 + (_Bool)showOverflowButtonsOnTombstones;
++ (_Bool)conversationOverflowIncludedInGQLQueryEnabled;
 + (_Bool)alwaysShowAQCursors;
 + (_Bool)alwaysShowLQCursors;
 + (_Bool)showMoreGrayThemeEnabled;

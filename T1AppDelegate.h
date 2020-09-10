@@ -19,6 +19,8 @@
     NSDictionary *_finishStartingOnForegroundWithOptions;
     NSArray *_didEnterBackgroundOperations;
     NSString *_bgFetchRestartSuppressionToken;
+    NSString *_deferredBackgroundURLSessionIdentifier;
+    CDUnknownBlockType _deferredBackgroundURLSessionEventsCompletionHandler;
     UIWindow *_window;
     T1ComposeState *_currentComposeState;
     TLTBackgroundFetchManager *_backgroundFetchManager;

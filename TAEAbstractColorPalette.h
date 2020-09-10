@@ -10,39 +10,39 @@
 {
 }
 
-- (id)_twitterColorFadedOrange;
-- (id)_twitterColorLightOrange;
-- (id)_twitterColorOrange;
-- (id)_twitterColorDeepOrange;
-- (id)_twitterColorFadedRed;
-- (id)_twitterColorLightRed;
-- (id)_twitterColorRed;
-- (id)_twitterColorDeepRed;
-- (id)_twitterColorFadedPurple;
-- (id)_twitterColorLightPurple;
-- (id)_twitterColorPurple;
-- (id)_twitterColorDeepPurple;
-- (id)_twitterColorFadedGreen;
-- (id)_twitterColorLightGreen;
-- (id)_twitterColorGreen;
-- (id)_twitterColorDeepGreen;
-- (id)_twitterColorFadedYellow;
-- (id)_twitterColorLightYellow;
-- (id)_twitterColorYellow;
-- (id)_twitterColorDeepYellow;
-- (id)_twitterColorFaintBlue;
-- (id)_twitterColorFadedBlue;
-- (id)_twitterColorLightBlue;
-- (id)_twitterColorBlue;
-- (id)_twitterColorDeepBlue;
-- (id)_twitterColorFaintGray;
-- (id)_twitterColorFadedGray;
-- (id)_twitterColorLightGray;
-- (id)_twitterColorGray;
-- (id)_twitterColorDeepGray;
-- (id)_twitterColorText;
-- (id)_twitterColorBlack;
-- (id)_twitterColorWhite;
+- (id)_fadedOrangeColor;
+- (id)_lightOrangeColor;
+- (id)_orangeColor;
+- (id)_deepOrangeColor;
+- (id)_fadedRedColor;
+- (id)_lightRedColor;
+- (id)_redColor;
+- (id)_deepRedColor;
+- (id)_fadedPurpleColor;
+- (id)_lightPurpleColor;
+- (id)_purpleColor;
+- (id)_deepPurpleColor;
+- (id)_fadedGreenColor;
+- (id)_lightGreenColor;
+- (id)_greenColor;
+- (id)_deepGreenColor;
+- (id)_fadedYellowColor;
+- (id)_lightYellowColor;
+- (id)_yellowColor;
+- (id)_deepYellowColor;
+- (id)_faintBlueColor;
+- (id)_fadedBlueColor;
+- (id)_lightBlueColor;
+- (id)_blueColor;
+- (id)_deepBlueColor;
+- (id)_faintGrayColor;
+- (id)_fadedGrayColor;
+- (id)_lightGrayColor;
+- (id)_grayColor;
+- (id)_deepGrayColor;
+- (id)_textColor;
+- (id)_blackColor;
+- (id)_whiteColor;
 
 @end
 

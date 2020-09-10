@@ -6,7 +6,11 @@
 
 #import <objc/NSObject.h>
 
-@interface NSObject (T1OnboardingItemsDataViewCustomization)
+#import <T1Twitter/T1FlexibleLayoutItem-Protocol.h>
+
+@class UIView;
+
+@interface NSObject (T1OnboardingItemsDataViewCustomization) <T1FlexibleLayoutItem>
 - (id)t1_withOnboardingCustomEdgeInsetsForTop:(double)arg1 bottom:(double)arg2;
 - (id)t1_withOnboardingBorderlessCellCustomization;
 - (id)t1_withTopInset:(double)arg1 bottomInset:(double)arg2 borderless:(_Bool)arg3 level:(long long)arg4;
@@ -18,6 +22,8 @@
 - (id)_t1_withPeopleDiscoveryModuleScribeComponent:(id)arg1;
 - (id)_t1_withPeopleDiscoveryModuleScribeItem:(id)arg1;
 - (id)_t1_mutableItemForItem:(id)arg1;
+- (id)t1_withVisibilityListener:(CDUnknownBlockType)arg1;
+- (id)t1_withFrameListener:(CDUnknownBlockType)arg1;
 - (id)t1_withContentSpacing:(struct UIEdgeInsets)arg1;
 - (id)t1_withContentInsets:(struct UIEdgeInsets)arg1;
 - (id)t1_withSize:(struct CGSize)arg1;
@@ -27,6 +33,16 @@
 - (id)t1_withSizeCalculator:(CDUnknownBlockType)arg1;
 - (id)t1_withFrameAnimator:(CDUnknownBlockType)arg1;
 - (id)t1_withVisibilityCalculator:(CDUnknownBlockType)arg1;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutVisibilityListener;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameListener;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutContentSpacingCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutContentInsetsCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutSizeCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameAnimator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutVisibilityCalculator;
+@property(readonly, nonatomic) id t1_flexibleLayoutViewModel;
+@property(readonly, nonatomic) UIView *t1_flexibleLayoutView;
 - (long long)dummyObjectType;
 - (_Bool)isDummyMetaObject;
 - (_Bool)isNotADummyObject;

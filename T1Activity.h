@@ -37,7 +37,6 @@
 - (id)activityTitle;
 @property(readonly, nonatomic) _Bool isSupported;
 - (id)initWithTwitterStatus:(id)arg1 identifier:(id)arg2 type:(unsigned long long)arg3 title:(id)arg4 image:(id)arg5;
-- (id)initWithTwitterStatus:(id)arg1 identifier:(id)arg2 type:(unsigned long long)arg3 title:(id)arg4 vectorImageName:(id)arg5;
 - (id)initWithTwitterStatus:(id)arg1 identifier:(id)arg2 type:(unsigned long long)arg3 title:(id)arg4 imageName:(id)arg5;
 
 @end

@@ -76,9 +76,6 @@
 - (void)_startSubheaderLayoutTimerIfNeeded;
 - (id)scribeSection;
 - (id)scribePage;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)viewDrafts;
 - (void)performUpdatesWithScrollPosition:(double)arg1 scrollVelocity:(double)arg2;
 - (long long)animationModeForSubheaderViewController:(id)arg1;
@@ -103,6 +100,7 @@
 @property(readonly, nonatomic) double collapsedHeaderHeight;
 @property(nonatomic) _Bool pullToLoadTopEnabled;
 @property(readonly, nonatomic) T1ResizableHeaderView *headerView; // @synthesize headerView=_headerView;
+- (void)viewSafeAreaInsetsDidChange;
 - (void)_layoutHeader;
 - (void)viewDidLayoutSubviews;
 - (void)viewWillDisappear:(_Bool)arg1;

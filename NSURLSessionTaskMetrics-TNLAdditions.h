@@ -7,6 +7,7 @@
 #import <CFNetwork/NSURLSessionTaskMetrics.h>
 
 @interface NSURLSessionTaskMetrics (TNLAdditions)
+- (id)tnl_approximateAttemptMetrics;
 - (id)tnl_dictionaryValue;
 - (id)tnl_detailedDescription;
 @end

@@ -347,7 +347,6 @@
 - (id)galleryButton;
 - (id)draftsButton;
 - (id)avatarImageView;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 @property(readonly, nonatomic) T1ComposeTooltipViewController *tooltipViewController;
 - (id)richTextView;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;

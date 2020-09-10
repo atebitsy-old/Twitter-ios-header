@@ -72,6 +72,7 @@
 @property(readonly, nonatomic) NSString *retweetedByAccessibilityLabel;
 @property(readonly, nonatomic) long long representedStatusID;
 @property(readonly, nonatomic) TFNTwitterGeotag *representedGeotag;
+@property(readonly, nonatomic) unsigned long long representedFromUserFollowedByCurrentAccountState;
 @property(readonly, nonatomic) NSString *representedFromUserName;
 @property(readonly, nonatomic) long long representedFromUserID;
 @property(readonly, nonatomic) TFNTwitterCardData *representedCardData;

@@ -14,10 +14,9 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: bodyStackView
     // Error parsing type: , name: textVerticalStackView
     // Error parsing type: , name: headerView
-    // Error parsing type: , name: socialProofView
     // Error parsing type: , name: titleLabel
+    // Error parsing type: , name: socialProofView
     // Error parsing type: , name: thumbnailImageView
-    // Error parsing type: , name: thumbnailSize
     // Error parsing type: , name: relatedTrendsViewConstraints
     // Error parsing type: , name: relatedTrendsView
     // Error parsing type: , name: relatedTrendsAccessibility

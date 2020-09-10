@@ -68,7 +68,6 @@
 - (_Bool)shouldHighlightItem:(id)arg1 atIndexPath:(id)arg2;
 - (void)missingDataViewAdapterForItem:(id)arg1 withOptions:(id)arg2;
 - (void)update:(_Bool)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)errorItemTapped:(id)arg1;
 - (id)initWithAccount:(id)arg1 pivotParameters:(id)arg2;
 

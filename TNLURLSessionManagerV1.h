@@ -26,7 +26,7 @@
 - (void)backoffSignalEncounteredForURL:(id)arg1 host:(id)arg2 responseHTTPHeaders:(id)arg3;
 - (void)applyBackoffDependenciesToOperation:(id)arg1 withURL:(id)arg2 host:(id)arg3 isLongPollRequest:(_Bool)arg4;
 - (void)syncAddURLSessionTaskOperation:(id)arg1;
-- (void)URLSessionDidCompleteBackgroundTask:(unsigned long long)arg1 sessionConfigIdentifier:(id)arg2 sharedContainerIdentifier:(id)arg3 request:(id)arg4 response:(id)arg5;
+- (void)URLSessionDidCompleteBackgroundTask:(unsigned long long)arg1 sessionConfigIdentifier:(id)arg2 sharedContainerIdentifier:(id)arg3 request:(id)arg4 response:(id)arg5 pairedOperation:(id)arg6;
 - (void)URLSessionDidCompleteBackgroundEvents:(id)arg1;
 - (_Bool)handleBackgroundURLSessionEvents:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)getAllURLSessions:(CDUnknownBlockType)arg1;

@@ -11,7 +11,6 @@
 @protocol PTVScreenshotObserverDelegate <NSObject>
 
 @optional
-- (void)screenshotObserverScreenshotIsReadyToFetch:(PTVScreenshotObserver *)arg1;
 - (void)screenshotObserverDidObserveUserTakeScreenshot:(PTVScreenshotObserver *)arg1;
 @end
 

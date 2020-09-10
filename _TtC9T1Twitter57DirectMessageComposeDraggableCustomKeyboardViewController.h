@@ -21,7 +21,6 @@ __attribute__((visibility("hidden")))
 - (void)panGestureReceived:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)scrollViewWillBeginDragging:(id)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;

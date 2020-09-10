@@ -55,8 +55,6 @@
 - (void)private_keyboardWillHide:(id)arg1;
 - (void)private_keyboardWillChangeFrame:(id)arg1;
 - (_Bool)private_isValidText:(id)arg1;
-- (void)layoutGuidesDidChange:(long long)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)interestAdapter:(id)arg1 didSelectInterest:(id)arg2 atIndexPath:(id)arg3;
 - (void)addBioField:(id)arg1 didReturn:(id)arg2;
 - (void)addBioFieldDidEndEditing:(id)arg1;

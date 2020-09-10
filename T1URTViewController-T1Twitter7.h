@@ -6,9 +6,7 @@
 
 #import <T1Twitter/T1URTViewController.h>
 
-@class T1NavigationMetadata;
-
 @interface T1URTViewController (T1Twitter7)
-@property(nonatomic, readonly) T1NavigationMetadata *sourceNavigationMetadata;
+- (void)markAsViewedHelper:(id)arg1 didViewCells:(id)arg2;
 @end
 

@@ -13,7 +13,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: urtViewController
     // Error parsing type: , name: timelineNeedsRefresh
     // Error parsing type: , name: stateManager
-    // Error parsing type: , name: networkingDelegate
     // Error parsing type: , name: suggestionForYourListBlender
     // Error parsing type: , name: addedUsers
     // Error parsing type: , name: removedUsers

@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class T1LiveVideoBadgeViewTheme, TFNSolidColorView, UILabel;
+@class T1LiveVideoBadgeViewTheme, TFNSolidColorView, UIColor, UILabel;
 @protocol T1LiveVideoBadgeViewLayoutDelegate, T1LiveVideoBadgeViewModel;
 
 @interface T1LiveVideoBadgeView : UIView
@@ -14,6 +14,7 @@
     TFNSolidColorView *_backgroundColorView;
     UILabel *_badgeLabel;
     T1LiveVideoBadgeViewTheme *_theme;
+    UIColor *_backgroundColorOverride;
     id <T1LiveVideoBadgeViewModel> _model;
     id <T1LiveVideoBadgeViewLayoutDelegate> _layoutDelegate;
 }
@@ -21,6 +22,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <T1LiveVideoBadgeViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 @property(retain, nonatomic) id <T1LiveVideoBadgeViewModel> model; // @synthesize model=_model;
+@property(retain, nonatomic) UIColor *backgroundColorOverride; // @synthesize backgroundColorOverride=_backgroundColorOverride;
 @property(retain, nonatomic) T1LiveVideoBadgeViewTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) UILabel *badgeLabel; // @synthesize badgeLabel=_badgeLabel;
 @property(readonly, nonatomic) TFNSolidColorView *backgroundColorView; // @synthesize backgroundColorView=_backgroundColorView;

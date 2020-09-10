@@ -63,10 +63,7 @@
 - (void)tfn_contentScrollViewWillBeginDragging:(id)arg1;
 - (void)tfn_contentScrollViewDidScroll:(id)arg1 animate:(_Bool)arg2;
 - (id)tfn_contentScrollView;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)horizontalLabelView:(id)arg1 didSelectItemAtIndex:(long long)arg2;
 - (double)minimumItemWidthForHorizontalLabelView:(id)arg1;
 - (id)horizontalLabelView:(id)arg1 badgeImageInfoForItemAtIndex:(long long)arg2;
@@ -100,6 +97,7 @@
 - (void)tfn_fontSizeChanged;
 - (_Bool)becomeFirstResponder;
 - (_Bool)canBecomeFirstResponder;
+- (void)viewSafeAreaInsetsDidChange;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;

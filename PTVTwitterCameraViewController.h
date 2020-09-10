@@ -133,7 +133,7 @@
 - (_Bool)canShareBroadcast;
 - (void)setPreBroadcastStartBroadcastState:(unsigned long long)arg1;
 - (void)broadcastCameraDidStart;
-- (_Bool)shouldHidePostBroadcastEditButton;
+- (_Bool)shouldHidePostBroadcast;
 - (_Bool)shouldHideOverflowMenu;
 - (void)showInformationalChatMessage:(id)arg1;
 - (void)associateTweetIDWithCurrentBroadcast:(id)arg1 amplifyProgramID:(id)arg2;

@@ -25,6 +25,7 @@
 @property(nonatomic, readonly) UIView *visibleTweetstormIndicatorView;
 @property(nonatomic, readonly) UIView<T1BasicStatusView> *visibleQuotedStatusView;
 @property(nonatomic, readonly) UIView *visibleCardForwardView;
+@property(nonatomic, readonly) UIView *visibleInlineReplyView;
 @property(nonatomic, readonly) UIView *visibleMediaForwardView;
 @property(nonatomic, readonly) UIView *visibleBodyTextView;
 @property(nonatomic, readonly) UIView *visibleConversationContextView;

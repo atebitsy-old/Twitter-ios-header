@@ -36,7 +36,6 @@
 + (id)twitterTextAsyncConfigLoadingAccountID;
 + (void)setTipImageCodecAsyncLoadingAccountID:(id)arg1;
 + (id)tipImageCodecAsyncLoadingAccountID;
-+ (id)urtAnatomyReferencingSetOptimizationSwitch;
 + (id)tipImageCodecAsyncLoadingEnabledSwitch;
 - (void).cxx_destruct;
 @property(retain, nonatomic) T1TwitterAPITweetEngagementsLimitedListener *tweetEngagementsLimitedListener; // @synthesize tweetEngagementsLimitedListener=_tweetEngagementsLimitedListener;

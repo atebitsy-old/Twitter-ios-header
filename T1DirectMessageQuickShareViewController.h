@@ -46,9 +46,7 @@
 - (void)keyboardWillShow:(id)arg1;
 - (_Bool)isLayoutMetricsCanvasInheritedByChildViewController:(id)arg1;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)preferredContentSizeDidChangeForChildContentContainer:(id)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)viewWillAppear:(_Bool)arg1;

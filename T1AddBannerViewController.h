@@ -60,7 +60,6 @@
 - (_Bool)tfn_prefersNavigationBarShadowHidden;
 - (long long)tfn_preferredToolbarVisibility;
 - (void)_updateConstraints;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 - (void)viewDidLoad;
 - (id)initWithAccount:(id)arg1 title:(id)arg2 subtitle:(id)arg3 nextLabel:(id)arg4 skipLabel:(id)arg5 delegate:(id)arg6 requireBanner:(_Bool)arg7 showCurrentBanner:(_Bool)arg8 forcedAvatarImage:(id)arg9;

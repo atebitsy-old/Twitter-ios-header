@@ -11,6 +11,7 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: topicID
     // Error parsing type: , name: relationshipTransition
+    // Error parsing type: , name: executeInBackground
 }
 
 - (void).cxx_destruct;

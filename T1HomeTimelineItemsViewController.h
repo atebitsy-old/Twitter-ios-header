@@ -172,7 +172,6 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (id)createScrollPerformanceMetricsWithDelegate:(id)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)_t1_initializeFleets;
 - (void)viewDidLoad;
 - (void)setNeedsUpdate:(_Bool)arg1;

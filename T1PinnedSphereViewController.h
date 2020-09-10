@@ -8,10 +8,10 @@
 
 @interface T1PinnedSphereViewController : TFNViewController
 {
+    // Error parsing type: , name: authenticatedAccountUserID
     // Error parsing type: , name: dataModel
     // Error parsing type: , name: viewController
     // Error parsing type: , name: stateManager
-    // Error parsing type: , name: networkingDelegate
     // Error parsing type: , name: suggestionForYourListBlender
     // Error parsing type: , name: addedUsers
     // Error parsing type: , name: removedUsers

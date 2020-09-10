@@ -48,7 +48,7 @@
 @property(copy, nonatomic) NSString *focalEntryID; // @synthesize focalEntryID=_focalEntryID;
 @property(nonatomic) long long focalStatusID; // @synthesize focalStatusID=_focalStatusID;
 @property(nonatomic) _Bool initialPopulationHasCompleted; // @synthesize initialPopulationHasCompleted=_initialPopulationHasCompleted;
-@property(nonatomic) long long overflowCount; // @synthesize overflowCount=_overflowCount;
+@property(readonly, nonatomic) long long overflowCount; // @synthesize overflowCount=_overflowCount;
 @property(copy, nonatomic) NSString *selectedNodeEntryID; // @synthesize selectedNodeEntryID=_selectedNodeEntryID;
 @property(readonly, nonatomic) T1ConversationStatusNode *lastStatusAddedToConversationFromComposer; // @synthesize lastStatusAddedToConversationFromComposer=_lastStatusAddedToConversationFromComposer;
 @property(retain, nonatomic) T1ConversationNode *rootNode; // @synthesize rootNode=_rootNode;
@@ -112,7 +112,7 @@
 - (id)_t1_composedRepliesToNode:(id)arg1;
 @property(readonly, nonatomic) NSMutableSet *composedStatusIDs; // @synthesize composedStatusIDs=_composedStatusIDs;
 @property(readonly, nonatomic) NSMutableDictionary *supplementalStatuses; // @synthesize supplementalStatuses=_supplementalStatuses;
-- (id)initWithAccount:(id)arg1 statusID:(long long)arg2 scribeContext:(id)arg3 referrer:(id)arg4 controllerData:(id)arg5;
+- (id)initWithAccount:(id)arg1 statusID:(long long)arg2 scribeContext:(id)arg3 referrer:(id)arg4 controllerData:(id)arg5 overflowCount:(long long)arg6;
 - (id)initWithAccount:(id)arg1 focalStatusID:(long long)arg2 scribeContext:(id)arg3 mediator:(id)arg4;
 
 // Remaining properties

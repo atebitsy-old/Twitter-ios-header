@@ -14,7 +14,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: account
     // Error parsing type: , name: $__lazy_storage_$_transitionHandler
-    // Error parsing type: , name: $__lazy_storage_$_threadVMs
     // Error parsing type: , name: $__lazy_storage_$_pages
     // Error parsing type: , name: openContext
     // Error parsing type: , name: pageIndex
@@ -22,6 +21,9 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_pageCount
     // Error parsing type: , name: $__lazy_storage_$_currentPageIndex
     // Error parsing type: , name: $__lazy_storage_$_currentThreadIndex
+    // Error parsing type: , name: $__lazy_storage_$_navigationIndex
+    // Error parsing type: , name: $__lazy_storage_$_navigationCount
+    // Error parsing type: , name: $__lazy_storage_$_threadPosition
     // Error parsing type: , name: $__lazy_storage_$_currentPage
     // Error parsing type: , name: $__lazy_storage_$_threadVMObservable
     // Error parsing type: , name: $__lazy_storage_$_selfThread
@@ -31,6 +33,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_didStartComposition
     // Error parsing type: , name: $__lazy_storage_$_composerInputMode
     // Error parsing type: , name: $__lazy_storage_$_isShowingCameraRoll
+    // Error parsing type: , name: isInitialThreadViewPresentation
     // Error parsing type: , name: navigateSpring
     // Error parsing type: , name: lastScribeGesture
     // Error parsing type: , name: _dismissing
@@ -46,6 +49,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: animatedBackgroundView
     // Error parsing type: , name: audioSessionToken
     // Error parsing type: , name: presentationContext
+    // Error parsing type: , name: $__lazy_storage_$_minNavigationIndex
     // Error parsing type: , name: $__lazy_storage_$_safeAreaInsets
     // Error parsing type: , name: forceDefaultDismissDestinationFrame
 }

@@ -12,12 +12,16 @@
 
 @interface TFNPhotosAuthorizedService : NSObject <TFNAuthorizedService>
 {
+    unsigned long long _accessLevel;
 }
 
+@property(readonly, nonatomic) unsigned long long accessLevel; // @synthesize accessLevel=_accessLevel;
 - (id)regrantPermissionInstructions;
 - (void)requestAuthorizationWithCompletionBlock:(CDUnknownBlockType)arg1;
 - (id)defaultUsageDescription;
 - (void)queryAuthorizationStatusWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (id)initWithAccessLevel:(unsigned long long)arg1;
+- (id)init;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

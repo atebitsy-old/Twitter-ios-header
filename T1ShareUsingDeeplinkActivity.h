@@ -14,6 +14,7 @@
     NSURL *_deepLinkURL;
 }
 
++ (id)viberActivityWithStatus:(id)arg1;
 + (id)lineActivityWithStatus:(id)arg1;
 + (id)telegramActivityWithStatus:(id)arg1;
 + (id)gmailActivityWithStatus:(id)arg1;

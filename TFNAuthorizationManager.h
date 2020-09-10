@@ -62,7 +62,7 @@
 - (long long)registerObservingAuthorizationUpdates:(long long)arg1 account:(id)arg2 updateBlock:(CDUnknownBlockType)arg3;
 - (void)queryAuthorizationStatusForServiceType:(long long)arg1 account:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (_Bool)isAuthorizationByAccountRequiredForServiceType:(long long)arg1;
-- (id)requestPolicyforServiceType:(long long)arg1;
+- (id)requestPolicyForServiceType:(long long)arg1;
 - (void)setService:(id)arg1 requestPolicy:(id)arg2 forServiceType:(long long)arg3;
 @property(retain, nonatomic) id <TFNAuthorizedServiceRequestPolicy> requestPolicy;
 - (void)_incrementCountForServiceType:(long long)arg1;

@@ -8,21 +8,20 @@
 
 #import <T1Twitter/TFNLayoutMetricsSizing-Protocol.h>
 
-@class NSArray, NSMutableArray, NSString, T1FlexibleLayoutHelper;
+@class NSArray, NSString, T1FlexibleLayoutHelper;
 
 @interface T1FlexibleLayoutView : UIView <TFNLayoutMetricsSizing>
 {
-    T1FlexibleLayoutHelper *_layoutHelper;
     _Bool _ignoreTopOriginWhenSizing;
     _Bool _ignoreLeftOriginWhenSizing;
     CDUnknownBlockType _contentEdgeInsetsCalculator;
     CDUnknownBlockType _layoutMetricsCalculator;
-    NSMutableArray *_flexibleLayoutItems;
+    T1FlexibleLayoutHelper *_layoutHelper;
 }
 
 + (CDUnknownBlockType)performWithoutAnimationFrameAnimator;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSMutableArray *flexibleLayoutItems; // @synthesize flexibleLayoutItems=_flexibleLayoutItems;
+@property(retain, nonatomic) T1FlexibleLayoutHelper *layoutHelper; // @synthesize layoutHelper=_layoutHelper;
 @property(copy, nonatomic) CDUnknownBlockType layoutMetricsCalculator; // @synthesize layoutMetricsCalculator=_layoutMetricsCalculator;
 @property(copy, nonatomic) CDUnknownBlockType contentEdgeInsetsCalculator; // @synthesize contentEdgeInsetsCalculator=_contentEdgeInsetsCalculator;
 @property(nonatomic) _Bool ignoreLeftOriginWhenSizing; // @synthesize ignoreLeftOriginWhenSizing=_ignoreLeftOriginWhenSizing;

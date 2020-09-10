@@ -8,7 +8,7 @@
 
 @interface _TtCC9T1Twitter43URTTimelineReactionContextActionTransformer7Context : _TtC9T1Twitter24URTTimelineUpdateContext
 {
-    // Error parsing type: , name: immediateReactionReference
+    // Error parsing type: , name: reaction
 }
 
 @end

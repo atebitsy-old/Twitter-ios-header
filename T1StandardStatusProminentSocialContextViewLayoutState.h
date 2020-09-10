@@ -14,21 +14,25 @@
     _Bool _socialTextMaxLinesExceeded;
     NSString *_socialText;
     NSString *_followButtonText;
+    NSString *_followingButtonText;
     struct CGRect _caretButtonFrame;
     struct CGRect _socialBadgeFrame;
     struct CGRect _socialTextFrame;
     struct CGRect _socialSubtextFrame;
-    struct CGRect _topicFollowButtonFrame;
+    struct CGRect _followButtonFrame;
+    struct CGRect _followingButtonFrame;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) struct CGRect topicFollowButtonFrame; // @synthesize topicFollowButtonFrame=_topicFollowButtonFrame;
+@property(nonatomic) struct CGRect followingButtonFrame; // @synthesize followingButtonFrame=_followingButtonFrame;
+@property(nonatomic) struct CGRect followButtonFrame; // @synthesize followButtonFrame=_followButtonFrame;
 @property(nonatomic, getter=isSocialTextMaxLinesExceeded) _Bool socialTextMaxLinesExceeded; // @synthesize socialTextMaxLinesExceeded=_socialTextMaxLinesExceeded;
 @property(nonatomic, getter=isSocialTextMultipleLines) _Bool socialTextMultipleLines; // @synthesize socialTextMultipleLines=_socialTextMultipleLines;
 @property(nonatomic) struct CGRect socialSubtextFrame; // @synthesize socialSubtextFrame=_socialSubtextFrame;
 @property(nonatomic) struct CGRect socialTextFrame; // @synthesize socialTextFrame=_socialTextFrame;
 @property(nonatomic) struct CGRect socialBadgeFrame; // @synthesize socialBadgeFrame=_socialBadgeFrame;
 @property(nonatomic) struct CGRect caretButtonFrame; // @synthesize caretButtonFrame=_caretButtonFrame;
+@property(retain, nonatomic) NSString *followingButtonText; // @synthesize followingButtonText=_followingButtonText;
 @property(retain, nonatomic) NSString *followButtonText; // @synthesize followButtonText=_followButtonText;
 @property(retain, nonatomic) NSString *socialText; // @synthesize socialText=_socialText;
 

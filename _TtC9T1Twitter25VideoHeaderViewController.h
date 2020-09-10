@@ -6,10 +6,8 @@
 
 #import <T1Twitter/_TtC9T1Twitter25MediaHeaderViewController.h>
 
-#import <T1Twitter/TAVPlaybackObserver-Protocol.h>
-
 __attribute__((visibility("hidden")))
-@interface _TtC9T1Twitter25VideoHeaderViewController : _TtC9T1Twitter25MediaHeaderViewController <TAVPlaybackObserver>
+@interface _TtC9T1Twitter25VideoHeaderViewController : _TtC9T1Twitter25MediaHeaderViewController
 {
     // Error parsing type: , name: tavPlayer
     // Error parsing type: , name: previousNavigationBarHidden

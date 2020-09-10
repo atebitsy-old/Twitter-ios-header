@@ -7,12 +7,15 @@
 @class UIView;
 
 @protocol T1FlexibleLayoutItem
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutContentSpacingCalculator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutVisibilityCalculator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutContentInsetsCalculator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutFrameCalculator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutSizeCalculator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutFrameAnimator;
-@property(readonly, nonatomic) UIView *flexibleLayoutView;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutVisibilityListener;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameListener;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutContentSpacingCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutVisibilityCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutContentInsetsCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutSizeCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameAnimator;
+@property(readonly, nonatomic) id t1_flexibleLayoutViewModel;
+@property(readonly, nonatomic) UIView *t1_flexibleLayoutView;
 @end
 

@@ -8,6 +8,7 @@
 
 @interface T1RelevancePromptView : UIView
 {
+    // Error parsing type: , name: $__lazy_storage_$_compactConfirmationStyleViewAttributes
     // Error parsing type: , name: $__lazy_storage_$_confirmationStyleViewAttributes
     // Error parsing type: , name: buttonStackView
     // Error parsing type: , name: titleTextView

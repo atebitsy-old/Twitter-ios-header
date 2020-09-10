@@ -25,7 +25,6 @@
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (id)scribeSection;
 - (id)scribePage;
 - (id)scribe;

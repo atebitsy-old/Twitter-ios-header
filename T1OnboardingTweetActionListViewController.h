@@ -74,8 +74,6 @@
 - (void)waitWithMessage:(id)arg1;
 - (_Bool)canWaitWithMessage:(id)arg1;
 - (void)tweetActionListEventHandler:(id)arg1 didReceiveStatusViewEvent:(id)arg2;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (_Bool)addTweetGroupsFromFetchTweetsResponse:(id)arg1;
 @property(readonly, nonatomic) NSArray *tweetActionResponses;
 - (void)update:(_Bool)arg1;
@@ -84,6 +82,7 @@
 - (id)scribePage;
 - (_Bool)tfn_logoTitleViewShown;
 - (long long)tfn_preferredToolbarVisibility;
+- (void)viewSafeAreaInsetsDidChange;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 - (void)startTimelineTransitionWithMessage:(id)arg1 completion:(CDUnknownBlockType)arg2;

@@ -117,7 +117,7 @@
 - (void)didLeaveScrollbackMode;
 - (void)didEnterScrollbackMode;
 - (void)loadAnalyticsManager;
-- (_Bool)shouldHidePostBroadcastEditButton;
+- (_Bool)shouldHidePostBroadcast;
 - (_Bool)shouldHideOverflowMenu;
 - (_Bool)isTemporarilyHidingCallInOverflowMenuItem;
 - (_Bool)shouldDisplayCallInOverflowMenuItem;

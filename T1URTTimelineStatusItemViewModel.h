@@ -203,6 +203,7 @@
 @property(nonatomic, readonly) _Bool isConversationSingleBranchedReplyStatus;
 @property(nonatomic, readonly) long long representedStatusID;
 @property(nonatomic, readonly) long long representedFromUserID;
+@property(nonatomic, readonly) unsigned long long representedFromUserFollowedByCurrentAccountState;
 @property(nonatomic, readonly) NSString *representedFromUserName;
 
 // Remaining properties

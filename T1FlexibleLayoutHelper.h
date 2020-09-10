@@ -6,8 +6,11 @@
 
 #import <objc/NSObject.h>
 
+@class NSArray, NSMutableArray;
+
 @interface T1FlexibleLayoutHelper : NSObject
 {
+    NSMutableArray *_layoutItems;
 }
 
 + (CDUnknownBlockType)matchPreviousLayoutFrameCalculator;
@@ -18,7 +21,12 @@
 + (CDUnknownBlockType)fullWidthVerticalLayoutFrameCalculator;
 + (CDUnknownBlockType)topAlignedHorizontalLayoutFrameCalculator;
 + (CDUnknownBlockType)leftAlignedVerticalLayoutFrameCalculator;
-- (struct CGRect)layoutItems:(id)arg1 inBounds:(struct CGRect)arg2 withLayoutMetrics:(id)arg3 forSizing:(_Bool)arg4 visibilityHandler:(CDUnknownBlockType)arg5 frameHandler:(CDUnknownBlockType)arg6;
+- (void).cxx_destruct;
+- (struct CGRect)layoutItemsInBounds:(struct CGRect)arg1 withLayoutMetrics:(id)arg2 forSizing:(_Bool)arg3;
+- (void)removeLayoutItem:(id)arg1;
+- (void)addLayoutItem:(id)arg1;
+@property(retain, nonatomic) NSArray *layoutItems;
+- (id)init;
 
 @end
 

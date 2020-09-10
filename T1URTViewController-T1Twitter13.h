@@ -6,11 +6,11 @@
 
 #import <T1Twitter/T1URTViewController.h>
 
-#import <T1Twitter/T1FeedbackActionProvider-Protocol.h>
+#import <T1Twitter/T1DataViewControllerRenderPerformanceLoggerDataSource-Protocol.h>
 
-@interface T1URTViewController (T1Twitter13) <T1FeedbackActionProvider>
-- (CDUnknownBlockType)didProvideModerateFeedbackBlockForStatus:(id)arg1;
-- (CDUnknownBlockType)didProvideShowLessOftenFeedbackForStatus:(id)arg1;
-- (id)negativeFeedbackActionsForStatus:(id)arg1;
+@interface T1URTViewController (T1Twitter13) <T1DataViewControllerRenderPerformanceLoggerDataSource>
+- (id)dataViewControllerRenderPerformanceLoggerScribe:(id)arg1;
+- (_Bool)dataViewControllerRenderPerformanceLoggerIsReadyToRender:(id)arg1;
+- (id)dataViewControllerRenderPerformanceLoggerEventName:(id)arg1;
 @end
 

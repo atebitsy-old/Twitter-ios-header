@@ -129,7 +129,7 @@
 - (void)enterPaletteModeWithPadding:(double)arg1 disableInteraction:(_Bool)arg2 animations:(CDUnknownBlockType)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)dismissPalette;
 - (void)presentPalette:(id)arg1;
-- (_Bool)chatSectionCompositeViewShouldHidePostBroadcastEdit:(id)arg1;
+- (_Bool)chatSectionCompositeViewShouldHidePostBroadcast:(id)arg1;
 - (_Bool)chatSectionCompositeViewShouldHideOverflowMenu:(id)arg1;
 - (void)chatSectionCompositeViewDidSelectScrollChatToBottom:(id)arg1;
 - (void)chatSectionCompositeViewDidSelectShareBroadcastButton:(id)arg1;

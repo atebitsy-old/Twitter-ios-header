@@ -54,10 +54,8 @@
 @property(readonly, nonatomic) NSString *momentDescription;
 @property(readonly, nonatomic) NSString *title;
 @property(readonly, nonatomic) NSString *momentID;
-- (id)allStatuses;
+- (void)updateMoment:(id)arg1;
 - (id)capsuleByReplacingStatuses:(id)arg1;
-- (_Bool)isVisibleByAccount:(id)arg1;
-- (id)pagesForAccount:(id)arg1;
 @property(readonly, nonatomic) NSArray *allCarouselPages;
 @property(readonly, nonatomic) _Bool needsPageHydration;
 - (id)initWithJSONDictionary:(id)arg1;

@@ -15,6 +15,7 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFSTwitterTopic *topic; // @synthesize topic=_topic;
+- (void)updateTopicFollowedByCurrentAccount:(_Bool)arg1;
 - (id)landingURL;
 - (id)associatedTopic;
 - (id)initWithBannerText:(id)arg1 badgeName:(id)arg2 topic:(id)arg3;

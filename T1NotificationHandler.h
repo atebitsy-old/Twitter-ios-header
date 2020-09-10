@@ -23,6 +23,7 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool hasReceivedRemoteNotification; // @synthesize hasReceivedRemoteNotification=_hasReceivedRemoteNotification;
+- (_Bool)_isUnexpectedPayload:(id)arg1;
 - (void)_runInAccountLoadedStage:(CDUnknownBlockType)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)userNotificationCenter:(id)arg1 didReceiveNotificationResponse:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
 - (void)userNotificationCenter:(id)arg1 openSettingsForNotification:(id)arg2;

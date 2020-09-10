@@ -10,11 +10,11 @@
 {
 }
 
-- (id)_twitterMonospacedFontName;
-- (id)_twitterRosettaFontNameLight;
-- (id)_twitterRosettaFontNameBold;
-- (id)_twitterRosettaFontNameHeavy;
-- (id)_twitterRosettaFontName;
+- (id)_monospacedFontName;
+- (id)_rosettaFontNameLight;
+- (id)_rosettaFontNameBold;
+- (id)_rosettaFontNameHeavy;
+- (id)_rosettaFontName;
 
 @end
 

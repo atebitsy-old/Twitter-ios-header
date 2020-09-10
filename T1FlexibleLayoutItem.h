@@ -18,17 +18,23 @@
     CDUnknownBlockType _flexibleLayoutFrameCalculator;
     CDUnknownBlockType _flexibleLayoutSizeCalculator;
     UIView *_flexibleLayoutView;
+    id _flexibleLayoutViewModel;
     CDUnknownBlockType _flexibleLayoutVisibilityCalculator;
+    CDUnknownBlockType _flexibleLayoutFrameListener;
+    CDUnknownBlockType _flexibleLayoutVisibilityListener;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) CDUnknownBlockType flexibleLayoutVisibilityCalculator; // @synthesize flexibleLayoutVisibilityCalculator=_flexibleLayoutVisibilityCalculator;
-@property(retain, nonatomic) UIView *flexibleLayoutView; // @synthesize flexibleLayoutView=_flexibleLayoutView;
-@property(copy, nonatomic) CDUnknownBlockType flexibleLayoutSizeCalculator; // @synthesize flexibleLayoutSizeCalculator=_flexibleLayoutSizeCalculator;
-@property(copy, nonatomic) CDUnknownBlockType flexibleLayoutFrameCalculator; // @synthesize flexibleLayoutFrameCalculator=_flexibleLayoutFrameCalculator;
-@property(copy, nonatomic) CDUnknownBlockType flexibleLayoutFrameAnimator; // @synthesize flexibleLayoutFrameAnimator=_flexibleLayoutFrameAnimator;
-@property(copy, nonatomic) CDUnknownBlockType flexibleLayoutContentSpacingCalculator; // @synthesize flexibleLayoutContentSpacingCalculator=_flexibleLayoutContentSpacingCalculator;
-@property(copy, nonatomic) CDUnknownBlockType flexibleLayoutContentInsetsCalculator; // @synthesize flexibleLayoutContentInsetsCalculator=_flexibleLayoutContentInsetsCalculator;
+@property(copy, nonatomic) CDUnknownBlockType t1_flexibleLayoutVisibilityListener; // @synthesize t1_flexibleLayoutVisibilityListener=_flexibleLayoutVisibilityListener;
+@property(copy, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameListener; // @synthesize t1_flexibleLayoutFrameListener=_flexibleLayoutFrameListener;
+@property(copy, nonatomic) CDUnknownBlockType t1_flexibleLayoutVisibilityCalculator; // @synthesize t1_flexibleLayoutVisibilityCalculator=_flexibleLayoutVisibilityCalculator;
+@property(retain, nonatomic) id t1_flexibleLayoutViewModel; // @synthesize t1_flexibleLayoutViewModel=_flexibleLayoutViewModel;
+@property(retain, nonatomic) UIView *t1_flexibleLayoutView; // @synthesize t1_flexibleLayoutView=_flexibleLayoutView;
+@property(copy, nonatomic) CDUnknownBlockType t1_flexibleLayoutSizeCalculator; // @synthesize t1_flexibleLayoutSizeCalculator=_flexibleLayoutSizeCalculator;
+@property(copy, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameCalculator; // @synthesize t1_flexibleLayoutFrameCalculator=_flexibleLayoutFrameCalculator;
+@property(copy, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameAnimator; // @synthesize t1_flexibleLayoutFrameAnimator=_flexibleLayoutFrameAnimator;
+@property(copy, nonatomic) CDUnknownBlockType t1_flexibleLayoutContentSpacingCalculator; // @synthesize t1_flexibleLayoutContentSpacingCalculator=_flexibleLayoutContentSpacingCalculator;
+@property(copy, nonatomic) CDUnknownBlockType t1_flexibleLayoutContentInsetsCalculator; // @synthesize t1_flexibleLayoutContentInsetsCalculator=_flexibleLayoutContentInsetsCalculator;
 - (id)description;
 - (id)initWithFlexibleLayoutItem:(id)arg1;
 

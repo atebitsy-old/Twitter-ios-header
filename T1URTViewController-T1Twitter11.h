@@ -6,7 +6,11 @@
 
 #import <T1Twitter/T1URTViewController.h>
 
-@interface T1URTViewController (T1Twitter11)
-- (void)tombstoneDidTapViewTweetWithTombstoneViewModel:(id)arg1;
+#import <T1Twitter/T1UpdateIndicatorDelegate-Protocol.h>
+
+@interface T1URTViewController (T1Twitter11) <T1UpdateIndicatorDelegate>
+- (void)navigateToEntryID:(id)arg1;
+- (_Bool)dataViewController:(id)arg1 canNavigateToEntryID:(id)arg2;
+- (_Bool)canShowUpdateIndicator:(id)arg1 withContentNotification:(id)arg2;
 @end
 

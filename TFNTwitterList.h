@@ -67,6 +67,7 @@
 - (long long)compare:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithListID:(long long)arg1 name:(id)arg2 desc:(id)arg3 isPrivate:(_Bool)arg4 slug:(id)arg5 subscriberCount:(long long)arg6 memberCount:(long long)arg7 followingState:(unsigned long long)arg8 requiresLegacyHydration:(_Bool)arg9 user:(id)arg10;
+- (id)convertToPinnedListDataModel;
 
 @end
 

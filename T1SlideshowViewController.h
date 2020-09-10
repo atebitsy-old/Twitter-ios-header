@@ -237,7 +237,6 @@
 - (void)_dismissSlideshowFromSwipe;
 - (void)_t1_updateDockButton;
 - (void)_t1_initializeDockButtonIfNeeded;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)_t1_showOverlay:(_Bool)arg1;
 - (void)_t1_updateOverlayForState:(id)arg1;
 - (void)_t1_updateRetryButtonVisibility;

@@ -6,11 +6,9 @@
 
 #import <TFNUI/TFNItemsDataViewAdapter.h>
 
-#import <T1Twitter/TFNLayoutGuidesSource-Protocol.h>
+@class NSHashTable, TFNDataViewController;
 
-@class NSHashTable, NSString, TFNDataViewController;
-
-@interface T1TimelinesItemsViewControllerDataViewAdapter : TFNItemsDataViewAdapter <TFNLayoutGuidesSource>
+@interface T1TimelinesItemsViewControllerDataViewAdapter : TFNItemsDataViewAdapter
 {
     NSHashTable *_inUseViewControllers;
     NSHashTable *_hostedCells;
@@ -30,18 +28,11 @@
 - (id)cellReuseIdentifierForItem:(id)arg1;
 - (id)identifierForItem:(id)arg1;
 - (id)hostedTableViewCell:(id)arg1 viewControllerForItem:(id)arg2 atIndexPath:(id)arg3;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 @property(readonly, nonatomic) NSHashTable *hostedCells; // @synthesize hostedCells=_hostedCells;
 @property(readonly, nonatomic) NSHashTable *inUseViewControllers; // @synthesize inUseViewControllers=_inUseViewControllers;
 - (void)dealloc;
 - (id)init;
 - (id)initWithDataViewController:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

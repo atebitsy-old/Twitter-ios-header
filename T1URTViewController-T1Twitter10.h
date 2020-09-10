@@ -7,6 +7,6 @@
 #import <T1Twitter/T1URTViewController.h>
 
 @interface T1URTViewController (T1Twitter10)
-- (void)errorItemTapped:(id)arg1;
+- (void)tombstoneDidTapViewTweetWithTombstoneViewModel:(id)arg1;
 @end
 

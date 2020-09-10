@@ -9,16 +9,22 @@
 @class UIColor;
 
 @protocol TFNUIColorPalette <NSObject>
-@property(readonly, nonatomic) UIColor *cellAccessorySuccessColor;
+@property(readonly, nonatomic) UIColor *modalSheetCancelButtonHighlightColor;
+@property(readonly, nonatomic) UIColor *modalSheetCancelButtonBackgroundColor;
 @property(readonly, nonatomic) UIColor *cellAccessoryColor;
+@property(readonly, nonatomic) UIColor *pillControlShadowColor;
+@property(readonly, nonatomic) UIColor *navigationBarHandleColor;
+@property(readonly, nonatomic) UIColor *successColor;
+@property(readonly, nonatomic) UIColor *alertColor;
 @property(readonly, nonatomic) UIColor *groupedDividerColor;
 @property(readonly, nonatomic) UIColor *dividerColor;
-@property(readonly, nonatomic) UIColor *shadowColor;
-@property(readonly, nonatomic) UIColor *handleColor;
 @property(readonly, nonatomic) UIColor *highlightBackgroundColor;
 @property(readonly, nonatomic) UIColor *appBackgroundColor;
 @property(readonly, nonatomic) UIColor *backgroundColor;
+@property(readonly, nonatomic) UIColor *contentTitleLightColor;
+@property(readonly, nonatomic) UIColor *textLinkColor;
 @property(readonly, nonatomic) UIColor *textDetailsColor;
 @property(readonly, nonatomic) UIColor *textColor;
+@property(readonly, nonatomic) UIColor *primaryColor;
 @end
 

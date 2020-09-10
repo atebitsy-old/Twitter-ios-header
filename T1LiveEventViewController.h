@@ -116,7 +116,6 @@
 - (void)slideshow:(id)arg1 didSelectUser:(id)arg2;
 - (void)slideshow:(id)arg1 didDeleteStatusID:(id)arg2;
 - (void)slideshow:(id)arg1 didSelectStatus:(id)arg2;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)setPreviewImageHidden:(_Bool)arg1 forImageTransitionViewController:(id)arg2 object:(id)arg3;
 - (void)imageTransitionViewController:(id)arg1 didTransition:(_Bool)arg2 object:(id)arg3;
 - (struct CGRect)imageTransitionViewController:(id)arg1 previewImageContentsRectForObject:(id)arg2;
@@ -286,7 +285,6 @@
 @property(readonly, nonatomic) TFNTwitterLiveEventCarouselEntry *currentCarouselEntry;
 @property(readonly, nonatomic) T1LiveEventHeaderViewController *liveEventHeaderViewController;
 - (void)setSelectedTimelineID:(id)arg1;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (_Bool)tfn_prefersTabBarShadowHidden;
 - (long long)t1_dockingPresentationOption;
 - (_Bool)tfn_isContentScrolledToBottom;

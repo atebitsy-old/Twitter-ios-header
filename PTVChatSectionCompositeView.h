@@ -178,7 +178,7 @@
 - (void)traitCollectionDidChange:(id)arg1;
 @property(readonly, nonatomic) PTVChatController *chatController;
 - (id)initWithFrame:(struct CGRect)arg1 broadcastController:(id)arg2 tableView:(id)arg3 participantsBarView:(id)arg4 useLargeChatFont:(_Bool)arg5 delegate:(id)arg6;
-- (_Bool)postBroadcastViewShouldHideEditButton:(id)arg1;
+- (_Bool)postBroadcastViewShouldHidePostBroadcast:(id)arg1;
 - (void)postBroadcastViewDidSelectModerationReport:(id)arg1;
 - (void)postBroadcastViewDidSelectEditBroadcast:(id)arg1;
 - (void)postBroadcastViewDidSelectWatchLive:(id)arg1;

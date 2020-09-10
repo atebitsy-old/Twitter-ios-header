@@ -9,8 +9,6 @@
 @class T1TimelinesItemProminentSocialContextViewModel, UIView;
 
 @protocol T1TimelinesItemProminentSocialContextViewDelegate <T1TimelinesItemSocialContextViewDelegate>
-- (void)prominentSocialContextView:(UIView *)arg1 didTapToggleTopicFollowButtonWithViewModel:(T1TimelinesItemProminentSocialContextViewModel *)arg2;
-- (void)prominentSocialContextView:(UIView *)arg1 unfollowWithViewModel:(T1TimelinesItemProminentSocialContextViewModel *)arg2;
-- (void)prominentSocialContextView:(UIView *)arg1 followWithViewModel:(T1TimelinesItemProminentSocialContextViewModel *)arg2;
+- (void)prominentSocialContextView:(UIView *)arg1 didTapFollowButtonWithViewModel:(T1TimelinesItemProminentSocialContextViewModel *)arg2;
 @end
 

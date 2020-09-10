@@ -13,9 +13,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: subtext
     // Error parsing type: , name: clientEventInfo
     // Error parsing type: , name: actionableFeedbackMetadata
-    // Error parsing type: , name: caretHidden
+    // Error parsing type: , name: titleStyle
     // Error parsing type: , name: icon
-    // Error parsing type: , name: displayType
 }
 
 - (void).cxx_destruct;

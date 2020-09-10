@@ -10,12 +10,12 @@
 {
 }
 
+- (_Bool)isReimplementedTFNButtonEnabled;
 - (_Bool)isIgnoreTraitCollectionUIStyleInEqualityEnabled;
 - (_Bool)isReduceMotionSettingEnabled;
 - (_Bool)isHashtagPronounciationAllowed;
 - (_Bool)isUndoScrollToTopEnabled;
 - (_Bool)isNestedActionButtonEnabled;
-- (_Bool)isLayoutGuideSafeAreaMigrationEnabled;
 
 @end
 

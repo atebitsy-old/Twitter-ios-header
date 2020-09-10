@@ -16,7 +16,7 @@
 + (id)private_selectLocalIdentifiersFrom:(id)arg1 since:(id)arg2;
 @property(readonly, nonatomic) double duration; // @synthesize duration=_duration;
 - (id)photoAssetLocalIdentifiersSince:(id)arg1;
-- (void)addPhotoAssetLocalIdentifer:(id)arg1;
+- (void)addPhotoAssetLocalIdentifier:(id)arg1;
 - (id)initWithDuration:(double)arg1;
 
 @end

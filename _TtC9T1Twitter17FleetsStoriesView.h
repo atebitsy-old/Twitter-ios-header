@@ -6,6 +6,8 @@
 
 #import <T1Twitter/_TtC9T1Twitter22FleetsAnimatableUIView.h>
 
+@class NSArray;
+
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter17FleetsStoriesView : _TtC9T1Twitter22FleetsAnimatableUIView
 {
@@ -29,10 +31,15 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: reactionConfirmationView
     // Error parsing type: , name: reactionOriginFrame
     // Error parsing type: , name: showsActionView
+    // Error parsing type: , name: accessibilityScrollAction
+    // Error parsing type: , name: accessibilityEscapeAction
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+@property(nonatomic, copy) NSArray *accessibilityCustomActions;
+- (_Bool)accessibilityPerformEscape;
+- (_Bool)accessibilityScroll:(long long)arg1;
 - (void)seenByAction:(id)arg1;
 
 @end

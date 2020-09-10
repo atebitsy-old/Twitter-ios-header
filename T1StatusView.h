@@ -20,12 +20,11 @@
 #import <T1Twitter/T1TimelinesItemSocialContextViewDelegate-Protocol.h>
 #import <T1Twitter/T1TimelinesStatusConversationContextViewDelegate-Protocol.h>
 #import <T1Twitter/T1UnifiedCardComponentViewEventDelegate-Protocol.h>
-#import <T1Twitter/TFNLayoutGuidesSource-Protocol.h>
 
 @class NSString, T1AvatarImageView, T1ConversationConnectorView, T1DismissButton, T1ForwardPivotView, T1InfoTextView, T1InlineMediaView, T1StatusAuthorView, T1StatusBodyTextView, T1StatusContextIndicatorView, T1StatusInlineActionsView, T1StatusLiveEngagementManager, T1StatusReplyBadgeView, T1StatusSensitiveContentView, T1StatusViewAccessibility, T1StatusViewAttachmentContainerView, T1StatusViewScribableItem, T1StatusWithheldInCountryView, T1TagSetView, T1TimelinesItemSocialContextView, T1TimelinesStatusConversationContextView, TFNReusableViewCache, TFNSolidColorView, TFNTwitterAccount, TFSTimer, TFSTwitterScribeContext, UIImage, UIView;
 @protocol T1AutoplayViewContainer, T1BasicStatusView, T1CardViewDelegate, T1StatusViewEventHandler, T1StatusViewInlineActions, T1StatusViewInlineImages, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFSTwitterScribableItem;
 
-@interface T1StatusView : TFNLayoutableView <T1StatusAuthorViewDelegate, T1StatusBodyTextViewDelegate, T1StatusInlineActionsViewDelegate, T1StatusViewAttachmentContainerViewDelegate, T1TagSetViewDelegate, TFNLayoutGuidesSource, T1AutoplayViewContainer, T1CardViewDelegate, T1ForwardPivotViewDelegate, T1TimelinesItemSocialContextViewDelegate, T1TimelinesStatusConversationContextViewDelegate, T1StatusContextIndicatorViewDelegate, T1StatusWithheldInCountryViewDelegate, T1UnifiedCardComponentViewEventDelegate, T1TimelineStatusView>
+@interface T1StatusView : TFNLayoutableView <T1StatusAuthorViewDelegate, T1StatusBodyTextViewDelegate, T1StatusInlineActionsViewDelegate, T1StatusViewAttachmentContainerViewDelegate, T1TagSetViewDelegate, T1AutoplayViewContainer, T1CardViewDelegate, T1ForwardPivotViewDelegate, T1TimelinesItemSocialContextViewDelegate, T1TimelinesStatusConversationContextViewDelegate, T1StatusContextIndicatorViewDelegate, T1StatusWithheldInCountryViewDelegate, T1UnifiedCardComponentViewEventDelegate, T1TimelineStatusView>
 {
     T1StatusViewAccessibility *_accessibility;
     T1StatusViewScribableItem *_scribableItem;
@@ -44,6 +43,7 @@
     TFSTwitterScribeContext *_scribeContext;
     UIView *visibleAutoTranslateBodyView;
     UIView *visibleTranslateTweetView;
+    UIView *visibleInlineReplyView;
     T1StatusLiveEngagementManager *_livePipelineTweetManager;
     id <T1StatusViewEventHandler> _eventHandler;
     TFSTimer *_updateStatusCountTimer;
@@ -100,6 +100,7 @@
 @property(nonatomic) __weak T1StatusLiveEngagementManager *livePipelineTweetManager; // @synthesize livePipelineTweetManager=_livePipelineTweetManager;
 @property(nonatomic) _Bool selected; // @synthesize selected=_selected;
 @property(nonatomic) struct UIEdgeInsets contentEdgeInsets; // @synthesize contentEdgeInsets=_contentEdgeInsets;
+@property(readonly, nonatomic) UIView *visibleInlineReplyView; // @synthesize visibleInlineReplyView;
 @property(readonly, nonatomic) UIView *visibleTranslateTweetView; // @synthesize visibleTranslateTweetView;
 @property(readonly, nonatomic) UIView *visibleAutoTranslateBodyView; // @synthesize visibleAutoTranslateBodyView;
 @property(nonatomic) _Bool shouldPauseLivePipelineUpdates; // @synthesize shouldPauseLivePipelineUpdates=_shouldPauseLivePipelineUpdates;
@@ -142,7 +143,6 @@
 - (void)authorView:(id)arg1 didTapTimestampWithFrame:(struct CGRect)arg2;
 - (void)authorView:(id)arg1 didTapCaretView:(id)arg2 withFrame:(struct CGRect)arg3;
 - (id)calculatedLayoutMetrics;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)setLayoutState:(id)arg1;
 - (void)_t1_featureSwitchesDidUpdate:(id)arg1;
 - (void)_t1_userDidUpdate:(id)arg1;

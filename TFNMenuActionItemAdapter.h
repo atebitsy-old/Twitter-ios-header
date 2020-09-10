@@ -24,35 +24,6 @@
     UIColor *_cancelButtonHighlightColor;
 }
 
-+ (double)defaultMenuActionItemMinimumHeight;
-+ (struct UIEdgeInsets)defaultHorizontalIconPadding;
-+ (double)defaultIconHeight;
-+ (id)defaultCancelButtonHighlightColor;
-+ (void)setDefaultCancelButtonHighlightColor:(id)arg1;
-+ (id)defaultCancelButtonBackgroundColor;
-+ (void)setDefaultCancelButtonBackgroundColor:(id)arg1;
-+ (id)defaultSecondaryButtonColor;
-+ (void)setDefaultSecondaryButtonColor:(id)arg1;
-+ (id)defaultPrimaryButtonHighlightColor;
-+ (void)setDefaultPrimaryButtonHighlightColor:(id)arg1;
-+ (id)defaultPrimaryButtonBackgroundColor;
-+ (void)setDefaultPrimaryButtonBackgroundColor:(id)arg1;
-+ (id)defaultPrimaryButtonTextColor;
-+ (void)setDefaultPrimaryButtonTextColor:(id)arg1;
-+ (CDUnknownBlockType)defaultRoundedButtonFontBlock;
-+ (void)setDefaultRoundedButtonFontBlock:(CDUnknownBlockType)arg1;
-+ (CDUnknownBlockType)defaultSubtitleFontBlock;
-+ (void)setDefaultSubtitleFontBlock:(CDUnknownBlockType)arg1;
-+ (CDUnknownBlockType)defaultTitleFontBlock;
-+ (void)setDefaultTitleFontBlock:(CDUnknownBlockType)arg1;
-+ (id)defaultDestructiveColor;
-+ (void)setDefaultDestructiveColor:(id)arg1;
-+ (id)defaultIconColor;
-+ (void)setDefaultIconColor:(id)arg1;
-+ (id)defaultSubtitleTextColor;
-+ (void)setDefaultSubtitleTextColor:(id)arg1;
-+ (id)defaultTitleTextColor;
-+ (void)setDefaultTitleTextColor:(id)arg1;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) UIColor *cancelButtonHighlightColor; // @synthesize cancelButtonHighlightColor=_cancelButtonHighlightColor;
 @property(readonly, nonatomic) UIColor *cancelButtonBackgroundColor; // @synthesize cancelButtonBackgroundColor=_cancelButtonBackgroundColor;

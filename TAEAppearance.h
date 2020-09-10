@@ -13,7 +13,7 @@
 + (void)_tae_setupItemsAppearance;
 + (void)_tae_setupStringDataViewAdapterFonts;
 + (void)_tae_setupBarButtonSystemItemOverrides;
-+ (void)_tae_setupMenuSheetAppearance;
++ (void)_tae_setupButtonAppearance;
 + (void)_tae_setupTFNUI;
 + (void)_tae_setupUIAppearance;
 + (void)_tae_setupVectorImages;

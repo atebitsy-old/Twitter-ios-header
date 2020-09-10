@@ -19,6 +19,7 @@
 
 @interface PTVGuestRoomBroadcastController : NSObject <PTVGuestCoordinatorDelegate, PTVChatControllerObserver, PTVBroadcastWatcherDelegate, PTVBroadcastPublisherDelegate, PTVGuestCallerControllerObserver, PTVVideoPlayerDelegate, PTVGuestRoomController>
 {
+    _Bool _isMuted;
     unsigned long long _totalUsersCount;
     id <PTVLoggedInUserProtocol> _loggedInUser;
     PTVBroadcastController *_broadcastController;
@@ -51,6 +52,7 @@
 @property(retain, nonatomic) NSObject<PTVGuestCoordinator> *guestCoordinator; // @synthesize guestCoordinator=_guestCoordinator;
 @property(retain, nonatomic) PTVBroadcastController *broadcastController; // @synthesize broadcastController=_broadcastController;
 @property(readonly, nonatomic) id <PTVLoggedInUserProtocol> loggedInUser; // @synthesize loggedInUser=_loggedInUser;
+@property(nonatomic) _Bool isMuted; // @synthesize isMuted=_isMuted;
 @property(readonly, nonatomic) unsigned long long totalUsersCount; // @synthesize totalUsersCount=_totalUsersCount;
 - (void)viewerVideoOrAudioFeedIsConnected;
 - (void)viewerRequestToCallInWasAcceptedWithConfiguration:(id)arg1;
@@ -63,6 +65,8 @@
 - (void)chatController:(id)arg1 userDidLeaveChat:(id)arg2;
 - (void)chatController:(id)arg1 userDidJoinChat:(id)arg2;
 - (void)chatController:(id)arg1 didReceiveBroadcastViewersAndStats:(id)arg2;
+- (void)_ptv_handleMessage:(id)arg1;
+- (void)chatController:(id)arg1 didSendMessage:(id)arg2;
 - (void)chatController:(id)arg1 didReceiveQueuedMessage:(id)arg2 deliveryQueueSize:(unsigned long long)arg3;
 - (void)chatControllerDidJoinChatRoom:(id)arg1;
 - (double)broadcastControllerReplayDuration:(id)arg1;
@@ -115,7 +119,6 @@
 - (void)blockUser:(id)arg1;
 - (void)sendText:(id)arg1 language:(id)arg2;
 - (void)sendEmoji:(id)arg1;
-@property(nonatomic) _Bool isMuted;
 - (id)guestViewForUser:(id)arg1;
 - (void)removeUserAsSpeaker:(id)arg1;
 - (void)acceptUserAsSpeaker:(id)arg1;

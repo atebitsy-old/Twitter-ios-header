@@ -20,11 +20,11 @@
 @property(readonly, nonatomic) TFSPhotoAssetCollectionAlbum *assetCollectionAlbum; // @synthesize assetCollectionAlbum=_assetCollectionAlbum;
 - (id)recentPhotoAssetLocalIdentifiersSince:(id)arg1;
 - (void)_performAssetCreationChange:(CDUnknownBlockType)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (void)_authorizeAndPerformAssetCreationChange:(CDUnknownBlockType)arg1 withAuthorizationInstuctions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)createPhotoAssetFromVideoAtFileURL:(id)arg1 withAuthorizationInstuctions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)createPhotoAssetFromImageAtFileURL:(id)arg1 withAuthorizationInstuctions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)createPhotoAssetFromImageData:(id)arg1 withAuthorizationInstuctions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)createPhotoAssetFromImage:(id)arg1 withAuthorizationInstuctions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)_authorizeAndPerformAssetCreationChange:(CDUnknownBlockType)arg1 withAuthorizationInstructions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)createPhotoAssetFromVideoAtFileURL:(id)arg1 withAuthorizationInstructions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)createPhotoAssetFromImageAtFileURL:(id)arg1 withAuthorizationInstructions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)createPhotoAssetFromImageData:(id)arg1 withAuthorizationInstructions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)createPhotoAssetFromImage:(id)arg1 withAuthorizationInstructions:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (id)initWithAssetCollectionAlbum:(id)arg1;
 - (id)init;
 

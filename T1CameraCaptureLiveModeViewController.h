@@ -147,7 +147,6 @@
 - (void)_t1_main_updateAutocompleteVisibility:(_Bool)arg1;
 - (_Bool)_t1_main_shouldShowAutocomplete;
 - (void)_t1_main_updateAutocompleteController;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)_t1_notification_keyboardWillChangeFrame:(id)arg1;
 - (void)_t1_notification_keyboardWillHide:(id)arg1;
 - (void)_t1_notification_keyboardWillShow:(id)arg1;

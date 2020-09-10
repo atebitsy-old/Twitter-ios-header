@@ -59,12 +59,6 @@
 @property(retain, nonatomic) T1ResizableHeaderViewController *headerViewController; // @synthesize headerViewController=_headerViewController;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 - (_Bool)accessibilityPerformEscape;
-- (void)_t1_updateContentViewControllerVisibleSafeAreaInsets;
-- (void)_t1_updateContentViewControllerSafeAreaInsets;
-- (struct UIEdgeInsets)_t1_calculateContentViewControllerSafeAreaInsets;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)resizableHeaderViewControllerDidRequestRefresh:(id)arg1;
 - (void)resizableHeaderViewControllerDidUpdateCurrentHeaderHeight:(id)arg1;
 - (void)resizableHeaderViewControllerDidUpdateExpandedHeaderHeight:(id)arg1;
@@ -114,6 +108,10 @@
 - (void)tfn_contentScrollViewWillScrollToTop:(id)arg1;
 - (_Bool)tfn_contentScrollViewShouldScrollToTop:(id)arg1 programmatically:(_Bool)arg2;
 - (void)tfn_contentScrollViewDidScroll:(id)arg1 animate:(_Bool)arg2;
+- (void)_t1_updateContentViewControllerVisibleSafeAreaInsets;
+- (void)_t1_updateContentViewControllerSafeAreaInsets;
+- (struct UIEdgeInsets)_t1_calculateContentViewControllerSafeAreaInsets;
+- (void)viewSafeAreaInsetsDidChange;
 - (void)setNeedsUpdateBottomContentPadding;
 - (double)bottomContentPadding;
 @property(readonly, nonatomic, getter=isHeaderExpanding) _Bool headerExpanding;

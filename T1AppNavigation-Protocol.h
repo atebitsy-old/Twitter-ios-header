@@ -115,6 +115,7 @@
 - (void)showPhotoGalleryWithSource:(long long)arg1;
 - (void)showGIFSearchWithStatus:(TFNTwitterStatus *)arg1 protocolSource:(long long)arg2 sourceInfo:(TFNPopoverSourceInfo *)arg3;
 - (void)showComposerWithSessionConfig:(T1ComposeSessionConfig *)arg1;
+- (_Bool)showPanel:(long long)arg1 animated:(_Bool)arg2 completion:(void (^)(void))arg3;
 - (void)setCurrentPanel:(long long)arg1 preserveModals:(_Bool)arg2 animated:(_Bool)arg3 completion:(void (^)(void))arg4;
 - (void)setCurrentPanel:(long long)arg1 animated:(_Bool)arg2 completion:(void (^)(void))arg3;
 @end

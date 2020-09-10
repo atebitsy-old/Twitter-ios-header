@@ -29,6 +29,7 @@
     TAVSharedAudioSessionConfigurationToken *_sharedAudioSessionToken;
     _Bool _isObservingAVAudioSession;
     _Bool _isAudioScopeEnabled;
+    _Bool _isLocallyMuted;
     id <PTVGuestCoordinatorDelegate> _delegate;
     long long _loggedInUserParticipantIndex;
     PTVGuestRoomConfiguration *_configuration;
@@ -50,6 +51,7 @@
 @property(retain) RTCVideoCapturer *localCapturer; // @synthesize localCapturer=_localCapturer;
 @property(retain, nonatomic) PTVJanusClient *janusClient; // @synthesize janusClient=_janusClient;
 @property(retain, nonatomic) PTVGuestRoomConfiguration *configuration; // @synthesize configuration=_configuration;
+@property(nonatomic) _Bool isLocallyMuted; // @synthesize isLocallyMuted=_isLocallyMuted;
 @property(nonatomic) _Bool isAudioScopeEnabled; // @synthesize isAudioScopeEnabled=_isAudioScopeEnabled;
 @property(nonatomic) long long loggedInUserParticipantIndex; // @synthesize loggedInUserParticipantIndex=_loggedInUserParticipantIndex;
 @property(nonatomic) __weak id <PTVGuestCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
@@ -60,6 +62,9 @@
 - (void)observeAVAudioSessionRouteChanges;
 - (void)enforceAVAudioSessionVideoChatModeIfNeeded;
 - (void)didSetPrimaryView:(id)arg1;
+- (void)executeMutedState;
+- (_Bool)isUserMutedWithUserID:(id)arg1;
+- (_Bool)isLoggedInUserMuted;
 - (void)renderingDidChange:(_Bool)arg1 withUserID:(id)arg2;
 - (void)broadcasterDidHangUpOnGuestID:(id)arg1;
 - (void)broadcasterDidCancelCountdownForViewerID:(id)arg1;
@@ -84,7 +89,6 @@
 - (void)cameraStartComplete;
 - (void)attemptReconnect;
 @property(retain) RTCVideoSource *localVideoSource;
-@property(nonatomic) _Bool isMuted;
 - (long long)audioOutputMode;
 - (void)disableWebRTCAudioSessionIfNeeded;
 - (void)startPipeline;

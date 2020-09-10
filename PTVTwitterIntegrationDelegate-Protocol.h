@@ -16,7 +16,7 @@
 - (void)reportBroadcast:(PTVBroadcast *)arg1;
 
 @optional
-- (_Bool)shouldHidePostBroadcastEditButton;
+- (_Bool)shouldHidePostBroadcast;
 - (_Bool)shouldHideOverflowMenu;
 - (double)guestViewsTopMargin;
 - (void)reportGuestUser:(PTVMergeParticipantUser *)arg1 inBroadcast:(PTVBroadcast *)arg2;

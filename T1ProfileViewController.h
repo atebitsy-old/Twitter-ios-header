@@ -119,8 +119,6 @@
 - (id)scribeSection;
 - (id)scribePage;
 - (id)scribe;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (_Bool)accessibilityScroll:(long long)arg1;
 - (void)tfn_contentScrollViewDidScroll:(id)arg1 animate:(_Bool)arg2;
 - (void)showQRProfileWithCompletion:(CDUnknownBlockType)arg1;
@@ -155,6 +153,7 @@
 - (id)childViewControllerForStatusBarHidden;
 - (id)childViewControllerForStatusBarStyle;
 - (unsigned long long)supportedInterfaceOrientations;
+- (void)viewSafeAreaInsetsDidChange;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

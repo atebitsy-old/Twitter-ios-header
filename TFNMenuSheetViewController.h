@@ -37,14 +37,6 @@
     struct CGRect _sourceRect;
 }
 
-+ (CDUnknownBlockType)defaultMessageFontBlock;
-+ (void)setDefaultMessageFontBlock:(CDUnknownBlockType)arg1;
-+ (id)defaultMessageTextColor;
-+ (void)setDefaultMessageTextColor:(id)arg1;
-+ (id)defaultChromeColor;
-+ (void)setDefaultChromeColor:(id)arg1;
-+ (id)closeButtonImage;
-+ (void)setCloseButtonImage:(id)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool userDidSelectAction; // @synthesize userDidSelectAction=_userDidSelectAction;
 @property(retain, nonatomic) TFNMenuActionItem *cancelItem; // @synthesize cancelItem=_cancelItem;

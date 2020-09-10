@@ -43,7 +43,7 @@
     // Error parsing type: , name: _supportedComponents
     // Error parsing type: , name: composition
     // Error parsing type: , name: state
-    // Error parsing type: , name: _layoutIgnoresSafeArea
+    // Error parsing type: , name: layoutIgnoresSafeArea
     // Error parsing type: , name: dismissKeyboardOnScroll
     // Error parsing type: , name: quotedStatusPreviewController
     // Error parsing type: , name: $__lazy_storage_$_cardPreviewController
@@ -78,7 +78,7 @@
 - (void)presentMediaGalleryTapped;
 - (void)stopVoiceRecording;
 - (void)presentVoiceTapped;
-- (void)voiceAttachButtonTapped;
+- (void)voiceAttachButtonTappedWithIsLongPressRecording:(_Bool)arg1;
 - (void)handleVoiceRecordLongPress:(id)arg1;
 - (void)quickReplyButtonTapped:(id)arg1;
 - (void)sendButtonTapped:(id)arg1;
@@ -95,7 +95,6 @@
 @property(nonatomic, readonly) _Bool tfn_prefersTabBarShadowHidden;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 - (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)updateViewConstraints;
 - (void)viewDidFullyAppear:(_Bool)arg1;

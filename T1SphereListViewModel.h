@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, TFSTwitterUserReference;
+@class TFSTwitterUserReference;
 
 @interface T1SphereListViewModel : NSObject
 {
@@ -22,9 +22,6 @@
 @property(nonatomic, readonly) long long hash;
 - (id)initWithList:(id)arg1;
 @property(nonatomic, readonly) TFSTwitterUserReference *userReference;
-@property(nonatomic, readonly) long long ownerUserID;
-@property(nonatomic, readonly) NSString *listName;
-@property(nonatomic, readonly) long long listID;
 
 @end
 

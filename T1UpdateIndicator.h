@@ -57,8 +57,6 @@
 - (_Bool)_hasSufficientTimePassedSincePreviousDisplay:(double)arg1;
 - (id)_contentNotificationToDisplay;
 - (_Bool)_canShowPillForContentNotification:(id)arg1;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)pillControl:(id)arg1 animatedOffscreen:(_Bool)arg2 pillTapped:(_Bool)arg3 scrolled:(_Bool)arg4;
 - (void)pillControlTapped:(id)arg1;
@@ -69,6 +67,7 @@
 - (void)showIfNeeded;
 - (void)dealloc;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
+- (void)viewSafeAreaInsetsDidChange;
 - (void)loadView;
 - (void)viewDidLayoutSubviews;
 - (id)initWithController:(id)arg1;

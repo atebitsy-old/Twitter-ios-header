@@ -15,7 +15,6 @@
 + (long long)panelID;
 - (id)initWithAccount:(id)arg1 tabView:(id)arg2 viewControllers:(id)arg3;
 @property(nonatomic, readonly) _Bool canPresentDash;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)tabWasLongPressed;
 - (void)tabWasSelectedWithOptions:(long long)arg1;
 - (id)scribeSection;

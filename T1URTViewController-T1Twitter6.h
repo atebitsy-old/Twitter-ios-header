@@ -6,7 +6,9 @@
 
 #import <T1Twitter/T1URTViewController.h>
 
+@class T1NavigationMetadata;
+
 @interface T1URTViewController (T1Twitter6)
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
+@property(nonatomic, readonly) T1NavigationMetadata *sourceNavigationMetadata;
 @end
 

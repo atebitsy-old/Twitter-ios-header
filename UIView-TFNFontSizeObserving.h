@@ -20,7 +20,6 @@
 + (void)_tfn_executeSwizzles;
 + (void)tfn_deactivateRightToLeftTransformSystem;
 + (void)tfn_activateRightToLeftTransformSystem;
-+ (struct UIEdgeInsets)_tfn_safeAreaInsetsForWindow:(id)arg1 statusBarHidden:(_Bool)arg2;
 + (struct UIEdgeInsets)tfn_standardSystemSafeAreaInsets:(id)arg1 forInterfaceOrientation:(long long)arg2 statusBarHidden:(_Bool)arg3;
 + (struct UIEdgeInsets)tfn_systemSafeAreaInsets:(id)arg1;
 + (_Bool)tfn_isStatusBarHidden:(id)arg1;

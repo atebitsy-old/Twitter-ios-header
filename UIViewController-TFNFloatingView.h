@@ -6,13 +6,9 @@
 
 #import <UIKit/UIViewController.h>
 
-#import <TFNUI/TFNLayoutGuidesEnvironment-Protocol.h>
-#import <TFNUI/TFNLayoutGuidesSource-Protocol.h>
-
 @class NSString, TFNBarButtonItem, TFNModalSheetViewController, TFNNavigationController, TFNPushedSplitViewController, UIResponder, UIScrollView, UIWindow;
-@protocol TFNLayoutGuidesSource, UILayoutSupport;
 
-@interface UIViewController (TFNFloatingView) <TFNLayoutGuidesEnvironment, TFNLayoutGuidesSource>
+@interface UIViewController (TFNFloatingView)
 + (id)tfn_allViewControllers;
 + (void)tfn_startRecordingViewControllerInitialization;
 + (id)tfn_mainWindowTopVisibleViewController;
@@ -90,15 +86,6 @@
 - (long long)tfn_previewingGestureRecognizerState;
 - (void)tfn_previewingStateDidChange;
 @property(readonly, nonatomic) long long tfn_previewingState;
-@property(nonatomic) __weak id <TFNLayoutGuidesSource> layoutGuidesSource;
-- (void)sendLayoutGuidesDidChange:(long long)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
-- (double)systemSafeAreaInsetForLayoutGuide:(long long)arg1;
-- (void)layoutGuidesDidChange:(long long)arg1;
-@property(readonly, nonatomic) id <UILayoutSupport> bottomVisibleLayoutGuide;
-@property(readonly, nonatomic) id <UILayoutSupport> topVisibleLayoutGuide;
-@property(readonly, nonatomic) id <UILayoutSupport> bottomFixedLayoutGuide;
-@property(readonly, nonatomic) id <UILayoutSupport> topFixedLayoutGuide;
 @property(readonly, nonatomic) UIResponder *tfn_nextResponderForPushedSplitDetailViewController;
 @property(readonly, nonatomic) TFNPushedSplitViewController *tfn_pushedSplitViewController;
 - (id)_tfn_presentedDebugDescription;
@@ -132,11 +119,5 @@
 - (void)tfn_presentFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)tfn_presentFromViewController:(id)arg1 animated:(_Bool)arg2;
 - (void)tfn_presentFromViewController:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 @end
 

@@ -52,9 +52,6 @@
 - (void)dismissView;
 - (void)didTapAvatarView;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 @property(nonatomic) _Bool tfn_sendContentScrollEventsToParentViewController;
 - (void)tfn_previewingStateDidChange;
 - (_Bool)toaster:(id)arg1 canDisplayToast:(id)arg2 withPriority:(unsigned long long)arg3;
@@ -62,6 +59,7 @@
 - (void)viewDidFullyAppear:(_Bool)arg1;
 - (_Bool)becomeFirstResponder;
 @property(nonatomic, readonly) _Bool canBecomeFirstResponder;
+- (void)viewSafeAreaInsetsDidChange;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

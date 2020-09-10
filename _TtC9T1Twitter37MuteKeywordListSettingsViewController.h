@@ -38,7 +38,6 @@ __attribute__((visibility("hidden")))
 - (id)scribeSection;
 - (id)scribePage;
 - (id)scribe;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 willDeselectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 willSelectRowAtIndexPath:(id)arg2;

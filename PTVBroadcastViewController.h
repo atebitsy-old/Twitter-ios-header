@@ -225,7 +225,6 @@
 - (id)presentedOverflowMenu;
 - (void)overflowViewControllerDidSelectDismiss:(id)arg1;
 - (void)presentOverflowViewWithRootController:(id)arg1;
-- (void)screenshotObserverScreenshotIsReadyToFetch:(id)arg1;
 - (void)screenshotObserverDidObserveUserTakeScreenshot:(id)arg1;
 - (id)shareBroadcastCoordinator;
 - (void)presentShareActionSheetWithShareHighlightSelected:(_Bool)arg1;

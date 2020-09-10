@@ -14,6 +14,7 @@
 
 @interface TAVTwitterDownloadPlaylistItemProvider : NSObject <TAVTwitterPlayerDownloadItemDelegate, TAVPlaylistItemProvider>
 {
+    _Bool _disableVideoRendering;
     _Bool _prefersLooping;
     NSURL *_sourceURL;
     id <TAVTwitterPlayerDownloadItem> _downloadItem;
@@ -34,6 +35,7 @@
 @property(readonly, copy, nonatomic) TAVAnalyticsPlaylistItemMetadata *analyticsMetadata; // @synthesize analyticsMetadata=_analyticsMetadata;
 @property(readonly, nonatomic) TAVVideoContext *videoContext; // @synthesize videoContext=_videoContext;
 @property(readonly, nonatomic) id <TAVTwitterPlayerDownloadItem> downloadItem; // @synthesize downloadItem=_downloadItem;
+@property(nonatomic) _Bool disableVideoRendering; // @synthesize disableVideoRendering=_disableVideoRendering;
 @property(readonly, copy, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 - (id)_tfn_playlistItemWithDownloadedURL:(id)arg1;
 - (void)_tfn_completeWithURL:(id)arg1 error:(id)arg2;

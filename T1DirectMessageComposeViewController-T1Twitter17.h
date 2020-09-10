@@ -6,7 +6,14 @@
 
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
-@interface T1DirectMessageComposeViewController (T1Twitter17)
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
+#import <T1Twitter/T1ComposeCardPreviewControllerDelegate-Protocol.h>
+
+@interface T1DirectMessageComposeViewController (T1Twitter17) <T1ComposeCardPreviewControllerDelegate>
+- (long long)cardPreviewDisplayMode:(id)arg1;
+- (_Bool)areMultipleCardURLsAllowed;
+- (_Bool)isCardPreviewAllowed;
+- (void)cardPreviewControllerDidStartFetching:(id)arg1;
+- (void)cardPreviewController:(id)arg1 didShowCardPreviewWithCardData:(id)arg2;
+- (void)cardPreviewController:(id)arg1 didRemoveCardPreviewForReason:(unsigned long long)arg2 withCardData:(id)arg3;
 @end
 

@@ -205,11 +205,10 @@
 - (void)_cancelSessionOnEvent:(_Bool)arg1;
 - (void)_cancel;
 - (void)_didTapCancel:(id)arg1;
+- (id)tfn_contentScrollView;
 - (void)_updateScrollIndicatorInsets;
 - (void)_updateContentInset;
 - (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
-- (id)tfn_contentScrollView;
 - (void)traitCollectionDidChange:(id)arg1;
 - (long long)preferredStatusBarStyle;
 - (void)_presentperiscopeGoLiveTooltip;

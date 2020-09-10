@@ -401,9 +401,8 @@
 - (_Bool)isQuoteStatRearrangeEnabled;
 - (_Bool)isQuoteLabelEnabled;
 - (_Bool)isRetweetsAndCommentsLabelEnabled;
+- (_Bool)isConversationControlNotifyingParticipantsEnabled;
 - (_Bool)isConversationControlHighlightedEducationEnabled;
-- (_Bool)isConversationControlConsumptionEducationEnabled;
-- (_Bool)isConversationControlConsumptionDefaultEnabled;
 - (_Bool)isConversationControlCreationEnabled;
 - (_Bool)isVerificationV2ElectionsBadgeEnabled;
 - (_Bool)isVerificationV2AffiliateBadgingM2Enabled;
@@ -469,7 +468,6 @@
 - (unsigned long long)cardComposePreviewPermittedRetryCount;
 - (_Bool)shouldCardComposePreviewTombstoneIfNotDisplayed;
 - (long long)cardComposePreviewFetchDelayMsec;
-- (_Bool)isMixedMediaGIFCreationEnabled;
 - (_Bool)isComposerTwitterTextEditorEnabled;
 - (_Bool)isComposerPulldownThreadingLookbackLimited;
 - (_Bool)isComposerProtectedAccountPulldownThreadingEnabled;
@@ -485,6 +483,7 @@
 - (_Bool)isURTViewModelBuildingOffMainThreadEnabled;
 - (_Bool)isTweetDetailsRichTextPrototypeViewEnabled;
 - (_Bool)isHomeTimelineEarlyStartupEnabled;
+- (_Bool)isURTImpressionCacheStoreAsyncWriteEnabled;
 - (_Bool)isTIPImageUnloadingOptimizationEnabled;
 - (_Bool)isMediaRailAsyncAssetLibraryLoadingEnabled;
 - (_Bool)isIgnoreTraitCollectionUIStyleInEqualityEnabled;
@@ -498,7 +497,6 @@
 - (_Bool)isCardPersistedStateManagerWarmingEnabled;
 - (_Bool)isAsyncURLCacheLoadingEnabled;
 - (_Bool)isURTConversationTimelineViewModelReuseSwitchEnabledKey;
-- (long long)isURTAnatomyReferencingOptimizationEnabledWithImpression:(_Bool)arg1;
 - (double)urtImpressionsProcessingMaxDeferralTime;
 - (_Bool)isPhotoGalleryAsyncAssetLibraryLoadingEnabled;
 - (_Bool)isInstancelessPipelineObserversInFetchHelpersEnabled;
@@ -521,6 +519,9 @@
 - (long long)reactivePromptMaxFollowCount;
 - (_Bool)isReactivePromptUserFollowReactionEnabled;
 - (_Bool)isReactivePromptFirstLikeReactionEnabled;
+- (long long)onboardingAccountFollowPromptMaxFollowingCount;
+- (_Bool)shouldOnboardingAccountFollowPromptShowUsername;
+- (_Bool)isOnboardingAccountFollowPromptEnabled;
 - (_Bool)isOnboardingConnectTabUrtEnabled;
 - (_Bool)isOnboardingNotificationsBackstopPromptEnabled;
 - (_Bool)isOnboardingLocationBackstopPromptEnabled;
@@ -535,6 +536,7 @@
 - (_Bool)isAuthorModeratedReplyURTContainerEnabled;
 - (_Bool)isTOTPGeneratorEnabled;
 - (_Bool)isSMS2faEnabled;
+- (_Bool)isConversationThreadingOverflowCountInGQLQueryEnabled;
 - (unsigned long long)_t1_conversationThreadingStyle;
 - (_Bool)isConversationConnectorLinesToSelectedStateContainerEnabled;
 - (_Bool)isConversationEmphasizedConnectorLinesEnabled;
@@ -543,6 +545,7 @@
 - (_Bool)isConversationThreadingCaretAlwaysVisible;
 - (_Bool)isConversationThreadingInlineActionsCountsAlwaysVisible;
 - (_Bool)isConversationThreadingInlineActionsAlwaysVisible;
+- (_Bool)isConversationMaximumIndentationSentWithCursorsEnabled;
 - (_Bool)isConversationThreadingInlineActionsVerticallyAlignedEnabled;
 - (_Bool)isConversationThreadingReplyInlineActionFocusesInlineReplyFieldEnabled;
 - (_Bool)isConversationThreadingFloatingReplyBarHiddenForSelectedInlineReplyBar;
@@ -571,8 +574,6 @@
 @property(readonly, nonatomic) double promotedImageRatio;
 @property(readonly, nonatomic) _Bool isMediaAppCardRatingsViewEnabled;
 @property(readonly, nonatomic) _Bool isSkipTalonURLVerificationEnabled;
-@property(readonly, nonatomic) _Bool isVideoWebsiteCardBannerlessWebViewEnabled;
-@property(readonly, nonatomic) _Bool isVideoWebsiteCardSafariViewControllerEnabled;
 - (_Bool)isConversationCardCTAHashflagsEnabled;
 @property(readonly, nonatomic) _Bool isHashflagsInTrendsEnabled;
 @property(readonly, nonatomic) _Bool isAdImpressionScrollToTopHandlerEnabled;
@@ -711,6 +712,7 @@
 @property(readonly, nonatomic) _Bool isPrecachingAllowedByLegacyAutoplaySystem;
 @property(readonly, nonatomic) _Bool isVideoDynamicAdEnabled;
 @property(readonly, nonatomic) double autoplayStartPlayerViewVisibleYFraction;
+@property(readonly, nonatomic) _Bool disableVideoRenderingForTwitterVoice;
 @property(readonly, nonatomic) NSArray *videoAdsAuditAllowedUsers;
 @property(readonly, nonatomic) double skipAdDurationRequirement;
 @property(readonly, nonatomic) NSNumber *skipButtonTime;
@@ -851,6 +853,7 @@
 @property(readonly, nonatomic) _Bool isProtectedUser;
 @property(readonly, nonatomic) id <TFSTwitterAPICommandContext> tbc_apiCommandContext;
 @property(readonly, nonatomic) TFSTwitterAPICommandService *tbc_apiCommandService;
+- (_Bool)isMixedMediaGIFCreationEnabled;
 - (_Bool)preferToCancelOnBackgroundTaskExpiration;
 - (_Bool)isTweetOutboxIgnoreNetworkReachabilityEnabled;
 - (id)scribeThriftGroups;

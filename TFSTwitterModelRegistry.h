@@ -36,6 +36,7 @@
     // Error parsing type: , name: TwitterConversationType
     // Error parsing type: , name: TwitterAccountUserDetailsType
     // Error parsing type: , name: TwitterMasterUserType
+    // Error parsing type: , name: UserPinnedListsType
     // Error parsing type: , name: TwitterTopicType
     // Error parsing type: , name: ActivityLogType
     // Error parsing type: , name: registryBuilder

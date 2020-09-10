@@ -62,7 +62,6 @@
 @property(copy, nonatomic) NSString *scribePage; // @synthesize scribePage=_scribePage;
 @property(nonatomic) __weak id <T1InterestPickerViewControllerDelegate> interestPickerDelegate; // @synthesize interestPickerDelegate=_interestPickerDelegate;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)private_updateSections:(id)arg1 sectionHelpers:(id)arg2;
 - (_Bool)private_shouldAllowInterestExpansion;
 - (_Bool)private_shouldShowCategoryHeaders;

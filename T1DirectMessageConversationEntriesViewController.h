@@ -47,6 +47,7 @@
     // Error parsing type: , name: $__lazy_storage_$_slideshowBehavior
     // Error parsing type: , name: $__lazy_storage_$_scrollPositionBehavior
     // Error parsing type: , name: $__lazy_storage_$_updateBehavior
+    // Error parsing type: , name: $__lazy_storage_$_audioPlayerBehavior
     // Error parsing type: , name: $__lazy_storage_$_mediaAutoplayBehavior
     // Error parsing type: , name: $__lazy_storage_$_lastReadMarkerBehavior
     // Error parsing type: , name: $__lazy_storage_$_userEducationMarkerBehavior
@@ -86,7 +87,6 @@
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 - (_Bool)collectionView:(id)arg1 shouldSelectItemAtIndexPath:(id)arg2;
-- (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 referenceSizeForHeaderInSection:(long long)arg3;
 - (id)collectionView:(id)arg1 viewForSupplementaryElementOfKind:(id)arg2 atIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;

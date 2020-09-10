@@ -108,8 +108,6 @@
 - (void)_updateBars;
 - (void)_updateToolbarItems;
 - (void)_updateNavbarItems:(_Bool)arg1;
-- (void)layoutGuidesDidChange:(long long)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)_t1_applyInsets;
 - (void)_setupAmbientNotificationViewController;

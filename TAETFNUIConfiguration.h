@@ -6,19 +6,13 @@
 
 #import <TFNUI/TFNUIConfiguration.h>
 
-@class TAETFNUIColorPaletteAdapter, TAETFNUIFontGroupAdapter;
-
 @interface TAETFNUIConfiguration : TFNUIConfiguration
 {
-    TAETFNUIColorPaletteAdapter *_colorPaletteAdapter;
-    TAETFNUIFontGroupAdapter *_fontGroupAdapter;
 }
 
-- (void).cxx_destruct;
 - (id)buttonFontGroup;
 - (id)fontGroup;
 - (id)colorPalette;
-- (id)init;
 
 @end
 

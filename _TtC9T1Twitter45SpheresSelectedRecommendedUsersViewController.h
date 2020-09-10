@@ -12,7 +12,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: account
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: stateManager
-    // Error parsing type: , name: networkingDelegate
     // Error parsing type: , name: selectedUsers
     // Error parsing type: , name: delegate
 }

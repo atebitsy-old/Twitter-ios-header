@@ -14,6 +14,7 @@
 + (id)localizedNameForPanelID:(long long)arg1;
 + (long long)panelIDForString:(id)arg1;
 + (id)stringForPanelID:(long long)arg1;
++ (long long)panelIDForPanelName:(id)arg1;
 
 @end
 

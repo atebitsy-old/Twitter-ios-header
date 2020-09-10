@@ -18,6 +18,11 @@
 + (id)sharedFontGroup;
 @property(readonly, nonatomic) UIFont *navSubtitleFont;
 @property(readonly, nonatomic) UIFont *navTitleFont;
+@property(readonly, nonatomic) UIFont *largeBoldFont;
+@property(readonly, nonatomic) UIFont *largeFont;
+@property(readonly, nonatomic) UIFont *smallFont;
+@property(readonly, nonatomic) UIFont *normalBoldFont;
+@property(readonly, nonatomic) UIFont *normalFont;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

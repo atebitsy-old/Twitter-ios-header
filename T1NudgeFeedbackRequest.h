@@ -9,7 +9,7 @@
 #import <T1Twitter/T1Nudge-Protocol.h>
 #import <T1Twitter/TFNMenuSheetViewControllerDelegate-Protocol.h>
 
-@class NSString, TFNMenuSheetViewController, TFNTwitterAccount, TFNTwitterComposition;
+@class NSString, TFNMenuSheetViewController, TFNTwitterAccount, TFNTwitterComposition, TFNTwitterStatus;
 @protocol T1NudgeDelegate;
 
 @interface T1NudgeFeedbackRequest : NSObject <TFNMenuSheetViewControllerDelegate, T1Nudge>
@@ -20,6 +20,7 @@
     long long _compositionStatus;
     TFNTwitterAccount *_account;
     TFNTwitterComposition *_composition;
+    TFNTwitterStatus *_status;
     TFNMenuSheetViewController *_nudgeMenuSheetViewController;
 }
 
@@ -27,6 +28,7 @@
 @property(nonatomic) _Bool isObservingBackgroundNotification; // @synthesize isObservingBackgroundNotification=_isObservingBackgroundNotification;
 @property(readonly, nonatomic) _Bool hasSelectedMenuItem; // @synthesize hasSelectedMenuItem=_hasSelectedMenuItem;
 @property(nonatomic) __weak TFNMenuSheetViewController *nudgeMenuSheetViewController; // @synthesize nudgeMenuSheetViewController=_nudgeMenuSheetViewController;
+@property(readonly, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
 @property(readonly, nonatomic) TFNTwitterComposition *composition; // @synthesize composition=_composition;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(nonatomic) long long compositionStatus; // @synthesize compositionStatus=_compositionStatus;
@@ -49,7 +51,7 @@
 - (void)dismissNudgeAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)presentNudgeFromViewController:(id)arg1 animated:(_Bool)arg2;
 @property(readonly, nonatomic) unsigned long long nudgeType;
-- (id)initWithAccount:(id)arg1 composition:(id)arg2;
+- (id)initWithAccount:(id)arg1 composition:(id)arg2 status:(id)arg3;
 - (id)init;
 
 // Remaining properties

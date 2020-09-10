@@ -6,11 +6,13 @@
 
 #import <T1Twitter/T1DirectMessageEntryBaseCell.h>
 
+#import <T1Twitter/TAVPlaybackObserver-Protocol.h>
+
 @class T1DirectMessageAbstractConversationEntryViewModel;
 @protocol T1DirectMessageAbstractEntryCellDelegate;
 
 __attribute__((visibility("hidden")))
-@interface _TtC9T1Twitter27DirectMessageEntryAudioCell : T1DirectMessageEntryBaseCell
+@interface _TtC9T1Twitter27DirectMessageEntryAudioCell : T1DirectMessageEntryBaseCell <TAVPlaybackObserver>
 {
     // Error parsing type: , name: bubbleHeightWhilePlaying
     // Error parsing type: , name: bubbleWidthWhilePlaying
@@ -28,19 +30,22 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: outgoingPulsingAvatarImageViewHeightConstraint
     // Error parsing type: , name: playbackState
     // Error parsing type: , name: audioLevelsTimer
+    // Error parsing type: , name: player
+    // Error parsing type: , name: $__lazy_storage_$_playbackView
     // Error parsing type: , name: $__lazy_storage_$_backgroundBubbleView
     // Error parsing type: , name: $__lazy_storage_$_audioControlButton
     // Error parsing type: , name: $__lazy_storage_$_timerLabel
     // Error parsing type: , name: pulsingAvatarImageView
+    // Error parsing type: , name: remainingTime
     // Error parsing type: , name: audioDelegate
 }
 
 - (void).cxx_destruct;
+- (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 - (void)backgroundLongPressed:(id)arg1;
 - (void)backgroundDoubleTapped;
 - (void)updateAudioLevel;
 - (void)audioControlButtonTapped;
-- (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;
 @property(nonatomic, retain) T1DirectMessageAbstractConversationEntryViewModel *entryViewModel;
 @property(nonatomic) __weak id <T1DirectMessageAbstractEntryCellDelegate> delegate;

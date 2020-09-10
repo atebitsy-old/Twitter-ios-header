@@ -12,7 +12,7 @@
 - (void)chatSectionCompositeView:(PTVChatSectionCompositeView *)arg1 didSelectShowSurvey:(PTVBroadcasterSurvey *)arg2;
 
 @optional
-- (_Bool)chatSectionCompositeViewShouldHidePostBroadcastEdit:(PTVChatSectionCompositeView *)arg1;
+- (_Bool)chatSectionCompositeViewShouldHidePostBroadcast:(PTVChatSectionCompositeView *)arg1;
 - (_Bool)chatSectionCompositeViewShouldHideOverflowMenu:(PTVChatSectionCompositeView *)arg1;
 - (void)chatSectionCompositeViewDidExitTheaterMode;
 - (void)chatSectionCompositeViewDidSelectScrollChatToBottom:(PTVChatSectionCompositeView *)arg1;

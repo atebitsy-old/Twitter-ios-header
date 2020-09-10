@@ -216,6 +216,7 @@
 - (void)showPhotoGalleryWithSource:(long long)arg1;
 - (void)showGIFSearchWithStatus:(id)arg1 protocolSource:(long long)arg2 sourceInfo:(id)arg3;
 - (void)showComposerWithSessionConfig:(id)arg1;
+- (_Bool)showPanel:(long long)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (long long)targetPanelForSearchResults;
 - (void)setCurrentPanel:(long long)arg1 preserveModals:(_Bool)arg2 animated:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)setCurrentPanel:(long long)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;

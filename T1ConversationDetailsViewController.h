@@ -125,6 +125,7 @@
     id _conversationObserver;
     long long _conversationID;
     unsigned long long _loadState;
+    long long _overflowCount;
     TFNBarButtonItem *_subscribeButton;
     struct CGPoint _inlineReplyInitialContentOffset;
     struct CGRect _currentKeyboardFrame;
@@ -137,6 +138,7 @@
 + (id)conversationDetailsViewControllerForStatus:(id)arg1 account:(id)arg2 sourceScribeContext:(id)arg3 sourceNavigationMetadata:(id)arg4;
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNBarButtonItem *subscribeButton; // @synthesize subscribeButton=_subscribeButton;
+@property(readonly, nonatomic) long long overflowCount; // @synthesize overflowCount=_overflowCount;
 @property(nonatomic) unsigned long long loadState; // @synthesize loadState=_loadState;
 @property(nonatomic) _Bool isAutoTranslationImpressionScribed; // @synthesize isAutoTranslationImpressionScribed=_isAutoTranslationImpressionScribed;
 @property(nonatomic) _Bool isTranslationImpressionScribed; // @synthesize isTranslationImpressionScribed=_isTranslationImpressionScribed;
@@ -218,7 +220,6 @@
 - (id)dataViewControllerRenderPerformanceLoggerEventName:(id)arg1;
 - (void)willTransitionToTraitCollection:(id)arg1 withTransitionCoordinator:(id)arg2;
 - (void)tfn_fontSizeChanged;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (_Bool)isLayoutMetricsCanvasInheritedByChildViewController;
 - (CDUnknownBlockType)_t1_showDisabledEngagementEducationBlockOrNilForType:(unsigned long long)arg1;
 - (_Bool)tfn_prefersTabBarShadowHidden;
@@ -499,10 +500,10 @@
 - (void)_t1_accountDidUpdate:(id)arg1;
 - (void)_t1_updateExperimentFlagsFromAccount;
 - (void)dealloc;
-- (void)_t1_initializeWithStatusID:(long long)arg1 status:(id)arg2 account:(id)arg3 statusNavigationContext:(id)arg4 sourceScribeContext:(id)arg5 sourceNavigationMetadata:(id)arg6 overrideNavigationMetadata:(id)arg7;
+- (void)_t1_initializeWithStatusID:(long long)arg1 status:(id)arg2 account:(id)arg3 statusNavigationContext:(id)arg4 sourceScribeContext:(id)arg5 sourceNavigationMetadata:(id)arg6 overrideNavigationMetadata:(id)arg7 overflowCount:(long long)arg8;
 - (id)initWithStatusID:(long long)arg1 account:(id)arg2 statusNavigationContext:(id)arg3 sourceScribeContext:(id)arg4 sourceNavigationMetadata:(id)arg5 overrideNavigationMetadata:(id)arg6;
 - (id)initWithStatusID:(long long)arg1 account:(id)arg2 sourceNavigationMetadata:(id)arg3;
-- (id)initWithStatus:(id)arg1 account:(id)arg2 statusNavigationContext:(id)arg3 sourceScribeContext:(id)arg4 sourceNavigationMetadata:(id)arg5 overrideNavigationMetadata:(id)arg6;
+- (id)initWithStatus:(id)arg1 account:(id)arg2 statusNavigationContext:(id)arg3 sourceScribeContext:(id)arg4 sourceNavigationMetadata:(id)arg5 overrideNavigationMetadata:(id)arg6 overflowCount:(long long)arg7;
 - (id)initWithStatus:(id)arg1 account:(id)arg2 statusNavigationContext:(id)arg3 sourceScribeContext:(id)arg4 sourceNavigationMetadata:(id)arg5;
 - (id)initWithStatus:(id)arg1 account:(id)arg2 sourceNavigationMetadata:(id)arg3;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;

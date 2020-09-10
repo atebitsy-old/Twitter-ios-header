@@ -38,7 +38,6 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)cameraServiceAuthorizationViewController:(id)arg1 didChangeAuthorizationState:(unsigned long long)arg2;
 - (void)photoGalleryViewControllerDidCancelSession:(id)arg1;
 - (void)photoGalleryViewController:(id)arg1 didEndSessionWithAttachments:(id)arg2;

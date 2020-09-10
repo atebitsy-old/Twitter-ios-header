@@ -54,6 +54,8 @@
 @property(readonly, nonatomic) unsigned long long edgeToEdgePresentation;
 @property(readonly, nonatomic) unsigned long long videoCarouselPresentation;
 @property(readonly, nonatomic) unsigned long long carouselPresentation;
+@property(readonly, nonatomic) _Bool isVideoWebsiteCardBannerlessWebViewEnabled;
+@property(readonly, nonatomic) _Bool isVideoWebsiteCardSafariViewControllerEnabled;
 @property(readonly, nonatomic) _Bool isTweetViewInGalleryEnabled;
 @property(readonly, nonatomic) double promotedImageRatio;
 @property(readonly, nonatomic) _Bool isAdDisplaySessionGranularityReduced;

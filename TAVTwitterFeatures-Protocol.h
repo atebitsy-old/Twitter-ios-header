@@ -7,6 +7,7 @@
 @class NSArray, NSNumber;
 
 @protocol TAVTwitterFeatures
+@property(readonly, nonatomic) _Bool disableVideoRenderingForTwitterVoice;
 @property(readonly, nonatomic) NSArray *videoAdsAuditAllowedUsers;
 @property(readonly, nonatomic) NSNumber *skipButtonTime;
 @property(readonly, nonatomic) double skipAdDurationRequirement;

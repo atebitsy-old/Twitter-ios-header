@@ -38,7 +38,6 @@
 - (void)searchBarTextDidEndEditing:(id)arg1;
 - (void)searchBarTextDidBeginEditing:(id)arg1;
 - (void)searchBar:(id)arg1 textDidChange:(id)arg2;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 @property(copy, nonatomic) NSArray *selectedUsers;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 - (void)viewDidLoad;

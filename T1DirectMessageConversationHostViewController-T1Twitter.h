@@ -7,6 +7,7 @@
 #import <T1Twitter/T1DirectMessageConversationHostViewController.h>
 
 @interface T1DirectMessageConversationHostViewController (T1Twitter)
+- (void)directMessageComposeViewControllerVoiceRecordingStarted:(id)arg1;
 - (void)directMessageComposeViewControllerTextViewDidChange:(id)arg1;
 - (void)directMessageComposeViewControllerDidEndEditing:(id)arg1;
 - (void)directMessageComposeViewControllerDidBeginEditing:(id)arg1;

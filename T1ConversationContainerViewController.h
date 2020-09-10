@@ -36,7 +36,6 @@
 - (void)tweetDeletedWithNotification:(id)arg1;
 - (void)updateInsets;
 @property(nonatomic, readonly) _Bool tfn_prefersTabBarShadowHidden;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;

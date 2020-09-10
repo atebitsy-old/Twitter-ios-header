@@ -18,6 +18,7 @@
     NSArray *_deepLinkQueryParameters;
 }
 
++ (id)viberConfigurationWithStatus:(id)arg1;
 + (id)telegramConfigurationWithStatus:(id)arg1;
 + (id)gmailConfigurationWithStatus:(id)arg1;
 + (id)whatsAppConfigurationWithStatus:(id)arg1;

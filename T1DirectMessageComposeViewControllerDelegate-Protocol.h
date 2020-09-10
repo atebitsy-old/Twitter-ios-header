@@ -10,6 +10,7 @@
 - (void)directMessageComposeViewControllerDidTapSend:(T1DirectMessageComposeViewController *)arg1;
 
 @optional
+- (void)directMessageComposeViewControllerVoiceRecordingStarted:(T1DirectMessageComposeViewController *)arg1;
 - (void)directMessageComposeViewControllerTextViewDidChange:(T1DirectMessageComposeViewController *)arg1;
 - (void)directMessageComposeViewControllerDidEndEditing:(T1DirectMessageComposeViewController *)arg1;
 - (void)directMessageComposeViewControllerDidBeginEditing:(T1DirectMessageComposeViewController *)arg1;

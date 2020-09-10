@@ -18,12 +18,17 @@
 - (struct CGPoint)pointForEvent:(id)arg1 inView:(id)arg2;
 - (struct CGSize)canvasSize;
 @property(retain, nonatomic) T1ImageViewFetchHelper *t1_fetchHelper;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutContentSpacingCalculator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutContentInsetsCalculator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutFrameCalculator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutSizeCalculator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutFrameAnimator;
-@property(readonly, nonatomic) CDUnknownBlockType flexibleLayoutVisibilityCalculator;
-@property(readonly, nonatomic) UIView *flexibleLayoutView;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutVisibilityListener;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameListener;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutSizeCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutVisibilityCalculator;
+
+// Remaining properties
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutContentInsetsCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutContentSpacingCalculator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameAnimator;
+@property(readonly, nonatomic) CDUnknownBlockType t1_flexibleLayoutFrameCalculator;
+@property(readonly, nonatomic) UIView *t1_flexibleLayoutView;
+@property(readonly, nonatomic) id t1_flexibleLayoutViewModel;
 @end
 

@@ -19,7 +19,6 @@
     // Error parsing type: , name: initialGesture
     // Error parsing type: , name: fleetsPagerChangesInput
     // Error parsing type: , name: userReference
-    // Error parsing type: , name: navigationMode
     // Error parsing type: , name: fleetThreadsObserver
     // Error parsing type: , name: deletedThreadIndexesObservableInput
     // Error parsing type: , name: scribePage

@@ -51,9 +51,7 @@
 @property(readonly, nonatomic) struct CGSize mediaDimensions;
 @property(readonly, copy, nonatomic) NSString *mediaURLString;
 - (id)associatedMediaInfo;
-- (void)populateWithStatus:(id)arg1;
 - (id)momentPageWithTextType;
-- (_Bool)isVisibleByAccount:(id)arg1;
 @property(readonly, nonatomic) _Bool isPlayableLiveVideoEvent;
 @property(readonly, nonatomic) _Bool isEmpty;
 @property(readonly, nonatomic) _Bool isPlayableMedia;

@@ -6,16 +6,16 @@
 
 #import <objc/NSObject.h>
 
-#import <PeriscopeSDK/PHPhotoLibraryChangeObserver-Protocol.h>
+#import <PeriscopeSDK/UIImagePickerControllerDelegate-Protocol.h>
+#import <PeriscopeSDK/UINavigationControllerDelegate-Protocol.h>
 
 @class NSString;
 @protocol PTVScreenshotObserverDelegate;
 
-@interface PTVScreenshotObserver : NSObject <PHPhotoLibraryChangeObserver>
+@interface PTVScreenshotObserver : NSObject <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     PTVScreenshotObserver *_weakSelf;
-    _Bool _isObservingPhotoLibrary;
-    double _lastScreenshotNotificationTimestamp;
+    CDUnknownBlockType _imagePickerCompletion;
     _Bool _observingScreenshotNotifications;
     id <PTVScreenshotObserverDelegate> _delegate;
 }
@@ -23,20 +23,16 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isObservingScreenshotNotifications) _Bool observingScreenshotNotifications; // @synthesize observingScreenshotNotifications=_observingScreenshotNotifications;
 @property(nonatomic) __weak id <PTVScreenshotObserverDelegate> delegate; // @synthesize delegate=_delegate;
-- (void)fetchMostRecentScreenshot:(CDUnknownBlockType)arg1;
-- (void)photoLibraryDidChange;
-- (void)stopObservingPhotoLibrary;
-- (void)startObservingPhotoLibrary;
-- (long long)photosAuthorizationStatus;
+- (void)fetchMostRecentScreenshotFromViewController:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)userDidTakeScreenshot;
 - (void)stopObservingScreenshotNotifications;
 - (void)startObservingScreenshotNotifications;
 - (void)stopObserving;
 - (void)startObserving;
-- (double)currentTimestamp;
 - (id)initWithDelegate:(id)arg1;
 - (id)init;
-- (void)photoLibraryDidChange:(id)arg1;
+- (void)imagePickerControllerDidCancel:(id)arg1;
+- (void)imagePickerController:(id)arg1 didFinishPickingMediaWithInfo:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

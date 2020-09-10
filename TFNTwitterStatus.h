@@ -381,6 +381,7 @@
 @property(readonly, nonatomic, getter=isAdPreviewTweet) _Bool adPreviewTweet;
 @property(readonly, nonatomic) TFNTwitterGeotag *representedGeotag;
 @property(readonly, nonatomic) long long representedStatusID;
+@property(readonly, nonatomic) unsigned long long representedFromUserFollowedByCurrentAccountState;
 @property(readonly, nonatomic) NSString *representedFromUserName;
 @property(readonly, nonatomic) long long representedFromUserID;
 @property(readonly, nonatomic) _Bool displayAsFollowForwardTweet;
@@ -453,6 +454,8 @@
 - (id)_t1_sharableStatusViewForAccount:(id)arg1 layoutMetrics:(id)arg2;
 - (id)snapshotAssistantForAccount:(id)arg1 title:(id)arg2 layoutMetrics:(id)arg3;
 - (void)renderSharableStatusView:(id)arg1 withTitle:(id)arg2 layoutMetrics:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (id)_t1_twitterURLForShareWithSParam:(unsigned long long)arg1;
+@property(readonly, copy, nonatomic) NSString *twitterURLForViber;
 @property(readonly, copy, nonatomic) NSString *twitterURLForLine;
 @property(readonly, copy, nonatomic) NSString *twitterURLForTelegram;
 @property(readonly, copy, nonatomic) NSString *twitterURLForGmail;

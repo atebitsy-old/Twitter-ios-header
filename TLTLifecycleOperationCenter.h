@@ -12,18 +12,18 @@
 @interface TLTLifecycleOperationCenter : NSObject
 {
     NSObject<OS_dispatch_queue> *_serialQueue;
-    NSDictionary *_stages;
+    NSDictionary *_stageEntries;
     NSDictionary *_dependencies;
-    NSArray *_stageNames;
+    NSArray *_stages;
 }
 
 + (id)sharedOperationCenter;
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSArray *stageNames; // @synthesize stageNames=_stageNames;
+@property(copy, nonatomic) NSArray *stages; // @synthesize stages=_stages;
 @property(copy, nonatomic) NSDictionary *dependencies; // @synthesize dependencies=_dependencies;
-@property(copy, nonatomic) NSDictionary *stages; // @synthesize stages=_stages;
+@property(copy, nonatomic) NSDictionary *stageEntries; // @synthesize stageEntries=_stageEntries;
 - (_Bool)_dependenciesNotifiedStage:(id)arg1;
-- (void)_fastForwardOperation:(id)arg1 stageName:(id)arg2;
+- (void)_fastForwardOperation:(id)arg1;
 - (void)_resetStage:(id)arg1;
 - (void)_notifyStage:(id)arg1;
 - (void)resetStage:(id)arg1;

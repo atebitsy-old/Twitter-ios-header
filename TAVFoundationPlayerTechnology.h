@@ -15,6 +15,7 @@
 
 @interface TAVFoundationPlayerTechnology : NSObject <TAVFoundationAVPlayerObserverDelegate, AVPlayerItemMetadataOutputPushDelegate, TAVPlayerTechnology>
 {
+    _Bool _disableVideoRendering;
     AVPlayer *_avPlayer;
     UIView<TAVPlayerOutputView> *_outputView;
     TAVFoundationAVPlayerObserver *_avPlayerObserver;
@@ -35,6 +36,7 @@
 
 + (id)blockingAccessLogReadingQueue;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool disableVideoRendering; // @synthesize disableVideoRendering=_disableVideoRendering;
 @property(copy, nonatomic) TAVPlayerTechnologyControlState *appliedControlState; // @synthesize appliedControlState=_appliedControlState;
 @property(readonly, nonatomic) double playbackStartForwardBufferDuration; // @synthesize playbackStartForwardBufferDuration=_playbackStartForwardBufferDuration;
 @property(readonly, copy, nonatomic) NSUUID *identifier; // @synthesize identifier=_identifier;
@@ -64,7 +66,7 @@
 - (void)setOutputView:(id)arg1;
 @property(readonly, nonatomic) UIView<TAVPlayerOutputView> *outputView; // @synthesize outputView=_outputView;
 @property(readonly, nonatomic) AVPlayer *avPlayer; // @synthesize avPlayer=_avPlayer;
-- (id)initWithFoundationItem:(id)arg1 initialPlaybackTime:(CDStruct_1b6d18a9)arg2 observer:(id)arg3 captionsConfiguration:(id)arg4 outputViewFactory:(id)arg5 playbackStartForwardBufferDuration:(double)arg6;
+- (id)initWithFoundationItem:(id)arg1 initialPlaybackTime:(CDStruct_1b6d18a9)arg2 observer:(id)arg3 captionsConfiguration:(id)arg4 outputViewFactory:(id)arg5 playbackStartForwardBufferDuration:(double)arg6 disableVideoRendering:(_Bool)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

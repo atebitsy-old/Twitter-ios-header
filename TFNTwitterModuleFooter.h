@@ -22,6 +22,7 @@
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(readonly, nonatomic) NSString *text; // @synthesize text=_text;
 - (id)initWithJSONDictionary:(id)arg1;
+- (id)init;
 - (id)initWithText:(id)arg1 urlString:(id)arg2 shouldLogImpression:(_Bool)arg3;
 
 // Remaining properties

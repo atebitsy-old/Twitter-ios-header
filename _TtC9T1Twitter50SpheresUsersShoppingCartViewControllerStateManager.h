@@ -8,10 +8,11 @@
 
 @interface _TtC9T1Twitter50SpheresUsersShoppingCartViewControllerStateManager : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: listID
     // Error parsing type: , name: scribe
     // Error parsing type: , name: selectedUsers
+    // Error parsing type: , name: mutationsManager
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: networkingDelegate
 }
 
 @end

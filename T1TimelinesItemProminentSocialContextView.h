@@ -16,33 +16,37 @@
     _Bool _socialContextUserInteractionEnabled;
     id <T1TimelinesItemProminentSocialContextViewDelegate> _delegate;
     T1TimelinesItemProminentSocialContextViewModel *_viewModel;
+    long long _overrideMode;
     UIImageView *_badgeImageView;
     UILabel *_textLabel;
     UILabel *_subtextLabel;
     TFNTappableHighlightView *_highlightView;
     T1DismissButton *_caretButton;
     TFNLegacyButton *_followButton;
+    TFNLegacyButton *_followingButton;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool socialContextUserInteractionEnabled; // @synthesize socialContextUserInteractionEnabled=_socialContextUserInteractionEnabled;
+@property(retain, nonatomic) TFNLegacyButton *followingButton; // @synthesize followingButton=_followingButton;
 @property(retain, nonatomic) TFNLegacyButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) T1DismissButton *caretButton; // @synthesize caretButton=_caretButton;
 @property(retain, nonatomic) TFNTappableHighlightView *highlightView; // @synthesize highlightView=_highlightView;
 @property(retain, nonatomic) UILabel *subtextLabel; // @synthesize subtextLabel=_subtextLabel;
 @property(retain, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(retain, nonatomic) UIImageView *badgeImageView; // @synthesize badgeImageView=_badgeImageView;
+@property(nonatomic) long long overrideMode; // @synthesize overrideMode=_overrideMode;
 @property(retain, nonatomic) T1TimelinesItemProminentSocialContextViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <T1TimelinesItemProminentSocialContextViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
+- (void)_t1_updateFollowButtonStateForViewModelUpdate:(_Bool)arg1;
 - (void)updateWithViewModel:(id)arg1;
 - (void)updateWithLayoutState:(id)arg1 resettingFrame:(_Bool)arg2;
-- (void)handleTopicUnfollowEvent;
-- (void)handleTopicFollowEvent;
 - (void)_t1_highlightViewDidTap:(id)arg1;
 - (void)_t1_tapFollowAction:(id)arg1;
 - (void)_t1_tapCaretAction:(id)arg1;
+- (id)_t1_followButtonWithTitle:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties

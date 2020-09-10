@@ -20,14 +20,11 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) UITextField *summaryTextField; // @synthesize summaryTextField=_summaryTextField;
 @property(readonly, nonatomic) UILabel *summaryTitleLabel; // @synthesize summaryTitleLabel=_summaryTitleLabel;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (long long)preferredInterfaceOrientationForPresentation;
 - (unsigned long long)supportedInterfaceOrientations;
 - (_Bool)shouldAutorotate;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (void)viewDidAppear:(_Bool)arg1;
-- (void)viewDidLayoutSubviews;
 - (void)loadView;
 - (id)init;
 - (id)nextStep;

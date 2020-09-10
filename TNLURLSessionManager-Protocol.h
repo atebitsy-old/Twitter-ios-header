@@ -17,7 +17,7 @@
 - (void)backoffSignalEncounteredForURL:(NSURL *)arg1 host:(NSString *)arg2 responseHTTPHeaders:(NSDictionary *)arg3;
 - (void)applyBackoffDependenciesToOperation:(NSOperation *)arg1 withURL:(NSURL *)arg2 host:(NSString *)arg3 isLongPollRequest:(_Bool)arg4;
 - (void)syncAddURLSessionTaskOperation:(TNLURLSessionTaskOperation *)arg1;
-- (void)URLSessionDidCompleteBackgroundTask:(unsigned long long)arg1 sessionConfigIdentifier:(NSString *)arg2 sharedContainerIdentifier:(NSString *)arg3 request:(NSURLRequest *)arg4 response:(TNLResponse *)arg5;
+- (void)URLSessionDidCompleteBackgroundTask:(unsigned long long)arg1 sessionConfigIdentifier:(NSString *)arg2 sharedContainerIdentifier:(NSString *)arg3 request:(NSURLRequest *)arg4 response:(TNLResponse *)arg5 pairedOperation:(NSOperation *)arg6;
 - (void)URLSessionDidCompleteBackgroundEvents:(NSURLSession *)arg1;
 - (_Bool)handleBackgroundURLSessionEvents:(NSString *)arg1 completionHandler:(void (^)(void))arg2;
 - (void)getAllURLSessions:(void (^)(NSArray *, NSArray *))arg1;

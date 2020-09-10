@@ -58,6 +58,7 @@
 @property(readonly, nonatomic) UIView *visibleAutoTranslateBodyView;
 @property(readonly, nonatomic) UIView *visibleAutoTranslateEducationView;
 @property(readonly, nonatomic) UIView *visibleTranslateTweetView;
+@property(readonly, nonatomic) UIView *visibleInlineReplyView;
 @property(readonly, nonatomic) UIView *visibleInlineActionsView;
 @property(readonly, nonatomic) UIView *visibleTweetstormIndicatorView;
 @property(readonly, nonatomic) UIView<T1BasicStatusView> *visibleQuotedStatusView;

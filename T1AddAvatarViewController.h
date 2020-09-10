@@ -58,7 +58,6 @@
 - (_Bool)tfn_prefersNavigationBarShadowHidden;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 - (void)_updateConstraints;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)viewDidLoad;
 - (void)_addAvatarPhoto:(id)arg1;
 - (void)_nextTapped;

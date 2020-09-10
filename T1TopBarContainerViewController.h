@@ -17,7 +17,6 @@
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (_Bool)tfn_isContentScrolledToBottom;
 @property(nonatomic, readonly) _Bool tfn_prefersNavigationBarExpandedWhenScrolledToBottom;
 @property(nonatomic, readonly) _Bool tfn_prefersNavigationBarShadowHidden;

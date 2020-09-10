@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class TFNRoundedCornerView, UIButton, UIImage, UIImageView, UILabel;
+@class TFNRoundedCornerView, UIButton, UIImageView, UILabel;
 
 @interface T1ModuleHeaderContentView : UIView
 {
@@ -24,7 +24,6 @@
 @property(readonly, nonatomic) UILabel *headerTextLabel; // @synthesize headerTextLabel=_headerTextLabel;
 @property(readonly, nonatomic) UIButton *caretButton; // @synthesize caretButton=_caretButton;
 - (void)layoutSubviews;
-@property(retain, nonatomic) UIImage *iconImage;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

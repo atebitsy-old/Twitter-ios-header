@@ -44,9 +44,6 @@
 @property(retain, nonatomic) UIImage *backgroundImage; // @synthesize backgroundImage=_backgroundImage;
 @property(readonly, nonatomic) long long catalogType; // @synthesize catalogType=_catalogType;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)stickerCategoryEmptyViewControllerDidTapRetry;
 - (id)stickerCategoryViewController:(id)arg1 preferredVariantForStickerWithVariants:(id)arg2;
 - (void)stickerCategoryViewController:(id)arg1 didSelectPreferredVariant:(id)arg2 fromStickerWithVariants:(id)arg3;
@@ -79,6 +76,7 @@
 - (void)_showLoadingView;
 - (id)tfn_contentScrollView;
 - (double)_toolbarHeight;
+- (void)viewSafeAreaInsetsDidChange;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 - (id)initWithAccount:(id)arg1 catalogType:(long long)arg2 selectedCategoryID:(id)arg3 updateCatalogFromNetwork:(_Bool)arg4;

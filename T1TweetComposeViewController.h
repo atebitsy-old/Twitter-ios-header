@@ -309,7 +309,6 @@
 - (void)_t1_keyboardWillHide:(id)arg1;
 - (void)_t1_keyboardWillChangeFrame:(id)arg1;
 - (void)_t1_keyboardWillShow:(id)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)autocompleteController:(id)arg1 didReceiveResult:(id)arg2;
 - (void)autocompleteControllerDidEnd:(id)arg1;
 - (void)autocompleteControllerDidBegin:(id)arg1;

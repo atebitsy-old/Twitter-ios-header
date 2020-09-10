@@ -6,11 +6,11 @@
 
 #import <T1Twitter/T1URTViewController.h>
 
-#import <T1Twitter/T1UpdateIndicatorDelegate-Protocol.h>
+#import <T1Twitter/T1FeedbackActionProvider-Protocol.h>
 
-@interface T1URTViewController (T1Twitter12) <T1UpdateIndicatorDelegate>
-- (void)navigateToEntryID:(id)arg1;
-- (_Bool)dataViewController:(id)arg1 canNavigateToEntryID:(id)arg2;
-- (_Bool)canShowUpdateIndicator:(id)arg1 withContentNotification:(id)arg2;
+@interface T1URTViewController (T1Twitter12) <T1FeedbackActionProvider>
+- (CDUnknownBlockType)didProvideModerateFeedbackBlockForStatus:(id)arg1;
+- (CDUnknownBlockType)didProvideShowLessOftenFeedbackForStatus:(id)arg1;
+- (id)negativeFeedbackActionsForStatus:(id)arg1;
 @end
 

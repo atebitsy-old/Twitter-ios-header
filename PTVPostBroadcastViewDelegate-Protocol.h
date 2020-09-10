@@ -19,7 +19,7 @@
 - (_Bool)postBroadcastViewShouldShowBroadcasterSurveyPrompt;
 
 @optional
-- (_Bool)postBroadcastViewShouldHideEditButton:(PTVPostBroadcastView *)arg1;
+- (_Bool)postBroadcastViewShouldHidePostBroadcast:(PTVPostBroadcastView *)arg1;
 - (void)postBroadcastViewDidSelectModerationReport:(PTVPostBroadcastView *)arg1;
 - (void)postBroadcastViewDidSelectEditBroadcast:(PTVPostBroadcastView *)arg1;
 - (void)postBroadcastViewDidSelectWatchLive:(PTVPostBroadcastView *)arg1;

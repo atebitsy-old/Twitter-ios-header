@@ -11,7 +11,6 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: composeViewController
-    // Error parsing type: , name: composeBarTopConstraint
     // Error parsing type: , name: account
     // Error parsing type: , name: users
     // Error parsing type: , name: recipientDisplayName
@@ -22,9 +21,6 @@ __attribute__((visibility("hidden")))
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)keyboardStateDidChange;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
-- (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;

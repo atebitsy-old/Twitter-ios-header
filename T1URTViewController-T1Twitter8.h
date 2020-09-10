@@ -6,7 +6,10 @@
 
 #import <T1Twitter/T1URTViewController.h>
 
-@interface T1URTViewController (T1Twitter8)
-- (void)markAsViewedHelper:(id)arg1 didViewCells:(id)arg2;
+#import <T1Twitter/T1TimelineMessageEntryTableRowAdapterDelegate-Protocol.h>
+
+@interface T1URTViewController (T1Twitter8) <T1TimelineMessageEntryTableRowAdapterDelegate>
+- (void)timelineMessageEntryTableRowAdapter:(id)arg1 handleURL:(id)arg2;
+- (void)timelineMessageEntryTableRowAdapter:(id)arg1 dismissItem:(id)arg2;
 @end
 

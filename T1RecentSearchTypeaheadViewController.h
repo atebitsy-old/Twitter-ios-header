@@ -29,7 +29,6 @@
 - (void)recentSearchCollectionItemAdapter:(id)arg1 didSelectItem:(id)arg2;
 - (void)tfn_fontSizeChanged;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (id)initWithCollectionViewLayout:(id)arg1;
 - (id)init;
 - (id)initWithImagePipeline:(id)arg1;

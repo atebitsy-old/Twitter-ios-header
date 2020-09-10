@@ -14,7 +14,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: contentViewController
     // Error parsing type: , name: stateManager
     // Error parsing type: , name: scribeContext
-    // Error parsing type: , name: networkingDelegate
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: style
     // Error parsing type: , name: additionalSearchResultsTopInset

@@ -142,6 +142,7 @@
 @property(nonatomic, readonly) NSString *text;
 @property(nonatomic, readonly) long long representedStatusID;
 @property(nonatomic, readonly) long long representedFromUserID;
+@property(nonatomic, readonly) unsigned long long representedFromUserFollowedByCurrentAccountState;
 @property(nonatomic, readonly) NSString *representedFromUserName;
 @property(nonatomic, readonly) long long fromUserID;
 @property(nonatomic, readonly) NSString *fromUserName;

@@ -13,6 +13,7 @@
 
 @interface TAVFoundationPlayerTechnologyBuilder : NSObject <TAVPlayerTechnologyBuilder>
 {
+    _Bool _disableVideoRendering;
     NSURL *_URL;
     NSArray *_cookiesArray;
     id <TAVDownloader> _downloader;
@@ -24,6 +25,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *hlsPlaylists; // @synthesize hlsPlaylists=_hlsPlaylists;
 @property(readonly, nonatomic) long long hlsPlaylistLoadingPolicy; // @synthesize hlsPlaylistLoadingPolicy=_hlsPlaylistLoadingPolicy;
+@property(nonatomic) _Bool disableVideoRendering; // @synthesize disableVideoRendering=_disableVideoRendering;
 @property(readonly, nonatomic) id <TAVPlayerOutputViewFactory> outputViewFactory; // @synthesize outputViewFactory=_outputViewFactory;
 @property(readonly, nonatomic) id <TAVDownloader> downloader; // @synthesize downloader=_downloader;
 @property(readonly, copy, nonatomic) NSArray *cookiesArray; // @synthesize cookiesArray=_cookiesArray;

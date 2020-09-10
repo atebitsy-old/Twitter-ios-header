@@ -66,6 +66,7 @@
 - (id)_filterDraftCompositions:(id)arg1 withType:(unsigned long long)arg2;
 @property(readonly, copy, nonatomic) NSOrderedSet *allEditingDraftCompositions;
 @property(readonly, copy, nonatomic) NSOrderedSet *allNormalDraftCompositions;
+- (void)_tfn_removeAllExcessAttachments:(id)arg1;
 @property(readonly, copy, nonatomic) NSOrderedSet *normalDraftCompositions;
 @property(readonly, copy, nonatomic) NSOrderedSet *draftCompositions;
 - (id)initWithAccount:(id)arg1;

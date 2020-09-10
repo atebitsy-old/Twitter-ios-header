@@ -51,8 +51,6 @@
 - (void)tfx_fleetProtectedAccountsEnabledParameterChanged;
 - (_Bool)tfn_prefersNavigationBarShadowHidden;
 - (void)viewSafeAreaInsetsDidChange;
-- (void)layoutGuidesDidChange:(long long)arg1;
-- (double)lengthOfLayoutGuide:(long long)arg1 forEnvironment:(id)arg2;
 - (void)viewDidLayoutSubviews;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
