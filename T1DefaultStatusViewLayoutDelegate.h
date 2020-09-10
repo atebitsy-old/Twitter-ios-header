@@ -36,6 +36,7 @@
 - (_Bool)shouldShowWithheldInCountryInterstitialForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
 - (_Bool)shouldShowSensitiveContentInterstitialForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
 - (_Bool)shouldShowTextBodyForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
+- (_Bool)shouldShowForwardPivotForViewModel:(id)arg1 account:(id)arg2;
 - (_Bool)shouldShowShareInlineActionForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
 - (_Bool)shouldShowInlineActionsForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
 - (double)_layoutInfoText:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 maxX:(double)arg5 avatarMaxX:(double)arg6 textX:(double)arg7 textY:(double)arg8;

@@ -10,7 +10,6 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter34SphereDetailsContentViewController : _TtC9T1Twitter46ResizableHeaderSingularContainerViewController
 {
     // Error parsing type: , name: viewModel
-    // Error parsing type: , name: configuration
     // Error parsing type: , name: urtViewController
     // Error parsing type: , name: timelineNeedsRefresh
     // Error parsing type: , name: stateManager

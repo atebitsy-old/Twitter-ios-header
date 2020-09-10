@@ -47,6 +47,7 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) NSURL *rootURL; // @synthesize rootURL=_rootURL;
 @property(readonly, nonatomic, getter=isVisible) _Bool visible; // @synthesize visible=_visible;
+- (_Bool)_t1_shouldUseUnanimatedContainerPresentation;
 - (void)_t1_performViewLayout;
 - (void)_t1_userDidTakeScreenshot;
 - (void)_t1_applicationDidEnterBackground;
@@ -61,6 +62,7 @@
 - (id)scribePage;
 - (id)scribe;
 - (void)modalSheetViewController:(id)arg1 didPanToCurrentHeight:(double)arg2 preferredHeight:(double)arg3 maximumHeight:(double)arg4 mode:(long long)arg5;
+- (void)safariViewControllerWillOpenInBrowser:(id)arg1;
 - (void)safariViewController:(id)arg1 initialLoadDidRedirectToURL:(id)arg2;
 - (void)safariViewControllerDidFinish:(id)arg1;
 - (id)safariViewController:(id)arg1 activityItemsForURL:(id)arg2 title:(id)arg3;

@@ -91,8 +91,6 @@
 - (void)willResignAsActiveAutoplayableWithManager:(id)arg1;
 - (void)didBecomeActiveAutoplayableWithManager:(id)arg1;
 - (void)_t1_updatePlayerViewFrameAndRotationForPlaybackState:(id)arg1 lastObservedPlaybackState:(id)arg2;
-- (_Bool)_t1_isEligibleForAutoplay;
-- (_Bool)_t1_isPlayerDockedElsewhere;
 - (void)_t1_displayPlaybackStateError:(id)arg1;
 - (id)_t1_playButtonImage;
 - (void)_t1_setControlBarHidden:(_Bool)arg1 animated:(_Bool)arg2;

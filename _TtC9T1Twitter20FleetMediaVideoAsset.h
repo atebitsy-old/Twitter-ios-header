@@ -15,10 +15,13 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: includeAudio
     // Error parsing type: , name: transform
     // Error parsing type: , name: gradientBackgroundColors
+    // Error parsing type: , name: compositionResult
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
 - (void)originalMediaDataWithCompletion:(CDUnknownBlockType)arg1;
 - (void)originalMediaURLWithCompletion:(CDUnknownBlockType)arg1;
 @property(nonatomic, readonly) unsigned long long hashableSource;
@@ -27,8 +30,6 @@ __attribute__((visibility("hidden")))
 @property(nonatomic, readonly) struct CGSize assetDimensions;
 @property(nonatomic, readonly) unsigned long long attachmentType;
 @property(nonatomic, readonly) long long mediaType;
-- (void)encodeWithCoder:(id)arg1;
-- (id)initWithCoder:(id)arg1;
 
 @end
 

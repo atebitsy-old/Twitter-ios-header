@@ -327,6 +327,7 @@
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) long long dockableStyle;
 @property(readonly) unsigned long long hash;
+@property(readonly, nonatomic) double preferredPinnedHeight;
 @property(readonly) Class superclass;
 
 @end

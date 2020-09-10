@@ -28,8 +28,8 @@
 - (void)writeErrorWithType:(id)arg1 functionName:(id)arg2 group:(id)arg3;
 - (void)writePerformanceEvent:(id)arg1 duration:(double)arg2 count:(long long)arg3 group:(id)arg4;
 - (void)writePerformanceEvent:(id)arg1 size:(long long)arg2 group:(id)arg3;
-- (void)writePerformanceEvent:(id)arg1 duration:(double)arg2 impressionID:(id)arg3 metadata:(id)arg4 size:(long long)arg5 group:(id)arg6;
-- (void)writePerformanceEvent:(id)arg1 duration:(double)arg2 impressionID:(id)arg3 metadata:(id)arg4 group:(id)arg5;
+- (void)writePerformanceEvent:(id)arg1 duration:(double)arg2 impressionID:(id)arg3 promotedImpressionID:(id)arg4 metadata:(id)arg5 size:(long long)arg6 group:(id)arg7;
+- (void)writePerformanceEvent:(id)arg1 duration:(double)arg2 impressionID:(id)arg3 promotedImpressionID:(id)arg4 metadata:(id)arg5 group:(id)arg6;
 - (void)writeNetworkOperationEvent:(id)arg1 group:(id)arg2;
 - (void)writeClientEvent:(id)arg1 parameters:(id)arg2 group:(id)arg3;
 - (id)parametersForEvent:(id)arg1 parameters:(id)arg2 group:(id)arg3;

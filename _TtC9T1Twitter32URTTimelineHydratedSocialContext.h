@@ -9,7 +9,6 @@
 @interface _TtC9T1Twitter32URTTimelineHydratedSocialContext : NSObject
 {
     // Error parsing type: , name: socialContext
-    // Error parsing type: , name: topic
 }
 
 - (void).cxx_destruct;

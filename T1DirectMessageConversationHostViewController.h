@@ -43,6 +43,7 @@
     // Error parsing type: , name: prefilledQuotedStatus
     // Error parsing type: , name: disableWelcomeMessage
     // Error parsing type: , name: welcomeMessageID
+    // Error parsing type: , name: $__lazy_storage_$_userBadger
 }
 
 - (void).cxx_destruct;

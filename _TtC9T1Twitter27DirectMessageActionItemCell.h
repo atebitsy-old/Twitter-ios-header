@@ -12,6 +12,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: conversation
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: summaryView
+    // Error parsing type: , name: featureSwitches
 }
 
 - (void).cxx_destruct;

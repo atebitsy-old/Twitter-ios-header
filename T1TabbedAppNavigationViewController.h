@@ -21,7 +21,7 @@
 #import <T1Twitter/TFNViewControllerEventObserver-Protocol.h>
 #import <T1Twitter/UIDropInteractionDelegate-Protocol.h>
 
-@class NSMutableDictionary, NSNumber, NSString, T1AmbientNotificationViewController, T1AppSplitViewController, T1TabNavigationController, T1TabbedAppNavigation, T1ToastWindow, TFNExpandingActionButton, TFNFloatingActionButton, TFNTabbedViewController, TFNTwitterAccount, TFSTimer, UINavigationController;
+@class NSMutableDictionary, NSNumber, NSString, T1AmbientNotificationViewController, T1AppSplitViewController, T1TabNavigationController, T1TabbedAppNavigation, T1ToastWindow, TFNExpandingActionButton, TFNFloatingActionButton, TFNTabbedViewController, TFNTwitterAccount, TFSTimer, UINavigationController, UIView;
 @protocol T1AppNavigation, T1ExtendedContentNavigationControllerDataSource, T1TabbedAppNavigationDataSource;
 
 @interface T1TabbedAppNavigationViewController : UIViewController <T1DashPresenter, T1AppSplitViewControllerDelegate, T1DockingControllerUserInteractionDelegate, T1TabBarViewControllerDelegate, TFNFloatingViewDelegate, T1DockingControllerDelegate, T1TabbedAppNavigationDelegate, TFNViewControllerEventObserver, UIDropInteractionDelegate, T1AppNavigationProvider, T1AmbientNotificationDelegate, TFNLayoutMetricsEnvironment, TFNTabbedViewControllerDataSource, TFNTabbedViewControllerDelegate>
@@ -38,8 +38,10 @@
     TFNTabbedViewController *_tabbedViewController;
     NSMutableDictionary *_transferTabViewControllers;
     TFSTimer *_unloadUnviewedTabsTimer;
+    UIView *_overlayContainerView;
     TFNFloatingActionButton *_floatingActionButton;
     T1ToastWindow *_toastWindow;
+    TFNFloatingActionButton *_voiceButton;
     struct CGRect _floatingActionButtonDesiredFrame;
     struct UIEdgeInsets _floatingActionButtonAdditionalInsets;
 }
@@ -48,8 +50,10 @@
 @property(nonatomic) struct UIEdgeInsets floatingActionButtonAdditionalInsets; // @synthesize floatingActionButtonAdditionalInsets=_floatingActionButtonAdditionalInsets;
 @property(nonatomic) _Bool floatingActionButtonIsAvoidingOverlap; // @synthesize floatingActionButtonIsAvoidingOverlap=_floatingActionButtonIsAvoidingOverlap;
 @property(nonatomic) struct CGRect floatingActionButtonDesiredFrame; // @synthesize floatingActionButtonDesiredFrame=_floatingActionButtonDesiredFrame;
+@property(retain, nonatomic) TFNFloatingActionButton *voiceButton; // @synthesize voiceButton=_voiceButton;
 @property(readonly, nonatomic) T1ToastWindow *toastWindow; // @synthesize toastWindow=_toastWindow;
 @property(retain, nonatomic) TFNFloatingActionButton *floatingActionButton; // @synthesize floatingActionButton=_floatingActionButton;
+@property(retain, nonatomic) UIView *overlayContainerView; // @synthesize overlayContainerView=_overlayContainerView;
 @property(readonly, nonatomic) TFSTimer *unloadUnviewedTabsTimer; // @synthesize unloadUnviewedTabsTimer=_unloadUnviewedTabsTimer;
 @property(nonatomic) _Bool hasPresentedBackstopPermissionsPrompts; // @synthesize hasPresentedBackstopPermissionsPrompts=_hasPresentedBackstopPermissionsPrompts;
 @property(readonly, nonatomic) NSMutableDictionary *transferTabViewControllers; // @synthesize transferTabViewControllers=_transferTabViewControllers;
@@ -61,6 +65,9 @@
 @property(readonly, nonatomic) id <T1TabbedAppNavigationDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) T1AmbientNotificationViewController *ambientNotificationViewController; // @synthesize ambientNotificationViewController=_ambientNotificationViewController;
+- (void)tfn_contentScrollViewDidScroll:(id)arg1 animate:(_Bool)arg2;
+- (void)_t1_setUpOverlayContainerView;
+- (void)_t1_setUpVoiceButton;
 - (id)tfn_floatingViewForLocation:(struct CGPoint)arg1;
 - (void)viewControllerViewWillFullyDisappear:(id)arg1;
 - (void)viewControllerViewWillFullyAppear:(id)arg1;

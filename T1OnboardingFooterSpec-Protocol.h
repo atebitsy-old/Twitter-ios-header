@@ -6,9 +6,13 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSString;
+@class NSArray, NSString;
+@protocol TFNAttributedTextViewDelegate;
 
 @protocol T1OnboardingFooterSpec <NSObject>
+@property(readonly, nonatomic) __weak id <TFNAttributedTextViewDelegate> detailTextViewDelegate;
+@property(readonly, nonatomic) NSArray *detailActiveRanges;
+@property(readonly, nonatomic) NSString *detailText;
 @property(readonly, nonatomic) NSString *skipLabel;
 @property(readonly, nonatomic) NSString *nextLabel;
 @end

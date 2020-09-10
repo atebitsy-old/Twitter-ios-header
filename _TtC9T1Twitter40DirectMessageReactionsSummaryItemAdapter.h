@@ -15,6 +15,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: undoButtonTappedBlock
     // Error parsing type: , name: avatarImageTappedBlock
     // Error parsing type: , name: imagePipeline
+    // Error parsing type: , name: userBadger
 }
 
 - (void).cxx_destruct;

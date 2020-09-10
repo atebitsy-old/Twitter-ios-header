@@ -16,13 +16,13 @@
     _Bool _useLayoutMetricsContentEdgeInsets;
     struct UIEdgeInsets _customContentEdgeInsets;
     _Bool _shouldCenterPlaceholderWhenInactive;
-    _Bool _shouldShowCancel;
     id <T1OnboardingSearchViewDelegate> _delegate;
     NSString *_text;
     NSString *_placeholder;
     NSString *_cancelButtonText;
     long long _maxLength;
     long long _returnKeyType;
+    long long _cancelButtonVisibility;
     T1OnboardingSearchField *_searchField;
     TFSTimer *_updatingTextTimer;
     UIButton *_cancelButton;
@@ -33,7 +33,7 @@
 @property(retain, nonatomic) UIButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(retain, nonatomic) TFSTimer *updatingTextTimer; // @synthesize updatingTextTimer=_updatingTextTimer;
 @property(retain, nonatomic) T1OnboardingSearchField *searchField; // @synthesize searchField=_searchField;
-@property(nonatomic) _Bool shouldShowCancel; // @synthesize shouldShowCancel=_shouldShowCancel;
+@property(nonatomic) long long cancelButtonVisibility; // @synthesize cancelButtonVisibility=_cancelButtonVisibility;
 @property(nonatomic) long long returnKeyType; // @synthesize returnKeyType=_returnKeyType;
 @property(nonatomic) long long maxLength; // @synthesize maxLength=_maxLength;
 @property(nonatomic) _Bool shouldCenterPlaceholderWhenInactive; // @synthesize shouldCenterPlaceholderWhenInactive=_shouldCenterPlaceholderWhenInactive;

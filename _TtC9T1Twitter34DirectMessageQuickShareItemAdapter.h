@@ -10,6 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter34DirectMessageQuickShareItemAdapter : TFNItemsDataViewAdapter
 {
     // Error parsing type: , name: imagePipeline
+    // Error parsing type: , name: userBadger
 }
 
 - (void).cxx_destruct;

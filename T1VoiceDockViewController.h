@@ -44,10 +44,12 @@
 - (void)_t1_updateControlCenterWithPlaybackState:(id)arg1;
 - (void)_t1_removeControlCenter;
 - (void)_t1_attachControlCenter;
+- (void)voiceDockViewDidInvalidateLayout:(id)arg1;
 - (void)voiceDockView:(id)arg1 didSeekToTimeSecs:(double)arg2;
 - (void)voiceDockViewCloseButtonWasTapped:(id)arg1;
 - (void)voiceDockViewPlayPauseButtonWasTapped:(id)arg1;
 - (void)voiceDockViewWasTapped:(id)arg1;
+@property(readonly, nonatomic) double preferredPinnedHeight;
 @property(readonly, nonatomic) long long dockableStyle;
 @property(readonly, nonatomic) NSString *playerIdentifier;
 @property(readonly, nonatomic) _Bool isDockedVideoPlaying;

@@ -23,7 +23,7 @@
 @property(retain, nonatomic) id <TFNHashflagProvider> hashflagProvider; // @synthesize hashflagProvider=_hashflagProvider;
 @property(readonly, nonatomic) TFNHashflagImageDownloader *imageDownloader; // @synthesize imageDownloader=_imageDownloader;
 @property(retain, nonatomic) TFNHashflagImageCache *cache; // @synthesize cache=_cache;
-- (id)_tfn_cachedHashflagForHashtag:(id)arg1;
+- (id)_tfn_cachedHashflagsForHashtag:(id)arg1;
 @property(readonly, nonatomic) NSArray *hashtagsWithCachedImages;
 @property(readonly, nonatomic) long long hashflagVersion;
 - (id)hashtags;

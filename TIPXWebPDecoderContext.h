@@ -14,12 +14,12 @@
 {
     struct {
         unsigned int didEncounterFailure:1;
-        unsigned int didFreeDecoderBuffer:1;
         unsigned int didLoadHeaders:1;
+        unsigned int didLoadFrame:1;
         unsigned int didComplete:1;
+        unsigned int isAnimated:1;
+        unsigned int isCachedImageFirstFrame:1;
     } _flags;
-    struct WebPDecBuffer _decoderBuffer;
-    struct WebPIDecoder *_decoder;
     NSMutableData *_dataBuffer;
     TIPImageContainer *_cachedImageContainer;
     _Bool _tip_hasAlpha;
@@ -34,14 +34,15 @@
 @property(readonly, nonatomic) _Bool tip_hasAlpha; // @synthesize tip_hasAlpha=_tip_hasAlpha;
 @property(readonly, nonatomic) struct CGSize tip_dimensions; // @synthesize tip_dimensions=_tip_dimensions;
 @property(readonly, nonatomic) NSData *tip_data; // @synthesize tip_data=_dataBuffer;
-- (id)_renderImageWithTargetDimensions:(struct CGSize)arg1 targetContentMode:(long long)arg2;
 - (void)_cleanup;
 - (long long)finalizeDecoding;
+- (id)_renderStaticImage:(long long)arg1 targetDimensions:(struct CGSize)arg2 targetContentMode:(long long)arg3;
 - (id)renderImage:(long long)arg1 targetDimensions:(struct CGSize)arg2 targetContentMode:(long long)arg3;
 - (long long)append:(id)arg1;
 - (void)dealloc;
 - (id)initWithExpectedContentLength:(unsigned long long)arg1 buffer:(id)arg2;
 @property(readonly, nonatomic) id tip_config;
+@property(readonly, nonatomic) _Bool tip_isAnimated;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
@@ -49,7 +50,6 @@
 @property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 @property(readonly, nonatomic) _Bool tip_hasGPSInfo;
-@property(readonly, nonatomic) _Bool tip_isAnimated;
 @property(readonly, nonatomic) _Bool tip_isProgressive;
 
 @end

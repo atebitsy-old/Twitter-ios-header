@@ -10,6 +10,7 @@
 {
 }
 
+- (id)inputDisabledBackgroundColor;
 - (id)generateFieldBackgroundImageForSectionBreaks:(unsigned long long)arg1 withBackgroundColor:(id)arg2 borderColor:(id)arg3 layoutMetrics:(id)arg4;
 - (double)lineSpacingForLayoutMetrics:(id)arg1;
 

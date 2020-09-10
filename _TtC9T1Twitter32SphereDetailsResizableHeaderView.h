@@ -25,7 +25,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: subscriberCountHighlightView
     // Error parsing type: , name: userHighlightView
     // Error parsing type: , name: headerTitleLabel
-    // Error parsing type: , name: configuration
     // Error parsing type: , name: account
     // Error parsing type: , name: imageViewFetchHelper
     // Error parsing type: , name: viewModel

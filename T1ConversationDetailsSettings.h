@@ -10,11 +10,19 @@
 {
 }
 
++ (double)inlineActionRightMargin;
++ (_Bool)inlineActionsVerticallyAligned;
++ (double)selectedStateShadowOffsetHeight;
++ (double)selectedStateShadowOffsetWidth;
++ (double)selectedStateStrokeWidth;
++ (double)selectedStateShadowOpacity;
++ (double)selectedStateShadowRadius;
 + (_Bool)longPressCopyForSelectedStateOnly;
-+ (_Bool)persistentReplyBarEnabled;
++ (_Bool)floatingReplyBarHiddenForSelectedInlineReplyBar;
 + (_Bool)replyInlineActionFocusesInTwoSteps;
 + (_Bool)replyInlineActionFocusesInlineReply;
 + (_Bool)assertOnDuplicateItems;
++ (_Bool)enableConnectorLinesToSelectedStateContainer;
 + (_Bool)disableRootAttachedThread;
 + (_Bool)focalIsInitiallySelected;
 + (_Bool)selectedAnimationAlwaysKeepFullTweetOnscreen;
@@ -22,6 +30,8 @@
 + (_Bool)tapToCollapseEnabled;
 + (_Bool)tweetTextSelectionEnabled;
 + (_Bool)showOverflowButtonsOnTombstones;
++ (_Bool)alwaysShowAQCursors;
++ (_Bool)alwaysShowLQCursors;
 + (_Bool)showMoreGrayThemeEnabled;
 + (_Bool)showMoreExpandedHitTestingEnabled;
 + (_Bool)showMoreCoalescingDebugLabelsEnabled;

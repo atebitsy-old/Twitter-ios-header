@@ -14,7 +14,6 @@
 {
 }
 
-- (id)tip_decodeImageWithData:(id)arg1 targetDimensions:(struct CGSize)arg2 targetContentMode:(long long)arg3 config:(id)arg4;
 - (long long)tip_finalizeDecoding:(id)arg1;
 - (id)tip_renderImage:(id)arg1 renderMode:(long long)arg2 targetDimensions:(struct CGSize)arg3 targetContentMode:(long long)arg4;
 - (long long)tip_append:(id)arg1 data:(id)arg2;

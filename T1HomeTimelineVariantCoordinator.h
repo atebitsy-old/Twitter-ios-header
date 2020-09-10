@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1SpheresUserSettingsRepositoryDelegate-Protocol.h>
 
-@class NSArray, T1HomeTimelineContainerViewController, T1SpheresUserSettingsRepository, TFNTwitterAccount;
+@class T1HomeTimelineContainerViewController, T1SpheresUserSettingsRepository, TFNTwitterAccount;
 
 @interface T1HomeTimelineVariantCoordinator : NSObject <T1SpheresUserSettingsRepositoryDelegate>
 {
@@ -52,7 +52,6 @@
 - (void)reloadTimelineViewControllerForListID:(long long)arg1;
 - (void)reloadTimelineViewControllers;
 - (void)setUserOwnedListsTimelines:(id)arg1 completion:(CDUnknownBlockType)arg2;
-@property(readonly, nonatomic) NSArray *userOwnedListsTimelines;
 - (void)userOwnedListsTimelinesWithCompletion:(CDUnknownBlockType)arg1;
 - (_Bool)_tfn_switchToTopTimePastThreshold:(double)arg1;
 - (_Bool)shouldResetToTopTimeline;

@@ -6,14 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSString, T1FlexibleLayoutView, TFNActivityIndicatorButton, UIBarButtonItem, UIButton, UIView;
+@class NSArray, NSString, T1FlexibleLayoutView, TFNActivityIndicatorButton, TFNAttributedTextView, UIBarButtonItem, UIButton, UIView;
+@protocol TFNAttributedTextViewDelegate;
 
 @interface T1OnboardingFooterViewModel : NSObject
 {
+    id <TFNAttributedTextViewDelegate> _detailTextViewDelegate;
+    NSArray *_detailActiveRanges;
+    NSString *_detailText;
     NSString *_nextLabel;
     NSString *_skipLabel;
     T1FlexibleLayoutView *_footerView;
     long long _format;
+    TFNAttributedTextView *_detailTextView;
     NSArray *_dataViewItems;
     UIBarButtonItem *_nextBarButtonItem;
     TFNActivityIndicatorButton *_nextButton;
@@ -24,6 +29,7 @@
 
 - (void).cxx_destruct;
 - (long long)private_formatForSupportedFormats:(long long)arg1 style:(long long)arg2;
+@property(readonly, nonatomic) TFNAttributedTextView *detailTextView;
 @property(readonly, nonatomic) NSArray *toolbarItems; // @synthesize toolbarItems=_toolbarItems;
 @property(readonly, nonatomic) UIBarButtonItem *skipBarButtonItem; // @synthesize skipBarButtonItem=_skipBarButtonItem;
 @property(readonly, nonatomic) UIBarButtonItem *nextBarButtonItem; // @synthesize nextBarButtonItem=_nextBarButtonItem;
@@ -33,6 +39,7 @@
 @property(readonly, nonatomic) NSArray *dataViewItems; // @synthesize dataViewItems=_dataViewItems;
 - (id)initWithStyle:(long long)arg1 supportedFormats:(long long)arg2 footerSpec:(id)arg3;
 - (id)initWithStyle:(long long)arg1 supportedFormats:(long long)arg2 nextLabel:(id)arg3 skipLabel:(id)arg4;
+- (id)initWithStyle:(long long)arg1 supportedFormats:(long long)arg2 nextLabel:(id)arg3 skipLabel:(id)arg4 detailText:(id)arg5 detailActiveRanges:(id)arg6 detailTextViewDelegate:(id)arg7;
 
 @end
 

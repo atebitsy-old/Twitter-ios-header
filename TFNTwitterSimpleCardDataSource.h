@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNTwitterCardDataSource-Protocol.h>
 
-@class NSDictionary, NSString, TFNTwitterCardData, TFSTwitterPromotedContent;
+@class NSDictionary, NSString, TFNTwitterCardData, TFNTwitterStatus, TFSTwitterPromotedContent;
 @protocol TFNTwitterCardDataSourceObject;
 
 @interface TFNTwitterSimpleCardDataSource : NSObject <TFNTwitterCardDataSource>
@@ -22,6 +22,7 @@
 @property(readonly, nonatomic) TFSTwitterPromotedContent *promotedContent; // @synthesize promotedContent;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly) unsigned long long hash;
+@property(readonly, nonatomic) TFNTwitterStatus *legacyStatus;
 - (id)entityForURL:(id)arg1;
 @property(readonly, nonatomic) NSDictionary *scribeItem;
 @property(readonly, nonatomic) __weak id <TFNTwitterCardDataSourceObject> sourceObject;

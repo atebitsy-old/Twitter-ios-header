@@ -6,12 +6,11 @@
 
 #import <T1Twitter/T1UnifiedCardMediaComponentView.h>
 
-#import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 #import <T1Twitter/TFNPreviewable-Protocol.h>
 
 @class NSString, T1CardImageView, TFNTappableHighlightView;
 
-@interface T1UnifiedCardImageComponentView : T1UnifiedCardMediaComponentView <TFNPreviewable, T1ImageViewFetchHelperDelegate>
+@interface T1UnifiedCardImageComponentView : T1UnifiedCardMediaComponentView <TFNPreviewable>
 {
     T1CardImageView *_imageView;
     TFNTappableHighlightView *_imageHighlightView;
@@ -20,10 +19,8 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNTappableHighlightView *imageHighlightView; // @synthesize imageHighlightView=_imageHighlightView;
 @property(retain, nonatomic) T1CardImageView *imageView; // @synthesize imageView=_imageView;
-- (void)t1_fetchHelper:(id)arg1 didFailToLoadImageWithError:(id)arg2;
 - (void)_t1_setupHighlightView:(id)arg1 withAccessibilityIdentifier:(id)arg2;
 - (void)setImagePipeline:(id)arg1;
-- (void)_t1_setupFailurePlaceholder;
 - (void)_t1_setupImageView;
 - (void)_t1_didLongPressImage:(id)arg1;
 - (void)_t1_didTapImage:(id)arg1;

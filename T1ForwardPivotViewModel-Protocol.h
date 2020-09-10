@@ -9,6 +9,7 @@
 @class NSString, NSURL, UIColor, UIFont, UIImage;
 
 @protocol T1ForwardPivotViewModel <NSObject>
+@property(readonly, nonatomic) NSString *accessibilityString;
 @property(readonly, nonatomic) struct CGSize preferredIconImageSize;
 @property(readonly, nonatomic) struct CGSize preferredChevronImageSize;
 @property(readonly, nonatomic) _Bool hasImage;

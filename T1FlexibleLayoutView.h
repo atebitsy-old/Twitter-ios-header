@@ -8,10 +8,11 @@
 
 #import <T1Twitter/TFNLayoutMetricsSizing-Protocol.h>
 
-@class NSArray, NSMutableArray, NSString;
+@class NSArray, NSMutableArray, NSString, T1FlexibleLayout;
 
 @interface T1FlexibleLayoutView : UIView <TFNLayoutMetricsSizing>
 {
+    T1FlexibleLayout *_layoutHelper;
     _Bool _ignoreTopOriginWhenSizing;
     _Bool _ignoreLeftOriginWhenSizing;
     CDUnknownBlockType _contentEdgeInsetsCalculator;
@@ -19,14 +20,6 @@
     NSMutableArray *_flexibleLayoutItems;
 }
 
-+ (CDUnknownBlockType)matchPreviousLayoutFrameCalculator;
-+ (CDUnknownBlockType)topRightLayoutFrameCalculator;
-+ (CDUnknownBlockType)flowLayoutFrameCalculator;
-+ (CDUnknownBlockType)verticallyCenteredHorizontalLayoutFrameCalculator;
-+ (CDUnknownBlockType)horizontallyCenteredVerticalLayoutFrameCalculator;
-+ (CDUnknownBlockType)fullWidthVerticalLayoutFrameCalculator;
-+ (CDUnknownBlockType)topAlignedHorizontalLayoutFrameCalculator;
-+ (CDUnknownBlockType)leftAlignedVerticalLayoutFrameCalculator;
 + (CDUnknownBlockType)performWithoutAnimationFrameAnimator;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *flexibleLayoutItems; // @synthesize flexibleLayoutItems=_flexibleLayoutItems;
@@ -34,7 +27,6 @@
 @property(copy, nonatomic) CDUnknownBlockType contentEdgeInsetsCalculator; // @synthesize contentEdgeInsetsCalculator=_contentEdgeInsetsCalculator;
 @property(nonatomic) _Bool ignoreLeftOriginWhenSizing; // @synthesize ignoreLeftOriginWhenSizing=_ignoreLeftOriginWhenSizing;
 @property(nonatomic) _Bool ignoreTopOriginWhenSizing; // @synthesize ignoreTopOriginWhenSizing=_ignoreTopOriginWhenSizing;
-- (struct UIEdgeInsets)contentEdgeInsetsForLayoutMetrics:(id)arg1;
 - (struct CGRect)_t1_calculateContentBoundsForSize:(struct CGSize)arg1 layoutMetrics:(id)arg2 layoutSubviews:(_Bool)arg3;
 - (id)calculatedLayoutMetrics;
 - (struct CGSize)intrinsicContentSize;
@@ -42,6 +34,7 @@
 - (struct CGSize)sizeWithLayoutMetrics:(id)arg1;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)layoutSubviews;
+- (struct UIEdgeInsets)contentEdgeInsetsForLayoutMetrics:(id)arg1;
 @property(retain, nonatomic) NSArray *arrangedSubviewItems;
 - (void)removeArrangedSubviewItem:(id)arg1;
 - (void)addArrangedSubviewItem:(id)arg1;

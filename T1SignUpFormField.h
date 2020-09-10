@@ -28,7 +28,9 @@
 + (id)placeholderItemsWithValue:(id)arg1 title:(id)arg2;
 + (id)usernameFieldWithInfo:(id)arg1 userInput:(id)arg2 emphasized:(_Bool)arg3 delegate:(id)arg4;
 + (id)usernameFieldWithInfo:(id)arg1 userInput:(id)arg2 emphasized:(_Bool)arg3;
-+ (id)passwordFieldWithInfo:(id)arg1 inlinePasswordStrength:(_Bool)arg2 formFieldDependencies:(id)arg3 emphasized:(_Bool)arg4;
++ (CDUnknownBlockType)confirmationPasswordValidationBlockWithFormFieldToMatch:(id)arg1 mismatchMessage:(id)arg2;
++ (CDUnknownBlockType)accountPasswordValidationBlockWithUserIdentifiers:(id)arg1 inlinePasswordStrength:(_Bool)arg2;
++ (id)passwordFieldWithHintText:(id)arg1 validationBlock:(CDUnknownBlockType)arg2;
 + (id)emailFieldWithPreviousValue:(id)arg1 title:(id)arg2 userInput:(id)arg3 emphasized:(_Bool)arg4;
 + (id)signUpFormFieldWithTitle:(id)arg1 hintText:(id)arg2 userInput:(id)arg3 scribeComponent:(id)arg4;
 - (void).cxx_destruct;

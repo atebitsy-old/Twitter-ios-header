@@ -4,12 +4,12 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <TwitterAppearance/TAETitleView.h>
+#import <TFNUI/TFNTitleView.h>
 
 @class UITapGestureRecognizer;
 @protocol T1PhotoGalleryTitleViewDelegate;
 
-@interface T1PhotoGalleryTitleView : TAETitleView
+@interface T1PhotoGalleryTitleView : TFNTitleView
 {
     id <T1PhotoGalleryTitleViewDelegate> _delegate;
     UITapGestureRecognizer *_tapGestureRecognizer;

@@ -8,7 +8,7 @@
 
 @interface _TtC14TFSTwitterCore30GraphQLPinnedListIdsPutCommand : _TtC14TFSTwitterCore20GraphQLBridgeCommand
 {
-    // Error parsing type: , name: pinnedListIds
+    // Error parsing type: , name: listIds
 }
 
 - (void).cxx_destruct;

@@ -32,6 +32,7 @@
     _Bool _hasSentDidFirstDisplay;
     NSIndexPath *_preDisplayIndexPath;
     NSString *_backgroundDynamicColorIdentifier;
+    UIColor *_backgroundDynamicColor;
     _Bool _keyboardHighlighted;
     _Bool _deselectsButtonsOnCellSelection;
     TFNReusableViewCache *_reusableViewCache;
@@ -83,6 +84,8 @@
 @property(nonatomic) unsigned long long sectionBreaks; // @synthesize sectionBreaks=_sectionBreaks;
 @property(retain, nonatomic) TFNDataViewCellLayout *cellLayout; // @synthesize cellLayout=_cellLayout;
 @property(retain, nonatomic) TFNReusableViewCache *reusableViewCache; // @synthesize reusableViewCache=_reusableViewCache;
+- (id)accessibilityValue;
+- (id)accessibilityLabel;
 - (_Bool)tableViewCellAccessibilityMagicTap;
 - (id)keyCommands;
 - (id)calculatedLayoutMetrics;

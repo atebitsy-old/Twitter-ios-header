@@ -46,6 +46,7 @@
 @property(retain, nonatomic) TFNTwitterUnifiedCard *unifiedCard; // @synthesize unifiedCard=_unifiedCard;
 - (void)setLayoutDelegate:(id)arg1;
 - (id)layoutDelegate;
+- (id)_t1_accessibilityDestinationsString:(id)arg1;
 - (const struct CGPath *)_t1_calculatedBottomBorderPathForFrame:(struct CGRect)arg1;
 - (void)_t1_updateBorderDrawingAndBackground;
 - (void)_t1_updateComponentViews;

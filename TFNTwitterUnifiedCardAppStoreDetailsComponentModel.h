@@ -41,7 +41,7 @@
 @property(readonly, copy, nonatomic) NSString *subtitle;
 @property(readonly, copy, nonatomic) NSString *title;
 @property(readonly, nonatomic) unsigned long long type;
-- (id)initWithDestination:(id)arg1 shouldRenderFullBleed:(_Bool)arg2 platformMap:(id)arg3 appMetadataConfig:(id)arg4 dominantColorConfig:(id)arg5 useAppStoreAsSubtitle:(_Bool)arg6;
+- (id)initWithDestination:(id)arg1 shouldRenderFullBleed:(_Bool)arg2 platformMap:(id)arg3 appMetadataConfig:(id)arg4 dominantColorConfig:(id)arg5 useAppStoreAsSubtitle:(_Bool)arg6 useDominantColor:(_Bool)arg7;
 - (id)initWithComponentJSON:(id)arg1 destinationDict:(id)arg2 platformMap:(id)arg3;
 - (id)withButton:(id)arg1;
 - (id)withPromotedContent:(id)arg1;

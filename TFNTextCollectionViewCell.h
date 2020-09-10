@@ -49,6 +49,8 @@
 @property(readonly, nonatomic) UILabel *detailTextLabel; // @synthesize detailTextLabel=_detailTextLabel;
 @property(nonatomic) _Bool multipleTextLines; // @synthesize multipleTextLines=_multipleTextLines;
 @property(readonly, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
+- (id)accessibilityValue;
+- (id)accessibilityLabel;
 - (_Bool)isAccessibilityElement;
 - (void)layoutSubviews;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;

@@ -23,6 +23,7 @@
 @property(readonly, nonatomic) NSNumber *twitterID; // @synthesize twitterID=_twitterID;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;
+- (void)updateTraits:(unsigned long long)arg1 audioLevel:(id)arg2;
 - (id)initWithParticipantUser:(id)arg1 twitterID:(id)arg2;
 
 @end

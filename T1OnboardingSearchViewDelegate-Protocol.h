@@ -11,6 +11,7 @@
 @protocol T1OnboardingSearchViewDelegate <NSObject>
 
 @optional
+- (void)searchViewDidCancel:(T1OnboardingSearchView *)arg1;
 - (void)searchView:(T1OnboardingSearchView *)arg1 didReturn:(NSString *)arg2;
 - (void)searchViewDidEndEditing:(T1OnboardingSearchView *)arg1;
 - (void)searchViewDidStartEditing:(T1OnboardingSearchView *)arg1;

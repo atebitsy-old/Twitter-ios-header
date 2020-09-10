@@ -12,13 +12,15 @@
 {
     _Bool _tweetResultEnabled;
     _Bool _birdwatchConsumptionEnabled;
+    _Bool _identityBadgingEnabled;
 }
 
 + (id)defaultConfiguration;
+@property(readonly, nonatomic, getter=isIdentityBadgingEnabled) _Bool identityBadgingEnabled; // @synthesize identityBadgingEnabled=_identityBadgingEnabled;
 @property(readonly, nonatomic, getter=isBirdwatchConsumptionEnabled) _Bool birdwatchConsumptionEnabled; // @synthesize birdwatchConsumptionEnabled=_birdwatchConsumptionEnabled;
 @property(readonly, nonatomic, getter=isTweetResultEnabled) _Bool tweetResultEnabled; // @synthesize tweetResultEnabled=_tweetResultEnabled;
 - (id)copyWithZone:(struct _NSZone *)arg1;
-- (id)initWithTweetResultEnabled:(_Bool)arg1 birdwatchConsumptionEnabled:(_Bool)arg2;
+- (id)initWithTweetResultEnabled:(_Bool)arg1 birdwatchConsumptionEnabled:(_Bool)arg2 identityBadgingEnabled:(_Bool)arg3;
 
 @end
 

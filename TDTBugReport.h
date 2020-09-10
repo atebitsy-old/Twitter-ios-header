@@ -9,11 +9,13 @@
 #import <TwitterDiagnosticTools/NSCopying-Protocol.h>
 
 @class NSArray, NSString;
+@protocol OS_dispatch_group;
 
 @interface TDTBugReport : NSObject <NSCopying>
 {
     _Bool _shouldReportOffendingAreaSection;
     _Bool _shouldReportReproSection;
+    _Bool _anyAttachmentUploadFailure;
     NSArray *_toRecipients;
     NSArray *_ccRecipients;
     NSArray *_bccRecipients;
@@ -30,11 +32,16 @@
     NSString *_shortVersion;
     NSArray *_bugReportAttachments;
     long long _source;
+    long long _destination;
+    NSObject<OS_dispatch_group> *_attachmentsUploadDispatchGroup;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSObject<OS_dispatch_group> *attachmentsUploadDispatchGroup; // @synthesize attachmentsUploadDispatchGroup=_attachmentsUploadDispatchGroup;
+@property(readonly, nonatomic) long long destination; // @synthesize destination=_destination;
 @property(readonly, nonatomic) long long source; // @synthesize source=_source;
 @property(copy, nonatomic) NSArray *bugReportAttachments; // @synthesize bugReportAttachments=_bugReportAttachments;
+@property _Bool anyAttachmentUploadFailure; // @synthesize anyAttachmentUploadFailure=_anyAttachmentUploadFailure;
 @property(copy, nonatomic) NSString *shortVersion; // @synthesize shortVersion=_shortVersion;
 @property(copy, nonatomic) NSArray *detailEntries; // @synthesize detailEntries=_detailEntries;
 @property(copy, nonatomic) NSString *buildInfo; // @synthesize buildInfo=_buildInfo;
@@ -55,6 +62,9 @@
 - (id)copyWithZone:(struct _NSZone *)arg1;
 @property(readonly, copy, nonatomic) NSString *details;
 - (void)appendDetails:(id)arg1;
+@property(readonly, nonatomic) _Bool uploadedAllAttachments;
+- (_Bool)canSend;
+- (void)internalSetDestination:(long long)arg1;
 - (void)internalSetSource:(long long)arg1;
 - (id)initWithSource:(long long)arg1;
 - (id)init;

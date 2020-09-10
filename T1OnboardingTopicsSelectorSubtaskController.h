@@ -17,6 +17,8 @@
     NSMutableDictionary *_topicsByIDMap;
     TFSObjectCache *_topicIDsByCategoryCache;
     TFSObjectCache *_topicIDsBySearchTextCache;
+    long long _searchRequestedIndex;
+    long long _searchReturnedIndex;
     NSString *_flowToken;
     NSString *_lastScrollingCategoryScribed;
     T1OnboardingPromptDataSource *_promptDataSource;

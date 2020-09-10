@@ -35,7 +35,7 @@
     TIPImagePipeline *_fetchImagePipeline;
     id _context;
     UIView *_indeterminateProgressView;
-    UIView *_errorImageView;
+    UIView *_errorView;
     double _progressBarAppearanceDelay;
     long long _fetchLoadingSources;
     CDUnknownBlockType _customSelectionBehaviorBasedOnSelectionBehaviorBlock;
@@ -95,7 +95,7 @@
 @property(nonatomic) struct CGSize maximumVariantDimensions; // @synthesize maximumVariantDimensions=_maximumVariantDimensions;
 @property(nonatomic) _Bool shouldSkipRenderedCacheStore; // @synthesize shouldSkipRenderedCacheStore=_shouldSkipRenderedCacheStore;
 @property(nonatomic) double progressBarAppearanceDelay; // @synthesize progressBarAppearanceDelay=_progressBarAppearanceDelay;
-@property(retain, nonatomic) UIView *errorImageView; // @synthesize errorImageView=_errorImageView;
+@property(retain, nonatomic) UIView *errorView; // @synthesize errorView=_errorView;
 @property(retain, nonatomic) UIView *indeterminateProgressView; // @synthesize indeterminateProgressView=_indeterminateProgressView;
 @property(retain, nonatomic) id context; // @synthesize context=_context;
 @property(retain, nonatomic) TIPImagePipeline *fetchImagePipeline; // @synthesize fetchImagePipeline=_fetchImagePipeline;
@@ -130,7 +130,8 @@
 - (void)tip_fetchHelperDidStartLoading:(id)arg1;
 - (id)imageVariantForSelectionBehavior:(CDStruct_c8a718ae)arg1 ignoringMaximumDimensions:(_Bool)arg2;
 - (id)imageVariantForSelectionBehavior:(CDStruct_c8a718ae)arg1;
-- (_Bool)attemptToSetImageWithEntityMedia:(id)arg1;
+- (void)_setImageWithNullableURL:(id)arg1 originalDimensions:(struct CGSize)arg2;
+- (void)setImageWithEntityMedia:(id)arg1;
 - (void)setImageWithMediaInfo:(id)arg1;
 - (void)setImageWithTemplateURL:(id)arg1 originalDimensions:(struct CGSize)arg2;
 - (void)setImageWithURL:(id)arg1;

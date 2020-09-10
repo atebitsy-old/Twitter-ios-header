@@ -30,6 +30,7 @@
 - (_Bool)mediaTagsSelectionEnabled;
 - (_Bool)mediaTagsAreSummarized;
 - (_Bool)mediaTagsAreSingleLine;
+- (_Bool)shouldShowForwardPivotForViewModel:(id)arg1 account:(id)arg2;
 - (_Bool)shouldShowMediaTagsAccountUserFirst;
 - (id)primaryMediaTagsIcon;
 - (_Bool)shouldShowPointOfInterestForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
@@ -65,6 +66,7 @@
 - (struct CGSize)sizeForLayoutState:(id)arg1;
 - (double)layoutPollIndicatorView:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 contentX:(double)arg5 contentY:(double)arg6 maxWidth:(double)arg7;
 - (double)layoutTweetstormIndicator:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 contentX:(double)arg5 contentY:(double)arg6 maxWidth:(double)arg7;
+- (double)layoutForwardPivot:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 attachmentType:(unsigned long long)arg5 layoutMetrics:(id)arg6 contentX:(double)arg7 contentMaxX:(double)arg8 contentY:(double)arg9 width:(double)arg10;
 - (double)layoutConversationContextText:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 contentX:(double)arg5 contentMaxX:(double)arg6 contentY:(double)arg7;
 - (struct CGSize)layoutAttachmentAsPhotoVideoForward:(id)arg1 type:(unsigned long long)arg2 forViewModel:(id)arg3 options:(unsigned long long)arg4 account:(id)arg5 maxX:(double)arg6 contentX:(double)arg7 contentY:(double)arg8 width:(double)arg9;
 - (double)layoutMediaFirstAnatomy:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 attachmentType:(unsigned long long)arg5 layoutMetrics:(id)arg6 contentX:(double)arg7 contentMaxX:(double)arg8 contentY:(double)arg9 width:(double)arg10;

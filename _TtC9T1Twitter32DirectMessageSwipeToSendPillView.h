@@ -6,14 +6,17 @@
 
 #import <UIKit/UIView.h>
 
-@class UIButton;
+@class UIImageView;
 
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter32DirectMessageSwipeToSendPillView : UIView
 {
-    // Error parsing type: , name: swipeToSendButton
-    // Error parsing type: , name: shouldHighlightSend
+    // Error parsing type: , name: swipeToSendImageView
+    // Error parsing type: , name: didTouchSendIcon
     // Error parsing type: , name: hapticFeedbackGenerator
+    // Error parsing type: , name: $__lazy_storage_$_arrowImageView
+    // Error parsing type: , name: $__lazy_storage_$_voiceAttachImageView
+    // Error parsing type: , name: $__lazy_storage_$_arrowImageWindowView
 }
 
 - (void).cxx_destruct;
@@ -21,7 +24,9 @@ __attribute__((visibility("hidden")))
 - (void)prepareHapticFeedback:(unsigned long long)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
-@property(nonatomic, readonly) UIButton *swipeToSendButton; // @synthesize swipeToSendButton;
+@property(nonatomic) _Bool hidden;
+- (_Bool)isHidden;
+@property(nonatomic, readonly) UIImageView *swipeToSendImageView; // @synthesize swipeToSendImageView;
 
 @end
 

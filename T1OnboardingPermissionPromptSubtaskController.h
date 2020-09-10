@@ -21,6 +21,7 @@
 - (id)private_promptDataSourceForSubtask:(id)arg1 primaryAction:(CDUnknownBlockType)arg2 secondaryAction:(CDUnknownBlockType)arg3;
 - (void)private_showPrepromptWithOkAction:(CDUnknownBlockType)arg1 cancelAction:(CDUnknownBlockType)arg2;
 - (_Bool)canRestartForErrors;
+- (void)private_requestAuthorizationWithForceGrant:(_Bool)arg1 forceDecline:(_Bool)arg2;
 - (void)startWithNavigationContext:(id)arg1 navigationLink:(id)arg2;
 - (id)initWithSubtask:(id)arg1 flowToken:(id)arg2 delegate:(id)arg3 serviceType:(long long)arg4;
 

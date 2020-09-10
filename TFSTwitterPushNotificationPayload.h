@@ -24,6 +24,7 @@
     NSNumber *_statusID;
     NSString *_settingsID;
     NSString *_conversationID;
+    NSString *_topicID;
     NSURL *_URL;
     NSURL *_V2Url;
     NSString *_impressionID;
@@ -45,6 +46,7 @@
 + (id)_normalizeURI:(id)arg1;
 + (id)v2UriForPayload:(id)arg1;
 + (id)uriForPayload:(id)arg1;
++ (id)topicIDForPayload:(id)arg1;
 + (id)conversationIDForPayload:(id)arg1;
 + (id)settingsIDForPayload:(id)arg1;
 + (id)bodyForPayload:(id)arg1;
@@ -69,6 +71,7 @@
 @property(readonly, copy, nonatomic) NSString *impressionID; // @synthesize impressionID=_impressionID;
 @property(readonly, nonatomic) NSURL *V2Url; // @synthesize V2Url=_V2Url;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
+@property(readonly, copy, nonatomic) NSString *topicID; // @synthesize topicID=_topicID;
 @property(readonly, copy, nonatomic) NSString *conversationID; // @synthesize conversationID=_conversationID;
 @property(readonly, copy, nonatomic) NSString *settingsID; // @synthesize settingsID=_settingsID;
 @property(readonly, nonatomic) NSNumber *statusID; // @synthesize statusID=_statusID;

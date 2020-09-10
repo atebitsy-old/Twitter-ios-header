@@ -41,6 +41,7 @@
 - (id)initializeView;
 - (_Bool)shouldBeVisibleForViewModel:(id)arg1;
 - (void)layoutSocialContextAboveContentWithLayoutState:(id)arg1;
+- (void)accessibilityPerformTapFollowTopicAction:(id)arg1 viewModel:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

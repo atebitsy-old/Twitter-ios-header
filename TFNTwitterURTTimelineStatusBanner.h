@@ -29,7 +29,7 @@
 @property(readonly, copy, nonatomic) NSString *bannerText; // @synthesize bannerText=_bannerText;
 - (id)userReferences;
 - (_Bool)isFollowingTopic;
-- (id)associatedTopicId;
+- (id)associatedTopic;
 - (id)landingURL;
 - (long long)contextType;
 - (id)activityPage;

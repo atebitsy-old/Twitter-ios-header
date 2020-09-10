@@ -114,7 +114,7 @@
 - (void)showSuggestedUserListWithSlug:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)showListDiscoveryPageFromSource:(long long)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)showListCreationFlowFromSource:(long long)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)_t1_showListDetailForList:(id)arg1 onPage:(unsigned long long)arg2 source:(long long)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)_t1_showListDetailForList:(long long)arg1 onPage:(unsigned long long)arg2 source:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)showListWithID:(long long)arg1 onPage:(unsigned long long)arg2 source:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)startAdaptiveFlowWithWizardFlow:(id)arg1 source:(long long)arg2;
 - (void)private_unmuteConversation:(id)arg1 showAmbientNotification:(_Bool)arg2 showUndo:(_Bool)arg3 scribePage:(id)arg4 scribeSection:(id)arg5 scribeComponent:(id)arg6 scribeParameters:(id)arg7 completion:(CDUnknownBlockType)arg8;

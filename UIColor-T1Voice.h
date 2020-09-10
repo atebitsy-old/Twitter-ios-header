@@ -11,5 +11,6 @@
 + (double)_t1_luminanceValueForColorPart:(double)arg1;
 + (double)_t1_relativeLuminanceForColor:(id)arg1;
 + (_Bool)t1_canUseForegroundColor:(id)arg1 withBackgroundColor:(id)arg2;
++ (id)tui_colorWithRosettaColorValue:(long long)arg1;
 @end
 

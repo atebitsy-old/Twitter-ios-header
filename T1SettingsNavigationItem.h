@@ -11,13 +11,17 @@
 @interface T1SettingsNavigationItem : NSObject
 {
     NSString *_title;
+    NSString *_detail;
     CDUnknownBlockType _controllerFactory;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) CDUnknownBlockType controllerFactory; // @synthesize controllerFactory=_controllerFactory;
+@property(readonly, nonatomic) NSString *detail; // @synthesize detail=_detail;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
+- (id)initWithTitle:(id)arg1 detail:(id)arg2 controllerFactory:(CDUnknownBlockType)arg3;
 - (id)initWithTitle:(id)arg1 controllerFactory:(CDUnknownBlockType)arg2;
+- (id)init;
 
 @end
 

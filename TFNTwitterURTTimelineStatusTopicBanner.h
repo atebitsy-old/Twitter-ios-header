@@ -6,22 +6,20 @@
 
 #import <T1Twitter/TFNTwitterURTTimelineStatusBanner.h>
 
-@class NSString;
+@class TFSTwitterTopic;
 
 @interface TFNTwitterURTTimelineStatusTopicBanner : TFNTwitterURTTimelineStatusBanner
 {
-    _Bool _isFollowingTopic;
-    NSString *_topicId;
+    TFSTwitterTopic *_topic;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool isFollowingTopic; // @synthesize isFollowingTopic=_isFollowingTopic;
-@property(readonly, copy, nonatomic) NSString *topicId; // @synthesize topicId=_topicId;
+@property(readonly, nonatomic) TFSTwitterTopic *topic; // @synthesize topic=_topic;
 - (id)landingURL;
-- (id)associatedTopicId;
+- (id)associatedTopic;
 - (void)_tfn_handleTopicToggleUpdateNotification:(id)arg1;
 - (void)dealloc;
-- (id)initWithBannerText:(id)arg1 badgeName:(id)arg2 topicId:(id)arg3 isFollowingTopic:(_Bool)arg4;
+- (id)initWithBannerText:(id)arg1 badgeName:(id)arg2 topic:(id)arg3;
 
 @end
 

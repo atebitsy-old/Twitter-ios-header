@@ -11,6 +11,7 @@
 #import <T1Twitter/T1LoadingGapDataViewAdapterDelegate-Protocol.h>
 #import <T1Twitter/T1RelevancePromptTableRowAdapterDelegate-Protocol.h>
 #import <T1Twitter/T1TimelineMessageEntryTableRowAdapterDelegate-Protocol.h>
+#import <T1Twitter/T1URTTimelineFeedbackCoordinatorProvider-Protocol.h>
 #import <T1Twitter/T1URTTimelineTombstoneItemViewModelDelegate-Protocol.h>
 #import <T1Twitter/T1UpdateIndicatorDelegate-Protocol.h>
 #import <T1Twitter/TFNMarkAsViewedDelegate-Protocol.h>
@@ -20,10 +21,10 @@
 #import <T1Twitter/UIActionSheetDelegate-Protocol.h>
 #import <T1Twitter/UIDataSourceModelAssociation-Protocol.h>
 
-@class NSNumber, NSString, T1FleetLineHeaderViewController, T1HomeControllerPerformanceMonitor, T1HomeTimelineUIReloadMonitor, T1PromptNavigationHelper, T1ScrollDistanceLogger, T1StatusLiveEngagementManager, T1StatusTableRowAdapter, T1TimelineCoverPresenter, T1URTContentHoistTrackingHelper, T1URTContextTrackingHelper, T1UpdateIndicator, TFNExpandingButtonItem, TFNItemsSectionTransformer, TFNMarkAsViewedHelper, TFNTwitterAccount, TFNTwitterHomeTimeline, TFSTimer, TFSTwitterScribeContext, THPinToTopSubscriptionManager, TIPImagePipeline;
+@class NSNumber, NSString, T1FleetLineHeaderViewController, T1HomeControllerPerformanceMonitor, T1HomeTimelineUIReloadMonitor, T1PromptNavigationHelper, T1ScrollDistanceLogger, T1StatusLiveEngagementManager, T1StatusTableRowAdapter, T1TimelineCoverPresenter, T1URTContentHoistTrackingHelper, T1URTContextTrackingHelper, T1URTTimelineFeedbackCoordinator, T1UpdateIndicator, TFNExpandingButtonItem, TFNItemsSectionTransformer, TFNMarkAsViewedHelper, TFNTwitterAccount, TFNTwitterHomeTimeline, TFSTimer, TFSTwitterScribeContext, THPinToTopSubscriptionManager, TIPImagePipeline;
 @protocol T1URTItemVisibilityMonitor;
 
-@interface T1HomeTimelineItemsViewController : TFNItemsDataViewController <TFNMarkAsViewedDelegate, UIActionSheetDelegate, UIDataSourceModelAssociation, T1ErrorDataViewAdapterDelegate, T1TimelineMessageEntryTableRowAdapterDelegate, T1LoadingGapDataViewAdapterDelegate, T1URTTimelineTombstoneItemViewModelDelegate, TFNTimelineDismissedItemDelegate, T1UpdateIndicatorDelegate, T1FeedbackActionProvider, T1RelevancePromptTableRowAdapterDelegate, THPinToTopSubscriptionManagerDelegate, TFNTooltipDelegate>
+@interface T1HomeTimelineItemsViewController : TFNItemsDataViewController <TFNMarkAsViewedDelegate, UIActionSheetDelegate, UIDataSourceModelAssociation, T1ErrorDataViewAdapterDelegate, T1TimelineMessageEntryTableRowAdapterDelegate, T1LoadingGapDataViewAdapterDelegate, T1URTTimelineTombstoneItemViewModelDelegate, TFNTimelineDismissedItemDelegate, T1UpdateIndicatorDelegate, T1FeedbackActionProvider, T1RelevancePromptTableRowAdapterDelegate, THPinToTopSubscriptionManagerDelegate, TFNTooltipDelegate, T1URTTimelineFeedbackCoordinatorProvider>
 {
     T1ScrollDistanceLogger *_scrollDistanceLogger;
     T1StatusTableRowAdapter *_statusAdapter;
@@ -138,6 +139,7 @@
 - (void)_loadTopWithSource:(long long)arg1;
 - (void)loadTop:(id)arg1;
 - (_Bool)isLoadingTop;
+@property(readonly, nonatomic) T1URTTimelineFeedbackCoordinator *feedbackCoordinator;
 - (CDUnknownBlockType)didProvideModerateFeedbackBlockForStatus:(id)arg1;
 - (CDUnknownBlockType)didProvideShowLessOftenFeedbackForStatus:(id)arg1;
 - (id)negativeFeedbackActionsForStatus:(id)arg1;

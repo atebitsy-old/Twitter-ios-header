@@ -9,6 +9,7 @@
 @class NSDictionary, NSURL;
 
 @protocol T1WebViewLogger <NSObject>
+- (void)webViewDidPuntToApp;
 - (void)updateWebViewLoggerWithScribeParams:(NSDictionary *)arg1 currentURL:(NSURL *)arg2 rootURL:(NSURL *)arg3;
 - (void)webViewProgressValueDidChange:(double)arg1 afterMillis:(unsigned long long)arg2;
 - (void)webViewDidFailLoadingAfterMillis:(unsigned long long)arg1;

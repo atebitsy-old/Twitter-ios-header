@@ -21,7 +21,7 @@
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)type;
-- (id)initWithDestination:(id)arg1 buttons:(id)arg2 shouldRenderFullBleed:(_Bool)arg3 dominantColorConfig:(id)arg4;
+- (id)initWithDestination:(id)arg1 buttons:(id)arg2 shouldRenderFullBleed:(_Bool)arg3 dominantColorConfig:(id)arg4 useDominantColor:(_Bool)arg5;
 - (id)initWithComponentJSON:(id)arg1 buttons:(id)arg2 destinationDict:(id)arg3;
 - (id)withButton:(id)arg1;
 - (id)withPromotedContent:(id)arg1;

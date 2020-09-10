@@ -6,9 +6,9 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSDictionary, TFNTwitterAccount, TFSTwitterPushNotificationPayload;
+@class TFNTwitterAccount, TFSTwitterPushNotificationPayload, UNNotificationResponse;
 
 @protocol T1PushActionHandlerProtocol <NSObject>
-- (void)handleActionWithAccount:(TFNTwitterAccount *)arg1 withPushPayload:(TFSTwitterPushNotificationPayload *)arg2 withResponseInfo:(NSDictionary *)arg3 withCompletion:(void (^)(void))arg4;
+- (void)handleActionWithAccount:(TFNTwitterAccount *)arg1 withPushPayload:(TFSTwitterPushNotificationPayload *)arg2 withResponse:(UNNotificationResponse *)arg3 withCompletion:(void (^)(void))arg4;
 @end
 

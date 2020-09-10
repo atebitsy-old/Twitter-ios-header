@@ -6,11 +6,11 @@
 
 #import <TFNUI/NSObject-Protocol.h>
 
-@class NSArray, NSString, TFNHashflag;
+@class NSArray, NSString;
 
 @protocol TFNHashflagProvider <NSObject>
 - (NSArray *)hashtags;
 - (long long)hashflagVersion;
-- (TFNHashflag *)hashflagForHashtag:(NSString *)arg1;
+- (NSArray *)hashflagsForHashtag:(NSString *)arg1;
 @end
 

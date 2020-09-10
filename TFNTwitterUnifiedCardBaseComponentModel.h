@@ -27,7 +27,7 @@
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)withButton:(id)arg1;
-- (id)initWithDestination:(id)arg1 shouldRenderFullBleed:(_Bool)arg2;
+- (id)initWithDestination:(id)arg1 shouldRenderFullBleed:(_Bool)arg2 useDominantColor:(_Bool)arg3;
 - (id)initWithComponentJSON:(id)arg1 destinationDict:(id)arg2;
 @property(readonly, nonatomic) NSArray *axDestinations;
 - (id)allUsers;

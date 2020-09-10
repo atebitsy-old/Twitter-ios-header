@@ -8,12 +8,13 @@
 
 #import <T1Twitter/T1VoiceViewModel-Protocol.h>
 
-@class NSArray, NSString, TFNTwitterAccount, UIColor;
+@class NSArray, NSString, T1UserBadger, TFNTwitterAccount, UIColor;
 @protocol T1StatusViewModel, TFSTwitterCanonicalUser;
 
 @interface T1VoiceStatusViewModel : NSObject <T1VoiceViewModel>
 {
     id <T1StatusViewModel> _statusViewModel;
+    T1UserBadger *_userBadger;
     TFNTwitterAccount *_account;
     NSArray *_convertedAudiowaveValues;
 }
@@ -22,6 +23,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *convertedAudiowaveValues; // @synthesize convertedAudiowaveValues=_convertedAudiowaveValues;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
+@property(readonly, nonatomic) T1UserBadger *userBadger; // @synthesize userBadger=_userBadger;
 @property(retain, nonatomic) id <T1StatusViewModel> statusViewModel; // @synthesize statusViewModel=_statusViewModel;
 - (_Bool)isEqualToViewModel:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

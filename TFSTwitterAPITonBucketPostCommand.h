@@ -6,12 +6,13 @@
 
 #import <TFSTwitterAPICommand/TFSTwitterAPICommand.h>
 
-@class NSDate, NSString;
+@class NSData, NSDate, NSString;
 
 @interface TFSTwitterAPITonBucketPostCommand : TFSTwitterAPICommand
 {
     NSString *_bucket;
     NSString *_contentType;
+    NSData *_data;
     NSString *_filePath;
     NSDate *_expiresOnDate;
     CDUnknownBlockType _blobStoreUploadCompletionBlock;
@@ -21,11 +22,12 @@
 @property(copy, nonatomic) CDUnknownBlockType blobStoreUploadCompletionBlock; // @synthesize blobStoreUploadCompletionBlock=_blobStoreUploadCompletionBlock;
 @property(retain, nonatomic) NSDate *expiresOnDate; // @synthesize expiresOnDate=_expiresOnDate;
 @property(copy, nonatomic) NSString *filePath; // @synthesize filePath=_filePath;
+@property(retain, nonatomic) NSData *data; // @synthesize data=_data;
 @property(copy, nonatomic) NSString *contentType; // @synthesize contentType=_contentType;
 @property(copy, nonatomic) NSString *bucket; // @synthesize bucket=_bucket;
 - (void)APIRequest:(id)arg1 requestOperation:(id)arg2 didCompleteWithResponse:(id)arg3;
 - (id)request;
-- (id)initWithContext:(id)arg1 accountID:(id)arg2 bucket:(id)arg3 contentType:(id)arg4 filePath:(id)arg5 expiresOnDate:(id)arg6 completionBlock:(CDUnknownBlockType)arg7;
+- (id)initWithContext:(id)arg1 accountID:(id)arg2 bucket:(id)arg3 contentType:(id)arg4 data:(id)arg5 filePath:(id)arg6 expiresOnDate:(id)arg7 completionBlock:(CDUnknownBlockType)arg8;
 - (id)initWithAccountID:(id)arg1 context:(id)arg2 authContext:(id)arg3 networkTransactionMetrics:(id)arg4 source:(unsigned long long)arg5 completionBlock:(CDUnknownBlockType)arg6;
 
 @end

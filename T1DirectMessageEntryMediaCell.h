@@ -14,6 +14,7 @@
     // Error parsing type: , name: mediaDelegate
     // Error parsing type: , name: inlineMediaView
     // Error parsing type: , name: mediaPreviewContainer
+    // Error parsing type: , name: altTextBadge
     // Error parsing type: , name: mediaBubbleDimmingView
     // Error parsing type: , name: mediaBubbleView
     // Error parsing type: , name: mediaPreviewHeightConstraint

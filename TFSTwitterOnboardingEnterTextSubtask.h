@@ -6,12 +6,13 @@
 
 #import <TFSTwitterCore/TFSTwitterOnboardingSubtask.h>
 
-@class NSString, TFSTwitterOnboardingHeader, TFSTwitterOnboardingNavigationLink;
+@class NSString, TFSTwitterOnboardingHeader, TFSTwitterOnboardingNavigationLink, TFSTwitterOnboardingRichText;
 
 @interface TFSTwitterOnboardingEnterTextSubtask : TFSTwitterOnboardingSubtask
 {
     _Bool _multiline;
     TFSTwitterOnboardingHeader *_header;
+    TFSTwitterOnboardingRichText *_detailText;
     NSString *_hintText;
     NSString *_defaultText;
     NSString *_defaultSuggestionID;
@@ -34,6 +35,7 @@
 @property(readonly, nonatomic) NSString *defaultSuggestionID; // @synthesize defaultSuggestionID=_defaultSuggestionID;
 @property(readonly, nonatomic) NSString *defaultText; // @synthesize defaultText=_defaultText;
 @property(readonly, nonatomic) NSString *hintText; // @synthesize hintText=_hintText;
+@property(readonly, nonatomic) TFSTwitterOnboardingRichText *detailText; // @synthesize detailText=_detailText;
 @property(readonly, nonatomic) TFSTwitterOnboardingHeader *header; // @synthesize header=_header;
 - (id)initWithJSONDictionary:(id)arg1 subtaskID:(id)arg2 typeName:(id)arg3 backNavigationType:(long long)arg4 backNavigationLink:(id)arg5 error:(id *)arg6;
 

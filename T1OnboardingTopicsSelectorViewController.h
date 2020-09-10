@@ -23,6 +23,7 @@
     _Bool _hasBecomeVisible;
     _Bool _hasBecomeFullyVisible;
     _Bool _hasChangedCategory;
+    _Bool _wasBackButtonHidden;
     _Bool _wasSearchModeActive;
     NSArray *_defaultCategories;
     NSHashTable *_topicViews;
@@ -88,7 +89,7 @@
 - (void)submit;
 - (void)abandon;
 - (void)searchViewDidStartEditing:(id)arg1;
-- (void)searchViewDidEndEditing:(id)arg1;
+- (void)searchViewDidCancel:(id)arg1;
 - (void)searchView:(id)arg1 didChangeText:(id)arg2;
 - (void)topicsSelectorViewController:(id)arg1 didDeselectTopic:(id)arg2 withRowIndex:(id)arg3 location:(long long)arg4 selectedTopicsByLocation:(id)arg5;
 - (void)topicsSelectorViewController:(id)arg1 didSelectTopic:(id)arg2 withRowIndex:(id)arg3 location:(long long)arg4 selectedTopicsByLocation:(id)arg5;
@@ -116,6 +117,7 @@
 - (void)modalSheetViewController:(id)arg1 didPanToCurrentHeight:(double)arg2 preferredHeight:(double)arg3 maximumHeight:(double)arg4 mode:(long long)arg5;
 - (double)contentBreakLength;
 - (void)update:(_Bool)arg1;
+- (_Bool)tfn_supportsNavigationBarCollapsing;
 - (long long)tfn_preferredToolbarVisibility;
 - (_Bool)tfn_logoTitleViewShown;
 - (_Bool)tfn_prefersNavigationBarShadowHidden;

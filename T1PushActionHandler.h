@@ -15,7 +15,7 @@
 }
 
 - (void)_postLocalNotificationError:(id)arg1;
-- (void)handleActionWithAccount:(id)arg1 withPushPayload:(id)arg2 withResponseInfo:(id)arg3 withCompletion:(CDUnknownBlockType)arg4;
+- (void)handleActionWithAccount:(id)arg1 withPushPayload:(id)arg2 withResponse:(id)arg3 withCompletion:(CDUnknownBlockType)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,12 +9,13 @@
 #import <T1Twitter/UICollectionViewDataSource-Protocol.h>
 #import <T1Twitter/UICollectionViewDelegateFlowLayout-Protocol.h>
 
-@class NSArray, NSString, T1DirectMessageAbstractConversationEntryViewModel, T1DirectMessageConversationDisplayState, TFNLayoutMetrics, TFNTwitterAccount;
+@class NSArray, NSString, T1DirectMessageAbstractConversationEntryViewModel, T1DirectMessageConversationDisplayState, TFNLayoutMetrics, TFNTwitterAccount, TFSTwitterScribeContext;
 @protocol TFNDirectMessageConversation;
 
 @interface T1DirectMessageConversationEntriesViewModel : NSObject <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
     CDUnknownBlockType _configureCellBlock;
+    TFSTwitterScribeContext *_scribeContext;
     TFNLayoutMetrics *_layoutMetrics;
     NSArray *_firstEntriesInGroupsIndices;
     NSArray *_entryViewModels;
@@ -34,6 +35,7 @@
 @property(readonly, copy, nonatomic) NSArray *entryViewModels; // @synthesize entryViewModels=_entryViewModels;
 @property(readonly, copy, nonatomic) NSArray *firstEntriesInGroupsIndices; // @synthesize firstEntriesInGroupsIndices=_firstEntriesInGroupsIndices;
 @property(readonly, nonatomic) TFNLayoutMetrics *layoutMetrics; // @synthesize layoutMetrics=_layoutMetrics;
+@property(retain, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(copy, nonatomic) CDUnknownBlockType configureCellBlock; // @synthesize configureCellBlock=_configureCellBlock;
 - (void)_updateLastReceivedMessage;
 - (unsigned long long)_numberOfItemsInSection:(unsigned long long)arg1;

@@ -10,7 +10,6 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter26SphereDetailsTableViewCell : TFNTableViewCell
 {
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: accountID
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: $__lazy_storage_$_placeholderBannerImage
     // Error parsing type: , name: listNameLabel

@@ -21,6 +21,7 @@
 @property(retain, nonatomic) TFSTwitterForwardPivot *forwardPivot; // @synthesize forwardPivot=_forwardPivot;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
+@property(readonly, nonatomic) NSString *accessibilityString;
 @property(readonly, nonatomic) UIImage *iconImage;
 @property(readonly, nonatomic) struct CGSize preferredIconImageSize;
 @property(readonly, nonatomic) struct CGSize preferredChevronImageSize;

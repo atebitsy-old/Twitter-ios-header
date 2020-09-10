@@ -82,6 +82,7 @@
 @property(readonly, nonatomic) long long dockedViewSwipeAction;
 @property(readonly, nonatomic) long long dockedViewTapAction;
 @property(readonly) unsigned long long hash;
+@property(readonly, nonatomic) double preferredPinnedHeight;
 @property(readonly) Class superclass;
 
 @end

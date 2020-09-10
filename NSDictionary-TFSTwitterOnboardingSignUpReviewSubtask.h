@@ -59,6 +59,7 @@
 - (id)tfs_onboardingSettingsValueForKey:(id)arg1 required:(_Bool)arg2 error:(id *)arg3;
 - (long long)tfs_onboardingCustomInterestsSourceForKey:(id)arg1;
 - (id)tfs_onboardingRichTextQuantityPairsForKey:(id)arg1 required:(_Bool)arg2 error:(id *)arg3;
+- (long long)tfs_onboardingUserIdentifierTypeForKey:(id)arg1 error:(id *)arg2;
 - (long long)tfs_onboardingPermissionPromptRepromptBehaviorForKey:(id)arg1;
 - (id)tfs_onboardingDateForKey:(id)arg1 required:(_Bool)arg2 error:(id *)arg3;
 - (id)tfs_onboardingDateForKey:(id)arg1 error:(id *)arg2;

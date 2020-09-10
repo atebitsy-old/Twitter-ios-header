@@ -8,25 +8,33 @@
 
 #import <T1Twitter/TFNAttributedTextViewDelegate-Protocol.h>
 
-@class NSString, T1AuthenticationFormTogglePasswordTextView, T1SignUpFormField, T1SignUpFormFieldInfo;
+@class NSDictionary, NSString, T1AuthenticationFormTogglePasswordTextView, T1SignUpFormField;
 
 @interface T1EnterPasswordForm : TFNForm <TFNAttributedTextViewDelegate>
 {
-    T1SignUpFormFieldInfo *_formFieldInfo;
+    _Bool _showConfirmation;
+    _Bool _skipValidation;
+    NSString *_hintText;
+    NSString *_confirmationHintText;
+    NSString *_confirmationMismatchMessage;
+    NSDictionary *_userIdentifiers;
+    long long _userIdentifierDisplayType;
+    T1SignUpFormField *_identifierField;
     T1SignUpFormField *_passwordField;
+    T1SignUpFormField *_confirmationField;
     T1AuthenticationFormTogglePasswordTextView *_togglePasswordField;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) T1AuthenticationFormTogglePasswordTextView *togglePasswordField; // @synthesize togglePasswordField=_togglePasswordField;
+@property(retain, nonatomic) T1SignUpFormField *confirmationField; // @synthesize confirmationField=_confirmationField;
 @property(retain, nonatomic) T1SignUpFormField *passwordField; // @synthesize passwordField=_passwordField;
-@property(readonly, nonatomic) T1SignUpFormFieldInfo *formFieldInfo; // @synthesize formFieldInfo=_formFieldInfo;
+@property(retain, nonatomic) T1SignUpFormField *identifierField; // @synthesize identifierField=_identifierField;
 - (void)_textFieldTextDidChange:(id)arg1;
 - (void)attributedTextView:(id)arg1 didTapRange:(id)arg2 rect:(struct CGRect)arg3;
 @property(retain, nonatomic) NSString *password;
 - (id)sections;
-- (id)init;
-- (id)initWithFormFieldInfo:(id)arg1;
+- (id)initWithUserIdentifiers:(id)arg1 userIdentifierDisplayType:(long long)arg2 hintText:(id)arg3 confirmationHintText:(id)arg4 confirmationMismatchMessage:(id)arg5 showConfirmation:(_Bool)arg6 skipValidation:(_Bool)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

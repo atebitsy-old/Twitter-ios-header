@@ -8,7 +8,7 @@
 
 #import <T1Twitter/UIAccessibilityIdentification-Protocol.h>
 
-@class NSArray, NSString, T1DirectMessageConversationDisplayState, TFNLayoutMetrics, TFNTwitterAccount, UIImage;
+@class NSArray, NSString, T1DirectMessageConversationDisplayState, TFNLayoutMetrics, TFNTwitterAccount, TFSTwitterScribeContext, UIImage;
 @protocol TFNDirectMessageConversation, TFNDirectMessageConversationEntry;
 
 @interface T1DirectMessageAbstractConversationEntryViewModel : NSObject <UIAccessibilityIdentification>
@@ -16,6 +16,7 @@
     _Bool _impressionScribed;
     NSString *_accessibilityIdentifier;
     T1DirectMessageConversationDisplayState *_displayState;
+    TFSTwitterScribeContext *_scribeContext;
     id <TFNDirectMessageConversationEntry> _entry;
     NSString *_accessibilityAnnouncement;
     NSString *_accessibilityTimestampText;
@@ -38,6 +39,7 @@
 @property(copy, nonatomic) NSString *accessibilityTimestampText; // @synthesize accessibilityTimestampText=_accessibilityTimestampText;
 @property(readonly, copy, nonatomic) NSString *accessibilityAnnouncement; // @synthesize accessibilityAnnouncement=_accessibilityAnnouncement;
 @property(readonly, nonatomic) id <TFNDirectMessageConversationEntry> entry; // @synthesize entry=_entry;
+@property(retain, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(nonatomic) _Bool impressionScribed; // @synthesize impressionScribed=_impressionScribed;
 @property(readonly, nonatomic) T1DirectMessageConversationDisplayState *displayState; // @synthesize displayState=_displayState;
 @property(copy, nonatomic) NSString *accessibilityIdentifier; // @synthesize accessibilityIdentifier=_accessibilityIdentifier;
@@ -52,7 +54,7 @@
 @property(readonly, copy) NSString *debugDescription;
 - (void)logImpressionWithScribe:(id)arg1 scribePage:(id)arg2 scribeSection:(id)arg3 scribeComponent:(id)arg4;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
-- (void)configureCell:(id)arg1;
+- (void)configureCell:(id)arg1 withScribeContext:(id)arg2;
 @property(readonly, nonatomic) id <TFNDirectMessageConversation> conversation;
 @property(readonly, nonatomic) TFNTwitterAccount *account;
 - (id)initWithEntry:(id)arg1 displayState:(id)arg2 layoutMetrics:(id)arg3;

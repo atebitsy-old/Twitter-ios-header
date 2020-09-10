@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class NSMutableArray, NSString, T1FleetsProfileHeaderAvatarView, T1ProfileAvatarImageView, TFNTwitterAccount, TFNTwitterUserDataSource, UIImage, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class NSMutableArray, NSString, T1FleetsProfileHeaderAvatarView, T1ProfileAvatarImageView, T1UserBadger, TFNTwitterAccount, TFNTwitterUserDataSource, UIImage, UILongPressGestureRecognizer, UITapGestureRecognizer;
 @protocol T1ProfileSummaryViewDelegate;
 
 @interface T1ProfileSummaryView : UIView
@@ -15,6 +15,7 @@
     UILongPressGestureRecognizer *_avatarLongPressGestureRecognizer;
     UITapGestureRecognizer *_titleTapGestureRecognizer;
     _Bool _supportsCompactLayout;
+    T1UserBadger *_userBadger;
     _Bool _shouldBounce;
     _Bool _shouldLeaveSpaceForBackButton;
     _Bool _shouldDisplayFullName;
@@ -101,6 +102,7 @@
 - (long long)_t1_fullNameLineBreakModeForPosition:(unsigned long long)arg1;
 - (void)_t1_addPositionedElementsForPosition:(unsigned long long)arg1;
 - (void)updateFontSize;
+@property(readonly, nonatomic) T1UserBadger *userBadger;
 @property(readonly, nonatomic) UIImage *currentAvatarImage;
 @property(nonatomic) _Bool shouldObscureAvatar;
 @property(nonatomic, getter=isProfileImageHidden) _Bool profileImageHidden;

@@ -10,11 +10,11 @@
 
 @interface T1TypeaheadUserTableRowAdapter : TFNItemsTableRowAdapter
 {
+    T1UserBadger *_badger;
     _Bool _showSocialContext;
     _Bool _useDarkMode;
     _Bool _useInlineReplyColorMode;
     TFNTwitterAccount *_account;
-    T1UserBadger *_badger;
     NSSet *_repliedToUserIDs;
 }
 

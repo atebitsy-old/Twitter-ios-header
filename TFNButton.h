@@ -24,6 +24,7 @@
         unsigned int layoutIsInProgress:1;
     } _flags;
     _Bool _enforcesDefaultButtonMetrics;
+    _Bool _tfs_shouldFlipImageForRightToLeftTransform;
     _Bool _shouldTriggerHapticFeedback;
     _Bool _didInhibitLayout;
     UIImpactFeedbackGenerator *_impactFeedbackGenerator;
@@ -60,6 +61,7 @@
 @property(retain, nonatomic) TFNButtonAppearanceImpl *appearanceImpl; // @synthesize appearanceImpl=_appearanceImpl;
 @property(nonatomic) _Bool shouldTriggerHapticFeedback; // @synthesize shouldTriggerHapticFeedback=_shouldTriggerHapticFeedback;
 @property(nonatomic) __weak id <TFNButtonAnimationCoordinator> animationCoordinator; // @synthesize animationCoordinator=_animationCoordinator;
+@property(nonatomic) _Bool tfs_shouldFlipImageForRightToLeftTransform; // @synthesize tfs_shouldFlipImageForRightToLeftTransform=_tfs_shouldFlipImageForRightToLeftTransform;
 @property(nonatomic) _Bool enforcesDefaultButtonMetrics; // @synthesize enforcesDefaultButtonMetrics=_enforcesDefaultButtonMetrics;
 @property(readonly, nonatomic) unsigned long long currentPresentation; // @synthesize currentPresentation=_currentPresentation;
 @property(readonly, nonatomic) unsigned long long currentVariant; // @synthesize currentVariant=_currentVariant;
@@ -91,6 +93,7 @@
 - (void)_transformSubviewsForAppearanceKey:(id)arg1;
 - (void)_positionSubviewsForStateData:(id)arg1;
 - (void)_setVisualAppearanceKey:(id)arg1;
+- (void)_tfn_applyTransformConfigToImageView;
 - (void)_applyImageForStateData:(id)arg1;
 - (void)_applyBackgroundImageForAppearanceKey:(id)arg1 stateData:(id)arg2;
 - (void)_applyTitleForStateData:(id)arg1;

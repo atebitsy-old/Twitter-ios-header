@@ -8,11 +8,12 @@
 
 #import <T1Twitter/T1AddBioViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1AddLocationViewControllerDelegate-Protocol.h>
+#import <T1Twitter/TFNAttributedTextViewDelegate-Protocol.h>
 
-@class TFSTwitterOnboardingEnterTextSubtask, TFSTwitterOnboardingEnterTextSubtaskState;
+@class NSString, TFSTwitterOnboardingEnterTextSubtask, TFSTwitterOnboardingEnterTextSubtaskState;
 @protocol T1OnboardingSubtaskControllerDelegate;
 
-@interface T1OnboardingEnterTextSubtaskController : T1OnboardingSubtaskController <T1AddBioViewControllerDelegate, T1AddLocationViewControllerDelegate>
+@interface T1OnboardingEnterTextSubtaskController : T1OnboardingSubtaskController <T1AddBioViewControllerDelegate, T1AddLocationViewControllerDelegate, TFNAttributedTextViewDelegate>
 {
     TFSTwitterOnboardingEnterTextSubtask *_subtask;
     TFSTwitterOnboardingEnterTextSubtaskState *_state;
@@ -22,12 +23,19 @@
 + (id)supportedSubtaskClasses;
 - (void).cxx_destruct;
 - (long long)private_keyboardTypeFor:(long long)arg1;
+- (void)attributedTextView:(id)arg1 didTapRange:(id)arg2 rect:(struct CGRect)arg3;
 - (void)addLocationViewControllerDidTapSkip:(id)arg1;
 - (void)addLocationViewController:(id)arg1 didTapNextWithLocation:(id)arg2 placeID:(id)arg3;
 - (void)addBioViewControllerDidTapSkip:(id)arg1;
 - (void)addBioViewController:(id)arg1 didTapNextWithText:(id)arg2;
 - (void)startWithNavigationContext:(id)arg1 navigationLink:(id)arg2;
 - (id)initWithSubtask:(id)arg1 flowToken:(id)arg2 delegate:(id)arg3;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

@@ -6,6 +6,10 @@
 
 #import <TwitterAppearance/NSObject-Protocol.h>
 
+@class UIFont;
+
 @protocol TFNUIFontGroup <NSObject>
+@property(readonly, nonatomic) UIFont *navSubtitleFont;
+@property(readonly, nonatomic) UIFont *navTitleFont;
 @end
 

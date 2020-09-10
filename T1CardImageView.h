@@ -6,17 +6,31 @@
 
 #import <UIKit/UIImageView.h>
 
-@class UIColor;
+#import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 
-@interface T1CardImageView : UIImageView
+@class NSString, UIColor;
+
+@interface T1CardImageView : UIImageView <T1ImageViewFetchHelperDelegate>
 {
     UIColor *_dominantBackgroundColor;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *dominantBackgroundColor; // @synthesize dominantBackgroundColor=_dominantBackgroundColor;
+- (void)t1_fetchHelper:(id)arg1 didFailToLoadImageWithError:(id)arg2;
+- (id)_t1_templateImageNamed:(id)arg1 fillColor:(id)arg2;
+- (id)_t1_missingImage;
+- (id)_t1_loadFailureImage;
+- (void)cleanup;
+- (void)setImageWithMediaEntity:(id)arg1 imagePipeline:(id)arg2;
 - (void)setBackgroundColor:(id)arg1;
 - (id)init;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

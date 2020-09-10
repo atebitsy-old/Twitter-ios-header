@@ -33,6 +33,7 @@
 @property(nonatomic) __weak id <T1StatusViewEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (void)_t1_updateAccessibility;
 - (id)accessibilityElements;
+- (void)endComposingInlineReply;
 - (void)beginComposingInlineReply;
 @property(readonly, nonatomic) __weak id <T1CardViewDelegate> cardViewDelegate;
 @property(retain, nonatomic) TFNReusableViewCache *reusableViewCache;

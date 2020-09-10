@@ -159,7 +159,7 @@
 - (void)_t1_updateReplyBadgeView;
 - (void)_t1_updateDesignatorBadge;
 - (void)_t1_updateUserBio;
-- (id)_userBadgerWithViewModel:(id)arg1;
+- (id)_userBadgeWithViewModel:(id)arg1;
 - (void)_updateUserBadge;
 - (void)_updateBackgroundColor;
 - (void)_t1_updateCaretAccessibilityPosition;

@@ -16,6 +16,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: componentRegistry
     // Error parsing type: , name: cardViewLayoutDelegate
+    // Error parsing type: , name: $__lazy_storage_$_userBadger
 }
 
 - (void).cxx_destruct;

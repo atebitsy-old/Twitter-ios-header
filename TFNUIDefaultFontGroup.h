@@ -9,13 +9,15 @@
 #import <TFNUI/TFNButtonFontGroup-Protocol.h>
 #import <TFNUI/TFNUIFontGroup-Protocol.h>
 
-@class NSString;
+@class NSString, UIFont;
 
 @interface TFNUIDefaultFontGroup : NSObject <TFNUIFontGroup, TFNButtonFontGroup>
 {
 }
 
 + (id)sharedFontGroup;
+@property(readonly, nonatomic) UIFont *navSubtitleFont;
+@property(readonly, nonatomic) UIFont *navTitleFont;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

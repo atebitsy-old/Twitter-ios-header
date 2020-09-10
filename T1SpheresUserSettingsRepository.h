@@ -22,7 +22,6 @@
 - (void)didRemoveAccount:(id)arg1;
 - (_Bool)isLatestRankingModeActiveForListID:(long long)arg1 memberCount:(long long)arg2;
 - (void)setIsLatestRankingModeActive:(_Bool)arg1 forListID:(long long)arg2 andPersistData:(_Bool)arg3;
-- (id)unarchiveSphereViewModels;
 - (void)unarchiveSphereViewModelsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)archiveSphereViewModels:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithAccount:(id)arg1;

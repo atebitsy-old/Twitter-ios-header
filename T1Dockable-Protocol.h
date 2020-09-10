@@ -17,6 +17,7 @@
 @property(readonly, nonatomic) NSString *playerIdentifier;
 @property(readonly, nonatomic) _Bool isDockedVideoPaused;
 @property(readonly, nonatomic) _Bool isDockedVideoPlaying;
+@property(readonly, nonatomic) double preferredPinnedHeight;
 @property(readonly, nonatomic) id <TFNTwitterCardDataSource> cardDataSource;
 @property(readonly, nonatomic) long long dockableStyle;
 @property(readonly, nonatomic) long long dockedViewTapAction;

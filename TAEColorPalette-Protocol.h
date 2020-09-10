@@ -132,6 +132,7 @@
 @property(readonly, nonatomic) UIColor *twitterColorComposePollCloseBackground;
 @property(readonly, nonatomic) UIColor *twitterColorComposeOverflowCharacterBackground;
 @property(readonly, nonatomic) UIColor *twitterColorComposeGalleryCheckmark;
+@property(readonly, nonatomic) UIColor *twitterColorUIPickerSelectedText;
 @property(readonly, nonatomic) UIColor *twitterColorUIPickerBackground;
 @property(readonly, nonatomic) UIColor *twitterColorUnpickableValueBackground;
 @property(readonly, nonatomic) UIColor *twitterColorUnpickableValueText;

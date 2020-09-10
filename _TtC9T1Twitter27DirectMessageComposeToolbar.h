@@ -19,6 +19,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: foundMediaAttachButton
     // Error parsing type: , name: quickReplyRecallButton
     // Error parsing type: , name: sendButton
+    // Error parsing type: , name: audioView
+    // Error parsing type: , name: audioViewTrailingConstraint
     // Error parsing type: , name: recordingState
     // Error parsing type: , name: mediaAttachButtonLongPressRecognizer
     // Error parsing type: , name: audioRecordLongPressRecognizer

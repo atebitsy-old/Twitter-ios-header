@@ -67,6 +67,7 @@
 @property(readonly, nonatomic) _Bool isSkipTalonURLVerificationEnabled;
 @property(readonly, nonatomic) _Bool isAdImpressionScrollToTopHandlerEnabled;
 @property(readonly, nonatomic) double unifiedCardsSafariVCPresentationAnimationDuration;
+@property(readonly, nonatomic) _Bool disableProactiveLoadAsDefaultSafariPresentationStyle;
 @property(readonly, nonatomic) unsigned long long unifiedCardsSafariVCPresentationStyle;
 - (double)_t1_webViewDwellIntervalForKey:(id)arg1 withFallback:(double)arg2;
 @property(readonly, nonatomic) double webViewDwellLongInterval;

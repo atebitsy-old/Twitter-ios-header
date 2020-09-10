@@ -9,6 +9,7 @@
 @class T1VoiceDockView;
 
 @protocol T1VoiceDockViewDelegate <NSObject>
+- (void)voiceDockViewDidInvalidateLayout:(T1VoiceDockView *)arg1;
 - (void)voiceDockView:(T1VoiceDockView *)arg1 didSeekToTimeSecs:(double)arg2;
 - (void)voiceDockViewCloseButtonWasTapped:(T1VoiceDockView *)arg1;
 - (void)voiceDockViewPlayPauseButtonWasTapped:(T1VoiceDockView *)arg1;

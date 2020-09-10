@@ -6,15 +6,18 @@
 
 #import <T1Twitter/T1VoicePlaybackView.h>
 
-@class NSArray, NSLayoutConstraint, NSTimer, T1AmbientNotificationContainer, T1AvatarImageView, T1VoiceDockViewModel, TAVPlaybackState, TFNBarProgressView, TFNPaddedButton, TFNSolidColorView, UIButton, UIImage, UILabel, UIPanGestureRecognizer, UIStackView, UIView;
+@class NSArray, NSLayoutConstraint, NSTimer, T1AmbientNotificationContainer, T1AvatarImageView, T1VoiceDockViewModel, TAVPlaybackState, TFNBarProgressView, TFNPaddedButton, TFNSolidColorView, UIAccessibilityCustomAction, UIButton, UIImage, UILabel, UIPanGestureRecognizer, UIStackView, UIView;
 @protocol T1VoiceDockViewDelegate;
 
 @interface T1VoiceDockView : T1VoicePlaybackView
 {
+    _Bool _gestureIsReadingAsExpansion;
+    unsigned long long _displayState;
     id <T1VoiceDockViewDelegate> _delegate;
     T1VoiceDockViewModel *_viewModel;
     TFNSolidColorView *_animationWrapper;
     NSArray *_animationConstraints;
+    NSLayoutConstraint *_backgroundHeightConstraint;
     TFNBarProgressView *_progressView;
     TAVPlaybackState *_lastKnownPlaybackState;
     TFNPaddedButton *_progressThumbView;
@@ -29,15 +32,26 @@
     UILabel *_titleLabel;
     UILabel *_subtitleLabel;
     UIView *_topDivider;
+    UIView *_controlSectionDivider;
     UIView *_bottomDivider;
     T1AmbientNotificationContainer *_playbackErrorNotificationContainer;
+    double _gestureStartingOffset;
+    double _gestureCurrentOffset;
+    UIAccessibilityCustomAction *_playPauseAccessibilityAction;
+    UIAccessibilityCustomAction *_toggleExpandedAccessibilityAction;
     struct CGPoint _progressThumbOriginalPosition;
 }
 
 + (id)new;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIAccessibilityCustomAction *toggleExpandedAccessibilityAction; // @synthesize toggleExpandedAccessibilityAction=_toggleExpandedAccessibilityAction;
+@property(retain, nonatomic) UIAccessibilityCustomAction *playPauseAccessibilityAction; // @synthesize playPauseAccessibilityAction=_playPauseAccessibilityAction;
+@property(nonatomic) double gestureCurrentOffset; // @synthesize gestureCurrentOffset=_gestureCurrentOffset;
+@property(nonatomic) double gestureStartingOffset; // @synthesize gestureStartingOffset=_gestureStartingOffset;
+@property(nonatomic) _Bool gestureIsReadingAsExpansion; // @synthesize gestureIsReadingAsExpansion=_gestureIsReadingAsExpansion;
 @property(retain, nonatomic) T1AmbientNotificationContainer *playbackErrorNotificationContainer; // @synthesize playbackErrorNotificationContainer=_playbackErrorNotificationContainer;
 @property(retain, nonatomic) UIView *bottomDivider; // @synthesize bottomDivider=_bottomDivider;
+@property(retain, nonatomic) UIView *controlSectionDivider; // @synthesize controlSectionDivider=_controlSectionDivider;
 @property(retain, nonatomic) UIView *topDivider; // @synthesize topDivider=_topDivider;
 @property(retain, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
@@ -53,22 +67,41 @@
 @property(retain, nonatomic) TFNPaddedButton *progressThumbView; // @synthesize progressThumbView=_progressThumbView;
 @property(retain, nonatomic) TAVPlaybackState *lastKnownPlaybackState; // @synthesize lastKnownPlaybackState=_lastKnownPlaybackState;
 @property(retain, nonatomic) TFNBarProgressView *progressView; // @synthesize progressView=_progressView;
+@property(retain, nonatomic) NSLayoutConstraint *backgroundHeightConstraint; // @synthesize backgroundHeightConstraint=_backgroundHeightConstraint;
 @property(retain, nonatomic) NSArray *animationConstraints; // @synthesize animationConstraints=_animationConstraints;
 @property(retain, nonatomic) TFNSolidColorView *animationWrapper; // @synthesize animationWrapper=_animationWrapper;
 @property(retain, nonatomic) T1VoiceDockViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <T1VoiceDockViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (_Bool)accessibilityActivate;
+- (void)accessibilityElementDidLoseFocus;
+- (void)_t1_updateAccessibilityWithExpandedState:(_Bool)arg1;
+- (void)_t1_updateAccessibilityWithProgress:(double)arg1;
+- (void)_t1_updateAccessibilityIsPlaying:(_Bool)arg1;
+- (void)_t1_initAccessibility;
 - (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 - (void)_t1_hidePlaybackErrorIfNeeded;
 - (void)_t1_showPlaybackError:(id)arg1;
 @property(nonatomic) double progress;
+- (void)_t1_animateToExpandedDisplay:(_Bool)arg1 duration:(double)arg2;
+- (void)_t1_animateExpansionWithVelocity:(double)arg1;
 - (void)_t1_replaceAnimatingConstraintsWithConstraints:(id)arg1;
 - (void)animateDismissal:(CDUnknownBlockType)arg1;
 - (void)animateDocking:(CDUnknownBlockType)arg1;
+- (_Bool)_t1_isExpanded;
+- (double)_t1_gestureBasedHeightOffset;
+- (double)_t1_instrinsicHeightForDisplayState:(unsigned long long)arg1;
+- (struct CGSize)intrinsicContentSize;
+- (void)invalidateIntrinsicContentSize;
+@property(nonatomic) unsigned long long displayState; // @synthesize displayState=_displayState;
 - (_Bool)_t1_isScrubbing;
 - (void)_t1_hideScrubbingAfterDelay:(double)arg1;
 - (void)_t1_setScrubbingVisible:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)_handlePanEvent:(id)arg1;
-- (void)_t1_handleTapEvent:(id)arg1;
+- (void)_t1_toggleExpanded;
+- (void)_t1_reportGenericTap;
+- (void)_t1_handleDockViewTap;
+- (void)_t1_handlePlayPauseButton;
+- (void)_t1_handleCloseButton;
 @property(readonly, nonatomic) UIImage *avatarImage;
 - (void)dealloc;
 - (id)initWithImagePipeline:(id)arg1;

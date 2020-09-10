@@ -25,6 +25,7 @@
     TFNTwitterAccount *_account;
 }
 
++ (void)uploadLogsWithData:(id)arg1 filePath:(id)arg2 contentType:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) unsigned long long uploadSize; // @synthesize uploadSize=_uploadSize;

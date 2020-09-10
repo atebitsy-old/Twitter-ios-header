@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNDirectMessageCardAttachment-Protocol.h>
 
-@class NSDictionary, NSString, TFNTwitterCardData, TFSTwitterEntityURL, TFSTwitterPromotedContent;
+@class NSDictionary, NSString, TFNTwitterCardData, TFNTwitterStatus, TFSTwitterEntityURL, TFSTwitterPromotedContent;
 @protocol TFNDirectMessageEntry, TFNTwitterCardDataSourceObject><TFNDirectMessageEntry;
 
 @interface TFNDirectMessageCardAttachment : TFNDirectMessageAttachment <TFNDirectMessageCardAttachment>
@@ -28,6 +28,7 @@
 @property(readonly, nonatomic) NSDictionary *scribeItem;
 @property(readonly, copy, nonatomic) NSString *scribeItemImpressionID;
 @property(readonly, nonatomic) id <TFNTwitterCardDataSourceObject><TFNDirectMessageEntry> sourceObject;
+@property(readonly, nonatomic) TFNTwitterStatus *legacyStatus;
 @property(readonly, nonatomic) NSDictionary *cardEvent;
 - (void)setParameterDataForRequestDictionary:(id)arg1;
 - (_Bool)shouldStripEntityFromMessageText:(id)arg1;

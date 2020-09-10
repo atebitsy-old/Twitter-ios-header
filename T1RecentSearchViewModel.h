@@ -6,17 +6,20 @@
 
 #import <objc/NSObject.h>
 
+@class T1UserBadger;
 @protocol TFSTwitterCanonicalUser;
 
 @interface T1RecentSearchViewModel : NSObject
 {
     id <TFSTwitterCanonicalUser> _user;
+    T1UserBadger *_userBadger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) T1UserBadger *userBadger; // @synthesize userBadger=_userBadger;
 @property(readonly, nonatomic) id <TFSTwitterCanonicalUser> user; // @synthesize user=_user;
 - (id)init;
-- (id)initWithUser:(id)arg1;
+- (id)initWithUser:(id)arg1 userBadger:(id)arg2;
 
 @end
 

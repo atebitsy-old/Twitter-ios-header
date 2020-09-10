@@ -23,6 +23,7 @@
     NSNumber *_wclBrowserOpenTimestamp;
     NSNumber *_wclLoadStartTimestamp;
     NSNumber *_wclLastReceivedLoadFinishedTimestamp;
+    NSNumber *_wclPuntToBrowserAppTimestamp;
     _Bool _isDwellOnViewAppearanceEnabled;
     _Bool _isTimestampBasedDwellEnabled;
     _Bool _isStopDwellOnBackgroundEnabled;
@@ -64,6 +65,7 @@
 @property(retain, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
 @property(readonly, nonatomic) __weak TFNTwitterAccount *account; // @synthesize account=_account;
 - (void)_t1_wcl_viewDidAppear;
+- (void)_t1_wcl_puntToBrowserApp;
 - (void)_t1_wcl_finalizeLoadIfNecessary;
 - (void)_t1_wcl_loadFinishedReceived;
 - (void)_t1_wcl_advanceToFunnelStage:(long long)arg1;
@@ -85,6 +87,7 @@
 - (void)logAction:(id)arg1 withMillis:(unsigned long long)arg2;
 - (void)viewControllerViewDidAppear:(id)arg1;
 - (void)setState:(long long)arg1 withMillis:(unsigned long long)arg2;
+- (void)webViewDidPuntToApp;
 - (void)webViewRedirectsHaveEnded;
 - (void)webViewProgressValueDidChange:(double)arg1 afterMillis:(unsigned long long)arg2;
 - (void)webViewDidFailLoadingAfterMillis:(unsigned long long)arg1;

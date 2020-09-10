@@ -17,6 +17,7 @@
     id <TIPImageEncoder> _tip_encoder;
 }
 
++ (_Bool)hasAnimationDecoding;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <TIPImageEncoder> tip_encoder; // @synthesize tip_encoder=_tip_encoder;
 @property(readonly, nonatomic) id <TIPImageDecoder> tip_decoder; // @synthesize tip_decoder=_tip_decoder;

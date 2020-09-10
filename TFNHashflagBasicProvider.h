@@ -20,9 +20,9 @@
 @property(readonly, nonatomic) long long hashflagVersion; // @synthesize hashflagVersion=_hashflagVersion;
 @property(readonly, copy, nonatomic) NSDictionary *hashflagsDictionary; // @synthesize hashflagsDictionary=_hashflagsDictionary;
 - (id)hashtags;
-- (id)hashflagForHashtag:(id)arg1;
+- (id)hashflagsForHashtag:(id)arg1;
 - (id)init;
-- (id)initWithHashflagsDictionary:(id)arg1 hashflagVersion:(long long)arg2;
+- (id)initWithHashflags:(id)arg1 hashflagVersion:(long long)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

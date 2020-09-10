@@ -8,8 +8,8 @@
 
 #import <T1Twitter/TFNTwitterStatusCardDataSource-Protocol.h>
 
-@class NSDictionary, NSString, TFNTwitterCardData, TFSTwitterPromotedContent;
-@protocol TFNTwitterCanonicalTimelineStatus, TFNTwitterCanonicalTimelineStatus><TFNTwitterCardDataSourceObject;
+@class NSDictionary, NSString, TFNTwitterCardData, TFNTwitterStatus, TFSTwitterPromotedContent;
+@protocol TFNTwitterCanonicalTimelineStatus><TFNTwitterCardDataSourceObject;
 
 @interface TFNTwitterStatusCardDataSource : NSObject <TFNTwitterStatusCardDataSource>
 {
@@ -18,18 +18,19 @@
     NSDictionary *_cardEvent;
     TFSTwitterPromotedContent *_promotedContent;
     NSDictionary *_scribeItem;
-    id <TFNTwitterCanonicalTimelineStatus> _status;
+    TFNTwitterStatus *_status;
     CDUnknownBlockType _buildScribeItem;
 }
 
 + (id)cardDataForStatus:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType buildScribeItem; // @synthesize buildScribeItem=_buildScribeItem;
-@property(readonly, nonatomic) id <TFNTwitterCanonicalTimelineStatus> status; // @synthesize status=_status;
+@property(readonly, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
 @property(readonly, nonatomic) TFSTwitterPromotedContent *promotedContent; // @synthesize promotedContent=_promotedContent;
 @property(readonly, nonatomic) TFNTwitterCardData *cardData; // @synthesize cardData=_cardData;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly) unsigned long long hash;
+@property(readonly, nonatomic) TFNTwitterStatus *legacyStatus;
 @property(readonly, nonatomic) id <TFNTwitterCanonicalTimelineStatus><TFNTwitterCardDataSourceObject> sourceObject;
 - (id)entityForURL:(id)arg1;
 @property(readonly, nonatomic) NSDictionary *cardEvent; // @synthesize cardEvent=_cardEvent;

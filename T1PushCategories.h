@@ -8,29 +8,22 @@
 
 #import <T1Twitter/TFNRemoteNotificationCategoryProvider-Protocol.h>
 
-@class NSSet, NSString;
+@class NSString;
 
 @interface T1PushCategories : NSObject <TFNRemoteNotificationCategoryProvider>
 {
-    NSSet *_categories;
 }
 
-- (void).cxx_destruct;
-@property(retain, nonatomic) NSSet *categories; // @synthesize categories=_categories;
-- (id)_t1_directMessageActions:(unsigned long long)arg1;
+- (id)_t1_replyAction;
+- (id)_t1_sayHiAction;
+- (id)_t1_retweetAction;
+- (id)_t1_followAction;
+- (id)_t1_favoriteAction;
+- (id)_t1_replyToDirectMessageAction;
+- (id)_t1_muteDirectMessageConversationAction;
 - (id)_t1_declineFollowRequestAction;
 - (id)_t1_acceptFollowRequestAction;
-- (id)_t1_muteDirectMessageConversationAction;
-- (id)_t1_sayHiAction;
-- (id)_t1_followAction;
-- (id)_t1_replyToDirectMessageAction;
-- (id)_t1_replyAction;
-- (id)_t1_favoriteAction;
-- (id)_t1_retweetAction;
-- (id)_t1_notificationActionWithIdentifier:(id)arg1 title:(id)arg2 activationMode:(unsigned long long)arg3 authenticationRequired:(_Bool)arg4 destructive:(_Bool)arg5 behavior:(unsigned long long)arg6;
-- (id)_t1_notificationActionWithIdentifier:(id)arg1 title:(id)arg2 activationMode:(unsigned long long)arg3 authenticationRequired:(_Bool)arg4 destructive:(_Bool)arg5;
-- (id)categoryWithIdentifier:(id)arg1;
-- (id)uiUserNotificationCategories;
+- (id)notificationCategories;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

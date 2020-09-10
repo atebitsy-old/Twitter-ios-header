@@ -6,26 +6,117 @@
 
 #import <objc/NSObject.h>
 
+#import <PeriscopeSDK/PTVBroadcastPublisherDelegate-Protocol.h>
+#import <PeriscopeSDK/PTVBroadcastWatcherDelegate-Protocol.h>
+#import <PeriscopeSDK/PTVChatControllerObserver-Protocol.h>
+#import <PeriscopeSDK/PTVGuestCallerControllerObserver-Protocol.h>
+#import <PeriscopeSDK/PTVGuestCoordinatorDelegate-Protocol.h>
 #import <PeriscopeSDK/PTVGuestRoomController-Protocol.h>
+#import <PeriscopeSDK/PTVVideoPlayerDelegate-Protocol.h>
 
-@class NSArray, NSString;
+@class NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSString, NSTimer, PTVBroadcastController, PTVGuestRoomControllerObservers;
+@protocol PTVGuestCoordinator, PTVLoggedInUserProtocol, PTVVideoPlayer;
 
-@interface PTVGuestRoomBroadcastController : NSObject <PTVGuestRoomController>
+@interface PTVGuestRoomBroadcastController : NSObject <PTVGuestCoordinatorDelegate, PTVChatControllerObserver, PTVBroadcastWatcherDelegate, PTVBroadcastPublisherDelegate, PTVGuestCallerControllerObserver, PTVVideoPlayerDelegate, PTVGuestRoomController>
 {
-    _Bool isMuted;
-    unsigned long long totalUsersCount;
-    NSArray *users;
+    unsigned long long _totalUsersCount;
+    id <PTVLoggedInUserProtocol> _loggedInUser;
+    PTVBroadcastController *_broadcastController;
+    NSObject<PTVGuestCoordinator> *_guestCoordinator;
+    id <PTVVideoPlayer> _mainPlayer;
+    NSArray *_users;
+    NSDictionary *_usersByID;
+    NSMutableDictionary *_cachedParticipantUsersByID;
+    NSMutableDictionary *_guestViewsByUserID;
+    NSMutableDictionary *_joinMessagesByUserID;
+    NSMutableArray *_usersWhoJoinedIDs;
+    NSMutableArray *_usersWhoLeftIDs;
+    PTVGuestRoomControllerObservers *_observers;
+    NSTimer *_isTalkingTimer;
+    NSTimer *_frameTimer;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSArray *users; // @synthesize users;
-@property(readonly, nonatomic) unsigned long long totalUsersCount; // @synthesize totalUsersCount;
-@property(nonatomic) _Bool isMuted; // @synthesize isMuted;
-- (id)guestViewForUser:(id)arg1;
-- (void)sendText:(id)arg1 language:(id)arg2;
-- (void)sendEmoji:(id)arg1;
+@property(retain, nonatomic) NSTimer *frameTimer; // @synthesize frameTimer=_frameTimer;
+@property(retain, nonatomic) NSTimer *isTalkingTimer; // @synthesize isTalkingTimer=_isTalkingTimer;
+@property(retain, nonatomic) PTVGuestRoomControllerObservers *observers; // @synthesize observers=_observers;
+@property(retain, nonatomic) NSMutableArray *usersWhoLeftIDs; // @synthesize usersWhoLeftIDs=_usersWhoLeftIDs;
+@property(retain, nonatomic) NSMutableArray *usersWhoJoinedIDs; // @synthesize usersWhoJoinedIDs=_usersWhoJoinedIDs;
+@property(retain, nonatomic) NSMutableDictionary *joinMessagesByUserID; // @synthesize joinMessagesByUserID=_joinMessagesByUserID;
+@property(retain, nonatomic) NSMutableDictionary *guestViewsByUserID; // @synthesize guestViewsByUserID=_guestViewsByUserID;
+@property(retain, nonatomic) NSMutableDictionary *cachedParticipantUsersByID; // @synthesize cachedParticipantUsersByID=_cachedParticipantUsersByID;
+@property(retain, nonatomic) NSDictionary *usersByID; // @synthesize usersByID=_usersByID;
+@property(retain, nonatomic) NSArray *users; // @synthesize users=_users;
+@property(retain, nonatomic) id <PTVVideoPlayer> mainPlayer; // @synthesize mainPlayer=_mainPlayer;
+@property(retain, nonatomic) NSObject<PTVGuestCoordinator> *guestCoordinator; // @synthesize guestCoordinator=_guestCoordinator;
+@property(retain, nonatomic) PTVBroadcastController *broadcastController; // @synthesize broadcastController=_broadcastController;
+@property(readonly, nonatomic) id <PTVLoggedInUserProtocol> loggedInUser; // @synthesize loggedInUser=_loggedInUser;
+@property(readonly, nonatomic) unsigned long long totalUsersCount; // @synthesize totalUsersCount=_totalUsersCount;
+- (void)viewerVideoOrAudioFeedIsConnected;
+- (void)viewerRequestToCallInWasAcceptedWithConfiguration:(id)arg1;
+- (void)broadcasterDidCompleteCountdownForGuestCallerSession:(id)arg1;
+- (void)broadcasterDidUpdateStateForGuestCallerSession:(id)arg1 fromState:(unsigned long long)arg2;
+- (void)broadcasterDidAddGuestCallerSession:(id)arg1;
+- (void)guestCallerControllerDidAddOrRemoveLoggedInUserSession;
+- (void)videoPlayerDidReachEndOfVideo;
+- (void)videoPlayerDidReceiveTimedMetadataWithDescription:(id)arg1 value:(id)arg2;
+- (void)chatController:(id)arg1 userDidLeaveChat:(id)arg2;
+- (void)chatController:(id)arg1 userDidJoinChat:(id)arg2;
+- (void)chatController:(id)arg1 didReceiveBroadcastViewersAndStats:(id)arg2;
+- (void)chatController:(id)arg1 didReceiveQueuedMessage:(id)arg2 deliveryQueueSize:(unsigned long long)arg3;
+- (void)chatControllerDidJoinChatRoom:(id)arg1;
+- (double)broadcastControllerReplayDuration:(id)arg1;
+- (double)broadcastControllerCurrentReplayTimeInterval:(id)arg1;
+- (id)broadcastControllerProgramDateTime:(id)arg1;
+- (unsigned long long)broadcastControllerNTPForNow:(id)arg1;
+- (unsigned long long)broadcastControllerNTPForCurrentFrame:(id)arg1;
+- (void)guestCoordinatorCameraStartDidComplete:(id)arg1;
+- (void)guestCoordinator:(id)arg1 updateVideoOrientationWithCameraPreferredOrientation:(long long)arg2;
+- (void)guestCoordinator:(id)arg1 updateCameraPreviewView:(id)arg2;
+- (void)guestCoordinator:(id)arg1 didUpdateGuestCallerSession:(id)arg2;
+- (void)guestCoordinatorDidDetectEndOfBroadcast:(id)arg1;
+- (void)guestCoordinator:(id)arg1 didLogEntry:(id)arg2;
+- (void)guestCoordinator:(id)arg1 didCollectPeriodicPublishingStats:(id)arg2;
+- (void)guestCoordinator:(id)arg1 didCollectPeriodicPlaybackStats:(id)arg2;
+- (void)guestCoordinator:(id)arg1 didCollectEndOfStreamStats:(id)arg2;
+- (_Bool)guestCoordinator:(id)arg1 canAddGuestWithUserID:(id)arg2;
+- (id)guestCoordinator:(id)arg1 guestViewWithUserID:(id)arg2;
+- (void)guestCoordinator:(id)arg1 removeGuestViewWithUserID:(id)arg2 shouldReshuffleGuestViews:(_Bool)arg3;
+- (void)guestCoordinator:(id)arg1 reconcileAndRemoveUserIDs:(id)arg2;
+- (void)guestCoordinator:(id)arg1 addGuestView:(id)arg2;
+- (void)_ptv_updateUsersAndNotifyWithUsers:(id)arg1 usersByID:(id)arg2;
+- (void)_ptv_recalculateUsers;
+- (void)_ptv_recalculateTraitsForUsersWithIDs:(id)arg1;
+- (void)_ptv_recalculateTraitsForUsers:(id)arg1;
+- (void)_ptv_retrieveUsersWithUsersIDs:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_ptv_playWithVideoAccess:(id)arg1;
+- (void)broadcastWatcher:(id)arg1 didFailToFetchVideoAccessWithError:(id)arg2;
+- (void)broadcastWatcher:(id)arg1 didUpdateVideoAccess:(id)arg2 previousVideoAccess:(id)arg3;
+- (void)_ptv_handleCreateBroadcastWithPublishingAccess:(id)arg1 error:(id)arg2;
+- (void)_ptv_clearPublishingAccess;
+- (id)_ptv_readPublishingAccess;
+- (void)_ptv_writePublishingAccess;
+- (void)_ptv_handleStartBroadcastWithSuccess:(_Bool)arg1 error:(id)arg2;
+- (void)_ptv_startBroadcastWithBroadcast:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_ptv_createBroadcastWithRegion:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_ptv_getSignerRegionWithCompletion:(CDUnknownBlockType)arg1;
+- (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
+- (id)watchingGuestCoordinator;
+- (id)publishingGuestCoordinator;
+- (id)guestCallerController;
+- (id)chatController;
+- (id)publisher;
+- (id)watcher;
+- (void)_ptv_generateAndPublishPixelBuffer;
+- (void)_ptv_stopSendingFrames;
+- (void)_ptv_startSendingFrames;
+- (void)_ptv_startOrStopIsTalkingTimerIfNeeded;
 - (void)reportUser:(id)arg1;
 - (void)blockUser:(id)arg1;
+- (void)sendText:(id)arg1 language:(id)arg2;
+- (void)sendEmoji:(id)arg1;
+@property(nonatomic) _Bool isMuted;
+- (id)guestViewForUser:(id)arg1;
 - (void)removeUserAsSpeaker:(id)arg1;
 - (void)acceptUserAsSpeaker:(id)arg1;
 - (_Bool)canAcceptMoreSpeakers;
@@ -36,6 +127,8 @@
 - (void)createNewRoom;
 - (void)removeGuestRoomControllerObserver:(id)arg1;
 - (void)addGuestRoomControllerObserver:(id)arg1;
+- (void)dealloc;
+- (id)initWithLoggedInUser:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

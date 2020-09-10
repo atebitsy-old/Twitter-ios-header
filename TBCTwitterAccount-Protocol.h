@@ -13,6 +13,7 @@
 @property(readonly, nonatomic) id <TFSTwitterAPICommandContext> tbc_apiCommandContext;
 @property(readonly, nonatomic) TFSTwitterAPICommandService *tbc_apiCommandService;
 @property(readonly, nonatomic) TBCPeriscopeAccount *periscopeAccount;
+@property(readonly, nonatomic) _Bool isProtectedUser;
 @property(readonly, nonatomic) _Bool isPeriscopeAuthenticationAllowed;
 @property(readonly, copy, nonatomic) NSString *accountID;
 @end

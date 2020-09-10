@@ -12,7 +12,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: touchedTopic
     // Error parsing type: , name: impressionLogger
     // Error parsing type: , name: scribeContext
-    // Error parsing type: , name: scribeImpressionCache
 }
 
 - (void).cxx_destruct;

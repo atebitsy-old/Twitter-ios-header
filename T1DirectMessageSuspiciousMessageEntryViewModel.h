@@ -27,7 +27,7 @@
 - (id)viewModelBySettingShowDetails:(_Bool)arg1;
 - (_Bool)isEqualToEntryViewModel:(id)arg1;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
-- (void)configureCell:(id)arg1;
+- (void)configureCell:(id)arg1 withScribeContext:(id)arg2;
 - (id)cellReuseIdentifier;
 @property(readonly, nonatomic) T1DirectMessageAbstractConversationEntryViewModel *renderedViewModel;
 @property(readonly, nonatomic) _Bool filtered;

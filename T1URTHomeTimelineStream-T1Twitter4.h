@@ -6,11 +6,10 @@
 
 #import <T1Twitter/T1URTHomeTimelineStream.h>
 
-#import <T1Twitter/TFNTwitterInjectableHomeTimelineStream-Protocol.h>
+#import <T1Twitter/TFNTimelineDismissedItemDelegate-Protocol.h>
 
-@interface T1URTHomeTimelineStream (T1Twitter4) <TFNTwitterInjectableHomeTimelineStream>
-- (void)addStreamObject:(id)arg1;
-- (void)attemptToInsertStreamObject:(id)arg1 belowExistingStreamObject:(id)arg2 withRelationship:(long long)arg3 animated:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
-- (id)canInsertBelowExistingStreamObject:(id)arg1;
+@interface T1URTHomeTimelineStream (T1Twitter4) <TFNTimelineDismissedItemDelegate>
+- (void)didRestoreTimelineItem:(id)arg1;
+- (void)dismissTimelineItem:(id)arg1 withFeedbackModule:(id)arg2 derivedFromAction:(id)arg3;
 @end
 

@@ -10,6 +10,7 @@
 {
 }
 
++ (void)markNotIntestedInTopicForStatusViewModel:(id)arg1 inController:(id)arg2 account:(id)arg3;
 + (void)updateFollowStateWithTopicId:(id)arg1 newFollowedValueToSet:(_Bool)arg2 account:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)init;
 

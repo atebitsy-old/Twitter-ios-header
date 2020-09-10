@@ -6,36 +6,34 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, TFNTwitterAccount, UIColor, UIFont, UIImage;
+@class NSString, TFNTwitterAccount, TFSTwitterTopic, UIColor, UIFont, UIImage;
 
 @interface T1TimelinesItemProminentSocialContextViewModel : NSObject
 {
     _Bool _socialContextUserInteractionEnabled;
     _Bool _showFollowTopicControl;
-    _Bool _isTopicBeingFollowed;
     NSString *_text;
     UIColor *_textColor;
     UIFont *_textFont;
     UIImage *_badgeImage;
     UIColor *_badgeImageBackgroundColor;
-    NSString *_topicId;
+    TFSTwitterTopic *_topic;
     TFNTwitterAccount *_account;
     NSString *_followButtonText;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSString *followButtonText; // @synthesize followButtonText=_followButtonText;
-@property(readonly, nonatomic) _Bool isTopicBeingFollowed; // @synthesize isTopicBeingFollowed=_isTopicBeingFollowed;
 @property(readonly, nonatomic) _Bool showFollowTopicControl; // @synthesize showFollowTopicControl=_showFollowTopicControl;
 @property(readonly, nonatomic) _Bool socialContextUserInteractionEnabled; // @synthesize socialContextUserInteractionEnabled=_socialContextUserInteractionEnabled;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
-@property(readonly, copy, nonatomic) NSString *topicId; // @synthesize topicId=_topicId;
+@property(readonly, nonatomic) TFSTwitterTopic *topic; // @synthesize topic=_topic;
 @property(readonly, nonatomic) UIColor *badgeImageBackgroundColor; // @synthesize badgeImageBackgroundColor=_badgeImageBackgroundColor;
 @property(readonly, nonatomic) UIImage *badgeImage; // @synthesize badgeImage=_badgeImage;
 @property(readonly, nonatomic) UIFont *textFont; // @synthesize textFont=_textFont;
 @property(readonly, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (id)initWithText:(id)arg1 textColor:(id)arg2 textFont:(id)arg3 badgeImage:(id)arg4 badgeImageBackgroundColor:(id)arg5 topicId:(id)arg6 account:(id)arg7 socialContextUserInteractionEnabled:(_Bool)arg8 showFollowTopicControl:(_Bool)arg9 isTopicBeingFollowed:(_Bool)arg10 followButtonText:(id)arg11;
+- (id)initWithText:(id)arg1 textColor:(id)arg2 textFont:(id)arg3 badgeImage:(id)arg4 badgeImageBackgroundColor:(id)arg5 topic:(id)arg6 account:(id)arg7 socialContextUserInteractionEnabled:(_Bool)arg8 showFollowTopicControl:(_Bool)arg9 followButtonText:(id)arg10;
 
 @end
 

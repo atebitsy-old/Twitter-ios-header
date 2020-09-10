@@ -10,7 +10,6 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter42SphereDetailsResizableHeaderViewController : T1ResizableHeaderViewController
 {
     // Error parsing type: , name: listUpdateDelegate
-    // Error parsing type: , name: configuration
     // Error parsing type: , name: bottomSeparatorView
     // Error parsing type: , name: mutationsManager
     // Error parsing type: , name: viewModel

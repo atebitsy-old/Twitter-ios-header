@@ -7,6 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSString, TAVPlayer, TAVPlayerViewConfiguration, TFNDirectMessagePlayable, TFNTwitterMediaAsset, TFNTwitterStatus, TFSTwitterEntityMedia, UIImage;
+@protocol TFNTwitterCardDataSourceObject;
 
 @interface T1SlideshowSlideViewModel : NSObject
 {
@@ -14,7 +15,7 @@
     _Bool _hasFinalImage;
     _Bool _showsWatchAgain;
     TFNTwitterStatus *_status;
-    id _sourceObject;
+    id <TFNTwitterCardDataSourceObject> _sourceObject;
     TFSTwitterEntityMedia *_media;
     TFNTwitterMediaAsset *_mediaAsset;
     TFNDirectMessagePlayable *_directMessagePlayable;
@@ -41,7 +42,7 @@
 @property(retain, nonatomic) TFNDirectMessagePlayable *directMessagePlayable; // @synthesize directMessagePlayable=_directMessagePlayable;
 @property(retain, nonatomic) TFNTwitterMediaAsset *mediaAsset; // @synthesize mediaAsset=_mediaAsset;
 @property(retain, nonatomic) TFSTwitterEntityMedia *media; // @synthesize media=_media;
-@property(retain, nonatomic) id sourceObject; // @synthesize sourceObject=_sourceObject;
+@property(retain, nonatomic) id <TFNTwitterCardDataSourceObject> sourceObject; // @synthesize sourceObject=_sourceObject;
 @property(retain, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
 - (id)viewModelByResettingImage;
 - (id)viewModelWithMediaPausedBeforeAppResigned:(_Bool)arg1;

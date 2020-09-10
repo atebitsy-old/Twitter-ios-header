@@ -6,14 +6,14 @@
 
 #import <T1Twitter/T1OnboardingFormViewController.h>
 
-@class NSString, T1EnterPasswordForm;
+@class NSDictionary, T1EnterPasswordForm;
 @protocol T1EnterPasswordViewControllerDelegate;
 
 @interface T1EnterPasswordViewController : T1OnboardingFormViewController
 {
     T1EnterPasswordForm *_form;
-    NSString *_username;
-    NSString *_email;
+    long long _userIdentifierDisplayType;
+    NSDictionary *_userIdentifiers;
     id <T1EnterPasswordViewControllerDelegate> _delegate;
 }
 
@@ -26,7 +26,7 @@
 - (_Bool)formFieldShouldReturn:(id)arg1 withSelectNextFieldAction:(CDUnknownBlockType)arg2 stopEditingAction:(CDUnknownBlockType)arg3;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithAccount:(id)arg1 headerSpec:(id)arg2 footerSpec:(id)arg3 fullName:(id)arg4 email:(id)arg5 username:(id)arg6 skipPasswordValidation:(_Bool)arg7;
+- (id)initWithAccount:(id)arg1 headerSpec:(id)arg2 footerSpec:(id)arg3 userIdentifiers:(id)arg4 userIdentifierDisplayType:(long long)arg5 hintText:(id)arg6 confirmationHintText:(id)arg7 confirmationMismatchMessage:(id)arg8 showConfirmation:(_Bool)arg9 skipValidation:(_Bool)arg10;
 
 @end
 

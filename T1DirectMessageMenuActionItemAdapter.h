@@ -10,13 +10,14 @@
 {
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: topCellPadding
+    // Error parsing type: , name: featureSwitches
 }
 
 - (void).cxx_destruct;
 - (id)initWithDelegate:(id)arg1;
 - (double)dataViewController:(id)arg1 tableViewHeightForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (id)dataViewController:(id)arg1 tableViewCellForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
-- (id)initWithImagePipeline:(id)arg1 delegate:(id)arg2;
+- (id)initWithImagePipeline:(id)arg1 delegate:(id)arg2 featureSwitches:(id)arg3;
 
 @end
 

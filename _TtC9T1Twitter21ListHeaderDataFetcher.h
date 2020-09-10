@@ -9,6 +9,7 @@
 @interface _TtC9T1Twitter21ListHeaderDataFetcher : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: accountID
+    // Error parsing type: , name: queryQueue
     // Error parsing type: , name: $__lazy_storage_$_service
     // Error parsing type: , name: $__lazy_storage_$_context
 }

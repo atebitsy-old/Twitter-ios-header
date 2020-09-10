@@ -11,11 +11,13 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter27FleetComposerViewController : TFNViewController <T1CameraServiceAuthorizationViewControllerDelegate>
 {
+    // Error parsing type: , name: $__lazy_storage_$_isVoiceRoomEnabled
     // Error parsing type: , name: account
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: state
     // Error parsing type: , name: $__lazy_storage_$_modes
     // Error parsing type: , name: threadScribeContext
+    // Error parsing type: , name: controlsOverlayContainer
     // Error parsing type: , name: didPostFleet
     // Error parsing type: , name: $__lazy_storage_$_modeSwitcher
     // Error parsing type: , name: containerTopConstraint

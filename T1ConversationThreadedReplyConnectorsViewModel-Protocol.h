@@ -17,7 +17,7 @@
 @property(readonly, nonatomic) _Bool shouldShowElbowParentConnectorView;
 @property(readonly, nonatomic) _Bool shouldShowVerticalParentConnectorView;
 @property(readonly, nonatomic) long long indentationLevel;
-- (double)ancestorConnectorViewOffsetForLayoutMetrics:(TFNLayoutMetrics *)arg1;
+- (double)ancestorConnectorViewOffsetForLayoutMetrics:(TFNLayoutMetrics *)arg1 isSelected:(_Bool)arg2;
 - (_Bool)shouldShowAncestorConnectorAtLevel:(unsigned long long)arg1;
 @end
 

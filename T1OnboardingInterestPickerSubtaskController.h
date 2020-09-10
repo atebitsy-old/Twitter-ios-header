@@ -13,6 +13,8 @@
 
 @interface T1OnboardingInterestPickerSubtaskController : T1OnboardingSubtaskController <T1OnboardingInterestPickerViewControllerDelegate>
 {
+    long long _searchRequestedIndex;
+    long long _searchReturnedIndex;
     NSString *_flowToken;
     TFSTwitterOnboardingInterestPickerSubtask *_subtask;
     TFSTwitterOnboardingInterestPickerSubtaskState *_state;

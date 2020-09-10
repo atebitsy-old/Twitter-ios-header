@@ -24,6 +24,7 @@
     // Error parsing type: , name: shouldIncludeReferrerParams
     // Error parsing type: , name: backingNavigationMetadata
     // Error parsing type: , name: backingSourceNavigationMetadata
+    // Error parsing type: , name: didScribeReply
 }
 
 - (void).cxx_destruct;

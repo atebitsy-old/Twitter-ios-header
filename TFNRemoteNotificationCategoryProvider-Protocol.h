@@ -9,6 +9,6 @@
 @class NSSet;
 
 @protocol TFNRemoteNotificationCategoryProvider <NSObject>
-- (NSSet *)uiUserNotificationCategories;
+- (NSSet *)notificationCategories;
 @end
 

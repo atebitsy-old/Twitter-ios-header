@@ -11,7 +11,7 @@
 }
 
 - (void)_t1_replyToDirectMessageFromAccount:(id)arg1 withText:(id)arg2 pushPayload:(id)arg3 completionBlock:(CDUnknownBlockType)arg4;
-- (void)handleActionWithAccount:(id)arg1 withPushPayload:(id)arg2 withResponseInfo:(id)arg3 withCompletion:(CDUnknownBlockType)arg4;
+- (void)handleActionWithAccount:(id)arg1 withPushPayload:(id)arg2 withResponse:(id)arg3 withCompletion:(CDUnknownBlockType)arg4;
 
 @end
 

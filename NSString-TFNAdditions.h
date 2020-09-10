@@ -7,8 +7,11 @@
 #import <Foundation/NSString.h>
 
 @interface NSString (TFNAdditions)
++ (id)tfn_accessibilityStringByConcatenatingStringsInArray:(id)arg1;
++ (id)tfn_accessibilityStringByConcatenatingStrings:(id)arg1;
 + (double)tfn_estimatedHeightWithFont:(id)arg1;
 - (id)tfn_encodedEmojiString;
+- (id)tfn_accessibilityStringWithTwitterSymbols;
 - (double)tfn_heightWithFont:(id)arg1 maxWidth:(double)arg2 maxNumberOfLines:(long long)arg3;
 - (double)tfn_heightWithFont:(id)arg1 maxWidth:(double)arg2;
 - (struct CGSize)tfn_sizeWithFont:(id)arg1 maxSize:(struct CGSize)arg2 maxNumberOfLines:(long long)arg3;

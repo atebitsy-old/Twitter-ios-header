@@ -74,8 +74,6 @@
 - (void)_t1_resetLoopingObserver;
 - (void)_t1_updateLoopingPlaybackObserver;
 - (void)_t1_didTapPlayButton:(id)arg1;
-- (_Bool)_t1_isEligibleForAutoplay;
-- (_Bool)_t1_isPlayerDockedElsewhere;
 - (void)_t1_notifyDelegatePlaybackDidCompleteIfNecessary;
 - (unsigned long long)_t1_liveEventControlBarDisplayMode;
 - (void)_t1_cleanupSubviews;

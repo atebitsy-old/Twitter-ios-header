@@ -19,19 +19,20 @@
     TDTBugReport *_bugReportTemplate;
 }
 
-+ (_Bool)canSendBugReport;
 + (id)sharedReporter;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TDTBugReport *bugReportTemplate; // @synthesize bugReportTemplate=_bugReportTemplate;
-- (void)_tfn_removeProviderAtIndex:(unsigned long long)arg1;
+- (void)_tdt_removeProviderAtIndex:(unsigned long long)arg1;
 - (void)removeAttachmentProviderWithID:(id)arg1;
 - (void)removeAttachmentProvider:(id)arg1;
 - (id)addAttachmentProvider:(id)arg1;
-- (void)_tfn_processProvider:(id)arg1 withContext:(id)arg2 intoSeperateAttachments:(id)arg3 orZipper:(id)arg4 pumpUIBetweenAttachments:(_Bool)arg5;
-- (id)_tfn_generateBugReport:(id)arg1 withAttachments:(id)arg2 delegate:(id)arg3;
+- (void)_tdt_processProvider:(id)arg1 withContext:(id)arg2 intoSeperateAttachments:(id)arg3 orZipper:(id)arg4 pumpUIBetweenAttachments:(_Bool)arg5;
+- (id)_tdt_generateBugReport:(id)arg1 withAttachments:(id)arg2 delegate:(id)arg3;
+- (id)_tdt_attemptToSaveBugReportToDiskAndReturnSavedPath:(id)arg1;
+- (void)_tdt_sendBugReportDidCompleteWithResult:(long long)arg1 report:(id)arg2 delegate:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)_tdt_attachDefaultProviders;
 - (void)sendBugReport:(id)arg1 withPresentingViewController:(id)arg2 delegate:(id)arg3 completion:(CDUnknownBlockType)arg4;
-- (void)triggerBugReport:(long long)arg1 fromViewController:(id)arg2 withAttachments:(id)arg3 delegate:(id)arg4;
-- (void)_tfn_attachDefaultProviders;
+- (void)triggerBugReport:(long long)arg1 destination:(long long)arg2 fromViewController:(id)arg3 withAttachments:(id)arg4 delegate:(id)arg5;
 - (id)init;
 - (void)mailComposeController:(id)arg1 didFinishWithResult:(long long)arg2 error:(id)arg3;
 

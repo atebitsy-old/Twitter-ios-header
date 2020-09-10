@@ -32,6 +32,7 @@
     struct CGRect _tweetstormIndicatorFrame;
     struct CGRect _sensitiveContentFrame;
     struct CGRect _pollIndicatorFrame;
+    struct CGRect _forwardPivotFrame;
     struct CGRect _socialBadgeFrame;
     struct CGRect _socialTextFrame;
     struct CGRect _conversationContextTextFrame;
@@ -43,6 +44,7 @@
 @property(nonatomic) struct CGRect conversationContextTextFrame; // @synthesize conversationContextTextFrame=_conversationContextTextFrame;
 @property(nonatomic) struct CGRect socialTextFrame; // @synthesize socialTextFrame=_socialTextFrame;
 @property(nonatomic) struct CGRect socialBadgeFrame; // @synthesize socialBadgeFrame=_socialBadgeFrame;
+@property(nonatomic) struct CGRect forwardPivotFrame; // @synthesize forwardPivotFrame=_forwardPivotFrame;
 @property(nonatomic) struct CGRect pollIndicatorFrame; // @synthesize pollIndicatorFrame=_pollIndicatorFrame;
 @property(nonatomic) struct CGRect sensitiveContentFrame; // @synthesize sensitiveContentFrame=_sensitiveContentFrame;
 @property(nonatomic) struct CGRect tweetstormIndicatorFrame; // @synthesize tweetstormIndicatorFrame=_tweetstormIndicatorFrame;

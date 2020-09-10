@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import <T1Twitter/T1ToastViewModel-Protocol.h>
-
 @class NSString, T1ToastAction;
 
-@interface _TtC9T1Twitter30T1DirectMessageQuickShareToast : NSObject <T1ToastViewModel>
+@interface _TtC9T1Twitter30T1DirectMessageQuickShareToast : NSObject
 {
     // Error parsing type: , name: conversation
     // Error parsing type: , name: messageText

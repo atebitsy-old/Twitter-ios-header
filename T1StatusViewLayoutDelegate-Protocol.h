@@ -18,6 +18,7 @@
 - (_Bool)shouldShowWithheldInCountryInterstitialForViewModel:(id <T1StatusViewModel>)arg1 options:(unsigned long long)arg2 account:(TFNTwitterAccount *)arg3;
 - (_Bool)shouldShowSensitiveContentInterstitialForViewModel:(id <T1StatusViewModel>)arg1 options:(unsigned long long)arg2 account:(TFNTwitterAccount *)arg3;
 - (_Bool)shouldShowTextBodyForViewModel:(id <T1StatusViewModel>)arg1 options:(unsigned long long)arg2 account:(TFNTwitterAccount *)arg3;
+- (_Bool)shouldShowForwardPivotForViewModel:(id <T1StatusViewModel>)arg1 account:(TFNTwitterAccount *)arg2;
 - (_Bool)shouldShowShareInlineActionForViewModel:(id <T1StatusViewModel>)arg1 options:(unsigned long long)arg2 account:(TFNTwitterAccount *)arg3;
 - (_Bool)shouldShowMediaTagsAccountUserFirst;
 - (_Bool)shouldShowMediaTagsForViewModel:(id <T1StatusViewModel>)arg1 options:(unsigned long long)arg2 account:(TFNTwitterAccount *)arg3;

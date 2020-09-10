@@ -10,19 +10,17 @@
 
 @interface T1SignUpFormFieldInfo : NSObject
 {
-    _Bool _skipPasswordValidation;
     NSString *_fullName;
     NSString *_email;
     NSString *_username;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic, getter=shouldSkipPasswordValidation) _Bool skipPasswordValidation; // @synthesize skipPasswordValidation=_skipPasswordValidation;
 @property(readonly, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, nonatomic) NSString *email; // @synthesize email=_email;
 @property(readonly, nonatomic) NSString *fullName; // @synthesize fullName=_fullName;
 - (id)init;
-- (id)initWithFullName:(id)arg1 email:(id)arg2 username:(id)arg3 skipPasswordValidation:(_Bool)arg4;
+- (id)initWithFullName:(id)arg1 email:(id)arg2 username:(id)arg3;
 
 @end
 

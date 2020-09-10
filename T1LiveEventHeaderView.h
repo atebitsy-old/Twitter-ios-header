@@ -6,7 +6,7 @@
 
 #import <T1Twitter/T1ResizableHeaderView.h>
 
-@class TAETitleView, TFNGradientView, TFNPullToRefreshControl, TFNSolidColorView, UITapGestureRecognizer;
+@class TFNGradientView, TFNPullToRefreshControl, TFNSolidColorView, TFNTitleView, UITapGestureRecognizer;
 
 @interface T1LiveEventHeaderView : T1ResizableHeaderView
 {
@@ -22,11 +22,11 @@
     TFNSolidColorView *_customNavigationBarSeparatorLine;
     TFNGradientView *_statusBarGradientView;
     UITapGestureRecognizer *_navigationBarExpandTapGestureRecognizer;
-    TAETitleView *_navigationBarTitleView;
+    TFNTitleView *_navigationBarTitleView;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) TAETitleView *navigationBarTitleView; // @synthesize navigationBarTitleView=_navigationBarTitleView;
+@property(retain, nonatomic) TFNTitleView *navigationBarTitleView; // @synthesize navigationBarTitleView=_navigationBarTitleView;
 @property(readonly, nonatomic, getter=isShowShareButtonEnabled) _Bool showShareButtonEnabled; // @synthesize showShareButtonEnabled=_showShareButtonEnabled;
 @property(readonly, nonatomic, getter=isHeaderSubtitleTapToExpandShown) _Bool headerSubtitleTapToExpandShown; // @synthesize headerSubtitleTapToExpandShown=_headerSubtitleTapToExpandShown;
 @property(readonly, nonatomic, getter=isHeaderSubtitleBlue) _Bool headerSubtitleBlue; // @synthesize headerSubtitleBlue=_headerSubtitleBlue;

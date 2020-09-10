@@ -75,6 +75,7 @@ __attribute__((visibility("hidden")))
 @property(nonatomic, readonly) NSString *senderDisplayUsername;
 @property(nonatomic, readonly) long long senderID; // @synthesize senderID;
 @property(nonatomic, readonly) NSNumber *sourceID;
+@property(nonatomic, readonly) TFNTwitterStatus *legacyStatus;
 @property(nonatomic, readonly) id <TFNTwitterCardDataSourceObject> sourceObject;
 - (id)entityForURL:(id)arg1;
 @property(nonatomic, readonly) TFSTwitterPromotedContent *promotedContent; // @synthesize promotedContent;

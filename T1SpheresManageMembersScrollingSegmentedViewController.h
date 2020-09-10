@@ -28,6 +28,7 @@
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithAccount:(id)arg1 viewModel:(id)arg2 initiallySelectedTabIndex:(long long)arg3;
+- (id)initWithAccount:(id)arg1 listID:(long long)arg2 initiallySelectedTabIndex:(long long)arg3;
 @property(nonatomic) __weak id <T1SpheresManageMembersScrollingSegmentedViewControllerDelegate> delegate; // @synthesize delegate;
 
 @end

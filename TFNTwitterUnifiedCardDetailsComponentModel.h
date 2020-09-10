@@ -28,7 +28,7 @@
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) unsigned long long type;
-- (id)initWithTitle:(id)arg1 subtitle:(id)arg2 destinationModel:(id)arg3 shouldRenderFullBleed:(_Bool)arg4 dominantColorConfig:(id)arg5;
+- (id)initWithTitle:(id)arg1 subtitle:(id)arg2 destinationModel:(id)arg3 shouldRenderFullBleed:(_Bool)arg4 dominantColorConfig:(id)arg5 useDominantColor:(_Bool)arg6;
 - (id)initWithComponentJSON:(id)arg1 title:(id)arg2 subtitle:(id)arg3 destinationDict:(id)arg4;
 - (id)withButton:(id)arg1;
 - (id)withPromotedContent:(id)arg1;

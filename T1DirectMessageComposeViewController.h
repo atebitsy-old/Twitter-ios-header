@@ -14,12 +14,12 @@
     // Error parsing type: , name: attachmentDelegate
     // Error parsing type: , name: quickReplyDelegate
     // Error parsing type: , name: kClipMinimumDurationSeconds
-    // Error parsing type: , name: audioView
     // Error parsing type: , name: audioViewTrailingConstraint
     // Error parsing type: , name: player
     // Error parsing type: , name: playbackTimeObserver
     // Error parsing type: , name: recorder
     // Error parsing type: , name: recordingQueue
+    // Error parsing type: , name: isFirstCompositionLoad
     // Error parsing type: , name: audioAutoSendEnabled
     // Error parsing type: , name: intersectsAudioAutoSendButton
     // Error parsing type: , name: account
@@ -54,7 +54,6 @@
     // Error parsing type: , name: foundMediaController
     // Error parsing type: , name: fullScreenPhotoGallery
     // Error parsing type: , name: quickReplyOptionsPickerViewController
-    // Error parsing type: , name: voiceRecordingPlaybackController
     // Error parsing type: , name: userDismissedQuickReplyID
     // Error parsing type: , name: quickReplyOptionsPickerAutoDismissTimer
     // Error parsing type: , name: composeToolbarTopConstraint

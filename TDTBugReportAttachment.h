@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSData, NSString;
+@class NSData, NSString, NSURL;
 
 @interface TDTBugReportAttachment : NSObject
 {
@@ -15,6 +15,7 @@
     NSData *_data;
     NSString *_fileName;
     NSString *_filePath;
+    NSURL *_uploadURL;
 }
 
 + (id)attachmentWithFilePath:(id)arg1 mimeType:(id)arg2;
@@ -22,6 +23,7 @@
 + (id)attachmentWithData:(id)arg1 mimeType:(id)arg2 fileName:(id)arg3;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool isAttachedAsSeparateFile; // @synthesize isAttachedAsSeparateFile=_isAttachedAsSeparateFile;
+@property(retain, nonatomic) NSURL *uploadURL; // @synthesize uploadURL=_uploadURL;
 @property(copy, nonatomic) NSString *filePath; // @synthesize filePath=_filePath;
 @property(copy, nonatomic) NSString *fileName; // @synthesize fileName=_fileName;
 @property(retain, nonatomic) NSData *data; // @synthesize data=_data;

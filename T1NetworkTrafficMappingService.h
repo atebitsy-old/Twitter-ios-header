@@ -34,7 +34,6 @@
     NSMutableArray *_validationOperations;
     TNUTransactionMetrics *_probingCNOE;
     id <TFSTwitterAPICommandCancellable> _requestBeaconListOperation;
-    _Bool _useBeaconList;
     TFSTwitterAPICommandService *_commandService;
     id <TFSTwitterAPICommandContext> _commandContext;
     TFSTwitterRecurringTaskService *_recurringTaskService;
@@ -51,7 +50,6 @@
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property double probeThrottleTimeInterval; // @synthesize probeThrottleTimeInterval=_probeThrottleTimeInterval;
 @property unsigned long long maxProbesPerSession; // @synthesize maxProbesPerSession=_maxProbesPerSession;
-@property _Bool useBeaconList; // @synthesize useBeaconList=_useBeaconList;
 @property unsigned long long maxTimeoutsForTrafficMapping; // @synthesize maxTimeoutsForTrafficMapping=_maxTimeoutsForTrafficMapping;
 - (void)_t1_queue_invalidHit;
 - (void)_t1_queue_discardHit;

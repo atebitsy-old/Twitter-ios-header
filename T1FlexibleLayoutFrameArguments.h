@@ -13,7 +13,7 @@
 
 @interface T1FlexibleLayoutFrameArguments : NSObject <NSCopying>
 {
-    _Bool _isForLayoutSubviews;
+    _Bool _forSizing;
     TFNLayoutMetrics *_layoutMetrics;
     id <T1FlexibleLayoutItem> _previousItem;
     struct UIEdgeInsets _contentInsets;
@@ -24,7 +24,7 @@
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool isForLayoutSubviews; // @synthesize isForLayoutSubviews=_isForLayoutSubviews;
+@property(nonatomic) _Bool forSizing; // @synthesize forSizing=_forSizing;
 @property(nonatomic) struct CGRect layoutBounds; // @synthesize layoutBounds=_layoutBounds;
 @property(nonatomic) struct CGRect previousContentBounds; // @synthesize previousContentBounds=_previousContentBounds;
 @property(retain, nonatomic) id <T1FlexibleLayoutItem> previousItem; // @synthesize previousItem=_previousItem;

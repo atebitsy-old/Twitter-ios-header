@@ -17,6 +17,7 @@
 + (void)triggerLowDiskSpaceNotificationWithRateLimit;
 + (_Bool)parseComponentsOfAbsolutePath:(id)arg1 searchPathDirectory:(out unsigned long long *)arg2 relativePath:(out id *)arg3;
 + (CDStruct_f03de906)totalSizeOfDirectory:(id)arg1;
++ (id)bugReportsDirectory;
 + (id)performanceDataDirectory;
 + (id)authorizationRequestLogsDirectory;
 + (id)configurationDirectory;

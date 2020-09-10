@@ -16,9 +16,6 @@
     CDUnknownBlockType _remoteNotificationCompletionHandler;
 }
 
-+ (unsigned long long)convertUINotificationTypesToAuthorizationOptions:(unsigned long long)arg1;
-+ (id)convertUINotificationActionToUserNotificationAction:(id)arg1;
-+ (id)convertUINotificationCategoryToUserNotificationCategory:(id)arg1;
 + (id)defaultManager;
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <TFNRemoteNotificationCategoryProvider> categoryProvider; // @synthesize categoryProvider=_categoryProvider;

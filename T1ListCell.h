@@ -31,7 +31,7 @@
 - (double)_t1_layoutTopLine:(double)arg1 textX:(double)arg2 textY:(double)arg3;
 - (struct CGSize)_t1_textSizeForLabel:(id)arg1 withSize:(struct CGSize)arg2;
 - (struct CGSize)_t1_textSizeForLabel:(id)arg1 withWidth:(double)arg2;
-- (void)setListViewModel:(id)arg1 ownerDataSource:(id)arg2 showAvatar:(_Bool)arg3;
+- (void)setListViewModel:(id)arg1 ownerDataSource:(id)arg2 showAvatar:(_Bool)arg3 userBadger:(id)arg4;
 - (void)layoutSubviews;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1 layoutMetrics:(id)arg2;

@@ -375,7 +375,7 @@
 @property(readonly, nonatomic, getter=isFillerTweet) _Bool fillerTweet;
 @property(readonly, nonatomic, getter=displayAsSelfThreadTweet) _Bool selfThreadTweet;
 - (id)representedFromUser;
-- (_Bool)copyForwardPivotFromStatusViewModel:(id)arg1;
+- (_Bool)copyForwardPivotsFromStatusViewModel:(id)arg1;
 - (_Bool)hasTwitterMediaIncludingPartners:(unsigned long long)arg1 forAccount:(id)arg2;
 - (_Bool)isVideoPoll;
 @property(readonly, nonatomic, getter=isAdPreviewTweet) _Bool adPreviewTweet;

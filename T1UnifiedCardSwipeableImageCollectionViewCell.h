@@ -6,12 +6,11 @@
 
 #import <T1Twitter/T1UnifiedCardSwipeableCollectionViewCell.h>
 
-#import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 #import <T1Twitter/TFNPreviewable-Protocol.h>
 
 @class NSString, T1CardImageView, TFNTappableHighlightView;
 
-@interface T1UnifiedCardSwipeableImageCollectionViewCell : T1UnifiedCardSwipeableCollectionViewCell <TFNPreviewable, T1ImageViewFetchHelperDelegate>
+@interface T1UnifiedCardSwipeableImageCollectionViewCell : T1UnifiedCardSwipeableCollectionViewCell <TFNPreviewable>
 {
     T1CardImageView *_imageView;
     TFNTappableHighlightView *_imageHighlightView;
@@ -20,13 +19,11 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNTappableHighlightView *imageHighlightView; // @synthesize imageHighlightView=_imageHighlightView;
 @property(retain, nonatomic) T1CardImageView *imageView; // @synthesize imageView=_imageView;
-- (void)t1_fetchHelper:(id)arg1 didFailToLoadImageWithError:(id)arg2;
 - (void)configureSwipeableCollectionViewCellWithData:(id)arg1 imagePipeline:(id)arg2 cellPosition:(long long)arg3 account:(id)arg4 scribeContext:(id)arg5;
 - (void)prepareForReuse;
 - (void)_t1_didLongPressImage:(id)arg1;
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;
 - (void)_t1_didTapImage:(id)arg1;
-- (void)_t1_setupFailurePlaceholder;
 - (void)_t1_setupActions;
 - (void)_t1_setupImageView;
 - (void)_t1_setupHighlightView:(id)arg1 withAccessibilityIdentifier:(id)arg2;

@@ -6,10 +6,11 @@
 
 #import <T1Twitter/TFSTwitterEntityURLProvider-Protocol.h>
 
-@class NSDictionary, TFNTwitterCardData, TFSTwitterPromotedContent;
+@class NSDictionary, TFNTwitterCardData, TFNTwitterStatus, TFSTwitterPromotedContent;
 @protocol TFNTwitterCardDataSourceObject;
 
 @protocol TFNTwitterCardDataSource <TFSTwitterEntityURLProvider>
+@property(nonatomic, readonly) TFNTwitterStatus *legacyStatus;
 @property(nonatomic, readonly) NSDictionary *scribeItem;
 @property(nonatomic, readonly) TFSTwitterPromotedContent *promotedContent;
 @property(nonatomic, readonly) id <TFNTwitterCardDataSourceObject> sourceObject;

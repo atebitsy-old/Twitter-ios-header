@@ -12,14 +12,13 @@
     // Error parsing type: , name: loadingViewController
     // Error parsing type: , name: account
     // Error parsing type: , name: viewModel
-    // Error parsing type: , name: configuration
+    // Error parsing type: , name: spheresFeatureSwitches
     // Error parsing type: , name: addedUsers
     // Error parsing type: , name: removedUsers
     // Error parsing type: , name: listHeaderDataFetcher
     // Error parsing type: , name: conversionsHelper
     // Error parsing type: , name: observer
     // Error parsing type: , name: listUpdateDelegate
-    // Error parsing type: , name: $__lazy_storage_$_spheresFeatureSwitches
 }
 
 - (void).cxx_destruct;
@@ -31,7 +30,8 @@
 - (void)shareTappedWithTapGestureRecognizer:(id)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccount:(id)arg1 viewModel:(id)arg2 configuration:(id)arg3;
+- (id)initWithAccount:(id)arg1 viewModel:(id)arg2;
+- (id)initWithAccount:(id)arg1 listID:(long long)arg2;
 
 @end
 

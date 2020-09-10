@@ -21,11 +21,13 @@
 @property(readonly, nonatomic) T1UserBadge *userBadge; // @synthesize userBadge=_userBadge;
 @property(readonly, nonatomic) T1VoiceStatusViewModel *voiceViewModel; // @synthesize voiceViewModel=_voiceViewModel;
 @property(readonly, nonatomic) double previousDuration; // @synthesize previousDuration=_previousDuration;
+- (id)_t1_accessibleDurationRemainingStringWithProgress:(double)arg1;
 - (id)_t1_durationStringWithProgress:(double)arg1;
+- (id)_t1_badgeAttributedStringWithFont:(id)arg1;
 - (_Bool)isEqualToViewModel:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 - (id)player;
-- (id)_t1_badgeAttributedStringWithFont:(id)arg1;
+- (id)accessibilityStringCurrentlyPlaying:(_Bool)arg1 withProgress:(double)arg2;
 @property(readonly, nonatomic) NSAttributedString *subtitleAttributedString;
 - (id)titleAttributedStringWithProgress:(double)arg1;
 @property(readonly, nonatomic) TFSTwitterEntityMedia *imageMediaEntity;

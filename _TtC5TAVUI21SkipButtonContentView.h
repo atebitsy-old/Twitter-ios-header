@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: imageView
     // Error parsing type: , name: label
+    // Error parsing type: , name: stylesObservation
 }
 
 - (void).cxx_destruct;

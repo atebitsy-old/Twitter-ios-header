@@ -38,6 +38,8 @@
 @property(readonly, nonatomic) UILabel *badgeTextLabel; // @synthesize badgeTextLabel=_badgeTextLabel;
 @property(readonly, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(nonatomic) __weak id <T1ForwardPivotViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)accessibilityHint;
+- (_Bool)isAccessibilityElement;
 - (void)_t1_updateConstraints;
 - (void)_t1_didSingleTap:(id)arg1;
 - (void)_t1_applyViewModel:(id)arg1;

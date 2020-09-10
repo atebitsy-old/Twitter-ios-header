@@ -31,6 +31,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: accountsButton
     // Error parsing type: , name: nameLabel
     // Error parsing type: , name: usernameLabel
+    // Error parsing type: , name: userBadger
     // Error parsing type: , name: verifiedBadge
     // Error parsing type: , name: protectedBadge
     // Error parsing type: , name: followersButton

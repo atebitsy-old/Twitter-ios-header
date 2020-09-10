@@ -21,7 +21,7 @@
 + (unsigned long long)baseURLType;
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *bucket; // @synthesize bucket=_bucket;
-- (id)initWithBucket:(id)arg1 contentType:(id)arg2 path:(id)arg3 expiresDateString:(id)arg4 context:(id)arg5 responseModelBuilder:(id)arg6;
+- (id)initWithBucket:(id)arg1 contentType:(id)arg2 data:(id)arg3 path:(id)arg4 expiresDateString:(id)arg5 context:(id)arg6 responseModelBuilder:(id)arg7;
 - (id)initWithEndpointPath:(id)arg1 parameters:(id)arg2 multipartFormData:(id)arg3 bodyData:(id)arg4 bodyFilePath:(id)arg5 headerFields:(id)arg6 context:(id)arg7 responseModelBuilder:(id)arg8 emptyResponseDataExpected:(_Bool)arg9;
 
 @end

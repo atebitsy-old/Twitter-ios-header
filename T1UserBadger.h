@@ -11,8 +11,8 @@
     // Error parsing type: , name: internalBadger
 }
 
-+ (id)directMessagesBadger;
-+ (id)defaultBadger;
++ (id)directMessagesBadgerWithFeatureSwitches:(id)arg1;
++ (id)defaultBadgerWithFeatureSwitches:(id)arg1;
 - (void).cxx_destruct;
 - (id)init;
 - (id)badgeForDirectMessageUser:(id)arg1;

@@ -23,6 +23,8 @@
 @property(readonly, nonatomic) UIColor *cellSeparatorColor;
 @property(readonly, nonatomic) UIColor *highlightCellBackgroundColor;
 @property(readonly, nonatomic) UIColor *cellBackgroundColor;
+@property(readonly, nonatomic) UIColor *textDetailsColor;
+@property(readonly, nonatomic) UIColor *textColor;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

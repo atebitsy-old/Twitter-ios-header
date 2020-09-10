@@ -8,6 +8,7 @@
 
 #import <T1Twitter/T1AutoplayViewContainer-Protocol.h>
 #import <T1Twitter/T1CardViewDelegate-Protocol.h>
+#import <T1Twitter/T1ForwardPivotViewDelegate-Protocol.h>
 #import <T1Twitter/T1StatusAuthorViewDelegate-Protocol.h>
 #import <T1Twitter/T1StatusBodyTextViewDelegate-Protocol.h>
 #import <T1Twitter/T1StatusContextIndicatorViewDelegate-Protocol.h>
@@ -21,16 +22,17 @@
 #import <T1Twitter/T1UnifiedCardComponentViewEventDelegate-Protocol.h>
 #import <T1Twitter/TFNLayoutGuidesSource-Protocol.h>
 
-@class NSString, T1AvatarImageView, T1ConversationConnectorView, T1DismissButton, T1InfoTextView, T1InlineMediaView, T1StatusAuthorView, T1StatusBodyTextView, T1StatusContextIndicatorView, T1StatusInlineActionsView, T1StatusLiveEngagementManager, T1StatusReplyBadgeView, T1StatusSensitiveContentView, T1StatusViewAccessibility, T1StatusViewAttachmentContainerView, T1StatusViewScribableItem, T1StatusWithheldInCountryView, T1TagSetView, T1TimelinesItemSocialContextView, T1TimelinesStatusConversationContextView, TFNReusableViewCache, TFNSolidColorView, TFNTwitterAccount, TFSTimer, TFSTwitterScribeContext, UIImage, UIView;
+@class NSString, T1AvatarImageView, T1ConversationConnectorView, T1DismissButton, T1ForwardPivotView, T1InfoTextView, T1InlineMediaView, T1StatusAuthorView, T1StatusBodyTextView, T1StatusContextIndicatorView, T1StatusInlineActionsView, T1StatusLiveEngagementManager, T1StatusReplyBadgeView, T1StatusSensitiveContentView, T1StatusViewAccessibility, T1StatusViewAttachmentContainerView, T1StatusViewScribableItem, T1StatusWithheldInCountryView, T1TagSetView, T1TimelinesItemSocialContextView, T1TimelinesStatusConversationContextView, TFNReusableViewCache, TFNSolidColorView, TFNTwitterAccount, TFSTimer, TFSTwitterScribeContext, UIImage, UIView;
 @protocol T1AutoplayViewContainer, T1BasicStatusView, T1CardViewDelegate, T1StatusViewEventHandler, T1StatusViewInlineActions, T1StatusViewInlineImages, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFSTwitterScribableItem;
 
-@interface T1StatusView : TFNLayoutableView <T1StatusAuthorViewDelegate, T1StatusBodyTextViewDelegate, T1StatusInlineActionsViewDelegate, T1StatusViewAttachmentContainerViewDelegate, T1TagSetViewDelegate, TFNLayoutGuidesSource, T1AutoplayViewContainer, T1CardViewDelegate, T1TimelinesItemSocialContextViewDelegate, T1TimelinesStatusConversationContextViewDelegate, T1StatusContextIndicatorViewDelegate, T1StatusWithheldInCountryViewDelegate, T1UnifiedCardComponentViewEventDelegate, T1TimelineStatusView>
+@interface T1StatusView : TFNLayoutableView <T1StatusAuthorViewDelegate, T1StatusBodyTextViewDelegate, T1StatusInlineActionsViewDelegate, T1StatusViewAttachmentContainerViewDelegate, T1TagSetViewDelegate, TFNLayoutGuidesSource, T1AutoplayViewContainer, T1CardViewDelegate, T1ForwardPivotViewDelegate, T1TimelinesItemSocialContextViewDelegate, T1TimelinesStatusConversationContextViewDelegate, T1StatusContextIndicatorViewDelegate, T1StatusWithheldInCountryViewDelegate, T1UnifiedCardComponentViewEventDelegate, T1TimelineStatusView>
 {
     T1StatusViewAccessibility *_accessibility;
     T1StatusViewScribableItem *_scribableItem;
     T1ConversationConnectorView *_conversationTopConnectorView;
     T1ConversationConnectorView *_conversationBottomConnectorView;
     T1ConversationConnectorView *_tweetstormConnectorView;
+    UIView *_forwardPivotSeparatorView;
     _Bool _shouldPauseLivePipelineUpdates;
     _Bool _selected;
     id <T1StatusViewModel> _viewModel;
@@ -57,6 +59,7 @@
     T1DismissButton *_caretButton;
     T1StatusReplyBadgeView *_replyBadgeView;
     T1StatusContextIndicatorView *_pollIndicatorView;
+    T1ForwardPivotView *_forwardPivotView;
     T1StatusInlineActionsView *_inlineActionsView;
     T1InfoTextView *_infoTextView;
     T1TimelinesItemSocialContextView *_socialContextView;
@@ -79,6 +82,7 @@
 @property(readonly, nonatomic) T1TimelinesItemSocialContextView *socialContextView; // @synthesize socialContextView=_socialContextView;
 @property(retain, nonatomic) T1InfoTextView *infoTextView; // @synthesize infoTextView=_infoTextView;
 @property(retain, nonatomic) T1StatusInlineActionsView *inlineActionsView; // @synthesize inlineActionsView=_inlineActionsView;
+@property(retain, nonatomic) T1ForwardPivotView *forwardPivotView; // @synthesize forwardPivotView=_forwardPivotView;
 @property(retain, nonatomic) T1StatusContextIndicatorView *pollIndicatorView; // @synthesize pollIndicatorView=_pollIndicatorView;
 @property(retain, nonatomic) T1StatusReplyBadgeView *replyBadgeView; // @synthesize replyBadgeView=_replyBadgeView;
 @property(retain, nonatomic) T1DismissButton *caretButton; // @synthesize caretButton=_caretButton;
@@ -131,6 +135,7 @@
 - (void)bodyTextView:(id)arg1 didTapTruncationTokenAreaWithRect:(struct CGRect)arg2;
 - (void)bodyTextView:(id)arg1 didLongPressActiveTextRange:(id)arg2 withFrame:(struct CGRect)arg3;
 - (void)bodyTextView:(id)arg1 didTapActiveTextRange:(id)arg2 withFrame:(struct CGRect)arg3;
+- (void)forwardPivotViewDidTap:(id)arg1;
 - (void)authorViewDidUpdateLayoutState:(id)arg1 affectsHeight:(_Bool)arg2;
 - (_Bool)shouldShowSocialTextForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
 - (void)authorView:(id)arg1 didTapDesignatorBadgeWithFrame:(struct CGRect)arg2;
@@ -151,6 +156,7 @@
 - (void)_t1_handleTimelineStatusItemViewModelUpdateNotification:(id)arg1;
 - (id)_t1_handleDesignatorBadgePreviewEventWithSender:(id)arg1;
 - (void)_t1_updateInlineActions;
+- (void)_t1_updateForwardPivotView;
 - (void)_t1_updateInfoText;
 - (void)_t1_updateConversationContextText;
 - (void)_t1_updateSocialContextView;

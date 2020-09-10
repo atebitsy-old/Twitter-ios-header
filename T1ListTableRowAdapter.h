@@ -6,12 +6,13 @@
 
 #import <TFNUI/TFNItemsTableRowAdapter.h>
 
-@class T1ListCell, TFNTwitterAccount;
+@class T1ListCell, T1UserBadger, TFNTwitterAccount;
 
 @interface T1ListTableRowAdapter : TFNItemsTableRowAdapter
 {
     TFNTwitterAccount *_account;
     T1ListCell *_prototypeView;
+    T1UserBadger *_userBadger;
     long long _displayMode;
 }
 

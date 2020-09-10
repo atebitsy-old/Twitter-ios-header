@@ -8,17 +8,20 @@
 
 #import <TwitterAppearance/TFNUIFontGroup-Protocol.h>
 
-@class NSString;
+@class NSString, UIFont;
 
 @interface TAETFNUIFontGroupAdapter : NSObject <TFNUIFontGroup>
 {
 }
 
+@property(readonly, nonatomic) UIFont *navSubtitleFont;
+@property(readonly, nonatomic) UIFont *navTitleFont;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
+
 @end
 

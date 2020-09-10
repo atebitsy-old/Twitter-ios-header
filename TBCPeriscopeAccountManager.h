@@ -24,11 +24,12 @@
 - (id)_tfn_descriptionForAuthenticationErrorCode:(long long)arg1;
 - (id)periscopeAuthenticationErrorForCode:(long long)arg1;
 - (void)_authenticatePeriscopeDirect:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)authenticatePeriscopeDirect:(_Bool)arg1 force:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)authenticatePeriscopeDirect:(_Bool)arg1 force:(_Bool)arg2 allowProtectedAccount:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (_Bool)isProtectedUser;
 @property(readonly, nonatomic) _Bool isPeriscopeAuthenticationAllowed;
 - (void)initializePeriscopeAccountWithCachedDictionaryValue:(id)arg1;
 - (id)initWithAuthenticationController:(id)arg1 periscopeAccount:(id)arg2;
-- (void)authenticatePeriscopeDirect:(_Bool)arg1 showHUD:(_Bool)arg2 force:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)authenticatePeriscopeDirect:(_Bool)arg1 showHUD:(_Bool)arg2 force:(_Bool)arg3 allowProtectedAccount:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 
 @end
 

@@ -15,10 +15,11 @@
 - (void)logCrashWithID:(NSString *)arg1 crashName:(NSString *)arg2 crashDetails:(NSString *)arg3 crashTimestamp:(NSNumber *)arg4;
 - (void)logErrorWithType:(NSString *)arg1 functionName:(NSString *)arg2;
 - (_Bool)shouldLogPerformanceEvent:(NSString *)arg1;
-- (void)logPerformanceEvent:(NSString *)arg1 duration:(double)arg2 count:(long long)arg3;
 - (void)logPerformanceEvent:(NSString *)arg1 duration:(double)arg2 impressionID:(NSString *)arg3 metadata:(NSString *)arg4 size:(long long)arg5;
 - (void)logPerformanceEvent:(NSString *)arg1 duration:(double)arg2 impressionID:(NSString *)arg3 metadata:(NSString *)arg4;
+- (void)logPerformanceEvent:(NSString *)arg1 duration:(double)arg2 promotedImpressionID:(NSString *)arg3;
 - (void)logPerformanceEvent:(NSString *)arg1 duration:(double)arg2 metadata:(NSString *)arg3;
+- (void)logPerformanceEvent:(NSString *)arg1 duration:(double)arg2 count:(long long)arg3;
 - (void)logPerformanceEvent:(NSString *)arg1 duration:(double)arg2;
 - (void)logPerformanceEvent:(NSString *)arg1 size:(long long)arg2;
 - (void)logEvent:(NSString *)arg1 parameters:(NSDictionary *)arg2;

@@ -6,6 +6,8 @@
 
 #import <UIKit/UIView.h>
 
+@class NSString;
+
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter18FleetsModeSwitcher : UIView
 {
@@ -22,6 +24,12 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)accessibilityDecrement;
+- (void)accessibilityIncrement;
+@property(nonatomic) unsigned long long accessibilityTraits;
+@property(nonatomic, copy) NSString *accessibilityValue;
+@property(nonatomic, copy) NSString *accessibilityLabel;
+@property(nonatomic) _Bool isAccessibilityElement;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)scrollViewWillEndDragging:(id)arg1 withVelocity:(struct CGPoint)arg2 targetContentOffset:(struct CGPoint *)arg3;
 - (void)scrollViewWillBeginDragging:(id)arg1;

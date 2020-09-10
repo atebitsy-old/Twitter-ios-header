@@ -35,6 +35,9 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (long long)indexOfAccessibilityElement:(id)arg1;
+- (id)accessibilityElementAtIndex:(long long)arg1;
+- (long long)accessibilityElementCount;
 - (id)initWithCoder:(id)arg1;
 @property(nonatomic, readonly) UIButton *playButton; // @synthesize playButton;
 @property(nonatomic, readonly) UIButton *cancelButton; // @synthesize cancelButton;

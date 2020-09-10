@@ -7,7 +7,7 @@
 #import <T1Twitter/NSObject-Protocol.h>
 
 @class NSString, T1SlideshowViewController, TFNDirectMessagePlayable, TFNTwitterCardImageSpec, TFNTwitterMediaAsset, TFNTwitterStatus, TFSTwitterEntityMedia, UIImage;
-@protocol TIPImageFetchTransformer;
+@protocol TFNTwitterCardDataSourceObject, TIPImageFetchTransformer;
 
 @protocol T1SlideshowViewControllerDataSource <NSObject>
 - (TFNDirectMessagePlayable *)slideshow:(T1SlideshowViewController *)arg1 directMessagePlayableForSlideAtIndex:(long long)arg2;
@@ -27,6 +27,6 @@
 - (_Bool)slideshow:(T1SlideshowViewController *)arg1 imageFetchRequestRequiresSigningForSlideAtIndex:(long long)arg2;
 - (NSString *)slideshow:(T1SlideshowViewController *)arg1 imageURLStringForSlideAtIndex:(long long)arg2;
 - (UIImage *)slideshow:(T1SlideshowViewController *)arg1 imageForSlideAtIndex:(long long)arg2;
-- (id)slideshow:(T1SlideshowViewController *)arg1 sourceObjectForSlideAtIndex:(long long)arg2;
+- (id <TFNTwitterCardDataSourceObject>)slideshow:(T1SlideshowViewController *)arg1 sourceObjectForSlideAtIndex:(long long)arg2;
 @end
 

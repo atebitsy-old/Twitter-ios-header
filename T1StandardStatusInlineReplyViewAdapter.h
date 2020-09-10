@@ -54,6 +54,7 @@
 - (void)viewModel:(id)arg1 didUpdateWithInfo:(id)arg2 forView:(id)arg3;
 - (void)unsetViewModelForView:(id)arg1;
 - (void)setViewModel:(id)arg1 forView:(id)arg2;
+- (void)endComposingInlineReply;
 - (void)beginComposingInlineReply;
 - (id)initWithViewIdentifier:(long long)arg1 displayType:(unsigned long long)arg2;
 

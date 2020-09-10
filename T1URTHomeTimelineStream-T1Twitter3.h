@@ -6,10 +6,9 @@
 
 #import <T1Twitter/T1URTHomeTimelineStream.h>
 
-#import <T1Twitter/TFNTimelineDismissedItemDelegate-Protocol.h>
+@class T1URTTimelineFeedbackCoordinator;
 
-@interface T1URTHomeTimelineStream (T1Twitter3) <TFNTimelineDismissedItemDelegate>
-- (void)didRestoreTimelineItem:(id)arg1;
-- (void)dismissTimelineItem:(id)arg1 withFeedbackModule:(id)arg2 derivedFromAction:(id)arg3;
+@interface T1URTHomeTimelineStream (T1Twitter3)
+@property(nonatomic, readonly) T1URTTimelineFeedbackCoordinator *feedbackCoordinator;
 @end
 

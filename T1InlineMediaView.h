@@ -41,7 +41,6 @@
     TAVScribeContext *_tavScribeContext;
     TFNTwitterAccount *_account;
     double _playButtonOffsetAsFractionOfViewHeight;
-    UIView *_altTextBadge;
     UIColor *_dominantBackgroundColor;
     UIImageView *_previewImageView;
     UIView *_shadedOverlayContainerView;
@@ -107,7 +106,6 @@
 @property(retain, nonatomic) UIView *shadedOverlayContainerView; // @synthesize shadedOverlayContainerView=_shadedOverlayContainerView;
 @property(readonly, nonatomic) UIImageView *previewImageView; // @synthesize previewImageView=_previewImageView;
 @property(retain, nonatomic) UIColor *dominantBackgroundColor; // @synthesize dominantBackgroundColor=_dominantBackgroundColor;
-@property(retain, nonatomic) UIView *altTextBadge; // @synthesize altTextBadge=_altTextBadge;
 @property(nonatomic, getter=isPlayerIconViewHidden) _Bool playerIconViewHidden; // @synthesize playerIconViewHidden=_playerIconViewHidden;
 @property(nonatomic) double playButtonOffsetAsFractionOfViewHeight; // @synthesize playButtonOffsetAsFractionOfViewHeight=_playButtonOffsetAsFractionOfViewHeight;
 @property(nonatomic) _Bool shouldAlwaysHideOverlay; // @synthesize shouldAlwaysHideOverlay=_shouldAlwaysHideOverlay;
@@ -153,7 +151,6 @@
 - (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 - (_Bool)playerIsDetached;
 - (void)_t1_beginPresentingPlayer:(id)arg1 playerSessionProducer:(id)arg2;
-- (void)_layoutAltTextBadge;
 - (void)t1_layoutBrandPill:(id)arg1;
 - (void)_layoutPlayerIconView;
 - (void)_layoutSkipCountDownLabel;
@@ -212,7 +209,6 @@
 - (void)didBecomeActiveAutoplayableWithManager:(id)arg1;
 - (id)_t1_getPlayerFromCache;
 - (id)_t1_attachPlayerFromCache;
-- (_Bool)_t1_isNotEligibleForAutoplay;
 - (void)attachPlayer;
 
 // Remaining properties

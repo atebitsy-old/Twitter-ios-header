@@ -50,11 +50,13 @@
 - (void)logCrashWithID:(id)arg1 crashName:(id)arg2 crashDetails:(id)arg3 crashTimestamp:(id)arg4;
 - (void)logExtendedMediaDetailsEvent:(id)arg1;
 - (_Bool)shouldLogPerformanceEvent:(id)arg1;
-- (void)logPerformanceEvent:(id)arg1 duration:(double)arg2 count:(long long)arg3;
-- (void)logPerformanceEvent:(id)arg1 duration:(double)arg2;
-- (void)logPerformanceEvent:(id)arg1 duration:(double)arg2 impressionID:(id)arg3 metadata:(id)arg4 size:(long long)arg5;
 - (void)logPerformanceEvent:(id)arg1 duration:(double)arg2 impressionID:(id)arg3 metadata:(id)arg4;
+- (void)logPerformanceEvent:(id)arg1 duration:(double)arg2 promotedImpressionID:(id)arg3;
 - (void)logPerformanceEvent:(id)arg1 duration:(double)arg2 metadata:(id)arg3;
+- (void)logPerformanceEvent:(id)arg1 duration:(double)arg2;
+- (void)_tfn_logPerformanceEvent:(id)arg1 duration:(double)arg2 impressionID:(id)arg3 promotedImpressionID:(id)arg4 metadata:(id)arg5;
+- (void)logPerformanceEvent:(id)arg1 duration:(double)arg2 impressionID:(id)arg3 metadata:(id)arg4 size:(long long)arg5;
+- (void)logPerformanceEvent:(id)arg1 duration:(double)arg2 count:(long long)arg3;
 - (void)logPerformanceEvent:(id)arg1 size:(long long)arg2;
 - (void)logEvent:(id)arg1 parameters:(id)arg2;
 - (void)logAction:(id)arg1 page:(id)arg2 section:(id)arg3 component:(id)arg4 element:(id)arg5 parameters:(id)arg6;

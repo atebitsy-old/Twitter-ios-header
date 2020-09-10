@@ -69,6 +69,7 @@
 @property(nonatomic, readonly) NSString *scribeItemImpressionID;
 - (id)entityForURL:(id)arg1;
 @property(nonatomic, readonly) TFSTwitterPromotedContent *promotedContent; // @synthesize promotedContent;
+@property(nonatomic, readonly) TFNTwitterStatus *legacyStatus;
 @property(nonatomic, readonly) id <TFNTwitterCardDataSourceObject> sourceObject;
 @property(nonatomic, readonly) NSDictionary *cardEvent;
 @property(nonatomic, readonly) TFNTwitterCardData *cardData; // @synthesize cardData;

@@ -16,7 +16,7 @@
 + (_Bool)includeUsernameInTimelines;
 + (long long)magicTapAction;
 + (_Bool)areLinksShortened;
-+ (_Bool)isHashtagPronouciationAllowed;
++ (_Bool)isHashtagPronounciationAllowed;
 
 @end
 

@@ -8,10 +8,14 @@
 
 #import <T1Twitter/T1OnboardingFooterSpec-Protocol.h>
 
-@class NSString;
+@class NSArray, NSString;
+@protocol TFNAttributedTextViewDelegate;
 
 @interface T1OnboardingFooterSpec : NSObject <T1OnboardingFooterSpec>
 {
+    NSArray *_detailActiveRanges;
+    NSString *_detailText;
+    id <TFNAttributedTextViewDelegate> _detailTextViewDelegate;
     NSString *_nextLabel;
     NSString *_skipLabel;
 }
@@ -19,7 +23,11 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *skipLabel; // @synthesize skipLabel=_skipLabel;
 @property(readonly, nonatomic) NSString *nextLabel; // @synthesize nextLabel=_nextLabel;
+@property(readonly, nonatomic) __weak id <TFNAttributedTextViewDelegate> detailTextViewDelegate; // @synthesize detailTextViewDelegate=_detailTextViewDelegate;
+@property(readonly, nonatomic) NSString *detailText; // @synthesize detailText=_detailText;
+@property(readonly, nonatomic) NSArray *detailActiveRanges; // @synthesize detailActiveRanges=_detailActiveRanges;
 - (id)initWithNextLabel:(id)arg1 skipLabel:(id)arg2;
+- (id)initWithNextLabel:(id)arg1 skipLabel:(id)arg2 detailText:(id)arg3 detailActiveRanges:(id)arg4 detailTextViewDelegate:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

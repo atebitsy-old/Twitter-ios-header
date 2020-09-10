@@ -62,6 +62,8 @@
 @property(nonatomic) double detailTextPadding; // @synthesize detailTextPadding=_detailTextPadding;
 @property(nonatomic) _Bool multipleDetailTextLines; // @synthesize multipleDetailTextLines=_multipleDetailTextLines;
 @property(nonatomic) _Bool multipleTextLines; // @synthesize multipleTextLines=_multipleTextLines;
+- (id)accessibilityValue;
+- (id)accessibilityLabel;
 - (void)_configureAccessibility;
 - (void)setSelectionStyle:(long long)arg1;
 - (void)_tfn_switchAction:(id)arg1;

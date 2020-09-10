@@ -6,10 +6,11 @@
 
 #import <UIKit/UIView.h>
 
-@class T1AvatarImageView, T1ProfileAvatarImageView, TFNTwitterAccount, UIImageView, UILabel;
+@class T1AvatarImageView, T1ProfileAvatarImageView, T1UserBadger, TFNTwitterAccount, UIImageView, UILabel;
 
 @interface T1AccountAvatarAndNameView : UIView
 {
+    T1UserBadger *_userBadger;
     T1AvatarImageView *_avatarImageView;
     UIImageView *_verifiedOrProtectedBadge;
     UILabel *_fullNameLabel;
@@ -29,6 +30,7 @@
 - (void)_accountUserDidUpdate:(id)arg1;
 - (void)layoutSubviews;
 - (void)_t1_updateSubviews;
+- (id)userBadger;
 - (void)dealloc;
 - (id)initWithFrame:(struct CGRect)arg1;
 

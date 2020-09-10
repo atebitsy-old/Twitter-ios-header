@@ -7,7 +7,6 @@
 #import <UIKit/UIColor.h>
 
 @interface UIColor (TAEColors)
-+ (id)colorWithRosettaColorValue:(long long)arg1;
 + (void)setTwitterColors:(id)arg1;
 + (id)twitterColors;
 - (id)twitterColorWithHighlightAlpha;

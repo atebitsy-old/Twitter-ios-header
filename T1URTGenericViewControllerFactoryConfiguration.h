@@ -18,7 +18,7 @@
     // Error parsing type: , name: cacheID
     // Error parsing type: , name: scribeContext
     // Error parsing type: , name: renderPerformanceEventName
-    // Error parsing type: , name: scrollPerformanceMetricScreenIdentifier
+    // Error parsing type: , name: performanceMetricScreenIdentifier
     // Error parsing type: , name: contentSuppressionSupport
     // Error parsing type: , name: actionExecutor
     // Error parsing type: , name: requestInitialTimeline
