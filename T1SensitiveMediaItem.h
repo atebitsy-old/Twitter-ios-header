@@ -14,8 +14,7 @@
 {
 }
 
-+ (id)_t1_sensitiveMediaDescriptionString;
-+ (id)_t1_sensitiveMediaTitleString;
+- (id)accessibilityHint;
 @property(readonly, nonatomic) NSString *accessibilityLabel;
 @property(readonly, nonatomic) NSDictionary *scribeParameters;
 @property(readonly, nonatomic) TFSURTRichText *tombstoneText;

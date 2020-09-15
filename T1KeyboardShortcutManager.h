@@ -40,10 +40,12 @@
     UIKeyCommand *_accountListKeyCommand;
     UIKeyCommand *_nextAccountKeyCommand;
     UIKeyCommand *_previousAccountKeyCommand;
+    UIKeyCommand *_toggleSideBarKeyCommand;
 }
 
 + (SEL)actionForExpandingButtonItemCategory:(unsigned long long)arg1;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UIKeyCommand *toggleSideBarKeyCommand; // @synthesize toggleSideBarKeyCommand=_toggleSideBarKeyCommand;
 @property(readonly, nonatomic) UIKeyCommand *previousAccountKeyCommand; // @synthesize previousAccountKeyCommand=_previousAccountKeyCommand;
 @property(readonly, nonatomic) UIKeyCommand *nextAccountKeyCommand; // @synthesize nextAccountKeyCommand=_nextAccountKeyCommand;
 @property(readonly, nonatomic) UIKeyCommand *accountListKeyCommand; // @synthesize accountListKeyCommand=_accountListKeyCommand;

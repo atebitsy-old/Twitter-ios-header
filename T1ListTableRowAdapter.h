@@ -19,7 +19,6 @@
 - (void).cxx_destruct;
 @property(nonatomic) long long displayMode; // @synthesize displayMode=_displayMode;
 - (void)_t1_setPropertiesForContentView:(id)arg1 withItem:(id)arg2;
-- (void)dataViewController:(id)arg1 didSelectItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (id)dataViewController:(id)arg1 tableViewCellForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (double)dataViewController:(id)arg1 tableViewHeightForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (id)init;

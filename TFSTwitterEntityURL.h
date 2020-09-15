@@ -13,6 +13,7 @@
     NSString *_url;
     NSString *_expandedURL;
     NSString *_originalDisplayURL;
+    NSString *_adsOverrideURL;
     NSString *_htmlTitle;
     NSString *_customTitle;
 }
@@ -21,6 +22,7 @@
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *customTitle; // @synthesize customTitle=_customTitle;
 @property(readonly, copy, nonatomic) NSString *htmlTitle; // @synthesize htmlTitle=_htmlTitle;
+@property(readonly, copy, nonatomic) NSString *adsOverrideURL; // @synthesize adsOverrideURL=_adsOverrideURL;
 @property(readonly, copy, nonatomic) NSString *originalDisplayURL; // @synthesize originalDisplayURL=_originalDisplayURL;
 @property(readonly, copy, nonatomic) NSString *expandedURL; // @synthesize expandedURL=_expandedURL;
 @property(readonly, copy, nonatomic) NSString *url; // @synthesize url=_url;
@@ -41,6 +43,7 @@
 - (long long)rangeFlavor;
 @property(readonly, copy, nonatomic) NSString *displayString;
 - (void)_setEntityURLPropertiesForCopy:(id)arg1;
+- (id)copyWithAdsOverrideURL:(id)arg1;
 - (id)copyWithURL:(id)arg1;
 - (id)copyWithHTMLTitle:(id)arg1;
 - (id)copyWithCustomTitle:(id)arg1;

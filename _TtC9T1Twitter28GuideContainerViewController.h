@@ -29,6 +29,7 @@ __attribute__((visibility("hidden")))
 - (id)scribePage;
 - (id)scribe;
 - (_Bool)t1_showsExpandedSearchBox;
+- (_Bool)t1_showsToggleSideBarAction;
 - (_Bool)t1_showsDashAction;
 - (_Bool)t1_showsActionButton;
 - (_Bool)tfn_isContentScrolledToBottom;

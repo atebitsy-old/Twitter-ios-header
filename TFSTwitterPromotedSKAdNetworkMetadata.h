@@ -23,8 +23,8 @@
 @property(readonly, nonatomic) NSNumber *timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, nonatomic) NSNumber *campaignID; // @synthesize campaignID=_campaignID;
 @property(readonly, nonatomic) NSUUID *nonce; // @synthesize nonce=_nonce;
-@property(readonly, nonatomic) NSString *adNetworkSignature; // @synthesize adNetworkSignature=_adNetworkSignature;
-@property(readonly, nonatomic) NSString *networkID; // @synthesize networkID=_networkID;
+@property(readonly, copy, nonatomic) NSString *adNetworkSignature; // @synthesize adNetworkSignature=_adNetworkSignature;
+@property(readonly, copy, nonatomic) NSString *networkID; // @synthesize networkID=_networkID;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

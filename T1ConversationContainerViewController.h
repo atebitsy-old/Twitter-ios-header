@@ -25,6 +25,7 @@
     // Error parsing type: , name: backingNavigationMetadata
     // Error parsing type: , name: backingSourceNavigationMetadata
     // Error parsing type: , name: didScribeReply
+    // Error parsing type: , name: didLogCardEvents
 }
 
 - (void).cxx_destruct;
@@ -36,6 +37,7 @@
 - (void)tweetDeletedWithNotification:(id)arg1;
 - (void)updateInsets;
 @property(nonatomic, readonly) _Bool tfn_prefersTabBarShadowHidden;
+- (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;

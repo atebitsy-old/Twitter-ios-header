@@ -8,8 +8,8 @@
 
 #import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 
-@class CALayer, NSString, T1MomentCalculatedMediaRenderLayoutView, T1MomentCapsuleInfoViewTheme, T1MomentCapsuleLoadingView, T1UserBadge, T1UserBadger, TFNAttributedTextView, TFNLegacyButton, TFNTwitterAccount, TFNTwitterMomentCapsule, TIPImagePipeline, UIButton, UIImage, UIImageView, UILabel;
-@protocol T1MomentCapsuleInfoViewDelegate, T1MomentCapsuleInfoViewLayoutDelegate;
+@class CALayer, NSString, T1MomentCalculatedMediaRenderLayoutView, T1MomentCapsuleInfoViewTheme, T1MomentCapsuleLoadingView, T1UserBadge, T1UserBadger, TFNAttributedTextView, TFNLegacyButton, TFNTwitterAccount, TFNTwitterMoment, TIPImagePipeline, UIButton, UIImage, UIImageView, UILabel;
+@protocol T1MomentCapsuleInfoViewLayoutDelegate;
 
 @interface T1MomentCapsuleInfoView : UIView <T1ImageViewFetchHelperDelegate>
 {
@@ -28,9 +28,8 @@
     UIView *_thumbnailView;
     TFNLegacyButton *_followButton;
     T1MomentCapsuleLoadingView *_loadingView;
-    TFNTwitterMomentCapsule *_momentViewModel;
+    TFNTwitterMoment *_momentViewModel;
     TFNTwitterAccount *_account;
-    id <T1MomentCapsuleInfoViewDelegate> _delegate;
     T1MomentCapsuleInfoViewTheme *_theme;
     id <T1MomentCapsuleInfoViewLayoutDelegate> _layoutDelegate;
     UIImage *_customThumbnailImage;
@@ -54,9 +53,8 @@
 @property(retain, nonatomic) UIImage *customThumbnailImage; // @synthesize customThumbnailImage=_customThumbnailImage;
 @property(nonatomic) __weak id <T1MomentCapsuleInfoViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 @property(retain, nonatomic) T1MomentCapsuleInfoViewTheme *theme; // @synthesize theme=_theme;
-@property(nonatomic) __weak id <T1MomentCapsuleInfoViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) __weak TFNTwitterAccount *account; // @synthesize account=_account;
-@property(readonly, nonatomic) TFNTwitterMomentCapsule *momentViewModel; // @synthesize momentViewModel=_momentViewModel;
+@property(readonly, nonatomic) TFNTwitterMoment *momentViewModel; // @synthesize momentViewModel=_momentViewModel;
 @property(retain, nonatomic) T1MomentCapsuleLoadingView *loadingView; // @synthesize loadingView=_loadingView;
 @property(retain, nonatomic) TFNLegacyButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) UIView *thumbnailView; // @synthesize thumbnailView=_thumbnailView;

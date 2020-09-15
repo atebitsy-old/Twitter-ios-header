@@ -9,5 +9,6 @@
 @protocol TFSStateMachineDelegate
 - (void)stateMachine:(TFSStateMachine *)arg1 failedTraversingEdge:(TFSStateMachineEdge *)arg2 fromNode:(TFSStateMachineNode *)arg3;
 - (void)stateMachine:(TFSStateMachine *)arg1 completedTransition:(TFSStateMachineTransition *)arg2;
+- (void)stateMachineRestarted:(TFSStateMachine *)arg1;
 @end
 

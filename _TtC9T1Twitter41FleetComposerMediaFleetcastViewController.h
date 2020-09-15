@@ -9,6 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter41FleetComposerMediaFleetcastViewController : TFNViewController
 {
+    // Error parsing type: , name: guide
     // Error parsing type: , name: captureViewController
     // Error parsing type: , name: cameraViewController
     // Error parsing type: , name: account
@@ -29,8 +30,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: goLiveButton
     // Error parsing type: , name: goLiveButtonSpinner
     // Error parsing type: , name: goLiveConnectingText
-    // Error parsing type: , name: goLiveButtonBottomAnchor
-    // Error parsing type: , name: goLiveButtonBottomAnchorForKeyboard
     // Error parsing type: , name: constraints
     // Error parsing type: , name: fleetcastViewControllerPesentationState
     // Error parsing type: , name: twitterInviteeUsersPrePublish

@@ -16,6 +16,7 @@
     // Error parsing type: , name: sponsorshipOrganizationWebsite
     // Error parsing type: , name: sponsorshipType
     // Error parsing type: , name: disclaimerType
+    // Error parsing type: , name: skAdNetworkMetadata
 }
 
 @end

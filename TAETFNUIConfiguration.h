@@ -10,7 +10,6 @@
 {
 }
 
-- (id)buttonFontGroup;
 - (id)fontGroup;
 - (id)colorPalette;
 

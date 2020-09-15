@@ -16,6 +16,7 @@
 - (struct CGSize)layoutAttachmentAsPhotoVideoForward:(id)arg1 type:(unsigned long long)arg2 forViewModel:(id)arg3 options:(unsigned long long)arg4 account:(id)arg5 maxX:(double)arg6 contentX:(double)arg7 contentY:(double)arg8;
 - (double)layoutMediaFirstAnatomy:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 attachmentType:(unsigned long long)arg5 layoutMetrics:(id)arg6 contentX:(double)arg7 contentMaxX:(double)arg8 contentY:(double)arg9;
 - (double)layoutTextFirstAnatomy:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 attachmentType:(unsigned long long)arg5 layoutMetrics:(id)arg6 contentX:(double)arg7 contentY:(double)arg8 contentWidth:(double)arg9 maxContentHeight:(double)arg10;
+- (double)_t1_layoutAttachmentSensitiveContentInterstitial:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 attachmentType:(unsigned long long)arg5 layoutMetrics:(id)arg6 contentX:(double)arg7 contentMaxX:(double)arg8 contentY:(double)arg9;
 - (double)_t1_layoutMedia:(id)arg1 forViewModel:(id)arg2 options:(unsigned long long)arg3 account:(id)arg4 layoutMetrics:(id)arg5 attachmentType:(unsigned long long)arg6 contentX:(double)arg7 contentMaxX:(double)arg8 contentY:(double)arg9;
 - (id)layoutStateForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3 width:(double)arg4 layoutMetrics:(id)arg5 withPreviousLayoutState:(id)arg6;
 

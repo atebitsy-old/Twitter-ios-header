@@ -10,10 +10,12 @@
 
 @interface TFNViewDataViewAdapterCollectionViewCell : TFNCollectionViewCell
 {
+    _Bool _viewsObserveContentEdgeInsets;
     UIView *_view;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool viewsObserveContentEdgeInsets; // @synthesize viewsObserveContentEdgeInsets=_viewsObserveContentEdgeInsets;
 @property(retain, nonatomic) UIView *view; // @synthesize view=_view;
 - (void)cleanup;
 - (void)layoutSubviews;

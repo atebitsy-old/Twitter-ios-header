@@ -6,14 +6,15 @@
 
 #import <TFNUI/NSObject-Protocol.h>
 
-@protocol TFNLegacyButtonFontGroup, TFNUIColorPalette, TFNUIFontGroup;
+@protocol TFNUIColorPalette, TFNUIFontGroup;
 
 @protocol TFNUIConfiguration <NSObject>
-@property(readonly, nonatomic) id <TFNLegacyButtonFontGroup> buttonFontGroup;
 @property(readonly, nonatomic) id <TFNUIFontGroup> fontGroup;
 @property(readonly, nonatomic) id <TFNUIColorPalette> colorPalette;
 @property(readonly, nonatomic) _Bool isReduceMotionSettingEnabled;
 @property(readonly, nonatomic) _Bool isHashtagPronounciationAllowed;
+@property(readonly, nonatomic) _Bool isMenuOnBarButtonItemTapEnabled;
+@property(readonly, nonatomic) _Bool isMenuOnButtonTapEnabled;
 @property(readonly, nonatomic) _Bool isReimplementedTFNButtonEnabled;
 @property(readonly, nonatomic) _Bool isIgnoreTraitCollectionUIStyleInEqualityEnabled;
 @property(readonly, nonatomic) _Bool isUndoScrollToTopEnabled;

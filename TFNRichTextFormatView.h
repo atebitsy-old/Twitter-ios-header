@@ -10,8 +10,10 @@
 {
 }
 
+- (void)_t1_dynamicColorsDidReload:(id)arg1;
 - (void)setAttributedTextWithRichTextFormatDocumentPath:(id)arg1;
 - (void)setAttributedTextWithRichTextFormatData:(id)arg1;
+- (void)dealloc;
 - (void)_tfn_initialize;
 - (id)initWithFrame:(struct CGRect)arg1 textContainer:(id)arg2;
 - (id)initWithCoder:(id)arg1;

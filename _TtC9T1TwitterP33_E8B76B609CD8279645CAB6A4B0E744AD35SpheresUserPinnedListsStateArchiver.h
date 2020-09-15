@@ -8,7 +8,7 @@
 
 @interface _TtC9T1TwitterP33_E8B76B609CD8279645CAB6A4B0E744AD35SpheresUserPinnedListsStateArchiver : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: account
+    // Error parsing type: , name: accountID
     // Error parsing type: , name: archiverQueue
     // Error parsing type: , name: $__lazy_storage_$_pinnedListsFilePath
 }

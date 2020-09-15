@@ -41,6 +41,7 @@
 @property(nonatomic) long long compressHeightWhenVerticallyCompact; // @synthesize compressHeightWhenVerticallyCompact=_compressHeightWhenVerticallyCompact;
 @property(retain, nonatomic) UIColor *customShadowColor; // @synthesize customShadowColor=_customShadowColor;
 - (id)_tfn_contentView:(id)arg1 hitTest:(struct CGPoint)arg2 withEvent:(id)arg3;
+- (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (void)setCenter:(struct CGPoint)arg1;

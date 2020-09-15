@@ -30,6 +30,7 @@
 @property(readonly, nonatomic) double tavPlayerDiagnosticStateTrackerGracePeriodInterval;
 @property(readonly, nonatomic) unsigned long long contentRetryLimit;
 @property(readonly, nonatomic) _Bool isAVRKitPreferredForAllVideos;
+- (_Bool)isShortFormCompleteEnabled;
 - (_Bool)isPromotedAudibleViewEnabled;
 - (_Bool)isVideoAnalyticsScribeThriftVerifyRequiredFieldsEnabled;
 @end

@@ -8,8 +8,6 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class TFNTwitterMoment;
-
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter30URTTimelineMomentCardViewModel : NSObject <NSObject>
 {
@@ -20,7 +18,6 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (id)init;
-@property(nonatomic, readonly) TFNTwitterMoment *moment; // @synthesize moment;
 
 @end
 

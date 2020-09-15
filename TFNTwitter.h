@@ -23,6 +23,7 @@
     double _clockDelta;
     _Bool _teamsAccountUpdateNeeded;
     _Bool _updatingTeamsAccount;
+    _Bool _darkReadIsShutdown;
     NSArray *_accounts;
     NSRecursiveLock *_teamsAccountsLock;
     NSMutableDictionary *_retainedCredentials;
@@ -41,7 +42,6 @@
 + (id)geoDataProviderAccessQueue;
 + (id)_legacyGroupUserDefaultsPlistPath;
 + (_Bool)_migrateLegacyUserDefaultsPlistIfNecessary:(id)arg1 groupUserDefaults:(id)arg2 standardUserDefaults:(id)arg3;
-+ (_Bool)hasAccountsPersistedInUserDefaults;
 + (_Bool)isTwitterNeverPersistedOrNotAccessibleInStandardUserDefaults;
 + (void)saveStandardAndGroupUserDefaults;
 + (void)saveSharedTwitter;
@@ -57,6 +57,7 @@
 @property(nonatomic) long long heartbeatCount; // @synthesize heartbeatCount=_heartbeatCount;
 @property(copy, nonatomic) CDUnknownBlockType buildOverrideAccountPushSettingsManager; // @synthesize buildOverrideAccountPushSettingsManager=_buildOverrideAccountPushSettingsManager;
 @property(retain, nonatomic) NSMutableDictionary *retainedCredentials; // @synthesize retainedCredentials=_retainedCredentials;
+@property(nonatomic) _Bool darkReadIsShutdown; // @synthesize darkReadIsShutdown=_darkReadIsShutdown;
 @property(readonly, nonatomic) NSRecursiveLock *teamsAccountsLock; // @synthesize teamsAccountsLock=_teamsAccountsLock;
 @property(nonatomic) _Bool updatingTeamsAccount; // @synthesize updatingTeamsAccount=_updatingTeamsAccount;
 @property(nonatomic) _Bool teamsAccountUpdateNeeded; // @synthesize teamsAccountUpdateNeeded=_teamsAccountUpdateNeeded;
@@ -121,10 +122,16 @@
 - (void)_saveOAuthTokenSecretForAccounts;
 - (id)_userDefaultsDictionaryValueForGroupUserDefaults:(_Bool)arg1;
 - (void)_loadWithUserDefaultsDictionary:(id)arg1;
-- (void)_loadFromUserDefaultsWithLegacyPlistMigration:(_Bool)arg1;
+- (void)_loadFromUserDefaultsWithLegacyPlistMigration;
 - (void)dealloc;
 - (id)init;
 - (void)scheduleRecurringForegroundServerAccountBadgesFetchTask;
+- (void)resurrectAndResetShutdownCacheIfNeeded;
+@property(readonly, nonatomic, getter=isAppStateShouldResurrect) _Bool appStateShouldResurrect;
+@property(readonly, nonatomic, getter=isAppStateShouldShutdown) _Bool appStateShouldShutdown;
+- (_Bool)darkReadIsAppUpdated;
+- (void)darkReadResurrectActiveAccountsFromUpdate:(_Bool)arg1;
+- (void)darkReadShutdownActiveAccounts;
 - (void)scheduleRecurringHashflagsUpdateTask;
 @property(nonatomic, readonly) T1HashflagService *hashflagService;
 - (id)_createUpdateActiveAccountForPushBadgingTask:(id)arg1;

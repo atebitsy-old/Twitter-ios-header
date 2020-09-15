@@ -10,6 +10,8 @@
 {
 }
 
+- (_Bool)isMenuOnBarButtonItemTapEnabled;
+- (_Bool)isMenuOnButtonTapEnabled;
 - (_Bool)isReimplementedTFNButtonEnabled;
 - (_Bool)isIgnoreTraitCollectionUIStyleInEqualityEnabled;
 - (_Bool)isReduceMotionSettingEnabled;

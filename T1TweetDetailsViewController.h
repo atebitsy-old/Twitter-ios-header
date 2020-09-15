@@ -74,6 +74,7 @@
     _Bool _isLoadingDescendants;
     _Bool _isTranslationImpressionScribed;
     _Bool _isAutoTranslationImpressionScribed;
+    _Bool _didLogCardEvents;
     TFNTwitterAccount *_composingAccount;
     TFSTwitterScribeContext *_sourceScribeContext;
     TFNTwitterStatus *_status;
@@ -113,6 +114,7 @@
 @property(nonatomic) unsigned long long loadState; // @synthesize loadState=_loadState;
 @property(nonatomic) unsigned long long translationState; // @synthesize translationState=_translationState;
 @property(retain, nonatomic) T1URTTimelineCursorTableRowAdapter *urtCursorAdapter; // @synthesize urtCursorAdapter=_urtCursorAdapter;
+@property(nonatomic) _Bool didLogCardEvents; // @synthesize didLogCardEvents=_didLogCardEvents;
 @property(nonatomic) _Bool isAutoTranslationImpressionScribed; // @synthesize isAutoTranslationImpressionScribed=_isAutoTranslationImpressionScribed;
 @property(nonatomic) _Bool isTranslationImpressionScribed; // @synthesize isTranslationImpressionScribed=_isTranslationImpressionScribed;
 @property(nonatomic) _Bool isLoadingDescendants; // @synthesize isLoadingDescendants=_isLoadingDescendants;
@@ -250,6 +252,7 @@
 - (id)_t1_scribeComponentForStatus:(id)arg1;
 - (void)_t1_scribeSendReply;
 - (void)_scribeReply;
+- (void)_t1_logCardEvents;
 - (id)scribeContext;
 - (id)scribeImpressionParametersForIndexPath:(id)arg1;
 - (id)scribeImpressionParameters;

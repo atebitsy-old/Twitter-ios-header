@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: fetchingState
     // Error parsing type: , name: signPostRecorder
+    // Error parsing type: , name: shiftToMainRecorder
 }
 
 @end

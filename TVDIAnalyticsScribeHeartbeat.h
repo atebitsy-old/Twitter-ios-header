@@ -37,7 +37,7 @@
     long long _audibleDurationMillis;
 }
 
-+ (id)instanceWithStartProgramDateTimeMillis:(long long)arg1 endProgramDateTimeMillis:(long long)arg2 bufferingDurationMillis:(long long)arg3 sampledBitsPerSecond:(int)arg4 dataUsageBytes:(long long)arg5 percentInView:(int)arg6 bandwidthEstimateBps:(long long)arg7 bitrateMetrics:(id)arg8 liveOrNonLiveHeartbeatMetrics:(id)arg9 bufferingCount:(int)arg10 audibleDurationMillis:(long long)arg11 error:(id *)arg12;
++ (id)instanceWithStartProgramDateTimeMillis:(long long)arg1 endProgramDateTimeMillis:(long long)arg2 bufferingDurationMillis:(long long)arg3 dataUsageBytes:(long long)arg4 percentInView:(int)arg5 liveOrNonLiveHeartbeatMetrics:(id)arg6 bufferingCount:(int)arg7 error:(id *)arg8;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool audibleDurationMillisIsSet; // @synthesize audibleDurationMillisIsSet=_audibleDurationMillisIsSet;
 @property(nonatomic) long long audibleDurationMillis; // @synthesize audibleDurationMillis=_audibleDurationMillis;
@@ -67,7 +67,7 @@
 - (void)read:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithStartProgramDateTimeMillis:(long long)arg1 endProgramDateTimeMillis:(long long)arg2 bufferingDurationMillis:(long long)arg3 sampledBitsPerSecond:(int)arg4 dataUsageBytes:(long long)arg5 percentInView:(int)arg6 bandwidthEstimateBps:(long long)arg7 bitrateMetrics:(id)arg8 liveOrNonLiveHeartbeatMetrics:(id)arg9 bufferingCount:(int)arg10 audibleDurationMillis:(long long)arg11;
+- (id)initWithStartProgramDateTimeMillis:(long long)arg1 endProgramDateTimeMillis:(long long)arg2 bufferingDurationMillis:(long long)arg3 dataUsageBytes:(long long)arg4 percentInView:(int)arg5 liveOrNonLiveHeartbeatMetrics:(id)arg6 bufferingCount:(int)arg7;
 @property(readonly, copy) NSString *description;
 
 // Remaining properties

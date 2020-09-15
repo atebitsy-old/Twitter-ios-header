@@ -8,33 +8,25 @@
 
 #import <TFNUI/TFNTooltipContentView-Protocol.h>
 
-@class NSArray, NSString, TFNLegacyButton, UIColor, UIFont, UILabel;
+@class NSString, UIColor, UIFont, UILabel;
 
 @interface TFNTextTooltipContentView : UIView <TFNTooltipContentView>
 {
     _Bool _shouldCenterLabel;
     CDUnknownBlockType contentSizeChangedBlock;
-    TFNLegacyButton *_button;
-    CDUnknownBlockType _didTapButtonBlock;
     UILabel *_label;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *label; // @synthesize label=_label;
-@property(copy, nonatomic) CDUnknownBlockType didTapButtonBlock; // @synthesize didTapButtonBlock=_didTapButtonBlock;
 @property(nonatomic) _Bool shouldCenterLabel; // @synthesize shouldCenterLabel=_shouldCenterLabel;
-@property(retain, nonatomic) TFNLegacyButton *button; // @synthesize button=_button;
 @property(copy, nonatomic) CDUnknownBlockType contentSizeChangedBlock; // @synthesize contentSizeChangedBlock;
 - (struct CGSize)private_labelSizeThatFits:(struct CGSize)arg1;
-- (struct CGSize)private_buttonSizeThatFits:(struct CGSize)arg1;
-- (void)private_buttonTapped;
-@property(readonly, nonatomic) NSArray *tappableViews;
 - (void)tfn_fontSizeChanged;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)layoutSubviews;
 @property(retain, nonatomic) UIFont *labelFont;
 @property(retain, nonatomic) UIColor *labelColor;
-@property(copy, nonatomic) NSString *buttonText;
 @property(copy, nonatomic) NSString *labelText;
 - (id)initWithFrame:(struct CGRect)arg1;
 

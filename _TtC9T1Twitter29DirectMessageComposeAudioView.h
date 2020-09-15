@@ -38,6 +38,7 @@ __attribute__((visibility("hidden")))
 - (long long)indexOfAccessibilityElement:(id)arg1;
 - (id)accessibilityElementAtIndex:(long long)arg1;
 - (long long)accessibilityElementCount;
+- (void)didTapPlaybackBubble;
 - (id)initWithCoder:(id)arg1;
 @property(nonatomic, readonly) UIButton *playButton; // @synthesize playButton;
 @property(nonatomic, readonly) UIButton *cancelButton; // @synthesize cancelButton;

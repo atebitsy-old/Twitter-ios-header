@@ -14,6 +14,7 @@
 @property(nonatomic) unsigned long long emptyContentAlignment; // @synthesize emptyContentAlignment=_emptyContentAlignment;
 - (void)_t1_setPropertiesForContentView:(id)arg1 withItem:(id)arg2;
 - (struct CGSize)_t1_getContentViewSizeForItem:(id)arg1 controller:(id)arg2;
+- (void)_t1_initializeEmptyContentPromptViewForCell:(id)arg1;
 - (_Bool)dataViewController:(id)arg1 shouldHighlightItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (id)dataViewController:(id)arg1 collectionViewCellForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (struct CGSize)dataViewController:(id)arg1 collectionViewSizeForItem:(id)arg2 constrainedToSize:(struct CGSize)arg3 withOptions:(id)arg4 atIndexPath:(id)arg5;

@@ -78,7 +78,6 @@
 - (void)showInView:(id)arg1 atPoint:(struct CGPoint)arg2 delay:(double)arg3 animationType:(unsigned long long)arg4;
 - (void)_tooltipTapped:(id)arg1;
 - (_Bool)tfn_dashGestureEnabled;
-- (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
 - (id)initWithFrame:(struct CGRect)arg1 contentView:(id)arg2;
 - (void)dealloc;
 - (void)removeFromSuperview;

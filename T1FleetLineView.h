@@ -16,6 +16,7 @@
     // Error parsing type: , name: loadingView
     // Error parsing type: , name: account
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: isFeatureHighlightDispalyed
     // Error parsing type: , name: didAddEmptyThread
     // Error parsing type: , name: showsStoriesComposer
     // Error parsing type: , name: timelinePollTimer

@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1ToastViewModel-Protocol.h>
 
-@class NSArray, NSString, T1ToastAction, T1ToastScribeContext, TFNTwitterAccount, TFSTwitterPromotedContent, TFSTwitterUserReference, UIColor;
+@class NSArray, NSString, T1ToastAction, T1ToastScribeContext, TFNTwitterAccount, TFSTwitterPromotedContent, TFSTwitterUserReference, UIColor, UIImage;
 @protocol TFSTwitterCanonicalUser;
 
 @interface T1ToggleRetweetsForUserToast : NSObject <T1ToastViewModel>
@@ -49,6 +49,7 @@
 @property(readonly, nonatomic) T1ToastAction *primaryAction;
 @property(readonly, nonatomic) T1ToastScribeContext *scribeContext;
 @property(readonly) Class superclass;
+@property(readonly, nonatomic) UIImage *thumbnailImage;
 @property(readonly, nonatomic) id <TFSTwitterCanonicalUser> user;
 
 @end

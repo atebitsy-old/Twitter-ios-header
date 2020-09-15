@@ -11,7 +11,9 @@
 }
 
 + (id)notInterestedTopicsViewControllerForAccount:(id)arg1;
-+ (id)followedTopicsViewControllerForAccount:(id)arg1;
++ (id)followedTopicsViewControllerForUsername:(id)arg1 account:(id)arg2;
++ (id)followedTopicsViewControllerForUserID:(long long)arg1 username:(id)arg2 account:(id)arg3;
++ (id)followedTopicsViewControllerForAccount:(id)arg1 manage:(_Bool)arg2;
 + (id)topicManagementViewControllerForAccount:(id)arg1;
 - (id)init;
 

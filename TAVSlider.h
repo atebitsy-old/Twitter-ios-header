@@ -23,7 +23,6 @@
 @property(copy, nonatomic) UIColor *trackActiveColor; // @synthesize trackActiveColor=_trackActiveColor;
 - (void)private_tapAction:(id)arg1;
 - (void)private_updateImages;
-- (long long)semanticContentAttribute;
 - (void)private_commonInit;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

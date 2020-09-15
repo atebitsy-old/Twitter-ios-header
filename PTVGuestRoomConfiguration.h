@@ -33,6 +33,7 @@
 @property(readonly, nonatomic) NSString *vidManToken; // @synthesize vidManToken=_vidManToken;
 @property(readonly, nonatomic) long long roomBehavior; // @synthesize roomBehavior=_roomBehavior;
 @property(readonly, nonatomic) NSString *roomID; // @synthesize roomID=_roomID;
+- (id)copyWithRoomBehavior:(long long)arg1;
 - (void)calculateInitialBitrateIfNeeded;
 - (id)initWithRoomID:(id)arg1 roomBehavior:(long long)arg2 streamName:(id)arg3 vidManToken:(id)arg4 bitsPerSecond:(id)arg5 videoBitrateRatio:(id)arg6 janusURL:(id)arg7 guestServicesSessionUUID:(id)arg8 isAudioOnly:(_Bool)arg9 isPrivate:(_Bool)arg10;
 

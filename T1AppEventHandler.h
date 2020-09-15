@@ -46,7 +46,6 @@
         unsigned int streamDidUpdate:1;
         unsigned int isUserReady:1;
         unsigned int didLogFirstDMRefresh:1;
-        unsigned int needHandleFirstForegroundAfterBackgroundLaunch:1;
     } _flags;
 }
 
@@ -86,6 +85,7 @@
 - (void)saveApplicationGlobalState;
 - (void)_t1_startWorkForApplicationUpgrade;
 - (void)_t1_scribeApplicationLaunchAction;
+- (void)_t1_updateShutdownState;
 - (void)_t1_enqueueHandleLaunchURL;
 - (_Bool)_t1_didOpenFromURLOrPush;
 - (_Bool)_t1_didOpenFromURL;
@@ -142,7 +142,6 @@
 - (_Bool)_t1_shouldUseCrashlyticsBetaButton;
 - (void)_t1_sanitizeAccountInfoFiles;
 - (void)_t1_scheduleFeatureSwitchesCrashlyticsLogger;
-- (void)_t1_scheduleTvConnectionDeprecation;
 - (void)_t1_scheduleDeviceTokenRegistration;
 - (id)_t1_accountForStartUpUsingPushAccount:(_Bool)arg1;
 - (id)_t1_previousSessionAccount;

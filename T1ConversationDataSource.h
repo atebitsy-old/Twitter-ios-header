@@ -15,6 +15,9 @@
 {
     _Bool _initialPopulationHasCompleted;
     _Bool _initialSelectedStatusHasBeenSet;
+    _Bool _conversationEmphasizedConnectorLinesEnabled;
+    _Bool _connectorEmphasisDirectAncestorOnly;
+    _Bool _connectorEmphasisDirectDescendentsOnly;
     id <T1ConversationDataSourceDelegate> _delegate;
     TFNTwitterAccount *_account;
     TFSTwitterScribeContext *_scribeContext;
@@ -31,15 +34,16 @@
     NSMutableDictionary *_statusIDToEntryIDCache;
     NSMutableDictionary *_nodeCache;
     NSArray *_cachedFlattenedNodeTreeNodes;
-    NSArray *_entryIDsForAncestorWithConnectorsConnectingToSelectedStatus;
     NSMutableSet *_orphanNodes;
     NSMutableSet *_moderatedEntryIDs;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool connectorEmphasisDirectDescendentsOnly; // @synthesize connectorEmphasisDirectDescendentsOnly=_connectorEmphasisDirectDescendentsOnly;
+@property(readonly, nonatomic) _Bool connectorEmphasisDirectAncestorOnly; // @synthesize connectorEmphasisDirectAncestorOnly=_connectorEmphasisDirectAncestorOnly;
+@property(readonly, nonatomic) _Bool conversationEmphasizedConnectorLinesEnabled; // @synthesize conversationEmphasizedConnectorLinesEnabled=_conversationEmphasizedConnectorLinesEnabled;
 @property(retain, nonatomic) NSMutableSet *moderatedEntryIDs; // @synthesize moderatedEntryIDs=_moderatedEntryIDs;
 @property(retain, nonatomic) NSMutableSet *orphanNodes; // @synthesize orphanNodes=_orphanNodes;
-@property(retain, nonatomic) NSArray *entryIDsForAncestorWithConnectorsConnectingToSelectedStatus; // @synthesize entryIDsForAncestorWithConnectorsConnectingToSelectedStatus=_entryIDsForAncestorWithConnectorsConnectingToSelectedStatus;
 @property(retain, nonatomic) NSArray *cachedFlattenedNodeTreeNodes; // @synthesize cachedFlattenedNodeTreeNodes=_cachedFlattenedNodeTreeNodes;
 @property(retain, nonatomic) NSMutableDictionary *nodeCache; // @synthesize nodeCache=_nodeCache;
 @property(retain, nonatomic) NSMutableDictionary *statusIDToEntryIDCache; // @synthesize statusIDToEntryIDCache=_statusIDToEntryIDCache;
@@ -73,12 +77,15 @@
 - (id)nodeForStatusID:(long long)arg1;
 - (id)nodeForEntryID:(id)arg1;
 - (id)_t1_entryIDForNodeConnectedToSelectedStatus:(id)arg1;
-- (id)_t1_entryIDsForNodeConnectedToSelectedStatus;
-@property(readonly, nonatomic) NSArray *entryIDsForDecendentWithConnectorsConnectingToSelectedStatus;
+- (id)_t1_entryIDsForNodesDescendingFromNode:(id)arg1;
+@property(readonly, nonatomic) NSArray *entryIDsForSelectedStatusAncestors;
+@property(readonly, nonatomic) NSArray *entryIDsForSelectedStatusDescendents;
 - (void)_t1_setVisibleSiblingConnectorLevels:(id)arg1 entryIDs:(id)arg2 forNode:(id)arg3;
 - (id)_t1_connectorLevelForNode:(id)arg1;
 - (void)_t1_trimSucceedingNodes:(id)arg1 upToLevel:(long long)arg2;
 - (void)_t1_calculateVisibleConnectorsForConversation:(id)arg1;
+- (_Bool)shouldShowAncestorHighlightingAtLevel:(unsigned long long)arg1 forNode:(id)arg2;
+- (_Bool)shouldShowParentHighlightingForNode:(id)arg1;
 - (void)nodeChildVisibilityChanged:(id)arg1;
 - (void)completedRenderingForUpdate;
 @property(readonly, nonatomic) _Bool isEmpty;

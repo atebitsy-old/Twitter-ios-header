@@ -9,6 +9,7 @@
 @interface T1URTViewControllerUXConfiguration : NSObject
 {
     // Error parsing type: , name: timelineRenderStyle
+    // Error parsing type: , name: timelinePagePresentationStyle
     // Error parsing type: , name: tweetRenderStyle
     // Error parsing type: , name: topCursorLoadType
     // Error parsing type: , name: inlineFeedbackEnabled

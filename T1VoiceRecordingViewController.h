@@ -10,7 +10,7 @@
 #import <T1Twitter/T1JumpBackToHomeTimelineBehavior-Protocol.h>
 #import <T1Twitter/T1VoiceRecordingViewDelegate-Protocol.h>
 
-@class NSObject, NSString, PTVAudioRecorder, T1VoiceRecordingViewModel, TAVSharedAudioSessionConfigurationToken, TFNLegacyButton, TFNTwitterAccount, TFSThrottledBlock;
+@class NSObject, NSString, PTVAudioRecorder, T1VoiceRecordingViewModel, TAVSharedAudioSessionConfigurationToken, TFNButton, TFNTwitterAccount, TFSThrottledBlock;
 @protocol OS_dispatch_queue, T1VoiceRecordingViewControllerDelegate;
 
 @interface T1VoiceRecordingViewController : TFNViewController <T1VoiceRecordingViewDelegate, PTVAudioRecorderDelegate, T1JumpBackToHomeTimelineBehavior>
@@ -18,7 +18,7 @@
     id <T1VoiceRecordingViewControllerDelegate> _delegate;
     TFNTwitterAccount *_account;
     T1VoiceRecordingViewModel *_viewModel;
-    TFNLegacyButton *_doneButton;
+    TFNButton *_doneButton;
     PTVAudioRecorder *_recorder;
     TFSThrottledBlock *_recorderDurationAndAudioLevelThrottledBlock;
     TAVSharedAudioSessionConfigurationToken *_audioSessionToken;
@@ -35,7 +35,7 @@
 @property(retain, nonatomic) TAVSharedAudioSessionConfigurationToken *audioSessionToken; // @synthesize audioSessionToken=_audioSessionToken;
 @property(retain, nonatomic) TFSThrottledBlock *recorderDurationAndAudioLevelThrottledBlock; // @synthesize recorderDurationAndAudioLevelThrottledBlock=_recorderDurationAndAudioLevelThrottledBlock;
 @property(retain, nonatomic) PTVAudioRecorder *recorder; // @synthesize recorder=_recorder;
-@property(retain, nonatomic) TFNLegacyButton *doneButton; // @synthesize doneButton=_doneButton;
+@property(retain, nonatomic) TFNButton *doneButton; // @synthesize doneButton=_doneButton;
 @property(retain, nonatomic) T1VoiceRecordingViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(nonatomic) __weak id <T1VoiceRecordingViewControllerDelegate> delegate; // @synthesize delegate=_delegate;

@@ -10,6 +10,7 @@
 {
 }
 
++ (_Bool)isTwitterSingleSignOnEnabled;
 + (id)excludedPeriscopeURLDestinations;
 + (double)stratoHashflagsRefreshInterval;
 + (_Bool)limitBufferingAggressivelyOnPausedItems;
@@ -44,6 +45,9 @@
 + (void)accessFeatureSwitchValueOnce:(long long *)arg1 valueAccessBlock:(CDUnknownBlockType)arg2;
 + (_Bool)animationDecodingLogErrors;
 + (double)animationDecodingWarningDuration;
++ (id)darkreadLifecycleShutdownInfoURL;
++ (long long)darkreadLifecycleShutdownLevel;
++ (_Bool)darkreadLifecycleShutdownEnabled;
 + (_Bool)isDashContentSFSVCEnabled;
 + (_Bool)isBetaBugButtonEmailFlowEnabled;
 + (_Bool)isTNLForPeriscopePluginEnabled;
@@ -64,6 +68,7 @@
 + (_Bool)isMaxPasswordLengthCheckEnabled;
 + (_Bool)isMacTestExperimentLoggedOutEnabled;
 + (_Bool)isMacSceneReconnectEnabled;
++ (_Bool)isMacToolbarRemovalEnabled;
 + (_Bool)isLoginJSInstrumentationEnabled;
 + (id)phoneSignupCountriesNotificationsAllowList;
 + (id)phoneSignupCountriesDenyList;
@@ -84,7 +89,6 @@
 + (id)protectedUserKeysRedactionList;
 + (id)HTTPHeaderFieldRedactionList;
 + (id)userDefaultsKeysRedactionList;
-+ (_Bool)isProvisionalAuthorizationEnabled;
 + (double)_CGFloatForKey:(id)arg1 minValue:(double)arg2 maxValue:(double)arg3;
 + (long long)_integerForKey:(id)arg1 minValue:(long long)arg2 maxValue:(long long)arg3;
 + (id)nonUsernamePaths;

@@ -18,11 +18,9 @@
     TFSTwitterUserReference *_userReference;
     TFSTwitterUserReference *_targetUserReference;
     id <T1ListsOwnerDelegate> _delegate;
-    long long _mode;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) long long mode; // @synthesize mode=_mode;
 @property(nonatomic) __weak id <T1ListsOwnerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) TFSTwitterUserReference *targetUserReference; // @synthesize targetUserReference=_targetUserReference;
 - (void)setUserReference:(id)arg1;

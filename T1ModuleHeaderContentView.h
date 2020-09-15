@@ -15,10 +15,12 @@
     UILabel *_headerTextLabel;
     UILabel *_detailHeaderTextLabel;
     UIImageView *_iconImageView;
+    UIButton *_actionButton;
 }
 
-+ (double)heightWithHeaderText:(id)arg1 andDetailText:(id)arg2 iconHidden:(_Bool)arg3 caretHidden:(_Bool)arg4 layoutMetrics:(id)arg5;
++ (double)heightWithHeaderText:(id)arg1 andDetailText:(id)arg2 actionText:(id)arg3 iconHidden:(_Bool)arg4 caretHidden:(_Bool)arg5 layoutMetrics:(id)arg6;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UIButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(readonly, nonatomic) UILabel *detailHeaderTextLabel; // @synthesize detailHeaderTextLabel=_detailHeaderTextLabel;
 @property(readonly, nonatomic) UILabel *headerTextLabel; // @synthesize headerTextLabel=_headerTextLabel;

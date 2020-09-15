@@ -24,8 +24,7 @@
     UIView<T1TabView> *_tabView;
     id <T1DashPresenter> _dashPresenter;
     T1DashBarButtonItem *_dashItem;
-    TFNBarButtonItem *_peopleItem;
-    TFNBarButtonItem *_peopleDiscoveryItem;
+    TFNBarButtonItem *_toggleSideBarItem;
     TFNBarButtonItem *_peopleDiscoveryRightSideItem;
     T1SearchViewContainerView *_searchTextFieldContainerView;
     UILongPressGestureRecognizer *_dashButtonLongPressRecognizer;
@@ -39,8 +38,7 @@
 @property(retain, nonatomic) UILongPressGestureRecognizer *dashButtonLongPressRecognizer; // @synthesize dashButtonLongPressRecognizer=_dashButtonLongPressRecognizer;
 @property(retain, nonatomic) T1SearchViewContainerView *searchTextFieldContainerView; // @synthesize searchTextFieldContainerView=_searchTextFieldContainerView;
 @property(retain, nonatomic) TFNBarButtonItem *peopleDiscoveryRightSideItem; // @synthesize peopleDiscoveryRightSideItem=_peopleDiscoveryRightSideItem;
-@property(retain, nonatomic) TFNBarButtonItem *peopleDiscoveryItem; // @synthesize peopleDiscoveryItem=_peopleDiscoveryItem;
-@property(retain, nonatomic) TFNBarButtonItem *peopleItem; // @synthesize peopleItem=_peopleItem;
+@property(retain, nonatomic) TFNBarButtonItem *toggleSideBarItem; // @synthesize toggleSideBarItem=_toggleSideBarItem;
 @property(retain, nonatomic) T1DashBarButtonItem *dashItem; // @synthesize dashItem=_dashItem;
 @property(nonatomic) __weak id <T1DashPresenter> dashPresenter; // @synthesize dashPresenter=_dashPresenter;
 @property(nonatomic) _Bool selectionBeganWithPushedViewController; // @synthesize selectionBeganWithPushedViewController=_selectionBeganWithPushedViewController;
@@ -68,6 +66,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (_Bool)_t1_main_cameraComposeEnabledForViewController:(id)arg1 isRoot:(_Bool)arg2 traitCollection:(id)arg3;
 - (void)_t1_main_updateNavigationItemForViewController:(id)arg1 isRoot:(_Bool)arg2;
+- (void)updateNavigationItemForViewController:(id)arg1;
 - (void)setViewControllers:(id)arg1;
 - (void)pushViewController:(id)arg1 animated:(_Bool)arg2;
 - (void)_t1_main_triggerTooltip;
@@ -82,12 +81,12 @@
 - (_Bool)tfn_dashGestureEnabled;
 - (void)_t1_action_didTapPeopleButton:(id)arg1;
 - (void)_t1_action_didTapSearchButton:(id)arg1;
+- (void)_t1_action_didTapToggleSideBarButton:(id)arg1;
 - (void)_t1_action_didTapComposeButton:(id)arg1;
 - (void)_t1_action_didLongPressDashButton:(id)arg1;
 - (void)_t1_action_didTapDashButton:(id)arg1;
 - (void)_t1_updateCollapsingNavigationBar;
 @property(readonly, nonatomic) _Bool canDisplayWithExtendedContent;
-@property(readonly, nonatomic) _Bool canPresentNewsCamera;
 @property(readonly, nonatomic) _Bool canPresentDash;
 - (void)showPhotoGalleryComposerFromBarButtonItem:(id)arg1;
 - (void)showGIFSearchComposerFromBarButtonItem:(id)arg1;

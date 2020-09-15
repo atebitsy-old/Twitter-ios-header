@@ -11,5 +11,8 @@
 
 @protocol T1StatusViewLayoutStateGenerator <NSObject>
 - (id <T1StatusViewLayoutState>)layoutStateForViewModel:(id <T1StatusViewModel>)arg1 options:(unsigned long long)arg2 account:(TFNTwitterAccount *)arg3 layoutMetrics:(TFNLayoutMetrics *)arg4 withPreviousLayoutState:(id)arg5;
+
+@optional
+- (id <T1StatusViewLayoutState>)layoutStateForViewModel:(id <T1StatusViewModel>)arg1 options:(unsigned long long)arg2 account:(TFNTwitterAccount *)arg3 width:(double)arg4 layoutMetrics:(TFNLayoutMetrics *)arg5 withPreviousLayoutState:(id)arg6;
 @end
 

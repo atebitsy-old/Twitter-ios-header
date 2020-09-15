@@ -24,12 +24,13 @@
 + (id)identifier;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <TFNTwitterHomeTimelineStreamFactory> streamFactory; // @synthesize streamFactory=_streamFactory;
-@property(nonatomic, getter=didAutoSwitchToTop) _Bool autoSwitchedToTop; // @synthesize autoSwitchedToTop=_autoSwitchedToTop;
+@property(getter=didAutoSwitchToTop) _Bool autoSwitchedToTop; // @synthesize autoSwitchedToTop=_autoSwitchedToTop;
 @property(readonly, nonatomic) id <TFNTwitterHomeTimelineConfiguration> streamConfiguration; // @synthesize streamConfiguration=_streamConfiguration;
 - (id)scriber;
 - (id)loadStream;
 @property(readonly, nonatomic) id <TFNTwitterInjectableHomeTimelineStream> injectableStream;
 - (_Bool)hasUnreadItems;
+- (id)initWithAccount:(id)arg1;
 - (id)initWithAccount:(id)arg1 streamConfiguration:(id)arg2 streamFactory:(id)arg3 scriber:(id)arg4;
 
 // Remaining properties

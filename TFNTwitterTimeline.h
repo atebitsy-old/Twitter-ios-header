@@ -62,6 +62,7 @@
 - (id)streamForUpdateNotification;
 - (void)dealloc;
 - (id)plistDictionaryValue;
+- (id)init;
 - (id)initWithAccount:(id)arg1;
 
 @end

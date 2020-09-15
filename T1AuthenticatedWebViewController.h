@@ -13,6 +13,7 @@
 - (_Bool)shouldStartLoadWithRequest:(id)arg1 navigationType:(long long)arg2;
 - (_Bool)shouldHideSecuredIcon;
 - (_Bool)shouldHideShareSheetIcon;
+- (id)initWithRootURL:(id)arg1 account:(id)arg2 sourceStatus:(id)arg3 scribeComponent:(id)arg4;
 - (id)initWithRootURL:(id)arg1 account:(id)arg2 sourceStatus:(id)arg3 webViewTitle:(id)arg4;
 
 @end

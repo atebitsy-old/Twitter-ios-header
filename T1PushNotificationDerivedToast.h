@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1ToastViewModel-Protocol.h>
 
-@class NSArray, NSString, T1HydratedPushNotificationPayload, T1PushNotificationRouteAppContext, T1ToastAction, T1ToastScribeContext, UIColor;
+@class NSArray, NSString, T1HydratedPushNotificationPayload, T1PushNotificationRouteAppContext, T1ToastAction, T1ToastScribeContext, UIColor, UIImage;
 @protocol T1PushNotificationRoute, TFSTwitterCanonicalUser;
 
 @interface T1PushNotificationDerivedToast : NSObject <T1ToastViewModel>
@@ -54,6 +54,7 @@
 @property(readonly) unsigned long long hash;
 @property(readonly, copy, nonatomic) NSString *identifier;
 @property(readonly) Class superclass;
+@property(readonly, nonatomic) UIImage *thumbnailImage;
 
 @end
 

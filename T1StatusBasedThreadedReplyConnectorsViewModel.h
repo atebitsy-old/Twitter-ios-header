@@ -13,6 +13,7 @@
 
 @interface T1StatusBasedThreadedReplyConnectorsViewModel : NSObject <T1ConversationThreadedReplyConnectorsViewModel>
 {
+    _Bool _connectorEmphasisInBlueEnabled;
     T1ConversationNode *_node;
     UIView<T1ConversationThreadedReplyConnectorsHost> *_hostView;
 }
@@ -20,12 +21,14 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) __weak UIView<T1ConversationThreadedReplyConnectorsHost> *hostView; // @synthesize hostView=_hostView;
 @property(readonly, nonatomic) T1ConversationNode *node; // @synthesize node=_node;
+@property(readonly, nonatomic) _Bool connectorEmphasisInBlueEnabled; // @synthesize connectorEmphasisInBlueEnabled=_connectorEmphasisInBlueEnabled;
 - (double)ancestorConnectorViewOffsetForLayoutMetrics:(id)arg1;
 @property(readonly, nonatomic) double ancestorConnectorViewHeight;
 @property(readonly, nonatomic) double ancestorConnectorViewOriginY;
 @property(readonly, nonatomic) double elbowParentConnectorViewHeight;
 @property(readonly, nonatomic) double elbowParentConnectorViewWidth;
 @property(readonly, nonatomic) double verticalParentConnectorViewHeight;
+- (_Bool)shouldFadeOutAncestorConnectorForLevel:(unsigned long long)arg1;
 - (_Bool)shouldShowAncestorHighlightingAtLevel:(unsigned long long)arg1;
 - (_Bool)shouldShowParentHighlighting;
 - (_Bool)shouldShowAncestorConnectorAtLevel:(unsigned long long)arg1;

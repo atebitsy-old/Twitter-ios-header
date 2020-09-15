@@ -156,6 +156,7 @@
 - (void)_t1_processAutoSwitchedToTopWithLoadSource:(long long)arg1;
 - (void)_t1_checkForAutomaticSwitchToTop;
 - (_Bool)t1_showsPeopleAction;
+- (_Bool)t1_showsToggleSideBarAction;
 - (_Bool)t1_showsDashAction;
 - (void)_t1_cleanupTooltips;
 - (void)_t1_triggerImmediateDismissTooltip;

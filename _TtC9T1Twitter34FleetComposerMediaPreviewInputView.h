@@ -17,7 +17,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: overflowGradientView
     // Error parsing type: , name: guidelineView
     // Error parsing type: , name: transformManager
-    // Error parsing type: , name: topInset
     // Error parsing type: , name: autocompleteViewController
     // Error parsing type: , name: delegate
 }

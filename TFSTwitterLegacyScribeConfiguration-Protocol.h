@@ -7,6 +7,8 @@
 #import <T1Twitter/NSObject-Protocol.h>
 
 @protocol TFSTwitterLegacyScribeConfiguration <NSObject>
+@property _Bool flushesAllPersistenceStrategies;
+@property _Bool usesCompactPersistence;
 @property(nonatomic) long long maxSampleSize;
 @property(getter=isDebugEnabled) _Bool debugEnabled;
 @property _Bool shouldScribeError;

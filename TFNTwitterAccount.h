@@ -63,6 +63,7 @@
     NSMutableSet *_pendingMutedConversations;
     _Bool _allowDeferredPasswordFetch;
     TFSObservableInput *_pinnedTweetIDObservableInput;
+    // Error parsing type: {?="lock"{os_unfair_lock_s="_os_unfair_lock_opaque"I}"predicate"{atomic_flag="_Value"AB}}, name: _timelineManagerToken
     _Bool _verified;
     _Bool _scribeShouldSuspend;
     _Bool _needsPhoneVerification;
@@ -392,6 +393,7 @@
 - (id)initWithUsername:(id)arg1 userID:(long long)arg2;
 - (id)initWithUser:(id)arg1;
 - (id)init;
+- (_Bool)isModernStatusViewsQuoteTweetEnabled;
 - (_Bool)isAutoTranslateSourceGoogleEnabled;
 - (_Bool)isAutoTranslateSourceMicrosoftEnabled;
 - (_Bool)isAutoTranslateExpandedViewEnabled;
@@ -447,6 +449,7 @@
 - (_Bool)shouldShowImagesBelowMinSizeInline;
 - (unsigned long long)minSizeOfImageInMediaForward;
 - (unsigned long long)waitTimeSampleRate;
+- (_Bool)isUpdatedNSFWInterstitialingEnabled;
 - (_Bool)isSoftInterventionsColorExperimentEnabled;
 - (_Bool)isSoftInterventionsRedTextEnabled;
 - (_Bool)isSoftInterventionsRedIconEnabled;
@@ -468,6 +471,7 @@
 - (unsigned long long)cardComposePreviewPermittedRetryCount;
 - (_Bool)shouldCardComposePreviewTombstoneIfNotDisplayed;
 - (long long)cardComposePreviewFetchDelayMsec;
+- (id)composerRetweetButtonName;
 - (_Bool)isComposerTwitterTextEditorEnabled;
 - (_Bool)isComposerPulldownThreadingLookbackLimited;
 - (_Bool)isComposerProtectedAccountPulldownThreadingEnabled;
@@ -493,6 +497,7 @@
 - (long long)isCanaryAsyncKeychainLoadingEnabledWithImpression:(_Bool)arg1;
 - (long long)isTwitterTextAsyncConfigLoadingEnabledWithImpression:(_Bool)arg1;
 - (long long)isAsyncImageCodecLoadingEnabledWithImpression:(_Bool)arg1;
+- (_Bool)isAsyncHomeTopCursorPrefetchEnabled;
 - (_Bool)isFollowControlOptimizationsEnabled;
 - (_Bool)isCardPersistedStateManagerWarmingEnabled;
 - (_Bool)isAsyncURLCacheLoadingEnabled;
@@ -520,6 +525,8 @@
 - (_Bool)isReactivePromptUserFollowReactionEnabled;
 - (_Bool)isReactivePromptFirstLikeReactionEnabled;
 - (long long)onboardingAccountFollowPromptMaxFollowingCount;
+- (_Bool)shouldOnboardingAccountFollowPromptShowToastWhenFollowing;
+- (_Bool)shouldOnboardingAccountFollowPromptHideWhenFollowing;
 - (_Bool)shouldOnboardingAccountFollowPromptShowUsername;
 - (_Bool)isOnboardingAccountFollowPromptEnabled;
 - (_Bool)isOnboardingConnectTabUrtEnabled;
@@ -536,9 +543,16 @@
 - (_Bool)isAuthorModeratedReplyURTContainerEnabled;
 - (_Bool)isTOTPGeneratorEnabled;
 - (_Bool)isSMS2faEnabled;
+- (_Bool)isConversationThreadingSelectedStateExtendedSendReplyViewNoOpEnabled;
+- (_Bool)isConversationThreadingSelectedStateTapInlineActionsViewNoOpEnabled;
+- (_Bool)isConversationThreadingSelectedStateTapInInlineReplyViewNoOpEnabled;
 - (_Bool)isConversationThreadingOverflowCountInGQLQueryEnabled;
+- (_Bool)isConversationThreadingInitiallyFocusedStatusSelected;
 - (unsigned long long)_t1_conversationThreadingStyle;
 - (_Bool)isConversationConnectorLinesToSelectedStateContainerEnabled;
+- (_Bool)isConversationEmphasizedDirectDescendentsOnlyEnabled;
+- (_Bool)isConversationEmphasizedDirectAncestorOnlyEnabled;
+- (_Bool)isConversationEmphasizedConnectorLinesInBlueEnabled;
 - (_Bool)isConversationEmphasizedConnectorLinesEnabled;
 - (_Bool)isConversationThreadingAQCursorsAlwaysVisible;
 - (_Bool)isConversationThreadingLQCursorsAlwaysVisible;
@@ -567,24 +581,12 @@
 - (_Bool)isSafariViewControllerDisabledForPromotedWebsiteClicks;
 - (_Bool)isSafariViewControllerEnabled;
 - (double)_t1_mediaRatio:(id)arg1;
-@property(readonly, nonatomic) _Bool isAppInstallCardSubtitleEnabled;
-@property(readonly, nonatomic) _Bool isAppInstallCardLargerCTAEnabled;
-@property(readonly, nonatomic) _Bool isAppInstallCardCTAHiddenEnabled;
-@property(readonly, nonatomic) _Bool isTweetViewInGalleryEnabled;
 @property(readonly, nonatomic) double promotedImageRatio;
 @property(readonly, nonatomic) _Bool isMediaAppCardRatingsViewEnabled;
 @property(readonly, nonatomic) _Bool isSkipTalonURLVerificationEnabled;
 - (_Bool)isConversationCardCTAHashflagsEnabled;
 @property(readonly, nonatomic) _Bool isHashflagsInTrendsEnabled;
 @property(readonly, nonatomic) _Bool isAdImpressionScrollToTopHandlerEnabled;
-- (double)webViewDwellIntervalForKey:(id)arg1 withFallback:(double)arg2;
-@property(readonly, nonatomic) double webViewDwellLongInterval;
-@property(readonly, nonatomic) double webViewDwellMediumInterval;
-@property(readonly, nonatomic) double webViewDwellShortInterval;
-@property(readonly, nonatomic) _Bool isResumeDwellOnForegroundEnabled;
-@property(readonly, nonatomic) _Bool isStopDwellOnBackgroundEnabled;
-@property(readonly, nonatomic) _Bool isTimestampBasedDwellEnabled;
-@property(readonly, nonatomic) _Bool isDwellOnViewAppearanceEnabled;
 @property(readonly, nonatomic) double appRatingThreshold;
 - (_Bool)isProfileBioTranslationEnabled;
 - (id)canonicalProfileURLString;
@@ -609,6 +611,7 @@
 - (_Bool)isTopicsFollowedGraphQLMigrationEnabled;
 - (_Bool)isTopicUnFollowGraphQLMigrationEnabled;
 - (_Bool)isTopicFollowGraphQLMigrationEnabled;
+- (_Bool)isTopicsContextInlineNotInterestedEnabled;
 - (_Bool)isTopicsNewSocialContextIconColorEnabled;
 - (_Bool)isTopicsNewSocialContextEnabled;
 - (_Bool)isTopicsMenuSeparatorEnabled;
@@ -649,7 +652,6 @@
 - (_Bool)_isJumpBackToHomeEnabled;
 - (_Bool)_inactivePeriodSatisfiesJumpBackIntervalWithActiveTimeStamp:(double)arg1 inactiveTimeStamp:(double)arg2;
 - (_Bool)shouldJumpBackToHomeWithActiveTimeStamp:(double)arg1 inactiveTimeStamp:(double)arg2;
-- (_Bool)isTVConnectionDeprecationEnabled;
 - (_Bool)isEdgeProfileDominantColorEnabled;
 - (_Bool)isHashflagsAnimationLikeButtonEnabled;
 - (_Bool)isHashflagsEnabled;
@@ -716,6 +718,7 @@
 @property(readonly, nonatomic) NSArray *videoAdsAuditAllowedUsers;
 @property(readonly, nonatomic) double skipAdDurationRequirement;
 @property(readonly, nonatomic) NSNumber *skipButtonTime;
+- (_Bool)isShortFormCompleteEnabled;
 - (_Bool)isPromotedAudibleViewEnabled;
 @property(readonly, nonatomic) double vodHeartbeatPeriod;
 @property(readonly, nonatomic) double liveHeartbeatPeriod;
@@ -743,6 +746,7 @@
 - (double)appDidBecomeActiveUrtNtabThrottleRate;
 - (double)pushReceiptUrtNtabThrottleRate;
 - (double)baselineUrtNtabThrottleRate;
+- (_Bool)isApplicationStateWorkaroundEnabled;
 - (_Bool)isFullStatusInNTabEnabled;
 - (_Bool)isDismissTypeX;
 - (_Bool)isInRuxHoldbackExperimentWithImpression:(_Bool)arg1;
@@ -750,6 +754,7 @@
 - (_Bool)isNewsCameraReactionsEnabled;
 - (_Bool)isNewsCameraCreationEnabled;
 - (_Bool)canViewTweetAnalyticsForViewModel:(id)arg1;
+- (_Bool)shouldShowBrazilVoiceEducationModal;
 - (_Bool)isDMVoiceRenderingEnabled;
 - (_Bool)isDMVoiceCreationEnabled;
 - (_Bool)isDMShareSheetReplyToAuthorEnabled;
@@ -892,6 +897,8 @@
 @property(readonly, nonatomic) long long scribeAPIErrorSampleSize;
 @property(readonly, nonatomic) long long scribeAPISampleSize;
 - (_Bool)isBlockMuteStatusFilteringOptimizationEnabled;
+- (id)articlesNudgeNewsDomainSetWithImpression:(_Bool)arg1;
+- (_Bool)isProvisionalAuthorizationEnabled;
 - (_Bool)isQuoteTweetCombinedEnabled;
 - (_Bool)isLivePipelineEventsScribeEnabled;
 - (_Bool)isQRLoginEnabled;
@@ -933,7 +940,7 @@
 - (void)logPromotedEventIfNeeded:(long long)arg1 onTrend:(id)arg2;
 - (void)logPromotedEventIfNeeded:(long long)arg1 onStatus:(id)arg2 extraParameters:(id)arg3;
 - (void)logPromotedEventIfNeeded:(long long)arg1 onStatus:(id)arg2;
-- (void)logPromotedEventIfNeeded:(long long)arg1 onUserPromotedContent:(id)arg2;
+- (void)logPromotedUserEventIfNeeded:(long long)arg1 onUserPromotedContent:(id)arg2;
 - (void)_getTOTPKeyRemote:(CDUnknownBlockType)arg1;
 - (void)updateTOTPKey;
 - (void)qrLoginSubmitWithQRCode:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;

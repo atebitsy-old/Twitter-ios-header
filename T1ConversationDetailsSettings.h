@@ -10,6 +10,11 @@
 {
 }
 
++ (id)colorWithHexString:(id)arg1;
++ (id)colorWithRGBHex:(unsigned int)arg1;
++ (_Bool)selectedStateTapExtendedSendReplyButtonNoOpEnabled;
++ (_Bool)selectedStateTapInlineActionsViewNoOpEnabled;
++ (_Bool)selectedStateTapInlineReplyViewNoOpEnabled;
 + (_Bool)maximumIndentationSentWithCursorsEnabled;
 + (_Bool)emphasizedConnectorLinesEnabled;
 + (double)inlineActionRightMargin;
@@ -40,6 +45,11 @@
 + (_Bool)showMoreCoalescingDebugLabelsEnabled;
 + (long long)showMoreCoalescingLoadLimit;
 + (_Bool)showMoreCoalescingEnabled;
++ (id)connectorEmphasisColorDark;
++ (id)connectorEmphasisColor;
++ (_Bool)connectorEmphasisCustomColorsEnabled;
++ (_Bool)connectorEmphasisDirectDescendentsOnly;
++ (_Bool)connectorEmphasisDirectAncestorOnly;
 + (_Bool)connectorEmphasisInBlueEnabled;
 
 @end

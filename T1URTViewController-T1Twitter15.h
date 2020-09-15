@@ -7,6 +7,7 @@
 #import <T1Twitter/T1URTViewController.h>
 
 @interface T1URTViewController (T1Twitter15)
-- (void)userRowAdapter:(id)arg1 didPerformAction:(unsigned long long)arg2 forItem:(id)arg3 withOptions:(id)arg4 success:(_Bool)arg5 error:(id)arg6;
+- (double)additionalBottomLayoutGuideLengthForAmbientNotification:(id)arg1;
+- (id)currentViewController;
 @end
 

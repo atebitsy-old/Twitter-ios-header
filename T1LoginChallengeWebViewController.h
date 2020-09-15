@@ -61,8 +61,8 @@
 - (void)_doPolling;
 - (CDUnknownBlockType)_loginChallengeResponseBlock;
 - (_Bool)isUsingNonPersistentDataStore;
+- (id)initWithAccount:(id)arg1;
 - (id)initWithLoginType:(unsigned long long)arg1 requestID:(id)arg2 user:(id)arg3 userID:(long long)arg4 URLString:(id)arg5 loginCause:(long long)arg6;
-- (id)initWithLoginType:(unsigned long long)arg1 requestID:(id)arg2 user:(id)arg3 userID:(long long)arg4 URLString:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

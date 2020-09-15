@@ -15,7 +15,7 @@
 }
 
 + (unsigned long long)attachmentTypeForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
-+ (_Bool)shouldShowAttachmentType:(unsigned long long)arg1 forViewModel:(id)arg2;
++ (_Bool)shouldShowAttachmentType:(unsigned long long)arg1 forViewModel:(id)arg2 account:(id)arg3;
 + (id)layoutDelegateForStatusOptions:(unsigned long long)arg1 account:(id)arg2;
 + (id)sharedLayoutDelegate;
 - (_Bool)shouldShowPollIndicatorViewForViewModel:(id)arg1 account:(id)arg2;

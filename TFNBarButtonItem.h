@@ -21,6 +21,7 @@
 
 + (id)fixedSpaceWithWidth:(double)arg1;
 + (id)flexibleSpace;
++ (id)_overridingConfigurationsBySystemItem;
 + (void)overrideSystemItem:(long long)arg1 withConfiguration:(id)arg2;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SEL tfn_action; // @synthesize tfn_action=_tfn_action;

@@ -37,7 +37,7 @@
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 - (id)scribeSection;
 - (void)dealloc;
-- (void)_t1_imageDisplayView:(id)arg1;
+- (void)_t1_showShareSheetFromView:(id)arg1 presentAsMenu:(_Bool)arg2;
 - (void)share:(id)arg1;
 - (void)_t1_longPressAction:(id)arg1;
 - (void)_t1_obtainCurrentQRImage;

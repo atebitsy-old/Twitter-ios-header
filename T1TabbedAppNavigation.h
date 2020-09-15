@@ -97,7 +97,7 @@
 - (void)didDismissNudge:(id)arg1;
 - (void)_presentNudgeAgainIfNeededFromPreviousNudge:(id)arg1;
 - (_Bool)_presentNudgeIfNeededForComposition:(id)arg1 fromAccount:(id)arg2;
-- (void)showTopicLandingForTopicID:(id)arg1 withSource:(long long)arg2 referringEvent:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)showTopicLandingForTopicID:(id)arg1 withSource:(long long)arg2 referringEvent:(id)arg3 pinnedTweetString:(id)arg4 navigationContext:(id)arg5 completion:(CDUnknownBlockType)arg6;
 - (void)showFollowedTopicsForUsername:(id)arg1 withSource:(long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)showTopicEducationForTopicName:(id)arg1 source:(long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)showTopicForTaxonomy:(id)arg1 topicID:(id)arg2 topicImpressionID:(id)arg3 panel:(long long)arg4 source:(long long)arg5 completion:(CDUnknownBlockType)arg6;

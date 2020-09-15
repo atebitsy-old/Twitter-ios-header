@@ -16,21 +16,9 @@
     UIColor *_subtitleTextColor;
     UIColor *_iconColor;
     UIColor *_destructiveColor;
-    UIColor *_primaryButtonTextColor;
-    UIColor *_primaryButtonBackgroundColor;
-    UIColor *_primaryButtonHighlightColor;
-    UIColor *_secondaryButtonColor;
-    UIColor *_cancelButtonBackgroundColor;
-    UIColor *_cancelButtonHighlightColor;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) UIColor *cancelButtonHighlightColor; // @synthesize cancelButtonHighlightColor=_cancelButtonHighlightColor;
-@property(readonly, nonatomic) UIColor *cancelButtonBackgroundColor; // @synthesize cancelButtonBackgroundColor=_cancelButtonBackgroundColor;
-@property(readonly, nonatomic) UIColor *secondaryButtonColor; // @synthesize secondaryButtonColor=_secondaryButtonColor;
-@property(readonly, nonatomic) UIColor *primaryButtonHighlightColor; // @synthesize primaryButtonHighlightColor=_primaryButtonHighlightColor;
-@property(readonly, nonatomic) UIColor *primaryButtonBackgroundColor; // @synthesize primaryButtonBackgroundColor=_primaryButtonBackgroundColor;
-@property(readonly, nonatomic) UIColor *primaryButtonTextColor; // @synthesize primaryButtonTextColor=_primaryButtonTextColor;
 @property(readonly, nonatomic) UIColor *destructiveColor; // @synthesize destructiveColor=_destructiveColor;
 @property(readonly, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(readonly, nonatomic) UIColor *subtitleTextColor; // @synthesize subtitleTextColor=_subtitleTextColor;

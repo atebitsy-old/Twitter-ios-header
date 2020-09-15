@@ -15,6 +15,8 @@
 - (void)_t1_longPressAction:(id)arg1;
 - (void)_t1_tapAction:(id)arg1;
 - (void)_t1_updateAvatarView:(id)arg1 forViewModel:(id)arg2;
+- (_Bool)isLayoutState:(id)arg1 validForViewModel:(id)arg2 layoutMetrics:(id)arg3;
+- (id)layoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2;
 - (void)accessibilityPerformTapActionInView:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdateWithInfo:(id)arg2 forView:(id)arg3;
 - (void)unsetViewModelForView:(id)arg1;

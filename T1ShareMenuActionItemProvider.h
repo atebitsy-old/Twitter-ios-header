@@ -10,6 +10,7 @@
 {
 }
 
++ (id)shareMenuActionItemsWithTweetActionItemDetailsProvider:(id)arg1 shareViaDMActionItemDetailsProvider:(id)arg2 shareViaActionItemDetailsProvider:(id)arg3 additionalActionItems:(id)arg4 presentingViewController:(id)arg5 popoverSourceInfo:(id)arg6 account:(id)arg7 scribeContext:(id)arg8 completion:(CDUnknownBlockType)arg9;
 + (id)shareMenuActionItemsWithTweetActionItemDetailsProvider:(id)arg1 shareViaDMActionItemDetailsProvider:(id)arg2 shareViaActionItemDetailsProvider:(id)arg3 additionalActionItems:(id)arg4 presentingViewController:(id)arg5 sourceView:(id)arg6 account:(id)arg7 scribeContext:(id)arg8 completion:(CDUnknownBlockType)arg9;
 
 @end

@@ -10,6 +10,7 @@
 {
 }
 
++ (void)_t1_updateOverrideUserInterfaceStyle;
 + (void)applyDefaultDarkColorPaletteForCurrentDisplayType;
 + (void)transitionToDarkMode:(_Bool)arg1 animated:(_Bool)arg2;
 + (_Bool)shouldPresentAutomaticDarkModeAlertFromDashForAccount:(id)arg1;

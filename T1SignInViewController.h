@@ -6,7 +6,6 @@
 
 #import <T1Twitter/TFNFormViewController.h>
 
-#import <T1Twitter/T1APIOverrideSettingsDelegate-Protocol.h>
 #import <T1Twitter/T1AccountAdder-Protocol.h>
 #import <T1Twitter/T1SignInManagerDelegate-Protocol.h>
 #import <T1Twitter/T1VerifyOneFactorAuthorizationDelegate-Protocol.h>
@@ -16,7 +15,7 @@
 
 @class NSString, T1AuthenticationForm, T1OnboardingFlowAssistant, T1OneFactorAuthorizationRequest, T1SignInManager, T1SignInViewControllerModernAppearanceConfiguration, T1SignUpFormFooterView, T1SingleSignOnForm, T1UIInstrumentationWebViewController, TFNAttributedTextView, TFNBarButtonItem, TFNHUD, TFNTwitterAccount;
 
-@interface T1SignInViewController : TFNFormViewController <T1APIOverrideSettingsDelegate, T1SignInManagerDelegate, T1VerifyOneFactorAuthorizationDelegate, TFNAttributedTextViewDelegate, TFNTwitter1PasswordExtensionDelegate, UIScrollViewDelegate, T1AccountAdder>
+@interface T1SignInViewController : TFNFormViewController <T1SignInManagerDelegate, T1VerifyOneFactorAuthorizationDelegate, TFNAttributedTextViewDelegate, TFNTwitter1PasswordExtensionDelegate, UIScrollViewDelegate, T1AccountAdder>
 {
     _Bool _loginJsInstrumentationEnabled;
     _Bool _isActiveInViewControllerHierarchy;
@@ -125,8 +124,6 @@
 - (_Bool)includesSubmitButtonAsItem;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)_flowDidComplete:(id)arg1;
-- (id)currentDtabValue;
-- (void)apiOverrideSettingsController:(id)arg1 didSubmitDtabValue:(id)arg2;
 - (id)signInComponent;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 - (void)dealloc;

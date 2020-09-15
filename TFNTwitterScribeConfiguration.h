@@ -14,10 +14,14 @@
 {
     _Bool _debugEnabled;
     _Bool _shouldScribeError;
+    _Bool _usesCompactPersistence;
+    _Bool _flushesAllPersistenceStrategies;
     long long _maxSampleSize;
 }
 
 + (id)sharedConfiguration;
+@property _Bool flushesAllPersistenceStrategies; // @synthesize flushesAllPersistenceStrategies=_flushesAllPersistenceStrategies;
+@property _Bool usesCompactPersistence; // @synthesize usesCompactPersistence=_usesCompactPersistence;
 @property(nonatomic) long long maxSampleSize; // @synthesize maxSampleSize=_maxSampleSize;
 @property _Bool shouldScribeError; // @synthesize shouldScribeError=_shouldScribeError;
 @property(getter=isDebugEnabled) _Bool debugEnabled; // @synthesize debugEnabled=_debugEnabled;

@@ -17,6 +17,7 @@
     // Error parsing type: , name: promotedTrendQueryTerm
     // Error parsing type: , name: adMetadataContainer
     // Error parsing type: , name: promotedTrendDescription
+    // Error parsing type: , name: clickTrackingInfo
 }
 
 @end

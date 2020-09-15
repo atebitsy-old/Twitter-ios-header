@@ -36,6 +36,7 @@
 - (unsigned long long)_t1_carouselPresentationFromString:(id)arg1;
 - (_Bool)_t1_legacyCard:(long long)arg1 enabledForKey:(id)arg2;
 - (id)_t1_featureSwitchNameForCardDisplayMode:(long long)arg1;
+@property(readonly, nonatomic) unsigned long long dockedMediaMediaControlsVariant;
 - (_Bool)isUnifiedCardDestinationOfTypeEnabled:(unsigned long long)arg1;
 - (_Bool)isUnifiedCardComponentOfTypeEnabled:(unsigned long long)arg1;
 - (long long)_t1_mediaDestinationTypeFromString:(id)arg1;
@@ -43,6 +44,7 @@
 - (unsigned long long)_t1_ctaButtonVariation;
 - (_Bool)_t1_isCTAButtonVariationsExperimentEnabled;
 - (_Bool)_t1_useAppStoreAsSubtitle;
+- (_Bool)_t1_shouldUnifiedCardCarouselsShowAppRatings;
 @property(readonly, nonatomic) long long unifiedCardAppMetadataLineTwoType;
 @property(readonly, nonatomic) _Bool shouldShowRatingsForAppMetadata;
 @property(readonly, nonatomic) _Bool shouldUseSingleLineTitleForAppMetadata;
@@ -73,6 +75,10 @@
 @property(readonly, nonatomic) double webViewDwellLongInterval;
 @property(readonly, nonatomic) double webViewDwellMediumInterval;
 @property(readonly, nonatomic) double webViewDwellShortInterval;
+@property(readonly, nonatomic) _Bool isResumeDwellOnForegroundEnabled;
+@property(readonly, nonatomic) _Bool isStopDwellOnBackgroundEnabled;
+@property(readonly, nonatomic) _Bool isTimestampBasedDwellEnabled;
+@property(readonly, nonatomic) _Bool isDwellOnViewAppearanceEnabled;
 @property(readonly, nonatomic) _Bool isAppInstallCardSubtitleEnabled;
 @property(readonly, nonatomic) _Bool isAppInstallCardLargerCTAEnabled;
 @property(readonly, nonatomic) _Bool isAppInstallCardCTAHiddenEnabled;

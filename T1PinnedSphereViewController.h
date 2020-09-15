@@ -8,10 +8,10 @@
 
 @interface T1PinnedSphereViewController : TFNViewController
 {
-    // Error parsing type: , name: authenticatedAccountUserID
+    // Error parsing type: , name: account
     // Error parsing type: , name: dataModel
-    // Error parsing type: , name: viewController
     // Error parsing type: , name: stateManager
+    // Error parsing type: , name: viewController
     // Error parsing type: , name: suggestionForYourListBlender
     // Error parsing type: , name: addedUsers
     // Error parsing type: , name: removedUsers
@@ -19,6 +19,8 @@
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (_Bool)reconstructIfNeededWithDataModel:(id)arg1;
+- (void)reconstructContentViewControllerIfNeeded;
 - (_Bool)tfn_isScrolledToTop;
 - (void)loadTop:(id)arg1;
 - (_Bool)becomeFirstResponder;
@@ -26,6 +28,7 @@
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithAccount:(id)arg1 dataModel:(id)arg2;
+@property(nonatomic, readonly) long long listID;
 
 @end
 

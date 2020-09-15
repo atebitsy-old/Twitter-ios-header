@@ -6,24 +6,26 @@
 
 #import <TFNUI/TFNComposableViewLayoutState.h>
 
-@class NSNumber, T1CardViewLayoutState, T1QuotedStatusViewLayoutState, T1UnifiedCardViewLayoutState, T1UserRecommendationViewLayoutState;
+@class NSNumber, T1CardViewLayoutState, T1QuotedStandardStatusViewLayoutState, T1QuotedStatusViewLayoutState, T1UnifiedCardViewLayoutState, T1UserRecommendationViewLayoutState;
 
 @interface T1StandardStatusAttachmentViewLayoutState : TFNComposableViewLayoutState
 {
     _Bool _useAdaptiveMediaLayout;
     unsigned long long _attachmentType;
     T1UserRecommendationViewLayoutState *_userRecommendationViewLayoutState;
-    T1QuotedStatusViewLayoutState *_quotedStatusViewLayoutState;
     T1CardViewLayoutState *_cardViewLayoutState;
     T1UnifiedCardViewLayoutState *_unifiedCardViewLayoutState;
     NSNumber *_validForHashflagVersion;
+    T1QuotedStandardStatusViewLayoutState *_quotedStandardStatusViewLayoutState;
+    T1QuotedStatusViewLayoutState *_quotedStatusViewLayoutState;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) T1QuotedStatusViewLayoutState *quotedStatusViewLayoutState; // @synthesize quotedStatusViewLayoutState=_quotedStatusViewLayoutState;
+@property(retain, nonatomic) T1QuotedStandardStatusViewLayoutState *quotedStandardStatusViewLayoutState; // @synthesize quotedStandardStatusViewLayoutState=_quotedStandardStatusViewLayoutState;
 @property(retain, nonatomic) NSNumber *validForHashflagVersion; // @synthesize validForHashflagVersion=_validForHashflagVersion;
 @property(retain, nonatomic) T1UnifiedCardViewLayoutState *unifiedCardViewLayoutState; // @synthesize unifiedCardViewLayoutState=_unifiedCardViewLayoutState;
 @property(retain, nonatomic) T1CardViewLayoutState *cardViewLayoutState; // @synthesize cardViewLayoutState=_cardViewLayoutState;
-@property(retain, nonatomic) T1QuotedStatusViewLayoutState *quotedStatusViewLayoutState; // @synthesize quotedStatusViewLayoutState=_quotedStatusViewLayoutState;
 @property(retain, nonatomic) T1UserRecommendationViewLayoutState *userRecommendationViewLayoutState; // @synthesize userRecommendationViewLayoutState=_userRecommendationViewLayoutState;
 @property(nonatomic) _Bool useAdaptiveMediaLayout; // @synthesize useAdaptiveMediaLayout=_useAdaptiveMediaLayout;
 @property(nonatomic) unsigned long long attachmentType; // @synthesize attachmentType=_attachmentType;

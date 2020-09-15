@@ -6,8 +6,8 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSArray, NSString, T1ToastAction, T1ToastScribeContext, UIColor;
-@protocol TFSTwitterCanonicalUser;
+@class NSArray, NSString, T1ToastAction, T1ToastScribeContext, UIColor, UIImage, UIView;
+@protocol T1ToastContentViewable, TFSTwitterCanonicalUser;
 
 @protocol T1ToastViewModel <NSObject>
 @property(nonatomic, readonly) NSString *messageText;
@@ -18,6 +18,7 @@
 @property(nonatomic, readonly) double displayDuration;
 @property(nonatomic, readonly) T1ToastAction *alternateAction;
 @property(nonatomic, readonly) T1ToastAction *primaryAction;
+@property(nonatomic, readonly) UIImage *thumbnailImage;
 @property(nonatomic, readonly) id <TFSTwitterCanonicalUser> user;
 @property(nonatomic, readonly) UIColor *iconColor;
 @property(nonatomic, readonly) NSString *iconName;
@@ -25,5 +26,6 @@
 @property(nonatomic, readonly) NSArray *detailTextBoldRanges;
 @property(nonatomic, readonly) NSString *detailText;
 @property(nonatomic, readonly) NSArray *messageTextBoldRanges;
+- (UIView<T1ToastContentViewable> *)customToastContentViewWithFrame:(struct CGRect)arg1;
 @end
 

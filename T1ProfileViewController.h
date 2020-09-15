@@ -101,6 +101,7 @@
 - (double)preferredHeightForModalSheetViewController:(id)arg1 modalContentViewVisibleEdgeInsets:(struct UIEdgeInsets)arg2;
 - (void)_t1_updateModalDisplayHeightAnimated:(_Bool)arg1;
 - (void)_t1_initializeModalDisplay;
+- (void)_t1_updateBackMenuTitle;
 - (void)_updateDisplayForCurrentState;
 - (_Bool)_isCurrentDisplayStateScrollable;
 - (_Bool)_updateCurrentDisplayState;

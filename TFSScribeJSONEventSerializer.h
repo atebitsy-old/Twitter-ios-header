@@ -18,8 +18,8 @@
     id <NSCoding> _metadata;
 }
 
-+ (id)aggregatedJSONUTF8StringWithEvents:(id)arg1;
-+ (id)aggregatedJSONDataWithEvents:(id)arg1;
++ (id)aggregatedJSONUTF8StringWithEvents:(id)arg1 reversed:(_Bool)arg2;
++ (id)aggregatedJSONDataWithEvents:(id)arg1 reversed:(_Bool)arg2;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <NSCoding> metadata; // @synthesize metadata=_metadata;
 @property(readonly, copy, nonatomic) NSDictionary *dictionary; // @synthesize dictionary=_dictionary;

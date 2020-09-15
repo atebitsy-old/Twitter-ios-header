@@ -6,25 +6,18 @@
 
 #import <TFNUI/TFNItemsDataViewController.h>
 
-#import <T1Twitter/T1APIOverrideSettingsDelegate-Protocol.h>
+@class TFNTwitterAccount;
 
-@class NSString, TFNTwitterAccount;
-@protocol T1APIOverrideSettingsDelegate;
-
-@interface T1AboutSettingsViewController : TFNItemsDataViewController <T1APIOverrideSettingsDelegate>
+@interface T1AboutSettingsViewController : TFNItemsDataViewController
 {
-    id <T1APIOverrideSettingsDelegate> _delegate;
     TFNTwitterAccount *_account;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
-@property(nonatomic) __weak id <T1APIOverrideSettingsDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)scribeSection;
 - (id)scribePage;
 - (id)scribe;
-- (id)currentDtabValue;
-- (void)apiOverrideSettingsController:(id)arg1 didSubmitDtabValue:(id)arg2;
 - (void)_t1_cancel;
 - (id)_t1_crashReportDescriptionItem;
 - (id)_t1_crashReportItem;
@@ -33,12 +26,6 @@
 - (void)viewDidLoad;
 - (id)initWithCollectionViewLayout:(id)arg1;
 - (id)initWithAccount:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

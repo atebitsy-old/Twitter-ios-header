@@ -19,11 +19,11 @@
     double _lastStateChangeElapsedTime;
     double _sessionStartTime;
     long long _wclFunnelStage;
-    TFSStopwatch *_wclStopwatch;
-    NSNumber *_wclBrowserOpenTimestamp;
-    NSNumber *_wclLoadStartTimestamp;
-    NSNumber *_wclLastReceivedLoadFinishedTimestamp;
-    NSNumber *_wclPuntToBrowserAppTimestamp;
+    TFSStopwatch *_wclStopwatchFromClick;
+    NSNumber *_wclClickToBrowserOpenIntervalDuration;
+    NSNumber *_wclClickToLoadStartIntervalDuration;
+    NSNumber *_wclClickToLastReceivedLoadFinishedIntervalDuration;
+    NSNumber *_wclClickToPuntToBrowserAppIntervalDuration;
     _Bool _isDwellOnViewAppearanceEnabled;
     _Bool _isTimestampBasedDwellEnabled;
     _Bool _isStopDwellOnBackgroundEnabled;

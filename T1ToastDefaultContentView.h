@@ -16,6 +16,7 @@
 {
     id <T1ToastContentViewDelegate> _delegate;
     UIImageView *_iconView;
+    UIImageView *_thumbnailImageView;
     T1AvatarImageView *_avatarView;
     UILabel *_messageLabel;
     UILabel *_detailLabel;
@@ -45,6 +46,7 @@
 @property(retain, nonatomic) UILabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(retain, nonatomic) UILabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 @property(retain, nonatomic) T1AvatarImageView *avatarView; // @synthesize avatarView=_avatarView;
+@property(retain, nonatomic) UIImageView *thumbnailImageView; // @synthesize thumbnailImageView=_thumbnailImageView;
 @property(retain, nonatomic) UIImageView *iconView; // @synthesize iconView=_iconView;
 @property(nonatomic) __weak id <T1ToastContentViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;

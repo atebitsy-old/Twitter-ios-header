@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: globalTweetsData
     // Error parsing type: , name: globalMomentsData
-    // Error parsing type: , name: urtTimelineUID
     // Error parsing type: , name: errorRecoveryContentBuilder
 }
 

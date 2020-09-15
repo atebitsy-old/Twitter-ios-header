@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import <T1Twitter/T1ToastViewModel-Protocol.h>
-
 @class NSString, T1ToastAction;
 
-@interface _TtC9T1TwitterP33_59C5E79B1B7F79D96EBE5D388689B52C42URTTimelineClientFeedbackConfirmationToast : NSObject <T1ToastViewModel>
+@interface _TtC9T1TwitterP33_59C5E79B1B7F79D96EBE5D388689B52C42URTTimelineClientFeedbackConfirmationToast : NSObject
 {
     // Error parsing type: , name: messageText
     // Error parsing type: , name: alternateAction

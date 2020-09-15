@@ -6,10 +6,10 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class T1MomentCapsuleViewLayoutState, TFNLayoutMetrics, TFNTwitterMomentCapsule;
+@class T1MomentCapsuleViewLayoutState, TFNLayoutMetrics, TFNTwitterMoment;
 
 @protocol T1MomentCapsuleViewLayoutDelegate <NSObject>
 - (struct CGSize)mediaSizeForLayoutMetrics:(TFNLayoutMetrics *)arg1;
-- (T1MomentCapsuleViewLayoutState *)layoutForMomentViewModel:(TFNTwitterMomentCapsule *)arg1 bounds:(struct CGRect)arg2 layoutMetrics:(TFNLayoutMetrics *)arg3;
+- (T1MomentCapsuleViewLayoutState *)layoutForMomentViewModel:(TFNTwitterMoment *)arg1 bounds:(struct CGRect)arg2 layoutMetrics:(TFNLayoutMetrics *)arg3;
 @end
 

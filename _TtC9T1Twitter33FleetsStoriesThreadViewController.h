@@ -13,6 +13,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: dismissEndRect
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: account
+    // Error parsing type: , name: sessionID
     // Error parsing type: , name: $__lazy_storage_$_transitionHandler
     // Error parsing type: , name: $__lazy_storage_$_pages
     // Error parsing type: , name: openContext
@@ -42,6 +43,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: panning
     // Error parsing type: , name: progressReset
     // Error parsing type: , name: forceComposerStart
+    // Error parsing type: , name: $__lazy_storage_$_isRecording
     // Error parsing type: , name: $__lazy_storage_$_pool
     // Error parsing type: , name: $__lazy_storage_$_pageViewsChanges
     // Error parsing type: , name: $__lazy_storage_$_pageViews

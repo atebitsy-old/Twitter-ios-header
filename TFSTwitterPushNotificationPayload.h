@@ -31,12 +31,14 @@
     NSString *_scribeElement;
     NSString *_headerText;
     NSString *_iconName;
+    NSString *_notificationTypeMetadata;
     _TtC14TFSTwitterCore50TFSTwitterPushNotificationSmartActionConfiguration *_smartActionConfiguration;
     NSDictionary *_payloadDictionary;
 }
 
 + (_Bool)senderIsProtectedForPayload:(id)arg1;
 + (id)smartActionConfigurationForPayload:(id)arg1;
++ (id)notificationTypeMetadataForPayload:(id)arg1;
 + (id)headerTextForPayload:(id)arg1;
 + (id)impressionIDForPayload:(id)arg1;
 + (id)apnsCategoryForPayload:(id)arg1;
@@ -65,6 +67,7 @@
 @property(readonly, nonatomic) NSDictionary *payloadDictionary; // @synthesize payloadDictionary=_payloadDictionary;
 @property(readonly, nonatomic) _Bool senderIsProtected; // @synthesize senderIsProtected=_senderIsProtected;
 @property(readonly, nonatomic) _TtC14TFSTwitterCore50TFSTwitterPushNotificationSmartActionConfiguration *smartActionConfiguration; // @synthesize smartActionConfiguration=_smartActionConfiguration;
+@property(readonly, copy, nonatomic) NSString *notificationTypeMetadata; // @synthesize notificationTypeMetadata=_notificationTypeMetadata;
 @property(readonly, copy, nonatomic) NSString *iconName; // @synthesize iconName=_iconName;
 @property(readonly, copy, nonatomic) NSString *headerText; // @synthesize headerText=_headerText;
 @property(readonly, copy, nonatomic) NSString *scribeElement; // @synthesize scribeElement=_scribeElement;

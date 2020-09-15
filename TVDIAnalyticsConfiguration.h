@@ -9,15 +9,17 @@
 @interface TVDIAnalyticsConfiguration : NSObject
 {
     _Bool _promotedAudibleViewEnabled;
+    _Bool _shortFormCompleteEnabled;
     CDUnknownBlockType _timeProvider;
     double _heartbeatInterval;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool shortFormCompleteEnabled; // @synthesize shortFormCompleteEnabled=_shortFormCompleteEnabled;
 @property(readonly, nonatomic) _Bool promotedAudibleViewEnabled; // @synthesize promotedAudibleViewEnabled=_promotedAudibleViewEnabled;
 @property(readonly, nonatomic) double heartbeatInterval; // @synthesize heartbeatInterval=_heartbeatInterval;
 @property(readonly, copy, nonatomic) CDUnknownBlockType timeProvider; // @synthesize timeProvider=_timeProvider;
-- (id)initWithHeartbeatInterval:(id)arg1 promotedAudibleViewEnabled:(_Bool)arg2 timeProvider:(CDUnknownBlockType)arg3;
+- (id)initWithHeartbeatInterval:(id)arg1 promotedAudibleViewEnabled:(_Bool)arg2 shortFormCompleteEnabled:(_Bool)arg3 timeProvider:(CDUnknownBlockType)arg4;
 
 @end
 

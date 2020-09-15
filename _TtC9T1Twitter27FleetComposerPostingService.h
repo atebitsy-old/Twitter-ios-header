@@ -17,6 +17,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: pendingOperation
     // Error parsing type: , name: isPendingOperationCancelled
     // Error parsing type: , name: account
+    // Error parsing type: , name: _postingState
     // Error parsing type: , name: postingEventObservable
     // Error parsing type: , name: postingEventInput
 }

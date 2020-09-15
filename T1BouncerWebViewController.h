@@ -57,6 +57,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithAccount:(id)arg1 accountAccessPath:(id)arg2 skippable:(_Bool)arg3;
+- (id)initWithRootURL:(id)arg1 account:(id)arg2 sourceStatus:(id)arg3 scribeComponent:(id)arg4;
 
 @end
 

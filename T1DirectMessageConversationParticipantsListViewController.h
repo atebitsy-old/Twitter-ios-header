@@ -40,7 +40,6 @@
 - (void)_updateUserIDs;
 - (void)_configureUserCellForRoundAvatars:(id)arg1;
 - (void)_showAddPeople:(id)arg1;
-- (void)_showEditMembersActionSheet;
 - (void)_didTapEdit:(id)arg1;
 - (void)_didTapRemoveMembers:(id)arg1;
 - (void)_didTapAdd:(id)arg1;

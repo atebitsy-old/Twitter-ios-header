@@ -11,8 +11,12 @@
 @interface _TtCC13TwitterAVCore19PlaybackObservationP33_141C359356B3BB32F79BC9E53C5A81B126BlockBasedPlaybackObserver : _TtCs12_SwiftObject <TAVPlaybackObserver>
 {
     // Error parsing type: , name: block
+    // Error parsing type: , name: didAttachBlock
+    // Error parsing type: , name: didDetachBlock
 }
 
+- (void)observerDidDetachFromPlayer:(id)arg1;
+- (void)observerDidAttachToPlayer:(id)arg1;
 - (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 
 @end

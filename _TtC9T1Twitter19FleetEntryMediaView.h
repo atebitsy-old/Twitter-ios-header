@@ -30,6 +30,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: longPressEnabled
     // Error parsing type: , name: showsVideoMediaStatusView
     // Error parsing type: , name: _playbackState
+    // Error parsing type: , name: _showingMediaStatusView
     // Error parsing type: , name: boundingBoxes
     // Error parsing type: , name: videoLoadingIndicatorState
 }

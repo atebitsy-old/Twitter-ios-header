@@ -81,6 +81,7 @@
     _Bool _isFloatingReplyBarImpressionScribed;
     _Bool _isTranslationImpressionScribed;
     _Bool _isAutoTranslationImpressionScribed;
+    _Bool _didLogCardEvents;
     TFNTwitterAccount *_composingAccount;
     NSMutableSet *_draftedRepliesWaitingForSend;
     TFSTwitterScribeContext *_sourceScribeContext;
@@ -124,8 +125,8 @@
     T1URTTimelineCursorTableRowAdapter *_urtCursorAdapter;
     id _conversationObserver;
     long long _conversationID;
-    unsigned long long _loadState;
     long long _overflowCount;
+    unsigned long long _loadState;
     TFNBarButtonItem *_subscribeButton;
     struct CGPoint _inlineReplyInitialContentOffset;
     struct CGRect _currentKeyboardFrame;
@@ -138,8 +139,9 @@
 + (id)conversationDetailsViewControllerForStatus:(id)arg1 account:(id)arg2 sourceScribeContext:(id)arg3 sourceNavigationMetadata:(id)arg4;
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNBarButtonItem *subscribeButton; // @synthesize subscribeButton=_subscribeButton;
-@property(readonly, nonatomic) long long overflowCount; // @synthesize overflowCount=_overflowCount;
+@property(nonatomic) _Bool didLogCardEvents; // @synthesize didLogCardEvents=_didLogCardEvents;
 @property(nonatomic) unsigned long long loadState; // @synthesize loadState=_loadState;
+@property(readonly, nonatomic) long long overflowCount; // @synthesize overflowCount=_overflowCount;
 @property(nonatomic) _Bool isAutoTranslationImpressionScribed; // @synthesize isAutoTranslationImpressionScribed=_isAutoTranslationImpressionScribed;
 @property(nonatomic) _Bool isTranslationImpressionScribed; // @synthesize isTranslationImpressionScribed=_isTranslationImpressionScribed;
 @property(nonatomic) long long conversationID; // @synthesize conversationID=_conversationID;
@@ -323,6 +325,7 @@
 - (void)_t1_scribeSendReply:(id)arg1;
 - (void)_t1_beginListeningToDraftSendForStatusViewModel:(id)arg1;
 @property(readonly, nonatomic) NSMutableSet *draftedRepliesWaitingForSend; // @synthesize draftedRepliesWaitingForSend=_draftedRepliesWaitingForSend;
+- (void)_t1_logCardEvents;
 - (void)scribeTranslateImpressions;
 - (id)scribeContext;
 - (id)scribeImpressionParametersForIndexPath:(id)arg1;
@@ -457,6 +460,7 @@
 - (_Bool)t1_rectIsPartiallyVisible:(struct CGRect)arg1;
 - (_Bool)t1_rectIsCompletelyVisible:(struct CGRect)arg1;
 - (_Bool)t1_cellIsCompletelyVisibleAtIndexPath:(id)arg1;
+- (void)_t1_updateBackMenuTitle;
 - (void)_t1_scrollToInsertedTweet;
 - (void)_t1_scrollToTopOfReplies;
 - (void)_t1_scrollToBottom;

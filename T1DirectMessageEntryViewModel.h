@@ -6,7 +6,7 @@
 
 #import <T1Twitter/T1DirectMessageAbstractConversationEntryViewModel.h>
 
-@class DirectMessageEntryInterstitialSource, NSArray, NSAttributedString, NSString, T1DirectMessageEntryMetrics, T1DirectMessageEntryViewModelVariant, T1UnifiedCardComponentViewRegistry, T1UnifiedCardViewLayoutDelegate, TFNAttributedTextModel, TFNDirectMessageUser, TFNLayoutMetrics, TFNTwitterCardContext, TFNTwitterStatus, TFSFlavoredRange, UIFont, _TtC9T1Twitter29T1DirectMessageFleetViewModel, _TtC9T1Twitter33T1DirectMessageFleetLayoutMetrics;
+@class NSArray, NSAttributedString, NSString, T1DirectMessageEntryInterstitialSource, T1DirectMessageEntryMetrics, T1DirectMessageEntryViewModelVariant, T1UnifiedCardComponentViewRegistry, T1UnifiedCardViewLayoutDelegate, TFNAttributedTextModel, TFNDirectMessageUser, TFNLayoutMetrics, TFNTwitterCardContext, TFNTwitterStatus, TFSFlavoredRange, UIFont, _TtC9T1Twitter29T1DirectMessageFleetViewModel, _TtC9T1Twitter33T1DirectMessageFleetLayoutMetrics;
 @protocol TFNDirectMessageEntry, TFNDirectMessageMediaAttachment;
 
 @interface T1DirectMessageEntryViewModel : T1DirectMessageAbstractConversationEntryViewModel
@@ -144,7 +144,7 @@
 @property(readonly, nonatomic) double contentWidth;
 @property(readonly, nonatomic) struct UIEdgeInsets actionButtonInsets;
 @property(readonly, nonatomic) struct UIEdgeInsets interstitialInsets;
-@property(readonly, nonatomic) DirectMessageEntryInterstitialSource *interstitialSource;
+@property(readonly, nonatomic) T1DirectMessageEntryInterstitialSource *interstitialSource;
 @property(readonly, nonatomic) struct CGSize cardViewSize;
 @property(readonly, nonatomic) TFNLayoutMetrics *cardViewLayoutMetrics;
 @property(readonly, nonatomic) struct CGSize statusViewSize;

@@ -11,10 +11,11 @@
 @interface T1SpheresUserSettingsRepository : NSObject
 {
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: account
+    // Error parsing type: , name: accountID
     // Error parsing type: , name: pinnedArchiver
     // Error parsing type: , name: rankingModeArchiver
     // Error parsing type: , name: viewModelsFuture
+    // Error parsing type: , name: persistentListObservers
 }
 
 - (void).cxx_destruct;
@@ -24,6 +25,7 @@
 - (void)setIsLatestRankingModeActive:(_Bool)arg1 forListID:(long long)arg2 andPersistData:(_Bool)arg3;
 - (void)unarchiveSphereViewModelsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)archiveSphereViewModels:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)loadInitialPinnedListModels;
 - (id)initWithAccount:(id)arg1;
 @property(nonatomic) __weak id <T1SpheresUserSettingsRepositoryDelegate> delegate; // @synthesize delegate;
 

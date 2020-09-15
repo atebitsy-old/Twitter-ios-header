@@ -6,15 +6,19 @@
 
 #import <UIKit/UIButton.h>
 
+#import <TFNUI/TFNMenuSupport-Protocol.h>
 #import <TFNUI/TIPImageFetchable-Protocol.h>
 
 @class NSString, TIPImageContainer, UIImage;
 
-@interface UIButton (TFNFetchableBackgroundImage) <TIPImageFetchable>
+@interface UIButton (TFNFetchableBackgroundImage) <TIPImageFetchable, TFNMenuSupport>
 @property(retain, nonatomic) UIImage *tip_fetchedImage;
 - (void)tfn_removePointerInteraction;
 - (void)tfn_setupPointerInteractionsWithStyleProvider:(CDUnknownBlockType)arg1;
 @property(nonatomic, getter=tfn_isPointerInteractionEnabled) _Bool tfn_pointerInteractionEnabled;
+- (void)populateMenuWithActionItems:(id)arg1;
+- (_Bool)isPreparedToDisplayMenuOnPrimaryAction;
+- (void)prepareToDisplayMenuOnPrimaryAction;
 - (void)tfn_convertToAttributedTitleLinkForState:(unsigned long long)arg1;
 
 // Remaining properties

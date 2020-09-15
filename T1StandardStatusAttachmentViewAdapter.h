@@ -55,9 +55,11 @@
 - (id)quotedStatusViewLayoutStateForLayoutState:(id)arg1;
 - (id)_t1_unifiedCardViewLayoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2 width:(double)arg3;
 - (id)_t1_cardViewLayoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2 width:(double)arg3;
+- (id)_t1_quotedStandardStatusViewLayoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2 width:(double)arg3;
 - (id)_t1_quotedStatusViewLayoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2 width:(double)arg3;
 - (struct CGSize)_t1_photoVideoForwardViewSizeForViewModel:(id)arg1 layoutMetrics:(id)arg2 width:(double)arg3 attachmentType:(unsigned long long)arg4;
 - (struct CGSize)_t1_quotedTombstoneViewSizeForViewModel:(id)arg1 layoutMetrics:(id)arg2 width:(double)arg3;
+- (struct CGSize)_t1_sensitiveMediaTombstoneViewSizeForViewModel:(id)arg1 layoutMetrics:(id)arg2 width:(double)arg3;
 - (id)_t1_userRecommendationViewLayoutStateForViewModel:(id)arg1 width:(double)arg2;
 - (_Bool)_t1_useAdaptiveMediaLayoutForAttachmentType:(unsigned long long)arg1;
 - (_Bool)isLayoutState:(id)arg1 validForViewModel:(id)arg2 layoutMetrics:(id)arg3;

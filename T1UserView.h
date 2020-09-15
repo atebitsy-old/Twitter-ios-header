@@ -26,7 +26,7 @@
     _Bool _showFollowsYou;
     _Bool _showMuteBadge;
     _Bool _showMuteBadgeForFleets;
-    _Bool _showSocialBadge;
+    _Bool _socialContextViewShowsBadge;
     _Bool _showAdminTextLabel;
     _Bool _showUnblocked;
     _Bool _showUnmuted;
@@ -135,7 +135,7 @@
 @property(nonatomic) _Bool showUnmuted; // @synthesize showUnmuted=_showUnmuted;
 @property(nonatomic) _Bool showUnblocked; // @synthesize showUnblocked=_showUnblocked;
 @property(nonatomic) _Bool showAdminTextLabel; // @synthesize showAdminTextLabel=_showAdminTextLabel;
-@property(nonatomic) _Bool showSocialBadge; // @synthesize showSocialBadge=_showSocialBadge;
+@property(nonatomic) _Bool socialContextViewShowsBadge; // @synthesize socialContextViewShowsBadge=_socialContextViewShowsBadge;
 @property(nonatomic) _Bool showMuteBadgeForFleets; // @synthesize showMuteBadgeForFleets=_showMuteBadgeForFleets;
 @property(nonatomic) _Bool showMuteBadge; // @synthesize showMuteBadge=_showMuteBadge;
 @property(nonatomic) _Bool showFollowsYou; // @synthesize showFollowsYou=_showFollowsYou;
@@ -167,8 +167,8 @@
 - (void)updateSubviewAccessibility;
 - (id)accessibilityLabel;
 - (void)_update;
-- (void)_updateMuteBadgeForRelationshipState:(unsigned long long)arg1;
-- (void)_updateMuteBadge;
+- (void)_t1_updateUserNameLabel;
+- (void)_t1_updateMuteBadge;
 @property(readonly, nonatomic) UIFont *socialTextFont;
 - (void)_updateSocialContextView;
 - (_Bool)_viewModelHasSocialText;

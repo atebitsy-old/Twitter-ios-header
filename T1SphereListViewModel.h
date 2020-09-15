@@ -6,8 +6,6 @@
 
 #import <objc/NSObject.h>
 
-@class TFSTwitterUserReference;
-
 @interface T1SphereListViewModel : NSObject
 {
     // Error parsing type: , name: list
@@ -20,8 +18,6 @@
 - (void)encodeWithCoder:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 @property(nonatomic, readonly) long long hash;
-- (id)initWithList:(id)arg1;
-@property(nonatomic, readonly) TFSTwitterUserReference *userReference;
 
 @end
 

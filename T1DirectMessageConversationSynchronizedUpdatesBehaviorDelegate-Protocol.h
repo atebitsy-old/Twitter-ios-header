@@ -9,6 +9,6 @@
 @class T1DirectMessageConversationSynchronizedUpdatesBehavior;
 
 @protocol T1DirectMessageConversationSynchronizedUpdatesBehaviorDelegate <NSObject>
-- (void)synchronizedUpdatesBehaviorCanProcessUpdates:(T1DirectMessageConversationSynchronizedUpdatesBehavior *)arg1 shouldUpdateView:(_Bool)arg2;
+- (void)synchronizedUpdatesBehaviorCanProcessUpdates:(T1DirectMessageConversationSynchronizedUpdatesBehavior *)arg1;
 @end
 

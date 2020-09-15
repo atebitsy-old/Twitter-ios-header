@@ -9,6 +9,7 @@
 @protocol T1KeyboardShortcutDelegate <TFNKeyboardShortcutDelegate>
 
 @optional
+- (void)handleToggleSideBarKeyCommand;
 - (void)handleDashPanelKeyCommand;
 - (void)handleProfilePanelKeyCommand;
 - (void)handleListsPanelKeyCommand;

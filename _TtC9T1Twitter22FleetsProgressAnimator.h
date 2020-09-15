@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: elapsed
     // Error parsing type: , name: lastSeen
-    // Error parsing type: , name: completed
+    // Error parsing type: , name: playing
     // Error parsing type: , name: duration
     // Error parsing type: , name: onProgress
     // Error parsing type: , name: completion

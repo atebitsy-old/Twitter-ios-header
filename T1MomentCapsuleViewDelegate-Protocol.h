@@ -6,12 +6,12 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class T1MomentCapsuleView, TFNTwitterMomentCapsule;
+@class T1MomentCapsuleView, TFNTwitterMoment;
 
 @protocol T1MomentCapsuleViewDelegate <NSObject>
-- (void)momentCapsuleView:(T1MomentCapsuleView *)arg1 didTapMomentViewModel:(TFNTwitterMomentCapsule *)arg2;
+- (void)momentCapsuleView:(T1MomentCapsuleView *)arg1 didTapMomentViewModel:(TFNTwitterMoment *)arg2;
 
 @optional
-- (void)momentCapsuleView:(T1MomentCapsuleView *)arg1 didLongPressMomentViewModel:(TFNTwitterMomentCapsule *)arg2;
+- (void)momentCapsuleView:(T1MomentCapsuleView *)arg1 didLongPressMomentViewModel:(TFNTwitterMoment *)arg2;
 @end
 

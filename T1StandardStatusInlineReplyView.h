@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class T1ConversationInlineComposeViewController, TFNTwitterComposition;
+@class T1ConversationInlineComposeViewController, TFNLegacyButton, TFNTwitterComposition;
 
 @interface T1StandardStatusInlineReplyView : UIView
 {
@@ -20,6 +20,7 @@
 - (id)calculatedLayoutMetrics;
 - (void)layoutSubviews;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
+@property(readonly, nonatomic) TFNLegacyButton *sendReplyButton;
 @property(retain, nonatomic) TFNTwitterComposition *composition;
 - (void)setViewModel:(id)arg1 withComposition:(id)arg2;
 - (id)initWithDisplayType:(unsigned long long)arg1;

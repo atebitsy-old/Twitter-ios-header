@@ -32,6 +32,7 @@
     TFNModalSheetViewController *_modalSheet;
     TFNActiveTextItem *_messageTextItem;
     NSString *_messageIconName;
+    NSArray *_actionItemSections;
     NSMutableArray *_items;
     TFNMenuActionItem *_cancelItem;
     struct CGRect _sourceRect;
@@ -41,7 +42,8 @@
 @property(nonatomic) _Bool userDidSelectAction; // @synthesize userDidSelectAction=_userDidSelectAction;
 @property(retain, nonatomic) TFNMenuActionItem *cancelItem; // @synthesize cancelItem=_cancelItem;
 @property(readonly, nonatomic) NSMutableArray *items; // @synthesize items=_items;
-@property(retain, nonatomic) NSString *messageIconName; // @synthesize messageIconName=_messageIconName;
+@property(readonly, copy, nonatomic) NSArray *actionItemSections; // @synthesize actionItemSections=_actionItemSections;
+@property(copy, nonatomic) NSString *messageIconName; // @synthesize messageIconName=_messageIconName;
 @property(retain, nonatomic) TFNActiveTextItem *messageTextItem; // @synthesize messageTextItem=_messageTextItem;
 @property(nonatomic) __weak TFNModalSheetViewController *modalSheet; // @synthesize modalSheet=_modalSheet;
 @property(copy, nonatomic) CDUnknownBlockType dismissBlock; // @synthesize dismissBlock=_dismissBlock;
@@ -63,9 +65,13 @@
 - (void)modalSheetViewController:(id)arg1 willTransitionToLayoutMode:(long long)arg2 withTransitionCoordinator:(id)arg3;
 - (void)tfnPresentedCustomDismissAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)tfnPresentedCustomPresentFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)tfn_presentFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
+- (id)_tfn_menuControlForViewController:(id)arg1 outIsButton:(out _Bool *)arg2 outIsBarButtonItem:(out _Bool *)arg3;
+- (void)presentAsMenuIfEnabledFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)_tfn_didTapCloseButton;
 @property(readonly, nonatomic) TFNBarButtonItem *closeButton; // @synthesize closeButton=_closeButton;
 - (void)tfn_fontSizeChanged;
+- (id)_tfn_sectionsFilteredForActionItems;
 @property(readonly, nonatomic) NSArray *actions;
 - (void)_tfn_updateMessageItem;
 - (id)_tfn_messageItemForMessage:(id)arg1 messageIconName:(id)arg2 textColor:(id)arg3;

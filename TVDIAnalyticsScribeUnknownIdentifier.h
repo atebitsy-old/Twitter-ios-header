@@ -17,17 +17,14 @@
     NSString *_contentId;
 }
 
-+ (id)instanceWithContentId:(id)arg1 error:(id *)arg2;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool contentIdIsSet; // @synthesize contentIdIsSet=_contentIdIsSet;
 @property(copy, nonatomic) NSString *contentId; // @synthesize contentId=_contentId;
-- (id)validateNonOptionalFields;
 - (void)validate;
 - (void)write:(id)arg1;
 - (void)read:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithContentId:(id)arg1;
 @property(readonly, copy) NSString *description;
 
 // Remaining properties

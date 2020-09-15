@@ -17,7 +17,6 @@
 @property(retain, nonatomic) id <TFNTwitterFeatureSwitches> featureSwitches; // @synthesize featureSwitches=_featureSwitches;
 - (_Bool)isTopicPeekSearchEnabled;
 - (_Bool)isTopicPeekHomeEnabled;
-- (_Bool)isTopicPeekEnabled;
 - (_Bool)isTopicLandingPageShareEnabled;
 - (_Bool)isTopicsLandingPageEnabled;
 - (id)initWithFeatureSwitches:(id)arg1;

@@ -15,6 +15,7 @@
     // Error parsing type: , name: videoBitrateManager
     // Error parsing type: , name: notificationCenter
     // Error parsing type: , name: styleProvider
+    // Error parsing type: , name: gestureResponder
     // Error parsing type: , name: playlistItemObservation
 }
 

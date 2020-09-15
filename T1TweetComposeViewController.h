@@ -154,7 +154,7 @@
 - (void)setAccount:(id)arg1;
 - (void)_t1_removeEditingDraftCompositions;
 - (void)_t1_saveCompositionsAsDraftWithScribing:(_Bool)arg1;
-- (void)_t1_promptToSaveAsDraftsWithEvent:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_t1_promptToSaveAsDraftsWithEvent:(id)arg1 shouldPresentAsMenu:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)saveAsDrafts;
 - (void)promptSaveAsDraftsCompletion:(CDUnknownBlockType)arg1;
 - (void)tweetDraftsViewControllerDidTapClose:(id)arg1;
@@ -273,7 +273,7 @@
 - (void)_t1_didTapDraftsButton:(id)arg1;
 - (void)_t1_completeComposing;
 - (void)_t1_cancelComposing;
-- (void)_t1_closeActionWithEvent:(id)arg1;
+- (void)_t1_closeActionWithEvent:(id)arg1 shouldPresentAsMenu:(_Bool)arg2;
 - (void)_t1_didTapCloseButton:(id)arg1 event:(id)arg2;
 - (_Bool)_t1_shouldShowConversationControlButton;
 - (_Bool)_t1_shouldShowAddTweetButton;
@@ -285,6 +285,7 @@
 - (_Bool)_t1_shouldEnableFoundMediaButtonForMixedMediaOrDefault;
 - (_Bool)_t1_shouldEnableGalleryButton;
 - (_Bool)_t1_shouldEnableFoundMediaButton;
+- (id)_t1_retweetButtonName;
 - (id)_t1_sendButtonTitleForSendButtonState:(unsigned long long)arg1;
 - (unsigned long long)_t1_sendButtonState;
 - (void)_t1_updateCloseButton;

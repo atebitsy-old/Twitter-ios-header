@@ -58,6 +58,7 @@
 @property(nonatomic, getter=isCollapsingNavigationBarEnabled) _Bool collapsingNavigationBarEnabled; // @synthesize collapsingNavigationBarEnabled=_collapsingNavigationBarEnabled;
 @property(nonatomic) _Bool forceTopAttachedNavigationBarPosition; // @synthesize forceTopAttachedNavigationBarPosition=_forceTopAttachedNavigationBarPosition;
 @property(readonly, nonatomic, getter=isVisible) _Bool visible; // @synthesize visible=_visible;
+- (void)_tfn_assertBackStackMenu;
 - (id)_tfn_closeBarButtonItem;
 - (_Bool)_tfn_canHandleCloseKeyCommand;
 - (void)handleCloseKeyCommand;

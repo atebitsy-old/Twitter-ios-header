@@ -20,6 +20,7 @@
     // Error parsing type: , name: isOverflowLayout
     // Error parsing type: , name: isPossiblySensitive
     // Error parsing type: , name: isFeatureHighlightEntry
+    // Error parsing type: , name: isFleetcast
     // Error parsing type: , name: entryState
     // Error parsing type: , name: entryStateObservable
     // Error parsing type: , name: entryStateInput

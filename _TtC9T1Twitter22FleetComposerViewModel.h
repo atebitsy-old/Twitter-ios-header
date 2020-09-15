@@ -12,6 +12,7 @@
     // Error parsing type: , name: stateObservableInput
     // Error parsing type: , name: postingService
     // Error parsing type: , name: _state
+    // Error parsing type: , name: lifetime
     // Error parsing type: , name: context
     // Error parsing type: , name: scribeContext
     // Error parsing type: , name: thread

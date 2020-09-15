@@ -36,8 +36,10 @@
 - (_Bool)activeTimelineIsScrolledToTop;
 - (void)_t1_refreshSphereViewControllerIfNeeded:(id)arg1;
 - (void)refreshTimelineAtIndex:(long long)arg1;
-- (void)reloadTimelineViewControllerForListID:(long long)arg1;
-- (void)reloadTimelineViewControllers;
+- (_Bool)attemptToNavigateToTimelineWithListID:(long long)arg1;
+- (void)userDidChangeRankingForListID:(long long)arg1;
+- (void)reconstructTimelineViewControllerIfNeededForPinnedListDataModel:(id)arg1;
+- (void)updateTimelineViewControllersForPinnedListModels:(id)arg1;
 - (_Bool)_homeTimelineIsEmptyAfterLoading;
 - (_Bool)_homeTimelineisEmpty;
 @property(readonly, nonatomic) TFNTwitterHomeTimeline *homeTimeline;
@@ -48,7 +50,7 @@
 @property(nonatomic) long long selectedIndex;
 - (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 - (unsigned long long)supportedInterfaceOrientations;
-- (void)_t1_loadContentViewController:(id)arg1 indexChanged:(_Bool)arg2;
+- (void)_t1_loadContentViewControllerIfNeeded:(id)arg1 indexChanged:(_Bool)arg2;
 - (void)segmentedViewController:(id)arg1 willSelectContentViewController:(id)arg2 atIndex:(long long)arg3 indexChanged:(_Bool)arg4;
 - (double)preferredMaximumBarHeightInSegmentedViewController:(id)arg1;
 - (void)segmentedViewController:(id)arg1 didSelectContentViewController:(id)arg2 atIndex:(long long)arg3 indexChanged:(_Bool)arg4 userGestureType:(long long)arg5;
@@ -66,6 +68,7 @@
 - (void)tfn_navigationControllerDidLayoutBarItems;
 - (void)t1_appSplitModeDidChangeFromPrevious:(long long)arg1 toCurrent:(long long)arg2;
 - (_Bool)t1_showsPeopleAction;
+- (_Bool)t1_showsToggleSideBarAction;
 - (_Bool)t1_showsDashAction;
 - (_Bool)tfn_prefersNavigationBarShadowHidden;
 - (void)_t1_fakeRecurringTaskForegroundRefresh:(id)arg1;
@@ -75,7 +78,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)_t1_updateTitleAndLabelBarIfNeeded;
-- (id)initWithAccount:(id)arg1 viewController:(id)arg2;
+- (id)initWithAccount:(id)arg1 timeline:(id)arg2;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 

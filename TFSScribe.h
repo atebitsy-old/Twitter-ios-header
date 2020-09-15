@@ -6,18 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class TFSScribeConfiguration;
 @protocol TFSScribePersistenceStrategy;
 
 @interface TFSScribe : NSObject
 {
-    TFSScribeConfiguration *_configuration;
+    _Bool _usesFIFOPersistence;
     id <TFSScribePersistenceStrategy> _persistenceStrategy;
+    id <TFSScribePersistenceStrategy> _otherPeristenceStrategyToFlush;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <TFSScribePersistenceStrategy> otherPeristenceStrategyToFlush; // @synthesize otherPeristenceStrategyToFlush=_otherPeristenceStrategyToFlush;
 @property(readonly, nonatomic) id <TFSScribePersistenceStrategy> persistenceStrategy; // @synthesize persistenceStrategy=_persistenceStrategy;
-@property(readonly, nonatomic) TFSScribeConfiguration *configuration; // @synthesize configuration=_configuration;
+@property(readonly, nonatomic) _Bool usesFIFOPersistence; // @synthesize usesFIFOPersistence=_usesFIFOPersistence;
 @property(getter=isDebugEnabled) _Bool debugEnabled;
 - (void)clearScribeDatabase;
 - (void)deleteGroups:(id)arg1;

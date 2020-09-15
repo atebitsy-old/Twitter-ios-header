@@ -20,6 +20,7 @@
 - (_Bool)presentAsModalSheet;
 - (_Bool)shouldHideNavigationIcons;
 - (_Bool)shouldHideShareSheetIcon;
+- (id)initWithRootURL:(id)arg1 account:(id)arg2 sourceStatus:(id)arg3 scribeComponent:(id)arg4;
 - (id)initWithAccount:(id)arg1 sourceStatusIDNumber:(id)arg2;
 - (id)initWithAccount:(id)arg1 sourceStatus:(id)arg2;
 

@@ -61,6 +61,7 @@
 @property(readonly, nonatomic) UIView<T1BasicStatusView> *visibleQuotedStatusView;
 @property(readonly, nonatomic) UIView *visibleCardForwardView;
 @property(readonly, nonatomic) UIView *visibleInlineReplyView;
+@property(readonly, nonatomic) UIView *visibleInlineActionsView;
 @property(readonly, nonatomic) UIView *visibleMediaForwardView;
 @property(readonly, nonatomic) UIView *visibleBodyTextView;
 @property(readonly, nonatomic) UIView *visibleConversationContextView;

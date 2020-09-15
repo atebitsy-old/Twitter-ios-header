@@ -7,7 +7,6 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSOperation, TFNTwitterAccount, TFNTwitterHomeTimeline, TFNTwitterTimeline;
-@protocol TFNTwitterHomeTimelineVariantCoordinator;
 
 @interface TFNTwitterTimelineManager : NSObject
 {
@@ -16,7 +15,6 @@
     NSOperation *_loadOtherTimelinesOperation;
     id _urtNotificationsTimeline;
     TFNTwitterTimeline *_selectedTimeline;
-    id <TFNTwitterHomeTimelineVariantCoordinator> _homeTimelineVariantCoordinator;
     TFNTwitterAccount *_account;
 }
 
@@ -24,7 +22,6 @@
 + (id)timelineFactory;
 - (void).cxx_destruct;
 @property(nonatomic) __weak TFNTwitterAccount *account; // @synthesize account=_account;
-@property(readonly, nonatomic) id <TFNTwitterHomeTimelineVariantCoordinator> homeTimelineVariantCoordinator; // @synthesize homeTimelineVariantCoordinator=_homeTimelineVariantCoordinator;
 @property(retain, nonatomic) TFNTwitterTimeline *selectedTimeline; // @synthesize selectedTimeline=_selectedTimeline;
 @property(readonly, nonatomic) id urtNotificationsTimeline; // @synthesize urtNotificationsTimeline=_urtNotificationsTimeline;
 @property(readonly, copy, nonatomic) NSArray *timelines; // @synthesize timelines=_timelines;

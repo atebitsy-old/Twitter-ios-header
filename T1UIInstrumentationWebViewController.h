@@ -22,8 +22,10 @@
 @property(readonly, copy, nonatomic) NSString *result; // @synthesize result=_result;
 - (_Bool)shouldStartLoadWithRequest:(id)arg1 navigationType:(long long)arg2;
 - (void)didFinishLoadingWithError:(id)arg1;
-- (id)initWithURL:(id)arg1 page:(id)arg2;
+- (id)initWithAccount:(id)arg1;
 - (id)initWithPage:(id)arg1;
+- (id)initWithURL:(id)arg1 page:(id)arg2;
+- (id)init;
 
 @end
 

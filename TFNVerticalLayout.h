@@ -13,6 +13,7 @@
     NSMutableArray *_items;
     NSMutableArray *_orderedItems;
     _Bool _needsLayout;
+    _Bool _isLayingOut;
     _Bool _baselineRelativeSpacing;
     unsigned long long _horizontalAlignment;
     struct UIEdgeInsets _baselineEdgeInsets;

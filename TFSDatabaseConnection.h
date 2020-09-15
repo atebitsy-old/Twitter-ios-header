@@ -35,6 +35,11 @@
 - (_Bool)_tfs_isResultCode:(int)arg1 equalToExpectedResultCode:(int)arg2;
 - (_Bool)isDone:(int)arg1;
 - (_Bool)isOK:(int)arg1;
+- (id)_tfs_valueFromExecutingSQL:(id)arg1 withParameters:(id)arg2 columnReadFunction:(CDUnknownFunctionPointerType)arg3;
+- (id)numberFromExecutingSQL:(id)arg1 withParameters:(id)arg2;
+- (id)numberFromExecutingSQL:(id)arg1;
+- (id)stringFromExecutingSQL:(id)arg1 withParameters:(id)arg2;
+- (id)stringFromExecutingSQL:(id)arg1;
 - (_Bool)executeSQL:(id)arg1 withParameters:(id)arg2 enumerateRowsWithBlock:(CDUnknownBlockType)arg3;
 - (_Bool)executeSQL:(id)arg1 withParameters:(id)arg2;
 - (_Bool)executeSQL:(id)arg1;

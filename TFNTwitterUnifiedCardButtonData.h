@@ -10,6 +10,7 @@
 
 @interface TFNTwitterUnifiedCardButtonData : NSObject
 {
+    _Bool _useDominantColor;
     NSString *_title;
     NSNumber *_iconType;
     TFNTwitterUnifiedCardDestinationModel *_destination;
@@ -24,6 +25,7 @@
 + (unsigned long long)_tfn_sizeForCTAButtonVariation:(unsigned long long)arg1;
 + (unsigned long long)_tfn_variantForCTAButtonVariation:(unsigned long long)arg1;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool useDominantColor; // @synthesize useDominantColor=_useDominantColor;
 @property(readonly, nonatomic) unsigned long long size; // @synthesize size=_size;
 @property(readonly, nonatomic) unsigned long long variant; // @synthesize variant=_variant;
 @property(readonly, nonatomic) unsigned long long strength; // @synthesize strength=_strength;
@@ -33,7 +35,7 @@
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithDestination:(id)arg1 iconType:(id)arg2 title:(id)arg3 strength:(unsigned long long)arg4 variant:(unsigned long long)arg5 size:(unsigned long long)arg6;
+- (id)initWithDestination:(id)arg1 iconType:(id)arg2 title:(id)arg3 strength:(unsigned long long)arg4 variant:(unsigned long long)arg5 size:(unsigned long long)arg6 useDominantColor:(_Bool)arg7;
 - (id)initWithButtonDictionary:(id)arg1 destinationDictionary:(id)arg2;
 - (id)buttonDataWithCTAButtonVariation:(unsigned long long)arg1;
 

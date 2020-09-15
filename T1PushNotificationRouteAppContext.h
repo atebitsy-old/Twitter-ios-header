@@ -10,14 +10,16 @@
 
 @interface T1PushNotificationRouteAppContext : NSObject
 {
+    _Bool _shouldRouterIgnoreBackgroundApplicationState;
     long long _context;
     TFNTwitterAccount *_previousSessionAccount;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool shouldRouterIgnoreBackgroundApplicationState; // @synthesize shouldRouterIgnoreBackgroundApplicationState=_shouldRouterIgnoreBackgroundApplicationState;
 @property(readonly, nonatomic) TFNTwitterAccount *previousSessionAccount; // @synthesize previousSessionAccount=_previousSessionAccount;
 @property(readonly, nonatomic) long long context; // @synthesize context=_context;
-- (id)initWithContext:(long long)arg1 previousSessionAccount:(id)arg2;
+- (id)initWithContext:(long long)arg1 previousSessionAccount:(id)arg2 shouldRouterIgnoreBackgroundApplicationState:(_Bool)arg3;
 
 @end
 

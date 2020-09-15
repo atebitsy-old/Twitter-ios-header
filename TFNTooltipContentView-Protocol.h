@@ -6,10 +6,7 @@
 
 #import <TFNUI/NSObject-Protocol.h>
 
-@class NSArray;
-
 @protocol TFNTooltipContentView <NSObject>
-@property(readonly, nonatomic) NSArray *tappableViews;
 @property(copy, nonatomic) CDUnknownBlockType contentSizeChangedBlock;
 @end
 

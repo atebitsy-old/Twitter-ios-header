@@ -6,12 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import <TFNUI/TFNLegacyButtonFontGroup-Protocol.h>
 #import <TFNUI/TFNUIFontGroup-Protocol.h>
 
 @class NSString, UIFont;
 
-@interface TFNUIDefaultFontGroup : NSObject <TFNUIFontGroup, TFNLegacyButtonFontGroup>
+@interface TFNUIDefaultFontGroup : NSObject <TFNUIFontGroup>
 {
 }
 

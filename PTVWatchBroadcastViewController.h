@@ -115,6 +115,7 @@
 - (_Bool)updateVideoStackIfNeeded;
 - (void)rebuildVideoStack;
 - (void)loadDidCompleteWithError:(id)arg1;
+@property(readonly, nonatomic) _Bool isPlaying;
 - (void)didFailToFetchVideoAccessWithError:(id)arg1;
 - (void)didUpdateVideoAccess:(id)arg1 previousVideoAccess:(id)arg2;
 - (void)broadcastHasModeratorsDidChange;

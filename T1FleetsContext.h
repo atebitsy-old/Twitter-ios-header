@@ -14,7 +14,8 @@
     // Error parsing type: , name: scribe
     // Error parsing type: , name: composerPostingService
     // Error parsing type: , name: persistenceProvider
-    // Error parsing type: , name: sessionsStore
+    // Error parsing type: , name: userDefaults
+    // Error parsing type: , name: _sessions
     // Error parsing type: , name: analyticsTracker
 }
 

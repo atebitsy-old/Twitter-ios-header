@@ -6,6 +6,8 @@
 
 #import <objc/NSObject.h>
 
+@class NSString;
+
 @interface T1PinnedListDataModel : NSObject
 {
     // Error parsing type: , name: listID
@@ -16,7 +18,10 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (_Bool)isEqual:(id)arg1;
+@property(nonatomic, readonly) long long hash;
 - (id)initWithListID:(long long)arg1 listName:(id)arg2 listDescription:(id)arg3 memberCount:(long long)arg4;
+@property(nonatomic, readonly) NSString *listName;
 @property(nonatomic, readonly) long long listID; // @synthesize listID;
 
 @end

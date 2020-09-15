@@ -11,6 +11,8 @@
 
 @interface TFSScribeConfiguration : NSObject
 {
+    _Bool _usesCompactPersistence;
+    _Bool _flushesAllPersistenceStrategies;
     NSURL *_storeURL;
     TFSDatabaseUIApplicationLink *_applicationLink;
     double _shelfLife;
@@ -18,17 +20,17 @@
     id <TFSLogger> _debugLogger;
 }
 
-+ (id)configurationWithStoreURL:(id)arg1 applicationLink:(id)arg2 shelfLife:(double)arg3 errorDelegate:(id)arg4 debugLogger:(id)arg5;
-+ (id)configurationWithStoreURL:(id)arg1 applicationLink:(id)arg2 errorDelegate:(id)arg3 debugLogger:(id)arg4;
-+ (id)inMemoryConfigurationWithShelfLife:(double)arg1 errorDelegate:(id)arg2 debugLogger:(id)arg3;
-+ (id)inMemoryConfigurationWithErrorDelegate:(id)arg1 debugLogger:(id)arg2;
++ (id)configurationWithStoreURL:(id)arg1 applicationLink:(id)arg2 compactPersistence:(_Bool)arg3 flushesAllPersistence:(_Bool)arg4 errorDelegate:(id)arg5 debugLogger:(id)arg6;
++ (id)inMemoryConfigurationWithCompactPersistence:(_Bool)arg1 flushesAllPersistence:(_Bool)arg2 errorDelegate:(id)arg3 debugLogger:(id)arg4;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <TFSLogger> debugLogger; // @synthesize debugLogger=_debugLogger;
 @property(readonly, nonatomic) __weak id <TFSScribeErrorDelegate> errorDelegate; // @synthesize errorDelegate=_errorDelegate;
+@property(readonly, nonatomic) _Bool flushesAllPersistenceStrategies; // @synthesize flushesAllPersistenceStrategies=_flushesAllPersistenceStrategies;
+@property(readonly, nonatomic) _Bool usesCompactPersistence; // @synthesize usesCompactPersistence=_usesCompactPersistence;
 @property(readonly, nonatomic) double shelfLife; // @synthesize shelfLife=_shelfLife;
 @property(readonly, nonatomic) TFSDatabaseUIApplicationLink *applicationLink; // @synthesize applicationLink=_applicationLink;
 @property(readonly, nonatomic) NSURL *storeURL; // @synthesize storeURL=_storeURL;
-- (id)initWithStoreURL:(id)arg1 applicationLink:(id)arg2 shelfLife:(double)arg3 errorDelegate:(id)arg4 debugLogger:(id)arg5;
+- (id)initWithStoreURL:(id)arg1 applicationLink:(id)arg2 compactPersistence:(_Bool)arg3 flushesAllPersistence:(_Bool)arg4 shelfLife:(double)arg5 errorDelegate:(id)arg6 debugLogger:(id)arg7;
 
 @end
 

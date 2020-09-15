@@ -10,7 +10,7 @@
 {
 }
 
-+ (void)presentFromViewController:(id)arg1 conversationControl:(id)arg2 sourceInfo:(id)arg3 account:(id)arg4 scribeContext:(id)arg5 successAction:(CDUnknownBlockType)arg6;
++ (void)presentFromViewController:(id)arg1 conversationControl:(id)arg2 userCanReply:(_Bool)arg3 sourceInfo:(id)arg4 account:(id)arg5 scribeContext:(id)arg6 successAction:(CDUnknownBlockType)arg7;
 
 @end
 

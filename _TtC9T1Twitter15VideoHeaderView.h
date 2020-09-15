@@ -9,10 +9,19 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter15VideoHeaderView : _TtC9T1Twitter15MediaHeaderView
 {
-    // Error parsing type: , name: controlBar
-    // Error parsing type: , name: navigationBarTitleLabel
+    // Error parsing type: , name: mediaControlsVariant
+    // Error parsing type: , name: mediaControlsContainer
+    // Error parsing type: , name: mediaControls
+    // Error parsing type: , name: title
+    // Error parsing type: , name: titleStyle
+    // Error parsing type: , name: isTitleHidden
+    // Error parsing type: , name: titleAlpha
+    // Error parsing type: , name: navigationBarTitleLabelIfLoaded
+    // Error parsing type: , name: titlePillIfLoaded
+    // Error parsing type: , name: titlePillLeadingConstraintIfLoaded
+    // Error parsing type: , name: titlePillTopConstraintIfLoaded
+    // Error parsing type: , name: bottomBarTitleLabelIfLoaded
     // Error parsing type: , name: tavPlayerView
-    // Error parsing type: , name: didTapExpandButtonCallback
 }
 
 - (void).cxx_destruct;

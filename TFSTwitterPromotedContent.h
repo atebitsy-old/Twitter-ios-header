@@ -10,7 +10,7 @@
 #import <TFSTwitterCore/NSCopying-Protocol.h>
 #import <TFSTwitterCore/TFNTwitterPromotedEventMetadata-Protocol.h>
 
-@class NSArray, NSDictionary, NSString, TFSTwitterPromotedAdMetadataContainer;
+@class NSArray, NSDictionary, NSString, TFSTwitterPromotedAdMetadataContainer, TFSTwitterPromotedClickTrackingInfo;
 
 @interface TFSTwitterPromotedContent : NSObject <TFNTwitterPromotedEventMetadata, NSCopying, NSCoding>
 {
@@ -25,6 +25,7 @@
     NSString *_promotedTrendQueryTerm;
     NSString *_rtbCreativeID;
     TFSTwitterPromotedAdMetadataContainer *_adMetadataContainer;
+    TFSTwitterPromotedClickTrackingInfo *_clickTrackingInfo;
     NSArray *_dedupeIds;
     NSDictionary *_experiments;
 }
@@ -32,6 +33,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *experiments; // @synthesize experiments=_experiments;
 @property(readonly, nonatomic) NSArray *dedupeIds; // @synthesize dedupeIds=_dedupeIds;
+@property(readonly, nonatomic) TFSTwitterPromotedClickTrackingInfo *clickTrackingInfo; // @synthesize clickTrackingInfo=_clickTrackingInfo;
 @property(readonly, nonatomic) TFSTwitterPromotedAdMetadataContainer *adMetadataContainer; // @synthesize adMetadataContainer=_adMetadataContainer;
 @property(readonly, copy, nonatomic) NSString *rtbCreativeID; // @synthesize rtbCreativeID=_rtbCreativeID;
 @property(readonly, nonatomic) NSString *promotedTrendQueryTerm; // @synthesize promotedTrendQueryTerm=_promotedTrendQueryTerm;
@@ -44,6 +46,7 @@
 @property(readonly, nonatomic) NSString *disclosureType; // @synthesize disclosureType=_disclosureType;
 @property(readonly, nonatomic) NSString *impressionID; // @synthesize impressionID=_impressionID;
 - (id)private_dedupeIdsFromValue:(id)arg1;
+- (id)adsOverrideURLFor:(id)arg1 error:(id *)arg2;
 - (_Bool)canUseForSocialContext;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

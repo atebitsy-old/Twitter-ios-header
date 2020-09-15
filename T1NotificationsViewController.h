@@ -36,7 +36,6 @@
 - (id)segmentedViewController:(id)arg1 viewControllerAtIndex:(long long)arg2;
 - (id)segmentedViewController:(id)arg1 titleAtIndex:(long long)arg2;
 - (long long)numberOfEntriesForSegmentedViewController:(id)arg1;
-- (void)_t1_accountDidChange:(id)arg1;
 - (_Bool)timelineRefresherShouldLoadTop:(id)arg1;
 - (id)_t1_urtRefreshersWithInteractionsTimelineWithViewControllers:(id)arg1 timelineManager:(id)arg2;
 - (id)_t1_urtViewControllersWithTimelineManager:(id)arg1;
@@ -59,6 +58,7 @@
 - (_Bool)t1_showsActionButton;
 - (_Bool)tfn_prefersNavigationBarShadowHidden;
 - (void)tfn_navigationControllerDidLayoutBarItems;
+- (_Bool)t1_showsToggleSideBarAction;
 - (_Bool)t1_showsDashAction;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (_Bool)becomeFirstResponder;
@@ -67,7 +67,6 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (unsigned long long)supportedInterfaceOrientations;
-- (void)initializeViewControllersOnceTimelinesAreDeserialized;
 - (void)dealloc;
 - (id)initWithAccount:(id)arg1;
 

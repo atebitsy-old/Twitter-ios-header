@@ -8,6 +8,7 @@
 
 @interface _TtC9T1Twitter20GifChromeOverlayView : UIView
 {
+    // Error parsing type: , name: playerView
     // Error parsing type: , name: playbackObservableAttachment
     // Error parsing type: , name: styleProvider
     // Error parsing type: , name: previewImageComponent

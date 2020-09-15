@@ -14,6 +14,7 @@
 
 @interface T1DirectMessageConversationEntriesViewController : TFNDataViewController <T1DirectMessageConversationScrollPositionBehaviorSupport, T1DirectMessageConversationSynchronizedUpdatesBehaviorDelegate, T1DirectMessageConversationFlowLayoutDelegate>
 {
+    // Error parsing type: , name: hideAudioMessagingEducationKey
     // Error parsing type: , name: conversation
     // Error parsing type: , name: account
     // Error parsing type: , name: userDefaults
@@ -62,7 +63,7 @@
 - (id)initWithCollectionViewLayout:(id)arg1;
 - (void)userDataSourceDidUpdate;
 - (void)playIncomingMessageSound;
-- (void)synchronizedUpdatesBehaviorCanProcessUpdates:(id)arg1 shouldUpdateView:(_Bool)arg2;
+- (void)synchronizedUpdatesBehaviorCanProcessUpdates:(id)arg1;
 - (void)didEndScrollingAnimation;
 - (void)scrollToEntry:(id)arg1;
 - (void)scrollToTop;

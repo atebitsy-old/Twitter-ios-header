@@ -14,11 +14,13 @@
     // Error parsing type: , name: canReportMetrics
     // Error parsing type: , name: inactivityDetector
     // Error parsing type: , name: metricReporter
+    // Error parsing type: , name: performanceTracer
     // Error parsing type: , name: warningLogger
 }
 
 - (void)stateMachine:(id)arg1 failedTraversingEdge:(id)arg2 fromNode:(id)arg3;
 - (void)stateMachine:(id)arg1 completedTransition:(id)arg2;
+- (void)stateMachineRestarted:(id)arg1;
 
 @end
 

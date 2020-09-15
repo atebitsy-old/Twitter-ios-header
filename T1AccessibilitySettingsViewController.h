@@ -11,12 +11,18 @@
     // Error parsing type: , name: account
     // Error parsing type: , name: dataSaverSettings
     // Error parsing type: , name: hashtagItem
+    // Error parsing type: , name: hashtagEnabled
     // Error parsing type: , name: includeUsernamesInTimelinesItem
+    // Error parsing type: , name: includeUsernamesInTimelinesEnabled
     // Error parsing type: , name: linkShortenedItem
-    // Error parsing type: , name: magicTapItem
+    // Error parsing type: , name: linkShortenedEnabled
     // Error parsing type: , name: highContrastItem
+    // Error parsing type: , name: highContrastEnabled
     // Error parsing type: , name: SFSVCItem
+    // Error parsing type: , name: SFSVCEnabled
     // Error parsing type: , name: reduceMotionItem
+    // Error parsing type: , name: reduceMotionEnabled
+    // Error parsing type: , name: magicTapItem
     // Error parsing type: , name: reduceMotionHelpItem
     // Error parsing type: , name: $__lazy_storage_$_videoAutoplayItem
     // Error parsing type: , name: $__lazy_storage_$_videoAutoplayDescriptionItem

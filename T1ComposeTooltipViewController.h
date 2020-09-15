@@ -9,7 +9,6 @@
 #import <T1Twitter/TFNTooltipDelegate-Protocol.h>
 
 @class NSMutableDictionary, NSString, T1ComposeTooltipConfiguration, T1ComposeTooltipRegistry, TFNTooltip, TFNTwitterAccount, UIView;
-@protocol T1ComposeTooltipViewControllerDelegate;
 
 @interface T1ComposeTooltipViewController : TFNViewController <TFNTooltipDelegate>
 {
@@ -19,7 +18,6 @@
     NSMutableDictionary *_registeredViews;
     TFNTwitterAccount *_account;
     id _context;
-    id <T1ComposeTooltipViewControllerDelegate> _delegate;
     double _tooltipPresentationDelay;
     T1ComposeTooltipConfiguration *_currentTooltipConfiguration;
 }
@@ -27,7 +25,6 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) T1ComposeTooltipConfiguration *currentTooltipConfiguration; // @synthesize currentTooltipConfiguration=_currentTooltipConfiguration;
 @property(nonatomic) double tooltipPresentationDelay; // @synthesize tooltipPresentationDelay=_tooltipPresentationDelay;
-@property(nonatomic) __weak id <T1ComposeTooltipViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id context; // @synthesize context=_context;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 - (void)tooltipDidDismiss:(id)arg1;

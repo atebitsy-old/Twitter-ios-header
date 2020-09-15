@@ -82,7 +82,7 @@
     NSString *_momentID;
     NSString *_debugString;
     NSString *_ruxContext;
-    NSDictionary *_scribeItemForGuideDetails;
+    NSDictionary *_scribeGuideDetails;
     NSString *_scribeReferringEvent;
     double _score;
     long long _draftTweetID;
@@ -135,7 +135,7 @@
 @property(readonly, nonatomic) _Bool isIncompleteLongFormTweet; // @synthesize isIncompleteLongFormTweet=_isIncompleteLongFormTweet;
 @property(nonatomic) _Bool scribingSelectedState; // @synthesize scribingSelectedState=_scribingSelectedState;
 @property(retain, nonatomic) NSString *scribeReferringEvent; // @synthesize scribeReferringEvent=_scribeReferringEvent;
-@property(retain, nonatomic) NSDictionary *scribeItemForGuideDetails; // @synthesize scribeItemForGuideDetails=_scribeItemForGuideDetails;
+@property(retain, nonatomic) NSDictionary *scribeGuideDetails; // @synthesize scribeGuideDetails=_scribeGuideDetails;
 @property(copy, nonatomic) NSString *ruxContext; // @synthesize ruxContext=_ruxContext;
 @property(copy, nonatomic) NSString *debugString; // @synthesize debugString=_debugString;
 @property(copy, nonatomic) NSString *momentID; // @synthesize momentID=_momentID;

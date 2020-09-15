@@ -20,6 +20,7 @@
 - (_Bool)shouldHideSecuredIcon;
 - (_Bool)shouldHideShareSheetIcon;
 - (void)viewDidLoad;
+- (id)initWithRootURL:(id)arg1 account:(id)arg2 sourceStatus:(id)arg3 scribeComponent:(id)arg4;
 - (id)initWithAccount:(id)arg1 path:(id)arg2;
 - (id)initWithAccount:(id)arg1 path:(id)arg2 userIDNumber:(id)arg3;
 

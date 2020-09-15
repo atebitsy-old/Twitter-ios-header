@@ -15,6 +15,7 @@
     // Error parsing type: , name: topCursor
     // Error parsing type: , name: bottomCursor
     // Error parsing type: , name: updateDisplayActions
+    // Error parsing type: , name: navigationInstructions
     // Error parsing type: , name: metadata
     // Error parsing type: , name: clientMetadata
     // Error parsing type: , name: clientFeedbackConfirmations

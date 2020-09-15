@@ -16,6 +16,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_updateEmailItem
     // Error parsing type: , name: $__lazy_storage_$_updatePhoneItem
     // Error parsing type: , name: kUploadDelay
+    // Error parsing type: , name: $__lazy_storage_$_optInEnabled
     // Error parsing type: , name: $__lazy_storage_$_optInItem
     // Error parsing type: , name: $__lazy_storage_$_optInDetails
     // Error parsing type: , name: removeAllContactsItem

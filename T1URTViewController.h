@@ -61,6 +61,7 @@
 - (void)willDisplayCell:(id)arg1 forItem:(id)arg2 atIndexPath:(id)arg3;
 - (id)tableViewCellForItem:(id)arg1 atIndexPath:(id)arg2;
 - (void)debugTimelineGestureUpdated:(id)arg1;
+- (void)didTapShareButton:(id)arg1;
 - (void)didTapMoreButton:(id)arg1;
 - (id)createScrollPerformanceMetricsWithDelegate:(id)arg1;
 - (id)dataViewAccessibilityIdentifier;
@@ -74,6 +75,7 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+- (void)viewDidLoad;
 - (void)loadView;
 @property(nonatomic) __weak id <T1URTViewControllerLoadingDelegate> loadingDelegate; // @synthesize loadingDelegate;
 @property(nonatomic, readonly) TFNTwitterAccount *account; // @synthesize account;

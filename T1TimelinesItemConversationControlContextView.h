@@ -12,16 +12,18 @@
 @interface T1TimelinesItemConversationControlContextView : UIView
 {
     id <T1TimelinesItemConversationControlContextViewDelegate> _delegate;
+    unsigned long long _displayType;
     UIImageView *_badgeImageView;
     UILabel *_textLabel;
     TFNTappableHighlightView *_highlightView;
 }
 
-+ (struct CGSize)sizeWithLabelText:(id)arg1 font:(id)arg2 maximumWidth:(double)arg3;
++ (struct CGSize)sizeWithLabelText:(id)arg1 font:(id)arg2 maximumWidth:(double)arg3 displayType:(unsigned long long)arg4;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNTappableHighlightView *highlightView; // @synthesize highlightView=_highlightView;
 @property(readonly, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(readonly, nonatomic) UIImageView *badgeImageView; // @synthesize badgeImageView=_badgeImageView;
+@property(readonly, nonatomic) unsigned long long displayType; // @synthesize displayType=_displayType;
 @property(nonatomic) __weak id <T1TimelinesItemConversationControlContextViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;

@@ -71,6 +71,8 @@
 - (void)tfn_private_setTranslatesAutoresizingMaskIntoConstraints:(_Bool)arg1;
 - (void)tfn_private_rightToLeftTransform_didMoveToSuperview;
 - (id)_tfn_viewControllerExecutionContextFirstResponder;
+- (void)tfn_pinToLayoutGuide:(id)arg1 withEdgeInsets:(struct UIEdgeInsets)arg2;
+- (void)tfn_pinToLayoutGuide:(id)arg1;
 - (void)tfn_updateAccessibilityIgnoresInvertColorsOnViewTree;
 @property(readonly, nonatomic) NSArray *tfn_ancestry;
 - (id)tfn_centerEmbedInStackViewWithAxis:(long long)arg1;

@@ -11,6 +11,7 @@
 - (id)t1_buttonItemForCategory:(unsigned long long)arg1;
 - (id)t1_actionButtonItemCategoriesWithAccount:(id)arg1;
 - (_Bool)t1_showsActionButton;
+- (_Bool)t1_showsToggleSideBarAction;
 - (id)scribeSection;
 - (id)scribePage;
 - (id)scribe;

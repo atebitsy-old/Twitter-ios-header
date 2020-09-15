@@ -9,7 +9,7 @@
 #import <T1Twitter/T1PlayerFactoryIdentifiable-Protocol.h>
 #import <T1Twitter/TFSTwitterScribableItem-Protocol.h>
 
-@class NSDictionary, NSString, T1PlayerSessionProducer, TFNTwitterMomentCapsule, TFNTwitterMomentLinkTitleCard, TFNTwitterMomentMedia, TFNTwitterMomentPageSocialProof, TFNTwitterMomentRender, TFNTwitterStatus, TFSTwitterTextRange;
+@class NSDictionary, NSString, T1PlayerSessionProducer, TFNTwitterMomentLinkTitleCard, TFNTwitterMomentMedia, TFNTwitterMomentPageSocialProof, TFNTwitterMomentRender, TFNTwitterStatus, TFSTwitterTextRange;
 
 @interface TFNTwitterMomentPage : NSObject <T1PlayerFactoryIdentifiable, TFSTwitterScribableItem>
 {
@@ -22,7 +22,6 @@
     TFNTwitterMomentMedia *_media;
     TFNTwitterMomentLinkTitleCard *_linkTitleCard;
     TFSTwitterTextRange *_truncationRange;
-    TFNTwitterMomentCapsule *_attachedMomentCapsule;
     TFNTwitterMomentPageSocialProof *_socialProof;
     long long _pageNumber;
 }
@@ -34,7 +33,6 @@
 @property(nonatomic) long long pageNumber; // @synthesize pageNumber=_pageNumber;
 @property(readonly, nonatomic) _Bool isPromoted; // @synthesize isPromoted=_isPromoted;
 @property(readonly, nonatomic) TFNTwitterMomentPageSocialProof *socialProof; // @synthesize socialProof=_socialProof;
-@property(readonly, nonatomic) TFNTwitterMomentCapsule *attachedMomentCapsule; // @synthesize attachedMomentCapsule=_attachedMomentCapsule;
 @property(readonly, nonatomic) TFSTwitterTextRange *truncationRange; // @synthesize truncationRange=_truncationRange;
 @property(readonly, nonatomic) TFNTwitterMomentLinkTitleCard *linkTitleCard; // @synthesize linkTitleCard=_linkTitleCard;
 @property(readonly, nonatomic) TFNTwitterMomentMedia *media; // @synthesize media=_media;
@@ -61,8 +59,8 @@
 - (id)initWithMediaURL:(id)arg1 size:(struct CGSize)arg2;
 - (id)initWithJSONDictionary:(id)arg1 statusDictionary:(id)arg2;
 - (id)initWithStatus:(id)arg1;
-- (id)initWithType:(long long)arg1 pageID:(id)arg2 status:(id)arg3 render:(id)arg4 media:(id)arg5 linkTitleCard:(id)arg6 truncationRange:(id)arg7 attachedMomentCapsule:(id)arg8 socialProof:(id)arg9 isPromoted:(_Bool)arg10;
-- (id)initWithType:(long long)arg1 pageID:(id)arg2 statusID:(id)arg3 status:(id)arg4 render:(id)arg5 media:(id)arg6 linkTitleCard:(id)arg7 truncationRange:(id)arg8 attachedMomentCapsule:(id)arg9 socialProof:(id)arg10 isPromoted:(_Bool)arg11;
+- (id)initWithType:(long long)arg1 pageID:(id)arg2 status:(id)arg3 render:(id)arg4 media:(id)arg5 linkTitleCard:(id)arg6 truncationRange:(id)arg7 socialProof:(id)arg8 isPromoted:(_Bool)arg9;
+- (id)initWithType:(long long)arg1 pageID:(id)arg2 statusID:(id)arg3 status:(id)arg4 render:(id)arg5 media:(id)arg6 linkTitleCard:(id)arg7 truncationRange:(id)arg8 socialProof:(id)arg9 isPromoted:(_Bool)arg10;
 - (id)init;
 @property(readonly, nonatomic) T1PlayerSessionProducer *playerSessionProducer;
 

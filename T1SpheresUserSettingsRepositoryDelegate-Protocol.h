@@ -4,9 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class T1SpheresUserSettingsRepository;
+@class NSArray, T1PinnedListDataModel, T1SpheresUserSettingsRepository;
 
 @protocol T1SpheresUserSettingsRepositoryDelegate
-- (void)spheresUserSettingsRepositoryPinnedListsDidChange:(T1SpheresUserSettingsRepository *)arg1;
+- (void)spheresUserSettingsRepository:(T1SpheresUserSettingsRepository *)arg1 didChangeRankingForListID:(long long)arg2;
+- (void)spheresUserSettingsRepository:(T1SpheresUserSettingsRepository *)arg1 didUpdateWithPinnedListDataModel:(T1PinnedListDataModel *)arg2;
+- (void)spheresUserSettingsRepositoryPinnedListsDidChange:(T1SpheresUserSettingsRepository *)arg1 withPinnedListModels:(NSArray *)arg2;
 @end
 

@@ -14,6 +14,7 @@
     NSHashTable *_objectsWithDynamicColors;
     NSHashTable *_viewsWithDynamicColorProviders;
     _Bool _reloadingColors;
+    _Bool _overrideWindowsUserInterfaceStyle;
     id <TFNDynamicColorProvider> _dynamicColorProvider;
 }
 
@@ -21,8 +22,11 @@
 + (_Bool)isDynamicColorEnabled;
 + (void)enableDynamicColor;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool overrideWindowsUserInterfaceStyle; // @synthesize overrideWindowsUserInterfaceStyle=_overrideWindowsUserInterfaceStyle;
 @property(retain, nonatomic) id <TFNDynamicColorProvider> dynamicColorProvider; // @synthesize dynamicColorProvider=_dynamicColorProvider;
 - (id)recordSetColorInvocationForObject:(id)arg1 declaringClass:(Class)arg2 selector:(SEL)arg3 adapter:(id)arg4 arguments:(id)arg5;
+- (void)_applyUserInterfaceStyleForDynamicColorProvider:(id)arg1 toView:(id)arg2;
+- (void)didCreateWindow:(id)arg1;
 - (long long)keyboardAppearanceForTextInputTraits:(id)arg1;
 - (_Bool)_viewHasDynamicColorProvider:(id)arg1;
 - (void)_viewDidMoveToSuperview:(id)arg1;

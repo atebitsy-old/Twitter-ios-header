@@ -7,6 +7,7 @@
 #import <T1Twitter/T1URTViewController.h>
 
 @interface T1URTViewController (T1Twitter3)
+- (_Bool)t1_showsToggleSideBarAction;
 - (_Bool)t1_showsDashAction;
 - (_Bool)t1_showsPeopleAction;
 @end

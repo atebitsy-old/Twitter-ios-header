@@ -43,6 +43,7 @@
     TFSTwitterScribeContext *_scribeContext;
     UIView *visibleAutoTranslateBodyView;
     UIView *visibleTranslateTweetView;
+    UIView *visibleInlineActionsView;
     UIView *visibleInlineReplyView;
     T1StatusLiveEngagementManager *_livePipelineTweetManager;
     id <T1StatusViewEventHandler> _eventHandler;
@@ -101,6 +102,7 @@
 @property(nonatomic) _Bool selected; // @synthesize selected=_selected;
 @property(nonatomic) struct UIEdgeInsets contentEdgeInsets; // @synthesize contentEdgeInsets=_contentEdgeInsets;
 @property(readonly, nonatomic) UIView *visibleInlineReplyView; // @synthesize visibleInlineReplyView;
+@property(readonly, nonatomic) UIView *visibleInlineActionsView; // @synthesize visibleInlineActionsView;
 @property(readonly, nonatomic) UIView *visibleTranslateTweetView; // @synthesize visibleTranslateTweetView;
 @property(readonly, nonatomic) UIView *visibleAutoTranslateBodyView; // @synthesize visibleAutoTranslateBodyView;
 @property(nonatomic) _Bool shouldPauseLivePipelineUpdates; // @synthesize shouldPauseLivePipelineUpdates=_shouldPauseLivePipelineUpdates;

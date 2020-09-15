@@ -4,12 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <TwitterAppearance/TFNLegacyButtonFontGroup-Protocol.h>
 #import <TwitterAppearance/TFNUIFontGroup-Protocol.h>
 
 @class UIFont;
 
-@protocol TAEFontGroup <TFNUIFontGroup, TFNLegacyButtonFontGroup>
+@protocol TAEFontGroup <TFNUIFontGroup>
 + (id)sharedFontGroup;
 @property(readonly, nonatomic) UIFont *conversationControlSelectionHeaderCellDetailFont;
 @property(readonly, nonatomic) UIFont *conversationControlSelectionHeaderCellTitleFont;

@@ -16,7 +16,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: sizeManager
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: avatarsFrame
-    // Error parsing type: , name: userDefaults
     // Error parsing type: , name: account
     // Error parsing type: , name: coFleetInputBarView
     // Error parsing type: , name: collectionMargin

@@ -10,7 +10,8 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter26FleetLineItemAccessoryView : UIView
 {
     // Error parsing type: , name: backgroundLayer
-    // Error parsing type: , name: imageView
+    // Error parsing type: , name: _imageView
+    // Error parsing type: , name: _liveLabel
     // Error parsing type: , name: accessoryType
 }
 

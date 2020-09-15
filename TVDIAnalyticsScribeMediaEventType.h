@@ -9,7 +9,7 @@
 #import <TVDIAnalyticsScribe/NSCoding-Protocol.h>
 #import <TVDIAnalyticsScribe/TBase-Protocol.h>
 
-@class NSString, TVDIAnalyticsScribeCtaUrlClick, TVDIAnalyticsScribeCtaUrlImpression, TVDIAnalyticsScribeCtaWatchClick, TVDIAnalyticsScribeCtaWatchImpression, TVDIAnalyticsScribeError, TVDIAnalyticsScribeHeartbeat, TVDIAnalyticsScribeIntentToPlay, TVDIAnalyticsScribeLoop, TVDIAnalyticsScribeMute, TVDIAnalyticsScribePause, TVDIAnalyticsScribePlay, TVDIAnalyticsScribePlayFromTap, TVDIAnalyticsScribePlayback25, TVDIAnalyticsScribePlayback50, TVDIAnalyticsScribePlayback75, TVDIAnalyticsScribePlayback95, TVDIAnalyticsScribePlaybackComplete, TVDIAnalyticsScribePlaybackStart, TVDIAnalyticsScribePlaybackStartupError, TVDIAnalyticsScribeReplay, TVDIAnalyticsScribeUnmute, TVDIAnalyticsScribeVideo6SecView, TVDIAnalyticsScribeVideoAdSkip, TVDIAnalyticsScribeVideoGroupmView, TVDIAnalyticsScribeVideoMrcAudibleView, TVDIAnalyticsScribeVideoMrcView, TVDIAnalyticsScribeVideoQualityView, TVDIAnalyticsScribeVideoView, TVDIAnalyticsScribeView2Second, TVDIAnalyticsScribeViewThreshold;
+@class NSString, TVDIAnalyticsScribeCtaUrlClick, TVDIAnalyticsScribeCtaUrlImpression, TVDIAnalyticsScribeCtaWatchClick, TVDIAnalyticsScribeCtaWatchImpression, TVDIAnalyticsScribeError, TVDIAnalyticsScribeHeartbeat, TVDIAnalyticsScribeIntentToPlay, TVDIAnalyticsScribeLoop, TVDIAnalyticsScribeMute, TVDIAnalyticsScribePause, TVDIAnalyticsScribePlay, TVDIAnalyticsScribePlayFromTap, TVDIAnalyticsScribePlayback25, TVDIAnalyticsScribePlayback50, TVDIAnalyticsScribePlayback75, TVDIAnalyticsScribePlayback95, TVDIAnalyticsScribePlaybackComplete, TVDIAnalyticsScribePlaybackStart, TVDIAnalyticsScribePlaybackStartupError, TVDIAnalyticsScribeReplay, TVDIAnalyticsScribeUnmute, TVDIAnalyticsScribeVideo6SecView, TVDIAnalyticsScribeVideoAdSkip, TVDIAnalyticsScribeVideoGroupmView, TVDIAnalyticsScribeVideoMrcAudibleView, TVDIAnalyticsScribeVideoMrcView, TVDIAnalyticsScribeVideoQualityView, TVDIAnalyticsScribeVideoShortFormComplete, TVDIAnalyticsScribeVideoView, TVDIAnalyticsScribeView2Second, TVDIAnalyticsScribeViewThreshold;
 
 @interface TVDIAnalyticsScribeMediaEventType : NSObject <TBase, NSCoding>
 {
@@ -43,6 +43,7 @@
     _Bool _unmuteIsSet;
     _Bool _video6secViewIsSet;
     _Bool _videoMrcAudibleViewIsSet;
+    _Bool _videoShortFormCompleteIsSet;
     TVDIAnalyticsScribeIntentToPlay *_intentToPlay;
     TVDIAnalyticsScribePlay *_play;
     TVDIAnalyticsScribeReplay *_replay;
@@ -73,9 +74,12 @@
     TVDIAnalyticsScribeUnmute *_unmute;
     TVDIAnalyticsScribeVideo6SecView *_video6secView;
     TVDIAnalyticsScribeVideoMrcAudibleView *_videoMrcAudibleView;
+    TVDIAnalyticsScribeVideoShortFormComplete *_videoShortFormComplete;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool videoShortFormCompleteIsSet; // @synthesize videoShortFormCompleteIsSet=_videoShortFormCompleteIsSet;
+@property(retain, nonatomic) TVDIAnalyticsScribeVideoShortFormComplete *videoShortFormComplete; // @synthesize videoShortFormComplete=_videoShortFormComplete;
 @property(readonly, nonatomic) _Bool videoMrcAudibleViewIsSet; // @synthesize videoMrcAudibleViewIsSet=_videoMrcAudibleViewIsSet;
 @property(retain, nonatomic) TVDIAnalyticsScribeVideoMrcAudibleView *videoMrcAudibleView; // @synthesize videoMrcAudibleView=_videoMrcAudibleView;
 @property(readonly, nonatomic) _Bool video6secViewIsSet; // @synthesize video6secViewIsSet=_video6secViewIsSet;
@@ -141,8 +145,9 @@
 - (void)read:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
+- (id)initWithVideoShortFormComplete:(id)arg1;
 - (id)initWithVideoMrcAudibleView:(id)arg1;
-- (id)initWithVideo6SecView:(id)arg1;
+- (id)initWithVideo6secView:(id)arg1;
 - (id)initWithUnmute:(id)arg1;
 - (id)initWithMute:(id)arg1;
 - (id)initWithLoop:(id)arg1;

@@ -6,19 +6,19 @@
 
 #import <TFNUI/TFNTableViewCell.h>
 
-@class UIColor, UILabel;
+@class TFNButton, UIColor;
 
 @interface TFNMenuActionRoundedButtonCell : TFNTableViewCell
 {
     UIColor *_buttonBackgroundColor;
     UIColor *_buttonHighlightColor;
-    UILabel *_buttonLabel;
+    TFNButton *_button;
     struct UIEdgeInsets _overrideContentEdgeInsets;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets overrideContentEdgeInsets; // @synthesize overrideContentEdgeInsets=_overrideContentEdgeInsets;
-@property(retain, nonatomic) UILabel *buttonLabel; // @synthesize buttonLabel=_buttonLabel;
+@property(retain, nonatomic) TFNButton *button; // @synthesize button=_button;
 @property(retain, nonatomic) UIColor *buttonHighlightColor; // @synthesize buttonHighlightColor=_buttonHighlightColor;
 @property(retain, nonatomic) UIColor *buttonBackgroundColor; // @synthesize buttonBackgroundColor=_buttonBackgroundColor;
 - (void)setHighlighted:(_Bool)arg1 animated:(_Bool)arg2;

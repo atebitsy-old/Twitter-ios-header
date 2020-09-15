@@ -10,7 +10,7 @@
 #import <T1Twitter/TFNPreviewable-Protocol.h>
 #import <T1Twitter/TFNReusableViewCacheContainer-Protocol.h>
 
-@class NSString, T1CardContainerView, T1QuotedStatusView, T1StatusPhotoVideoForwardView, T1TombstoneView, T1URTRichTextStatusEventInteractionHandler, T1UnifiedCardView, T1UnifiedCardViewLayoutDelegate, T1UserRecommendationView, TFNReusableViewCache, TFNTwitterAccount, TFSTwitterScribeContext;
+@class NSString, T1CardContainerView, T1StatusPhotoVideoForwardView, T1TombstoneView, T1URTRichTextStatusEventInteractionHandler, T1UnifiedCardView, T1UnifiedCardViewLayoutDelegate, T1UserRecommendationView, TFNReusableViewCache, TFNTwitterAccount, TFSTwitterScribeContext;
 @protocol T1StatusViewAttachmentContainerViewDelegate, T1StatusViewModel;
 
 @interface T1StatusViewAttachmentContainerView : UIView <T1TombstoneViewDelegate, TFNPreviewable, TFNReusableViewCacheContainer>
@@ -49,10 +49,12 @@
 - (id)_t1_getAttachmentViewOfType:(Class)arg1 withInitializer:(CDUnknownBlockType)arg2;
 - (void)_t1_setupCardView;
 - (void)_t1_setupUnifiedCardView;
+- (void)_t1_setupQuotedStatusViewLegacy;
 - (void)_t1_setupQuotedStatusView;
 - (void)_t1_setupPhotoVideoView;
 - (void)_t1_setupUserRecommendationView;
 - (void)_t1_setupTombstonedQuotedStatusAttachmentView;
+- (void)_t1_setupSensitiveMediaTombstoneAttachmentView;
 - (void)_t1_setupAttachmentView;
 - (void)didTapOnViewButtonWithTombstoneView:(id)arg1;
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;
@@ -64,7 +66,8 @@
 - (id)init;
 @property(readonly, nonatomic) T1UnifiedCardView *unifiedCardView;
 @property(readonly, nonatomic) T1CardContainerView *cardContainerView;
-@property(readonly, nonatomic) T1QuotedStatusView *quotedStatusView;
+- (id)_t1_quotedStatusViewLegacy;
+@property(readonly, nonatomic) UIView *quotedStatusView;
 @property(readonly, nonatomic) T1StatusPhotoVideoForwardView *photoVideoView;
 @property(readonly, nonatomic) T1UserRecommendationView *userRecommendationView;
 @property(readonly, nonatomic) T1TombstoneView *tombstoneView;

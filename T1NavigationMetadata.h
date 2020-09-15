@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFSTwitterScribeParameters-Protocol.h>
 
-@class NSNumber, NSString, TFNTwitterSuggestsInfo, TFNTwitterTweetDetailsScribeItem;
+@class NSDictionary, NSNumber, NSString, TFNTwitterSuggestsInfo, TFNTwitterTweetDetailsScribeItem;
 
 @interface T1NavigationMetadata : NSObject <TFSTwitterScribeParameters>
 {
@@ -17,13 +17,17 @@
     NSNumber *_itemID;
     TFNTwitterSuggestsInfo *_suggestsInfo;
     TFNTwitterTweetDetailsScribeItem *_tweetDetailsScribeItem;
+    NSDictionary *_notificationTabDetails;
 }
 
-+ (id)profileNavigationMetadataWithDataSource:(id)arg1 sourceStatus:(id)arg2;
-+ (id)navigationMetadataWithName:(id)arg1 status:(id)arg2;
++ (id)navigationMetadataForProfileDataSource:(id)arg1 sourceStatus:(id)arg2 sourceScribeContext:(id)arg3;
++ (id)navigationMetadataWithName:(id)arg1 statusID:(id)arg2 sourceScribeContext:(id)arg3;
++ (id)navigationMetadataWithName:(id)arg1 status:(id)arg2 sourceScribeContext:(id)arg3;
++ (id)navigationMetadataForPushPayload:(id)arg1;
 + (id)testingNavigationMetadata;
 + (id)emptyNavigationMetadata;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSDictionary *notificationTabDetails; // @synthesize notificationTabDetails=_notificationTabDetails;
 @property(readonly, nonatomic) TFNTwitterTweetDetailsScribeItem *tweetDetailsScribeItem; // @synthesize tweetDetailsScribeItem=_tweetDetailsScribeItem;
 @property(readonly, nonatomic) TFNTwitterSuggestsInfo *suggestsInfo; // @synthesize suggestsInfo=_suggestsInfo;
 @property(readonly, nonatomic) NSNumber *itemID; // @synthesize itemID=_itemID;
@@ -31,13 +35,15 @@
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 - (id)JSONDictionary;
 - (id)_t1_JSONDictionary;
-- (id)initWithName:(id)arg1 itemType:(id)arg2 itemID:(id)arg3 suggestsInfo:(id)arg4 tweetDetailsScribeItem:(id)arg5;
+@property(readonly, copy) NSString *description;
+- (void)addSourceScribeContext:(id)arg1;
+- (id)initWithName:(id)arg1 itemType:(id)arg2 itemID:(id)arg3 suggestsInfo:(id)arg4 tweetDetailsScribeItem:(id)arg5 notificationTabDetails:(id)arg6 sourceScribeContext:(id)arg7;
+- (id)initWithName:(id)arg1 sourceScribeContext:(id)arg2;
 - (id)initWithName:(id)arg1 itemType:(id)arg2 itemID:(id)arg3;
 - (id)initWithName:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 

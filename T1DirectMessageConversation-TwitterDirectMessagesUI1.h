@@ -6,7 +6,9 @@
 
 #import <T1Twitter/T1DirectMessageConversation.h>
 
-@interface T1DirectMessageConversation (TwitterDirectMessagesUI1)
+#import <T1Twitter/TFNDirectMessageConversationActions-Protocol.h>
+
+@interface T1DirectMessageConversation (TwitterDirectMessagesUI1) <TFNDirectMessageConversationActions>
 - (void)pruneOldEntries;
 - (void)addWelcomeMessage:(id)arg1;
 - (void)updateReadOnlyState:(_Bool)arg1;

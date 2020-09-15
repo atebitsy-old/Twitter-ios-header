@@ -13,6 +13,7 @@
     // Error parsing type: , name: textStorage
     // Error parsing type: , name: textView
     // Error parsing type: , name: userInteractionDidChangeTextViewScheduler
+    // Error parsing type: , name: updatePlaceholderTextScheduler
     // Error parsing type: , name: updateTextAttributesScheduler
     // Error parsing type: , name: editingDelegate
     // Error parsing type: , name: textInputObserver

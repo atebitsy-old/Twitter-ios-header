@@ -6,7 +6,7 @@
 
 #import <TFNUI/TFNViewController.h>
 
-@class NSString, T1DirectMessageConversationQuickReplyPresentationBehavior, TFNDirectMessageComposition, TFNTwitterAccount, _TtC9T1Twitter37DirectMessageComposerInterstitialView, _TtC9T1Twitter40DirectMessageComposerInterstitialViewOld;
+@class NSString, T1DirectMessageConversationQuickReplyPresentationBehavior, TFNDirectMessageComposition, TFNTwitterAccount, _TtC23TwitterDirectMessagesUI37DirectMessageComposerInterstitialView, _TtC23TwitterDirectMessagesUI40DirectMessageComposerInterstitialViewOld;
 
 @interface T1DirectMessageComposeViewController : TFNViewController
 {
@@ -68,6 +68,7 @@
     // Error parsing type: , name: animatingKeyboardFrame
     // Error parsing type: , name: lockComposeBarPosition
     // Error parsing type: , name: lockComposeBarPositionConstraint
+    // Error parsing type: , name: voiceEducationTooltipEvent
 }
 
 - (void).cxx_destruct;
@@ -111,8 +112,8 @@
 @property(nonatomic, retain) TFNDirectMessageComposition *composition; // @synthesize composition;
 @property(nonatomic) unsigned long long supportedComponents;
 @property(nonatomic) _Bool composeBarHidden;
-@property(nonatomic, retain) _TtC9T1Twitter40DirectMessageComposerInterstitialViewOld *untrustedInterstitialOld; // @synthesize untrustedInterstitialOld;
-@property(nonatomic, retain) _TtC9T1Twitter37DirectMessageComposerInterstitialView *untrustedInterstitial; // @synthesize untrustedInterstitial;
+@property(nonatomic, retain) _TtC23TwitterDirectMessagesUI40DirectMessageComposerInterstitialViewOld *untrustedInterstitialOld; // @synthesize untrustedInterstitialOld;
+@property(nonatomic, retain) _TtC23TwitterDirectMessagesUI37DirectMessageComposerInterstitialView *untrustedInterstitial; // @synthesize untrustedInterstitial;
 @property(nonatomic) _Bool attachmentsDisabled; // @synthesize attachmentsDisabled;
 @property(nonatomic, retain) T1DirectMessageConversationQuickReplyPresentationBehavior *quickReplyPresentationBehavior; // @synthesize quickReplyPresentationBehavior;
 @property(nonatomic, readonly) TFNTwitterAccount *account; // @synthesize account;

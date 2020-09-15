@@ -12,6 +12,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: delegate
     // Error parsing type: , name: mediaView
     // Error parsing type: , name: textView
+    // Error parsing type: , name: fleetcastView
     // Error parsing type: , name: interstitalView
     // Error parsing type: , name: contentInset
     // Error parsing type: , name: account

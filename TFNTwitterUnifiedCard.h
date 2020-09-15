@@ -64,6 +64,7 @@
 - (_Bool)meetsExperiment10536Criteria;
 - (_Bool)meetsExperiment10704CriteriaForImageWebsiteCards;
 - (_Bool)meetsExperiment10704CriteriaForImageAppCards;
+- (_Bool)meetsExperiment10193Criteria;
 - (_Bool)temp_blueButtonValidator;
 
 @end

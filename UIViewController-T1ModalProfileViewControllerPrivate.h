@@ -13,14 +13,17 @@
 #import <T1Twitter/T1ListsOwnerDelegate-Protocol.h>
 #import <T1Twitter/TAVVisibilityExceptionProvider-Protocol.h>
 
-@class NSString, T1AppSplitViewController, T1NavigationMetadata;
+@class NSString, T1AppSplitViewController, T1NavigationMetadata, T1TabNavigationController;
 @protocol T1PanelNavigationController, T1TabBarIntegration;
 
 @interface UIViewController (T1ModalProfileViewControllerPrivate) <TAVVisibilityExceptionProvider, T1DashContentItem, CNContactViewControllerDelegate, CNContactPickerDelegate, T1ListsOwnerDelegate, T1Docking>
 + (id)_t1_sharelessWebviewControllerWithTitle:(id)arg1 URL:(id)arg2 account:(id)arg3;
 + (id)t1_controllerToPresentForConversationContext:(id)arg1 hostViewController:(id)arg2 sourceView:(id)arg3 sourceRect:(struct CGRect)arg4 profileHeaderButtonGroup:(long long)arg5 account:(id)arg6 previewing:(_Bool)arg7;
++ (id)navigationMetadataViewControllerForViewController:(id)arg1;
++ (id)currentNavigationMetadataViewController;
 - (id)_t1_resizableHeaderContainerViewController;
 - (id)tfn_modalProfileViewController;
+@property(readonly, nonatomic) T1TabNavigationController *t1_tabNavigationController;
 - (id)t1_showHiddenTweetsActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
 - (id)t1_unhideTweetActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
 - (id)t1_hideTweetActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 shouldIncludeAMRSubtitlesIfNeeded:(_Bool)arg4;
@@ -106,7 +109,7 @@
 - (id)_t1_shareTweetActionItemsForStatus:(id)arg1 account:(id)arg2;
 - (id)_t1_cardEntityUrlFromStatus:(id)arg1;
 - (void)_t1_cardLogAppDownloadWithStatus:(id)arg1 account:(id)arg2 scribeAction:(id)arg3 page:(id)arg4 section:(id)arg5 component:(id)arg6 parameters:(id)arg7;
-- (id)_t1_offPlatformShareActivitiesForStatus:(id)arg1 type:(long long)arg2 source:(id)arg3 account:(id)arg4 options:(unsigned long long)arg5 scribeContext:(id)arg6;
+- (id)t1_offPlatformShareActivitiesForStatus:(id)arg1 type:(long long)arg2 source:(id)arg3 account:(id)arg4 options:(unsigned long long)arg5 scribeContext:(id)arg6;
 - (id)_t1_activityViewControllerActivitiesForEntityURL:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
 - (id)t1_activityViewControllerActivitiesFromActionItems:(id)arg1;
 - (id)t1_mediaActivityViewActionItemsForStatus:(id)arg1 account:(id)arg2 image:(id)arg3;
@@ -123,7 +126,6 @@
 - (id)_t1_actionItemsForStatus:(id)arg1 account:(id)arg2 sharableEntity:(id)arg3 entityURL:(id)arg4 source:(id)arg5 options:(unsigned long long)arg6 scribeComponent:(id)arg7 doneBlock:(inout CDUnknownBlockType *)arg8;
 - (id)t1_activityActionItemsForStatus:(id)arg1 account:(id)arg2 entityURL:(id)arg3 source:(id)arg4 scribeComponent:(id)arg5;
 - (id)t1_activityViewControllerForLiveEvent:(id)arg1 account:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 doneBlock:(CDUnknownBlockType)arg5;
-- (id)t1_activityViewControllerForMoment:(id)arg1 account:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 doneBlock:(CDUnknownBlockType)arg5;
 - (id)t1_activityViewControllerForStatus:(id)arg1 account:(id)arg2 entityURL:(id)arg3 source:(id)arg4 scribeContext:(id)arg5 doneBlock:(CDUnknownBlockType)arg6;
 - (id)t1_activityViewControllerForAccount:(id)arg1 entityURL:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 doneBlock:(CDUnknownBlockType)arg5;
 - (id)t1_actionsViewControllerForStatus:(id)arg1 account:(id)arg2 source:(id)arg3 options:(unsigned long long)arg4 doneBlock:(CDUnknownBlockType)arg5;
@@ -222,6 +224,7 @@
 - (id)t1_scribeContextForActiveRange:(id)arg1 status:(id)arg2 account:(id)arg3 withDefault:(id)arg4;
 - (id)t1_openActiveRange:(id)arg1 status:(id)arg2 account:(id)arg3 profileModalEnabled:(_Bool)arg4;
 - (id)t1_openActiveRange:(id)arg1 status:(id)arg2 account:(id)arg3;
+- (_Bool)t1_showsToggleSideBarAction;
 - (_Bool)t1_showsDashAction;
 - (_Bool)t1_showsPeopleAction;
 - (_Bool)t1_showsExpandedSearchBox;

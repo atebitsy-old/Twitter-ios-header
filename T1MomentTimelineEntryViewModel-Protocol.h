@@ -6,13 +6,12 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSString, TFNTwitterMoment;
+@class NSString;
 
 @protocol T1MomentTimelineEntryViewModel <NSObject>
 @property(nonatomic, readonly) NSString *timeString;
 @property(nonatomic, readonly) NSString *title;
 @property(nonatomic, readonly) NSString *momentID;
-@property(nonatomic, readonly) TFNTwitterMoment *moment;
 @property(nonatomic, readonly) long long entryType;
 @end
 

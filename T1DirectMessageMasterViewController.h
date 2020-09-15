@@ -8,22 +8,18 @@
 
 #import <T1Twitter/TFNLayoutMetricsEnvironment-Protocol.h>
 
-@class NSMutableArray, NSString;
+@class NSString;
 
 @interface T1DirectMessageMasterViewController : TFNPushedSplitViewController <TFNLayoutMetricsEnvironment>
 {
-    NSMutableArray *_leftBarButtonItemsAddedFromMasterViewController;
-    NSMutableArray *_rightBarButtonItemsAddedFromMasterViewController;
 }
 
-- (void).cxx_destruct;
-@property(retain, nonatomic) NSMutableArray *rightBarButtonItemsAddedFromMasterViewController; // @synthesize rightBarButtonItemsAddedFromMasterViewController=_rightBarButtonItemsAddedFromMasterViewController;
-@property(retain, nonatomic) NSMutableArray *leftBarButtonItemsAddedFromMasterViewController; // @synthesize leftBarButtonItemsAddedFromMasterViewController=_leftBarButtonItemsAddedFromMasterViewController;
 - (struct UIEdgeInsets)t1_actionButtonMinimumInsets;
 - (id)t1_buttonItemForCategory:(unsigned long long)arg1;
 - (id)t1_actionButtonItemCategoriesWithAccount:(id)arg1;
 - (_Bool)t1_showsActionButton;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
+- (_Bool)t1_showsToggleSideBarAction;
 - (_Bool)t1_showsDashAction;
 - (void)updateNavigationItems;
 - (void)viewDidLoad;

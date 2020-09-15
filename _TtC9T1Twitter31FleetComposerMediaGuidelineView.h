@@ -18,9 +18,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: displayedPositionGuidelines
     // Error parsing type: , name: activeRotationGuideline
     // Error parsing type: , name: hapticFeedbackGenerator
-    // Error parsing type: , name: topGuidelineConstraint
     // Error parsing type: , name: infoViewBottomConstraint
-    // Error parsing type: , name: topInset
     // Error parsing type: , name: isOverflowLayout
 }
 

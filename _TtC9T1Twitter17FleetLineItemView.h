@@ -19,15 +19,11 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: labelColor
     // Error parsing type: , name: users
     // Error parsing type: , name: plusNum
-    // Error parsing type: , name: isVoiceRoom
-    // Error parsing type: , name: canCompose
-    // Error parsing type: , name: hasFailedEntries
-    // Error parsing type: , name: showWhiteBorder
+    // Error parsing type: , name: showBackgroundBorder
+    // Error parsing type: , name: showLiveNestedBorders
     // Error parsing type: , name: account
     // Error parsing type: , name: state
-    // Error parsing type: , name: bubbleLargeView
-    // Error parsing type: , name: bubbleLargeBorderShape
-    // Error parsing type: , name: bubbleLargeFillShape
+    // Error parsing type: , name: bubbleBorderView
     // Error parsing type: , name: $__lazy_storage_$_bubbleAvatars
     // Error parsing type: , name: plusNumLabel
     // Error parsing type: , name: accessoryView

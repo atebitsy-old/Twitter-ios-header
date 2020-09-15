@@ -9,7 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter26SpheresRankingModeArchiver : NSObject
 {
-    // Error parsing type: , name: account
+    // Error parsing type: , name: accountID
     // Error parsing type: , name: inMemoryDictionary
     // Error parsing type: , name: lruDictionary
     // Error parsing type: , name: defaultRankingMode

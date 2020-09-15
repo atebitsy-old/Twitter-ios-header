@@ -18,6 +18,7 @@
 @property(retain, nonatomic) TFNRichTextFormatView *textView; // @synthesize textView=_textView;
 @property(copy, nonatomic) NSString *documentPath; // @synthesize documentPath=_documentPath;
 - (unsigned long long)supportedInterfaceOrientations;
+- (void)_t1_updateDynamicColors;
 - (void)loadView;
 - (id)initWithRichTextFormatDocumentPath:(id)arg1;
 

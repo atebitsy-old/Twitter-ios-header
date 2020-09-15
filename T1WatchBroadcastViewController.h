@@ -28,6 +28,8 @@
     _Bool _isPresentingRectifyViewController;
     _Bool _reauthenticating;
     _Bool _isInWindowScene;
+    _Bool _isFleetcast;
+    _Bool _isPresentedFromFleets;
     T1WatchBroadcastViewControllerModel *_model;
     id <T1WatchBroadcastViewControllerDelegate> _delegate;
     UIView *_presenterRasterization;
@@ -46,6 +48,8 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isPresentedFromFleets; // @synthesize isPresentedFromFleets=_isPresentedFromFleets;
+@property(nonatomic) _Bool isFleetcast; // @synthesize isFleetcast=_isFleetcast;
 @property(nonatomic) _Bool isInWindowScene; // @synthesize isInWindowScene=_isInWindowScene;
 @property(nonatomic) unsigned long long reauthenticationCount; // @synthesize reauthenticationCount=_reauthenticationCount;
 @property(nonatomic) _Bool reauthenticating; // @synthesize reauthenticating=_reauthenticating;
@@ -146,6 +150,7 @@
 - (void)_t1_setupSelfWithBroadcastIDOrShareToken:(id)arg1 account:(id)arg2;
 - (void)pauseBroadcast;
 - (void)playBroadcast;
+@property(readonly, nonatomic) _Bool isPlaying;
 - (void)dismissFullscreenPresentationAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (_Bool)accessibilityPerformEscape;
 - (void)handleEscapeKeyCommand;
@@ -159,6 +164,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
+- (id)initForFleetsWithBroadcastID:(id)arg1 account:(id)arg2 shouldPresent:(_Bool)arg3;
 - (id)initWithBroadcastIDOrShareToken:(id)arg1 account:(id)arg2;
 - (id)initWithBroadcast:(id)arg1 account:(id)arg2 cardDataSource:(id)arg3 liveEvent:(id)arg4 presentingFromWindow:(id)arg5 shouldAutoplay:(_Bool)arg6;
 @property(retain, nonatomic) TFNViewController<T1Dockable> *t1_dockableSourceViewController;

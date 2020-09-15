@@ -11,13 +11,9 @@
     unsigned long long _displayType;
 }
 
-+ (id)accessibilityHintForSensitiveMediaInTweetDetail;
-+ (id)accessibilityHintForSensitiveMedia;
-+ (id)sensitiveContentRichTextInTweetDetail;
-+ (id)sensitiveContentRichText;
 @property(readonly, nonatomic) unsigned long long displayType; // @synthesize displayType=_displayType;
-- (id)accessibilityHintForViewModel:(id)arg1;
-- (id)sensitiveContentRichTextForViewModel:(id)arg1;
+- (double)_t1_paragraphSpacing;
+- (id)_t1_sensitiveContentRichText;
 - (_Bool)isLayoutState:(id)arg1 validForViewModel:(id)arg2 layoutMetrics:(id)arg3;
 - (id)layoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2;
 - (void)view:(id)arg1 willMoveToHostView:(id)arg2;

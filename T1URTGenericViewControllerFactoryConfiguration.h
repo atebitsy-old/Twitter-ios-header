@@ -24,10 +24,7 @@
     // Error parsing type: , name: requestInitialTimeline
 }
 
-+ (id)topicLandingPageConfigurationWithTopicID:(id)arg1 asPeek:(_Bool)arg2 referringEvent:(id)arg3;
-+ (id)topicsManagementConfigurationWithUserID:(long long)arg1;
-+ (id)followedTopicsConfigurationForUsername:(id)arg1;
-+ (id)followedTopicsConfigurationForUserID:(long long)arg1 username:(id)arg2;
++ (id)topicLandingPageConfigurationWithTopicID:(id)arg1 asPeek:(_Bool)arg2 isTopicLandingPageShareEnabled:(_Bool)arg3 referringEvent:(id)arg4 pinnedTweetString:(id)arg5 topicShareMenuViewControllerProvider:(id)arg6;
 + (id)placePageConfigurationForPlaceID:(id)arg1 placeName:(id)arg2;
 + (id)draftTweetPreviewsTimelineConfigurationForParameters:(id)arg1 account:(id)arg2;
 + (id)listConfigurationForListID:(long long)arg1 title:(id)arg2 isPinned:(_Bool)arg3 account:(id)arg4;

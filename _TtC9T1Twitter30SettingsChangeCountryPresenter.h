@@ -7,9 +7,10 @@
 #import <objc/NSObject.h>
 
 #import <T1Twitter/TFNPickerViewControllerDelegate-Protocol.h>
+#import <T1Twitter/TFNValuePickerDataSource-Protocol.h>
 
 __attribute__((visibility("hidden")))
-@interface _TtC9T1Twitter30SettingsChangeCountryPresenter : NSObject <TFNPickerViewControllerDelegate>
+@interface _TtC9T1Twitter30SettingsChangeCountryPresenter : NSObject <TFNValuePickerDataSource, TFNPickerViewControllerDelegate>
 {
     // Error parsing type: , name: value
     // Error parsing type: , name: availableValues

@@ -19,6 +19,7 @@
     // Error parsing type: , name: scribeContext
     // Error parsing type: , name: displaySizeProvider
     // Error parsing type: , name: seenTweetIDs
+    // Error parsing type: , name: requiresMainThreadExecution
 }
 
 @end

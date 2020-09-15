@@ -21,6 +21,7 @@
     _Bool _isModuleItemTreeDisplayTreesEnabled;
     _Bool _isEmptyChunkClearingEnabled;
     _Bool _isHomeConversationHoistingPreventionEnabled;
+    _Bool _isAsyncPrefetchRequestEnabled;
     unsigned long long _streamOptions;
     long long _userID;
     NSString *_username;
@@ -34,6 +35,7 @@
 + (id)suggestsConfigurationForAccount:(id)arg1 configType:(long long)arg2;
 + (id)suggestsConfigurationForAccount:(id)arg1;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool isAsyncPrefetchRequestEnabled; // @synthesize isAsyncPrefetchRequestEnabled=_isAsyncPrefetchRequestEnabled;
 @property(readonly, nonatomic) _Bool isHomeConversationHoistingPreventionEnabled; // @synthesize isHomeConversationHoistingPreventionEnabled=_isHomeConversationHoistingPreventionEnabled;
 @property(readonly, nonatomic) _Bool isEmptyChunkClearingEnabled; // @synthesize isEmptyChunkClearingEnabled=_isEmptyChunkClearingEnabled;
 @property(readonly, nonatomic) _Bool isModuleItemTreeDisplayTreesEnabled; // @synthesize isModuleItemTreeDisplayTreesEnabled=_isModuleItemTreeDisplayTreesEnabled;

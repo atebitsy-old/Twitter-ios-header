@@ -16,7 +16,6 @@
 - (void)tooltipDidPresent:(TFNTooltip *)arg1;
 - (void)tooltipWillPresent:(TFNTooltip *)arg1;
 - (_Bool)tooltipShouldPresent:(TFNTooltip *)arg1;
-- (void)tooltip:(TFNTooltip *)arg1 didTapButton:(id)arg2;
 - (void)tooltipDidTap:(TFNTooltip *)arg1;
 @end
 

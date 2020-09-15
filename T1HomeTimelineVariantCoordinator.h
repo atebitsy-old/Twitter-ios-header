@@ -24,7 +24,6 @@
     // Error parsing type: {?="lock"{os_unfair_lock_s="_os_unfair_lock_opaque"I}"predicate"{atomic_flag="_Value"AB}}, name: _defaultMigrationTransientDispatchOnceToken
 }
 
-+ (_Bool)_t1_containsListID:(long long)arg1 inUserLists:(id)arg2;
 - (void).cxx_destruct;
 // Error parsing type for property defaultMigrationTransientDispatchOnceToken:
 // Property attributes: T{?={os_unfair_lock_s=I}{atomic_flag=AB}},R,N,V_defaultMigrationTransientDispatchOnceToken
@@ -41,18 +40,14 @@
 - (_Bool)isLatestSwitchEnabled;
 - (void)setIsLatestRankingModeActive:(_Bool)arg1 forListID:(long long)arg2 andPersistData:(_Bool)arg3;
 - (_Bool)isLatestRankingModeActiveForListID:(long long)arg1 memberCount:(long long)arg2;
-- (void)spheresUserSettingsRepositoryPinnedListsDidChange:(id)arg1;
-- (void)_t1_userDidAddUserToList:(id)arg1;
-- (void)_t1_removeListIDFromUserLists:(long long)arg1;
-- (void)_t1_userDidUpdateList:(id)arg1;
-- (void)_t1_userUnsubscribedFromList:(id)arg1;
-- (void)_t1_userDidDeleteList:(id)arg1;
+- (void)spheresUserSettingsRepository:(id)arg1 didChangeRankingForListID:(long long)arg2;
+- (void)spheresUserSettingsRepository:(id)arg1 didUpdateWithPinnedListDataModel:(id)arg2;
+- (void)spheresUserSettingsRepositoryPinnedListsDidChange:(id)arg1 withPinnedListModels:(id)arg2;
 - (void)_t1_archiveSphereViewModels:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)_t1_archiveSphereViewModels:(id)arg1;
-- (void)reloadTimelineViewControllerForListID:(long long)arg1;
-- (void)reloadTimelineViewControllers;
 - (void)setUserOwnedListsTimelines:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)userOwnedListsTimelinesWithCompletion:(CDUnknownBlockType)arg1;
+- (void)loadInitialPinnedListModels;
 - (_Bool)_tfn_switchToTopTimePastThreshold:(double)arg1;
 - (_Bool)shouldResetToTopTimeline;
 - (void)processManualSwitchAfterAutoSwitchWithDelay:(double)arg1;

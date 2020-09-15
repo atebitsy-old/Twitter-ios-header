@@ -51,6 +51,7 @@
 - (void)viewDidLoad;
 - (void)loadView;
 - (long long)_reportViewState;
+- (id)initWithRootURL:(id)arg1 account:(id)arg2 sourceStatus:(id)arg3 scribeComponent:(id)arg4;
 - (id)initWithContext:(id)arg1 account:(id)arg2;
 
 @end

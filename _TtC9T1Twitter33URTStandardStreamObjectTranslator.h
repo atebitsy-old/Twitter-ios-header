@@ -16,6 +16,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: urtTimeline
     // Error parsing type: , name: bottomCursorLoader
     // Error parsing type: , name: translatedUpdateDisplayActions
+    // Error parsing type: , name: translatedNavigationInstructions
     // Error parsing type: , name: account
     // Error parsing type: , name: previousStreamObjects
     // Error parsing type: , name: viewModelTranslatorRegistry

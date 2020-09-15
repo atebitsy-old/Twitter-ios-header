@@ -98,6 +98,7 @@
 - (id)_willPerformAction:(unsigned long long)arg1 event:(id)arg2;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (struct CGSize)intrinsicContentSize;
+- (void)_configureFollowButtonMenu;
 - (void)_configureDeviceFollowSwitch;
 - (void)_configureFollowButtonForButtonState:(long long)arg1;
 - (void)_configureFollowButton;

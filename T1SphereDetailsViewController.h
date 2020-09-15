@@ -29,7 +29,6 @@
 - (void)shareTappedWithTapGestureRecognizer:(id)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccount:(id)arg1 viewModel:(id)arg2;
 - (id)initWithAccount:(id)arg1 listID:(long long)arg2;
 
 @end

@@ -8,17 +8,30 @@
 
 @interface _TtC9T1Twitter22VideoChromeOverlayView : UIView
 {
+    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: videoBitrateManager
+    // Error parsing type: , name: playerView
+    // Error parsing type: , name: didLayoutSubviews
     // Error parsing type: , name: playbackObservableAttachment
     // Error parsing type: , name: styleProvider
     // Error parsing type: , name: previewImageComponent
     // Error parsing type: , name: playButtonComponent
     // Error parsing type: , name: watchAgainButtonComponent
+    // Error parsing type: , name: skipAdButtonComponent
+    // Error parsing type: , name: skipAdCountdownLabelComponent
+    // Error parsing type: , name: adPIPPreviewImageComponent
+    // Error parsing type: , name: adPIPPlayerViewComponent
+    // Error parsing type: , name: adPIPPreviewImageHeightConstraint
+    // Error parsing type: , name: adPIPPreviewImageWidthConstraint
+    // Error parsing type: , name: adPIPConstraints
+    // Error parsing type: , name: adPIPAnimationConstraints
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;
+- (void)layoutSubviews;
 
 @end
 

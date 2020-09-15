@@ -30,7 +30,6 @@
 @property(readonly, nonatomic, getter=isChangingInterfaceOrientation) _Bool changingInterfaceOrientation; // @synthesize changingInterfaceOrientation=_changingInterfaceOrientation;
 @property(readonly, nonatomic) UIImpactFeedbackGenerator *impactFeedbackGenerator; // @synthesize impactFeedbackGenerator=_impactFeedbackGenerator;
 @property(readonly, nonatomic, getter=isVisible) _Bool visible; // @synthesize visible=_visible;
-- (void)_tfn_assertBackStackMenuWithParent:(id)arg1;
 - (id)keyCommands;
 - (void)performHapticFeedback:(unsigned long long)arg1;
 - (void)prepareHapticFeedback:(unsigned long long)arg1;
@@ -75,7 +74,6 @@
 - (void)private_configureHapticFeedback;
 - (void)_prepareNotifications;
 - (void)dealloc;
-- (void)willMoveToParentViewController:(id)arg1;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)awakeFromNib;
 

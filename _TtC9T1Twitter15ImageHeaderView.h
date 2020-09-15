@@ -11,10 +11,10 @@ __attribute__((visibility("hidden")))
 {
 }
 
+- (id)initWithFrame:(struct CGRect)arg1;
 - (void)liveVideoPlayerChromeController:(id)arg1 setNavigationBarHidden:(_Bool)arg2;
 - (void)liveVideoPlayerChromeController:(id)arg1 setNavigationBarAlpha:(double)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
-- (id)initWithFrame:(struct CGRect)arg1;
 
 @end
 

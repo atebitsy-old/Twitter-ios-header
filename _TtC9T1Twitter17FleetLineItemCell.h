@@ -11,11 +11,12 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: draftStateDisposable
     // Error parsing type: , name: viewState
+    // Error parsing type: , name: accessoryType
+    // Error parsing type: , name: fleetLineItemView
+    // Error parsing type: , name: featureHighlightsItemView
     // Error parsing type: , name: account
     // Error parsing type: , name: delegate
     // Error parsing type: , name: state
-    // Error parsing type: , name: fleetLineItemView
-    // Error parsing type: , name: featureHighlightsItemView
 }
 
 - (void).cxx_destruct;
