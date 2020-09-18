@@ -51,6 +51,8 @@
 - (void)private_didPostAttributionEventWithDeepLink:(id)arg1 error:(id)arg2;
 - (void)private_willPostAttributionEvent;
 - (void)private_dispatchBlockWhenActive:(CDUnknownBlockType)arg1 withDelay:(double)arg2;
+- (id)_t1_dateOfCurrentInstallation;
+- (id)_t1_attributionBodyFields;
 - (_Bool)isExternalReferralURL:(id)arg1;
 - (void)trackUserDidSignUpWithAccount:(id)arg1;
 - (void)trackUserDidSignInWithAccount:(id)arg1;
@@ -63,6 +65,7 @@
 - (void)trackAppDidBecomeActiveWithAccount:(id)arg1 launchURL:(id)arg2;
 - (void)trackAppDidUpgrade;
 - (void)trackAppDidFirstLaunch;
+- (void)resetStoredDates;
 - (id)attributionHeaderFields;
 - (void)private_postDeferredAttributionEvent:(long long)arg1 forAccount:(id)arg2 referringLinkURL:(id)arg3 parameters:(id)arg4 visible:(_Bool)arg5;
 - (void)postAttributionEventForAccount:(id)arg1 referringLinkURL:(id)arg2;

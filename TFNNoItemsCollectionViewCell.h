@@ -10,8 +10,6 @@
 {
 }
 
-+ (void)setDefaultDetailTextColor:(id)arg1;
-+ (void)setDefaultTextColor:(id)arg1;
 + (struct CGSize)sizeForText:(id)arg1 detailText:(id)arg2 constrainedToSize:(struct CGSize)arg3 contentPadding:(struct UIEdgeInsets)arg4;
 - (id)initWithFrame:(struct CGRect)arg1;
 

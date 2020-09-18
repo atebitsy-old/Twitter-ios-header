@@ -78,6 +78,9 @@
 - (id)_showMultiAccountHelperText;
 - (id)_showTeamsAccountMessageForAccountID:(id)arg1;
 - (id)_filterTeamsAccount:(id)arg1;
+- (void)private_startFlowWithFlowSpec:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)private_startLegacyLoginFlowWithSender:(id)arg1;
+- (void)private_startLoginFlowWithSender:(id)arg1;
 - (void)private_startSignUpFlow;
 - (id)badgeCountForEntry:(id)arg1;
 - (void)t1_accountBadgingDidChange:(id)arg1;

@@ -15,6 +15,7 @@
 - (void)twitterCameraLiveDeleteBroadcast:(id)arg1;
 - (void)twitterCameraLiveDidStopBroadcast:(id)arg1;
 - (void)twitterCameraLiveDidStartBroadcast:(id)arg1;
+- (void)twitterCameraLiveBroadcastStatusChangedForBroadcast:(id)arg1 status:(long long)arg2;
 - (void)twitterCameraLiveBroadcastCapabilityChanged:(long long)arg1;
 - (void)twitterCameraLiveDidDismissCopyrightViewController;
 - (void)twitterCameraLiveDidObserveAuthErrorWithInfo:(id)arg1;

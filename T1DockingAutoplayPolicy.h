@@ -6,7 +6,9 @@
 
 #import <objc/NSObject.h>
 
-@interface T1DockingAutoplayPolicy : NSObject
+#import <T1Twitter/TAVUIAutoplayFilterPolicy-Protocol.h>
+
+@interface T1DockingAutoplayPolicy : NSObject <TAVUIAutoplayFilterPolicy>
 {
     // Error parsing type: , name: autoplayConditionsDidChangeBlock
     // Error parsing type: , name: settings

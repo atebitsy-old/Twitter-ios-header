@@ -9,7 +9,7 @@
 #import <T1Twitter/T1LayoutableStatusView-Protocol.h>
 #import <T1Twitter/TFNComposableViewHost-Protocol.h>
 
-@class NSString, T1StatusLiveEngagementManager, T1StatusViewAccessibility, T1StatusViewCombinedViewModel, TFNComposableViewSet, TFNReusableViewCache, TFNTwitterAccount, TFSTwitterScribeContext;
+@class NSString, T1QuotedStatusErrorView, T1StatusLiveEngagementManager, T1StatusViewAccessibility, T1StatusViewCombinedViewModel, TFNComposableViewSet, TFNReusableViewCache, TFNTwitterAccount, TFSTwitterScribeContext;
 @protocol T1AutoplayViewContainer, T1BasicStatusView, T1CardViewDelegate, T1StatusViewEventHandler, T1StatusViewInlineActions, T1StatusViewInlineImages, T1StatusViewLayoutState, T1StatusViewModel, TFSTwitterScribableItem;
 
 @interface T1QuotedStandardStatusView : UIView <TFNComposableViewHost, T1LayoutableStatusView>
@@ -30,6 +30,7 @@
     UIView *_visibleInlineReplyView;
     TFNReusableViewCache *_reusableViewCache;
     unsigned long long _displayType;
+    T1QuotedStatusErrorView *_errorView;
 }
 
 + (id)_t1_viewAdapterSetWithMaxWidth:(double)arg1;
@@ -37,6 +38,7 @@
 + (unsigned long long)defaultStatusOptionsForViewModel:(id)arg1 account:(id)arg2 options:(unsigned long long)arg3 displayType:(unsigned long long)arg4;
 + (id)layoutStateGenerator;
 - (void).cxx_destruct;
+@property(retain, nonatomic) T1QuotedStatusErrorView *errorView; // @synthesize errorView=_errorView;
 @property(readonly, nonatomic) unsigned long long displayType; // @synthesize displayType=_displayType;
 @property(retain, nonatomic) TFNReusableViewCache *reusableViewCache; // @synthesize reusableViewCache=_reusableViewCache;
 @property(nonatomic) unsigned long long conversationConnectorType; // @synthesize conversationConnectorType=_conversationConnectorType;
@@ -45,7 +47,8 @@
 @property(readonly, nonatomic) id <TFSTwitterScribableItem> scribableItem; // @synthesize scribableItem=_scribableItem;
 @property(copy, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(nonatomic) __weak id <T1StatusViewEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void)_t1_setupViewBorder;
+- (void)_t1_setupErrorView;
+- (void)_t1_setupViewBorder:(id)arg1;
 - (void)_t1_updateAccessibility:(id)arg1;
 - (void)_t1_applyViewModelUpdate:(id)arg1;
 - (void)_t1_updateAccessibilityValue;
@@ -78,6 +81,7 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account;
 @property(readonly, nonatomic) unsigned long long options;
 @property(readonly, nonatomic) id <T1StatusViewModel> viewModel;
+- (void)unsetViewModelForView:(id)arg1;
 - (void)setViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;
 - (_Bool)tfn_terminatesInvalidateIntrinsicContentSizeRecursion;

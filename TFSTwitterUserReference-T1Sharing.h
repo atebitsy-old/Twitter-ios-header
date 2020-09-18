@@ -10,16 +10,7 @@
 
 @interface TFSTwitterUserReference (T1Sharing)
 - (id)_t1_twitterURLForShareWithSParam:(unsigned long long)arg1;
-@property(readonly, copy, nonatomic) NSString *twitterURLForViber;
-@property(readonly, copy, nonatomic) NSString *twitterURLForLine;
-@property(readonly, copy, nonatomic) NSString *twitterURLForTelegram;
-@property(readonly, copy, nonatomic) NSString *twitterURLForGmail;
-@property(readonly, copy, nonatomic) NSString *twitterURLForWhatsApp;
-@property(readonly, copy, nonatomic) NSString *twitterURLForFacebookMessenger;
-@property(readonly, copy, nonatomic) NSString *twitterURLForShareToSnap;
-@property(readonly, copy, nonatomic) NSString *twitterURLForMessage;
 @property(readonly, copy, nonatomic) NSString *twitterURLForCopy;
-@property(readonly, copy, nonatomic) NSString *twitterURLForEmail;
 @property(readonly, copy, nonatomic) NSString *twitterURLForShare;
 @end
 

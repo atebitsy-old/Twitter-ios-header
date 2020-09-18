@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDate, NSNumber, NSString, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterForwardPivot, TFSTwitterLocation, TFSTwitterPlace, TFSTwitterVoiceInfo;
+@class NSArray, NSDate, NSNumber, NSString, TFSTwitterAutoTranslation, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterForwardPivot, TFSTwitterLocation, TFSTwitterPlace, TFSTwitterVoiceInfo;
 
 @interface TFSTwitterStatus : NSObject
 {
@@ -27,7 +27,6 @@
 @property(nonatomic, readonly) NSNumber *retweetID;
 @property(nonatomic, readonly) NSString *limitedActions;
 @property(nonatomic, readonly) NSString *composerSource;
-@property(nonatomic, readonly) TFSTwitterCameraMoment *cameraMoment;
 @property(nonatomic, readonly) TFSTwitterEntitySet *withheldEntities;
 @property(nonatomic, readonly) NSString *withheldText;
 @property(nonatomic, readonly) NSNumber *selfThreadID;

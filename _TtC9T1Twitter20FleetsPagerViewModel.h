@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: initialThreadIndex
     // Error parsing type: , name: fleetsPagerChanges
-    // Error parsing type: , name: deletedThreadIndexesObservable
     // Error parsing type: , name: $__lazy_storage_$__threadViewModelsObservable
     // Error parsing type: , name: context
     // Error parsing type: , name: threadViewModels
@@ -20,7 +19,6 @@
     // Error parsing type: , name: fleetsPagerChangesInput
     // Error parsing type: , name: userReference
     // Error parsing type: , name: fleetThreadsObserver
-    // Error parsing type: , name: deletedThreadIndexesObservableInput
     // Error parsing type: , name: scribePage
 }
 

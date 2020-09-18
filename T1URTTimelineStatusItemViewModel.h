@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDate, NSDictionary, NSString, TFNTwitterCardData, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFNTwitterUser, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterPromotedContent, TFSTwitterVideoMonetizationSettings, TFSURTRichText, UIColor;
+@class NSArray, NSDate, NSDictionary, NSString, TFNTwitterCardData, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFNTwitterUser, TFSTwitterAutoTranslation, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterPromotedContent, TFSTwitterVideoMonetizationSettings, TFSURTRichText, UIColor;
 @protocol T1PlayerFactoryIdentifiable, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFNTwitterStatusConversationTreeContext;
 
 @interface T1URTTimelineStatusItemViewModel : NSObject
@@ -193,7 +193,6 @@
 @property(nonatomic, readonly) TFSTwitterEntitySet *entities;
 @property(nonatomic, readonly) NSString *momentID;
 @property(nonatomic, readonly) TFSTwitterConversationControl *conversationControl;
-@property(nonatomic, readonly) TFSTwitterCameraMoment *cameraMoment;
 @property(nonatomic, readonly) NSString *composerSource;
 @property(nonatomic, readonly) unsigned long long designatorLabelType;
 @property(nonatomic, readonly) unsigned long long designatorIconType;

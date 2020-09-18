@@ -100,6 +100,8 @@
 - (_Bool)_loadPassbookPassWithResponse:(id)arg1 data:(id)arg2;
 - (void)_checkURLForPassbookContent:(id)arg1 sourceError:(id)arg2;
 - (void)addPassesViewControllerDidFinish:(id)arg1;
+- (void)didUpdateCurrentURL;
+- (void)didUpdateCanGoBack;
 - (void)logWebViewProgressWithEstimatedProgressValue:(double)arg1;
 - (void)didFinishLoadingWithError:(id)arg1;
 - (void)didStartLoading;

@@ -22,12 +22,16 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: clipDuration
     // Error parsing type: , name: currentAudioLevel
     // Error parsing type: , name: recorderDurationAndAudioLevelThrottledBlock
+    // Error parsing type: , name: isAutosendHintLabelVisible
+    // Error parsing type: , name: isPlaybackStateVisible
     // Error parsing type: , name: backgroundViewLeadingConstraint
+    // Error parsing type: , name: autosendHintWidthConstraint
     // Error parsing type: , name: timeRemainingInSeconds
     // Error parsing type: , name: $__lazy_storage_$_backgroundView
     // Error parsing type: , name: $__lazy_storage_$_remainingTimeLabel
     // Error parsing type: , name: $__lazy_storage_$_recordingCircleView
     // Error parsing type: , name: $__lazy_storage_$_recordingLabel
+    // Error parsing type: , name: $__lazy_storage_$_autosendHintLabel
     // Error parsing type: , name: cancelButton
     // Error parsing type: , name: playButton
     // Error parsing type: , name: $__lazy_storage_$_playLabel

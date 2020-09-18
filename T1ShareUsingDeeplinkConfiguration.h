@@ -6,31 +6,32 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSString, TFNTwitterStatus;
+@class NSArray, NSString;
+@protocol T1ActivityModel;
 
 @interface T1ShareUsingDeeplinkConfiguration : NSObject
 {
     NSString *_identifier;
-    TFNTwitterStatus *_status;
+    id <T1ActivityModel> _activityModel;
     NSString *_activityImageName;
     NSString *_activityTitle;
     NSString *_deepLinkURLString;
     NSArray *_deepLinkQueryParameters;
 }
 
-+ (id)viberConfigurationWithStatus:(id)arg1;
-+ (id)telegramConfigurationWithStatus:(id)arg1;
-+ (id)gmailConfigurationWithStatus:(id)arg1;
-+ (id)whatsAppConfigurationWithStatus:(id)arg1;
-+ (id)facebookMessengerConfigurationWithStatus:(id)arg1;
++ (id)viberConfigurationWithActivityModel:(id)arg1;
++ (id)telegramConfigurationWithActivityModel:(id)arg1;
++ (id)gmailConfigurationWithActivityModel:(id)arg1;
++ (id)whatsAppConfigurationWithActivityModel:(id)arg1;
++ (id)facebookMessengerConfigurationWithActivityModel:(id)arg1;
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *deepLinkQueryParameters; // @synthesize deepLinkQueryParameters=_deepLinkQueryParameters;
 @property(readonly, copy, nonatomic) NSString *deepLinkURLString; // @synthesize deepLinkURLString=_deepLinkURLString;
 @property(readonly, copy, nonatomic) NSString *activityTitle; // @synthesize activityTitle=_activityTitle;
 @property(readonly, copy, nonatomic) NSString *activityImageName; // @synthesize activityImageName=_activityImageName;
-@property(readonly, copy, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
+@property(readonly, copy, nonatomic) id <T1ActivityModel> activityModel; // @synthesize activityModel=_activityModel;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (id)initWithIdentifier:(id)arg1 status:(id)arg2 activityImageName:(id)arg3 activityTitle:(id)arg4 deepLinkURLString:(id)arg5 deepLinkQueryParameters:(id)arg6;
+- (id)initWithIdentifier:(id)arg1 activityModel:(id)arg2 activityImageName:(id)arg3 activityTitle:(id)arg4 deepLinkURLString:(id)arg5 deepLinkQueryParameters:(id)arg6;
 
 @end
 

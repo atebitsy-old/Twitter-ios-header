@@ -7,6 +7,7 @@
 #import <objc/NSObject.h>
 
 #import <T1Twitter/NSCoding-Protocol.h>
+#import <T1Twitter/T1ActivityModel-Protocol.h>
 #import <T1Twitter/TFNTwitterUserContext-Protocol.h>
 #import <T1Twitter/TFSModel-Protocol.h>
 #import <T1Twitter/TFSTwitterCanonicalUser-Protocol.h>
@@ -15,7 +16,7 @@
 @class NSArray, NSDate, NSDictionary, NSNumber, NSString, TFNTwitterCanonicalUser, TFNTwitterSuggestsInfo, TFSTwitterEntityMedia, TFSTwitterEntitySet, TFSTwitterPlace, TFSTwitterPromotedContent, TFSTwitterRelationship, TFSTwitterUserDesignatorInfo, TFSTwitterUserExtendedProfile, TFSTwitterUserReference;
 @protocol TFNTwitterStatusSocialContext, TFNTwitterTimelineEntryContext;
 
-@interface TFNTwitterUser : NSObject <NSCoding, TFSTwitterScribableItem, TFSModel, TFSTwitterCanonicalUser, TFNTwitterUserContext>
+@interface TFNTwitterUser : NSObject <T1ActivityModel, NSCoding, TFSTwitterScribableItem, TFSModel, TFSTwitterCanonicalUser, TFNTwitterUserContext>
 {
     _Bool _hasRecordedImpression;
     _Bool _isTestUser;
@@ -143,6 +144,11 @@
 - (id)initTestUserWithUsername:(id)arg1;
 - (id)initWithCanonicalUser:(id)arg1;
 - (id)init;
+- (id)twitterURLForShareWithSParam:(unsigned long long)arg1;
+- (id)scribeParameterID;
+- (id)plainTextSubject;
+- (id)plainTextBodyWithShareURLString:(id)arg1;
+- (_Bool)canBeSharedViaShareSheetForAccount:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 

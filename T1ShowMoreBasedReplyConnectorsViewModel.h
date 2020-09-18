@@ -22,7 +22,7 @@
 @property(readonly, nonatomic) T1ConversationShowMoreNode *showMoreNode; // @synthesize showMoreNode=_showMoreNode;
 @property(readonly, nonatomic) _Bool connectorEmphasisInBlueEnabled; // @synthesize connectorEmphasisInBlueEnabled=_connectorEmphasisInBlueEnabled;
 - (double)ancestorConnectorViewOffsetForLayoutMetrics:(id)arg1;
-@property(readonly, nonatomic) double ancestorConnectorViewHeight;
+- (double)ancestorConnectorViewHeightAtLevel:(unsigned long long)arg1;
 @property(readonly, nonatomic) double ancestorConnectorViewOriginY;
 @property(readonly, nonatomic) double elbowParentConnectorViewHeight;
 @property(readonly, nonatomic) double elbowParentConnectorViewWidth;

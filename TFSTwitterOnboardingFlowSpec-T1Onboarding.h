@@ -8,6 +8,7 @@
 
 @interface TFSTwitterOnboardingFlowSpec (T1Onboarding)
 + (id)private_flowNameWithDefault:(id)arg1;
++ (id)statefulLoginFlowSpec;
 + (id)addOrUpdatePhoneNumberSpec;
 + (id)setupProfileFromProfileSpecWithProfileID:(long long)arg1;
 + (id)welcomeFromSplashScreenSpec;

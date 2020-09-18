@@ -19,6 +19,7 @@
 @property(retain, nonatomic) UIColor *activityIndicatorColor; // @synthesize activityIndicatorColor=_activityIndicatorColor;
 @property(nonatomic) _Bool activityIndicatorVisible; // @synthesize activityIndicatorVisible=_activityIndicatorVisible;
 - (void)layoutSubviews;
+- (id)initWithSize:(unsigned long long)arg1 strength:(unsigned long long)arg2 variant:(unsigned long long)arg3 presentation:(unsigned long long)arg4;
 
 @end
 

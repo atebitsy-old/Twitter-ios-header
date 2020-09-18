@@ -9,7 +9,6 @@
 @interface _TtC9T1Twitter22TrendViewAccessibility : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: viewModel
-    // Error parsing type: , name: relatedTrendsMode
     // Error parsing type: , name: navigationHelper
     // Error parsing type: , name: activateFeedbackCaret
     // Error parsing type: , name: activateCardEvent

@@ -44,7 +44,6 @@
     // Error parsing type: , name: composerSource
     // Error parsing type: , name: quotedStatusPermalinkEntity
     // Error parsing type: , name: limitedActions
-    // Error parsing type: , name: cameraMoment
     // Error parsing type: , name: quoteCount
     // Error parsing type: , name: voiceInfo
     // Error parsing type: , name: autoTranslation
@@ -57,7 +56,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (void)assimilateIntoModelContext:(id)arg1;
-- (id)initWithStatusID:(long long)arg1 cardDataURL:(id)arg2 originalText:(id)arg3 legacyTextRange:(struct _NSRange)arg4 date:(id)arg5 fromUserID:(long long)arg6 inReplyToStatusID:(long long)arg7 location:(id)arg8 place:(id)arg9 updatedTimestamp:(id)arg10 withheldScope:(id)arg11 withheldInCountries:(id)arg12 inReplyToUsername:(id)arg13 isPossiblySensitive:(_Bool)arg14 language:(id)arg15 supplementalLanguage:(id)arg16 quotedStatusID:(long long)arg17 source:(id)arg18 inReplyToUserID:(long long)arg19 retweetID:(long long)arg20 retweetCount:(id)arg21 retweetedStatusID:(id)arg22 replyCount:(long long)arg23 favoriteCount:(id)arg24 favoritedByLoadingAccount:(id)arg25 conversationID:(id)arg26 conversationControl:(id)arg27 conversationMuted:(id)arg28 selfThreadID:(long long)arg29 entities:(id)arg30 withheldText:(id)arg31 withheldEntities:(id)arg32 includeInProfileTimeline:(_Bool)arg33 composerSource:(id)arg34 quotedStatusPermalinkEntity:(id)arg35 quoteCount:(long long)arg36 limitedActions:(id)arg37 cameraMoment:(id)arg38 voiceInfo:(id)arg39 autoTranslation:(id)arg40 isAutoTranslatable:(_Bool)arg41 forwardPivot:(id)arg42 hasBirdwatchNotes:(_Bool)arg43;
+- (id)initWithStatusID:(long long)arg1 cardDataURL:(id)arg2 originalText:(id)arg3 legacyTextRange:(struct _NSRange)arg4 date:(id)arg5 fromUserID:(long long)arg6 inReplyToStatusID:(long long)arg7 location:(id)arg8 place:(id)arg9 updatedTimestamp:(id)arg10 withheldScope:(id)arg11 withheldInCountries:(id)arg12 inReplyToUsername:(id)arg13 isPossiblySensitive:(_Bool)arg14 language:(id)arg15 supplementalLanguage:(id)arg16 quotedStatusID:(long long)arg17 source:(id)arg18 inReplyToUserID:(long long)arg19 retweetID:(long long)arg20 retweetCount:(id)arg21 retweetedStatusID:(id)arg22 replyCount:(long long)arg23 favoriteCount:(id)arg24 favoritedByLoadingAccount:(id)arg25 conversationID:(id)arg26 conversationControl:(id)arg27 conversationMuted:(id)arg28 selfThreadID:(long long)arg29 entities:(id)arg30 withheldText:(id)arg31 withheldEntities:(id)arg32 includeInProfileTimeline:(_Bool)arg33 composerSource:(id)arg34 quotedStatusPermalinkEntity:(id)arg35 quoteCount:(long long)arg36 limitedActions:(id)arg37 voiceInfo:(id)arg38 autoTranslation:(id)arg39 isAutoTranslatable:(_Bool)arg40 forwardPivot:(id)arg41 hasBirdwatchNotes:(_Bool)arg42;
 
 @end
 

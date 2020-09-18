@@ -8,6 +8,7 @@
 
 #import <T1Twitter/NSCoding-Protocol.h>
 #import <T1Twitter/NSItemProviderWriting-Protocol.h>
+#import <T1Twitter/T1ActivityModel-Protocol.h>
 #import <T1Twitter/T1PeopleDiscoveryScribableItem-Protocol.h>
 #import <T1Twitter/T1PlayerFactoryIdentifiable-Protocol.h>
 #import <T1Twitter/T1SharableProtocol-Protocol.h>
@@ -24,10 +25,10 @@
 #import <T1Twitter/TFSModel-Protocol.h>
 #import <T1Twitter/TFSTwitterScribableItem-Protocol.h>
 
-@class NSArray, NSDate, NSDictionary, NSNumber, NSString, T1PlayerSessionProducer, TAVAnalyticsMediaIdentifier, TFNTwitterCanonicalStatus, TFNTwitterCardData, TFNTwitterDisplayTextModel, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterRelevancePrompt, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFNTwitterTweetDetailsScribeItem, TFNTwitterTweetPrompt, TFNTwitterUser, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterDynamicVideoAd, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterPromotedContent, TFSTwitterUserReference, TFSTwitterVideoMonetizationSettings, TFSTwitterVoiceInfo, TFSURTRichText, UIColor, UIDragItem;
+@class NSArray, NSDate, NSDictionary, NSNumber, NSString, T1PlayerSessionProducer, TAVAnalyticsMediaIdentifier, TFNTwitterCanonicalStatus, TFNTwitterCardData, TFNTwitterDisplayTextModel, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterRelevancePrompt, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFNTwitterTweetDetailsScribeItem, TFNTwitterTweetPrompt, TFNTwitterUser, TFSTwitterAutoTranslation, TFSTwitterConversationControl, TFSTwitterDynamicVideoAd, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterPromotedContent, TFSTwitterUserReference, TFSTwitterVideoMonetizationSettings, TFSTwitterVoiceInfo, TFSURTRichText, UIColor, UIDragItem;
 @protocol T1PlayerFactoryIdentifiable, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFNTwitterCardDataSource, TFNTwitterConversationStructure, TFNTwitterStatusBanner, TFNTwitterStatusConversationTreeContext, TFNTwitterStatusSocialContext, TFNTwitterTimelineEntryContext;
 
-@interface TFNTwitterStatus : NSObject <T1StatusViewModel, T1PlayerFactoryIdentifiable, T1SharableProtocol, T1PeopleDiscoveryScribableItem, NSCoding, TFNTwitterCanonicalTimelineStatus, TFSTwitterScribableItem, TFSDateComparable, TFNTwitterUserRelatable, TFNTwitterMutableDismissibleItem, TFNTwitterCardDataSourceObject, TFNTwitterCardDataSourceProvider, TFNTwitterAVPlayerSessionSource, TFNTwitterTimelineObject, TFSModel, TFNTwitterFeedbackInfoSource, NSItemProviderWriting>
+@interface TFNTwitterStatus : NSObject <T1StatusViewModel, T1PlayerFactoryIdentifiable, T1SharableProtocol, T1ActivityModel, T1PeopleDiscoveryScribableItem, NSCoding, TFNTwitterCanonicalTimelineStatus, TFSTwitterScribableItem, TFSDateComparable, TFNTwitterUserRelatable, TFNTwitterMutableDismissibleItem, TFNTwitterCardDataSourceObject, TFNTwitterCardDataSourceProvider, TFNTwitterAVPlayerSessionSource, TFNTwitterTimelineObject, TFSModel, TFNTwitterFeedbackInfoSource, NSItemProviderWriting>
 {
     NSString *_unifiedID;
     TFNTwitterStatusConversationContext *_conversationContext;
@@ -231,7 +232,6 @@
 @property(nonatomic) long long scribingOverflowCount;
 @property(readonly, nonatomic) UIDragItem *dragItem;
 @property(readonly, nonatomic) TFSTwitterConversationControl *conversationControl;
-@property(readonly, nonatomic) TFSTwitterCameraMoment *cameraMoment;
 @property(readonly, nonatomic) long long quoteCount;
 @property(readonly, nonatomic) TFSTwitterEntityURL *quotedStatusPermalinkEntity;
 @property(readonly, nonatomic) NSString *composerSource;
@@ -387,7 +387,6 @@
 @property(readonly, nonatomic) _Bool displayAsFollowForwardTweet;
 @property(readonly, nonatomic) _Bool displayAsMomentTimelineTweet;
 @property(readonly, nonatomic) _Bool displayAsMomentTweet;
-- (_Bool)displayAsNewsCameraTweet;
 @property(readonly, nonatomic) _Bool shouldRenderAsAttachmentTombstone;
 @property(readonly, nonatomic) _Bool isLimitedActionsNonCompliantViewModel;
 @property(readonly, nonatomic) _Bool isPossiblySensitiveViewModel;
@@ -454,17 +453,15 @@
 - (id)_t1_sharableStatusViewForAccount:(id)arg1 layoutMetrics:(id)arg2;
 - (id)snapshotAssistantForAccount:(id)arg1 title:(id)arg2 layoutMetrics:(id)arg3;
 - (void)renderSharableStatusView:(id)arg1 withTitle:(id)arg2 layoutMetrics:(id)arg3 completion:(CDUnknownBlockType)arg4;
-- (id)_t1_twitterURLForShareWithSParam:(unsigned long long)arg1;
-@property(readonly, copy, nonatomic) NSString *twitterURLForViber;
-@property(readonly, copy, nonatomic) NSString *twitterURLForLine;
-@property(readonly, copy, nonatomic) NSString *twitterURLForTelegram;
-@property(readonly, copy, nonatomic) NSString *twitterURLForGmail;
-@property(readonly, copy, nonatomic) NSString *twitterURLForWhatsApp;
-@property(readonly, copy, nonatomic) NSString *twitterURLForFacebookMessenger;
+- (id)scribeParameterID;
+- (id)plainTextBodyWithShareURLString:(id)arg1;
+- (id)plainTextSubject;
+- (_Bool)canBeSharedViaShareSheetForAccount:(id)arg1;
+- (id)twitterURLForShareWithSParam:(unsigned long long)arg1;
+@property(readonly, copy, nonatomic) NSString *twitterURLForShareToSnap;
 @property(readonly, copy, nonatomic) NSString *twitterURLForMessage;
 @property(readonly, copy, nonatomic) NSString *twitterURLForCopy;
 @property(readonly, copy, nonatomic) NSString *twitterURLForEmail;
-@property(readonly, copy, nonatomic) NSString *twitterURLForShareToSnap;
 @property(readonly, copy, nonatomic) NSString *twitterURLForShare;
 - (id)emailBody;
 - (id)emailSubject;

@@ -11,25 +11,24 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter21GuideEventSummaryHero : TFNTableViewCell
 {
-    // Error parsing type: , name: viewModel
     // Error parsing type: , name: delegate
     // Error parsing type: , name: contentStackView
     // Error parsing type: , name: headerView
-    // Error parsing type: , name: socialProofView
     // Error parsing type: , name: titleLabel
+    // Error parsing type: , name: socialProofView
+    // Error parsing type: , name: relatedTrendsView
+    // Error parsing type: , name: relatedTrendsAccessibility
     // Error parsing type: , name: promotedDescriptionLabel
-    // Error parsing type: , name: promotedSpacingView
     // Error parsing type: , name: promotedView
     // Error parsing type: , name: caretContainerView
     // Error parsing type: , name: caretBackground
     // Error parsing type: , name: caretButton
     // Error parsing type: , name: feedbackPresenter
     // Error parsing type: , name: feedbackPresentationController
+    // Error parsing type: , name: navigationHelper
     // Error parsing type: , name: backgroundMediaView
     // Error parsing type: , name: accessibilityActions
-    // Error parsing type: , name: kMaxHeightMultiplier
-    // Error parsing type: , name: currentAnchors
-    // Error parsing type: , name: backgroundMediaViewHeightConstraint
+    // Error parsing type: , name: viewModel
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: interactionHandler
 }
@@ -39,7 +38,6 @@ __attribute__((visibility("hidden")))
 @property(nonatomic, copy) NSArray *accessibilityCustomActions;
 @property(nonatomic, copy) NSString *accessibilityLabel;
 @property(nonatomic) _Bool isAccessibilityElement;
-- (void)updateConstraints;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

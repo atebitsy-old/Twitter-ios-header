@@ -21,7 +21,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <TIPImageEncoder> tip_encoder; // @synthesize tip_encoder=_tip_encoder;
 @property(readonly, nonatomic) id <TIPImageDecoder> tip_decoder; // @synthesize tip_decoder=_tip_decoder;
-- (id)initPreservingDefaultCodecsIfPresent:(_Bool)arg1;
+- (id)initWithSystemCodec:(id)arg1;
 - (id)init;
 
 // Remaining properties

@@ -30,6 +30,7 @@
     _Bool _replayTitleEdited;
     _Bool _hasLocation;
     NSString *_broadcastID;
+    NSString *_appComponent;
     NSString *_mediaKey;
     NSString *_totalWatching;
     NSString *_totalWatched;
@@ -122,6 +123,7 @@
 @property(readonly, nonatomic) _Bool acceptsGuests; // @synthesize acceptsGuests=_acceptsGuests;
 @property(readonly, nonatomic) _Bool acceptsGifts; // @synthesize acceptsGifts=_acceptsGifts;
 @property(readonly, copy, nonatomic) NSString *mediaKey; // @synthesize mediaKey=_mediaKey;
+@property(readonly, copy, nonatomic) NSString *appComponent; // @synthesize appComponent=_appComponent;
 @property(readonly, copy, nonatomic) NSString *broadcastID; // @synthesize broadcastID=_broadcastID;
 - (id)toJSONDictionary;
 @property(readonly, copy, nonatomic) NSString *broadcasterDisplayUsername;
@@ -134,7 +136,7 @@
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithJSONDictionary:(id)arg1;
-- (id)initWithBroadcastID:(id)arg1 mediaKey:(id)arg2 acceptsGifts:(_Bool)arg3 acceptsGuests:(_Bool)arg4 callInDisabled:(_Bool)arg5 totalWatching:(id)arg6 totalWatched:(id)arg7 state:(long long)arg8 version:(id)arg9 startDate:(id)arg10 pingDate:(id)arg11 endDate:(id)arg12 timedoutDate:(id)arg13 imageURL:(id)arg14 imageURLSmall:(id)arg15 title:(id)arg16 width:(unsigned long long)arg17 height:(unsigned long long)arg18 cameraRotation:(unsigned long long)arg19 availableForReplay:(_Bool)arg20 broadcastSource:(long long)arg21 tweetID:(id)arg22 requiresFineGrainGeoblocking:(_Bool)arg23 privateChat:(_Bool)arg24 moderatorChannel:(id)arg25 highLatency:(_Bool)arg26 unavailableInPeriscope:(_Bool)arg27 heartThemes:(id)arg28 scheduledStartDate:(id)arg29 preLiveSlateURL:(id)arg30 copyrightViolationInterstitial:(_Bool)arg31 copyrightViolationCopyrightHolderName:(id)arg32 copyrightViolationCopyrightContentName:(id)arg33 copyrightViolationBroadcasterAllowed:(_Bool)arg34 copyrightViolationMatchAccepted:(_Bool)arg35 copyrightViolationMatchDisputed:(_Bool)arg36 replayEditedStartTime:(double)arg37 replayEditedThumbnailTime:(double)arg38 replayTitleEditingDisabled:(_Bool)arg39 replayTitleEdited:(_Bool)arg40 broadcasterUserID:(id)arg41 broadcasterUsername:(id)arg42 broadcasterDisplayName:(id)arg43 broadcasterProfileImageURL:(id)arg44 broadcasterTwitterUserID:(id)arg45 broadcasterTwitterUsername:(id)arg46 hasLocation:(_Bool)arg47 cityName:(id)arg48 countryName:(id)arg49 countryStateName:(id)arg50 broadcasterCoordinate:(struct CLLocationCoordinate2D)arg51 lastUpdated:(id)arg52;
+- (id)initWithBroadcastID:(id)arg1 appComponent:(id)arg2 mediaKey:(id)arg3 acceptsGifts:(_Bool)arg4 acceptsGuests:(_Bool)arg5 callInDisabled:(_Bool)arg6 totalWatching:(id)arg7 totalWatched:(id)arg8 state:(long long)arg9 version:(id)arg10 startDate:(id)arg11 pingDate:(id)arg12 endDate:(id)arg13 timedoutDate:(id)arg14 imageURL:(id)arg15 imageURLSmall:(id)arg16 title:(id)arg17 width:(unsigned long long)arg18 height:(unsigned long long)arg19 cameraRotation:(unsigned long long)arg20 availableForReplay:(_Bool)arg21 broadcastSource:(long long)arg22 tweetID:(id)arg23 requiresFineGrainGeoblocking:(_Bool)arg24 privateChat:(_Bool)arg25 moderatorChannel:(id)arg26 highLatency:(_Bool)arg27 unavailableInPeriscope:(_Bool)arg28 heartThemes:(id)arg29 scheduledStartDate:(id)arg30 preLiveSlateURL:(id)arg31 copyrightViolationInterstitial:(_Bool)arg32 copyrightViolationCopyrightHolderName:(id)arg33 copyrightViolationCopyrightContentName:(id)arg34 copyrightViolationBroadcasterAllowed:(_Bool)arg35 copyrightViolationMatchAccepted:(_Bool)arg36 copyrightViolationMatchDisputed:(_Bool)arg37 replayEditedStartTime:(double)arg38 replayEditedThumbnailTime:(double)arg39 replayTitleEditingDisabled:(_Bool)arg40 replayTitleEdited:(_Bool)arg41 broadcasterUserID:(id)arg42 broadcasterUsername:(id)arg43 broadcasterDisplayName:(id)arg44 broadcasterProfileImageURL:(id)arg45 broadcasterTwitterUserID:(id)arg46 broadcasterTwitterUsername:(id)arg47 hasLocation:(_Bool)arg48 cityName:(id)arg49 countryName:(id)arg50 countryStateName:(id)arg51 broadcasterCoordinate:(struct CLLocationCoordinate2D)arg52 lastUpdated:(id)arg53;
 - (id)init;
 
 @end

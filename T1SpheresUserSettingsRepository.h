@@ -16,6 +16,9 @@
     // Error parsing type: , name: rankingModeArchiver
     // Error parsing type: , name: viewModelsFuture
     // Error parsing type: , name: persistentListObservers
+    // Error parsing type: , name: durableStorageHelper
+    // Error parsing type: , name: persistentPinnedListsObserver
+    // Error parsing type: , name: latestObservedModel
 }
 
 - (void).cxx_destruct;

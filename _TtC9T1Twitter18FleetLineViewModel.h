@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: context
     // Error parsing type: , name: scribePage
-    // Error parsing type: , name: timelinePollTimer
+    // Error parsing type: , name: $__lazy_storage_$_fetchTimerManager
     // Error parsing type: , name: fleetLineState
     // Error parsing type: , name: threadUpdate
     // Error parsing type: , name: featureHighlightThreadDismissUpdate
@@ -29,7 +29,6 @@
     // Error parsing type: , name: featureHighlightThreadID
     // Error parsing type: , name: featureHighlightInsertWorkItem
     // Error parsing type: , name: $__lazy_storage_$_hasDrafts
-    // Error parsing type: , name: $__lazy_storage_$_storiesEnabled
     // Error parsing type: , name: $__lazy_storage_$_hasSelfEntries
 }
 

@@ -27,6 +27,8 @@
     TFNNavigationBarOverlayView *_overlayView;
 }
 
++ (void)setupAppearance:(id)arg1 withBarTintColor:(id)arg2 itemTintColor:(id)arg3 titleColor:(id)arg4 customShadowColor:(id)arg5 translucent:(_Bool)arg6;
++ (void)initialize;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNNavigationBarOverlayView *overlayView; // @synthesize overlayView=_overlayView;
 @property(readonly, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;

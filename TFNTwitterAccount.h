@@ -419,7 +419,6 @@
 - (double)exploreDynamicChromeRefreshInterval;
 - (_Bool)isExploreDynamicChromeEnabled;
 - (_Bool)isExploreSettingsEnabled;
-- (long long)guideGroupedTrendsMode;
 - (id)guideTabIconName;
 - (id)momentEditingDeprecationWarningHelpURL;
 - (_Bool)shouldShowMomentEditingDeprecationWarning;
@@ -450,9 +449,6 @@
 - (unsigned long long)minSizeOfImageInMediaForward;
 - (unsigned long long)waitTimeSampleRate;
 - (_Bool)isUpdatedNSFWInterstitialingEnabled;
-- (_Bool)isSoftInterventionsColorExperimentEnabled;
-- (_Bool)isSoftInterventionsRedTextEnabled;
-- (_Bool)isSoftInterventionsRedIconEnabled;
 - (_Bool)areAEMAuthenticatedWebviewsEnabled;
 - (_Bool)isReportFlowIdReportTypeEnabled;
 - (_Bool)isReportFlowIdEnabled;
@@ -527,6 +523,7 @@
 - (long long)onboardingAccountFollowPromptMaxFollowingCount;
 - (_Bool)shouldOnboardingAccountFollowPromptShowToastWhenFollowing;
 - (_Bool)shouldOnboardingAccountFollowPromptHideWhenFollowing;
+- (_Bool)shouldOnboardingAccountFollowPromptShowFollow;
 - (_Bool)shouldOnboardingAccountFollowPromptShowUsername;
 - (_Bool)isOnboardingAccountFollowPromptEnabled;
 - (_Bool)isOnboardingConnectTabUrtEnabled;
@@ -543,6 +540,8 @@
 - (_Bool)isAuthorModeratedReplyURTContainerEnabled;
 - (_Bool)isTOTPGeneratorEnabled;
 - (_Bool)isSMS2faEnabled;
+- (_Bool)performAnimationOnSkippedStatusNavigation;
+- (_Bool)isRedundantStatusNavigationDisabled;
 - (_Bool)isConversationThreadingSelectedStateExtendedSendReplyViewNoOpEnabled;
 - (_Bool)isConversationThreadingSelectedStateTapInlineActionsViewNoOpEnabled;
 - (_Bool)isConversationThreadingSelectedStateTapInInlineReplyViewNoOpEnabled;
@@ -550,6 +549,7 @@
 - (_Bool)isConversationThreadingInitiallyFocusedStatusSelected;
 - (unsigned long long)_t1_conversationThreadingStyle;
 - (_Bool)isConversationConnectorLinesToSelectedStateContainerEnabled;
+- (_Bool)isConversationThreadingCollapseEnabled;
 - (_Bool)isConversationEmphasizedDirectDescendentsOnlyEnabled;
 - (_Bool)isConversationEmphasizedDirectAncestorOnlyEnabled;
 - (_Bool)isConversationEmphasizedConnectorLinesInBlueEnabled;
@@ -576,7 +576,7 @@
 - (_Bool)isTweetDetailsReplyLabelsEnabled;
 - (_Bool)isMacTestExperimentEnabled;
 - (_Bool)isOpenLinksInNativeAppsFailureDebuggingEnabled;
-- (_Bool)canOpenDomainInExternalApp:(id)arg1;
+- (_Bool)canOpenURLInExternalApp:(id)arg1;
 - (_Bool)isSafariViewControllerModalEnabled;
 - (_Bool)isSafariViewControllerDisabledForPromotedWebsiteClicks;
 - (_Bool)isSafariViewControllerEnabled;
@@ -584,10 +584,6 @@
 @property(readonly, nonatomic) double promotedImageRatio;
 @property(readonly, nonatomic) _Bool isMediaAppCardRatingsViewEnabled;
 @property(readonly, nonatomic) _Bool isSkipTalonURLVerificationEnabled;
-- (_Bool)isConversationCardCTAHashflagsEnabled;
-@property(readonly, nonatomic) _Bool isHashflagsInTrendsEnabled;
-@property(readonly, nonatomic) _Bool isAdImpressionScrollToTopHandlerEnabled;
-@property(readonly, nonatomic) double appRatingThreshold;
 - (_Bool)isProfileBioTranslationEnabled;
 - (id)canonicalProfileURLString;
 - (_Bool)isProfileQRCodeButtonEnabled;
@@ -608,6 +604,7 @@
 - (_Bool)isHomeTimelineFeedbackImmediateDismissEnabled;
 - (_Bool)isHomeTimelineFeedbackMoreIconEnabled;
 - (_Bool)showCaretAlignedWithSocialProof;
+- (_Bool)isTopicsContextFollowControlLeftAlignedEnabled;
 - (_Bool)isTopicsFollowedGraphQLMigrationEnabled;
 - (_Bool)isTopicUnFollowGraphQLMigrationEnabled;
 - (_Bool)isTopicFollowGraphQLMigrationEnabled;

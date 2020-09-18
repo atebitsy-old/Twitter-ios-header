@@ -19,7 +19,7 @@
 - (void)performActivity;
 - (_Bool)isSupported;
 - (id)activityTitleForShouldReplaceAddWithRemoveBookmark:(_Bool)arg1;
-- (id)initWithStatus:(id)arg1 account:(id)arg2 shouldReplaceAddWithRemoveBookmark:(_Bool)arg3 scribeContext:(id)arg4;
+- (id)initWithActivityModel:(id)arg1 account:(id)arg2 shouldReplaceAddWithRemoveBookmark:(_Bool)arg3 scribeContext:(id)arg4;
 
 @end
 

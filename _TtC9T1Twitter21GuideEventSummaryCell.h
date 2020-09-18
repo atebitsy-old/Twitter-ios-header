@@ -20,7 +20,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: relatedTrendsViewConstraints
     // Error parsing type: , name: relatedTrendsView
     // Error parsing type: , name: relatedTrendsAccessibility
-    // Error parsing type: , name: relatedTrendsMode
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: interactionHandler

@@ -51,7 +51,6 @@
 - (id)tfn_asSectionDescription;
 - (id)tfn_asItemDescription;
 - (id)tfn_asNextSectionHeader;
-- (id)tfn_asUsernameSectionHeader;
 - (id)tfn_withBorderType:(long long)arg1;
 - (id)tfn_withSeparatorType:(long long)arg1;
 - (id)tfn_withAccessoryType:(long long)arg1;

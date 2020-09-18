@@ -14,16 +14,16 @@
     NSURL *_deepLinkURL;
 }
 
-+ (id)viberActivityWithStatus:(id)arg1;
-+ (id)lineActivityWithStatus:(id)arg1;
-+ (id)telegramActivityWithStatus:(id)arg1;
-+ (id)gmailActivityWithStatus:(id)arg1;
-+ (id)whatsAppActivityWithStatus:(id)arg1;
-+ (id)facebookMessengerActivityWithStatus:(id)arg1;
++ (id)viberActivityWithModel:(id)arg1;
++ (id)lineActivityWithModel:(id)arg1;
++ (id)telegramActivityWithModel:(id)arg1;
++ (id)gmailActivityWithModel:(id)arg1;
++ (id)whatsAppActivityWithModel:(id)arg1;
++ (id)facebookMessengerActivityWithModel:(id)arg1;
 - (void).cxx_destruct;
 - (void)performActivity;
 - (_Bool)isSupported;
-- (id)initWithTwitterStatus:(id)arg1 identifier:(id)arg2 title:(id)arg3 imageName:(id)arg4 deepLinkInstallationCheckURL:(id)arg5 deepLinkURL:(id)arg6;
+- (id)initWithActivityModel:(id)arg1 identifier:(id)arg2 title:(id)arg3 imageName:(id)arg4 deepLinkInstallationCheckURL:(id)arg5 deepLinkURL:(id)arg6;
 - (id)initWithConfiguration:(id)arg1;
 
 @end

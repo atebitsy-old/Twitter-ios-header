@@ -9,10 +9,10 @@
 @interface T1InlineVideoView : UIView
 {
     // Error parsing type: , name: viewModel
-    // Error parsing type: , name: playerView
+    // Error parsing type: , name: $__lazy_storage_$_playerView
     // Error parsing type: , name: chromeOverlayView
-    // Error parsing type: , name: playbackAttachment
-    // Error parsing type: , name: videoBitrateManager
+    // Error parsing type: , name: $__lazy_storage_$_playbackAttachment
+    // Error parsing type: , name: $__lazy_storage_$_videoBitrateManager
     // Error parsing type: , name: notificationCenter
     // Error parsing type: , name: styleProvider
     // Error parsing type: , name: gestureResponder

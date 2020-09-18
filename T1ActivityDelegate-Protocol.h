@@ -4,9 +4,10 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class T1Activity, TFNTwitterStatus;
+@class T1Activity;
+@protocol T1ActivityModel;
 
 @protocol T1ActivityDelegate
-- (void)activity:(T1Activity *)arg1 didShareTwitterStatus:(TFNTwitterStatus *)arg2 success:(_Bool)arg3;
+- (void)activity:(T1Activity *)arg1 didShareActivityModel:(id <T1ActivityModel>)arg2 success:(_Bool)arg3;
 @end
 

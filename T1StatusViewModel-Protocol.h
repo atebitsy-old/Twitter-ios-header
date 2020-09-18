@@ -13,7 +13,7 @@
 #import <T1Twitter/TFNTwitterDismissibleItem-Protocol.h>
 #import <T1Twitter/TFSTwitterScribableItem-Protocol.h>
 
-@class NSArray, NSDate, NSDictionary, NSString, TFNAttributedTextModel, TFNTwitterAccount, TFNTwitterCardData, TFNTwitterFeedbackInfo, TFNTwitterGeotag, TFNTwitterStatus, TFNTwitterStatusConversationContext, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterVideoMonetizationSettings, TFSURTRichText, UIColor, UIFont;
+@class NSArray, NSDate, NSDictionary, NSString, TFNAttributedTextModel, TFNTwitterAccount, TFNTwitterCardData, TFNTwitterFeedbackInfo, TFNTwitterGeotag, TFNTwitterStatus, TFNTwitterStatusConversationContext, TFSTwitterAutoTranslation, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterVideoMonetizationSettings, TFSURTRichText, UIColor, UIFont;
 @protocol T1PlayerFactoryIdentifiable, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFNTwitterStatusConversationTreeContext;
 
 @protocol T1StatusViewModel <NSObject, TFSTwitterScribableItem, TFNTwitterDismissibleItem, T1StatusViewModelExperimentAdditions, T1StatusViewModelCardAdditions, T1StatusViewModelPromotedLoggingAdditions, TFNTwitterCardDataSourceProvider, TFNTwitterConversationTreeContextProvider>
@@ -91,7 +91,6 @@
 - (NSString *)socialBadgeName;
 - (NSString *)socialText;
 @property(nonatomic, readonly) TFSTwitterConversationControl *conversationControl;
-@property(nonatomic, readonly) TFSTwitterCameraMoment *cameraMoment;
 @property(nonatomic, readonly) NSString *composerSource;
 @property(nonatomic, readonly) TFNTwitterGeotag *geotag;
 @property(nonatomic, readonly) TFNTwitterGeotag *representedGeotag;

@@ -20,6 +20,10 @@
 @property(readonly, nonatomic, getter=isDetailPageMutingEnabledUnsafePeek) _Bool detailPageMutingEnabledUnsafePeek;
 @property(readonly, nonatomic, getter=isDetailPageMutingEnabled) _Bool detailPageMutingEnabled;
 @property(readonly, nonatomic) double spheresUserRecommendationRemovalInterval;
+@property(readonly, nonatomic, getter=isBackendStorageMigrationEnabled) _Bool backendStorageMigrationEnabled;
+@property(readonly, nonatomic) double backendStorageWriteDelaySecs;
+@property(readonly, nonatomic) double backendStorageColdstartTTLSecs;
+@property(readonly, nonatomic, getter=isBackendStorageEnabled) _Bool backendStorageEnabled;
 @property(readonly, nonatomic, getter=isSpheresURTListManagementPageEnabled) _Bool spheresURTListManagementPageEnabled;
 @property(readonly, nonatomic) long long spheresRankingModePerspectivalDefaultMinMembersNoImpression;
 @property(readonly, nonatomic) long long spheresRankingModePerspectivalDefaultMinMembers;

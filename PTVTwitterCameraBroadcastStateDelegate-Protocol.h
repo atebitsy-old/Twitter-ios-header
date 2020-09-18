@@ -6,8 +6,11 @@
 
 #import <PeriscopeSDK/NSObject-Protocol.h>
 
+@class PTVBroadcast;
+
 @protocol PTVTwitterCameraBroadcastStateDelegate <NSObject>
+- (void)broadcastStateDidChange:(PTVBroadcast *)arg1;
 - (void)broadcastCameraDidStart;
-- (void)setPreBroadcastStartBroadcastState:(unsigned long long)arg1;
+- (void)preBroadcastStateDidChange:(unsigned long long)arg1;
 @end
 

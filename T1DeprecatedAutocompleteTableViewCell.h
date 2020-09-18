@@ -23,13 +23,14 @@
 
 + (double)defaultHeightForLayoutMetrics:(id)arg1;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <T1AutocompleteResultItem> autocompleteItem; // @synthesize autocompleteItem=_autocompleteItem;
+@property(readonly, nonatomic) id <T1AutocompleteResultItem> autocompleteItem; // @synthesize autocompleteItem=_autocompleteItem;
 @property(retain, nonatomic) NSString *accountID; // @synthesize accountID=_accountID;
 - (void)t1_fetchHelper:(id)arg1 readyToConfigureView:(id)arg2 state:(long long)arg3;
 - (void)_loadImage;
 - (void)_resetImage;
 - (void)layoutSubviews;
 - (id)calculatedLayoutMetrics;
+- (void)setAutocompleteItem:(id)arg1 featureSwitches:(id)arg2;
 - (void)prepareForReuse;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

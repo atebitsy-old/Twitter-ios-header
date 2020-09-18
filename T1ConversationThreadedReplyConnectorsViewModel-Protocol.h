@@ -9,7 +9,6 @@
 @class TFNLayoutMetrics;
 
 @protocol T1ConversationThreadedReplyConnectorsViewModel <NSObject>
-@property(readonly, nonatomic) double ancestorConnectorViewHeight;
 @property(readonly, nonatomic) double ancestorConnectorViewOriginY;
 @property(readonly, nonatomic) double elbowParentConnectorViewHeight;
 @property(readonly, nonatomic) double elbowParentConnectorViewWidth;
@@ -20,8 +19,9 @@
 @property(readonly, nonatomic) long long indentationLevel;
 - (double)ancestorConnectorViewOffsetForLayoutMetrics:(TFNLayoutMetrics *)arg1;
 - (_Bool)shouldFadeOutAncestorConnectorForLevel:(unsigned long long)arg1;
+- (_Bool)shouldShowAncestorConnectorAtLevel:(unsigned long long)arg1;
 - (_Bool)shouldShowAncestorHighlightingAtLevel:(unsigned long long)arg1;
 - (_Bool)shouldShowParentHighlighting;
-- (_Bool)shouldShowAncestorConnectorAtLevel:(unsigned long long)arg1;
+- (double)ancestorConnectorViewHeightAtLevel:(unsigned long long)arg1;
 @end
 

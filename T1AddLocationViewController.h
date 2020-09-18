@@ -9,7 +9,7 @@
 #import <T1Twitter/T1OnboardingSearchViewDelegate-Protocol.h>
 #import <T1Twitter/TFNLayoutMetricsEnvironment-Protocol.h>
 
-@class NSArray, NSString, T1OnboardingSearchView, TFNTwitterAccount, TFNTwitterProfilePlaceStore;
+@class NSArray, NSString, T1OnboardingHeaderViewModel, T1OnboardingSearchView, TFNTwitterAccount, TFNTwitterProfilePlaceStore;
 @protocol T1AddLocationViewControllerDelegate, T1OnboardingHeaderSpec;
 
 @interface T1AddLocationViewController : T1OnboardingItemsDataViewController <T1OnboardingSearchViewDelegate, TFNLayoutMetricsEnvironment>
@@ -23,6 +23,7 @@
     _Bool _headerVisible;
     TFNTwitterAccount *_account;
     NSArray *_headerItems;
+    T1OnboardingHeaderViewModel *_localHeaderViewModel;
     T1OnboardingSearchView *_searchView;
     TFNTwitterProfilePlaceStore *_placeStore;
     NSArray *_placeMatches;
@@ -36,6 +37,7 @@
 @property(retain, nonatomic) NSArray *placeMatches; // @synthesize placeMatches=_placeMatches;
 @property(retain, nonatomic) TFNTwitterProfilePlaceStore *placeStore; // @synthesize placeStore=_placeStore;
 @property(retain, nonatomic) T1OnboardingSearchView *searchView; // @synthesize searchView=_searchView;
+@property(retain, nonatomic) T1OnboardingHeaderViewModel *localHeaderViewModel; // @synthesize localHeaderViewModel=_localHeaderViewModel;
 @property(nonatomic) _Bool headerVisible; // @synthesize headerVisible=_headerVisible;
 @property(retain, nonatomic) NSArray *headerItems; // @synthesize headerItems=_headerItems;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;

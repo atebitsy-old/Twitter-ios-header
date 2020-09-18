@@ -67,7 +67,6 @@
 @property(readonly, nonatomic) _Bool isUnifiedCardDominantColorsAppDetailsEnabled;
 @property(readonly, nonatomic) _Bool isMediaAppCardRatingsViewEnabled;
 @property(readonly, nonatomic) _Bool isSkipTalonURLVerificationEnabled;
-@property(readonly, nonatomic) _Bool isAdImpressionScrollToTopHandlerEnabled;
 @property(readonly, nonatomic) double unifiedCardsSafariVCPresentationAnimationDuration;
 @property(readonly, nonatomic) _Bool disableProactiveLoadAsDefaultSafariPresentationStyle;
 @property(readonly, nonatomic) unsigned long long unifiedCardsSafariVCPresentationStyle;
@@ -75,9 +74,6 @@
 @property(readonly, nonatomic) double webViewDwellLongInterval;
 @property(readonly, nonatomic) double webViewDwellMediumInterval;
 @property(readonly, nonatomic) double webViewDwellShortInterval;
-@property(readonly, nonatomic) _Bool isResumeDwellOnForegroundEnabled;
-@property(readonly, nonatomic) _Bool isStopDwellOnBackgroundEnabled;
-@property(readonly, nonatomic) _Bool isTimestampBasedDwellEnabled;
 @property(readonly, nonatomic) _Bool isDwellOnViewAppearanceEnabled;
 @property(readonly, nonatomic) _Bool isAppInstallCardSubtitleEnabled;
 @property(readonly, nonatomic) _Bool isAppInstallCardLargerCTAEnabled;

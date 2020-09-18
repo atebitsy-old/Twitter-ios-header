@@ -29,6 +29,7 @@
     PTVBroadcast *_broadcast;
     PTVGuestAnalyticsManager *_guestAnalyticsManager;
     NSMutableArray *_guestCallersArray;
+    unsigned long long _maximumNumberOfGuestCallers;
     NSArray *_guestReconciliationArray;
     PTVChatController *_chatController;
 }
@@ -37,6 +38,7 @@
 @property(readonly, nonatomic) PTVChatController *chatController; // @synthesize chatController=_chatController;
 @property(retain, nonatomic) NSArray *guestReconciliationArray; // @synthesize guestReconciliationArray=_guestReconciliationArray;
 @property(readonly, nonatomic) _Bool didNotifyGuestFollowers; // @synthesize didNotifyGuestFollowers=_didNotifyGuestFollowers;
+@property(nonatomic) unsigned long long maximumNumberOfGuestCallers; // @synthesize maximumNumberOfGuestCallers=_maximumNumberOfGuestCallers;
 @property(readonly, nonatomic) _Bool canAcceptMoreGuestCallers; // @synthesize canAcceptMoreGuestCallers=_canAcceptMoreGuestCallers;
 @property(retain, nonatomic) NSMutableArray *guestCallersArray; // @synthesize guestCallersArray=_guestCallersArray;
 @property(readonly, nonatomic) _Bool doesBroadcasterAcceptNewCallIns; // @synthesize doesBroadcasterAcceptNewCallIns=_doesBroadcasterAcceptNewCallIns;

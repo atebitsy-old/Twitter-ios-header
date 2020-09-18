@@ -24,6 +24,7 @@ __attribute__((visibility("hidden")))
 - (_Bool)canPasteItemProviders:(id)arg1;
 - (void)setBaseWritingDirection:(long long)arg1 forRange:(id)arg2;
 - (void)unmarkText;
+- (void)deleteBackward;
 @property(nonatomic, readonly) UITextInputMode *textInputMode;
 @property(nonatomic, readonly) NSString *textInputContextIdentifier;
 - (_Bool)becomeFirstResponder;

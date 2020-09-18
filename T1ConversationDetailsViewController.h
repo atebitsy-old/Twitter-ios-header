@@ -21,6 +21,7 @@
 #import <T1Twitter/T1SlideshowBuilder-Protocol.h>
 #import <T1Twitter/T1SlideshowViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1TweetDetailsFocalStatusTableRowAdapterDelegate-Protocol.h>
+#import <T1Twitter/T1TweetDetailsPresenting-Protocol.h>
 #import <T1Twitter/T1TweetDetailsSharedBehavior-Protocol.h>
 #import <T1Twitter/T1URTTimelineTombstoneItemViewModelDelegate-Protocol.h>
 #import <T1Twitter/T1VideoMonetizationSettingsViewControllerDelegate-Protocol.h>
@@ -33,7 +34,7 @@
 @class NSDate, NSMutableDictionary, NSMutableSet, NSString, T1AppNavigationContext, T1AutocompleteViewController, T1CardItem, T1CardItemTableRowAdapter, T1ConversationDataSource, T1ConversationFloatingReplyBarView, T1ConversationInlineComposeViewController, T1ConversationRepliableStatus, T1DataViewControllerRenderPerformanceLogger, T1NavigationMetadata, T1ShowStatusNavigationContext, T1StatusLiveEngagementManager, T1StatusMediaHandler, T1StatusTableSlideshowManager, T1TweetDetailsActionContextItem, T1TweetDetailsActionView, T1TweetDetailsFetcher, T1TweetDetailsFocalStatusTableRowAdapter, T1TweetDetailsMultiPhotoItem, T1TweetDetailsNativeVideoItem, T1TweetDetailsUserRecommendationItem, T1URTTimelineCursorTableRowAdapter, T1UnifiedCardItem, T1UnifiedCardItemTableRowAdapter, TFNBarButtonItem, TFNGenericItem, TFNTwitterAccount, TFNTwitterStatus, TFSTwitterScribeContext, TFSTwitterVideoMonetizationSettings, TIPImagePipeline, UIPopoverPresentationController, UIView;
 @protocol T1StatusViewModel;
 
-@interface T1ConversationDetailsViewController : TFNItemsDataViewController <TFNTooltipDelegate, T1ComposerPresenting, T1ComposeViewControllerDelegate, T1SlideshowBuilder, T1ImageTransitionDelegate, T1ErrorDataViewAdapterDelegate, T1VideoMonetizationSettingsViewControllerDelegate, T1URTTimelineTombstoneItemViewModelDelegate, T1DataViewControllerRenderPerformanceLoggerDataSource, T1FeedbackActionProvider, TFNDataViewKeyboardSelectionDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, UIResponderStandardEditActions, T1ConversationDataSourceDelegate, T1ConversationFloatingReplyBarViewDelegate, T1ConversationThreadedShowMoreViewAdapterDelegate, T1ConversationThreadedTombstoneTableRowAdapterDelegate, UIGestureRecognizerDelegate, T1JumpBackToHomeTimelineBehavior, TFNLayoutMetricsEnvironment, T1SlideshowViewControllerDelegate, T1PersistentComposeAccountProvider, T1TweetDetailsSharedBehavior>
+@interface T1ConversationDetailsViewController : TFNItemsDataViewController <TFNTooltipDelegate, T1ComposerPresenting, T1ComposeViewControllerDelegate, T1SlideshowBuilder, T1ImageTransitionDelegate, T1ErrorDataViewAdapterDelegate, T1VideoMonetizationSettingsViewControllerDelegate, T1URTTimelineTombstoneItemViewModelDelegate, T1DataViewControllerRenderPerformanceLoggerDataSource, T1FeedbackActionProvider, TFNDataViewKeyboardSelectionDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, UIResponderStandardEditActions, T1ConversationDataSourceDelegate, T1ConversationFloatingReplyBarViewDelegate, T1ConversationThreadedShowMoreViewAdapterDelegate, T1ConversationThreadedTombstoneTableRowAdapterDelegate, UIGestureRecognizerDelegate, T1TweetDetailsPresenting, T1JumpBackToHomeTimelineBehavior, TFNLayoutMetricsEnvironment, T1SlideshowViewControllerDelegate, T1PersistentComposeAccountProvider, T1TweetDetailsSharedBehavior>
 {
     double _allRequiredPartsCompleteDuration;
     double _conversationCompleteDuration;
@@ -205,6 +206,8 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, copy, nonatomic) TFSTwitterScribeContext *sourceScribeContext; // @synthesize sourceScribeContext=_sourceScribeContext;
 @property(retain, nonatomic) TFNTwitterAccount *composingAccount; // @synthesize composingAccount=_composingAccount;
+- (void)presentTweetWithID:(long long)arg1;
+- (_Bool)canPresentTweetWithID:(long long)arg1;
 - (void)dataViewDidDisplay;
 @property(readonly, nonatomic) id <T1StatusViewModel> initialFocusedStatus;
 @property(readonly, nonatomic) id <T1StatusViewModel> focalStatus;

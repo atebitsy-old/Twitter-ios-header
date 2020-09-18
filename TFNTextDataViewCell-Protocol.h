@@ -6,11 +6,9 @@
 
 #import <TFNUI/NSObject-Protocol.h>
 
-@class UIColor, UIFont, UIImageView, UILabel;
+@class UIFont, UIImageView, UILabel;
 
 @protocol TFNTextDataViewCell <NSObject>
-+ (void)setDefaultDetailTextColor:(UIColor *)arg1;
-+ (void)setDefaultTextColor:(UIColor *)arg1;
 + (UIFont *)detailFontForStyle:(long long)arg1;
 @property(nonatomic) double detailTextPadding;
 @property(nonatomic) long long verticalAlignment;

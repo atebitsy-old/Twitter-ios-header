@@ -48,6 +48,7 @@
 + (id)darkreadLifecycleShutdownInfoURL;
 + (long long)darkreadLifecycleShutdownLevel;
 + (_Bool)darkreadLifecycleShutdownEnabled;
++ (_Bool)isPerformanceTracingEnabled;
 + (_Bool)isDashContentSFSVCEnabled;
 + (_Bool)isBetaBugButtonEmailFlowEnabled;
 + (_Bool)isTNLForPeriscopePluginEnabled;
@@ -57,6 +58,7 @@
 + (id)CDNFileExtensionList;
 + (id)CDNHostRootList;
 + (long long)CDNSampleSize;
++ (_Bool)isStatefulLoginEnabled;
 + (_Bool)isOnboardingAttributionServiceAnonymizerDisabled;
 + (_Bool)isOnboardingAttributionServiceMigrationEnabled;
 + (_Bool)isOnboardingPreferredLanguageSelectorEnabled;
@@ -65,6 +67,7 @@
 + (_Bool)isExternalURLProtectionEnabled;
 + (id)bouncerAllowedAll;
 + (id)bouncerAllowedEntrances;
++ (_Bool)isSecurityKeyAuthEnabled;
 + (_Bool)isMaxPasswordLengthCheckEnabled;
 + (_Bool)isMacTestExperimentLoggedOutEnabled;
 + (_Bool)isMacSceneReconnectEnabled;

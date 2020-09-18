@@ -6,36 +6,20 @@
 
 #import <T1Twitter/T1FlexibleLayoutView.h>
 
-#import <T1Twitter/T1OnboardingFlexibleSpaceViewDelegate-Protocol.h>
-
-@class NSString, TFNFlexibleSpaceHelper;
-
-@interface T1OnboardingHeaderView : T1FlexibleLayoutView <T1OnboardingFlexibleSpaceViewDelegate>
+@interface T1OnboardingHeaderView : T1FlexibleLayoutView
 {
-    TFNFlexibleSpaceHelper *_flexibleSpaceHelper;
-    _Bool _isLayingOut;
 }
 
-- (void).cxx_destruct;
 - (CDUnknownBlockType)private_textSizeCalculatorForAlignment:(long long)arg1 additionalInsets:(double)arg2;
 - (id)private_userItemForHeaderSpec:(id)arg1;
 - (id)private_subtitleItemForHeaderSpec:(id)arg1;
 - (id)private_titleItemForHeaderSpec:(id)arg1;
 - (id)private_imageItemForHeaderSpec:(id)arg1;
 - (id)private_spaceItemForHeaderSpec:(id)arg1 index:(long long)arg2 lengthCalculator:(CDUnknownBlockType)arg3;
-- (void)flexibleSpaceView:(id)arg1 enumerateItemsForLayoutSize:(struct CGSize)arg2 withLayoutMetrics:(id)arg3 block:(CDUnknownBlockType)arg4;
-- (double)availableSpaceForFlexibleSpaceView:(id)arg1;
-- (void)layoutSubviews;
 - (void)updateWithHeaderViewSpec:(id)arg1;
 - (id)init;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithHeaderViewSpec:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

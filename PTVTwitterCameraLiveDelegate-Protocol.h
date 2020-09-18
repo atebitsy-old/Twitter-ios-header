@@ -34,6 +34,7 @@
 - (void)twitterCameraLiveComposeDirectMessageForBroadcast:(PTVBroadcast *)arg1 atTimecode:(double)arg2 initialTimecode:(double)arg3 fromRect:(struct CGRect)arg4 inView:(UIView *)arg5 withCompletion:(void (^)(_Bool, NSError *))arg6;
 - (void)twitterCameraLiveComposeTweetForBroadcast:(PTVBroadcast *)arg1 atTimecode:(double)arg2 initialTimecode:(double)arg3 screenshot:(UIImage *)arg4 fromRect:(struct CGRect)arg5 inView:(UIView *)arg6 withCompletion:(void (^)(_Bool, NSError *))arg7;
 - (_Bool)twitterCameraLiveCanShareBroadcast;
+- (void)twitterCameraLiveBroadcastStatusChangedForBroadcast:(PTVBroadcast *)arg1 status:(long long)arg2;
 - (void)twitterCameraLiveBroadcastCapabilityChanged:(long long)arg1;
 @end
 

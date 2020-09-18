@@ -18,7 +18,6 @@ __attribute__((visibility("hidden")))
 }
 
 - (void).cxx_destruct;
-- (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

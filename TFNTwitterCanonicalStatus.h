@@ -8,7 +8,7 @@
 
 #import <T1Twitter/NSCoding-Protocol.h>
 
-@class NSArray, NSDate, NSDictionary, NSNumber, NSSet, NSString, TFNTwitterCardData, TFNTwitterGeotag, TFNTwitterStatusTextRangeSet, TFNTwitterUser, TFSCallbackDispatcher, TFSModelContext, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterVoiceInfo;
+@class NSArray, NSDate, NSDictionary, NSNumber, NSSet, NSString, TFNTwitterCardData, TFNTwitterGeotag, TFNTwitterStatusTextRangeSet, TFNTwitterUser, TFSCallbackDispatcher, TFSModelContext, TFSTwitterAutoTranslation, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterEntityURL, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterVoiceInfo;
 
 @interface TFNTwitterCanonicalStatus : NSObject <NSCoding>
 {
@@ -59,7 +59,6 @@
     TFSTwitterAutoTranslation *_autoTranslation;
     TFSTwitterForwardPivot *_forwardPivot;
     TFSTwitterConversationControl *_conversationControl;
-    TFSTwitterCameraMoment *_cameraMoment;
     NSString *_composerSource;
     TFSCallbackDispatcher *_updateEventDispatcher;
     TFSModelContext *_modelContext;
@@ -83,7 +82,6 @@
 @property(readonly, nonatomic) _Bool includeInProfileTimeline; // @synthesize includeInProfileTimeline=_includeInProfileTimeline;
 @property(nonatomic) _Bool favoritedByLoadingAccount; // @synthesize favoritedByLoadingAccount=_favoritedByLoadingAccount;
 @property(readonly, copy, nonatomic) NSString *composerSource; // @synthesize composerSource=_composerSource;
-@property(readonly, nonatomic) TFSTwitterCameraMoment *cameraMoment; // @synthesize cameraMoment=_cameraMoment;
 @property(readonly, nonatomic) TFSTwitterConversationControl *conversationControl; // @synthesize conversationControl=_conversationControl;
 @property(readonly, nonatomic) _Bool hasBirdwatchNotes; // @synthesize hasBirdwatchNotes=_hasBirdwatchNotes;
 @property(readonly, nonatomic) TFSTwitterForwardPivot *forwardPivot; // @synthesize forwardPivot=_forwardPivot;
@@ -137,7 +135,6 @@
 - (_Bool)_tfn_assimilateIsPossiblySensitive:(_Bool)arg1;
 - (_Bool)_tfn_assimilateSupplementalLanguage:(id)arg1;
 - (_Bool)_tfn_assimilateVoiceInfo:(id)arg1;
-- (_Bool)_tfn_assimilateCameraMoment:(id)arg1;
 - (_Bool)_tfn_assimilateLimitedActions:(id)arg1;
 - (_Bool)_tfn_assimilateQuoteCount:(long long)arg1;
 - (_Bool)_tfn_assimilateQuotedStatusPermalinkEntity:(id)arg1;
@@ -187,7 +184,7 @@
 @property(readonly, nonatomic) long long retweetCount; // @synthesize retweetCount=_retweetCount;
 @property(readonly, nonatomic) long long favoriteCount; // @synthesize favoriteCount=_favoriteCount;
 @property(readonly, nonatomic) long long fromUserID;
-- (id)initWithStatusID:(long long)arg1 cameraMoment:(id)arg2 cardData:(id)arg3 composerSource:(id)arg4 conversationControl:(id)arg5 conversationID:(long long)arg6 conversationMuted:(id)arg7 date:(id)arg8 entities:(id)arg9 favoriteCount:(long long)arg10 favoritedByLoadingAccount:(_Bool)arg11 fromUserID:(long long)arg12 geotag:(id)arg13 includeInProfileTimeline:(_Bool)arg14 inReplyToStatusID:(long long)arg15 inReplyToUserID:(long long)arg16 inReplyToUsername:(id)arg17 isPossiblySensitive:(_Bool)arg18 language:(id)arg19 originalText:(id)arg20 quotedStatusID:(long long)arg21 quotedStatusPermalinkEntity:(id)arg22 quoteCount:(long long)arg23 replyCount:(long long)arg24 retweetCount:(long long)arg25 retweetID:(long long)arg26 retweetedStatusID:(long long)arg27 selfThreadID:(long long)arg28 source:(id)arg29 supplementalLanguage:(id)arg30 textRangeSet:(id)arg31 withheldEntities:(id)arg32 withheldInCountries:(id)arg33 withheldScope:(id)arg34 withheldText:(id)arg35 limitedActions:(id)arg36 voiceInfo:(id)arg37 autoTranslation:(id)arg38 isAutoTranslatable:(_Bool)arg39 forwardPivot:(id)arg40 hasBirdwatchNotes:(_Bool)arg41;
+- (id)initWithStatusID:(long long)arg1 cardData:(id)arg2 composerSource:(id)arg3 conversationControl:(id)arg4 conversationID:(long long)arg5 conversationMuted:(id)arg6 date:(id)arg7 entities:(id)arg8 favoriteCount:(long long)arg9 favoritedByLoadingAccount:(_Bool)arg10 fromUserID:(long long)arg11 geotag:(id)arg12 includeInProfileTimeline:(_Bool)arg13 inReplyToStatusID:(long long)arg14 inReplyToUserID:(long long)arg15 inReplyToUsername:(id)arg16 isPossiblySensitive:(_Bool)arg17 language:(id)arg18 originalText:(id)arg19 quotedStatusID:(long long)arg20 quotedStatusPermalinkEntity:(id)arg21 quoteCount:(long long)arg22 replyCount:(long long)arg23 retweetCount:(long long)arg24 retweetID:(long long)arg25 retweetedStatusID:(long long)arg26 selfThreadID:(long long)arg27 source:(id)arg28 supplementalLanguage:(id)arg29 textRangeSet:(id)arg30 withheldEntities:(id)arg31 withheldInCountries:(id)arg32 withheldScope:(id)arg33 withheldText:(id)arg34 limitedActions:(id)arg35 voiceInfo:(id)arg36 autoTranslation:(id)arg37 isAutoTranslatable:(_Bool)arg38 forwardPivot:(id)arg39 hasBirdwatchNotes:(_Bool)arg40;
 - (id)initWithJSONDictionary:(id)arg1 users:(id)arg2 statusID:(long long)arg3;
 - (id)initWithCS2Status:(id)arg1 conversationMuted:(id)arg2 cardData:(id)arg3;
 - (id)initWithStatusID:(long long)arg1 originalText:(id)arg2 fromUserID:(long long)arg3 date:(id)arg4;

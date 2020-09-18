@@ -6,15 +6,13 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSString, NSURL, UIColor, UIFont, UIImage;
+@class NSString, UIColor, UIFont, UIImage;
 
 @protocol T1ForwardPivotViewModel <NSObject>
 @property(readonly, nonatomic) NSString *accessibilityString;
 @property(readonly, nonatomic) struct CGSize preferredIconImageSize;
 @property(readonly, nonatomic) struct CGSize preferredChevronImageSize;
 @property(readonly, nonatomic) _Bool hasImage;
-@property(readonly, nonatomic) struct CGSize imageSize;
-@property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic) UIFont *middotFont;
 @property(readonly, nonatomic) UIColor *middotTextColor;
 @property(readonly, nonatomic, getter=shouldShowMiddot) _Bool showMiddot;
@@ -27,6 +25,7 @@
 @property(readonly, nonatomic) UIFont *textFont;
 @property(readonly, copy, nonatomic) NSString *textTitle;
 @property(readonly, nonatomic) UIImage *iconImage;
+@property(readonly, nonatomic) UIColor *iconColor;
 @property(readonly, nonatomic) struct NSDirectionalEdgeInsets directionalLayoutMargins;
 @property(readonly, nonatomic) double cornerRadius;
 @property(readonly, nonatomic) UIColor *backgroundColor;

@@ -10,8 +10,6 @@
 {
 }
 
-+ (void)setDefaultDetailTextColor:(id)arg1;
-+ (void)setDefaultTextColor:(id)arg1;
 + (double)estimatedHeightForText:(id)arg1 detailText:(id)arg2 layoutMetrics:(id)arg3;
 + (double)heightForText:(id)arg1 detailText:(id)arg2 layoutMetrics:(id)arg3;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

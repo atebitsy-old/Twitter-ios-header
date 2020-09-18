@@ -9,15 +9,8 @@
 @interface _TtC14TFSTwitterCore26URTTimelineResponseBuilder : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: responseParseTracer
-    // Error parsing type: , name: urtTimelineUID
-    // Error parsing type: , name: requestCursor
     // Error parsing type: , name: feedbackActionReferenceBuilder
     // Error parsing type: , name: immediateReactionReferenceBuilder
-    // Error parsing type: , name: timelineEncodingPolicy
-    // Error parsing type: , name: assimilationOptions
-    // Error parsing type: , name: allSeenTweetIDs
-    // Error parsing type: , name: scribe
-    // Error parsing type: , name: scribeContext
     // Error parsing type: , name: entryBuilderErrorRecoveryContentBuilder
 }
 

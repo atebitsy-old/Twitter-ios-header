@@ -23,6 +23,8 @@
 + (id)flexibleSpace;
 + (id)_overridingConfigurationsBySystemItem;
 + (void)overrideSystemItem:(long long)arg1 withConfiguration:(id)arg2;
++ (void)setupAppearance:(id)arg1 withTintColor:(id)arg2;
++ (void)initialize;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SEL tfn_action; // @synthesize tfn_action=_tfn_action;
 @property(readonly, nonatomic) __weak id tfn_target; // @synthesize tfn_target=_tfn_target;

@@ -18,11 +18,13 @@
 {
     PTVChatSectionBottomBarView *_weakSelf;
     PTVButton *_watchLiveButton;
+    PTVButton *_overflowMenuButton;
     PTVCallInButton *_callInButton;
     PTVRetweetButton *_retweetButton;
     PTVGiftHeartButton *_giftHeartButton;
     PTVButton *_shareButton;
     PTVButton *_audioScopeButton;
+    _Bool _isFleetcast;
     _Bool _isAudioScopeSupported;
     _Bool _isAudioScopeSelected;
     _Bool _isComposingMessage;

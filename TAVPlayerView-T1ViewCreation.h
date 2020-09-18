@@ -11,5 +11,6 @@
 + (_Bool)tfn_defaultShouldFlipForRightToLeftTransform;
 - (void)setErrorLabelStylingWithBackgroundColor:(id)arg1 textColor:(id)arg2 font:(id)arg3;
 - (void)tfn_fontSizeChanged;
+- (void)t1_configureVideoErrorLabel;
 @end
 

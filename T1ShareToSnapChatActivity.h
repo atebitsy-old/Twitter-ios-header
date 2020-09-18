@@ -26,7 +26,7 @@
 - (id)setupSnapshotAssistant;
 - (id)activityTitleForAccount:(id)arg1;
 - (void)dealloc;
-- (id)initWithStatus:(id)arg1 account:(id)arg2 layoutMetrics:(id)arg3;
+- (id)initWithActivityModel:(id)arg1 account:(id)arg2 layoutMetrics:(id)arg3;
 
 @end
 

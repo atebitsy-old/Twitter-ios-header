@@ -45,6 +45,7 @@
 + (_Bool)showMoreCoalescingDebugLabelsEnabled;
 + (long long)showMoreCoalescingLoadLimit;
 + (_Bool)showMoreCoalescingEnabled;
++ (_Bool)conversationThreadingCollapseEnabled;
 + (id)connectorEmphasisColorDark;
 + (id)connectorEmphasisColor;
 + (_Bool)connectorEmphasisCustomColorsEnabled;

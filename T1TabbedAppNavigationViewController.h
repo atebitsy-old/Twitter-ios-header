@@ -65,7 +65,6 @@
 @property(readonly, nonatomic) id <T1TabbedAppNavigationDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) T1AmbientNotificationViewController *ambientNotificationViewController; // @synthesize ambientNotificationViewController=_ambientNotificationViewController;
-- (void)tfn_contentScrollViewDidScroll:(id)arg1 animate:(_Bool)arg2;
 - (void)_t1_setUpOverlayContainerView;
 - (void)_t1_setUpVoiceButton;
 - (id)tfn_floatingViewForLocation:(struct CGPoint)arg1;

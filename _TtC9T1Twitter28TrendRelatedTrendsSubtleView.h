@@ -9,6 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter28TrendRelatedTrendsSubtleView : UIView
 {
+    // Error parsing type: , name: style
     // Error parsing type: , name: label
     // Error parsing type: , name: textView
     // Error parsing type: , name: viewModel
@@ -17,8 +18,8 @@ __attribute__((visibility("hidden")))
 }
 
 - (void).cxx_destruct;
-- (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithCoder:(id)arg1;
 
 @end
 

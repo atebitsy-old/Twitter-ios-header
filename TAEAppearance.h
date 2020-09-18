@@ -11,19 +11,11 @@
 }
 
 + (void)_tae_setupItemsAppearance;
-+ (void)_tae_setupStringDataViewAdapterFonts;
-+ (void)_tae_setupButtonAppearance;
 + (void)_tae_setupTFNUI;
 + (void)_tae_setupUIAppearance;
 + (void)_tae_setupVectorImages;
 + (void)setAdditionalVectorImageSearchDirectoryURLs:(id)arg1;
 + (void)setupAppearance;
-+ (id)_tae_barButtonItemTextAttributesWithFont:(id)arg1;
-+ (void)setupToolbarAppearance:(id)arg1 customShadowColor:(id)arg2 barTintColor:(id)arg3 itemTintColor:(id)arg4;
-+ (void)setupTextBarButtonItemAppearance:(id)arg1 font:(id)arg2 textTintColor:(id)arg3;
-+ (void)setupImageBarButtonItemButtonAppearance:(id)arg1 imageTintColor:(id)arg2;
-+ (void)setupBackButtonAppearance:(id)arg1 tintColor:(id)arg2;
-+ (void)setupNavigationBarAppearance:(id)arg1 customShadowColor:(id)arg2 translucent:(_Bool)arg3 barTintColor:(id)arg4 itemTintColor:(id)arg5 titleColor:(id)arg6 statusBarStyle:(long long)arg7;
 
 @end
 

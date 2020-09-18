@@ -10,16 +10,12 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter31FleetComposerMediaGuidelineView : UIView
 {
     // Error parsing type: , name: isHorizontalEnabled
-    // Error parsing type: , name: infoView
-    // Error parsing type: , name: actionsView
     // Error parsing type: , name: positionGuidelineViews
     // Error parsing type: , name: rotationGuidelineViews
     // Error parsing type: , name: activePositionGuidelines
     // Error parsing type: , name: displayedPositionGuidelines
     // Error parsing type: , name: activeRotationGuideline
     // Error parsing type: , name: hapticFeedbackGenerator
-    // Error parsing type: , name: infoViewBottomConstraint
-    // Error parsing type: , name: isOverflowLayout
 }
 
 - (void).cxx_destruct;

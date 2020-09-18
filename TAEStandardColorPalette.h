@@ -283,6 +283,8 @@
 @property(readonly, nonatomic) UIColor *modalSheetCancelButtonHighlightColor;
 - (id)_modalSheetCancelButtonBackgroundColor;
 @property(readonly, nonatomic) UIColor *modalSheetCancelButtonBackgroundColor;
+- (id)_invertedPrimaryButtonTextColor;
+@property(readonly, nonatomic) UIColor *invertedPrimaryButtonTextColor;
 - (id)_buttonDarkBackgroundColor;
 @property(readonly, nonatomic) UIColor *buttonDarkBackgroundColor;
 - (id)_buttonDisabledColor;

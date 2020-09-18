@@ -12,7 +12,7 @@
 #import <T1Twitter/TFNNavigationControllerTransitionProvider-Protocol.h>
 #import <T1Twitter/UIDropInteractionDelegate-Protocol.h>
 
-@class CADisplayLink, NSString, T1ResizableHeaderView, TFNTwitterAccount, TFSTimer, UIControl, UIView;
+@class CADisplayLink, NSString, T1ResizableHeaderView, TFNLayoutMetrics, TFNTwitterAccount, TFSTimer, UIControl, UIView;
 @protocol T1ResizableHeaderViewControllerDelegate, TFNPullToLoadTopControl;
 
 @interface T1ResizableHeaderViewController : TFNViewController <TFNLayoutMetricsEnvironment, UIDropInteractionDelegate, T1TweetDraftsViewControllerDelegate, T1ResizableHeaderViewDelegate, TFNNavigationControllerTransitionProvider>
@@ -31,9 +31,11 @@
     CADisplayLink *_subheaderAnimationDisplayLink;
     TFSTimer *_subheaderLayoutTimer;
     CDUnknownBlockType _headerViewConstructor;
+    TFNLayoutMetrics *_cachedLayoutMetrics;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) TFNLayoutMetrics *cachedLayoutMetrics; // @synthesize cachedLayoutMetrics=_cachedLayoutMetrics;
 @property(copy, nonatomic) CDUnknownBlockType headerViewConstructor; // @synthesize headerViewConstructor=_headerViewConstructor;
 @property(retain, nonatomic) TFSTimer *subheaderLayoutTimer; // @synthesize subheaderLayoutTimer=_subheaderLayoutTimer;
 @property(retain, nonatomic) CADisplayLink *subheaderAnimationDisplayLink; // @synthesize subheaderAnimationDisplayLink=_subheaderAnimationDisplayLink;

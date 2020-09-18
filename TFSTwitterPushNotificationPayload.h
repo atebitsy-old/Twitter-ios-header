@@ -46,8 +46,8 @@
 + (id)statusIDForPayload:(id)arg1;
 + (id)targetStatusIDForPayload:(id)arg1;
 + (id)_normalizeURI:(id)arg1;
-+ (id)v2UriForPayload:(id)arg1;
-+ (id)uriForPayload:(id)arg1;
++ (id)v2UriForPayload:(id)arg1 fromServiceExtension:(_Bool)arg2;
++ (id)uriForPayload:(id)arg1 fromServiceExtension:(_Bool)arg2;
 + (id)topicIDForPayload:(id)arg1;
 + (id)conversationIDForPayload:(id)arg1;
 + (id)settingsIDForPayload:(id)arg1;
@@ -91,6 +91,7 @@
 @property(readonly, nonatomic) TFSTwitterUserReference *receivingUserReference;
 @property(readonly, nonatomic) TFSTwitterUserReference *senderUserReference;
 - (id)init;
+- (id)initWithPayloadDictionary:(id)arg1 fromServiceExtension:(_Bool)arg2;
 - (id)initWithPayloadDictionary:(id)arg1;
 @property(readonly, copy, nonatomic) NSDictionary *scribeParameters;
 

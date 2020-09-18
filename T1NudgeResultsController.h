@@ -24,6 +24,7 @@
 - (unsigned long long)_t1_actionForPage:(id)arg1 withNudgeID:(id)arg2;
 - (void)_t1_recordNudgeResult:(unsigned long long)arg1 nudgeID:(id)arg2 createdTweetID:(id)arg3 account:(id)arg4;
 - (void)_t1_recordNudgeAction:(unsigned long long)arg1 nudgeID:(id)arg2 account:(id)arg3;
+- (void)main_recordNudgeImpressionForPage:(id)arg1 withNudgeID:(id)arg2 withAccount:(id)arg3;
 - (void)_t1_scribeNudgeResult:(unsigned long long)arg1 page:(id)arg2 nudgeID:(id)arg3 createdTweetID:(id)arg4 account:(id)arg5;
 - (void)_t1_scribeNudgeAction:(unsigned long long)arg1 page:(id)arg2 nudgeID:(id)arg3 account:(id)arg4;
 - (void)_t1_internalRecordResult:(unsigned long long)arg1 forPage:(id)arg2 withNudgeID:(id)arg3 withAccount:(id)arg4 createdTweetID:(id)arg5 createdTweetIDNumber:(id)arg6;

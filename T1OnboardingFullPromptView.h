@@ -6,19 +6,17 @@
 
 #import <UIKit/UIView.h>
 
-#import <T1Twitter/T1OnboardingFlexibleSpaceViewDelegate-Protocol.h>
 #import <T1Twitter/T1PromptView-Protocol.h>
 
-@class NSArray, NSString, T1FlexibleLayoutView, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, TFNFlexibleSpaceHelper, UIButton, UIImageView, UIScrollView;
+@class NSArray, NSString, T1FlexibleLayoutView, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, UIButton, UIImageView, UIScrollView;
 
-@interface T1OnboardingFullPromptView : UIView <T1OnboardingFlexibleSpaceViewDelegate, T1PromptView>
+@interface T1OnboardingFullPromptView : UIView <T1PromptView>
 {
     T1FlexibleLayoutView *_contentView;
     T1FlexibleLayoutView *_textContentView;
     T1FlexibleLayoutView *_imageContentView;
     T1FlexibleLayoutView *_detailContentView;
     T1FlexibleLayoutView *_buttonContentView;
-    TFNFlexibleSpaceHelper *_flexibleSpaceHelper;
     UIScrollView *_scrollView;
     T1PromptTextSpec *_primaryTextSpec;
     TFNAttributedTextView *_primaryTextView;
@@ -43,10 +41,8 @@
 @property(retain, nonatomic) T1PromptTextSpec *secondaryTextSpec; // @synthesize secondaryTextSpec=_secondaryTextSpec;
 @property(retain, nonatomic) TFNAttributedTextView *primaryTextView; // @synthesize primaryTextView=_primaryTextView;
 @property(retain, nonatomic) T1PromptTextSpec *primaryTextSpec; // @synthesize primaryTextSpec=_primaryTextSpec;
-- (void)flexibleSpaceView:(id)arg1 enumerateItemsForLayoutSize:(struct CGSize)arg2 withLayoutMetrics:(id)arg3 block:(CDUnknownBlockType)arg4;
-- (double)availableSpaceForFlexibleSpaceView:(id)arg1;
-- (id)private_generateFlexibleSpaceViewItemForIndex:(long long)arg1 minimumHeight:(double)arg2 weight:(double)arg3;
-- (id)private_generateContentView;
+- (double)private_availableSpace;
+- (id)private_generateSpaceViewItemForMinimumHeight:(double)arg1 weight:(double)arg2;
 - (void)private_updateButtonContentView;
 - (void)private_updateDetailContentView;
 - (void)private_updateImageContentView;

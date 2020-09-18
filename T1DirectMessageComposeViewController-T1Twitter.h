@@ -7,7 +7,7 @@
 #import <T1Twitter/T1DirectMessageComposeViewController.h>
 
 @interface T1DirectMessageComposeViewController (T1Twitter)
-- (void)playerDidFinishPlayingWithSender:(id)arg1;
+- (void)playerDidFinishPlayingWithNotification:(id)arg1;
 - (void)playbackVoiceRecordingTapped;
 - (void)removeVoiceRecordingTapped;
 @end

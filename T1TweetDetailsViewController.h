@@ -156,6 +156,8 @@
 @property(retain, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
 @property(readonly, copy, nonatomic) TFSTwitterScribeContext *sourceScribeContext; // @synthesize sourceScribeContext=_sourceScribeContext;
 @property(retain, nonatomic) TFNTwitterAccount *composingAccount; // @synthesize composingAccount=_composingAccount;
+- (void)presentTweetWithID:(long long)arg1;
+- (_Bool)canPresentTweetWithID:(long long)arg1;
 - (void)dataViewDidDisplay;
 @property(readonly, nonatomic) id <T1StatusViewModel> initialFocusedStatus;
 @property(readonly, nonatomic) id <T1StatusViewModel> focalStatus;

@@ -70,7 +70,7 @@
 - (void)_t1_accountDidBecomeInactive:(id)arg1;
 - (void)_t1_activeAccountDidChange:(id)arg1;
 - (void)_t1_updateLoggingAlertScribeOutputStreamWithAccount:(id)arg1;
-- (void)_t1_deferredSetupOnTwitterStart:(id)arg1;
+- (void)_t1_deferredSetupOnTwitterStart:(unsigned long long)arg1;
 - (void)_t1_fontSizeDidChange:(id)arg1;
 - (void)_t1_updateLayoutMetricsContentFontForCurrentWindowSize;
 - (void)_t1_resetLayoutMetricsTransitionDestinationContentFont;

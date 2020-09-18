@@ -131,7 +131,8 @@
 - (void)composeDirectMessageForBroadcast:(id)arg1 atTimecode:(double)arg2 initialTimecode:(double)arg3 fromRect:(struct CGRect)arg4 inView:(id)arg5 withCompletion:(CDUnknownBlockType)arg6;
 - (void)composeTweetForBroadcast:(id)arg1 atTimecode:(double)arg2 initialTimecode:(double)arg3 screenshot:(id)arg4 fromRect:(struct CGRect)arg5 inView:(id)arg6 withCompletion:(CDUnknownBlockType)arg7;
 - (_Bool)canShareBroadcast;
-- (void)setPreBroadcastStartBroadcastState:(unsigned long long)arg1;
+- (void)broadcastStateDidChange:(id)arg1;
+- (void)preBroadcastStateDidChange:(unsigned long long)arg1;
 - (void)broadcastCameraDidStart;
 - (_Bool)shouldHidePostBroadcast;
 - (_Bool)shouldHideOverflowMenu;

@@ -188,6 +188,8 @@
 - (void)_t1_enableRetweetsForUserReference:(id)arg1 account:(id)arg2 promotedContent:(id)arg3 showUndo:(_Bool)arg4;
 - (void)_t1_disableRetweetsForUserReference:(id)arg1 account:(id)arg2 promotedContent:(id)arg3 showUndo:(_Bool)arg4;
 - (id)_t1_actionItemsForUser:(id)arg1 userContext:(id)arg2 type:(long long)arg3 account:(id)arg4 source:(id)arg5 associatedStatus:(id)arg6 scribeContext:(id)arg7;
+- (id)t1_offPlatformShareActivitiesForUser:(id)arg1 source:(id)arg2 account:(id)arg3 associatedStatus:(id)arg4 scribeContext:(id)arg5;
+- (id)_t1_shareUserActivityViewControllerForUserReference:(id)arg1 source:(id)arg2 account:(id)arg3 scribeContext:(id)arg4 scribeParameters:(id)arg5;
 - (id)_t1_shareUserActionItemForUserReference:(id)arg1 account:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 scribeParameters:(id)arg5;
 - (id)_t1_showFullProfileActionItemForUserReference:(id)arg1 userContext:(id)arg2 account:(id)arg3 scribeContext:(id)arg4 scribeParameters:(id)arg5;
 - (id)_t1_followActionItemForUser:(id)arg1 userContext:(id)arg2 account:(id)arg3 associatedStatus:(id)arg4 scribeContext:(id)arg5 showConfirmation:(_Bool)arg6;

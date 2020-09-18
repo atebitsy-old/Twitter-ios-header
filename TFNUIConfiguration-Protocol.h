@@ -13,8 +13,7 @@
 @property(readonly, nonatomic) id <TFNUIColorPalette> colorPalette;
 @property(readonly, nonatomic) _Bool isReduceMotionSettingEnabled;
 @property(readonly, nonatomic) _Bool isHashtagPronounciationAllowed;
-@property(readonly, nonatomic) _Bool isMenuOnBarButtonItemTapEnabled;
-@property(readonly, nonatomic) _Bool isMenuOnButtonTapEnabled;
+@property(readonly, nonatomic) _Bool isMenuSheetAsMenuEnabled;
 @property(readonly, nonatomic) _Bool isReimplementedTFNButtonEnabled;
 @property(readonly, nonatomic) _Bool isIgnoreTraitCollectionUIStyleInEqualityEnabled;
 @property(readonly, nonatomic) _Bool isUndoScrollToTopEnabled;

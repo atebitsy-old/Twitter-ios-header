@@ -18,7 +18,7 @@
 - (void)performActivity;
 - (id)scribeAction;
 - (_Bool)isSupported;
-- (id)initWithStatus:(id)arg1 presenterViewController:(id)arg2 activityViewController:(id)arg3;
+- (id)initWithActivityModel:(id)arg1 presenterViewController:(id)arg2 activityViewController:(id)arg3;
 
 @end
 

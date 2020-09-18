@@ -9,6 +9,8 @@
 @interface _TtC9T1Twitter33ExternalLaunchTTFTMetricsReporter : _TtC9T1Twitter36TTFTStateMachineMetricsReporterClass
 {
     // Error parsing type: , name: edges
+    // Error parsing type: , name: remoteNotificationObservers
+    // Error parsing type: , name: universalLinkObservers
     // Error parsing type: , name: supportsWarmLaunch
     // Error parsing type: , name: metricSource
     // Error parsing type: , name: launchDestination

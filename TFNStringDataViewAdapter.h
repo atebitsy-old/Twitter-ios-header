@@ -20,14 +20,8 @@
     UIColor *_textColor;
 }
 
-+ (void)setDefaultDetailTextColor:(id)arg1;
-+ (void)setDefaultTextFont:(id)arg1;
-+ (void)setDefaultTextColor:(id)arg1;
-+ (void)setTextIsUppercase:(_Bool)arg1 forStyle:(long long)arg2;
-+ (void)setTextKerning:(double)arg1 forStyle:(long long)arg2;
-+ (void)setTextFont:(id)arg1 forStyle:(long long)arg2;
-+ (void)setTextColor:(id)arg1 forStyle:(long long)arg2;
-+ (void)initialize;
++ (id)_textFontForStyle:(long long)arg1;
++ (id)_textColorForStyle:(long long)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool shouldHighlight; // @synthesize shouldHighlight=_shouldHighlight;
 @property(retain, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
@@ -47,8 +41,6 @@
 - (_Bool)_multipleDetailLinesForOptions:(id)arg1;
 - (_Bool)_multipleLinesForOptions:(id)arg1;
 - (id)_detailTextColorForOptions:(id)arg1;
-- (_Bool)_textIsUppercaseForOptions:(id)arg1;
-- (id)_textKerningForOptions:(id)arg1;
 - (id)_textColorForOptions:(id)arg1;
 - (id)_detailFontForOptions:(id)arg1;
 - (id)_textFontForOptions:(id)arg1;

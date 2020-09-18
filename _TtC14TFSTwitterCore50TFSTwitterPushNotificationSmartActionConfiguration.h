@@ -16,6 +16,7 @@
 
 + (id)decodeSmartConfigurationWithDictionary:(id)arg1;
 - (void).cxx_destruct;
+- (void)handleSmartNotificationsForPayload:(id)arg1 fromServiceExtension:(_Bool)arg2 deleteStatusHandler:(CDUnknownBlockType)arg3;
 - (_Bool)isSmartActionConfigurationReplaceAction;
 - (_Bool)isSmartActionConfigurationUpdateAction;
 - (_Bool)isSmartActionConfigurationDeleteAction;

@@ -17,6 +17,8 @@
     long long _compressHeightWhenVerticallyCompact;
 }
 
++ (void)setupAppearance:(id)arg1 withBarTintColor:(id)arg2 itemTintColor:(id)arg3 customShadowColor:(id)arg4 translucent:(_Bool)arg5;
++ (void)initialize;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(nonatomic) long long compressHeightWhenVerticallyCompact; // @synthesize compressHeightWhenVerticallyCompact=_compressHeightWhenVerticallyCompact;

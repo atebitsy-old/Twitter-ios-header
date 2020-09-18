@@ -14,11 +14,12 @@
     NSString *_eventString;
     NSString *_referringLinkURL;
     NSDictionary *_headerFields;
+    NSDictionary *_bodyFields;
 }
 
 - (void).cxx_destruct;
 - (id)request;
-- (id)initWithContext:(id)arg1 accountID:(id)arg2 event:(long long)arg3 referringLinkURL:(id)arg4 headerFields:(id)arg5 source:(unsigned long long)arg6 responseModelBuilder:(id)arg7 completionBlock:(CDUnknownBlockType)arg8;
+- (id)initWithContext:(id)arg1 accountID:(id)arg2 event:(long long)arg3 referringLinkURL:(id)arg4 headerFields:(id)arg5 bodyFields:(id)arg6 source:(unsigned long long)arg7 responseModelBuilder:(id)arg8 completionBlock:(CDUnknownBlockType)arg9;
 
 @end
 

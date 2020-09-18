@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNPreviewable-Protocol.h>
 
-@class NSString, T1AvatarImageShadowLayer, T1AvatarImageViewModel, TFNTwitterUserDataSource, TIPImagePipeline, UIColor, UIView;
+@class NSString, T1AvatarImageViewModel, TFNCircularAvatarShadowLayer, TFNTwitterUserDataSource, TIPImagePipeline, UIColor, UIView;
 @protocol T1UserViewModel, TFSTwitterCanonicalUser;
 
 @interface T1AvatarImageView : TFNTappableImageView <TFNPreviewable>
@@ -25,13 +25,13 @@
     id <TFSTwitterCanonicalUser> _user;
     TFNTwitterUserDataSource *_userDataSource;
     id <T1UserViewModel> _userViewModel;
-    T1AvatarImageShadowLayer *_shadowLayer;
+    TFNCircularAvatarShadowLayer *_shadowLayer;
     struct CGSize _lastObservedSize;
 }
 
 + (void)_updateLayer:(id)arg1 forStyle:(long long)arg2 circleRadius:(double)arg3 roundedCornerRadius:(double)arg4;
 - (void).cxx_destruct;
-@property(retain, nonatomic) T1AvatarImageShadowLayer *shadowLayer; // @synthesize shadowLayer=_shadowLayer;
+@property(retain, nonatomic) TFNCircularAvatarShadowLayer *shadowLayer; // @synthesize shadowLayer=_shadowLayer;
 @property(nonatomic) struct CGSize lastObservedSize; // @synthesize lastObservedSize=_lastObservedSize;
 @property(retain, nonatomic) id <T1UserViewModel> userViewModel; // @synthesize userViewModel=_userViewModel;
 @property(retain, nonatomic) TFNTwitterUserDataSource *userDataSource; // @synthesize userDataSource=_userDataSource;

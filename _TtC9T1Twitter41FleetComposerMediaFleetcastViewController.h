@@ -15,11 +15,12 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: account
     // Error parsing type: , name: periscopeAccount
     // Error parsing type: , name: periscopeAccountAuthenticationErrorInfo
-    // Error parsing type: , name: periscopePreBroadcastModeState
     // Error parsing type: , name: periscopeModeState
     // Error parsing type: , name: liveBroadcastCapabilityStatus
+    // Error parsing type: , name: broadcastStatus
     // Error parsing type: , name: broadcast
     // Error parsing type: , name: shouldDeleteBroadcast
+    // Error parsing type: , name: didSignalBackendError
     // Error parsing type: , name: didDetectAuthenticationError
     // Error parsing type: , name: stopBroadcastButton
     // Error parsing type: , name: panGestureRecognizer
@@ -33,6 +34,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: constraints
     // Error parsing type: , name: fleetcastViewControllerPesentationState
     // Error parsing type: , name: twitterInviteeUsersPrePublish
+    // Error parsing type: , name: fleetcastForciblyStopped
     // Error parsing type: , name: scribeContext
 }
 
@@ -51,6 +53,7 @@ __attribute__((visibility("hidden")))
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
+- (void)dealloc;
 - (id)initWithCoder:(id)arg1;
 
 @end

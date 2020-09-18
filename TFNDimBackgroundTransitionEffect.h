@@ -16,10 +16,6 @@
     long long _effectStyle;
 }
 
-+ (id)popoverBackgroundColor;
-+ (void)setPopoverBackgroundColor:(id)arg1;
-+ (id)modalBackgroundColor;
-+ (void)setModalBackgroundColor:(id)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) long long effectStyle; // @synthesize effectStyle=_effectStyle;
 @property(nonatomic) double transitionPercentComplete; // @synthesize transitionPercentComplete=_transitionPercentComplete;

@@ -19,6 +19,7 @@
 + (id)defaultCodecs;
 - (void).cxx_destruct;
 - (id)codecForImageType:(id)arg1;
+- (void)replaceCodecForImageType:(id)arg1 usingBlock:(CDUnknownBlockType)arg2;
 - (void)setCodec:(id)arg1 forImageType:(id)arg2;
 - (void)removeCodecForImageType:(id)arg1 removedCodec:(id *)arg2;
 - (void)removeCodecForImageType:(id)arg1;

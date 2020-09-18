@@ -13,7 +13,7 @@
 @class NSString, TFNTwitterAccount, UIView;
 @protocol T1PromptDataSource, T1PromptView;
 
-@interface T1PromptViewController : TFNViewController <TFNModalSheetViewControllerLayoutDelegate, TFNLayoutMetricsSizing, TFNModalSheetViewControllerDelegate>
+@interface T1PromptViewController : TFNViewController <TFNLayoutMetricsSizing, TFNModalSheetViewControllerDelegate, TFNModalSheetViewControllerLayoutDelegate>
 {
     UIView<T1PromptView> *_promptView;
     TFNTwitterAccount *_account;

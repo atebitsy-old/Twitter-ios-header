@@ -18,6 +18,7 @@
     unsigned long long _ctaType;
     NSString *_ctaUrl;
     NSString *_ownerName;
+    NSURL *_ownerProfileImageURL;
     unsigned long long _openWebsiteType;
     NSMutableDictionary *_beaconURLs;
 }
@@ -26,6 +27,7 @@
 @property(retain, nonatomic) NSMutableDictionary *beaconURLs; // @synthesize beaconURLs=_beaconURLs;
 @property(readonly, nonatomic) _Bool renderAdByAdvertiserName; // @synthesize renderAdByAdvertiserName=_renderAdByAdvertiserName;
 @property(readonly, nonatomic) unsigned long long openWebsiteType; // @synthesize openWebsiteType=_openWebsiteType;
+@property(readonly, copy, nonatomic) NSURL *ownerProfileImageURL; // @synthesize ownerProfileImageURL=_ownerProfileImageURL;
 @property(readonly, copy, nonatomic) NSString *ownerName; // @synthesize ownerName=_ownerName;
 @property(readonly, copy, nonatomic) NSString *ctaUrl; // @synthesize ctaUrl=_ctaUrl;
 @property(readonly, nonatomic) unsigned long long ctaType; // @synthesize ctaType=_ctaType;
@@ -36,7 +38,7 @@
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)initWithJSONDictionary:(id)arg1;
-- (id)initWithAssetURL:(id)arg1 videoID:(id)arg2 contentType:(id)arg3 ownerID:(id)arg4 ownerName:(id)arg5 ctaType:(unsigned long long)arg6 ctaURL:(id)arg7 renderAdByAdvertiserName:(_Bool)arg8 openWebsiteCTAType:(unsigned long long)arg9;
+- (id)initWithAssetURL:(id)arg1 videoID:(id)arg2 contentType:(id)arg3 ownerID:(id)arg4 ownerName:(id)arg5 ownerProfileImageURL:(id)arg6 ctaType:(unsigned long long)arg7 ctaURL:(id)arg8 renderAdByAdvertiserName:(_Bool)arg9 openWebsiteCTAType:(unsigned long long)arg10;
 
 @end
 

@@ -6,12 +6,12 @@
 
 #import <T1Twitter/T1NativesqueSingleWebViewController.h>
 
-#import <T1Twitter/T1AccountAdder-Protocol.h>
+#import <T1Twitter/T1LoginChallengeProtocol-Protocol.h>
 #import <T1Twitter/TFSTwitterAuthTimelineTokenStorageDelegate-Protocol.h>
 
 @class NSString, TFNHUD, TFNTwitterAccount, TFSTimer;
 
-@interface T1LoginChallengeWebViewController : T1NativesqueSingleWebViewController <T1AccountAdder, TFSTwitterAuthTimelineTokenStorageDelegate>
+@interface T1LoginChallengeWebViewController : T1NativesqueSingleWebViewController <T1LoginChallengeProtocol, TFSTwitterAuthTimelineTokenStorageDelegate>
 {
     _Bool _ignoreWebViewError;
     CDUnknownBlockType _didAddAccountBlock;
@@ -47,6 +47,7 @@
 - (void)applicationDidEnterBackground:(id)arg1;
 - (void)didFinishLoadingWithError:(id)arg1;
 - (_Bool)shouldStartLoadWithRequest:(id)arg1 navigationType:(long long)arg2;
+- (void)presentLoginChallengeFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
@@ -62,7 +63,7 @@
 - (CDUnknownBlockType)_loginChallengeResponseBlock;
 - (_Bool)isUsingNonPersistentDataStore;
 - (id)initWithAccount:(id)arg1;
-- (id)initWithLoginType:(unsigned long long)arg1 requestID:(id)arg2 user:(id)arg3 userID:(long long)arg4 URLString:(id)arg5 loginCause:(long long)arg6;
+- (id)initWithLoginType:(unsigned long long)arg1 requestID:(id)arg2 user:(id)arg3 userID:(long long)arg4 URL:(id)arg5 loginCause:(long long)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -14,6 +14,7 @@
 }
 
 + (double)backgroundTextFieldHorizontalInset;
++ (void)initialize;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *backgroundTextFieldColor; // @synthesize backgroundTextFieldColor=_backgroundTextFieldColor;
 - (void)_tfn_updateBackground;

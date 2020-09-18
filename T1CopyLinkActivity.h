@@ -6,19 +6,15 @@
 
 #import <T1Twitter/T1Activity.h>
 
-@class TFNTwitterStatus;
-
 @interface T1CopyLinkActivity : T1Activity
 {
-    TFNTwitterStatus *_status;
 }
 
-- (void).cxx_destruct;
 - (void)performActivity;
 - (id)scribeAction;
 - (id)activityType;
 - (_Bool)isSupported;
-- (id)initWithStatus:(id)arg1;
+- (id)initWithActivityModel:(id)arg1;
 
 @end
 

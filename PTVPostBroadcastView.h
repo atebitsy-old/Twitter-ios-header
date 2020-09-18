@@ -19,6 +19,7 @@
     NSArray *_orderedButtons;
     NSArray *_visibleButtons;
     NSLayoutConstraint *_buttonContainerHeightConstraint;
+    _Bool _isFleetcast;
     _Bool _isShowingSurvey;
     _Bool _shouldRemoveMiniSurvey;
     id <PTVPostBroadcastViewDelegate> _delegate;

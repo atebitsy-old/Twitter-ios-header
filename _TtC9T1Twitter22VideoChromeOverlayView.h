@@ -17,8 +17,10 @@
     // Error parsing type: , name: previewImageComponent
     // Error parsing type: , name: playButtonComponent
     // Error parsing type: , name: watchAgainButtonComponent
+    // Error parsing type: , name: adHeaderComponent
     // Error parsing type: , name: skipAdButtonComponent
     // Error parsing type: , name: skipAdCountdownLabelComponent
+    // Error parsing type: , name: adCountdownLabelComponent
     // Error parsing type: , name: adPIPPreviewImageComponent
     // Error parsing type: , name: adPIPPlayerViewComponent
     // Error parsing type: , name: adPIPPreviewImageHeightConstraint

@@ -29,6 +29,7 @@
     NSArray *_heartThemeImages;
     int _nHeartsVisible;
     double _replayProgress;
+    _Bool _isFleetcast;
     _Bool _shouldShowCooldownStats;
     UILabel *_droppedMesssagesCountLabel;
     UILabel *_currentMessageCountLabel;

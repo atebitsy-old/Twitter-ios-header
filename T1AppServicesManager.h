@@ -50,7 +50,7 @@
 @property(nonatomic) __weak id <CrashlyticsDelegate> fabricCrashlyticsDelegate; // @synthesize fabricCrashlyticsDelegate=_fabricCrashlyticsDelegate;
 - (id)scribeForMetricKitManager:(id)arg1;
 - (_Bool)_shouldDebugScribe;
-- (void)_checkAppDidUpdate;
+- (void)_handleAppDidUpdate;
 - (void)_scheduleSaveLoginVerification;
 - (void)_scheduleGeoDataStartup;
 - (void)_schedulePushRegistration;
@@ -104,7 +104,7 @@
 - (void)startSentinelManagerWithDidCrashDuringPreviousExecution:(_Bool)arg1;
 - (void)_customizeCrashlytics;
 - (void)startCrashlytics;
-- (void)setUpAppServicesWithPushRegistration:(id)arg1 freshInstall:(_Bool)arg2;
+- (void)setUpAppServicesWithPushRegistration:(id)arg1 freshInstall:(_Bool)arg2 recentlyUpgraded:(_Bool)arg3;
 - (void)_setupURTTimelineEncodingPolicyConfiguration;
 - (void)setUpCoreServicesWithConfiguration:(id)arg1;
 - (void)saveServiceStates;

@@ -16,7 +16,6 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <TFNTwitterFeatureSwitches> featureSwitches; // @synthesize featureSwitches=_featureSwitches;
-@property(readonly, nonatomic) _Bool deepLinkRequestParamsEnabled;
 @property(readonly, nonatomic) _Bool intentfulSearchDummyFiltersEnabled;
 @property(readonly, nonatomic) _Bool unsafePeekIntentfulSearchEnabled;
 @property(readonly, nonatomic) _Bool intentfulSearchEnabled;

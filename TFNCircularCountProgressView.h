@@ -9,7 +9,7 @@
 #import <TFNUI/TFNHapticFeedback-Protocol.h>
 #import <TFNUI/TFNLayoutMetricsEnvironment-Protocol.h>
 
-@class CAShapeLayer, NSString, UIColor, UIFont, UIImpactFeedbackGenerator, UILabel, UINotificationFeedbackGenerator, UISelectionFeedbackGenerator;
+@class CAShapeLayer, NSNumberFormatter, NSString, UIColor, UIFont, UIImpactFeedbackGenerator, UILabel, UINotificationFeedbackGenerator, UISelectionFeedbackGenerator;
 @protocol TFNCircularCountProgressDataSource;
 
 @interface TFNCircularCountProgressView : UIView <TFNLayoutMetricsEnvironment, TFNHapticFeedback>
@@ -36,9 +36,11 @@
     long long _overflowCount;
     double _oldProgressPercent;
     unsigned long long _oldDisplayMode;
+    NSNumberFormatter *_numberFormatter;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSNumberFormatter *numberFormatter; // @synthesize numberFormatter=_numberFormatter;
 @property(nonatomic) unsigned long long oldDisplayMode; // @synthesize oldDisplayMode=_oldDisplayMode;
 @property(nonatomic) double oldProgressPercent; // @synthesize oldProgressPercent=_oldProgressPercent;
 @property(nonatomic) long long overflowCount; // @synthesize overflowCount=_overflowCount;

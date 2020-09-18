@@ -6,12 +6,11 @@
 
 #import <T1Twitter/T1Activity.h>
 
-@class TFNTwitterAccount, TFNTwitterStatus, UIViewController;
+@class TFNTwitterAccount, UIViewController;
 
 @interface T1ShareViaDMActivity : T1Activity
 {
     TFNTwitterAccount *_account;
-    TFNTwitterStatus *_status;
     UIViewController *_presenterViewController;
 }
 
@@ -20,7 +19,7 @@
 - (id)scribeAction;
 - (id)activityType;
 - (_Bool)isSupported;
-- (id)initWithStatus:(id)arg1 account:(id)arg2 presenterViewController:(id)arg3;
+- (id)initWithActivityModel:(id)arg1 account:(id)arg2 presenterViewController:(id)arg3;
 
 @end
 

@@ -19,7 +19,6 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNTwitterComposition *composition; // @synthesize composition=_composition;
 - (id)geotag;
-- (id)cameraMoment;
 - (id)scribeItemContentID;
 - (id)unifiedID;
 - (long long)primaryCardType;

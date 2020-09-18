@@ -41,11 +41,13 @@ __attribute__((visibility("hidden")))
 }
 
 - (void).cxx_destruct;
+- (_Bool)accessibilityActivate;
 - (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 - (void)backgroundLongPressed:(id)arg1;
 - (void)backgroundDoubleTapped;
 - (void)updateAudioLevel;
 - (void)audioControlButtonTapped;
+- (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;
 @property(nonatomic, retain) T1DirectMessageAbstractConversationEntryViewModel *entryViewModel;
 @property(nonatomic) __weak id <T1DirectMessageAbstractEntryCellDelegate> delegate;

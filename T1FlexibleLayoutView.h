@@ -14,14 +14,14 @@
 {
     _Bool _ignoreTopOriginWhenSizing;
     _Bool _ignoreLeftOriginWhenSizing;
+    T1FlexibleLayoutHelper *_layoutHelper;
     CDUnknownBlockType _contentEdgeInsetsCalculator;
     CDUnknownBlockType _layoutMetricsCalculator;
-    T1FlexibleLayoutHelper *_layoutHelper;
 }
 
++ (id)viewWithContentEdgeInsets:(struct UIEdgeInsets)arg1;
 + (CDUnknownBlockType)performWithoutAnimationFrameAnimator;
 - (void).cxx_destruct;
-@property(retain, nonatomic) T1FlexibleLayoutHelper *layoutHelper; // @synthesize layoutHelper=_layoutHelper;
 @property(copy, nonatomic) CDUnknownBlockType layoutMetricsCalculator; // @synthesize layoutMetricsCalculator=_layoutMetricsCalculator;
 @property(copy, nonatomic) CDUnknownBlockType contentEdgeInsetsCalculator; // @synthesize contentEdgeInsetsCalculator=_contentEdgeInsetsCalculator;
 @property(nonatomic) _Bool ignoreLeftOriginWhenSizing; // @synthesize ignoreLeftOriginWhenSizing=_ignoreLeftOriginWhenSizing;
@@ -37,7 +37,7 @@
 @property(retain, nonatomic) NSArray *arrangedSubviewItems;
 - (void)removeArrangedSubviewItem:(id)arg1;
 - (void)addArrangedSubviewItem:(id)arg1;
-- (void)t1_enumerateLinearlyArrangedSubviewItemsWithLayoutSize:(struct CGSize)arg1 orientation:(long long)arg2 layoutMetrics:(id)arg3 block:(CDUnknownBlockType)arg4;
+@property(readonly, nonatomic) T1FlexibleLayoutHelper *layoutHelper; // @synthesize layoutHelper=_layoutHelper;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -11,8 +11,6 @@
 @interface SKStoreProductViewController (TAF)
 + (id)productViewControllerWithItunesIdentifier:(id)arg1 scribe:(id)arg2 scribeContext:(id)arg3 loadCompletion:(CDUnknownBlockType)arg4 adMetadataContainer:(id)arg5;
 @property(retain, nonatomic) TAFStoreProductViewControllerDelegate *strongDelegate;
-@property(copy, nonatomic) CDUnknownBlockType loadCompletion;
 - (void)_taf_handleOpenAppStoreWithSuccess:(_Bool)arg1 error:(id)arg2 appStoreId:(id)arg3;
-- (void)_taf_deliverStatus:(long long)arg1;
 @end
 

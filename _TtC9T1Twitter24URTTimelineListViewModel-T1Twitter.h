@@ -9,6 +9,7 @@
 @class NSDictionary, NSString;
 
 @interface _TtC9T1Twitter24URTTimelineListViewModel (T1Twitter)
+@property(nonatomic, readonly) NSString *scribeComponent;
 @property(nonatomic, readonly) NSString *scribeElement;
 @property(nonatomic, readonly) NSDictionary *scribeItem;
 @property(nonatomic, readonly) NSString *scribeItemImpressionID;

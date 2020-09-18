@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1ForwardPivotViewModel-Protocol.h>
 
-@class NSString, NSURL, TFNTwitterAccount, TFSTwitterForwardPivot, UIColor, UIFont, UIImage;
+@class NSString, TFNTwitterAccount, TFSTwitterForwardPivot, UIColor, UIFont, UIImage;
 
 @interface T1ForwardPivotViewModel : NSObject <T1ForwardPivotViewModel>
 {
@@ -23,11 +23,10 @@
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) NSString *accessibilityString;
 @property(readonly, nonatomic) UIImage *iconImage;
+@property(readonly, nonatomic) UIColor *iconColor;
 @property(readonly, nonatomic) struct CGSize preferredIconImageSize;
 @property(readonly, nonatomic) struct CGSize preferredChevronImageSize;
 @property(readonly, nonatomic) _Bool hasImage;
-@property(readonly, nonatomic) struct CGSize imageSize;
-@property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic) UIImage *chevronImage;
 @property(readonly, nonatomic) UIColor *chevronColor;
 @property(readonly, nonatomic) UIFont *middotFont;

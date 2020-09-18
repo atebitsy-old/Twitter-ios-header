@@ -10,7 +10,6 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter45SpheresUsersShoppingCartSummaryViewController : TFNViewController
 {
     // Error parsing type: , name: account
-    // Error parsing type: , name: viewModel
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: usersView
     // Error parsing type: , name: detailsLabel
@@ -21,6 +20,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_doneButton
     // Error parsing type: , name: $__lazy_storage_$_userActionsView
     // Error parsing type: , name: $__lazy_storage_$_avatarViewModelsQueue
+    // Error parsing type: , name: summary
+    // Error parsing type: , name: hydratedSummary
 }
 
 - (void).cxx_destruct;

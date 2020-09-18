@@ -63,9 +63,6 @@
 @property(nonatomic) _Bool teamsAccountUpdateNeeded; // @synthesize teamsAccountUpdateNeeded=_teamsAccountUpdateNeeded;
 @property(nonatomic) double clockDelta; // @synthesize clockDelta=_clockDelta;
 @property(copy) NSArray *accounts; // @synthesize accounts=_accounts;
-- (void)_postDidFinishStartingNotificationWithStartType:(unsigned long long)arg1;
-- (void)resume;
-- (void)startup;
 - (id)pushSettingsForAccount:(id)arg1;
 - (void)_triggerHeartbeat;
 - (void)_twitterDidFinishStarting:(id)arg1;
@@ -126,6 +123,7 @@
 - (void)dealloc;
 - (id)init;
 - (void)scheduleRecurringForegroundServerAccountBadgesFetchTask;
+- (void)_t1_darkReadDeleteDataFromAccounts;
 - (void)resurrectAndResetShutdownCacheIfNeeded;
 @property(readonly, nonatomic, getter=isAppStateShouldResurrect) _Bool appStateShouldResurrect;
 @property(readonly, nonatomic, getter=isAppStateShouldShutdown) _Bool appStateShouldShutdown;

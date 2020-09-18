@@ -69,6 +69,7 @@
     // Error parsing type: , name: lockComposeBarPosition
     // Error parsing type: , name: lockComposeBarPositionConstraint
     // Error parsing type: , name: voiceEducationTooltipEvent
+    // Error parsing type: , name: conversation
 }
 
 - (void).cxx_destruct;
@@ -83,6 +84,7 @@
 - (void)handleVoiceRecordLongPress:(id)arg1;
 - (void)quickReplyButtonTapped:(id)arg1;
 - (void)sendButtonTapped:(id)arg1;
+- (void)voiceMessageDidStartPlayingWithNotification:(id)arg1;
 - (void)keyboardDidShowWithNotification:(id)arg1;
 - (void)keyboardDidHideWithNotification:(id)arg1;
 - (void)keyboardWillChangeWithNotification:(id)arg1;

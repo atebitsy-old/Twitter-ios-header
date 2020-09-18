@@ -10,13 +10,14 @@
 {
     // Error parsing type: , name: onTapBlock
     // Error parsing type: , name: onLongPressBlock
+    // Error parsing type: , name: onPrerollCTATap
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (void)onLongPress;
 - (void)onTap;
-- (id)initOnTapBlock:(CDUnknownBlockType)arg1 onLongPressBlock:(CDUnknownBlockType)arg2;
+- (id)initOnTapBlock:(CDUnknownBlockType)arg1 onLongPressBlock:(CDUnknownBlockType)arg2 onPrerollCTATapBlock:(CDUnknownBlockType)arg3;
 
 @end
 

@@ -21,7 +21,6 @@
     _Bool _shouldTriggerHapticFeedback;
     double _thresholdOffsetY;
     UIImpactFeedbackGenerator *_impactFeedbackGenerator;
-    UIColor *_pullToRefreshColor;
     UIScrollView *_savedScrollView;
     UIImageView *_arrowView;
     UIActivityIndicatorView *_activityView;
@@ -29,7 +28,6 @@
     struct UIEdgeInsets _savedScrollInsets;
 }
 
-+ (void)setPullToRefreshColor:(id)arg1;
 + (void)setAreSoundEffectsEnabledBlock:(CDUnknownBlockType)arg1;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIActivityIndicatorView *activityView; // @synthesize activityView=_activityView;
@@ -37,7 +35,6 @@
 @property(readonly, nonatomic) struct UIEdgeInsets savedScrollInsets; // @synthesize savedScrollInsets=_savedScrollInsets;
 @property(nonatomic) __weak UIScrollView *savedScrollView; // @synthesize savedScrollView=_savedScrollView;
 @property(nonatomic) _Bool shouldTriggerHapticFeedback; // @synthesize shouldTriggerHapticFeedback=_shouldTriggerHapticFeedback;
-@property(retain, nonatomic) UIColor *pullToRefreshColor; // @synthesize pullToRefreshColor=_pullToRefreshColor;
 @property(readonly, nonatomic) UIImpactFeedbackGenerator *impactFeedbackGenerator; // @synthesize impactFeedbackGenerator=_impactFeedbackGenerator;
 @property(nonatomic) double thresholdOffsetY; // @synthesize thresholdOffsetY=_thresholdOffsetY;
 @property(nonatomic) _Bool hideWhenNotInUse; // @synthesize hideWhenNotInUse=_hideWhenNotInUse;

@@ -32,7 +32,7 @@
 @property(retain, nonatomic) TFNTwitterScribeImpressionLogger *impressionLogger; // @synthesize impressionLogger=_impressionLogger;
 @property(retain, nonatomic) TFNTwitterScribeConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(readonly, copy, nonatomic) NSString *clientName; // @synthesize clientName=_clientName;
-@property(readonly, nonatomic) TFNTwitterScribeOptions *options; // @synthesize options=_options;
+@property(retain) TFNTwitterScribeOptions *options; // @synthesize options=_options;
 @property(readonly, nonatomic) __weak TFNTwitterAccount *account; // @synthesize account=_account;
 - (void)_tfn_flushScribes;
 - (void)_tfn_applicationDidCompleteBackgroundFetchNotification:(id)arg1;
@@ -68,7 +68,6 @@
 - (id)_scribeGroups;
 - (id)_scribeThriftGroup;
 - (id)_scribeGroup;
-- (void)updateOptions:(id)arg1;
 - (void)dealloc;
 - (id)initWithAccount:(id)arg1 options:(id)arg2 scribe:(id)arg3 scribeWriter:(id)arg4;
 - (id)initWithAccount:(id)arg1 options:(id)arg2;

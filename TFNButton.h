@@ -17,31 +17,10 @@
     double _imageToTitlePadding;
     UIColor *_highlightFillColor;
     UIView *_highlightView;
+    double _contentAlpha;
     struct UIEdgeInsets _touchInsets;
 }
 
-+ (void)setLargeBoldFont:(id)arg1;
-+ (id)largeBoldFont;
-+ (void)setNormalBoldFont:(id)arg1;
-+ (id)normalBoldFont;
-+ (void)setSmallBoldFont:(id)arg1;
-+ (id)smallBoldFont;
-+ (void)setBlackColor:(id)arg1;
-+ (id)blackColor;
-+ (void)setWhiteColor:(id)arg1;
-+ (id)whiteColor;
-+ (void)setDetailTextColor:(id)arg1;
-+ (id)detailTextColor;
-+ (void)setNeutralTextColor:(id)arg1;
-+ (id)neutralTextColor;
-+ (void)setNeutralButtonHighlightColor:(id)arg1;
-+ (id)neutralButtonHighlightColor;
-+ (void)setNeutralButtonColor:(id)arg1;
-+ (id)neutralButtonColor;
-+ (void)setDestructiveButtonColor:(id)arg1;
-+ (id)destructiveButtonColor;
-+ (void)setPrimaryButtonColor:(id)arg1;
-+ (id)primaryButtonColor;
 + (long long)_tfn_layoutForButtonWithText:(_Bool)arg1 image:(_Bool)arg2;
 + (id)_tfn_imageForImageNamed:(id)arg1 withSize:(struct CGSize)arg2;
 + (double)imageToTitlePaddingForSizeClass:(long long)arg1;
@@ -54,6 +33,7 @@
 + (id)buttonWithTitle:(id)arg1 imageNamed:(id)arg2 style:(long long)arg3 sizeClass:(long long)arg4;
 + (id)buttonWithStyle:(long long)arg1 sizeClass:(long long)arg2;
 - (void).cxx_destruct;
+@property(nonatomic) double contentAlpha; // @synthesize contentAlpha=_contentAlpha;
 @property(readonly, nonatomic) UIView *highlightView; // @synthesize highlightView=_highlightView;
 @property(retain, nonatomic) UIColor *highlightFillColor; // @synthesize highlightFillColor=_highlightFillColor;
 @property(nonatomic) _Bool imageTrailsLabel; // @synthesize imageTrailsLabel=_imageTrailsLabel;
@@ -75,7 +55,7 @@
 - (void)setFrame:(struct CGRect)arg1;
 - (void)_tfn_updateCornerCurveSettings;
 - (void)_tfn_updateContentInsetForSizeClass:(long long)arg1;
-- (void)_tfn_configureWithBackgroundColor:(id)arg1 titleColor:(id)arg2 highlightFillColor:(id)arg3 borderColor:(id)arg4;
+- (void)_tfn_configureWithBackgroundColor:(id)arg1 titleColor:(id)arg2 borderColor:(id)arg3 highlightColor:(id)arg4;
 @property(readonly, nonatomic) long long currentLayout;
 - (void)setImageNamed:(id)arg1 withSize:(struct CGSize)arg2 forState:(unsigned long long)arg3;
 - (void)setImageNamed:(id)arg1 forState:(unsigned long long)arg2;

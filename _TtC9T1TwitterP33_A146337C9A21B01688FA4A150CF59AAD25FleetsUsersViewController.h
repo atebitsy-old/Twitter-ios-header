@@ -6,7 +6,9 @@
 
 #import <T1Twitter/T1UsersViewController.h>
 
-@interface _TtC9T1TwitterP33_A146337C9A21B01688FA4A150CF59AAD25FleetsUsersViewController : T1UsersViewController
+#import <T1Twitter/T1UserViewDelegate-Protocol.h>
+
+@interface _TtC9T1TwitterP33_A146337C9A21B01688FA4A150CF59AAD25FleetsUsersViewController : T1UsersViewController <T1UserViewDelegate>
 {
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: scribeContext

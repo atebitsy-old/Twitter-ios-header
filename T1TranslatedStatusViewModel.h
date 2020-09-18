@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1StatusViewModel-Protocol.h>
 
-@class NSArray, NSDate, NSDictionary, NSString, TFNTwitterCardData, TFNTwitterDisplayTextModel, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterStatus, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFSTwitterAutoTranslation, TFSTwitterCameraMoment, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterTranslateTweetResponse, TFSTwitterVideoMonetizationSettings, TFSURTRichText, UIColor;
+@class NSArray, NSDate, NSDictionary, NSString, TFNTwitterCardData, TFNTwitterDisplayTextModel, TFNTwitterFeedbackInfo, TFNTwitterFeedbackModule, TFNTwitterGeotag, TFNTwitterStatus, TFNTwitterStatusConversationContext, TFNTwitterSuggestsInfo, TFSTwitterAutoTranslation, TFSTwitterConversationControl, TFSTwitterEntitySet, TFSTwitterForwardPivot, TFSTwitterMediaInfo, TFSTwitterTranslateTweetResponse, TFSTwitterVideoMonetizationSettings, TFSURTRichText, UIColor;
 @protocol T1PlayerFactoryIdentifiable, T1StatusViewModel, TFNTwitterAVPlayerSessionSource, TFNTwitterCardDataSource, TFNTwitterStatusConversationTreeContext;
 
 @interface T1TranslatedStatusViewModel : NSObject <T1StatusViewModel>
@@ -185,7 +185,6 @@
 @property(readonly, nonatomic) id <TFNTwitterCardDataSource> cardDataSource;
 @property(readonly, nonatomic) TFNTwitterCardData *cardData;
 @property(readonly, nonatomic) TFSTwitterConversationControl *conversationControl;
-@property(readonly, nonatomic) TFSTwitterCameraMoment *cameraMoment;
 @property(readonly, nonatomic) unsigned long long autoExpandMode;
 - (_Bool)allowDynamicAd;
 @property(readonly, nonatomic) NSString *advertiserName;

@@ -37,6 +37,8 @@
 - (void)_t1_animateFocus;
 - (unsigned long long)_t1_ambientCircleCount;
 - (_Bool)_t1_isAmbientlyAnimating;
+- (void)showCircles;
+- (void)hideCircles;
 - (void)stopAmbientAnimations;
 - (void)beginAmbientAnimation;
 - (void)animateCirclesForAudioLevel:(double)arg1;

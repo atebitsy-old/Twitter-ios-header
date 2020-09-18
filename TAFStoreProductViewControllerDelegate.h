@@ -8,22 +8,31 @@
 
 #import <T1Twitter/SKStoreProductViewControllerDelegate-Protocol.h>
 
-@class NSString, TFSTwitterScribeContext;
+@class NSString, SKStoreProductViewController, TFSTwitterScribeContext;
 @protocol TFSTwitterLegacyScribeLogMethods;
 
 @interface TAFStoreProductViewControllerDelegate : NSObject <SKStoreProductViewControllerDelegate>
 {
+    _Bool _didFireDismissHandler;
+    SKStoreProductViewController *_viewController;
     id <TFSTwitterLegacyScribeLogMethods> _scribe;
     TFSTwitterScribeContext *_scribeContext;
     double _startedAt;
+    CDUnknownBlockType _loadCompletion;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType loadCompletion; // @synthesize loadCompletion=_loadCompletion;
+@property(nonatomic) _Bool didFireDismissHandler; // @synthesize didFireDismissHandler=_didFireDismissHandler;
 @property(nonatomic) double startedAt; // @synthesize startedAt=_startedAt;
 @property(copy, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(retain, nonatomic) id <TFSTwitterLegacyScribeLogMethods> scribe; // @synthesize scribe=_scribe;
+@property(nonatomic) __weak SKStoreProductViewController *viewController; // @synthesize viewController=_viewController;
+- (void)_taf_commonDismissHandlerForProductViewController:(id)arg1;
+- (void)deliverStatus:(long long)arg1;
 - (void)productViewControllerDidFinish:(id)arg1;
-- (id)initWithScribe:(id)arg1 scribeContext:(id)arg2;
+- (id)initWithScribe:(id)arg1 scribeContext:(id)arg2 loadCompletion:(CDUnknownBlockType)arg3;
+- (void)dealloc;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

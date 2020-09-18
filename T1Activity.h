@@ -6,12 +6,12 @@
 
 #import <UIKit/UIActivity.h>
 
-@class NSString, TFNTwitterStatus, UIImage;
-@protocol T1ActivityDelegate;
+@class NSString, UIImage;
+@protocol T1ActivityDelegate, T1ActivityModel;
 
 @interface T1Activity : UIActivity
 {
-    TFNTwitterStatus *_status;
+    id <T1ActivityModel> _activityModel;
     NSString *_identifier;
     unsigned long long _type;
     NSString *_title;
@@ -28,7 +28,7 @@
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-@property(readonly, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
+@property(readonly, nonatomic) id <T1ActivityModel> activityModel; // @synthesize activityModel=_activityModel;
 - (void)activityDidFinish:(_Bool)arg1;
 - (void)performActivity;
 - (_Bool)canPerformWithActivityItems:(id)arg1;
@@ -36,8 +36,8 @@
 - (id)activityImage;
 - (id)activityTitle;
 @property(readonly, nonatomic) _Bool isSupported;
-- (id)initWithTwitterStatus:(id)arg1 identifier:(id)arg2 type:(unsigned long long)arg3 title:(id)arg4 image:(id)arg5;
-- (id)initWithTwitterStatus:(id)arg1 identifier:(id)arg2 type:(unsigned long long)arg3 title:(id)arg4 imageName:(id)arg5;
+- (id)initWithActivityModel:(id)arg1 identifier:(id)arg2 type:(unsigned long long)arg3 title:(id)arg4 image:(id)arg5;
+- (id)initWithActivityModel:(id)arg1 identifier:(id)arg2 type:(unsigned long long)arg3 title:(id)arg4 imageName:(id)arg5;
 
 @end
 

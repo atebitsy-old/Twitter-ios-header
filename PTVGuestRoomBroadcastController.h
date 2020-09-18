@@ -22,6 +22,7 @@
     _Bool _isMuted;
     unsigned long long _totalUsersCount;
     id <PTVLoggedInUserProtocol> _loggedInUser;
+    unsigned long long _maximumNumberOfGuestCallers;
     PTVBroadcastController *_broadcastController;
     NSObject<PTVGuestCoordinator> *_guestCoordinator;
     id <PTVVideoPlayer> _mainPlayer;
@@ -51,6 +52,7 @@
 @property(retain, nonatomic) id <PTVVideoPlayer> mainPlayer; // @synthesize mainPlayer=_mainPlayer;
 @property(retain, nonatomic) NSObject<PTVGuestCoordinator> *guestCoordinator; // @synthesize guestCoordinator=_guestCoordinator;
 @property(retain, nonatomic) PTVBroadcastController *broadcastController; // @synthesize broadcastController=_broadcastController;
+@property(readonly, nonatomic) unsigned long long maximumNumberOfGuestCallers; // @synthesize maximumNumberOfGuestCallers=_maximumNumberOfGuestCallers;
 @property(readonly, nonatomic) id <PTVLoggedInUserProtocol> loggedInUser; // @synthesize loggedInUser=_loggedInUser;
 @property(nonatomic) _Bool isMuted; // @synthesize isMuted=_isMuted;
 @property(readonly, nonatomic) unsigned long long totalUsersCount; // @synthesize totalUsersCount=_totalUsersCount;
@@ -131,7 +133,7 @@
 - (void)removeGuestRoomControllerObserver:(id)arg1;
 - (void)addGuestRoomControllerObserver:(id)arg1;
 - (void)dealloc;
-- (id)initWithLoggedInUser:(id)arg1;
+- (id)initWithLoggedInUser:(id)arg1 maximumNumberOfGuestCallers:(unsigned long long)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -11,6 +11,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter32DirectMessageSwipeToSendPillView : UIView
 {
+    // Error parsing type: , name: arrowTravelDistance
     // Error parsing type: , name: swipeToSendImageView
     // Error parsing type: , name: didTouchSendIcon
     // Error parsing type: , name: hapticFeedbackGenerator

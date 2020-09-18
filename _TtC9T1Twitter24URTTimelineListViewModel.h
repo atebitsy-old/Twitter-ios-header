@@ -6,14 +6,11 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
-
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter24URTTimelineListViewModel : NSObject
 {
     // Error parsing type: , name: entryID
-    // Error parsing type: , name: twitterList
-    // Error parsing type: , name: listOwner
+    // Error parsing type: , name: list
     // Error parsing type: , name: listDisplayType
     // Error parsing type: , name: clientEventInfo
     // Error parsing type: , name: feedbackContext
@@ -21,7 +18,6 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (id)init;
-@property(nonatomic, readonly) NSString *scribeComponent;
 
 @end
 

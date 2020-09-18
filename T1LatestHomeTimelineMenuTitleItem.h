@@ -15,9 +15,9 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNAttributedTextModel *menuTitleTextModel; // @synthesize menuTitleTextModel=_menuTitleTextModel;
-- (id)_t1_buildTitleAttrStringWithTitle:(id)arg1 subtitle:(id)arg2 imageNamed:(id)arg3;
+- (id)_t1_buildTitleAttrStringWithTitle:(id)arg1 subtitle:(id)arg2 imageNamed:(id)arg3 imageTintColor:(id)arg4;
 - (id)_t1_buildAccessibilityLabelWithTitle:(id)arg1 subtitle:(id)arg2;
-- (id)initWithTitle:(id)arg1 subtitle:(id)arg2 imageNamed:(id)arg3;
+- (id)initWithTitle:(id)arg1 subtitle:(id)arg2 imageNamed:(id)arg3 imageTintColor:(id)arg4;
 - (id)init;
 
 @end

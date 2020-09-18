@@ -8,7 +8,6 @@
 
 @interface _TtC9T1Twitter31TrendRelatedTrendsAccessibility : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: relatedTrendsMode
     // Error parsing type: , name: navigationHelper
     // Error parsing type: , name: groupedTrends
     // Error parsing type: , name: actions

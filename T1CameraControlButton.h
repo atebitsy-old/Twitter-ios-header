@@ -10,18 +10,18 @@
 
 @interface T1CameraControlButton : TFNPaddedButton
 {
-    NSString *_accessibilityDefaultLabel;
-    NSString *_accessibilitySelectedLabel;
+    NSString *_accessibilityDefaultValue;
+    NSString *_accessibilitySelectedValue;
 }
 
 + (id)defaultControlButtonWithImageNamed:(id)arg1 selectedImageNamed:(id)arg2 imageSize:(struct CGSize)arg3;
 + (id)defaultControlButtonWithImageNamed:(id)arg1 selectedImageNamed:(id)arg2;
 + (id)defaultControlButton;
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *accessibilitySelectedLabel; // @synthesize accessibilitySelectedLabel=_accessibilitySelectedLabel;
-@property(copy, nonatomic) NSString *accessibilityDefaultLabel; // @synthesize accessibilityDefaultLabel=_accessibilityDefaultLabel;
-- (id)accessibilityLabel;
-- (void)setAccessibilityLabel:(id)arg1;
+@property(copy, nonatomic) NSString *accessibilitySelectedValue; // @synthesize accessibilitySelectedValue=_accessibilitySelectedValue;
+@property(copy, nonatomic) NSString *accessibilityDefaultValue; // @synthesize accessibilityDefaultValue=_accessibilityDefaultValue;
+- (id)accessibilityValue;
+- (void)setAccessibilityValue:(id)arg1;
 - (void)layoutSubviews;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (struct CGSize)intrinsicContentSize;

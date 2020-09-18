@@ -26,6 +26,7 @@
     _Bool _secureTextEntry;
     _Bool _multiline;
     _Bool _supportInterests;
+    _Bool _autofocusBio;
     CDUnknownBlockType _nextAction;
     CDUnknownBlockType _skipAction;
     _Bool _editing;
@@ -71,8 +72,8 @@
 - (void)_updateConstraints;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithAccount:(id)arg1 headerSpec:(id)arg2 footerSpec:(id)arg3 hintText:(id)arg4 defaultText:(id)arg5 accessibilityLabel:(id)arg6 charactersRemainingAccessibilityLabel:(id)arg7 maxLength:(long long)arg8 keyboardType:(long long)arg9 secureTextEntry:(_Bool)arg10 multiline:(_Bool)arg11 supportInterests:(_Bool)arg12 nextAction:(CDUnknownBlockType)arg13 skipAction:(CDUnknownBlockType)arg14;
-- (id)initWithAccount:(id)arg1 headerSpec:(id)arg2 footerSpec:(id)arg3 hintText:(id)arg4 defaultText:(id)arg5 accessibilityLabel:(id)arg6 charactersRemainingAccessibilityLabel:(id)arg7 maxLength:(long long)arg8 keyboardType:(long long)arg9 secureTextEntry:(_Bool)arg10 multiline:(_Bool)arg11 supportInterests:(_Bool)arg12 delegate:(id)arg13;
+- (id)initWithAccount:(id)arg1 headerSpec:(id)arg2 footerSpec:(id)arg3 hintText:(id)arg4 defaultText:(id)arg5 accessibilityLabel:(id)arg6 charactersRemainingAccessibilityLabel:(id)arg7 maxLength:(long long)arg8 keyboardType:(long long)arg9 secureTextEntry:(_Bool)arg10 multiline:(_Bool)arg11 supportInterests:(_Bool)arg12 autofocusBio:(_Bool)arg13 nextAction:(CDUnknownBlockType)arg14 skipAction:(CDUnknownBlockType)arg15;
+- (id)initWithAccount:(id)arg1 headerSpec:(id)arg2 footerSpec:(id)arg3 hintText:(id)arg4 defaultText:(id)arg5 accessibilityLabel:(id)arg6 charactersRemainingAccessibilityLabel:(id)arg7 maxLength:(long long)arg8 keyboardType:(long long)arg9 secureTextEntry:(_Bool)arg10 multiline:(_Bool)arg11 supportInterests:(_Bool)arg12 autofocusBio:(_Bool)arg13 delegate:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

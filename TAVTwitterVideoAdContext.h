@@ -6,9 +6,11 @@
 
 #import <T1Twitter/TAVTwitterVideoContext.h>
 
-@class NSString, TAVTwitterVideoAdContextSkipParameters, TFSTwitterDynamicVideoAd;
+#import <T1Twitter/_TtP5TAVUI14TAVUIAdContext_-Protocol.h>
 
-@interface TAVTwitterVideoAdContext : TAVTwitterVideoContext
+@class NSString, NSURL, TAVTwitterVideoAdContextSkipParameters, TFSTwitterDynamicVideoAd;
+
+@interface TAVTwitterVideoAdContext : TAVTwitterVideoContext <_TtP5TAVUI14TAVUIAdContext_>
 {
     TAVTwitterVideoAdContextSkipParameters *_adSkipParameters;
     TFSTwitterDynamicVideoAd *_videoAd;
@@ -18,8 +20,15 @@
 @property(readonly, nonatomic) TFSTwitterDynamicVideoAd *videoAd; // @synthesize videoAd=_videoAd;
 @property(readonly, nonatomic) TAVTwitterVideoAdContextSkipParameters *adSkipParameters; // @synthesize adSkipParameters=_adSkipParameters;
 @property(readonly, nonatomic) _Bool shouldRenderAdByAdvertiserName;
+@property(readonly, copy, nonatomic) NSURL *advertiserProfileImageUrl;
 @property(readonly, copy, nonatomic) NSString *advertiserName;
 - (id)initWithVideoType:(id)arg1 adSkipParameters:(id)arg2 ctaInfo:(id)arg3 videoAd:(id)arg4;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

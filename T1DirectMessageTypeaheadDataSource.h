@@ -15,7 +15,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (id)itemsWithLimit:(long long)arg1 query:(id)arg2 allowedItemTypes:(unsigned long long)arg3 updateBlock:(CDUnknownBlockType)arg4;
+- (id)userItemsWithLimit:(long long)arg1 query:(id)arg2 updateBlock:(CDUnknownBlockType)arg3;
 - (id)initWithNewConversationSuggestionsForAccount:(id)arg1 existingUserReferences:(id)arg2;
 
 @end

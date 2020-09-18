@@ -85,7 +85,7 @@
 - (void)_moreActionsTapped:(id)arg1;
 - (void)_loginTapped;
 - (void)_presentPasswordResetFromSource:(id)arg1;
-- (void)_presentFinalViewController:(id)arg1;
+- (CDUnknownBlockType)_t1_finalViewControllerDidAddAccountBlock;
 - (void)_cancel;
 - (id)_scribeParameters;
 - (id)_scribeElement;

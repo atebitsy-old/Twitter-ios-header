@@ -23,8 +23,6 @@
     struct UIEdgeInsets _horizontalIconPadding;
 }
 
-+ (void)setDefaultDetailTextColor:(id)arg1;
-+ (void)setDefaultTextColor:(id)arg1;
 + (id)detailFontForStyle:(long long)arg1;
 + (double)_heightForStyle:(long long)arg1 text:(id)arg2 font:(id)arg3 multipleLines:(_Bool)arg4 detailText:(id)arg5 font:(id)arg6 multipleLines:(_Bool)arg7 padding:(double)arg8 icon:(id)arg9 horizontalIconPadding:(struct UIEdgeInsets)arg10 badgeText:(id)arg11 tableWidth:(double)arg12 contentEdgeInsets:(struct UIEdgeInsets)arg13 estimated:(_Bool)arg14;
 + (double)estimatedHeightForStyle:(long long)arg1 text:(id)arg2 font:(id)arg3 multipleLines:(_Bool)arg4 detailText:(id)arg5 font:(id)arg6 multipleLines:(_Bool)arg7 padding:(double)arg8 icon:(id)arg9 horizontalIconPadding:(struct UIEdgeInsets)arg10 badgeText:(id)arg11 tableWidth:(double)arg12 contentEdgeInsets:(struct UIEdgeInsets)arg13;

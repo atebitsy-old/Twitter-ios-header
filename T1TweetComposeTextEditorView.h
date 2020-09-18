@@ -48,6 +48,7 @@
 @property(nonatomic) _Bool isDropInteractionEnabled;
 @property(nonatomic, readonly) struct CGRect caretRect;
 - (void)showMenu;
+@property(nonatomic) _Bool scrollViewEnabled;
 - (void)setScrollEnabled:(_Bool)arg1;
 @property(nonatomic) _Bool isScrollEnabled;
 @property(nonatomic, copy) NSArray *pasteObservers;

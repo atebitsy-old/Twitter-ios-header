@@ -18,6 +18,8 @@
     UIImage *_image;
 }
 
++ (void)setupAppearance:(id)arg1 withTintColor:(id)arg2;
++ (void)setupAppearance:(id)arg1;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(readonly, nonatomic) _Bool delayTinting; // @synthesize delayTinting=_delayTinting;

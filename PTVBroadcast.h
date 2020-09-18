@@ -27,6 +27,7 @@
     NSString *_profile_image_url;
     NSURL *_profileImageURL;
     NSString *_remoteID;
+    NSString *_appComponent;
     NSString *_status;
     NSString *_image_url;
     NSString *_image_url_small;
@@ -39,6 +40,7 @@
     NSNumber *_replay_edited_thumbnail_time;
     _Bool _replay_title_editing_disabled;
     _Bool _replay_title_edited;
+    _Bool _isFleetcast;
     long long _nWatchingTotal;
     NSNumber *_n_total_watched;
     NSNumber *_n_watching;
@@ -129,6 +131,7 @@
 @property(retain) NSDictionary *share_image_url; // @synthesize share_image_url=_share_image_url;
 @property(retain) UIImage *thumbnail; // @synthesize thumbnail=_thumbnail;
 @property(retain) NSString *watch_context_payload; // @synthesize watch_context_payload=_watch_context_payload;
+@property(readonly, nonatomic) _Bool isFleetcast;
 @property(readonly, nonatomic) NSString *preferredImageCacheKey;
 @property(readonly, nonatomic) NSURL *preferredImageURLSmall;
 @property(readonly, nonatomic) NSURL *preferredImageURL;
@@ -246,6 +249,7 @@
 @property(retain) NSString *image_url_small;
 @property(retain) NSString *image_url;
 @property(retain) NSString *status;
+@property(retain) NSString *appComponent;
 - (void)setRemoteID:(id)arg1;
 @property(readonly) NSString *remoteID;
 @property(readonly, nonatomic) NSString *broadcastingTitle;

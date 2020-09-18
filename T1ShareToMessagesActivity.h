@@ -20,7 +20,7 @@
 - (void)messageComposeViewController:(id)arg1 didFinishWithResult:(long long)arg2;
 - (void)performActivity;
 - (_Bool)isSupported;
-- (id)initWithStatus:(id)arg1 presenterViewController:(id)arg2;
+- (id)initWithActivityModel:(id)arg1 presenterViewController:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

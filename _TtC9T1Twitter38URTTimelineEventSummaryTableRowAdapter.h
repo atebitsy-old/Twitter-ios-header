@@ -13,8 +13,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: scribeContext
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: feedbackExecutorParameters
-    // Error parsing type: , name: cellHeight
-    // Error parsing type: , name: heroPrototypeCell
     // Error parsing type: , name: summaryPrototypeCell
     // Error parsing type: , name: updatePipeline
     // Error parsing type: , name: statusMediaHandler

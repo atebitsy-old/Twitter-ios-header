@@ -12,6 +12,8 @@
     // Error parsing type: , name: threadView
     // Error parsing type: , name: swipeInteractionController
     // Error parsing type: , name: pool
+    // Error parsing type: , name: isComposerReset
+    // Error parsing type: , name: $__lazy_storage_$_debouncedResetComposer
 }
 
 - (void).cxx_destruct;

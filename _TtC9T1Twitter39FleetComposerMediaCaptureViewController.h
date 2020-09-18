@@ -19,7 +19,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: _isFleetcastLive
     // Error parsing type: , name: overflowGradientView
     // Error parsing type: , name: fleetcastViewController
-    // Error parsing type: , name: fleetcastViewControllerDidDismiss
+    // Error parsing type: , name: captureSessionRequiresHardReset
     // Error parsing type: , name: delegate
     // Error parsing type: , name: isOverflowLayout
 }
@@ -30,6 +30,7 @@ __attribute__((visibility("hidden")))
 - (void)handleTwoFingerTap:(id)arg1;
 - (void)handlePinch:(id)arg1;
 - (void)viewDidLoad;
+- (void)dealloc;
 - (id)initWithCoder:(id)arg1;
 
 @end

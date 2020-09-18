@@ -8,11 +8,10 @@
 
 #import <T1Twitter/MFMailComposeViewControllerDelegate-Protocol.h>
 
-@class MFMailComposeViewController, NSString, TFNTwitterStatus, UIViewController;
+@class MFMailComposeViewController, NSString, UIViewController;
 
 @interface T1ShareToMailActivity : T1Activity <MFMailComposeViewControllerDelegate>
 {
-    TFNTwitterStatus *_status;
     UIViewController *_presenterViewController;
     MFMailComposeViewController *_mailComposeViewController;
 }
@@ -21,7 +20,7 @@
 - (void)mailComposeController:(id)arg1 didFinishWithResult:(long long)arg2 error:(id)arg3;
 - (void)performActivity;
 - (_Bool)isSupported;
-- (id)initWithStatus:(id)arg1 presenterViewController:(id)arg2;
+- (id)initWithActivityModel:(id)arg1 presenterViewController:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

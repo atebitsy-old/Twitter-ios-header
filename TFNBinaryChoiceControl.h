@@ -6,23 +6,21 @@
 
 #import <UIKit/UIView.h>
 
-@class NSString, TFNLegacyButton;
+@class NSString, TFNButton;
 @protocol TFNBinaryChoiceDelegate;
 
 @interface TFNBinaryChoiceControl : UIView
 {
     id <TFNBinaryChoiceDelegate> _delegate;
     NSString *_username;
-    TFNLegacyButton *_acceptButton;
-    TFNLegacyButton *_declineButton;
+    TFNButton *_acceptButton;
+    TFNButton *_declineButton;
 }
 
 + (struct CGSize)sizeForControl;
-+ (id)_declineButtonImageName;
-+ (id)_acceptButtonImageName;
 - (void).cxx_destruct;
-@property(retain, nonatomic) TFNLegacyButton *declineButton; // @synthesize declineButton=_declineButton;
-@property(retain, nonatomic) TFNLegacyButton *acceptButton; // @synthesize acceptButton=_acceptButton;
+@property(retain, nonatomic) TFNButton *declineButton; // @synthesize declineButton=_declineButton;
+@property(retain, nonatomic) TFNButton *acceptButton; // @synthesize acceptButton=_acceptButton;
 @property(retain, nonatomic) NSString *username; // @synthesize username=_username;
 @property(nonatomic) __weak id <TFNBinaryChoiceDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)_declineButtonTapped:(id)arg1 event:(id)arg2;

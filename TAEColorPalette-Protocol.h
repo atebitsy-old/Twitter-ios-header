@@ -142,6 +142,7 @@
 @property(readonly, nonatomic) UIColor *formSecurityOnePasswordButtonColor;
 @property(readonly, nonatomic) UIColor *modalSheetCancelButtonHighlightColor;
 @property(readonly, nonatomic) UIColor *modalSheetCancelButtonBackgroundColor;
+@property(readonly, nonatomic) UIColor *invertedPrimaryButtonTextColor;
 @property(readonly, nonatomic) UIColor *buttonDarkBackgroundColor;
 @property(readonly, nonatomic) UIColor *buttonDisabledColor;
 @property(readonly, nonatomic) UIColor *buttonWeakColor;

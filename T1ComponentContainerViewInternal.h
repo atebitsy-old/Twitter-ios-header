@@ -6,17 +6,15 @@
 
 #import <TFNUI/TFNTappableHighlightView.h>
 
-@class NSMutableArray;
+@class NSArray;
 
 @interface T1ComponentContainerViewInternal : TFNTappableHighlightView
 {
-    NSMutableArray *_componentViewArray;
+    NSArray *_componentViews;
 }
 
 - (void).cxx_destruct;
-- (void)removeAll;
-- (void)addComponentView:(id)arg1;
-- (id)componentViews;
+@property(copy, nonatomic) NSArray *componentViews; // @synthesize componentViews=_componentViews;
 - (id)init;
 
 @end

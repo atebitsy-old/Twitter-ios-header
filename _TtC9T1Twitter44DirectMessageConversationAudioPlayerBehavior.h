@@ -8,6 +8,7 @@
 
 @interface _TtC9T1Twitter44DirectMessageConversationAudioPlayerBehavior : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: playbackDesired
     // Error parsing type: , name: dataViewController
     // Error parsing type: , name: account
     // Error parsing type: , name: messageEntryToPlayerMap

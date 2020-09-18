@@ -30,6 +30,7 @@
     T1PromptTextSpec *_subtitleTextSpec;
     T1PromptTextSpec *_titleTextSpec;
     id <T1UserViewModel> _userViewModel;
+    NSString *_backMenuTitle;
     long long _imageAlignment;
     long long _titleAlignment;
     long long _subtitleAlignment;
@@ -40,6 +41,7 @@
 @property(nonatomic) long long subtitleAlignment; // @synthesize subtitleAlignment=_subtitleAlignment;
 @property(nonatomic) long long titleAlignment; // @synthesize titleAlignment=_titleAlignment;
 @property(nonatomic) long long imageAlignment; // @synthesize imageAlignment=_imageAlignment;
+@property(copy, nonatomic) NSString *backMenuTitle; // @synthesize backMenuTitle=_backMenuTitle;
 @property(readonly, nonatomic) id <T1UserViewModel> userViewModel; // @synthesize userViewModel=_userViewModel;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 - (id)private_overrideFontForSubtitle;

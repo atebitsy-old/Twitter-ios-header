@@ -9,7 +9,7 @@
 #import <T1Twitter/T1WebViewLogger-Protocol.h>
 #import <T1Twitter/TFNViewControllerEventObserver-Protocol.h>
 
-@class NSNumber, NSString, TFNTwitterAccount, TFNTwitterStatus, TFSStopwatch, TFSTimer, TFSTwitterScribeContext;
+@class NSNumber, NSString, TFNTwitterAccount, TFNTwitterStatus, TFSStopwatch, TFSTwitterScribeContext;
 
 @interface T1WebViewLogger : NSObject <T1WebViewLogger, TFNViewControllerEventObserver>
 {
@@ -25,9 +25,6 @@
     NSNumber *_wclClickToLastReceivedLoadFinishedIntervalDuration;
     NSNumber *_wclClickToPuntToBrowserAppIntervalDuration;
     _Bool _isDwellOnViewAppearanceEnabled;
-    _Bool _isTimestampBasedDwellEnabled;
-    _Bool _isStopDwellOnBackgroundEnabled;
-    _Bool _isResumeDwellOnForegroundEnabled;
     _Bool _stopAllowingAdditionalLoadFinishedStateChanges;
     _Bool _hasEnteredLoadFinished;
     TFNTwitterAccount *_account;
@@ -36,9 +33,6 @@
     double _shortDwellInterval;
     double _mediumDwellInterval;
     double _longDwellInterval;
-    TFSTimer *_shortDwellTimer;
-    TFSTimer *_mediumDwellTimer;
-    TFSTimer *_longDwellTimer;
     TFSStopwatch *_dwellStopwatch;
     double _loggedDwellDuration;
     double _dwellDurationAtLatestPause;
@@ -51,15 +45,9 @@
 @property(nonatomic) _Bool hasEnteredLoadFinished; // @synthesize hasEnteredLoadFinished=_hasEnteredLoadFinished;
 @property(nonatomic) _Bool stopAllowingAdditionalLoadFinishedStateChanges; // @synthesize stopAllowingAdditionalLoadFinishedStateChanges=_stopAllowingAdditionalLoadFinishedStateChanges;
 @property(retain, nonatomic) TFSStopwatch *dwellStopwatch; // @synthesize dwellStopwatch=_dwellStopwatch;
-@property(retain, nonatomic) TFSTimer *longDwellTimer; // @synthesize longDwellTimer=_longDwellTimer;
-@property(retain, nonatomic) TFSTimer *mediumDwellTimer; // @synthesize mediumDwellTimer=_mediumDwellTimer;
-@property(retain, nonatomic) TFSTimer *shortDwellTimer; // @synthesize shortDwellTimer=_shortDwellTimer;
 @property(readonly, nonatomic) double longDwellInterval; // @synthesize longDwellInterval=_longDwellInterval;
 @property(readonly, nonatomic) double mediumDwellInterval; // @synthesize mediumDwellInterval=_mediumDwellInterval;
 @property(readonly, nonatomic) double shortDwellInterval; // @synthesize shortDwellInterval=_shortDwellInterval;
-@property(readonly, nonatomic) _Bool isResumeDwellOnForegroundEnabled; // @synthesize isResumeDwellOnForegroundEnabled=_isResumeDwellOnForegroundEnabled;
-@property(readonly, nonatomic) _Bool isStopDwellOnBackgroundEnabled; // @synthesize isStopDwellOnBackgroundEnabled=_isStopDwellOnBackgroundEnabled;
-@property(readonly, nonatomic) _Bool isTimestampBasedDwellEnabled; // @synthesize isTimestampBasedDwellEnabled=_isTimestampBasedDwellEnabled;
 @property(readonly, nonatomic) _Bool isDwellOnViewAppearanceEnabled; // @synthesize isDwellOnViewAppearanceEnabled=_isDwellOnViewAppearanceEnabled;
 @property(copy, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(retain, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
@@ -76,7 +64,6 @@
 - (void)cleanUpTimers;
 - (void)pauseTimers;
 - (void)startTimers;
-- (void)applicationWillEnterForeground:(id)arg1;
 - (void)applicationDidEnterBackground:(id)arg1;
 - (void)applicationWillResignActive:(id)arg1;
 - (void)applicationDidBecomeActive:(id)arg1;
@@ -96,9 +83,6 @@
 - (void)webViewWasDismissedByUserInteraction;
 - (void)_startSessionTimer;
 - (void)webViewBrowsingSessionDidStart:(_Bool)arg1;
-- (void)webViewLongDwellFired;
-- (void)webViewMediumDwellFired;
-- (void)webViewShortDwellFired;
 - (void)dealloc;
 - (void)updateWebViewLoggerWithScribeParams:(id)arg1 currentURL:(id)arg2 rootURL:(id)arg3;
 - (id)initWithAccount:(id)arg1 forSafariViewController:(_Bool)arg2 sourceStatus:(id)arg3 scribeContext:(id)arg4;
