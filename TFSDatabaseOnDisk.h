@@ -27,7 +27,7 @@
 @property(retain, nonatomic) TFSDatabaseUIApplicationLink *applicationLink; // @synthesize applicationLink=_applicationLink;
 @property(readonly, nonatomic) NSOperationQueue *writeOperationQueue; // @synthesize writeOperationQueue=_writeOperationQueue;
 @property(readonly, copy, nonatomic) NSString *path; // @synthesize path=_path;
-- (void)_tfs_enqueueTransactionWithBlock:(CDUnknownBlockType)arg1;
+- (void)_tfs_enqueueTransactionWithBlock:(CDUnknownBlockType)arg1 qos:(id)arg2;
 - (void)close;
 - (void)flush;
 - (void)enqueueWriteTransactionWithLog:(id)arg1 block:(CDUnknownBlockType)arg2 completion:(CDUnknownBlockType)arg3;

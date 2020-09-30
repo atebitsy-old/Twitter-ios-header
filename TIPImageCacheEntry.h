@@ -36,10 +36,8 @@
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 - (id)LRUEntryIdentifier;
 - (_Bool)shouldAccessMoveLRUEntryToHead;
-- (_Bool)isValid:(_Bool)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithCacheEntry:(id)arg1;
-- (id)mostRecentAccess;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -19,10 +19,8 @@
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
-@property(retain) id <TGFLogger> internalLogger; // @synthesize internalLogger=_internalLogger;
 @property(retain) id <TGFLogger> logger;
 @property(nonatomic) _Bool assertsEnabled;
-- (id)initInternal;
 - (void)asyncExecute:(CDUnknownBlockType)arg1;
 - (void)syncExecute:(CDUnknownBlockType)arg1;
 - (void)_execute:(CDUnknownBlockType)arg1;

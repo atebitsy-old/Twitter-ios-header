@@ -6,7 +6,7 @@
 
 #import <TFNUI/TFNViewController.h>
 
-@class CAShapeLayer, NSMutableArray, NSString, T1AvatarImageView, TFNQRCodeImageView, TFNTwitterAccount, UIImage, UILabel, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class CAShapeLayer, NSMutableArray, NSString, T1AvatarImageView, TFNMenuCompatibleLongPressGestureRecognizer, TFNQRCodeImageView, TFNTwitterAccount, UIImage, UILabel, UITapGestureRecognizer;
 
 @interface T1QRCodeViewController : TFNViewController
 {
@@ -19,7 +19,7 @@
     UILabel *_helpLabel;
     TFNQRCodeImageView *_qrCardView;
     T1AvatarImageView *_avatarImageView;
-    UILongPressGestureRecognizer *_longPressGestureRecognizer;
+    TFNMenuCompatibleLongPressGestureRecognizer *_longPressGestureRecognizer;
     UITapGestureRecognizer *_tapGestureRecognizer;
     NSMutableArray *_qrBackgroundColors;
 }
@@ -27,7 +27,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *qrBackgroundColors; // @synthesize qrBackgroundColors=_qrBackgroundColors;
 @property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
-@property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
+@property(readonly, nonatomic) TFNMenuCompatibleLongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
 @property(readonly, nonatomic) T1AvatarImageView *avatarImageView; // @synthesize avatarImageView=_avatarImageView;
 @property(readonly, nonatomic) TFNQRCodeImageView *qrCardView; // @synthesize qrCardView=_qrCardView;
 @property(readonly, nonatomic) UILabel *helpLabel; // @synthesize helpLabel=_helpLabel;
@@ -37,7 +37,7 @@
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 - (id)scribeSection;
 - (void)dealloc;
-- (void)_t1_showShareSheetFromView:(id)arg1 presentAsMenu:(_Bool)arg2;
+- (void)_t1_showShareSheetFromView:(id)arg1 menuSource:(id)arg2;
 - (void)share:(id)arg1;
 - (void)_t1_longPressAction:(id)arg1;
 - (void)_t1_obtainCurrentQRImage;

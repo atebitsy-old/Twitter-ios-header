@@ -33,6 +33,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)arg1;
 - (void)applicationDidEnterBackground:(UIApplication *)arg1;
 - (void)application:(UIApplication *)arg1 handleIntent:(INIntent *)arg2 completionHandler:(void (^)(INIntentResponse *))arg3;
+- (id)application:(UIApplication *)arg1 handlerForIntent:(INIntent *)arg2;
 - (void)applicationShouldRequestHealthAuthorization:(UIApplication *)arg1;
 - (void)application:(UIApplication *)arg1 handleWatchKitExtensionRequest:(NSDictionary *)arg2 reply:(void (^)(NSDictionary *))arg3;
 - (void)application:(UIApplication *)arg1 handleEventsForBackgroundURLSession:(NSString *)arg2 completionHandler:(void (^)(void))arg3;

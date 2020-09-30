@@ -10,5 +10,6 @@
 @property(nonatomic, readonly) _Bool flashesScrollIndicatorsOnUpdate;
 @property(nonatomic, readonly) _Bool isPinToTopEnabled;
 @property(nonatomic, readonly) _Bool isPinToTopActive;
+- (void)scrollViewDidScroll:(id)arg1;
 @end
 

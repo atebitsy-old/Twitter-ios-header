@@ -27,7 +27,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_activeRanges
     // Error parsing type: , name: $__lazy_storage_$_textParser
     // Error parsing type: , name: $__lazy_storage_$_textRenderingResults
-    // Error parsing type: , name: $__lazy_storage_$_firstTwoPaletteColors
     // Error parsing type: , name: isOverflowLayout
     // Error parsing type: , name: entryState
     // Error parsing type: , name: $__lazy_storage_$_playerFactoryIdentifiable

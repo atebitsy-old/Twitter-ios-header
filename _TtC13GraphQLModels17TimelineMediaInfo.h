@@ -14,6 +14,7 @@
     // Error parsing type: , name: durationMillis
     // Error parsing type: , name: videoVariants
     // Error parsing type: , name: advertiserName
+    // Error parsing type: , name: advertiserProfileImageURL
     // Error parsing type: , name: renderAdByAdvertiserName
 }
 

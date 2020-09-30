@@ -14,7 +14,7 @@
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) CIContext *coreImageContext; // @synthesize coreImageContext=_coreImageContext;
+@property(readonly, nonatomic) CIContext *coreImageContext;
 
 @end
 

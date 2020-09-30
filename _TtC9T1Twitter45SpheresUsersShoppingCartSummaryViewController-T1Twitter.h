@@ -9,5 +9,7 @@
 @interface _TtC9T1Twitter45SpheresUsersShoppingCartSummaryViewController (T1Twitter)
 - (void)doneButtonAction:(id)arg1;
 - (void)editButtonAction:(id)arg1;
+- (id)scribeSection;
+- (id)scribePage;
 @end
 

@@ -10,5 +10,7 @@
 - (_Bool)shouldRemoveWithUser:(id)arg1 in:(id)arg2;
 - (void)didRemoveWithUser:(id)arg1 forViewModel:(id)arg2 in:(id)arg3;
 - (void)didAddWithUser:(id)arg1 forViewModel:(id)arg2 in:(id)arg3;
+- (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
+- (id)scribeContext;
 @end
 

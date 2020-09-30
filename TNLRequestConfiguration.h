@@ -50,7 +50,6 @@
 + (id)defaultConfiguration;
 + (id)configurationWithSessionConfiguration:(id)arg1;
 + (id)configurationFromParameters:(id)arg1 executionMode:(long long)arg2 version:(id)arg3;
-+ (id)parseConfigurationFromIdentifier:(id)arg1;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSHTTPCookieStorage *cookieStorage; // @synthesize cookieStorage=_cookieStorage;
 @property(readonly, copy, nonatomic) NSString *sharedContainerIdentifier; // @synthesize sharedContainerIdentifier=_sharedContainerIdentifier;
@@ -95,7 +94,6 @@
 - (id)generateCanonicalSessionConfigurationForBackgroundModeWithIdentifier:(id)arg1;
 - (id)generateCanonicalSessionConfiguration;
 - (id)initWithSessionConfiguration:(id)arg1;
-- (void)applyDefaultTimeouts;
 
 @end
 

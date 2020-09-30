@@ -6,6 +6,7 @@
 
 #import <UIKit/UIView.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter20GifChromeOverlayView : UIView
 {
     // Error parsing type: , name: playerView

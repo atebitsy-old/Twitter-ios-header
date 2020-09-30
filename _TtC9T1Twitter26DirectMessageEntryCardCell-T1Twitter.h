@@ -6,7 +6,12 @@
 
 #import <T1Twitter/_TtC9T1Twitter26DirectMessageEntryCardCell.h>
 
-@interface _TtC9T1Twitter26DirectMessageEntryCardCell (T1Twitter)
+#import <T1Twitter/T1UnifiedCardComponentViewEventDelegate-Protocol.h>
+
+@interface _TtC9T1Twitter26DirectMessageEntryCardCell (T1Twitter) <T1UnifiedCardComponentViewEventDelegate>
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;
+- (id)cardView:(id)arg1 didFireViewEvent:(id)arg2;
+- (id)layoutMetricsForCardView:(id)arg1;
+- (id)componentView:(id)arg1 didFireViewEvent:(id)arg2;
 @end
 

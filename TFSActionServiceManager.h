@@ -6,7 +6,9 @@
 
 #import <objc/NSObject.h>
 
-@interface TFSActionServiceManager : NSObject
+#import <TFSTwitterCore/TFSTwitterAPICommandLoader-Protocol.h>
+
+@interface TFSActionServiceManager : NSObject <TFSTwitterAPICommandLoader>
 {
     // Error parsing type: , name: queue
     // Error parsing type: , name: actionServices
@@ -16,6 +18,7 @@
 - (id)init;
 - (void)deactivateActionServiceForAccountID:(id)arg1;
 - (id)actionServiceForAccountID:(id)arg1;
+- (id)loadCommand:(id)arg1;
 
 @end
 

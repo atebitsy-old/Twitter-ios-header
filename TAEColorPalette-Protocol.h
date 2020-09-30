@@ -69,6 +69,7 @@
 @property(readonly, nonatomic) UIColor *feedbackCenterLineColor;
 @property(readonly, nonatomic) UIColor *eventsScoreCardBottomParticipantFallbackColor;
 @property(readonly, nonatomic) UIColor *eventsScoreCardTopParticipantFallbackColor;
+@property(readonly, nonatomic) UIColor *nudgeBackgroundColor;
 @property(readonly, nonatomic) UIColor *momentsLoadingColor;
 @property(readonly, nonatomic) UIColor *voiceProgressBackgroundColor;
 @property(readonly, nonatomic) UIColor *voiceProgressColor;

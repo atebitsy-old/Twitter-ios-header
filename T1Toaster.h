@@ -49,8 +49,8 @@
 - (id)toastQueue;
 - (id)activeToast;
 - (void)scribeAction:(id)arg1 forToast:(id)arg2;
-- (void)toastViewController:(id)arg1 didEndPanningToast:(id)arg2 inExpandedState:(_Bool)arg3;
-- (void)toastViewController:(id)arg1 isPanningToast:(id)arg2;
+- (void)toastViewController:(id)arg1 didEndInteractingWithToast:(id)arg2;
+- (void)toastViewController:(id)arg1 isInteractingWithToast:(id)arg2;
 - (void)toastViewController:(id)arg1 didDismissToast:(id)arg2 withStyle:(unsigned long long)arg3 byGesture:(_Bool)arg4;
 - (void)toastViewController:(id)arg1 willDismissToast:(id)arg2;
 - (void)toastViewController:(id)arg1 didPresentToast:(id)arg2;

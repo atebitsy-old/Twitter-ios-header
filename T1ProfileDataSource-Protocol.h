@@ -15,6 +15,7 @@
 - (void)invalidateDataForced:(_Bool)arg1;
 - (void)invalidateData;
 - (void)reloadRelationship;
+@property(nonatomic, readonly) _Bool hasBirdwatchNotes;
 @property(nonatomic, retain) TFSTwitterTranslatedProfileBioModel *translatedProfileBio;
 @property(nonatomic, readonly) _Bool isProfileBioTranslatable;
 @property(nonatomic) _Bool hasBlockedByViewerMessageBeenDismissed;

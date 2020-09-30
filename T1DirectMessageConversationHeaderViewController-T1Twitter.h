@@ -10,5 +10,7 @@
 
 @interface T1DirectMessageConversationHeaderViewController (T1Twitter) <T1DirectMessageConversationDetailsToolbarControllerDelegate>
 - (void)directMessageConversationDetailsToolbarControllerDidTapSettings:(id)arg1;
+- (void)tooltipDidTap:(id)arg1;
+- (_Bool)tooltipShouldPresent:(id)arg1;
 @end
 

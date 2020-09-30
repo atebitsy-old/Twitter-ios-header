@@ -11,7 +11,6 @@
     _Bool _lastByteWasEscapeMarker;
 }
 
-- (void)_tip_readMoreBytes:(const char *)arg1 byteRange:(struct _NSRange)arg2;
 - (_Bool)readMore:(_Bool)arg1;
 - (_Bool)readContextualHeaders;
 

@@ -18,6 +18,7 @@
 @property(nonatomic, getter=tfn_isPointerInteractionEnabled) _Bool tfn_pointerInteractionEnabled;
 - (void)populateMenuWithActionItems:(id)arg1;
 - (_Bool)isPreparedToDisplayMenuOnPrimaryAction;
+- (void)_t1_menuActionTriggered;
 - (void)prepareToDisplayMenuOnPrimaryAction;
 - (void)tfn_convertToAttributedTitleLinkForState:(unsigned long long)arg1;
 

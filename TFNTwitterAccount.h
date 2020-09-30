@@ -398,10 +398,8 @@
 - (_Bool)isAutoTranslateSourceMicrosoftEnabled;
 - (_Bool)isAutoTranslateExpandedViewEnabled;
 - (_Bool)isAutoTranslateEnabled;
-- (_Bool)isQuoteTweetLabelEnabled;
 - (_Bool)isSimpleQuoteActionLabelEnabled;
 - (_Bool)isQuoteStatRearrangeEnabled;
-- (_Bool)isQuoteLabelEnabled;
 - (_Bool)isRetweetsAndCommentsLabelEnabled;
 - (_Bool)isConversationControlNotifyingParticipantsEnabled;
 - (_Bool)isConversationControlHighlightedEducationEnabled;
@@ -485,7 +483,9 @@
 - (_Bool)isHomeTimelineEarlyStartupEnabled;
 - (_Bool)isURTImpressionCacheStoreAsyncWriteEnabled;
 - (_Bool)isTIPImageUnloadingOptimizationEnabled;
+- (_Bool)isModelCacheCloseAsyncOnDeallocEnabled;
 - (_Bool)isMediaRailAsyncAssetLibraryLoadingEnabled;
+- (_Bool)isIndividuallyURLRegexCompilationEnabled;
 - (_Bool)isIgnoreTraitCollectionUIStyleInEqualityEnabled;
 - (_Bool)isAttributedTextModelColorDifferenceOptimizationEnabled;
 - (long long)_tfn_isLaunchSwitchEnabled:(id)arg1 withImpression:(_Bool)arg2;
@@ -548,6 +548,7 @@
 - (_Bool)isConversationThreadingOverflowCountInGQLQueryEnabled;
 - (_Bool)isConversationThreadingInitiallyFocusedStatusSelected;
 - (unsigned long long)_t1_conversationThreadingStyle;
+- (_Bool)isConversationShowFocalStatusWhileLoadingEnabled;
 - (_Bool)isConversationConnectorLinesToSelectedStateContainerEnabled;
 - (_Bool)isConversationThreadingCollapseEnabled;
 - (_Bool)isConversationEmphasizedDirectDescendentsOnlyEnabled;
@@ -580,10 +581,6 @@
 - (_Bool)isSafariViewControllerModalEnabled;
 - (_Bool)isSafariViewControllerDisabledForPromotedWebsiteClicks;
 - (_Bool)isSafariViewControllerEnabled;
-- (double)_t1_mediaRatio:(id)arg1;
-@property(readonly, nonatomic) double promotedImageRatio;
-@property(readonly, nonatomic) _Bool isMediaAppCardRatingsViewEnabled;
-@property(readonly, nonatomic) _Bool isSkipTalonURLVerificationEnabled;
 - (_Bool)isProfileBioTranslationEnabled;
 - (id)canonicalProfileURLString;
 - (_Bool)isProfileQRCodeButtonEnabled;
@@ -695,7 +692,8 @@
 @property(readonly, nonatomic) _Bool tavFoundationAvoidBlockingReads;
 @property(readonly, nonatomic) _Bool isAVCoreSingleThreaded;
 @property(readonly, nonatomic) _Bool isMixedMediaBadgeEnabled;
-@property(readonly, nonatomic) _Bool shouldUseComponentizedInlineMediaViews;
+@property(readonly, nonatomic) _Bool shouldUseComponentizedInlineMediaViewsForVideosBesidesMediaEntityVod;
+@property(readonly, nonatomic) _Bool shouldUseComponentizedInlineMediaViewsForMediaEntityVod;
 @property(readonly, nonatomic) NSNumber *skipButtonTimeWithImpressionLogging;
 @property(readonly, nonatomic) double viewThresholdContent;
 @property(readonly, nonatomic) _Bool isPostPlaybackEnabled;
@@ -743,7 +741,6 @@
 - (double)appDidBecomeActiveUrtNtabThrottleRate;
 - (double)pushReceiptUrtNtabThrottleRate;
 - (double)baselineUrtNtabThrottleRate;
-- (_Bool)isApplicationStateWorkaroundEnabled;
 - (_Bool)isFullStatusInNTabEnabled;
 - (_Bool)isDismissTypeX;
 - (_Bool)isInRuxHoldbackExperimentWithImpression:(_Bool)arg1;
@@ -889,6 +886,7 @@
 - (_Bool)isAdministrator;
 - (_Bool)isContributor;
 @property(readonly, nonatomic) _Bool isIdentityBadgingEnabled;
+@property(readonly, nonatomic) _Bool isBirdwatchHistoryEnabled;
 @property(readonly, nonatomic) _Bool isBirdwatchConsumptionEnabled;
 @property(readonly, nonatomic) _Bool isGraphQLTweetResultEnabled;
 @property(readonly, nonatomic) long long scribeAPIErrorSampleSize;

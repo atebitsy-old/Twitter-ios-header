@@ -20,6 +20,7 @@
     UIImageView *_badgeImageView;
     UILabel *_textLabel;
     UILabel *_subtextLabel;
+    UILabel *_midDotLabel;
     TFNTappableHighlightView *_highlightView;
     T1DismissButton *_caretButton;
     TFNLegacyButton *_followButton;
@@ -32,6 +33,7 @@
 @property(retain, nonatomic) TFNLegacyButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) T1DismissButton *caretButton; // @synthesize caretButton=_caretButton;
 @property(retain, nonatomic) TFNTappableHighlightView *highlightView; // @synthesize highlightView=_highlightView;
+@property(retain, nonatomic) UILabel *midDotLabel; // @synthesize midDotLabel=_midDotLabel;
 @property(retain, nonatomic) UILabel *subtextLabel; // @synthesize subtextLabel=_subtextLabel;
 @property(retain, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(retain, nonatomic) UIImageView *badgeImageView; // @synthesize badgeImageView=_badgeImageView;

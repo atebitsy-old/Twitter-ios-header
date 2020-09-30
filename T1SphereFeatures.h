@@ -20,6 +20,7 @@
 @property(readonly, nonatomic, getter=isDetailPageMutingEnabledUnsafePeek) _Bool detailPageMutingEnabledUnsafePeek;
 @property(readonly, nonatomic, getter=isDetailPageMutingEnabled) _Bool detailPageMutingEnabled;
 @property(readonly, nonatomic) double spheresUserRecommendationRemovalInterval;
+@property(readonly, nonatomic, getter=isPinnedListCarouselEnabled) _Bool pinnedListCarouselEnabled;
 @property(readonly, nonatomic, getter=isBackendStorageMigrationEnabled) _Bool backendStorageMigrationEnabled;
 @property(readonly, nonatomic) double backendStorageWriteDelaySecs;
 @property(readonly, nonatomic) double backendStorageColdstartTTLSecs;

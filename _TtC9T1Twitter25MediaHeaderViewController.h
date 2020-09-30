@@ -23,6 +23,7 @@ __attribute__((visibility("hidden")))
 @property(nonatomic, readonly) _Bool prefersStatusBarHidden;
 @property(nonatomic, readonly) long long preferredStatusBarStyle;
 - (void)dismissResizableHeaderView:(id)arg1;
+- (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 
 @end

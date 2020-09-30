@@ -10,5 +10,8 @@
 
 @protocol MXMetricManagerSubscriber <NSObject>
 - (void)didReceiveMetricPayloads:(NSArray *)arg1;
+
+@optional
+- (void)didReceiveDiagnosticPayloads:(NSArray *)arg1;
 @end
 

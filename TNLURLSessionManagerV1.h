@@ -33,19 +33,6 @@
 - (void)findURLSessionTaskOperationForRequestOperationQueue:(id)arg1 requestOperation:(id)arg2 complete:(CDUnknownBlockType)arg3;
 - (void)cancelAllForQueue:(id)arg1 source:(id)arg2 underlyingError:(id)arg3;
 - (id)initInternal;
-- (void)_synchronize_backoffSignalEncounteredForURL:(id)arg1 host:(id)arg2 headers:(id)arg3;
-- (void)_synchronize_applyBackoffDependenciesToOperation:(id)arg1 matchingURL:(id)arg2 host:(id)arg3 isLongPoll:(_Bool)arg4;
-- (void)_synchronize_pruneSessionWithConfig:(id)arg1 operationQueueId:(id)arg2;
-- (void)_synchronize_pruneUnusedSessions;
-- (void)_synchronize_pruneSessionsToLimit;
-- (void)_synchronize_removeSessionContext:(id)arg1;
-- (void)_synchronize_storeSessionContext:(id)arg1;
-- (id)_synchronize_sessionContextWithConfigurationIdentifier:(id)arg1;
-- (id)_synchronize_sessionContextFromURLSession:(id)arg1;
-- (id)_synchronize_sessionContextWithQueueId:(id)arg1 requestConfiguration:(id)arg2 executionMode:(long long)arg3 createIfNeeded:(_Bool)arg4;
-- (void)_synchronize_dissassociateTaskOperation:(id)arg1;
-- (id)_synchronize_associateTaskOperation:(id)arg1 withQueue:(id)arg2 supportsTaskMetrics:(_Bool)arg3;
-- (void)_synchronize_findURLSessionTaskOperationForRequestOperationQueue:(id)arg1 requestOperation:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)URLSession:(id)arg1 downloadTask:(id)arg2 didResumeAtOffset:(long long)arg3 expectedTotalBytes:(long long)arg4;
 - (void)URLSession:(id)arg1 downloadTask:(id)arg2 didWriteData:(long long)arg3 totalBytesWritten:(long long)arg4 totalBytesExpectedToWrite:(long long)arg5;
 - (void)URLSession:(id)arg1 downloadTask:(id)arg2 didFinishDownloadingToURL:(id)arg3;
@@ -59,8 +46,6 @@
 - (void)URLSession:(id)arg1 task:(id)arg2 willPerformHTTPRedirection:(id)arg3 newRequest:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (void)URLSession:(id)arg1 taskIsWaitingForConnectivity:(id)arg2;
 - (void)URLSessionDidFinishEventsForBackgroundURLSession:(id)arg1;
-- (void)_private_handleAuthChallenge:(id)arg1 URLSession:(id)arg2 operation:(id)arg3 currentDisposition:(id)arg4 handlers:(id)arg5 completion:(CDUnknownBlockType)arg6;
-- (void)_private_notifyAuthChallengeCanceled:(id)arg1 URLSession:(id)arg2 operation:(id)arg3 handler:(id)arg4 context:(id)arg5;
 - (void)URLSession:(id)arg1 didReceiveChallenge:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)URLSession:(id)arg1 didBecomeInvalidWithError:(id)arg2;
 

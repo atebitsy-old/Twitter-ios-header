@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSHashTable, NSOperationQueue;
+@class NSHashTable, NSOperationQueue;
 @protocol OS_dispatch_queue, TIPImageFetchDownloadProvider, TIPLogger, TIPProblemObserver;
 
 @interface TIPGlobalConfiguration : NSObject
@@ -46,25 +46,8 @@
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool imageFetchDownloadProviderSupportsStubbing; // @synthesize imageFetchDownloadProviderSupportsStubbing=_imageFetchDownloadProviderSupportsStubbing;
-@property(retain) id <TIPLogger> internalLogger; // @synthesize internalLogger=_internalLogger;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queueForDiskCaches; // @synthesize queueForDiskCaches=_queueForDiskCaches;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queueForMemoryCaches; // @synthesize queueForMemoryCaches=_queueForMemoryCaches;
-@property(nonatomic) long long internalTotalBytesForAllRenderedCaches; // @synthesize internalTotalBytesForAllRenderedCaches=_internalTotalBytesForAllRenderedCaches;
-@property(nonatomic) short internalTotalCountForAllRenderedCaches; // @synthesize internalTotalCountForAllRenderedCaches=_internalTotalCountForAllRenderedCaches;
-@property(nonatomic) long long internalMaxBytesForRenderedCacheEntry; // @synthesize internalMaxBytesForRenderedCacheEntry=_internalMaxBytesForRenderedCacheEntry;
-@property(nonatomic) long long internalMaxBytesForAllRenderedCaches; // @synthesize internalMaxBytesForAllRenderedCaches=_internalMaxBytesForAllRenderedCaches;
-@property(nonatomic) short internalMaxCountForAllRenderedCaches; // @synthesize internalMaxCountForAllRenderedCaches=_internalMaxCountForAllRenderedCaches;
-@property(nonatomic) long long internalTotalBytesForAllMemoryCaches; // @synthesize internalTotalBytesForAllMemoryCaches=_internalTotalBytesForAllMemoryCaches;
-@property(nonatomic) short internalTotalCountForAllMemoryCaches; // @synthesize internalTotalCountForAllMemoryCaches=_internalTotalCountForAllMemoryCaches;
-@property(nonatomic) long long internalMaxBytesForMemoryCacheEntry; // @synthesize internalMaxBytesForMemoryCacheEntry=_internalMaxBytesForMemoryCacheEntry;
-@property(nonatomic) long long internalMaxBytesForAllMemoryCaches; // @synthesize internalMaxBytesForAllMemoryCaches=_internalMaxBytesForAllMemoryCaches;
-@property(nonatomic) short internalMaxCountForAllMemoryCaches; // @synthesize internalMaxCountForAllMemoryCaches=_internalMaxCountForAllMemoryCaches;
-@property(nonatomic) long long internalTotalBytesForAllDiskCaches; // @synthesize internalTotalBytesForAllDiskCaches=_internalTotalBytesForAllDiskCaches;
-@property(nonatomic) short internalTotalCountForAllDiskCaches; // @synthesize internalTotalCountForAllDiskCaches=_internalTotalCountForAllDiskCaches;
-@property(nonatomic) long long internalMaxBytesForDiskCacheEntry; // @synthesize internalMaxBytesForDiskCacheEntry=_internalMaxBytesForDiskCacheEntry;
-@property(nonatomic) long long internalMaxBytesForAllDiskCaches; // @synthesize internalMaxBytesForAllDiskCaches=_internalMaxBytesForAllDiskCaches;
-@property(nonatomic) short internalMaxCountForAllDiskCaches; // @synthesize internalMaxCountForAllDiskCaches=_internalMaxCountForAllDiskCaches;
 @property(nonatomic) _Bool useInstancelessPipelineObserversInFetchHelpers; // @synthesize useInstancelessPipelineObserversInFetchHelpers=_useInstancelessPipelineObserversInFetchHelpers;
 @property(nonatomic) _Bool loadCodecsAsync; // @synthesize loadCodecsAsync=_loadCodecsAsync;
 @property(nonatomic) int defaultInterpolationQuality; // @synthesize defaultInterpolationQuality=_defaultInterpolationQuality;
@@ -74,21 +57,14 @@
 @property long long maxConcurrentImagePipelineDownloadCount; // @synthesize maxConcurrentImagePipelineDownloadCount=_maxConcurrentImagePipelineDownloadCount;
 @property long long maxRatioSizeOfCacheEntry; // @synthesize maxRatioSizeOfCacheEntry=_maxRatioSizeOfCacheEntry;
 @property(retain, nonatomic) id <TIPImageFetchDownloadProvider> imageFetchDownloadProvider; // @synthesize imageFetchDownloadProvider=_imageFetchDownloadProvider;
-- (id)createImageFetchDownloadWithContext:(id)arg1;
 @property(retain) id <TIPLogger> logger;
 @property(nonatomic, getter=areAssertsEnabled) _Bool assertsEnabled;
-- (void)pruneAllCachesOfType:(long long)arg1 withPriorityCache:(id)arg2 toGlobalMaxBytes:(long long)arg3 toGlobalMaxCount:(short)arg4;
-- (void)pruneAllCachesOfType:(long long)arg1 withPriorityCache:(id)arg2;
-- (void)accessedCGContext:(_Bool)arg1 duration:(double)arg2 isMainThread:(_Bool)arg3;
-- (void)postProblem:(id)arg1 userInfo:(id)arg2;
-- (void)enqueueImagePipelineOperation:(id)arg1;
 - (long long)internalMaxBytesForCacheEntryOfType:(long long)arg1;
 - (long long)internalTotalBytesForAllCachesOfType:(long long)arg1;
 - (long long)internalMaxBytesForAllCachesOfType:(long long)arg1;
 - (short)internalTotalCountForAllCachesOfType:(long long)arg1;
 - (short)internalMaxCountForAllCachesOfType:(long long)arg1;
 - (id)queueForCachesOfType:(long long)arg1;
-@property(readonly, copy) NSArray *allImagePipelineObservers;
 - (void)removeImagePipelineObserver:(id)arg1;
 - (void)addImagePipelineObserver:(id)arg1;
 - (void)dirtyAllRenderedMemoryCacheImagesWithIdentifier:(id)arg1;

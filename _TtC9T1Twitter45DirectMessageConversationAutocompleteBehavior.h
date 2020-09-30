@@ -6,13 +6,14 @@
 
 #import <objc/NSObject.h>
 
+#import <T1Twitter/T1AutocompleteControllerDelegate-Protocol.h>
 #import <T1Twitter/T1ComposeTypeaheadViewControllerDelegate-Protocol.h>
 
 @class TFNTwitterAccount, UIScrollView, UITextView, UIViewController;
 @protocol TFNDirectMessageConversation;
 
 __attribute__((visibility("hidden")))
-@interface _TtC9T1Twitter45DirectMessageConversationAutocompleteBehavior : NSObject <T1ComposeTypeaheadViewControllerDelegate>
+@interface _TtC9T1Twitter45DirectMessageConversationAutocompleteBehavior : NSObject <T1AutocompleteControllerDelegate, T1ComposeTypeaheadViewControllerDelegate>
 {
     // Error parsing type: , name: account
     // Error parsing type: , name: textView

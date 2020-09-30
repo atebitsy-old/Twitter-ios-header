@@ -8,5 +8,8 @@
 
 @interface _TtC9T1Twitter27FleetsDMReplyViewController (T1Twitter)
 - (double)preferredHeightForModalSheetViewController:(id)arg1 modalContentViewVisibleEdgeInsets:(struct UIEdgeInsets)arg2;
+- (void)directMessageComposeViewControllerDidTapSend:(id)arg1;
+- (void)directMessageComposeViewControllerTextViewDidChange:(id)arg1;
+- (void)modalSheetViewControllerDidDismiss:(id)arg1 fromGesture:(_Bool)arg2;
 @end
 

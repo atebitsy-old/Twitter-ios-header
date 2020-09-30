@@ -6,10 +6,11 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class T1ProfileAvatarImageView, T1ProfileSummaryView;
+@class T1ProfileAvatarImageView, T1ProfileSummaryView, T1UserBadge, UIView;
 
 @protocol T1ProfileSummaryViewDelegate <NSObject>
 - (void)summaryViewDidTapDesignatorLabel:(T1ProfileSummaryView *)arg1;
+- (void)summaryView:(T1ProfileSummaryView *)arg1 didTapUserBadge:(T1UserBadge *)arg2 sourceView:(UIView *)arg3 sourceViewRect:(struct CGRect)arg4;
 - (void)summaryViewDidTapFullName:(T1ProfileSummaryView *)arg1;
 - (void)summaryView:(T1ProfileSummaryView *)arg1 didTapAvatar:(T1ProfileAvatarImageView *)arg2 fromLongPress:(_Bool)arg3;
 @end

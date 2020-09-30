@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: reason
     // Error parsing type: , name: status
+    // Error parsing type: , name: unavailabilityInfo
 }
 
 @end

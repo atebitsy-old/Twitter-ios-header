@@ -10,16 +10,16 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter25VideoHeaderViewController : _TtC9T1Twitter25MediaHeaderViewController
 {
     // Error parsing type: , name: tavPlayer
-    // Error parsing type: , name: previousNavigationBarHidden
     // Error parsing type: , name: tavSribeContext
     // Error parsing type: , name: lastObservedTimeControlState
+    // Error parsing type: , name: $__lazy_storage_$_chromeController
     // Error parsing type: , name: preferredPeakBitrate
 }
 
 - (void).cxx_destruct;
-- (void)mediaHeaderViewDidLayoutSubviews:(id)arg1;
 - (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 - (void)viewDidLoad;
+@property(nonatomic, readonly) _Bool prefersStatusBarHidden;
 
 @end
 

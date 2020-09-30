@@ -15,11 +15,14 @@
 
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
+- (id)fillColorOnDark:(_Bool)arg1;
+@property(nonatomic, readonly) NSString *imageName;
 @property(nonatomic, readonly) NSString *badgeAccessibilityIdentifier;
 @property(nonatomic, readonly) NSString *badgeAccessibilityLabel;
 @property(nonatomic, readonly) struct CGSize standardSize;
 - (id)standardSizeImageOnDark:(_Bool)arg1;
 - (id)imageFittingSize:(struct CGSize)arg1 onDark:(_Bool)arg2;
+@property(nonatomic, readonly) long long badgeType; // @synthesize badgeType=badge;
 
 @end
 

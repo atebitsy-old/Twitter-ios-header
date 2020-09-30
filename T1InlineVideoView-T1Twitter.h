@@ -6,10 +6,13 @@
 
 #import <T1Twitter/T1InlineVideoView.h>
 
-@class NSString;
+@class NSString, UIView;
 
 @interface T1InlineVideoView (T1Twitter)
 @property(nonatomic, readonly) NSString *debugDescription;
-- (void)updateViewModelWith:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 imageFetchHelper:(id)arg4;
+- (void)updateViewModelWith:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 imageFetchHelper:(id)arg4 displayContext:(long long)arg5;
+- (void)willResignAsActiveAutoplayableWithManager:(id)arg1;
+- (void)didBecomeActiveAutoplayableWithManager:(id)arg1;
+@property(nonatomic, readonly) UIView *autoplayableView;
 @end
 

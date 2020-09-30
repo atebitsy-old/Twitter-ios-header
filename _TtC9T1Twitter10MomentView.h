@@ -17,7 +17,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: descriptionView
     // Error parsing type: , name: visibilityView
     // Error parsing type: , name: imageView
-    // Error parsing type: , name: socialProofView
     // Error parsing type: , name: promotedView
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: viewModel

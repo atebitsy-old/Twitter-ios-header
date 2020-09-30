@@ -48,7 +48,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_pageViewsChanges
     // Error parsing type: , name: $__lazy_storage_$_pageViews
     // Error parsing type: , name: $__lazy_storage_$_pageViewsContainer
-    // Error parsing type: , name: animatedBackgroundView
+    // Error parsing type: , name: circleBackgroundView
     // Error parsing type: , name: audioSessionToken
     // Error parsing type: , name: presentationContext
     // Error parsing type: , name: $__lazy_storage_$_minNavigationIndex

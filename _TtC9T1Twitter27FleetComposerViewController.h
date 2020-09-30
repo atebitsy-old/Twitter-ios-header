@@ -24,6 +24,9 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_container
     // Error parsing type: , name: $__lazy_storage_$_closeButton
     // Error parsing type: , name: $__lazy_storage_$_postFleetButton
+    // Error parsing type: , name: $__lazy_storage_$_addTextButton
+    // Error parsing type: , name: $__lazy_storage_$_muteButton
+    // Error parsing type: , name: $__lazy_storage_$_altTextButton
     // Error parsing type: , name: $__lazy_storage_$_assetLibraryViewController
     // Error parsing type: , name: $__lazy_storage_$_assetLibraryNavigationController
     // Error parsing type: , name: $__lazy_storage_$_isFullscreen
@@ -42,6 +45,9 @@ __attribute__((visibility("hidden")))
 - (void)photoGalleryViewControllerDidCancelSession:(id)arg1;
 - (void)photoGalleryViewController:(id)arg1 didEndSessionWithAttachments:(id)arg2;
 - (void)postFleet;
+- (void)altTextAction:(id)arg1;
+- (void)muteAction:(id)arg1;
+- (void)addTextAction:(id)arg1;
 - (void)viewSafeAreaInsetsDidChange;
 - (void)viewDidLoad;
 - (void)loadView;

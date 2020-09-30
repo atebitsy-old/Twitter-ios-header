@@ -6,6 +6,7 @@
 
 #import <UIKit/UIView.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter22VideoChromeOverlayView : UIView
 {
     // Error parsing type: , name: viewModel
@@ -21,8 +22,11 @@
     // Error parsing type: , name: skipAdButtonComponent
     // Error parsing type: , name: skipAdCountdownLabelComponent
     // Error parsing type: , name: adCountdownLabelComponent
+    // Error parsing type: , name: vodCountdownLabelComponent
     // Error parsing type: , name: adPIPPreviewImageComponent
     // Error parsing type: , name: adPIPPlayerViewComponent
+    // Error parsing type: , name: adIntroLabelComponent
+    // Error parsing type: , name: videoDetailsChromeComponent
     // Error parsing type: , name: adPIPPreviewImageHeightConstraint
     // Error parsing type: , name: adPIPPreviewImageWidthConstraint
     // Error parsing type: , name: adPIPConstraints

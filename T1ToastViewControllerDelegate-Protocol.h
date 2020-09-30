@@ -12,8 +12,8 @@
 @protocol T1ToastViewControllerDelegate <NSObject>
 
 @optional
-- (void)toastViewController:(T1ToastViewController *)arg1 didEndPanningToast:(id <T1ToastViewModel>)arg2 inExpandedState:(_Bool)arg3;
-- (void)toastViewController:(T1ToastViewController *)arg1 isPanningToast:(id <T1ToastViewModel>)arg2;
+- (void)toastViewController:(T1ToastViewController *)arg1 didEndInteractingWithToast:(id <T1ToastViewModel>)arg2;
+- (void)toastViewController:(T1ToastViewController *)arg1 isInteractingWithToast:(id <T1ToastViewModel>)arg2;
 - (void)toastViewController:(T1ToastViewController *)arg1 didDismissToast:(id <T1ToastViewModel>)arg2 withStyle:(unsigned long long)arg3 byGesture:(_Bool)arg4;
 - (void)toastViewController:(T1ToastViewController *)arg1 willDismissToast:(id <T1ToastViewModel>)arg2;
 - (void)toastViewController:(T1ToastViewController *)arg1 didPresentToast:(id <T1ToastViewModel>)arg2;

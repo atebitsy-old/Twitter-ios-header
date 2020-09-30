@@ -14,6 +14,7 @@
     // Error parsing type: , name: impressionTimeInMillis
     // Error parsing type: , name: nonce
     // Error parsing type: , name: signature
+    // Error parsing type: , name: srcAppID
 }
 
 @end

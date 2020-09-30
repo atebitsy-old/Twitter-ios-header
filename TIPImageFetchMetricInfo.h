@@ -45,14 +45,8 @@
 @property(readonly, nonatomic) long long source; // @synthesize source=_source;
 - (id)description;
 @property(readonly, nonatomic) float networkImagePixelsPerByte;
-- (void)addNetworkMetrics:(id)arg1 forRequest:(id)arg2 imageType:(id)arg3 imageSizeInBytes:(unsigned long long)arg4 imageDimensions:(struct CGSize)arg5;
-- (void)flipLoadSourceFromNetworkToNetworkResumed;
-- (void)hit:(long long)arg1 renderLatency:(double)arg2 synchronously:(_Bool)arg3;
-- (void)cancel;
-- (void)end;
 @property(readonly, nonatomic) _Bool wasCancelled;
 @property(readonly, nonatomic) double loadDuration;
-- (id)initWithSource:(long long)arg1 startTime:(unsigned long long)arg2;
 - (id)init;
 
 @end

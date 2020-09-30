@@ -10,9 +10,8 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter34FleetComposerMediaPreviewInputView : UIView
 {
     // Error parsing type: , name: mediaPreviewView
+    // Error parsing type: , name: account
     // Error parsing type: , name: backButton
-    // Error parsing type: , name: textButton
-    // Error parsing type: , name: muteButton
     // Error parsing type: , name: annotationView
     // Error parsing type: , name: overflowGradientView
     // Error parsing type: , name: guidelineView
@@ -22,9 +21,6 @@ __attribute__((visibility("hidden")))
 }
 
 - (void).cxx_destruct;
-- (void)previewModeAction:(id)arg1;
-- (void)muteAction:(id)arg1;
-- (void)textAction:(id)arg1;
 - (void)backAction:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

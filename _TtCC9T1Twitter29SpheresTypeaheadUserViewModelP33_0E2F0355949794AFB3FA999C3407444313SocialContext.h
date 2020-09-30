@@ -6,6 +6,8 @@
 
 #import <objc/NSObject.h>
 
+@class NSArray, NSString, TFSURTUrl;
+
 @interface _TtCC9T1Twitter29SpheresTypeaheadUserViewModelP33_0E2F0355949794AFB3FA999C3407444313SocialContext : NSObject
 {
     // Error parsing type: , name: socialContext
@@ -13,6 +15,13 @@
 
 - (void).cxx_destruct;
 - (id)init;
+@property(nonatomic, readonly) TFSURTUrl *landingURL;
+@property(nonatomic, readonly) NSArray *allUserReferences;
+@property(nonatomic, readonly) NSString *socialBadgeName;
+@property(nonatomic, readonly) NSString *socialText;
+@property(nonatomic, readonly) NSString *socialContextScribePage;
+@property(nonatomic, readonly) NSString *socialContextScribeElement;
+@property(nonatomic, readonly) NSString *activityTitle;
 
 @end
 

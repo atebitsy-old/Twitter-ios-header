@@ -35,11 +35,6 @@
 + (id)sharedInstance;
 + (id)version;
 - (void).cxx_destruct;
-@property long long lastApplicationState; // @synthesize lastApplicationState=_lastApplicationState;
-@property double internalURLSessionInactivityThreshold; // @synthesize internalURLSessionInactivityThreshold=_internalURLSessionInactivityThreshold;
-@property unsigned long long internalURLSessionPruneOptions; // @synthesize internalURLSessionPruneOptions=_internalURLSessionPruneOptions;
-@property(retain) id <TNLLogger> internalLogger; // @synthesize internalLogger=_internalLogger;
-@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *configurationQueue; // @synthesize configurationQueue=_configurationQueue;
 @property(nonatomic) double timeoutIntervalBetweenDataTransfer; // @synthesize timeoutIntervalBetweenDataTransfer=_timeoutIntervalBetweenDataTransfer;
 @property(nonatomic) long long idleTimeoutMode; // @synthesize idleTimeoutMode=_idleTimeoutMode;
 @property _Bool shouldForceCrashOnCloggedCallback; // @synthesize shouldForceCrashOnCloggedCallback=_shouldForceCrashOnCloggedCallback;
@@ -48,12 +43,6 @@
 @property(nonatomic) long long operationAutomaticDependencyPriorityThreshold; // @synthesize operationAutomaticDependencyPriorityThreshold=_operationAutomaticDependencyPriorityThreshold;
 @property(retain) TNLCommunicationAgent *metricProvidingCommunicationAgent; // @synthesize metricProvidingCommunicationAgent=_metricProvidingCommunicationAgent;
 @property(retain) id <TNLHostSanitizer> hostSanitizer; // @synthesize hostSanitizer=_hostSanitizer;
-- (void)_handleExpiration;
-- (void)_main_cleanUpSharedBackgroundTaskIfNecessary;
-- (void)_main_ensureSharedBackgroundTask;
-- (void)endBackgroundTaskWithIdentifier:(unsigned long long)arg1;
-- (unsigned long long)startBackgroundTaskWithName:(id)arg1 expirationHandler:(CDUnknownBlockType)arg2;
-@property(readonly, copy) NSArray *internalAuthenticationChallengeHandlers;
 - (void)removeAuthenticationChallengeHandler:(id)arg1;
 - (void)addAuthenticationChallengeHandler:(id)arg1;
 @property(nonatomic, getter=areAssertsEnabled) _Bool assertsEnabled;

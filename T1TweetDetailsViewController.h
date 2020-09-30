@@ -16,6 +16,7 @@
 #import <T1Twitter/T1PersistentComposeAccountProvider-Protocol.h>
 #import <T1Twitter/T1PersistentComposeViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1SlideshowViewControllerDelegate-Protocol.h>
+#import <T1Twitter/T1ToasterContextDelegate-Protocol.h>
 #import <T1Twitter/T1TweetDetailsFocalStatusTableRowAdapterDelegate-Protocol.h>
 #import <T1Twitter/T1TweetDetailsSharedBehavior-Protocol.h>
 #import <T1Twitter/T1URTConversationTimelineObserver-Protocol.h>
@@ -29,7 +30,7 @@
 @class NSDate, NSMutableSet, NSString, T1AppNavigationContext, T1DataViewControllerRenderPerformanceLogger, T1NavigationMetadata, T1PersistentComposeViewController, T1ShowStatusNavigationContext, T1StatusLiveEngagementManager, T1StatusMediaHandler, T1StatusTableSlideshowManager, T1TweetDetailsActionContextItem, T1TweetDetailsActionView, T1TweetDetailsFetcher, T1TweetDetailsFocalStatusTableRowAdapter, T1URTConversationTimeline, T1URTTimelineCursorTableRowAdapter, TFNBarButtonItem, TFNGenericItem, TFNTwitterAccount, TFNTwitterStatus, TFSTwitterScribeContext, TFSTwitterVideoMonetizationSettings, TIPImagePipeline, UIPopoverPresentationController, UIView;
 @protocol T1StatusViewInlineActions, T1StatusViewModel, T1TweetDetailsViewControllerDelegate;
 
-@interface T1TweetDetailsViewController : TFNItemsDataViewController <TFNTooltipDelegate, T1PersistentComposeViewControllerDelegate, T1ComposerPresenting, T1ComposeViewControllerDelegate, T1ImageTransitionDelegate, T1ErrorDataViewAdapterDelegate, T1VideoMonetizationSettingsViewControllerDelegate, T1URTConversationTimelineObserver, T1URTTimelineTombstoneItemViewModelDelegate, T1DataViewControllerRenderPerformanceLoggerDataSource, T1FeedbackActionProvider, TFNDataViewKeyboardSelectionDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, UIResponderStandardEditActions, T1JumpBackToHomeTimelineBehavior, TFNLayoutMetricsEnvironment, T1SlideshowViewControllerDelegate, T1PersistentComposeAccountProvider, T1TweetDetailsSharedBehavior>
+@interface T1TweetDetailsViewController : TFNItemsDataViewController <TFNTooltipDelegate, T1PersistentComposeViewControllerDelegate, T1ComposerPresenting, T1ComposeViewControllerDelegate, T1ImageTransitionDelegate, T1ErrorDataViewAdapterDelegate, T1VideoMonetizationSettingsViewControllerDelegate, T1URTConversationTimelineObserver, T1URTTimelineTombstoneItemViewModelDelegate, T1DataViewControllerRenderPerformanceLoggerDataSource, T1FeedbackActionProvider, TFNDataViewKeyboardSelectionDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, UIResponderStandardEditActions, T1ToasterContextDelegate, T1JumpBackToHomeTimelineBehavior, TFNLayoutMetricsEnvironment, T1SlideshowViewControllerDelegate, T1PersistentComposeAccountProvider, T1TweetDetailsSharedBehavior>
 {
     double _allRequiredPartsCompleteDuration;
     double _conversationCompleteDuration;
@@ -156,6 +157,7 @@
 @property(retain, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
 @property(readonly, copy, nonatomic) TFSTwitterScribeContext *sourceScribeContext; // @synthesize sourceScribeContext=_sourceScribeContext;
 @property(retain, nonatomic) TFNTwitterAccount *composingAccount; // @synthesize composingAccount=_composingAccount;
+- (id)scribePageForToaster:(id)arg1;
 - (void)presentTweetWithID:(long long)arg1;
 - (_Bool)canPresentTweetWithID:(long long)arg1;
 - (void)dataViewDidDisplay;
@@ -246,6 +248,8 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)_t1_setupFromStatus;
+- (void)viewDidFullyDisappear:(_Bool)arg1;
+- (void)viewDidFullyAppear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)tfn_previewingStateDidChange;
 - (void)viewWillAppear:(_Bool)arg1;

@@ -16,6 +16,9 @@
     // Error parsing type: , name: entityRenderers
 }
 
++ (id)conversationControlEducationRendererWithParagraphSpacing:(double)arg1;
++ (id)tombstoneActionRenderer;
++ (id)tombstoneTextRendererWithParagraphSpacing:(double)arg1;
 - (void).cxx_destruct;
 - (id)init;
 - (id)attributedStringFor:(id)arg1;

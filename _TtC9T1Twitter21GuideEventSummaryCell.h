@@ -11,22 +11,28 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter21GuideEventSummaryCell : TFNTableViewCell
 {
+    // Error parsing type: , name: rootStackview
+    // Error parsing type: , name: prominentStackView
+    // Error parsing type: , name: caretView
     // Error parsing type: , name: bodyStackView
     // Error parsing type: , name: textVerticalStackView
     // Error parsing type: , name: headerView
     // Error parsing type: , name: titleLabel
+    // Error parsing type: , name: detailLabel
     // Error parsing type: , name: socialProofView
     // Error parsing type: , name: thumbnailImageView
-    // Error parsing type: , name: relatedTrendsViewConstraints
+    // Error parsing type: , name: scoreView
     // Error parsing type: , name: relatedTrendsView
     // Error parsing type: , name: relatedTrendsAccessibility
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: interactionHandler
     // Error parsing type: , name: navigationHelper
+    // Error parsing type: , name: feedbackHandler
 }
 
 - (void).cxx_destruct;
+- (void)didTapCaret;
 @property(nonatomic, copy) NSArray *accessibilityCustomActions;
 @property(nonatomic, copy) NSString *accessibilityLabel;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;

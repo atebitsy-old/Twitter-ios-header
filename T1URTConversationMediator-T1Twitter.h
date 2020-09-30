@@ -6,11 +6,14 @@
 
 #import <T1Twitter/T1URTConversationMediator.h>
 
+#import <T1Twitter/T1ErrorDataViewAdapterDelegate-Protocol.h>
+
 @class TFSURTRichText;
 
-@interface T1URTConversationMediator (T1Twitter)
+@interface T1URTConversationMediator (T1Twitter) <T1ErrorDataViewAdapterDelegate>
 - (void)revealTombstoneWithEntryID:(id)arg1;
 - (void)replaceEntryWithTombstone:(id)arg1 reason:(long long)arg2;
 @property(nonatomic, readonly) TFSURTRichText *deletedTweetText;
+- (void)errorItemTapped:(id)arg1;
 @end
 

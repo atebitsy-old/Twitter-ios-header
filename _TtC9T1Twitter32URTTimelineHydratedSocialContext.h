@@ -6,6 +6,7 @@
 
 #import <objc/NSObject.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter32URTTimelineHydratedSocialContext : NSObject
 {
     // Error parsing type: , name: socialContext

@@ -12,9 +12,11 @@
 
 @interface T1StatusAuthorViewLayoutDelegate : NSObject <TFNLayoutableViewLayoutDelegate>
 {
+    struct CGSize _designatorBadgeOffsetSize;
 }
 
 + (id)sharedLayoutDelegate;
+@property(nonatomic) struct CGSize designatorBadgeOffsetSize; // @synthesize designatorBadgeOffsetSize=_designatorBadgeOffsetSize;
 - (_Bool)_t1_shouldShowUsernameLabelForViewModel:(id)arg1;
 - (_Bool)shouldShowForwardDismissForViewModel:(id)arg1 options:(unsigned long long)arg2;
 - (_Bool)shouldShowDesignatorBadgeForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;

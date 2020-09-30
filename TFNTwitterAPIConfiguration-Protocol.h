@@ -6,6 +6,7 @@
 
 @protocol TFNTwitterAPIConfiguration
 @property(readonly, nonatomic) _Bool isIdentityBadgingEnabled;
+@property(readonly, nonatomic) _Bool isBirdwatchHistoryEnabled;
 @property(readonly, nonatomic) _Bool isBirdwatchConsumptionEnabled;
 @property(readonly, nonatomic) _Bool isGraphQLTweetResultEnabled;
 @property(readonly, nonatomic) long long scribeAPIErrorSampleSize;

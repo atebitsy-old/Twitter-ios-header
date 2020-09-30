@@ -34,10 +34,6 @@
 @property(readonly, copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(readonly, nonatomic) unsigned long long expectedContentLength; // @synthesize expectedContentLength=_expectedContentLength;
 @property long long state; // @synthesize state=_state;
-- (void)_extractState;
-- (void)_updateStateWithResult:(long long)arg1;
-- (long long)_appendData:(id)arg1 isFinal:(_Bool)arg2;
-- (_Bool)_detectCodecFromData:(id)arg1 isFinal:(_Bool)arg2;
 - (id)renderImageWithMode:(long long)arg1 targetDimensions:(struct CGSize)arg2 targetContentMode:(long long)arg3 decoded:(_Bool)arg4;
 - (long long)appendData:(id)arg1 final:(_Bool)arg2;
 - (void)updateDecoderConfigMap:(id)arg1;

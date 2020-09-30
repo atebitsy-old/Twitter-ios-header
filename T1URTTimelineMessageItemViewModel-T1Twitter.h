@@ -6,31 +6,15 @@
 
 #import <T1Twitter/T1URTTimelineMessageItemViewModel.h>
 
-#import <T1Twitter/T1TwitterTimelineMessageViewModel-Protocol.h>
+@class NSDictionary, NSString, TFNTwitterSuggestsInfo;
+@protocol TFNTwitterTimelineEntryContext;
 
-@class NSArray, NSString, TFNTwitterFeedbackInfo, TFNTwitterSuggestsInfo, TFSURTRichText;
-@protocol T1TwitterTimelineMessageTextAction;
-
-@interface T1URTTimelineMessageItemViewModel (T1Twitter) <T1TwitterTimelineMessageViewModel>
-@property(nonatomic, readonly) NSArray *impressionCallbackEndpoints;
-@property(nonatomic, readonly) TFNTwitterFeedbackInfo *feedbackInfo;
-- (_Bool)isDismissible;
-@property(nonatomic, readonly) TFNTwitterSuggestsInfo *suggestsInfo;
-@property(nonatomic, readonly) NSString *scribeComponentForSecondaryAction;
-@property(nonatomic, readonly) NSString *scribeComponentForPrimaryAction;
+@interface T1URTTimelineMessageItemViewModel (T1Twitter)
 @property(nonatomic, readonly) NSString *scribeElement;
 @property(nonatomic, readonly) NSString *scribeComponent;
-@property(nonatomic, readonly) id <T1TwitterTimelineMessageTextAction> secondaryButtonAction;
-@property(nonatomic, readonly) id <T1TwitterTimelineMessageTextAction> primaryButtonAction;
-@property(nonatomic, readonly) TFSURTRichText *bodyRichText;
-@property(nonatomic, readonly) TFSURTRichText *headerRichText;
-@property(nonatomic, readonly) long long bodyAlignment;
-@property(nonatomic, readonly) long long headerAlignment;
-@property(nonatomic, readonly) NSArray *imageVariants;
-@property(nonatomic, readonly) _Bool shouldUseStandardSideContentPadding;
-@property(nonatomic, readonly) _Bool shouldUseNoTopContentPadding;
-
-// Remaining properties
-@property(nonatomic, readonly) _Bool dismissible;
+@property(nonatomic, readonly) NSDictionary *scribeItem;
+@property(nonatomic, readonly) NSString *scribeItemImpressionID;
+@property(nonatomic, readonly) TFNTwitterSuggestsInfo *suggestsInfo;
+@property(nonatomic, readonly) id <TFNTwitterTimelineEntryContext> timelineEntryContext;
 @end
 

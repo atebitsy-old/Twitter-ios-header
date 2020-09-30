@@ -9,5 +9,9 @@
 @interface _TtC9T1Twitter33FleetsStoriesThreadViewController (T1Twitter)
 @property(nonatomic, readonly) _Bool tfn_ignoreInteractionEventsDuringDismissal;
 @property(nonatomic, readonly) _Bool tfn_ignoreInteractionEventsDuringPresentation;
+- (_Bool)toaster:(id)arg1 canDisplayToast:(id)arg2 withPriority:(unsigned long long)arg3;
+- (id)currentViewController;
+- (_Bool)usersViewController:(id)arg1 shouldShowBioForUserOrRecommendation:(id)arg2;
+- (void)viewControllerDidTakeScreenshot:(id)arg1;
 @end
 

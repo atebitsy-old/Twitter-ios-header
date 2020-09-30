@@ -32,6 +32,7 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 - (void)fleetLineView:(id)arg1 showProfileForUser:(id)arg2;
 - (id)fleetLineViewScribeContext:(id)arg1;
+- (void)fleetLineView:(id)arg1 presentMenuSheet:(id)arg2 fromGestureRecognizer:(id)arg3;
 - (void)fleetLineView:(id)arg1 presentViewController:(id)arg2 isFleetsViewController:(_Bool)arg3;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
 - (void)scrollViewDidScroll:(id)arg1;

@@ -41,6 +41,7 @@
 - (id)convertingCarouselsToSingleMedia;
 - (id)_tfn_componentModelsFromJSONDict:(id)arg1 destinationsDict:(id)arg2 mediaEntitiesDict:(id)arg3 appStoreData:(id)arg4 promotedContent:(id)arg5 usersDict:(id)arg6;
 - (id)withPromotedContent:(id)arg1;
+- (id)withComponentsTransform:(CDUnknownBlockType)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

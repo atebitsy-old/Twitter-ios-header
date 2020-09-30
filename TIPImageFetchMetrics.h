@@ -23,20 +23,10 @@
 
 - (void).cxx_destruct;
 - (id)description;
-- (void)_hit:(long long)arg1 renderLatency:(double)arg2 synchronously:(_Bool)arg3;
-- (void)finalWasHit:(double)arg1 synchronously:(_Bool)arg2;
-- (void)progressiveFrameWasHit:(double)arg1;
-- (void)previewWasHit:(double)arg1;
-- (void)addNetworkMetrics:(id)arg1 forRequest:(id)arg2 imageType:(id)arg3 imageSizeInBytes:(unsigned long long)arg4 imageDimensions:(struct CGSize)arg5;
-- (void)convertNetworkMetricsToResumedNetworkMetrics;
-- (void)cancelSource;
-- (void)endSource;
-- (void)startWithSource:(long long)arg1;
 @property(readonly, nonatomic) double firstImageLoadDuration;
 @property(readonly, nonatomic) double totalDuration;
 @property(readonly, nonatomic) _Bool wasCancelled;
 - (id)metricInfoForSource:(long long)arg1;
-- (id)initProject;
 - (id)init;
 
 @end

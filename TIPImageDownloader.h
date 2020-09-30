@@ -19,7 +19,6 @@
     unsigned long long _runningDownloadsCount;
 }
 
-+ (id)sharedInstance;
 - (void).cxx_destruct;
 - (void)imageFetchDownload:(id)arg1 didCompleteWithError:(id)arg2;
 - (void)imageFetchDownloadWillRetry:(id)arg1;
@@ -28,15 +27,7 @@
 - (void)imageFetchDownload:(id)arg1 didReceiveData:(id)arg2;
 - (void)imageFetchDownload:(id)arg1 didReceiveURLResponse:(id)arg2;
 - (void)imageFetchDownloadDidStart:(id)arg1;
-- (void)updatePriorityOfContext:(id)arg1;
-- (void)removeDelegate:(id)arg1 forContext:(id)arg2;
-- (id)fetchImageWithDownloadDelegate:(id)arg1;
 - (id)initInternal;
-- (id)_background_getOrCreateDownload:(id)arg1;
-- (void)_background_clearDownload:(id)arg1;
-- (void)_background_removeDelegate:(id)arg1 fromDownload:(id)arg2;
-- (void)_background_updatePriorityOfDownload:(id)arg1;
-- (void)_background_dequeuePendingDownloads;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

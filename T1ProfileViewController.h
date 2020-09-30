@@ -12,6 +12,7 @@
 #import <T1Twitter/T1ProfileHeaderViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1ResizableHeaderContentDelegate-Protocol.h>
 #import <T1Twitter/T1ResizableHeaderViewControllerDelegate-Protocol.h>
+#import <T1Twitter/T1ToasterContextDelegate-Protocol.h>
 #import <T1Twitter/TFNModalSheetViewControllerLayoutDelegate-Protocol.h>
 #import <T1Twitter/TFNNavigationControllerTransitionProvider-Protocol.h>
 #import <T1Twitter/TFNPresentationInterceptor-Protocol.h>
@@ -19,7 +20,7 @@
 @class NSArray, NSMapTable, NSString, T1AppNavigationContext, T1NavigationMetadata, T1ProfileDisplayContentProvider, T1ProfileDisplayNormalSubheaderContentProvider, T1ProfileHeaderViewController, T1ProfileSpriteAnimationBehavior, TFNTwitterStatus, TFSStopwatch, TFSTimer, TFSTwitterScribeContext;
 @protocol T1ProfileDataSource;
 
-@interface T1ProfileViewController : T1ResizableHeaderContainerViewController <T1ProfileDisplayContentProviderDelegate, TFNPresentationInterceptor, T1ResizableHeaderContentDelegate, T1ResizableHeaderViewControllerDelegate, T1ProfileHeaderViewControllerDelegate, T1ComposerPresenting, TFNModalSheetViewControllerLayoutDelegate, T1EditableProfileViewController, TFNNavigationControllerTransitionProvider>
+@interface T1ProfileViewController : T1ResizableHeaderContainerViewController <T1ProfileDisplayContentProviderDelegate, TFNPresentationInterceptor, T1ResizableHeaderContentDelegate, T1ResizableHeaderViewControllerDelegate, T1ProfileHeaderViewControllerDelegate, T1ComposerPresenting, TFNModalSheetViewControllerLayoutDelegate, T1ToasterContextDelegate, T1EditableProfileViewController, TFNNavigationControllerTransitionProvider>
 {
     _Bool _headerZooming;
     _Bool _hasPerformedAccessibilityScroll;
@@ -78,6 +79,7 @@
 @property(copy, nonatomic) TFSTwitterScribeContext *sourceScribeContext; // @synthesize sourceScribeContext=_sourceScribeContext;
 @property(nonatomic) long long headerButtonGroup; // @synthesize headerButtonGroup=_headerButtonGroup;
 @property(retain, nonatomic) T1AppNavigationContext *navigationContext; // @synthesize navigationContext=_navigationContext;
+- (id)scribePageForToaster:(id)arg1;
 - (void)presentDrafts;
 - (void)presentComposer;
 - (long long)dashContentItemType;
@@ -155,6 +157,8 @@
 - (id)childViewControllerForStatusBarStyle;
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)viewSafeAreaInsetsDidChange;
+- (void)viewDidFullyDisappear:(_Bool)arg1;
+- (void)viewDidFullyAppear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

@@ -21,7 +21,8 @@
     id <T1ToastViewModel> _currentToast;
     T1ToastContainerView *_toastContainerView;
     UIView<T1ToastContentViewable> *_currentToastView;
-    TFNTouchDownGestureRecognizer *_toastTouchDownRecognizer;
+    TFNTouchDownGestureRecognizer *_toastInteractionRecognizer;
+    TFNTouchDownGestureRecognizer *_toastTouchDownScalingRecognizer;
     UIPanGestureRecognizer *_toastPanRecognizer;
     double _currentTop;
     double _baselineTop;
@@ -35,7 +36,8 @@
 @property(nonatomic) double baselineTop; // @synthesize baselineTop=_baselineTop;
 @property(nonatomic) double currentTop; // @synthesize currentTop=_currentTop;
 @property(retain, nonatomic) UIPanGestureRecognizer *toastPanRecognizer; // @synthesize toastPanRecognizer=_toastPanRecognizer;
-@property(retain, nonatomic) TFNTouchDownGestureRecognizer *toastTouchDownRecognizer; // @synthesize toastTouchDownRecognizer=_toastTouchDownRecognizer;
+@property(retain, nonatomic) TFNTouchDownGestureRecognizer *toastTouchDownScalingRecognizer; // @synthesize toastTouchDownScalingRecognizer=_toastTouchDownScalingRecognizer;
+@property(retain, nonatomic) TFNTouchDownGestureRecognizer *toastInteractionRecognizer; // @synthesize toastInteractionRecognizer=_toastInteractionRecognizer;
 @property(nonatomic) _Bool highlighted; // @synthesize highlighted=_highlighted;
 @property(retain, nonatomic) UIView<T1ToastContentViewable> *currentToastView; // @synthesize currentToastView=_currentToastView;
 @property(retain, nonatomic) T1ToastContainerView *toastContainerView; // @synthesize toastContainerView=_toastContainerView;
@@ -52,7 +54,8 @@
 - (void)_t1_accessibilityInvokeAlternateAction;
 - (void)_t1_configureAccesibilityForToast:(id)arg1;
 - (void)_t1_panAction:(id)arg1;
-- (void)_t1_touchDownAction:(id)arg1;
+- (void)_t1_touchDownScalingAction:(id)arg1;
+- (void)_t1_touchDownInteractionAction:(id)arg1;
 - (struct CGRect)_t1_toastContainerFrame;
 - (void)_t1_dismissToast:(id)arg1 withStyle:(unsigned long long)arg2 byGesture:(_Bool)arg3 animated:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)dismissCurrentToastWithStyle:(unsigned long long)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;

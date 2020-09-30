@@ -10,5 +10,7 @@
 
 @interface _TtC9T1Twitter47DirectMessageConversationSettingsViewController (T1Twitter) <T1DirectMessageConversationParticipantsListViewControllerDelegate>
 - (void)directMessageConversationParticipantsListViewController:(id)arg1 didSelectUser:(id)arg2;
+- (void)addPeopleBehaviorDidFinish:(id)arg1;
+- (void)avatarCellDidTapAvatar:(id)arg1;
 @end
 

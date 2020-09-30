@@ -6,7 +6,19 @@
 
 #import <T1Twitter/T1SphereDiscoveryContainerViewController.h>
 
-@interface T1SphereDiscoveryContainerViewController (T1Twitter)
+#import <T1Twitter/UITextFieldDelegate-Protocol.h>
+
+@interface T1SphereDiscoveryContainerViewController (T1Twitter) <UITextFieldDelegate>
 - (id)scribePage;
+- (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
+- (void)scrollViewWillBeginDragging:(id)arg1;
+- (void)cancelTypeaheadTapped:(id)arg1;
+- (void)searchTextViewDidChange:(id)arg1;
+- (_Bool)textFieldShouldReturn:(id)arg1;
+- (void)textFieldDidBeginEditing:(id)arg1;
+- (void)presentCreateListViewController;
+- (id)t1_buttonItemForCategory:(unsigned long long)arg1;
+- (id)t1_actionButtonItemCategoriesWithAccount:(id)arg1;
+- (_Bool)t1_showsActionButton;
 @end
 

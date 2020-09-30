@@ -28,6 +28,9 @@
     TFSModelCacheWarmingOperation *_expeditedWarmingOperation;
 }
 
++ (_Bool)closeAsyncOnDealloc;
++ (void)setCloseAsyncOnDeallocBlock:(CDUnknownBlockType)arg1;
++ (id)closeAsyncOnDeallocFeatureSwitch;
 + (id)modelCacheWithAccountIdentifier:(id)arg1 configuration:(id)arg2;
 + (void)removeCacheFilesExcludingAccountIdentifiers:(id)arg1 directoryPath:(id)arg2 errorDestination:(CDUnknownBlockType)arg3;
 + (void)removeCacheFilesForAccountIdentifier:(id)arg1 directoryPath:(id)arg2 errorDestination:(CDUnknownBlockType)arg3;
@@ -54,6 +57,7 @@
 @property(readonly, nonatomic) TFSModelCacheEventCounts *eventCounts; // @synthesize eventCounts=_eventCounts;
 @property(readonly, nonatomic) TFSModelCacheConfiguration *configuration; // @synthesize configuration=_configuration;
 - (id)sessionWithSubidentifier:(id)arg1;
+- (void)_tfs_closeAndWait:(_Bool)arg1;
 - (void)close;
 - (void)removeOperationToCancelAndWaitForOnClosing:(id)arg1;
 - (_Bool)ifOpenAddOperationToCancelAndWaitForOnClosing:(id)arg1;

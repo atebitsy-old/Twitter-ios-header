@@ -11,5 +11,6 @@
 - (void)t1_fetchHelper:(id)arg1 didUpdateProgress:(float)arg2;
 - (void)t1_fetchHelper:(id)arg1 didLoadInitialImageFromSource:(long long)arg2;
 - (void)t1_fetchHelper:(id)arg1 didUpdateImageFromSource:(long long)arg2 isFinal:(_Bool)arg3;
+- (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 @end
 

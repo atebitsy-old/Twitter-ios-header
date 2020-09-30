@@ -14,9 +14,8 @@
 @interface T1InlinePromptView : UIView <TFNLayoutMetricsSizing, T1PromptView>
 {
     UIImageView *_imageView;
-    _Bool _shouldUseStandardSideContentPadding;
-    _Bool _shouldUseNoTopContentPadding;
     _Bool _showDismissOption;
+    long long _layoutType;
     T1PromptImageSpec *_imageSpec;
     T1PromptTextSpec *_primaryTextSpec;
     T1PromptTextSpec *_secondaryTextSpec;
@@ -39,8 +38,8 @@
 @property(retain, nonatomic) T1PromptTextSpec *secondaryTextSpec; // @synthesize secondaryTextSpec=_secondaryTextSpec;
 @property(retain, nonatomic) T1PromptTextSpec *primaryTextSpec; // @synthesize primaryTextSpec=_primaryTextSpec;
 @property(retain, nonatomic) T1PromptImageSpec *imageSpec; // @synthesize imageSpec=_imageSpec;
-@property(nonatomic) _Bool shouldUseNoTopContentPadding; // @synthesize shouldUseNoTopContentPadding=_shouldUseNoTopContentPadding;
-@property(nonatomic) _Bool shouldUseStandardSideContentPadding; // @synthesize shouldUseStandardSideContentPadding=_shouldUseStandardSideContentPadding;
+@property(nonatomic) long long layoutType; // @synthesize layoutType=_layoutType;
+- (struct CGRect)textViewFrameForInsets:(struct UIEdgeInsets)arg1 contentWidth:(double)arg2 y:(double)arg3 textModel:(id)arg4 textSpect:(id)arg5;
 - (void)private_dismissAction:(id)arg1;
 - (struct CGSize)sizeWithLayoutMetrics:(id)arg1;
 - (id)accessibilityElements;

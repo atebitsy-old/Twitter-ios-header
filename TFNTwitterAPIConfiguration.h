@@ -12,12 +12,14 @@
 {
     _Bool _isGraphQLTweetResultEnabled;
     _Bool _isBirdwatchConsumptionEnabled;
+    _Bool _isBirdwatchHistoryEnabled;
     _Bool _isIdentityBadgingEnabled;
     long long _scribeAPISampleSize;
     long long _scribeAPIErrorSampleSize;
 }
 
 @property(readonly, nonatomic) _Bool isIdentityBadgingEnabled; // @synthesize isIdentityBadgingEnabled=_isIdentityBadgingEnabled;
+@property(readonly, nonatomic) _Bool isBirdwatchHistoryEnabled; // @synthesize isBirdwatchHistoryEnabled=_isBirdwatchHistoryEnabled;
 @property(readonly, nonatomic) _Bool isBirdwatchConsumptionEnabled; // @synthesize isBirdwatchConsumptionEnabled=_isBirdwatchConsumptionEnabled;
 @property(readonly, nonatomic) _Bool isGraphQLTweetResultEnabled; // @synthesize isGraphQLTweetResultEnabled=_isGraphQLTweetResultEnabled;
 @property(readonly, nonatomic) long long scribeAPIErrorSampleSize; // @synthesize scribeAPIErrorSampleSize=_scribeAPIErrorSampleSize;

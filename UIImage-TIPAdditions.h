@@ -30,8 +30,6 @@
 - (id)tip_orientationAdjustedImage;
 - (id)tip_scaledImageWithTargetDimensions:(struct CGSize)arg1 contentMode:(long long)arg2 interpolationQuality:(id)arg3 decode:(_Bool)arg4;
 - (id)tip_scaledImageWithTargetDimensions:(struct CGSize)arg1 contentMode:(long long)arg2;
-- (id)_uikit_scaleAnimatedToRect:(struct CGRect)arg1 scale:(double)arg2 interpolationQuality:(int)arg3;
-- (id)_uikit_scaleToDimensions:(struct CGSize)arg1 scale:(double)arg2 interpolationQuality:(int)arg3;
 - (id)tip_imageWithRenderFormatting:(CDUnknownBlockType)arg1 render:(CDUnknownBlockType)arg2;
 - (_Bool)tip_matchesTargetDimensions:(struct CGSize)arg1 contentMode:(long long)arg2;
 - (id)tip_recommendedImageType:(long long)arg1;

@@ -29,16 +29,10 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) unsigned long long expectedContentLength; // @synthesize expectedContentLength=_expectedContentLength;
 @property(readonly, nonatomic) unsigned long long tip_frameCount; // @synthesize tip_frameCount=_tip_frameCount;
 @property(readonly, nonatomic) _Bool tip_hasAlpha; // @synthesize tip_hasAlpha=_tip_hasAlpha;
 @property(readonly, nonatomic) struct CGSize tip_dimensions; // @synthesize tip_dimensions=_tip_dimensions;
 @property(readonly, nonatomic) NSData *tip_data; // @synthesize tip_data=_dataBuffer;
-- (void)_cleanup;
-- (long long)finalizeDecoding;
-- (id)_renderStaticImage:(long long)arg1 targetDimensions:(struct CGSize)arg2 targetContentMode:(long long)arg3;
-- (id)renderImage:(long long)arg1 targetDimensions:(struct CGSize)arg2 targetContentMode:(long long)arg3;
-- (long long)append:(id)arg1;
 - (void)dealloc;
 - (id)initWithExpectedContentLength:(unsigned long long)arg1 buffer:(id)arg2;
 @property(readonly, nonatomic) id tip_config;

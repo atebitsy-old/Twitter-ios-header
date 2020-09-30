@@ -6,10 +6,12 @@
 
 #import <T1Twitter/T1DirectMessageConversation.h>
 
+#import <T1Twitter/TFNDirectMessageConversationActions-Protocol.h>
+
 @class NSArray, NSDate, NSNumber, NSString, TFNDirectMessageComposition, TFNDirectMessageContext, TFNDirectMessageConversationIdentifier, TFSTwitterEntityImageInfo;
 @protocol TFNDirectMessageConversationEntry, TFNDirectMessageConversationParticipant, TFNDirectMessageConversationSocialProof, TFNDirectMessageInbox;
 
-@interface T1DirectMessageConversation (TwitterDirectMessagesUI)
+@interface T1DirectMessageConversation (TwitterDirectMessagesUI) <TFNDirectMessageConversationActions>
 @property(nonatomic, readonly) _Bool unread;
 @property(nonatomic, readonly) _Bool mentionNotificationsDisabled;
 @property(nonatomic, readonly) NSDate *muteExpirationTime;
@@ -48,6 +50,31 @@
 @property(nonatomic, readonly) long long sortEventID;
 @property(nonatomic, readonly) id <TFNDirectMessageInbox> inbox;
 @property(nonatomic, readonly) TFNDirectMessageContext *context;
+- (void)pruneOldEntries;
+- (void)addWelcomeMessage:(id)arg1;
+- (void)updateReadOnlyState:(_Bool)arg1;
+- (void)markEntryAsAbuse:(id)arg1;
+- (void)unmarkEntryAsSpam:(id)arg1;
+- (void)markEntryAsSpam:(id)arg1;
+- (void)disableMentionNotifications;
+- (void)enableMentionNotifications;
+- (void)disableNotificationsForDuration:(unsigned long long)arg1;
+- (void)enableNotifications;
+- (void)removeUsers:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)addUsers:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)removeGroupAvatar;
+- (void)rename:(id)arg1;
+- (void)markAsRead;
+- (void)updateGroupAvatarWithAsset:(id)arg1 localURL:(id)arg2;
+- (void)cancelDraftMessage:(id)arg1;
+- (void)deleteMessage:(id)arg1;
+- (void)sendMessage:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)deleteReaction:(id)arg1 forMessage:(id)arg2;
+- (void)addReaction:(id)arg1 forMessage:(id)arg2;
+- (void)deleteConversation;
+- (void)accept;
+- (void)loadMoreEntriesWithCompletion:(CDUnknownBlockType)arg1;
+- (id)deleteScribeAction;
 
 // Remaining properties
 @property(nonatomic, readonly) _Bool empty;

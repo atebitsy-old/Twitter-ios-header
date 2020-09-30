@@ -31,9 +31,9 @@
 - (_Bool)_tfn_fuzzyPrefixMatch:(id)arg1;
 - (long long)_tfn_editDistance:(id)arg1 maxSearch:(unsigned long long)arg2;
 - (id)formatCode;
-@property(readonly, copy, nonatomic) NSString *valueName;
 - (_Bool)isPossibleTwitterUsername;
 - (id)canonicalTwitterUsername;
+@property(readonly, copy, nonatomic) NSString *valueName;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

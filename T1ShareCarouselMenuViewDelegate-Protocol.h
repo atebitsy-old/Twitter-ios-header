@@ -6,9 +6,9 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class T1ShareCarouselMenuView, UIActivity;
+@class T1Activity, T1ShareCarouselMenuView;
 
 @protocol T1ShareCarouselMenuViewDelegate <NSObject>
-- (void)shareCarouselMenuView:(T1ShareCarouselMenuView *)arg1 didSelectActivity:(UIActivity *)arg2;
+- (void)shareCarouselMenuView:(T1ShareCarouselMenuView *)arg1 didSelectActivity:(T1Activity *)arg2;
 @end
 

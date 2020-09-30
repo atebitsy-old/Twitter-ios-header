@@ -31,14 +31,9 @@
 - (NSString *)topCursor;
 - (TFNTwitterStatus *)newestStatus;
 - (_Bool)loadTopFromStatusPosting:(TFNTwitterComposition *)arg1;
-@property(nonatomic, readonly) unsigned long long streamObjectsCompositionInsertIndex;
-@property(nonatomic, readonly) _Bool isTweetCompositionInjectionHandlingEnabled;
 @property(nonatomic, readonly) NSArray *itemsToBeSerialized;
 @property(nonatomic, copy) NSDictionary *scrollPositionState;
 @property(nonatomic, readonly) id <TFNTwitterScribeImpressionCache> impressionCache;
 @property(nonatomic, retain) id <TFNTwitterSuggestsModuleWhoToFollowBlender> whoToFollowBlender;
-
-@optional
-- (void)addStatus:(TFNTwitterStatus *)arg1 toReplaceTweetPromptInEntryWithID:(NSString *)arg2;
 @end
 

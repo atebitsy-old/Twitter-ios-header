@@ -20,20 +20,11 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(nonatomic) __weak id <TIPLRUEntry> previousLRUEntry; // @synthesize previousLRUEntry=_previousLRUEntry;
 @property(retain, nonatomic) id <TIPLRUEntry> nextLRUEntry; // @synthesize nextLRUEntry=_nextLRUEntry;
 - (void)_insertEntry:(id)arg1 transformerIdentifier:(id)arg2 sourceImageDimensions:(struct CGSize)arg3;
-- (_Bool)strongifyEntries;
-- (void)weakifyEntries;
 - (_Bool)shouldAccessMoveLRUEntryToHead;
 - (id)LRUEntryIdentifier;
-- (unsigned long long)collectionCost;
-- (void)dirtyAllEntries;
-- (id)allEntries;
-- (id)imageEntryMatchingDimensions:(struct CGSize)arg1 contentMode:(long long)arg2 transformerIdentifier:(id)arg3 sourceImageDimensions:(out struct CGSize *)arg4 dirty:(out _Bool *)arg5;
-- (void)addImageEntry:(id)arg1 transformerIdentifier:(id)arg2 sourceImageDimensions:(struct CGSize)arg3;
-- (id)initWithIdentifier:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

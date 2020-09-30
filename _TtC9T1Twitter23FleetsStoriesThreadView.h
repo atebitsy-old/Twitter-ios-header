@@ -14,6 +14,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: delegate
     // Error parsing type: , name: account
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: accessibilityActions
+    // Error parsing type: , name: playPauseAction
     // Error parsing type: , name: lastScribeGesture
     // Error parsing type: , name: showingReactions
     // Error parsing type: , name: progress
@@ -33,7 +35,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: threadPlaying
     // Error parsing type: , name: parentIsForeground
     // Error parsing type: , name: showsAddButton
-    // Error parsing type: , name: canTapNavigateNext
+    // Error parsing type: , name: canNavigateToNextThread
     // Error parsing type: , name: onCloseTapped
     // Error parsing type: , name: didNavigate
     // Error parsing type: , name: didTapAddButton

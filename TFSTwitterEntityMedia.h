@@ -31,6 +31,7 @@
     TFSTwitterEntityMediaSourceUser *_sourceUser;
     NSString *_altText;
     NSString *_mediaAvailabilityReason;
+    NSString *_copyrightHolderName;
     unsigned long long _videoViewCount;
     NSDictionary *_hlsPlaylists;
     TFSTwitterMediaColorPalette *_mediaPalette;
@@ -43,6 +44,7 @@
 @property(readonly, nonatomic) TFSTwitterMediaColorPalette *mediaPalette; // @synthesize mediaPalette=_mediaPalette;
 @property(readonly, copy, nonatomic) NSDictionary *hlsPlaylists; // @synthesize hlsPlaylists=_hlsPlaylists;
 @property(readonly, nonatomic) unsigned long long videoViewCount; // @synthesize videoViewCount=_videoViewCount;
+@property(readonly, copy, nonatomic) NSString *copyrightHolderName; // @synthesize copyrightHolderName=_copyrightHolderName;
 @property(readonly, copy, nonatomic) NSString *mediaAvailabilityReason; // @synthesize mediaAvailabilityReason=_mediaAvailabilityReason;
 @property(readonly, nonatomic) _Bool dmcaRestricted; // @synthesize dmcaRestricted=_dmcaRestricted;
 @property(readonly, copy, nonatomic) NSString *altText; // @synthesize altText=_altText;
@@ -99,7 +101,7 @@
 - (id)initWithURL:(id)arg1 mediaType:(long long)arg2 mediaPalette:(id)arg3;
 - (id)initWithMediaType:(long long)arg1;
 - (id)initWithMediaType:(long long)arg1 videoInfo:(id)arg2;
-- (id)initWithRange:(struct _NSRange)arg1 url:(id)arg2 expandedURL:(id)arg3 originalDisplayURL:(id)arg4 htmlTitle:(id)arg5 customTitle:(id)arg6 mediaType:(long long)arg7 mediaURL:(id)arg8 mediaDimensions:(struct CGSize)arg9 focusRects:(id)arg10 mediaFeatures:(id)arg11 mediaID:(id)arg12 mediaKey:(id)arg13 sourceStatusID:(id)arg14 sourceUserID:(id)arg15 videoInfo:(id)arg16 tagSet:(id)arg17 monetizable:(_Bool)arg18 title:(id)arg19 mediaDescription:(id)arg20 watchNowCTAURL:(id)arg21 visitSiteCTAURL:(id)arg22 appStoreId:(id)arg23 iPadAppStoreId:(id)arg24 sourceUser:(id)arg25 altText:(id)arg26 dmcaRestricted:(_Bool)arg27 mediaAvailabilityReason:(id)arg28 videoViewCount:(unsigned long long)arg29 hlsPlaylists:(id)arg30 mediaPalette:(id)arg31;
+- (id)initWithRange:(struct _NSRange)arg1 url:(id)arg2 expandedURL:(id)arg3 originalDisplayURL:(id)arg4 htmlTitle:(id)arg5 customTitle:(id)arg6 mediaType:(long long)arg7 mediaURL:(id)arg8 mediaDimensions:(struct CGSize)arg9 focusRects:(id)arg10 mediaFeatures:(id)arg11 mediaID:(id)arg12 mediaKey:(id)arg13 sourceStatusID:(id)arg14 sourceUserID:(id)arg15 videoInfo:(id)arg16 tagSet:(id)arg17 monetizable:(_Bool)arg18 title:(id)arg19 mediaDescription:(id)arg20 watchNowCTAURL:(id)arg21 visitSiteCTAURL:(id)arg22 appStoreId:(id)arg23 iPadAppStoreId:(id)arg24 sourceUser:(id)arg25 altText:(id)arg26 dmcaRestricted:(_Bool)arg27 mediaAvailabilityReason:(id)arg28 copyrightHolderName:(id)arg29 videoViewCount:(unsigned long long)arg30 hlsPlaylists:(id)arg31 mediaPalette:(id)arg32;
 - (id)initWithRange:(struct _NSRange)arg1;
 - (id)initWithRange:(struct _NSRange)arg1 url:(id)arg2 expandedURL:(id)arg3 originalDisplayURL:(id)arg4 htmlTitle:(id)arg5 customTitle:(id)arg6;
 - (id)asDisplayTextRange;

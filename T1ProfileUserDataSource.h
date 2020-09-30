@@ -86,6 +86,7 @@
 - (void)invalidateData;
 - (void)requestClusterFollowRecommendationsIfNeeded;
 - (void)reloadRelationship;
+@property(readonly, nonatomic) _Bool hasBirdwatchNotes;
 @property(readonly, nonatomic) _Bool isProfileBioTranslatable;
 @property(readonly, nonatomic) NSDictionary *scribeItem;
 @property(readonly, nonatomic) TFSTwitterPromotedContent *promotedContent;

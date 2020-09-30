@@ -8,5 +8,8 @@
 
 @interface T1DirectMessageComposeViewController (T1Twitter13)
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
+- (void)scrollViewWillBeginDragging:(id)arg1;
+- (void)pickerViewController:(id)arg1 didPickValue:(id)arg2 inSectionAtIndex:(unsigned long long)arg3 willConfirm:(_Bool)arg4 willDismiss:(_Bool)arg5;
+- (void)willTransitionToTraitCollection:(id)arg1 withTransitionCoordinator:(id)arg2;
 @end
 

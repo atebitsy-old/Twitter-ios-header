@@ -23,8 +23,6 @@
 @property(readonly, copy, nonatomic) NSString *detectedImageType; // @synthesize detectedImageType=_detectedImageType;
 @property(readonly, nonatomic) id <TIPImageCodec> detectedCodec; // @synthesize detectedCodec=_detectedCodec;
 @property(readonly, nonatomic) NSMutableData *codecDetectionBuffer; // @synthesize codecDetectionBuffer=_codecDetectionBuffer;
-- (void)_fullDetectCodec;
-- (_Bool)_quickDetectCodecFromData:(id)arg1;
 - (void)dealloc;
 - (_Bool)appendData:(id)arg1 final:(_Bool)arg2;
 - (id)initWithExpectedDataLength:(unsigned long long)arg1;

@@ -17,5 +17,9 @@
 @property(nonatomic, readonly) UIView *playerContainerView;
 @property(nonatomic, readonly) id <TFNTwitterAVPlayerSessionSource> playerSessionSource;
 - (id)autoplayable;
+- (id)tfn_focusRectanglesForFocusMode:(long long)arg1 inBounds:(struct CGRect)arg2 forFetchHelper:(id)arg3;
+- (long long)tfn_scaleAspectFillFocusModeForFetchHelper:(id)arg1;
+- (void)observerDidAttachToPlayer:(id)arg1;
+- (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 @end
 

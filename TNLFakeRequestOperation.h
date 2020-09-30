@@ -35,7 +35,6 @@
 - (long long)operationId;
 - (id)URLSessionTaskOperation;
 - (id)init;
-- (id)initWithURLSessionTaskOperation:(id)arg1;
 
 @end
 

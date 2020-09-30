@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: accountID
     // Error parsing type: , name: urtTimelineUID
-    // Error parsing type: , name: scriber
 }
 
 @end

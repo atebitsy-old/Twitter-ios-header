@@ -6,23 +6,28 @@
 
 #import <objc/NSObject.h>
 
-#import <T1Twitter/T1ToastViewModel-Protocol.h>
+#import <T1Twitter/T1ShareActivityToastViewModel-Protocol.h>
 
 @class NSArray, NSString, T1ToastAction, T1ToastScribeContext, TFSTwitterScribeContext, UIColor, UIImage;
 @protocol TFSTwitterCanonicalUser;
 
-@interface T1ShareActivityToast : NSObject <T1ToastViewModel>
+@interface T1ShareActivityToast : NSObject <T1ShareActivityToastViewModel>
 {
-    NSArray *_rankedActivities;
     TFSTwitterScribeContext *_scribeContext;
+    NSString *_localizedDelimitedTitle;
+    NSArray *_rankedActivities;
 }
 
-+ (id)shareActivityToastWithRankedActivities:(id)arg1 scribeContext:(id)arg2;
++ (id)shareActivityToastWithLocalizedDelimitedTitle:(id)arg1 account:(id)arg2 user:(id)arg3 viewController:(id)arg4;
++ (id)shareActivityToastWithLocalizedDelimitedTitle:(id)arg1 account:(id)arg2 status:(id)arg3 viewController:(id)arg4;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *rankedActivities; // @synthesize rankedActivities=_rankedActivities;
+@property(readonly, copy, nonatomic) NSString *localizedDelimitedTitle; // @synthesize localizedDelimitedTitle=_localizedDelimitedTitle;
+- (id)toastActionForActivity:(id)arg1;
 @property(readonly, nonatomic) T1ToastScribeContext *scribeContext;
 - (id)customToastContentViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSString *messageText;
-- (id)initWithRankedActivities:(id)arg1 scribeContext:(id)arg2;
+- (id)initWithLocalizedDelimitedTitle:(id)arg1 rankedActivities:(id)arg2;
 
 // Remaining properties
 @property(readonly, nonatomic) T1ToastAction *alternateAction;

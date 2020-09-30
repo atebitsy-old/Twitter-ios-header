@@ -18,16 +18,7 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) CDUnknownBlockType storeCompletionBlock; // @synthesize storeCompletionBlock=_storeCompletionBlock;
-@property(readonly, nonatomic) TIPImagePipeline *pipeline; // @synthesize pipeline=_pipeline;
-@property(readonly, nonatomic) id <TIPImageStoreRequest> request; // @synthesize request=_request;
 - (void)main;
-- (void)setHydrationDependency:(id)arg1;
-- (id)initWithRequest:(id)arg1 pipeline:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)_getEntryContextWithImageURL:(id)arg1 imageContainer:(id)arg2 imageFilePath:(id)arg3 imageData:(id)arg4;
-- (id)_getImageContainer;
-- (id)_getImageFilePath;
-- (id)_getImageData;
 
 @end
 

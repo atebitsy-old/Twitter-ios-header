@@ -11,6 +11,10 @@
     // Error parsing type: , name: stringFactory
 }
 
++ (id)generatedGroupTitleForParticipants:(id)arg1;
++ (id)sharedGeneratedTitleFormatter;
++ (id)sharedTitleFormatter;
++ (id)sharedSubtitleFormatter;
 - (void).cxx_destruct;
 - (id)init;
 - (id)attributedStringForObjectValue:(id)arg1 withDefaultAttributes:(id)arg2;
@@ -18,6 +22,7 @@
 - (id)initWithCoder:(id)arg1;
 - (id)attributedStringFromConversation:(id)arg1 withDefaultAttributes:(id)arg2;
 - (id)stringFromConversation:(id)arg1;
+- (id)initPreviewTextFormatterWithAccount:(id)arg1;
 
 @end
 

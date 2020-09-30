@@ -21,7 +21,6 @@
 - (void)run;
 - (void)start;
 - (id)init;
-- (id)initWithDelay:(double)arg1;
 
 @end
 

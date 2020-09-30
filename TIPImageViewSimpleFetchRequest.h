@@ -22,7 +22,6 @@
 @property(readonly, nonatomic) long long targetContentMode; // @synthesize targetContentMode=_targetContentMode;
 @property(readonly, nonatomic) struct CGSize targetDimensions; // @synthesize targetDimensions=_targetDimensions;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
-- (id)initWithImageURL:(id)arg1 targetView:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -18,6 +18,7 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) __weak UIViewController *controller; // @synthesize controller=_controller;
 - (id)previewURL:(id)arg1;
+- (void)handleURL:(id)arg1 context:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)handleURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)handleURL:(id)arg1;
 - (id)init;

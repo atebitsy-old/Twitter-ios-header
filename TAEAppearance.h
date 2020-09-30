@@ -10,8 +10,6 @@
 {
 }
 
-+ (void)_tae_setupItemsAppearance;
-+ (void)_tae_setupTFNUI;
 + (void)_tae_setupUIAppearance;
 + (void)_tae_setupVectorImages;
 + (void)setAdditionalVectorImageSearchDirectoryURLs:(id)arg1;

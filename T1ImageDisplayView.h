@@ -9,7 +9,7 @@
 #import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
 
 @class NSString, T1ImageDisplayViewContextMenuInteractionDelegate, T1ImageViewFetchHelper, T1ZoomableImageView, UIActivityIndicatorView, UIImage, UIImageView, UILongPressGestureRecognizer, UITapGestureRecognizer, UIViewController;
-@protocol T1ImageDisplayViewDelegate, T1ImageDisplayViewDownloadDelegate, T1SavePhotoProvider;
+@protocol T1ImageDisplayViewDelegate, T1ImageDisplayViewDownloadDelegate, TUISavePhotoProvider;
 
 @interface T1ImageDisplayView : UIView <T1ImageViewFetchHelperDelegate>
 {
@@ -61,7 +61,7 @@
 - (void)setTapTarget:(id)arg1 action:(SEL)arg2;
 @property(readonly, nonatomic) NSString *imageURLString;
 @property(retain, nonatomic) UIImage *image;
-@property(readonly, nonatomic) id <T1SavePhotoProvider> savePhotoProvider;
+@property(readonly, nonatomic) id <TUISavePhotoProvider> savePhotoProvider;
 - (void)layoutSubviews;
 - (void)dealloc;
 - (id)initWithCoder:(id)arg1;

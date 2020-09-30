@@ -25,6 +25,8 @@
 @property(nonatomic, readonly) id <TFNDirectMessageConversation> conversation; // @synthesize conversation;
 @property(nonatomic, readonly) long long hash;
 @property(nonatomic, readonly) _Bool isDraft;
+@property(nonatomic, readonly) NSString *reportMessageActionTitle;
+@property(nonatomic, readonly) NSString *reportConversationActionTitle;
 
 @end
 

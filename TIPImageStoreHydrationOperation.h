@@ -22,15 +22,11 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <TIPImageStoreRequest> hydratedRequest; // @synthesize hydratedRequest=_hydratedRequest;
-@property(readonly, nonatomic) NSError *error; // @synthesize error=_error;
-- (void)_completeHydrationWithNewRequest:(id)arg1 error:(id)arg2;
 - (void)start;
 - (_Bool)isFinished;
 - (_Bool)isExecuting;
 - (_Bool)isConcurrent;
 - (_Bool)isAsynchronous;
-- (id)initWithRequest:(id)arg1 pipeline:(id)arg2 hydrater:(id)arg3;
 
 @end
 

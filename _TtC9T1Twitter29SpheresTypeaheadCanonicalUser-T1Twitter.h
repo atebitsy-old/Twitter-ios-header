@@ -9,6 +9,7 @@
 @class NSArray, NSDate, NSNumber, NSString, TFSTwitterEntityMedia, TFSTwitterEntitySet, TFSTwitterPlace, TFSTwitterRelationship, TFSTwitterUserDesignatorInfo, TFSTwitterUserExtendedProfile, TFSTwitterUserReference;
 
 @interface _TtC9T1Twitter29SpheresTypeaheadCanonicalUser (T1Twitter)
+@property(nonatomic, readonly) _Bool hasBirdwatchNotes;
 @property(nonatomic, readonly) NSNumber *isProfileBioTranslatableNumber;
 @property(nonatomic, readonly) _Bool isProfileBioTranslatable;
 @property(nonatomic, readonly) _Bool accountCanDM;

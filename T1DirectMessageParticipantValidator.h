@@ -6,31 +6,23 @@
 
 #import <objc/NSObject.h>
 
-@class NSSet, TFNDirectMessageService, TFSObjectCache;
+@class NSSet;
 
 @interface T1DirectMessageParticipantValidator : NSObject
 {
-    _Bool _skipValidationForHydratedUserReferences;
-    NSSet *_existingUserReferences;
-    TFNDirectMessageService *_directMessageService;
-    TFSObjectCache *_permissionCacheByUserID;
-    TFSObjectCache *_permissionCacheByUsername;
+    // Error parsing type: , name: existingUserReferences
+    // Error parsing type: , name: skipValidationForHydratedUserReferences
+    // Error parsing type: , name: directMessageService
+    // Error parsing type: , name: permissionCacheByUserID
+    // Error parsing type: , name: permissionCacheByUsername
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) TFSObjectCache *permissionCacheByUsername; // @synthesize permissionCacheByUsername=_permissionCacheByUsername;
-@property(readonly, nonatomic) TFSObjectCache *permissionCacheByUserID; // @synthesize permissionCacheByUserID=_permissionCacheByUserID;
-@property(readonly, nonatomic) TFNDirectMessageService *directMessageService; // @synthesize directMessageService=_directMessageService;
-@property(readonly, nonatomic) _Bool skipValidationForHydratedUserReferences; // @synthesize skipValidationForHydratedUserReferences=_skipValidationForHydratedUserReferences;
-@property(readonly, copy, nonatomic) NSSet *existingUserReferences; // @synthesize existingUserReferences=_existingUserReferences;
-- (long long)countOfExistingUserReferencesAndSelectedUserReferences:(id)arg1;
-- (void)_didReceivePermission:(id)arg1 updateBlock:(CDUnknownBlockType)arg2;
-- (void)_permissionsRequestWithUserReference:(id)arg1 updateBlock:(CDUnknownBlockType)arg2;
-- (void)_processPermission:(id)arg1 updateBlock:(CDUnknownBlockType)arg2;
-- (void)validateUserReference:(id)arg1 updateBlock:(CDUnknownBlockType)arg2;
+- (id)init;
+- (void)validateWithUserReference:(id)arg1 updateBlock:(CDUnknownBlockType)arg2;
 - (id)initWithExistingUserReferences:(id)arg1 skipValidationForHydratedUserReferences:(_Bool)arg2 directMessageService:(id)arg3;
 - (id)initWithExistingUserReferences:(id)arg1 directMessageService:(id)arg2;
-- (id)init;
+@property(nonatomic, copy) NSSet *existingUserReferences;
 
 @end
 

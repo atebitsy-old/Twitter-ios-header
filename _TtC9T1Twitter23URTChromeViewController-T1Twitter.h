@@ -6,8 +6,20 @@
 
 #import <T1Twitter/_TtC9T1Twitter23URTChromeViewController.h>
 
+@class UIScrollView;
+
 @interface _TtC9T1Twitter23URTChromeViewController (T1Twitter)
 - (id)scribeSection;
 - (id)scribePage;
+- (_Bool)becomeFirstResponder;
+@property(nonatomic, readonly) _Bool canBecomeFirstResponder;
+- (_Bool)tfn_isContentScrolledToBottom;
+@property(nonatomic, readonly) _Bool tfn_prefersNavigationBarExpandedWhenScrolledToBottom;
+@property(nonatomic, readonly) _Bool tfn_prefersNavigationBarShadowHidden;
+@property(nonatomic, readonly) UIScrollView *tfn_contentScrollView;
+- (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool tfn_contentScrolledToBottom;
 @end
 

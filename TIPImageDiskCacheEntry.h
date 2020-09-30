@@ -19,7 +19,6 @@
 - (void).cxx_destruct;
 @property(nonatomic) unsigned long long partialFileSize; // @synthesize partialFileSize=_partialFileSize;
 @property(nonatomic) unsigned long long completeFileSize; // @synthesize completeFileSize=_completeFileSize;
-@property(retain, nonatomic) TIPImageDiskCacheTemporaryFile *tempFile; // @synthesize tempFile=_tempFile;
 - (id)initWithCacheEntry:(id)arg1;
 - (id)LRUEntryIdentifier;
 @property(readonly, copy, nonatomic) NSString *safeIdentifier; // @synthesize safeIdentifier=_safeIdentifier;

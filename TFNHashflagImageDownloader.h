@@ -18,8 +18,6 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSMutableDictionary *hashflagOperations; // @synthesize hashflagOperations=_hashflagOperations;
-@property(readonly, nonatomic) TFNHashflagImageCache *cache; // @synthesize cache=_cache;
 @property(readonly, nonatomic) TIPImagePipeline *imagePipeline; // @synthesize imagePipeline=_imagePipeline;
 - (void)tip_imageFetchOperation:(id)arg1 didFailToLoadFinalImage:(id)arg2;
 - (void)tip_imageFetchOperation:(id)arg1 didLoadFinalImage:(id)arg2;

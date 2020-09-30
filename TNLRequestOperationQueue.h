@@ -29,9 +29,7 @@
 + (id)globalRequestOperationQueue;
 + (void)initialize;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *sessionStateQueue; // @synthesize sessionStateQueue=_sessionStateQueue;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void)_executeWithMatchingSelector:(SEL)arg1 block:(CDUnknownBlockType)arg2;
 - (void)taskOperation:(id)arg1 didCompleteAttempt:(id)arg2;
 - (void)operation:(id)arg1 didCompleteWithResponse:(id)arg2;
 - (void)operation:(id)arg1 didCompleteAttempt:(id)arg2 disposition:(long long)arg3;
@@ -40,7 +38,6 @@
 - (void)findURLSessionTaskOperationForRequestOperation:(id)arg1 complete:(CDUnknownBlockType)arg2;
 - (void)cancelAllWithSource:(id)arg1;
 - (void)cancelAllWithSource:(id)arg1 underlyingError:(id)arg2;
-- (void)_cancelAllStagedRequestOperations:(id)arg1 underlyingError:(id)arg2;
 - (void)clearQueuedRequestOperation:(id)arg1;
 - (void)syncAddRequestOperation:(id)arg1;
 - (id)enqueueRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;

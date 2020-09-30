@@ -15,7 +15,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: captureViewController
     // Error parsing type: , name: delegate
     // Error parsing type: , name: debouncedStopSession
-    // Error parsing type: , name: state
 }
 
 - (void).cxx_destruct;

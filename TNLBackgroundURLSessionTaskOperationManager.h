@@ -22,8 +22,6 @@
 - (void)URLSession:(id)arg1 task:(id)arg2 didCompleteWithError:(id)arg3;
 - (void)URLSession:(id)arg1 task:(id)arg2 didFinishCollectingMetrics:(id)arg3;
 - (void)URLSessionDidFinishEventsForBackgroundURLSession:(id)arg1;
-- (id)_backgroundRequestContextForTask:(id)arg1 createIfNecessary:(_Bool)arg2;
-- (void)handleBackgroundURLSessionEvents:(id)arg1;
 - (id)init;
 
 // Remaining properties

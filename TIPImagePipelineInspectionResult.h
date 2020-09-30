@@ -29,9 +29,6 @@
 @property(readonly, nonatomic) NSArray *completeMemoryEntries; // @synthesize completeMemoryEntries=_completeMemoryEntries;
 @property(readonly, nonatomic) NSArray *completeRenderedEntries; // @synthesize completeRenderedEntries=_completeRenderedEntries;
 @property(readonly, nonatomic) TIPImagePipeline *imagePipeline; // @synthesize imagePipeline=_imagePipeline;
-- (void)addEntries:(id)arg1;
-- (void)addEntry:(id)arg1;
-- (id)initWithImagePipeline:(id)arg1;
 
 @end
 

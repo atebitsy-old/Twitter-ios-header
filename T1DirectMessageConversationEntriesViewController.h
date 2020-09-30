@@ -6,13 +6,16 @@
 
 #import <TFNUI/TFNDataViewController.h>
 
+#import <T1Twitter/T1DirectMessageAbstractEntryCellDelegate-Protocol.h>
+#import <T1Twitter/T1DirectMessageConversationAvatarUpdatedEntryCellDelegate-Protocol.h>
 #import <T1Twitter/T1DirectMessageConversationFlowLayoutDelegate-Protocol.h>
+#import <T1Twitter/T1DirectMessageConversationMediaAutoplayBehaviorDelegate-Protocol.h>
 #import <T1Twitter/T1DirectMessageConversationScrollPositionBehaviorSupport-Protocol.h>
 #import <T1Twitter/T1DirectMessageConversationSynchronizedUpdatesBehaviorDelegate-Protocol.h>
 
 @class T1DirectMessageConversation, T1DirectMessageConversationLastReadMarkerEntry, T1DirectMessageConversationLockingCollectionView, UIResponder;
 
-@interface T1DirectMessageConversationEntriesViewController : TFNDataViewController <T1DirectMessageConversationScrollPositionBehaviorSupport, T1DirectMessageConversationSynchronizedUpdatesBehaviorDelegate, T1DirectMessageConversationFlowLayoutDelegate>
+@interface T1DirectMessageConversationEntriesViewController : TFNDataViewController <T1DirectMessageConversationAvatarUpdatedEntryCellDelegate, T1DirectMessageConversationMediaAutoplayBehaviorDelegate, T1DirectMessageAbstractEntryCellDelegate, T1DirectMessageConversationScrollPositionBehaviorSupport, T1DirectMessageConversationSynchronizedUpdatesBehaviorDelegate, T1DirectMessageConversationFlowLayoutDelegate>
 {
     // Error parsing type: , name: hideAudioMessagingEducationKey
     // Error parsing type: , name: conversation
@@ -111,6 +114,11 @@
 @property(nonatomic) _Bool presentedFromDeepLink; // @synthesize presentedFromDeepLink=isPresentedFromDeepLink;
 - (_Bool)isPresentedFromDeepLink;
 @property(nonatomic, readonly) T1DirectMessageConversation *conversation; // @synthesize conversation;
+- (void)cell:(id)arg1 didTapGroupAvatarImageView:(id)arg2;
+- (void)autoplayBehavior:(id)arg1 didTapPlayerViewInMessageEntryCell:(id)arg2;
+- (void)cellDidTapShowMore:(id)arg1;
+- (void)cell:(id)arg1 didLongPressAvatar:(id)arg2 forUser:(id)arg3;
+- (void)cell:(id)arg1 didSelectUser:(id)arg2 forEntry:(id)arg3;
 
 @end
 

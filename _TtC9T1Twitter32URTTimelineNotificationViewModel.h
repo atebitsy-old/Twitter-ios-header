@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, NSString;
+@class NSDictionary, NSString, T1URTURLViewModel;
 
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter32URTTimelineNotificationViewModel : NSObject
@@ -33,6 +33,7 @@ __attribute__((visibility("hidden")))
 @property(nonatomic, readonly) NSString *scribeElement;
 @property(nonatomic, readonly) NSString *scribeComponent;
 @property(nonatomic, readonly) NSString *description;
+@property(nonatomic, readonly) T1URTURLViewModel *urlViewModel;
 
 @end
 

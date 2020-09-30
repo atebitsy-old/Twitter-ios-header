@@ -6,12 +6,18 @@
 
 #import <swiftCore/_TtCs12_SwiftObject.h>
 
-@interface _TtC9T1Twitter48DirectMessageConversationTypingIndicatorBehavior : _TtCs12_SwiftObject
+#import <T1Twitter/T1DirectMessageTypingIndicatorControllerDelegate-Protocol.h>
+
+@interface _TtC9T1Twitter48DirectMessageConversationTypingIndicatorBehavior : _TtCs12_SwiftObject <T1DirectMessageTypingIndicatorControllerDelegate>
 {
     // Error parsing type: , name: typingIndicatorView
     // Error parsing type: , name: typingIndicatorController
     // Error parsing type: , name: delegate
 }
+
+- (void)typingIndicatorController:(id)arg1 userDidStopTyping:(id)arg2 didReceiveMessage:(_Bool)arg3;
+- (void)typingIndicatorController:(id)arg1 userDidStartTyping:(id)arg2;
+- (void)typingIndicatorControllerConversationDidUpdate:(id)arg1;
 
 @end
 

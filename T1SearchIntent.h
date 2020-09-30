@@ -6,6 +6,7 @@
 
 #import <Intents/INIntent.h>
 
+__attribute__((visibility("hidden")))
 @interface T1SearchIntent : INIntent
 {
 }

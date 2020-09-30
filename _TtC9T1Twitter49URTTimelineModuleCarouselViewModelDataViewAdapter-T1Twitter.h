@@ -7,8 +7,10 @@
 #import <T1Twitter/_TtC9T1Twitter49URTTimelineModuleCarouselViewModelDataViewAdapter.h>
 
 #import <T1Twitter/T1TimelinesCarouselCollectionViewLayoutMetricsProvider-Protocol.h>
+#import <T1Twitter/T1UserOrRecommendationTableRowAdapterDelegate-Protocol.h>
 
-@interface _TtC9T1Twitter49URTTimelineModuleCarouselViewModelDataViewAdapter (T1Twitter) <T1TimelinesCarouselCollectionViewLayoutMetricsProvider>
+@interface _TtC9T1Twitter49URTTimelineModuleCarouselViewModelDataViewAdapter (T1Twitter) <T1TimelinesCarouselCollectionViewLayoutMetricsProvider, T1UserOrRecommendationTableRowAdapterDelegate>
 - (id)layoutMetricsForCollectionViewLayout:(id)arg1;
+- (void)userRowAdapter:(id)arg1 didPerformAction:(unsigned long long)arg2 forItem:(id)arg3 withOptions:(id)arg4 success:(_Bool)arg5 error:(id)arg6;
 @end
 

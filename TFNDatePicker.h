@@ -23,10 +23,7 @@
 @property(retain, nonatomic) UIColor *disabledLabelTextColor; // @synthesize disabledLabelTextColor=_disabledLabelTextColor;
 @property(retain, nonatomic) UIColor *labelTextColor; // @synthesize labelTextColor=_labelTextColor;
 - (void)tfn_sizeToFitInputView;
-- (void)_invalidateLabels;
-- (void)_tfn_clipSubviews:(id)arg1 depth:(long long)arg2 maxDepth:(long long)arg3;
 - (void)layoutSubviews;
-- (void)_tfn_commonInit;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

@@ -19,7 +19,6 @@
 @property(readonly, nonatomic) NSString *path; // @synthesize path=_path;
 - (_Bool)moveToPath:(id)arg1 error:(out id *)arg2;
 - (id)init;
-- (id)initWithFilePath:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

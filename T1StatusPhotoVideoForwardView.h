@@ -91,6 +91,7 @@
 - (void)_t1_updateAccessoryViews;
 - (void)_t1_layoutMediaSubview:(id)arg1;
 - (void)layoutSubviews;
+- (long long)_t1_displayContext;
 - (void)_t1_handleStatusViewModelUpdateNotification:(id)arg1;
 - (void)_t1_updateForVoice;
 - (_Bool)_t1_isVoice;

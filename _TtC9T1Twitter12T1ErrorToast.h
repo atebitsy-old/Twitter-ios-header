@@ -8,6 +8,7 @@
 
 @class NSString, T1ToastAction;
 
+__attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter12T1ErrorToast : NSObject
 {
     // Error parsing type: , name: messageText

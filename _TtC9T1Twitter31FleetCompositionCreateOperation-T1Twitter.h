@@ -14,5 +14,7 @@
 - (void)compositionUploadAttachmentsOperation:(id)arg1 didFailUploadAttachment:(id)arg2 error:(id)arg3;
 - (void)compositionUploadAttachmentsOperation:(id)arg1 attachmentProgressDidChange:(id)arg2;
 - (void)compositionUploadAttachmentsOperation:(id)arg1 didStartUploadAttachment:(id)arg2;
+- (void)assetDidStopRendering;
+- (void)assetDidStartRendering;
 @end
 

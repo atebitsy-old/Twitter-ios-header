@@ -8,5 +8,7 @@
 
 @interface _TtC9T1Twitter28SettingsChromeViewController (T1Twitter)
 - (void)showSettings;
+- (id)scribeSection;
+- (id)scribePage;
 @end
 

@@ -10,14 +10,15 @@
 
 @interface TFNButton : UIButton
 {
+    UIColor *_backgroundColor;
     _Bool _rounded;
     _Bool _imageTrailsLabel;
     long long _style;
     long long _sizeClass;
     double _imageToTitlePadding;
     UIColor *_highlightFillColor;
+    UIColor *_borderColor;
     UIView *_highlightView;
-    double _contentAlpha;
     struct UIEdgeInsets _touchInsets;
 }
 
@@ -27,14 +28,14 @@
 + (struct CGSize)imageSizeForSizeClass:(long long)arg1;
 + (id)fontForSizeClass:(long long)arg1;
 + (struct UIEdgeInsets)contentEdgeInsetsForSizeClass:(long long)arg1 layout:(long long)arg2;
-+ (struct CGSize)sizeForButtonWithTitle:(id)arg1 hasImage:(_Bool)arg2 font:(id)arg3 imageToTitlePadding:(double)arg4 imageSize:(struct CGSize)arg5 contentEdgeInsets:(struct UIEdgeInsets)arg6;
++ (struct CGSize)sizeForButtonWithTitle:(id)arg1 font:(id)arg2 imageToTitlePadding:(double)arg3 imageSize:(struct CGSize)arg4 contentEdgeInsets:(struct UIEdgeInsets)arg5;
 + (struct CGSize)sizeForButtonWithTitle:(id)arg1 hasImage:(_Bool)arg2 sizeClass:(long long)arg3;
 + (id)buttonWithTitle:(id)arg1 image:(id)arg2 style:(long long)arg3 sizeClass:(long long)arg4;
 + (id)buttonWithTitle:(id)arg1 imageNamed:(id)arg2 style:(long long)arg3 sizeClass:(long long)arg4;
 + (id)buttonWithStyle:(long long)arg1 sizeClass:(long long)arg2;
 - (void).cxx_destruct;
-@property(nonatomic) double contentAlpha; // @synthesize contentAlpha=_contentAlpha;
 @property(readonly, nonatomic) UIView *highlightView; // @synthesize highlightView=_highlightView;
+@property(retain, nonatomic) UIColor *borderColor; // @synthesize borderColor=_borderColor;
 @property(retain, nonatomic) UIColor *highlightFillColor; // @synthesize highlightFillColor=_highlightFillColor;
 @property(nonatomic) _Bool imageTrailsLabel; // @synthesize imageTrailsLabel=_imageTrailsLabel;
 @property(nonatomic) double imageToTitlePadding; // @synthesize imageToTitlePadding=_imageToTitlePadding;
@@ -47,6 +48,7 @@
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (void)layoutSubviews;
+- (void)_tfn_updateAppearance;
 - (void)setEnabled:(_Bool)arg1;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)setBackgroundColor:(id)arg1;

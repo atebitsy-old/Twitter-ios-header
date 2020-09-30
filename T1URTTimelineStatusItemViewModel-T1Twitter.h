@@ -6,8 +6,27 @@
 
 #import <T1Twitter/T1URTTimelineStatusItemViewModel.h>
 
+@class NSNumber, NSString, T1PlayerSessionProducer, TAVAnalyticsMediaIdentifier, TFNTwitterStatus;
+@protocol TFNTwitterCardDataSource;
+
 @interface T1URTTimelineStatusItemViewModel (T1Twitter)
 - (void)userUpdatedWithNotification:(id)arg1;
 - (void)statusUpdatedWithNotification:(id)arg1;
+@property(nonatomic, readonly) _Bool isFillerTweet;
+@property(nonatomic, readonly) _Bool isAdPreviewTweet;
+@property(nonatomic, readonly) long long draftTweetID;
+@property(nonatomic, readonly) TAVAnalyticsMediaIdentifier *contentMediaIdentifier;
+@property(nonatomic, readonly) _Bool isVoice;
+@property(nonatomic, readonly) _Bool isYouTubeCard;
+@property(nonatomic, readonly) _Bool isVideoPoll;
+@property(nonatomic, readonly) id <TFNTwitterCardDataSource> cardDataSource;
+@property(nonatomic, readonly) NSNumber *mediaScribePublisherID;
+@property(nonatomic, readonly) _Bool allowDynamicAd;
+@property(nonatomic, readonly) TFNTwitterStatus *playerStatus;
+@property(nonatomic, readonly) NSNumber *playerStatusID;
+@property(nonatomic, readonly) NSString *mediaPlaylistUrl;
+@property(nonatomic, readonly) NSString *mediaScribeContentID;
+@property(nonatomic, readonly) T1PlayerSessionProducer *playerSessionProducer;
+@property(nonatomic, readonly) TFNTwitterStatus *legacyStatus;
 @end
 

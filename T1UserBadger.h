@@ -17,6 +17,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
+- (_Bool)shouldShowEducationalPromptFor:(id)arg1;
 - (id)badgeForUserVerified:(_Bool)arg1 identityType:(long long)arg2 protectedUser:(_Bool)arg3 usernameless:(_Bool)arg4 translatorType:(long long)arg5;
 - (id)badgeForMomentAuthor:(id)arg1;
 - (id)badgeForDirectMessageUser:(id)arg1;

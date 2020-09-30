@@ -8,11 +8,13 @@
 
 @interface _TtC13GraphQLModels21TimelineCompactPrompt : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: headerText
+    // Error parsing type: , name: action
+    // Error parsing type: , name: bodyRichText
     // Error parsing type: , name: bodyText
+    // Error parsing type: , name: headerRichText
+    // Error parsing type: , name: headerText
     // Error parsing type: , name: primaryButtonAction
     // Error parsing type: , name: secondaryButtonAction
-    // Error parsing type: , name: action
 }
 
 @end

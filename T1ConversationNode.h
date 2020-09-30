@@ -52,6 +52,7 @@
 @property(readonly, nonatomic) _Bool isUnindentedConnectedToParent;
 @property(readonly, nonatomic) long long indentationLevel;
 - (void)_t1_invalidateCachedValues;
+- (void)updateEntryID:(id)arg1;
 - (_Bool)hasEntryID:(id)arg1;
 - (id)initWithEntryID:(id)arg1;
 - (id)init;

@@ -20,5 +20,6 @@
 @property(nonatomic, readonly) NSString *socialContextScribePage;
 @property(nonatomic, readonly) NSString *socialContextScribeElement;
 @property(nonatomic, readonly) NSString *activityTitle;
+- (void)userUpdated:(id)arg1;
 @end
 

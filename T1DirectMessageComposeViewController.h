@@ -6,9 +6,22 @@
 
 #import <TFNUI/TFNViewController.h>
 
-@class NSString, T1DirectMessageConversationQuickReplyPresentationBehavior, TFNDirectMessageComposition, TFNTwitterAccount, _TtC23TwitterDirectMessagesUI37DirectMessageComposerInterstitialView, _TtC23TwitterDirectMessagesUI40DirectMessageComposerInterstitialViewOld;
+#import <T1Twitter/PTVAudioRecorderDelegate-Protocol.h>
+#import <T1Twitter/T1AltTextViewControllerDelegate-Protocol.h>
+#import <T1Twitter/T1ComposeCardPreviewControllerDelegate-Protocol.h>
+#import <T1Twitter/T1ComposeDropManagerDelegate-Protocol.h>
+#import <T1Twitter/T1DirectMessageComposeTextViewDelegate-Protocol.h>
+#import <T1Twitter/T1FiltersViewControllerDelegate-Protocol.h>
+#import <T1Twitter/T1FoundMediaControllerDelegate-Protocol.h>
+#import <T1Twitter/T1MediaAttachmentsViewControllerDelegate-Protocol.h>
+#import <T1Twitter/T1PhotoGalleryViewControllerDelegate-Protocol.h>
+#import <T1Twitter/T1VideoTrimmerViewControllerDelegate-Protocol.h>
+#import <T1Twitter/TFNDropDataSource-Protocol.h>
+#import <T1Twitter/TFNModalContainerViewControllerDelegate-Protocol.h>
 
-@interface T1DirectMessageComposeViewController : TFNViewController
+@class NSArray, NSString, T1DirectMessageConversationQuickReplyPresentationBehavior, TFNDirectMessageComposition, TFNTwitterAccount, _TtC23TwitterDirectMessagesUI37DirectMessageComposerInterstitialView, _TtC23TwitterDirectMessagesUI40DirectMessageComposerInterstitialViewOld;
+
+@interface T1DirectMessageComposeViewController : TFNViewController <PTVAudioRecorderDelegate, T1MediaAttachmentsViewControllerDelegate, T1AltTextViewControllerDelegate, TFNModalContainerViewControllerDelegate, T1FiltersViewControllerDelegate, T1PhotoGalleryViewControllerDelegate, T1FoundMediaControllerDelegate, T1VideoTrimmerViewControllerDelegate, TFNDropDataSource, T1ComposeDropManagerDelegate, T1DirectMessageComposeTextViewDelegate, T1ComposeCardPreviewControllerDelegate>
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: attachmentDelegate
@@ -119,6 +132,88 @@
 @property(nonatomic) _Bool attachmentsDisabled; // @synthesize attachmentsDisabled;
 @property(nonatomic, retain) T1DirectMessageConversationQuickReplyPresentationBehavior *quickReplyPresentationBehavior; // @synthesize quickReplyPresentationBehavior;
 @property(nonatomic, readonly) TFNTwitterAccount *account; // @synthesize account;
+- (void)playerDidFinishPlayingWithNotification:(id)arg1;
+- (void)playbackVoiceRecordingTapped;
+- (void)removeVoiceRecordingTapped;
+- (void)audioRecorder:(id)arg1 didFailWithError:(id)arg2;
+- (void)audioRecorder:(id)arg1 didEndClipWithURL:(id)arg2 recordingWillEnd:(_Bool)arg3;
+- (void)audioRecorder:(id)arg1 didUpdateOverallDuration:(double)arg2 clipDuration:(double)arg3 currentAudioLevel:(double)arg4;
+- (void)audioRecorderDidCancelRecording:(id)arg1;
+- (void)audioRecorderDidEndRecording:(id)arg1;
+- (void)audioRecorderDidPauseRecording:(id)arg1;
+- (void)audioRecorderDidStartOrResumeRecording:(id)arg1;
+- (void)attachmentsViewControllerDidTapBackground:(id)arg1;
+- (void)attachmentsViewController:(id)arg1 didTapRemoveAttachment:(id)arg2;
+- (void)altTextViewController:(id)arg1 didCompleteWithAltText:(id)arg2;
+- (void)altTextViewControllerDidCancel:(id)arg1;
+- (void)attachmentsViewController:(id)arg1 didTapLivePhotoToggleButton:(id)arg2;
+- (void)attachmentsViewController:(id)arg1 didTapAltTextForAttachment:(id)arg2;
+- (void)attachmentsViewController:(id)arg1 didTapAttachment:(id)arg2;
+- (double)visibleLowerBoundForAttachmentsViewController:(id)arg1;
+- (_Bool)attachmentsViewController:(id)arg1 shouldShowLivePhotoToggleButtonForAttachment:(id)arg2;
+- (_Bool)attachmentsViewController:(id)arg1 shouldShowAltTextButtonForAttachment:(id)arg2;
+- (_Bool)attachmentsViewController:(id)arg1 shouldShowEditButtonForAttachment:(id)arg2;
+- (id)scribeSectionForFiltersViewController:(id)arg1;
+- (void)filtersViewControllerDidCancel:(id)arg1;
+- (void)filtersViewController:(id)arg1 didEditImage:(id)arg2;
+- (void)photoGalleryViewController:(id)arg1 didEndSessionWithAttachments:(id)arg2;
+- (void)photoGalleryViewControllerDidCancelSession:(id)arg1;
+- (void)foundMediaController:(id)arg1 viewControllerDidCancel:(id)arg2;
+- (void)foundMediaController:(id)arg1 viewController:(id)arg2 didSelectFoundMediaItem:(id)arg3;
+- (void)videoTrimmerViewControllerDidCancel:(id)arg1;
+- (void)videoTrimmerViewController:(id)arg1 didTrimVideo:(id)arg2;
+@property(nonatomic, readonly) unsigned long long composeViewState;
+@property(nonatomic, readonly) NSString *localizedDropIndicationTooManyVideos;
+@property(nonatomic, readonly) NSString *localizedDropIndicationTooManyImages;
+@property(nonatomic, readonly) NSString *localizedDropIndicationTooManyGIFs;
+@property(nonatomic, readonly) NSString *localizedDropIndicationMixedMedia;
+@property(nonatomic, readonly) NSString *localizedDropIndicationVideos;
+@property(nonatomic, readonly) NSString *localizedDropIndicationURL;
+@property(nonatomic, readonly) NSString *localizedDropIndicationText;
+@property(nonatomic, readonly) NSString *localizedDropIndicationStatus;
+@property(nonatomic, readonly) NSString *localizedDropIndicationImages;
+@property(nonatomic, readonly) NSString *localizedDropIndicationGIFs;
+@property(nonatomic, readonly) _Bool hasVideoAttachments;
+@property(nonatomic, readonly) _Bool hasImageAttachments;
+@property(nonatomic, readonly) _Bool hasAnimatedImageAttachments;
+- (_Bool)canDropVideosCount:(unsigned long long)arg1;
+- (_Bool)canDropImagesCount:(unsigned long long)arg1;
+- (_Bool)canDropAnimatedGIFsCount:(unsigned long long)arg1;
+@property(nonatomic, readonly) _Bool hasAttachments;
+@property(nonatomic, readonly) unsigned long long maxNumberOfPhotos;
+@property(nonatomic, readonly) NSArray *attachments;
+- (void)composeDropManager:(id)arg1 shouldUpdateDropIndicationViewText:(id)arg2 backgroundStyle:(unsigned long long)arg3;
+- (void)composeDropManager:(id)arg1 shouldUpdateDropIndicationViewHidden:(_Bool)arg2 animated:(_Bool)arg3;
+- (void)composeDropManager:(id)arg1 didDropVideoFile:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropText:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropURL:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropStatus:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropImages:(id)arg2;
+- (void)composeDropManager:(id)arg1 didDropAnimatedImage:(id)arg2;
+- (_Bool)composeDropManager:(id)arg1 canHandleLocalDragSession:(id)arg2;
+- (_Bool)handlePasteImageForComposeTextView:(id)arg1;
+- (_Bool)imagePasteEnabledForComposeTextView:(id)arg1;
+- (_Bool)textViewShouldBeginEditing:(id)arg1;
+- (void)textViewDidEndEditing:(id)arg1;
+- (void)textViewDidBeginEditing:(id)arg1;
+- (void)textViewDidChange:(id)arg1;
+- (void)textViewDidChangeSelection:(id)arg1;
+- (void)quickReplyPresentationBehaviorHideQuickReply:(id)arg1;
+- (void)quickReplyPresentationBehavior:(id)arg1 presentOptionsQuickReplyWithID:(id)arg2 options:(id)arg3 selectedOption:(id)arg4 shouldFocus:(_Bool)arg5;
+- (void)handleSendMessageKeyCommand;
+- (void)handleSelectKeyCommand;
+- (void)handleReplyToMessageKeyCommand;
+- (void)handleLineUpKeyCommand;
+- (void)handleLineDownKeyCommand;
+@property(nonatomic, readonly) NSArray *keyCommands;
+- (_Bool)canPerformAction:(SEL)arg1 withSender:(id)arg2;
+@property(nonatomic, readonly) _Bool canBecomeFirstResponder;
+- (long long)cardPreviewDisplayMode:(id)arg1;
+- (_Bool)areMultipleCardURLsAllowed;
+- (_Bool)isCardPreviewAllowed;
+- (void)cardPreviewControllerDidStartFetching:(id)arg1;
+- (void)cardPreviewController:(id)arg1 didShowCardPreviewWithCardData:(id)arg2;
+- (void)cardPreviewController:(id)arg1 didRemoveCardPreviewForReason:(unsigned long long)arg2 withCardData:(id)arg3;
 
 @end
 

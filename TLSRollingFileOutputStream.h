@@ -34,10 +34,6 @@
 - (id)initWithLogFileDirectoryPath:(id)arg1;
 - (id)initAndReturnError:(id *)arg1;
 - (id)initWithOutError:(id *)arg1;
-- (void)_writeStartupTimestampInfo;
-- (id)_getLogFiles;
-- (_Bool)_purgeOldLogsIfNeeded;
-- (_Bool)_rolloverIfNeeded;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

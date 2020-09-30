@@ -14,7 +14,6 @@
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) __weak TNLCommunicationAgent *communicationAgent; // @synthesize communicationAgent=_communicationAgent;
 
 @end
 

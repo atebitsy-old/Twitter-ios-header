@@ -10,6 +10,8 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter21FleetEntryContentView : UIView
 {
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: didEscape
+    // Error parsing type: , name: didScroll
     // Error parsing type: , name: mediaView
     // Error parsing type: , name: textView
     // Error parsing type: , name: fleetcastView
@@ -17,10 +19,13 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: contentInset
     // Error parsing type: , name: account
     // Error parsing type: , name: entry
+    // Error parsing type: , name: backgroundView
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (_Bool)accessibilityPerformEscape;
+- (_Bool)accessibilityScroll:(long long)arg1;
 - (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 

@@ -6,7 +6,19 @@
 
 #import <T1Twitter/_TtC9T1Twitter39FleetComposerMediaCaptureViewController.h>
 
-@interface _TtC9T1Twitter39FleetComposerMediaCaptureViewController (T1Twitter)
+#import <T1Twitter/PTVTwitterCameraCaptureDelegate-Protocol.h>
+#import <T1Twitter/T1CameraCaptureCameraModeRecordViewControllerDelegate-Protocol.h>
+
+@interface _TtC9T1Twitter39FleetComposerMediaCaptureViewController (T1Twitter) <PTVTwitterCameraCaptureDelegate, T1CameraCaptureCameraModeRecordViewControllerDelegate>
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
+- (void)twitterCameraCaptureShouldBeginPostCaptureTransition:(id)arg1;
+- (void)twitterCameraCaptureVideoTimeDidTickWithDuration:(float)arg1;
+- (void)twitterCameraCaptureDidRenderVideoURL:(id)arg1 error:(id)arg2;
+- (void)twitterCameraCaptureVideoReachedMaximumThreshold;
+- (void)twitterCameraCaptureVideoReachedMinimumThreshold;
+- (void)twitterCameraCaptureDidCapturePhoto:(id)arg1 error:(id)arg2;
+- (void)cameraCaptureCameraModeRecordViewController:(id)arg1 didChangeZoomScale:(double)arg2;
+- (void)cameraCaptureCameraModeRecordViewControllerDidStartRecording:(id)arg1;
+- (void)cameraCaptureCameraModeRecordViewControllerDidStopRecording:(id)arg1;
 @end
 

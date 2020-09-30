@@ -16,9 +16,11 @@
     NSNumber *_campaignID;
     NSNumber *_timestamp;
     NSNumber *_destinationAppID;
+    NSNumber *_sourceAppID;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSNumber *sourceAppID; // @synthesize sourceAppID=_sourceAppID;
 @property(readonly, nonatomic) NSNumber *destinationAppID; // @synthesize destinationAppID=_destinationAppID;
 @property(readonly, nonatomic) NSNumber *timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, nonatomic) NSNumber *campaignID; // @synthesize campaignID=_campaignID;
@@ -30,7 +32,7 @@
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)initWithJSONDictionary:(id)arg1;
-- (id)initWithAdNetworkID:(id)arg1 campaignID:(id)arg2 timeStamp:(id)arg3 destinationAppID:(id)arg4 signature:(id)arg5 nonce:(id)arg6;
+- (id)initWithAdNetworkID:(id)arg1 campaignID:(id)arg2 timeStamp:(id)arg3 destinationAppID:(id)arg4 signature:(id)arg5 sourceAppId:(id)arg6 nonce:(id)arg7;
 
 @end
 

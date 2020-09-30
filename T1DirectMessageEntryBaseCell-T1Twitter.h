@@ -6,7 +6,14 @@
 
 #import <T1Twitter/T1DirectMessageEntryBaseCell.h>
 
+@class NSArray;
+
 @interface T1DirectMessageEntryBaseCell (T1Twitter)
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;
+@property(nonatomic, copy) NSArray *accessibilityCustomActions;
+- (long long)indexOfAccessibilityElement:(id)arg1;
+- (id)accessibilityElementAtIndex:(long long)arg1;
+- (long long)accessibilityElementCount;
+@property(nonatomic) _Bool isAccessibilityElement;
 @end
 

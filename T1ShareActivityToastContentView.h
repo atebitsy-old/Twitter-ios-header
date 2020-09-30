@@ -10,13 +10,13 @@
 #import <T1Twitter/T1ToastContentViewable-Protocol.h>
 
 @class NSString, T1ShareCarouselMenuView, UILabel;
-@protocol T1ToastContentViewDelegate, T1ToastViewModel;
+@protocol T1ShareActivityToastViewModel, T1ToastContentViewDelegate, T1ToastViewModel;
 
-@interface T1ShareActivityToastContentView : UIView <T1ToastContentViewable, T1ShareCarouselMenuViewDelegate>
+@interface T1ShareActivityToastContentView : UIView <T1ShareCarouselMenuViewDelegate, T1ToastContentViewable>
 {
+    id <T1ShareActivityToastViewModel> _toast;
     T1ShareCarouselMenuView *_carouselMenu;
     UILabel *_messageLabel;
-    id <T1ToastViewModel> _toast;
     id <T1ToastContentViewDelegate> _delegate;
 }
 
@@ -25,7 +25,6 @@
 @property(readonly, nonatomic) id <T1ToastViewModel> toast; // @synthesize toast=_toast;
 - (void)shareCarouselMenuView:(id)arg1 didSelectActivity:(id)arg2;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
-- (id)initWithFrame:(struct CGRect)arg1 toast:(id)arg2 rankedActivities:(id)arg3;
 - (id)initWithFrame:(struct CGRect)arg1 toast:(id)arg2;
 
 // Remaining properties

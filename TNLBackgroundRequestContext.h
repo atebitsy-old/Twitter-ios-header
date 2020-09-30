@@ -18,11 +18,6 @@
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSURLSessionTaskMetrics *taskMetrics; // @synthesize taskMetrics=_taskMetrics;
-@property(retain, nonatomic) TNLTemporaryFile *tempFile; // @synthesize tempFile=_tempFile;
-@property(retain, nonatomic) NSError *error; // @synthesize error=_error;
-@property(retain, nonatomic) NSHTTPURLResponse *URLResponse; // @synthesize URLResponse=_URLResponse;
-@property(retain, nonatomic) NSURLSessionTask *URLSessionTask; // @synthesize URLSessionTask=_URLSessionTask;
 
 @end
 

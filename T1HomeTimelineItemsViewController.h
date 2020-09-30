@@ -79,13 +79,11 @@
 @property(readonly, nonatomic) TFNTwitterHomeTimeline *timeline; // @synthesize timeline=_timeline;
 @property(readonly, nonatomic) _Bool isRestoringPersistedScrollPosition; // @synthesize isRestoringPersistedScrollPosition=_isRestoringPersistedScrollPosition;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
-- (void)_insertOutboxStatusesIntoStreamObjects:(id)arg1;
 - (id)_representedItemsForStreamItem:(id)arg1;
 - (_Bool)_shouldAllowTableViewScrolling;
 - (_Bool)_isOnlyShowingErrorItem;
 - (_Bool)_isEmptyAfterLoading;
 - (_Bool)_isEmpty;
-- (id)_itemsFromStreamObjects:(id)arg1;
 - (void)_registerAdaptersAndTransformersThatRequireStream:(id)arg1;
 - (void)_setupStreamFromTimeline;
 - (void)_loadGap:(id)arg1 withSource:(long long)arg2 loadUpwards:(_Bool)arg3;

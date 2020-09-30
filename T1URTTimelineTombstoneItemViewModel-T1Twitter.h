@@ -6,9 +6,14 @@
 
 #import <T1Twitter/T1URTTimelineTombstoneItemViewModel.h>
 
-@protocol TFNTwitterStatusConversationTreeContext;
+#import <T1Twitter/TFNTwitterURTTimelineItem-Protocol.h>
 
-@interface T1URTTimelineTombstoneItemViewModel (T1Twitter)
+@protocol TFNTwitterStatusConversationTreeContext, TFNTwitterTimelineEntryContext;
+
+@interface T1URTTimelineTombstoneItemViewModel (T1Twitter) <TFNTwitterURTTimelineItem>
 @property(nonatomic, readonly) id <TFNTwitterStatusConversationTreeContext> conversationTreeContext;
+@property(nonatomic, readonly) id <TFNTwitterTimelineEntryContext> timelineEntryContext;
+- (id)interstitialedObject;
+- (id)tombstoneItemWithStatus:(id)arg1;
 @end
 

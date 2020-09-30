@@ -27,15 +27,8 @@
 + (void)registerURLResponse:(id)arg1 body:(id)arg2 config:(id)arg3 withEndpoint:(id)arg4;
 + (void)registerURLResponse:(id)arg1 body:(id)arg2 withEndpoint:(id)arg3;
 - (void).cxx_destruct;
-@property(nonatomic) struct __CFRunLoop *protocolRunLoop; // @synthesize protocolRunLoop=_protocolRunLoop;
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *protocolQueue; // @synthesize protocolQueue=_protocolQueue;
-@property(retain, nonatomic) NSCachedURLResponse *responseToUse; // @synthesize responseToUse=_responseToUse;
-@property _Bool stopped; // @synthesize stopped=_stopped;
-- (void)_executeClientBlock:(CDUnknownBlockType)arg1;
 - (id)initWithRequest:(id)arg1 cachedResponse:(id)arg2 client:(id)arg3;
 - (void)stopLoading;
-- (void)_chunkData:(id)arg1 bps:(unsigned long long)arg2 bytesSent:(unsigned long long)arg3 latency:(double)arg4;
-- (_Bool)_handleRedirectForRequest:(id)arg1 response:(id)arg2 behavior:(unsigned long long)arg3;
 - (void)startLoading;
 
 @end

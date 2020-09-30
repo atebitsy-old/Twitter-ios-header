@@ -11,8 +11,6 @@
 + (_Bool)tnl_URLSessionSupportsDecodingBrotliContentEncoding;
 + (_Bool)tnl_URLSessionCanUseTaskTransactionMetrics;
 + (id)tnl_backgroundSessionConfigurationWithTaggedIdentifier:(id)arg1;
-+ (id)tnl_defaultSessionConfigurationWithNilPersistence;
-+ (id)sessionConfigurationWithConfiguration:(id)arg1;
 - (void)tnl_insertProtocolClasses:(id)arg1;
 @end
 

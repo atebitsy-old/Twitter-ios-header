@@ -8,12 +8,13 @@
 
 @interface _TtCC5TAVUI19VideoLabelComponentP33_7EAF033FDCE188FA196E1C7DD750AA4B11PaddedLabel : UILabel
 {
+    // Error parsing type: , name: insets
 }
 
-- (id)initWithCoder:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
 @property(nonatomic, readonly) struct CGSize intrinsicContentSize;
 - (void)drawRect:(struct CGRect)arg1;
+- (id)initWithCoder:(id)arg1;
+- (id)initWithFrame:(struct CGRect)arg1;
 
 @end
 

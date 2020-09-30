@@ -92,6 +92,7 @@
 + (id)protectedUserKeysRedactionList;
 + (id)HTTPHeaderFieldRedactionList;
 + (id)userDefaultsKeysRedactionList;
++ (_Bool)isApplicationStateWorkaroundEnabled;
 + (double)_CGFloatForKey:(id)arg1 minValue:(double)arg2 maxValue:(double)arg3;
 + (long long)_integerForKey:(id)arg1 minValue:(long long)arg2 maxValue:(long long)arg3;
 + (id)nonUsernamePaths;

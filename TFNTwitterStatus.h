@@ -467,6 +467,7 @@
 - (id)emailSubject;
 - (id)t1_peopleDiscoveryScribeElement;
 - (id)t1_peopleDiscoveryScribeItemForItemIndex:(unsigned long long)arg1;
+- (id)whyYoureSeeingThisAdURLString;
 - (id)initWithGraphQLTweet:(id)arg1;
 - (id)_tfn_displayTextModelWithheld:(_Bool)arg1;
 @property(readonly, nonatomic) TFNTwitterDisplayTextModel *withheldDisplayTextModel; // @dynamic withheldDisplayTextModel;
@@ -475,8 +476,6 @@
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 @property(readonly, nonatomic) TFSTwitterEntityURL *trailingEntityURL;
-- (void)hydratePromotedSocialContextUserReferencesWithUsersDictionary:(id)arg1;
-- (id)whyYoureSeeingThisAdURLString;
 
 // Remaining properties
 @property(readonly, nonatomic, getter=isConversationMuted) _Bool conversationMuted;

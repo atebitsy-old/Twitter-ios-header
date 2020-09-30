@@ -6,6 +6,7 @@
 
 #import <Intents/INIntentResponse.h>
 
+__attribute__((visibility("hidden")))
 @interface T1ComposeIntentResponse : INIntentResponse
 {
     long long _code;

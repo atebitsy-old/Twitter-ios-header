@@ -35,6 +35,8 @@
 - (_Bool)isLayoutState:(id)arg1 validForViewModel:(id)arg2 layoutMetrics:(id)arg3;
 - (struct CGSize)_t1_followButtonSizeForText:(id)arg1;
 - (struct CGRect)_t1_followButtonFrameForText:(id)arg1 caretButtonFrame:(struct CGRect)arg2 socialTextFrame:(struct CGRect)arg3;
+- (struct CGRect)_t1_midDotFrameForTextFrame:(struct CGRect)arg1;
+- (struct CGRect)_t1_leftAlignedFollowButtonFrameForText:(id)arg1 midDotFrame:(struct CGRect)arg2;
 - (struct CGSize)_t1_maxFollowButtonSizeForSocialContextViewModel:(id)arg1;
 - (id)layoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2;
 - (void)viewModel:(id)arg1 didUpdateWithInfo:(id)arg2 forView:(id)arg3;

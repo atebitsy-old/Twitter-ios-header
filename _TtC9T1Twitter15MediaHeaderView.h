@@ -12,8 +12,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: mediaContainer
     // Error parsing type: , name: backgroundImageView
     // Error parsing type: , name: mediaHeaderModel
-    // Error parsing type: , name: mediaHeaderViewDelegate
-    // Error parsing type: , name: $__lazy_storage_$_chromeController
 }
 
 - (void).cxx_destruct;

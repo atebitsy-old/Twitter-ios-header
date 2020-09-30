@@ -19,7 +19,6 @@
     NSString *_isoCountryCode;
 }
 
-+ (id)carrierWithCarrier:(id)arg1;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool allowsVOIP; // @synthesize allowsVOIP=_allowsVOIP;
 @property(readonly, copy, nonatomic) NSString *isoCountryCode; // @synthesize isoCountryCode=_isoCountryCode;
@@ -27,7 +26,6 @@
 @property(readonly, copy, nonatomic) NSString *mobileCountryCode; // @synthesize mobileCountryCode=_mobileCountryCode;
 @property(readonly, copy, nonatomic) NSString *carrierName; // @synthesize carrierName=_carrierName;
 @property(readonly, copy) NSString *description;
-- (id)initWithCarrierName:(id)arg1 mobileCountryCode:(id)arg2 mobileNetworkCode:(id)arg3 isoCountryCode:(id)arg4 allowsVOIP:(_Bool)arg5;
 - (id)initWithCarrier:(id)arg1;
 
 // Remaining properties

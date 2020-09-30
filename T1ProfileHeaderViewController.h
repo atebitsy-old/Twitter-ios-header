@@ -112,6 +112,7 @@
 - (void)editProfileViewController:(id)arg1 didUpdateAvatarImage:(id)arg2;
 - (void)editProfileViewControllerWillRemoveHeader:(id)arg1;
 - (void)editProfileViewControllerWillChangeHeader:(id)arg1;
+- (void)summaryView:(id)arg1 didTapUserBadge:(id)arg2 sourceView:(id)arg3 sourceViewRect:(struct CGRect)arg4;
 - (void)summaryViewDidTapDesignatorLabel:(id)arg1;
 - (void)summaryViewDidTapFullName:(id)arg1;
 - (void)_t1_showProfilePhoto;

@@ -6,8 +6,34 @@
 
 #import <T1Twitter/T1ConversationContainerViewController.h>
 
-@interface T1ConversationContainerViewController (T1Twitter)
+#import <T1Twitter/T1MediaInlineComposeControllerDelegate-Protocol.h>
+#import <T1Twitter/T1ToasterContextDelegate-Protocol.h>
+#import <T1Twitter/T1TweetDetailsFocalStatusTableRowAdapterDelegate-Protocol.h>
+#import <T1Twitter/T1TweetDetailsPresenting-Protocol.h>
+
+@interface T1ConversationContainerViewController (T1Twitter) <T1MediaInlineComposeControllerDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, T1TweetDetailsPresenting, T1ToasterContextDelegate>
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
+- (struct CGSize)sizeForChildContentContainer:(id)arg1 withParentContainerSize:(struct CGSize)arg2;
+- (void)preferredContentSizeDidChangeForChildContentContainer:(id)arg1;
+- (void)inlineComposeControllerDidBeginEditing:(id)arg1;
+- (id)inlineComposeControllerScribePage:(id)arg1;
+- (void)refreshTimeline;
+- (void)inlineComposeControllerDidReturnFromFullscreen:(id)arg1;
+- (void)inlineComposeControllerWillSwitchToFullscreen:(id)arg1;
+- (id)inlineComposerControllerComposition:(id)arg1;
+- (void)inlineComposeController:(id)arg1 didSendStatus:(id)arg2 forComposition:(id)arg3;
+- (id)inlineComposeControllerInitialComposeString:(id)arg1;
+- (double)inlineComposeController:(id)arg1 autocompleteStartingPositionInContainer:(id)arg2;
+- (id)tweetDetailsFocalStatusTableRowAdapterCompositionForReplyAction:(id)arg1;
+- (id)scribeContext;
+- (id)scribeImpressionParameters;
+- (id)scribeComponent;
+- (id)scribeSection;
+- (id)scribePage;
+- (id)scribe;
+- (void)presentTweetWithID:(long long)arg1;
+- (_Bool)canPresentTweetWithID:(long long)arg1;
+- (id)scribePageForToaster:(id)arg1;
 @end
 

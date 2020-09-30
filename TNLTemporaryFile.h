@@ -46,7 +46,6 @@
 - (_Bool)appendData:(id)arg1 error:(out id *)arg2;
 - (_Bool)open:(out id *)arg1;
 - (_Bool)close:(out id *)arg1;
-- (_Bool)consumeExistingFile:(id)arg1 error:(out id *)arg2;
 @property(readonly, nonatomic, getter=isOpen) _Bool open;
 - (void)dealloc;
 - (id)init;

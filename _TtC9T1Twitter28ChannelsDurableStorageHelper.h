@@ -13,9 +13,11 @@
     // Error parsing type: , name: coldstartTTLSecs
     // Error parsing type: , name: accountID
     // Error parsing type: , name: backendStorageMigrationEnabled
-    // Error parsing type: , name: migrationqueue
+    // Error parsing type: , name: migrationQueue
     // Error parsing type: , name: writeTimer
     // Error parsing type: , name: api
+    // Error parsing type: , name: persistentPinnedListsObserver
+    // Error parsing type: , name: pinnedListsLastUpdated
 }
 
 @end

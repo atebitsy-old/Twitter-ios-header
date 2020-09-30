@@ -21,7 +21,6 @@
 + (id)stringByCombiningParameterString:(id)arg1 query:(id)arg2 fragment:(id)arg3 options:(long long)arg4;
 + (_Bool)supportsSecureCoding;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSDictionary *parameters; // @synthesize parameters=_parameters;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)description;
@@ -48,7 +47,6 @@
 - (id)initWithDictionary:(id)arg1;
 - (id)initWithURLEncodedString:(id)arg1 options:(long long)arg2;
 - (id)initWithURLEncodedString:(id)arg1;
-- (id)initWithDirectlyAssignedDictionary:(id)arg1;
 - (id)init;
 
 @end

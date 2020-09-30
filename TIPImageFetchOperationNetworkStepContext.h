@@ -16,8 +16,6 @@
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <TIPImageDownloadContext> imageDownloadContext; // @synthesize imageDownloadContext=_imageDownloadContext;
-@property(retain, nonatomic) TIPImageFetchDownloadRequest *imageDownloadRequest; // @synthesize imageDownloadRequest=_imageDownloadRequest;
 
 @end
 

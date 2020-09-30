@@ -6,14 +6,14 @@
 
 #import <TwitterImagePipeline/TIPImageViewFetchHelper.h>
 
-#import <T1Twitter/T1SavePhotoProvider-Protocol.h>
 #import <T1Twitter/TIPImageViewFetchHelperDataSource-Protocol.h>
 #import <T1Twitter/TIPImageViewFetchHelperDelegate-Protocol.h>
+#import <T1Twitter/TUISavePhotoProvider-Protocol.h>
 
 @class NSArray, NSDictionary, NSNumber, NSString, NSURL, NSValue, TFNProgressView, TFNTwitterAccount, TFNTwitterImageCategory, TFSTimer, TIPImagePipeline, UIView;
-@protocol T1ImageViewFetchHelperDelegate, T1SavePhotoProvider, TIPImageFetchTransformer;
+@protocol T1ImageViewFetchHelperDelegate, TIPImageFetchTransformer, TUISavePhotoProvider;
 
-@interface T1ImageViewFetchHelper : TIPImageViewFetchHelper <T1SavePhotoProvider, TIPImageViewFetchHelperDataSource, TIPImageViewFetchHelperDelegate>
+@interface T1ImageViewFetchHelper : TIPImageViewFetchHelper <TUISavePhotoProvider, TIPImageViewFetchHelperDataSource, TIPImageViewFetchHelperDelegate>
 {
     TFSTimer *_updateProgressIndicatorsVisibilityTimer;
     struct {
@@ -130,7 +130,6 @@
 - (void)tip_fetchHelperDidStartLoading:(id)arg1;
 - (id)imageVariantForSelectionBehavior:(CDStruct_c8a718ae)arg1 ignoringMaximumDimensions:(_Bool)arg2;
 - (id)imageVariantForSelectionBehavior:(CDStruct_c8a718ae)arg1;
-- (void)_setImageWithNullableURL:(id)arg1 originalDimensions:(struct CGSize)arg2;
 - (void)setImageWithEntityMedia:(id)arg1;
 - (void)setImageWithMediaInfo:(id)arg1;
 - (void)setImageWithTemplateURL:(id)arg1 originalDimensions:(struct CGSize)arg2;
@@ -163,7 +162,7 @@
 @property(nonatomic) _Bool permitPreviewLoading;
 @property(nonatomic) _Bool permitProgressiveLoading;
 @property(nonatomic) _Bool treatProgressWithoutImageAsIndeterminate;
-@property(readonly, nonatomic) id <T1SavePhotoProvider> savePhotoProvider;
+@property(readonly, nonatomic) id <TUISavePhotoProvider> savePhotoProvider;
 - (void)getPhotoImage:(CDUnknownBlockType)arg1;
 - (void)getPhotoFilePath:(CDUnknownBlockType)arg1;
 

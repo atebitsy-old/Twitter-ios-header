@@ -14,7 +14,6 @@
     // Error parsing type: , name: path
     // Error parsing type: , name: parameters
     // Error parsing type: , name: assimilationOptions
-    // Error parsing type: , name: scriber
 }
 
 - (void).cxx_destruct;

@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class NSMutableArray, NSString, T1FleetsProfileHeaderAvatarView, T1ProfileAvatarImageView, T1UserBadger, TFNTwitterAccount, TFNTwitterUserDataSource, UIImage, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class NSArray, NSMutableArray, NSString, T1FleetsProfileHeaderAvatarView, T1ProfileAvatarImageView, T1UserBadger, TFNTwitterAccount, TFNTwitterUserDataSource, UIImage, UILongPressGestureRecognizer, UITapGestureRecognizer;
 @protocol T1ProfileSummaryViewDelegate;
 
 @interface T1ProfileSummaryView : UIView
@@ -14,6 +14,7 @@
     UITapGestureRecognizer *_avatarTapGestureRecognizer;
     UILongPressGestureRecognizer *_avatarLongPressGestureRecognizer;
     UITapGestureRecognizer *_titleTapGestureRecognizer;
+    UITapGestureRecognizer *_badgesTapGestureRecognizer;
     _Bool _supportsCompactLayout;
     T1UserBadger *_userBadger;
     _Bool _shouldBounce;
@@ -38,10 +39,12 @@
     UIView *_avatarContainerView;
     NSMutableArray *_maskViews;
     NSMutableArray *_positionedElements;
+    NSArray *_userBadges;
 }
 
 + (double)bottomContentPaddingToLastBaseline;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *userBadges; // @synthesize userBadges=_userBadges;
 @property(readonly, nonatomic) NSMutableArray *positionedElements; // @synthesize positionedElements=_positionedElements;
 @property(readonly, nonatomic) NSMutableArray *maskViews; // @synthesize maskViews=_maskViews;
 @property(readonly, nonatomic) UIView *avatarContainerView; // @synthesize avatarContainerView=_avatarContainerView;
@@ -84,6 +87,7 @@
 - (void)_t1_userDataSourceDidUpdate;
 - (void)setHeaderSubtitle:(id)arg1 animated:(_Bool)arg2;
 - (void)_t1_updateAvatarViewStyle;
+- (void)_t1_didTapUserBadges:(id)arg1;
 - (void)_t1_didTapFullName:(id)arg1;
 - (void)_t1_didLongPressAvatar:(id)arg1;
 - (void)_t1_didTapAvatar:(id)arg1;

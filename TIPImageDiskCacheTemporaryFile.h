@@ -42,10 +42,6 @@
 @property(nonatomic) __weak TIPImageDiskCache *diskCache; // @synthesize diskCache=_diskCache;
 @property(readonly, copy, nonatomic) NSString *finalPath; // @synthesize finalPath=_finalPath;
 @property(readonly, copy, nonatomic) NSString *temporaryPath; // @synthesize temporaryPath=_temporaryPath;
-@property(readonly, copy, nonatomic) NSString *imageIdentifier; // @synthesize imageIdentifier=_imageIdentifier;
-- (void)cleanupOpenFile;
-- (void)finalizeWithContext:(id)arg1;
-- (unsigned long long)appendData:(id)arg1;
 - (void)dealloc;
 - (id)initWithIdentifier:(id)arg1 temporaryPath:(id)arg2 finalPath:(id)arg3 diskCache:(id)arg4;
 - (id)init;

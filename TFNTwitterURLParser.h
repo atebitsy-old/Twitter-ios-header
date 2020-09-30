@@ -73,6 +73,9 @@
 + (id)_tfn_parsePatternMatchingTweetLinkWithSourceURL:(id)arg1 nonUsernamePaths:(id)arg2 path:(id)arg3 wholePathRange:(struct _NSRange)arg4;
 + (id)_tfn_parseStringMatchingHomeTimelineWithSourceURL:(id)arg1 nonUsernamePaths:(id)arg2 path:(id)arg3 wholePathRange:(struct _NSRange)arg4;
 + (id)parseTwitterApplicationURL:(id)arg1 nonUsernamePaths:(id)arg2;
++ (_Bool)useIndividuallyLazyRegexCompilations;
++ (void)setUseIndividuallyLazyRegexCompilationsBlock:(CDUnknownBlockType)arg1;
++ (id)useIndividuallyLazyRegexCompilationsFeatureSwitch;
 + (id)embeddedURLWithRefSrcFromRedirectURL:(id)arg1;
 + (id)embeddedURLFromRedirectURL:(id)arg1;
 + (_Bool)isPeriscopeBroadcastURL:(id)arg1;

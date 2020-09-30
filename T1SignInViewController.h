@@ -14,6 +14,7 @@
 #import <T1Twitter/UIScrollViewDelegate-Protocol.h>
 
 @class NSString, T1AuthenticationForm, T1OnboardingFlowAssistant, T1OneFactorAuthorizationRequest, T1SignInManager, T1SignInViewControllerModernAppearanceConfiguration, T1SignUpFormFooterView, T1SingleSignOnForm, T1UIInstrumentationWebViewController, TFNAttributedTextView, TFNBarButtonItem, TFNHUD, TFNTwitterAccount;
+@protocol T1LoginChallengeProtocol;
 
 @interface T1SignInViewController : TFNFormViewController <T1SignInManagerDelegate, T1VerifyOneFactorAuthorizationDelegate, TFNAttributedTextViewDelegate, TFNTwitter1PasswordExtensionDelegate, UIScrollViewDelegate, T1AccountAdder>
 {
@@ -40,10 +41,12 @@
     T1UIInstrumentationWebViewController *_jsInstrumentationViewController;
     T1OnboardingFlowAssistant *_flowAssistant;
     NSString *_nonce;
+    id <T1LoginChallengeProtocol> _challengeVC;
 }
 
 + (_Bool)isAuthenticationInProgress;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <T1LoginChallengeProtocol> challengeVC; // @synthesize challengeVC=_challengeVC;
 @property(retain, nonatomic) NSString *nonce; // @synthesize nonce=_nonce;
 @property(retain, nonatomic) T1OnboardingFlowAssistant *flowAssistant; // @synthesize flowAssistant=_flowAssistant;
 @property(retain, nonatomic) T1UIInstrumentationWebViewController *jsInstrumentationViewController; // @synthesize jsInstrumentationViewController=_jsInstrumentationViewController;

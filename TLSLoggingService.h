@@ -27,11 +27,6 @@
 - (void).cxx_destruct;
 @property __weak id <TLSLoggingServiceDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long maximumSafeMessageLength; // @synthesize maximumSafeMessageLength=_maximumSafeMessageLength;
-- (_Bool)_canLogWithLevel:(long long)arg1 channel:(id)arg2 context:(id)arg3;
-- (long long)_transaction_filterLogStream:(id)arg1 level:(long long)arg2 channel:(id)arg3 context:(id)arg4;
-- (void)_transaction_logExecuteWithTimestamp:(double)arg1 level:(long long)arg2 channel:(id)arg3 file:(id)arg4 function:(id)arg5 line:(long long)arg6 context:(id)arg7 threadId:(unsigned int)arg8 threadName:(id)arg9 message:(id)arg10;
-- (void)_logDispatchWithLevel:(long long)arg1 channel:(id)arg2 file:(id)arg3 function:(id)arg4 line:(long long)arg5 context:(id)arg6 options:(long long)arg7 format:(id)arg8 arguments:(char *)arg9;
-- (void)_nonquickFilter_resetQuickFilter:(unsigned long long)arg1;
 - (void)logWithLevel:(long long)arg1 channel:(id)arg2 file:(id)arg3 function:(id)arg4 line:(long long)arg5 contextObject:(id)arg6 options:(long long)arg7 message:(id)arg8;
 - (void)addOutputStream:(id)arg1;
 - (void)dealloc;

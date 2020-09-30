@@ -16,7 +16,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: allSeenTweetIDs
     // Error parsing type: , name: scribe
     // Error parsing type: , name: scribeContext
-    // Error parsing type: , name: scriber
     // Error parsing type: , name: responseParseTracerConfig
     // Error parsing type: , name: encodingPolicy
 }

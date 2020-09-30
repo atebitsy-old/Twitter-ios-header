@@ -31,50 +31,14 @@
 }
 
 - (void).cxx_destruct;
-@property long long atomicTotalSize; // @synthesize atomicTotalSize=_atomicTotalSize;
-@property(readonly, copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
 - (void)inspect:(CDUnknownBlockType)arg1;
 - (void)tip_cache:(id)arg1 didEvictEntry:(id)arg2;
-- (id)filePathForSafeIdentifier:(id)arg1;
-- (void)clearTemporaryFilePath:(id)arg1;
-- (void)finalizeTemporaryFile:(id)arg1 withContext:(id)arg2;
-- (id)openTemporaryFileForImageIdentifier:(id)arg1;
-- (void)touchImageWithIdentifier:(id)arg1 orSaveImageEntry:(id)arg2;
-- (void)prune;
 - (void)clearAllImages:(CDUnknownBlockType)arg1;
 - (void)clearImageWithIdentifier:(id)arg1;
-- (void)updateImageEntry:(id)arg1 forciblyReplaceExisting:(_Bool)arg2;
-- (id)imageEntryForIdentifier:(id)arg1 options:(long long)arg2 targetDimensions:(struct CGSize)arg3 targetContentMode:(long long)arg4 decoderConfigMap:(id)arg5;
-- (id)copyImageEntryFileForIdentifier:(id)arg1 error:(out id *)arg2;
-- (_Bool)renameImageEntryWithIdentifier:(id)arg1 toIdentifier:(id)arg2 error:(id *)arg3;
 - (void)dealloc;
-- (id)initWithPath:(id)arg1;
 @property(readonly, nonatomic) long long cacheType;
 @property(readonly, nonatomic) unsigned long long totalCost;
 @property(readonly, nonatomic) TIPLRUCache *manifest;
-- (_Bool)_diskCache_renameImageEntryWithOldIdentifier:(id)arg1 newIdentifier:(id)arg2 error:(out id *)arg3;
-- (void)_diskCache_inspect:(CDUnknownBlockType)arg1;
-- (void)_diskCache_finalizeTemporaryFile:(id)arg1 context:(id)arg2;
-- (void)_diskCache_clearAllImages;
-- (void)_diskCache_touchEntry:(id)arg1 forced:(_Bool)arg2 partial:(_Bool)arg3;
-- (_Bool)_diskCache_touchImage:(id)arg1 forced:(_Bool)arg2;
-- (void)_diskCache_updateImageEntry:(id)arg1 forciblyReplaceExisting:(_Bool)arg2 safeIdentifier:(id)arg3;
-- (void)_diskCache_populateEntryWithTemporaryFile:(id)arg1;
-- (void)_diskCache_populateEntryWithPartialImage:(id)arg1 decoderConfigMap:(id)arg2;
-- (void)_diskCache_populateEntryWithCompleteImage:(id)arg1 targetDimensions:(struct CGSize)arg2 targetContentMode:(long long)arg3 decoderConfigMap:(id)arg4;
-- (id)_diskCache_getImageEntryFromManifest:(id)arg1 options:(long long)arg2 targetDimensions:(struct CGSize)arg3 targetContentMode:(long long)arg4 decoderConfigMap:(id)arg5;
-- (id)_diskCache_getImageEntryDirectlyFromDisk:(id)arg1 options:(long long)arg2 targetDimensions:(struct CGSize)arg3 targetContentMode:(long long)arg4 decoderConfigMap:(id)arg5;
-- (id)_diskCache_getImageEntry:(id)arg1 options:(long long)arg2 targetDimensions:(struct CGSize)arg3 targetContentMode:(long long)arg4 decoderConfigMap:(id)arg5;
-- (id)_diskCache_copyImageEntryToTemporaryFile:(id)arg1 error:(out id *)arg2;
-- (void)_diskCache_ensureCacheDirectoryExists;
-- (void)_diskCache_updateByteCountsAdded:(unsigned long long)arg1 removed:(unsigned long long)arg2;
-- (id)diskCache_imageEntryForIdentifier:(id)arg1 options:(long long)arg2 targetDimensions:(struct CGSize)arg3 targetContentMode:(long long)arg4 decoderConfigMap:(id)arg5;
-- (id)diskCache_imageEntryFilePathForIdentifier:(id)arg1 hitShouldMoveEntryToHead:(_Bool)arg2 context:(out id *)arg3;
-- (void)diskCache_updateImageEntry:(id)arg1 forciblyReplaceExisting:(_Bool)arg2;
-- (id)diskCache_syncAccessManifest;
-- (void)_manifest_finalizePopulateManifest:(id)arg1 totalSize:(unsigned long long)arg2;
-- (void)_manifest_populateEntriesWithCachePath:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)_manifest_populateManifestWithCachePath:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

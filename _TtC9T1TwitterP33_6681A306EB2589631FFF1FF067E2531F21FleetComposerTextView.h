@@ -6,9 +6,13 @@
 
 #import <UIKit/UITextView.h>
 
+#import <T1Twitter/NSLayoutManagerDelegate-Protocol.h>
+#import <T1Twitter/NSTextStorageDelegate-Protocol.h>
+#import <T1Twitter/UITextViewDelegate-Protocol.h>
+
 @class NSString;
 
-@interface _TtC9T1TwitterP33_6681A306EB2589631FFF1FF067E2531F21FleetComposerTextView : UITextView
+@interface _TtC9T1TwitterP33_6681A306EB2589631FFF1FF067E2531F21FleetComposerTextView : UITextView <NSLayoutManagerDelegate, NSTextStorageDelegate, UITextViewDelegate>
 {
     // Error parsing type: , name: fittingTextContainer
     // Error parsing type: , name: fittingTextStorage
@@ -32,6 +36,8 @@
 @property(nonatomic) struct CGRect frame;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1 textContainer:(id)arg2;
+- (void)layoutManager:(id)arg1 textContainer:(id)arg2 didChangeGeometryFromSize:(struct CGSize)arg3;
+- (void)textStorage:(id)arg1 willProcessEditing:(unsigned long long)arg2 range:(struct _NSRange)arg3 changeInLength:(long long)arg4;
 
 @end
 

@@ -16,10 +16,6 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) unsigned long long taskIdentifier; // @synthesize taskIdentifier=_taskIdentifier;
-@property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-@property(readonly, copy, nonatomic) CDUnknownBlockType expirationHandler; // @synthesize expirationHandler=_expirationHandler;
-- (id)initWithTaskIdentifier:(unsigned long long)arg1 name:(id)arg2 expirationHandler:(CDUnknownBlockType)arg3;
 
 @end
 

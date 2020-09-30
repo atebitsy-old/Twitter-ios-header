@@ -11,7 +11,6 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter21GuideEventSummaryHero : TFNTableViewCell
 {
-    // Error parsing type: , name: delegate
     // Error parsing type: , name: contentStackView
     // Error parsing type: , name: headerView
     // Error parsing type: , name: titleLabel
@@ -23,8 +22,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: caretContainerView
     // Error parsing type: , name: caretBackground
     // Error parsing type: , name: caretButton
-    // Error parsing type: , name: feedbackPresenter
-    // Error parsing type: , name: feedbackPresentationController
+    // Error parsing type: , name: feedbackHandler
     // Error parsing type: , name: navigationHelper
     // Error parsing type: , name: backgroundMediaView
     // Error parsing type: , name: accessibilityActions

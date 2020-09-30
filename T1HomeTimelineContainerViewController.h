@@ -21,12 +21,10 @@
     T1ScrollingSegmentedViewController *_contentViewController;
     T1ScrollingHorizontalLabelTitleView *_labelBarTitleView;
     TFNBarButtonItem *_timelineContentPreferencesButton;
-    unsigned long long _spheresFetchRetryCount;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool didLayoutBarItems; // @synthesize didLayoutBarItems=_didLayoutBarItems;
-@property(nonatomic) unsigned long long spheresFetchRetryCount; // @synthesize spheresFetchRetryCount=_spheresFetchRetryCount;
 @property(nonatomic, getter=isLayoutSubviewsDone) _Bool layoutSubviewsDone; // @synthesize layoutSubviewsDone=_layoutSubviewsDone;
 @property(retain, nonatomic) TFNBarButtonItem *timelineContentPreferencesButton; // @synthesize timelineContentPreferencesButton=_timelineContentPreferencesButton;
 @property(retain, nonatomic) T1ScrollingHorizontalLabelTitleView *labelBarTitleView; // @synthesize labelBarTitleView=_labelBarTitleView;

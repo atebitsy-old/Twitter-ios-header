@@ -33,7 +33,9 @@
 - (void)_t1_fadeViewsToHidden:(_Bool)arg1 animated:(_Bool)arg2 alphaChangeBlock:(CDUnknownBlockType)arg3 permanentlyChangeVisibilityBlock:(CDUnknownBlockType)arg4 additionalAnimations:(CDUnknownBlockType)arg5;
 - (void)setPlayerControlsHidden:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)setNavigationBarHidden:(_Bool)arg1 animated:(_Bool)arg2;
+- (void)_t1_voiceOverStatusDidChange:(id)arg1;
 - (void)_t1_tapGestureRecognized:(id)arg1;
+- (void)dealloc;
 - (id)init;
 - (id)initWithDataSource:(id)arg1;
 

@@ -20,7 +20,7 @@
     long long _locationFilter;
     TFSTwitterLocation *_location;
     NSString *_searchSource;
-    long long _vertical;
+    NSString *_vertical;
     NSDictionary *_urtRequestParameters;
 }
 
@@ -28,7 +28,7 @@
 + (id)tweetDetailQuoteTweetSearchParamsWithQuoteTweetID:(long long)arg1;
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *urtRequestParameters; // @synthesize urtRequestParameters=_urtRequestParameters;
-@property(readonly, nonatomic) long long vertical; // @synthesize vertical=_vertical;
+@property(readonly, copy, nonatomic) NSString *vertical; // @synthesize vertical=_vertical;
 @property(readonly, nonatomic) _Bool allowSpellingCorrection; // @synthesize allowSpellingCorrection=_allowSpellingCorrection;
 @property(readonly, copy, nonatomic) NSString *searchSource; // @synthesize searchSource=_searchSource;
 @property(readonly, nonatomic) TFSTwitterLocation *location; // @synthesize location=_location;
@@ -47,7 +47,7 @@
 - (id)initWithQuery:(id)arg1 pinnedTweets:(id)arg2 via:(id)arg3;
 - (id)initWithQuery:(id)arg1 via:(id)arg2;
 - (id)initWithQuery:(id)arg1 allowPromotedContent:(_Bool)arg2 dataLookupID:(id)arg3 queryRewriteId:(id)arg4 safetyLevel:(long long)arg5 socialFilter:(long long)arg6 locationFilter:(long long)arg7 location:(id)arg8 searchSource:(id)arg9 urtRequestParameters:(id)arg10;
-- (id)initWithQuery:(id)arg1 allowPromotedContent:(_Bool)arg2 dataLookupID:(id)arg3 queryRewriteId:(id)arg4 safetyLevel:(long long)arg5 socialFilter:(long long)arg6 locationFilter:(long long)arg7 location:(id)arg8 searchSource:(id)arg9 allowSpellingCorrection:(_Bool)arg10 vertical:(long long)arg11 urtRequestParameters:(id)arg12;
+- (id)initWithQuery:(id)arg1 allowPromotedContent:(_Bool)arg2 dataLookupID:(id)arg3 queryRewriteId:(id)arg4 safetyLevel:(long long)arg5 socialFilter:(long long)arg6 locationFilter:(long long)arg7 location:(id)arg8 searchSource:(id)arg9 allowSpellingCorrection:(_Bool)arg10 vertical:(id)arg11 urtRequestParameters:(id)arg12;
 - (id)init;
 
 @end

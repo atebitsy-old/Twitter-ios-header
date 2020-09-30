@@ -6,6 +6,8 @@
 
 #import <T1Twitter/TFNTwitterMediaAssetImage.h>
 
+@class NSString;
+
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter20FleetMediaAssetImage : TFNTwitterMediaAssetImage
 {
@@ -19,6 +21,7 @@ __attribute__((visibility("hidden")))
 - (void)originalMediaDataWithCompletion:(CDUnknownBlockType)arg1;
 - (void)originalMediaURLWithCompletion:(CDUnknownBlockType)arg1;
 @property(nonatomic, readonly) unsigned long long hashableSource;
+@property(nonatomic, copy) NSString *altText;
 - (void)renderFinalDataWithOptions:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)saveLocalBackupToDocumentsDirectory:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)encodeWithCoder:(id)arg1;

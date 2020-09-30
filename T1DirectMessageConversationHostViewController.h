@@ -6,12 +6,10 @@
 
 #import <TFNUI/TFNViewController.h>
 
-#import <T1Twitter/T1ToasterContextDelegate-Protocol.h>
-
 @class NSString, T1DirectMessageComposeViewController, T1DirectMessageConversation, TFNTwitterAccount, TFNTwitterStatus;
 @protocol T1DirectMessageConversationHostViewControllerDelegate;
 
-@interface T1DirectMessageConversationHostViewController : TFNViewController <T1ToasterContextDelegate>
+@interface T1DirectMessageConversationHostViewController : TFNViewController
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: conversation

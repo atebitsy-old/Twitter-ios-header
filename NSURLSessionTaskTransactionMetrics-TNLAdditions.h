@@ -25,9 +25,7 @@
 - (id)tnl_earliestDate;
 - (id)tnl_timingDescription;
 - (id)tnl_resourceFetchTypeDebugString;
-- (id)_tnl_metadata:(_Bool)arg1;
 - (id)tnl_medadata;
-- (id)_tnl_dictionaryValue:(_Bool)arg1;
 - (id)tnl_dictionaryDescription;
 - (id)tnl_dictionaryValue;
 @end

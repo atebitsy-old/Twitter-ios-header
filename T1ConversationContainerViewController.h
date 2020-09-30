@@ -38,6 +38,8 @@
 - (void)updateInsets;
 @property(nonatomic, readonly) _Bool tfn_prefersTabBarShadowHidden;
 - (void)viewDidDisappear:(_Bool)arg1;
+- (void)viewDidFullyDisappear:(_Bool)arg1;
+- (void)viewDidFullyAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;

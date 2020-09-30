@@ -19,14 +19,6 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) TIPImageCacheEntry *entry; // @synthesize entry=_entry;
-@property(readonly, nonatomic, getter=isDirty) _Bool dirty; // @synthesize dirty=_dirty;
-@property(readonly, nonatomic) struct CGSize sourceImageDimensions; // @synthesize sourceImageDimensions=_sourceImageDimensions;
-@property(readonly, copy, nonatomic) NSString *transformerIdentifier; // @synthesize transformerIdentifier=_transformerIdentifier;
-- (_Bool)strongify;
-- (void)weakify;
-- (void)markDirty;
-- (id)initWithEntry:(id)arg1 transformerIdentifier:(id)arg2 sourceImageDimensions:(struct CGSize)arg3;
 
 @end
 

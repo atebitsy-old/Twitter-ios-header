@@ -8,5 +8,8 @@
 
 @interface T1ContentPreferencesSettingsViewController (T1Twitter)
 - (void)settingsDidUpdate:(id)arg1;
+- (id)scribeSection;
+- (id)scribePage;
+- (id)scribe;
 @end
 

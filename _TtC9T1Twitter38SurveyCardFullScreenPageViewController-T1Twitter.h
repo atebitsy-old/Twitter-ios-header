@@ -6,9 +6,12 @@
 
 #import <T1Twitter/_TtC9T1Twitter38SurveyCardFullScreenPageViewController.h>
 
-@interface _TtC9T1Twitter38SurveyCardFullScreenPageViewController (T1Twitter)
+#import <T1Twitter/TFNNavigationControllerTransitionProvider-Protocol.h>
+
+@interface _TtC9T1Twitter38SurveyCardFullScreenPageViewController (T1Twitter) <TFNNavigationControllerTransitionProvider>
 @property(nonatomic, readonly) _Bool tfn_logoTitleViewShown;
 @property(nonatomic, readonly) long long tfn_preferredToolbarVisibility;
 @property(nonatomic, readonly) _Bool tfn_prefersNavigationBarShadowHidden;
+- (id)navigationControllerTransitionForOperation:(long long)arg1 fromViewController:(id)arg2 toViewController:(id)arg3;
 @end
 

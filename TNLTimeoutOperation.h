@@ -13,14 +13,11 @@
     double _timeoutDuration;
 }
 
-@property(readonly, nonatomic) double timeoutDuration; // @synthesize timeoutDuration=_timeoutDuration;
-- (void)_complete;
 - (void)start;
 - (_Bool)isAsynchronous;
 - (_Bool)isConcurrent;
 - (_Bool)isFinished;
 - (_Bool)isExecuting;
-- (id)initWithTimeoutDuration:(double)arg1;
 
 @end
 

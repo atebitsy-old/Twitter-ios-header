@@ -8,6 +8,7 @@
 
 @class NSString, T1ToastAction;
 
+__attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter30T1DirectMessageQuickShareToast : NSObject
 {
     // Error parsing type: , name: conversation

@@ -50,6 +50,7 @@
 @property(readonly, copy, nonatomic) NSString *displayFullName;
 @property(readonly, nonatomic) NSNumber *userIDNumber;
 @property(readonly, nonatomic) TFSTwitterUserReference *userReference;
+@property(readonly, nonatomic) _Bool hasBirdwatchNotes;
 @property(readonly, nonatomic) NSNumber *isProfileBioTranslatableNumber;
 @property(readonly, nonatomic) _Bool isProfileBioTranslatable;
 @property(readonly, nonatomic) _Bool hasFreshFullRelationship;

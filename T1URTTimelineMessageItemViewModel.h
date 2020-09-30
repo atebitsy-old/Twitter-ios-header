@@ -6,11 +6,10 @@
 
 #import <objc/NSObject.h>
 
-#import <T1Twitter/NSObject-Protocol.h>
+@class NSArray, NSString, TFNTwitterFeedbackInfo, TFSURTRichText, _TtCVOV14TFSTwitterCore16URTTimelineEntry7Content4Item15ClientEventInfo;
+@protocol T1TwitterTimelineMessageTextAction;
 
-@class NSDictionary, NSString;
-
-@interface T1URTTimelineMessageItemViewModel : NSObject <NSObject>
+@interface T1URTTimelineMessageItemViewModel : NSObject
 {
     // Error parsing type: , name: entryID
     // Error parsing type: , name: messageItem
@@ -22,10 +21,23 @@
 
 - (void).cxx_destruct;
 - (id)init;
+@property(nonatomic, readonly) NSArray *impressionCallbackEndpoints;
+@property(nonatomic, readonly) TFNTwitterFeedbackInfo *feedbackInfo;
+@property(nonatomic, readonly) _Bool isDismissible;
+@property(nonatomic, readonly) NSString *scribeComponentForSecondaryAction;
+@property(nonatomic, readonly) NSString *scribeComponentForPrimaryAction;
+@property(nonatomic, readonly) id <T1TwitterTimelineMessageTextAction> secondaryButtonAction;
+@property(nonatomic, readonly) id <T1TwitterTimelineMessageTextAction> primaryButtonAction;
+@property(nonatomic, readonly) TFSURTRichText *bodyRichText;
+@property(nonatomic, readonly) TFSURTRichText *headerRichText;
+@property(nonatomic, readonly) long long bodyAlignment;
+@property(nonatomic, readonly) long long headerAlignment;
+@property(nonatomic, readonly) NSArray *imageVariants;
+@property(nonatomic, readonly) long long layoutType;
 @property(nonatomic) _Bool shouldLogImpression; // @synthesize shouldLogImpression;
-@property(nonatomic, readonly) NSDictionary *scribeItem;
-@property(nonatomic, readonly) NSString *scribeItemImpressionID;
 - (id)scribeParametersWithPosition:(long long)arg1;
+@property(nonatomic, readonly) _TtCVOV14TFSTwitterCore16URTTimelineEntry7Content4Item15ClientEventInfo *clientEventInfo; // @synthesize clientEventInfo;
+@property(nonatomic, readonly) NSString *entryID;
 
 @end
 

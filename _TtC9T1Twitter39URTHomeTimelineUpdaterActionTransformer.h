@@ -13,7 +13,6 @@
     // Error parsing type: , name: allowPromotedContent
     // Error parsing type: , name: homeVariant
     // Error parsing type: , name: isLatestTweetsTimelineOptionAvailable
-    // Error parsing type: , name: scriber
     // Error parsing type: , name: progressiveAPIConfig
     // Error parsing type: , name: isThreadedModuleSupportEnabled
 }

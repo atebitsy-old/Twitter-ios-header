@@ -15,6 +15,7 @@
     NSString *_socialText;
     NSString *_followButtonText;
     NSString *_followingButtonText;
+    struct CGRect _midDotFrame;
     struct CGRect _caretButtonFrame;
     struct CGRect _socialBadgeFrame;
     struct CGRect _socialTextFrame;
@@ -32,6 +33,7 @@
 @property(nonatomic) struct CGRect socialTextFrame; // @synthesize socialTextFrame=_socialTextFrame;
 @property(nonatomic) struct CGRect socialBadgeFrame; // @synthesize socialBadgeFrame=_socialBadgeFrame;
 @property(nonatomic) struct CGRect caretButtonFrame; // @synthesize caretButtonFrame=_caretButtonFrame;
+@property(nonatomic) struct CGRect midDotFrame; // @synthesize midDotFrame=_midDotFrame;
 @property(retain, nonatomic) NSString *followingButtonText; // @synthesize followingButtonText=_followingButtonText;
 @property(retain, nonatomic) NSString *followButtonText; // @synthesize followButtonText=_followButtonText;
 @property(retain, nonatomic) NSString *socialText; // @synthesize socialText=_socialText;

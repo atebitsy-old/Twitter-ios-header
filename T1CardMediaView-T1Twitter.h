@@ -10,5 +10,6 @@
 - (void)presentFullscreenPlayerFromInlineMediaView:(id)arg1 withPreviewImage:(id)arg2;
 - (_Bool)cardPlayerContainerViewCanPlayStreamInline:(id)arg1;
 - (void)cardPlayerContainerView:(id)arg1 didTapPlayButtonOverlayWithEvent:(id)arg2;
+- (void)t1_fetchHelper:(id)arg1 didUpdateImageFromSource:(long long)arg2 isFinal:(_Bool)arg3;
 @end
 

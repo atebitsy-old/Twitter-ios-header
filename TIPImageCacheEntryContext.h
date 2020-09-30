@@ -22,13 +22,6 @@
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) struct CGSize dimensions; // @synthesize dimensions=_dimensions;
-@property(nonatomic, getter=isAnimated) _Bool animated; // @synthesize animated=_animated;
-@property(retain, nonatomic) NSDate *lastAccess; // @synthesize lastAccess=_lastAccess;
-@property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-@property(nonatomic) double TTL; // @synthesize TTL=_TTL;
-@property(nonatomic) _Bool treatAsPlaceholder; // @synthesize treatAsPlaceholder=_treatAsPlaceholder;
-@property(nonatomic) _Bool updateExpiryOnAccess; // @synthesize updateExpiryOnAccess=_updateExpiryOnAccess;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithCacheEntryContext:(id)arg1;
 

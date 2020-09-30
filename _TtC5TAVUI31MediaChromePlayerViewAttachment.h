@@ -6,6 +6,8 @@
 
 #import <swiftCore/_TtCs12_SwiftObject.h>
 
+@class TAVPlaybackState;
+
 @interface _TtC5TAVUI31MediaChromePlayerViewAttachment : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: playerView
@@ -13,6 +15,13 @@
     // Error parsing type: , name: lastPlaybackState
     // Error parsing type: , name: playbackStrongReference
 }
+
+- (void)observerDidDetachFromPlayer:(id)arg1;
+- (void)observerDidAttachToPlayer:(id)arg1;
+- (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
+@property(nonatomic, readonly) TAVPlaybackState *playbackState;
+- (void)removePlaybackObserver:(id)arg1;
+- (void)addPlaybackObserver:(id)arg1;
 
 @end
 

@@ -6,10 +6,12 @@
 
 #import <UIKit/UIView.h>
 
+#import <T1Twitter/TFNHapticFeedback-Protocol.h>
+
 @class UIImageView;
 
 __attribute__((visibility("hidden")))
-@interface _TtC9T1Twitter32DirectMessageSwipeToSendPillView : UIView
+@interface _TtC9T1Twitter32DirectMessageSwipeToSendPillView : UIView <TFNHapticFeedback>
 {
     // Error parsing type: , name: arrowTravelDistance
     // Error parsing type: , name: swipeToSendImageView

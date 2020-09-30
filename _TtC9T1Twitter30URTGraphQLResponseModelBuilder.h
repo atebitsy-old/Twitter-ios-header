@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter30URTGraphQLResponseModelBuilder : NSObject
 {
     // Error parsing type: , name: urtTimelineUID
     // Error parsing type: , name: requestCursor
     // Error parsing type: , name: accountID
     // Error parsing type: , name: assimilationOptions
-    // Error parsing type: , name: scriber
     // Error parsing type: , name: decodingPath
     // Error parsing type: , name: errorRecoveryContentBuilder
 }

@@ -20,18 +20,13 @@
 }
 
 - (void).cxx_destruct;
-@property long long atomicTotalCost; // @synthesize atomicTotalCost=_atomicTotalCost;
 @property(readonly, nonatomic) TIPLRUCache *manifest; // @synthesize manifest=_manifest;
 - (void)_strongifyEntries;
 - (void)_updateByteCountsAdded:(unsigned long long)arg1 removed:(unsigned long long)arg2;
 - (void)_tip_didReceiveMemoryWarning:(id)arg1;
 - (void)inspect:(CDUnknownBlockType)arg1;
 - (void)tip_cache:(id)arg1 didEvictEntry:(id)arg2;
-- (void)weakifyEntries;
-- (void)dirtyImageWithIdentifier:(id)arg1;
 - (void)clearImageWithIdentifier:(id)arg1;
-- (void)storeImageEntry:(id)arg1 transformerIdentifier:(id)arg2 sourceImageDimensions:(struct CGSize)arg3;
-- (id)imageEntryWithIdentifier:(id)arg1 transformerIdentifier:(id)arg2 targetDimensions:(struct CGSize)arg3 targetContentMode:(long long)arg4 sourceImageDimensions:(out struct CGSize *)arg5 dirty:(out _Bool *)arg6;
 - (void)clearAllImages:(CDUnknownBlockType)arg1;
 - (void)dealloc;
 - (id)init;

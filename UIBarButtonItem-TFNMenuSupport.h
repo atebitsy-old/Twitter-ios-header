@@ -8,12 +8,15 @@
 
 #import <TFNUI/TFNMenuSupport-Protocol.h>
 
-@class NSString;
+@class NSInvocation, NSString;
 
 @interface UIBarButtonItem (TFNMenuSupport) <TFNMenuSupport>
+- (id)_tfn_button;
+- (void)_t1_menuMayBeTriggered;
 - (void)populateMenuWithActionItems:(id)arg1;
 - (_Bool)isPreparedToDisplayMenuOnPrimaryAction;
 - (void)prepareToDisplayMenuOnPrimaryAction;
+@property(retain, nonatomic) NSInvocation *invocation;
 - (id)tfn_view;
 
 // Remaining properties

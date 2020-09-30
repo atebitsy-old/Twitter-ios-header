@@ -16,8 +16,6 @@
 
 - (void).cxx_destruct;
 - (void)dealloc;
-- (void)invalidate;
-- (id)initWithFetchOperation:(id)arg1 delegate:(id)arg2;
 
 @end
 

@@ -7,9 +7,16 @@
 #import <TFSTwitterCore/TFSTwitterUserReference.h>
 
 #import <TFSTwitterCore/NSCoding-Protocol.h>
+#import <TFSTwitterCore/TFSTwitterScribableItem-Protocol.h>
 
-@interface TFSTwitterUserReference (TFSTwitterCore) <NSCoding>
+@class NSDictionary, NSString;
+
+@interface TFSTwitterUserReference (TFSTwitterCore) <NSCoding, TFSTwitterScribableItem>
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
+- (id)scribeParametersWithProfileID:(_Bool)arg1 scribeItem:(_Bool)arg2;
+@property(nonatomic, readonly) NSDictionary *scribeParameters;
+@property(nonatomic, readonly) NSDictionary *scribeItem;
+@property(nonatomic, readonly) NSString *scribeItemImpressionID;
 @end
 

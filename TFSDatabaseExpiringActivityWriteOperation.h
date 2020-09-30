@@ -17,7 +17,7 @@
     TFSDatabaseStateQueue *_stateQueue;
 }
 
-+ (id)operationAddedToQueue:(id)arg1 withExpiringActivityManager:(id)arg2 block:(CDUnknownBlockType)arg3;
++ (id)operationAddedToQueue:(id)arg1 withExpiringActivityManager:(id)arg2 block:(CDUnknownBlockType)arg3 qos:(id)arg4;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFSDatabaseStateQueue *stateQueue; // @synthesize stateQueue=_stateQueue;
 @property(readonly, nonatomic) id <TFSDatabaseExpiringActivityManager> expiringActivityManager; // @synthesize expiringActivityManager=_expiringActivityManager;

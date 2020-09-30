@@ -18,7 +18,10 @@
     // Error parsing type: , name: persistentListObservers
     // Error parsing type: , name: durableStorageHelper
     // Error parsing type: , name: persistentPinnedListsObserver
-    // Error parsing type: , name: latestObservedModel
+    // Error parsing type: , name: persistentModelObserver
+    // Error parsing type: , name: lastObservedModel
+    // Error parsing type: , name: listHeaderDataFetcher
+    // Error parsing type: , name: persistentHydratedListsObserver
 }
 
 - (void).cxx_destruct;

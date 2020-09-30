@@ -16,10 +16,8 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) CDUnknownBlockType didCompleteBlock; // @synthesize didCompleteBlock=_didCompleteBlock;
 - (void)tnl_requestOperation:(id)arg1 didCompleteWithResponse:(id)arg2;
 - (id)init;
-- (id)initWithDidCompleteBlock:(CDUnknownBlockType)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

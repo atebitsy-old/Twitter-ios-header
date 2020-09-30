@@ -16,10 +16,7 @@
     NSArray *_blueCurvePoints;
 }
 
-+ (id)curveWithData:(id)arg1;
 - (void).cxx_destruct;
-- (id)colorCubeData;
-- (id)initWithRGBMasterCurvePoints:(id)arg1 redCurvePoints:(id)arg2 greenCurvePoints:(id)arg3 blueCurvePoints:(id)arg4;
 
 @end
 

@@ -12,7 +12,6 @@
     // Error parsing type: , name: urtTimelineUID
     // Error parsing type: , name: endpoint
     // Error parsing type: , name: conversationID
-    // Error parsing type: , name: scriber
 }
 
 @end

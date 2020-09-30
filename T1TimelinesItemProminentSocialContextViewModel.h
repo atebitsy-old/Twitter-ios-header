@@ -13,6 +13,7 @@
     _Bool _socialContextUserInteractionEnabled;
     _Bool _showCaretButton;
     _Bool _showFollowControl;
+    _Bool _showMidDot;
     _Bool _following;
     NSString *_text;
     UIColor *_textColor;
@@ -31,6 +32,7 @@
 @property(retain, nonatomic) NSString *followingButtonText; // @synthesize followingButtonText=_followingButtonText;
 @property(retain, nonatomic) NSString *followButtonText; // @synthesize followButtonText=_followButtonText;
 @property(readonly, nonatomic, getter=isFollowing) _Bool following; // @synthesize following=_following;
+@property(readonly, nonatomic) _Bool showMidDot; // @synthesize showMidDot=_showMidDot;
 @property(readonly, nonatomic) _Bool showFollowControl; // @synthesize showFollowControl=_showFollowControl;
 @property(readonly, nonatomic) _Bool showCaretButton; // @synthesize showCaretButton=_showCaretButton;
 @property(readonly, nonatomic) _Bool socialContextUserInteractionEnabled; // @synthesize socialContextUserInteractionEnabled=_socialContextUserInteractionEnabled;
@@ -43,7 +45,7 @@
 @property(readonly, nonatomic) UIFont *textFont; // @synthesize textFont=_textFont;
 @property(readonly, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (id)initWithText:(id)arg1 textColor:(id)arg2 textFont:(id)arg3 badgeImage:(id)arg4 badgeImageBackgroundColor:(id)arg5 topic:(id)arg6 representedUser:(id)arg7 scribeContext:(id)arg8 account:(id)arg9 socialContextUserInteractionEnabled:(_Bool)arg10 showCaretButton:(_Bool)arg11 showFollowControl:(_Bool)arg12 following:(_Bool)arg13 followButtonText:(id)arg14 followingButtonText:(id)arg15;
+- (id)initWithText:(id)arg1 textColor:(id)arg2 textFont:(id)arg3 badgeImage:(id)arg4 badgeImageBackgroundColor:(id)arg5 topic:(id)arg6 representedUser:(id)arg7 scribeContext:(id)arg8 account:(id)arg9 socialContextUserInteractionEnabled:(_Bool)arg10 showCaretButton:(_Bool)arg11 showFollowControl:(_Bool)arg12 following:(_Bool)arg13 showMidDot:(_Bool)arg14 followButtonText:(id)arg15 followingButtonText:(id)arg16;
 
 @end
 

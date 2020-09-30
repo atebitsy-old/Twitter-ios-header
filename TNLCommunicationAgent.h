@@ -57,26 +57,7 @@
 - (void)addObserver:(id)arg1;
 - (void)dealloc;
 - (id)initWithInternetReachabilityHost:(id)arg1;
-- (void)_agent_updateReachabilityFlags:(unsigned int)arg1 status:(long long)arg2;
-- (void)_agent_handleCaptivePortalResponse:(id)arg1 data:(id)arg2 dataTask:(id)arg3 error:(id)arg4;
-- (void)_agent_triggerCaptivePortalCheckIfNeeded;
-- (void)_agent_triggerCaptivePortalCheck;
-- (void)_agent_startCaptivePortalCheckTimerWithDelay:(double)arg1;
-- (void)_agent_identifyCaptivePortalStatus:(CDUnknownBlockType)arg1;
-- (void)_agent_identifyWWANRadioAccessTechnology:(CDUnknownBlockType)arg1;
-- (void)_agent_identifyCarrierInfo:(CDUnknownBlockType)arg1;
-- (void)_agent_identifyReachability:(CDUnknownBlockType)arg1;
-- (void)_agent_removeObserver:(id)arg1;
-- (void)_agent_addObserver:(id)arg1;
-- (void)_agent_initialize;
-- (void)_agent_initializeCaptivePortalStatus;
-- (void)_agent_initializeTelephony;
-- (void)_agent_initializeModernReachability;
-- (void)_agent_updateModernReachabilityWithNetworkPath:(id)arg1;
-- (void)_agent_initializeLegacyReachability;
-- (void)_agent_forciblyUpdateLegacyReachability;
 - (void)private_updateRadioAccessTechnology:(id)arg1;
-- (void)_updateCarrier:(id)arg1;
 - (id)synchronousCarrierInfo;
 
 @end

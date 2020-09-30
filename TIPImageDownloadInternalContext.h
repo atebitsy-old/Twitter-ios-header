@@ -39,22 +39,13 @@
     NSObject<OS_dispatch_queue> *_downloadQueue;
 }
 
-+ (void)executeDelegate:(id)arg1 suspendingQueue:(id)arg2 block:(CDUnknownBlockType)arg3;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *downloadQueue; // @synthesize downloadQueue=_downloadQueue;
 @property(retain, nonatomic) id <TIPImageFetchDownloadClient> client; // @synthesize client=_client;
 @property(copy, nonatomic) NSString *authorization; // @synthesize authorization=_authorization;
 @property(copy, nonatomic) NSURLRequest *hydratedRequest; // @synthesize hydratedRequest=_hydratedRequest;
 @property(copy, nonatomic) NSURLRequest *originalRequest; // @synthesize originalRequest=_originalRequest;
-- (void)executePerDelegateSuspendingQueue:(id)arg1 block:(CDUnknownBlockType)arg2;
-- (void)removeDelegate:(id)arg1;
-- (void)addDelegate:(id)arg1;
-- (_Bool)containsDelegate:(id)arg1;
-- (long long)downloadPriority;
-- (id)firstDelegate;
 - (id)associatedImageFetchOperation;
-- (void)reset;
-@property(readonly, nonatomic) unsigned long long delegateCount;
 - (id)init;
 
 // Remaining properties

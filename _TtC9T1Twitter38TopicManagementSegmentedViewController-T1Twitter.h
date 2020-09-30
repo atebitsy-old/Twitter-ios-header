@@ -12,5 +12,6 @@
 - (id)segmentedViewController:(id)arg1 titleAtIndex:(long long)arg2;
 - (long long)numberOfEntriesForSegmentedViewController:(id)arg1;
 - (void)segmentedViewController:(id)arg1 didSelectContentViewController:(id)arg2 atIndex:(long long)arg3 indexChanged:(_Bool)arg4 userGestureType:(long long)arg5;
+- (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 @end
 

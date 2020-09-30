@@ -7,8 +7,16 @@
 #import <T1Twitter/T1DirectMessageEntryMediaCell.h>
 
 #import <T1Twitter/T1ImageViewFetchHelperDelegate-Protocol.h>
+#import <T1Twitter/T1InlineMediaViewDelegate-Protocol.h>
 
-@interface T1DirectMessageEntryMediaCell (T1Twitter) <T1ImageViewFetchHelperDelegate>
+@interface T1DirectMessageEntryMediaCell (T1Twitter) <T1ImageViewFetchHelperDelegate, T1InlineMediaViewDelegate>
 - (void)t1_fetchHelper:(id)arg1 didFailToLoadImageWithError:(id)arg2;
+- (_Bool)inlineMediaViewShouldShowVideoDetailsInOverlay:(id)arg1;
+- (void)inlineMediaView:(id)arg1 wasLongPressedWithGestureRecognizer:(id)arg2;
+- (void)inlineMediaViewWasDoubleTapped:(id)arg1;
+- (void)inlineMediaViewWasTapped:(id)arg1 withEvent:(id)arg2;
+- (id)previewConfigurationForLocation:(struct CGPoint)arg1;
+- (void)pause;
+- (void)play;
 @end
 

@@ -26,6 +26,7 @@
 @property(nonatomic, readonly) NSString *displayUsername;
 @property(nonatomic, readonly) TFSTwitterUserReference *userReference;
 @property(nonatomic, readonly) NSNumber *userIDNumber;
+@property(nonatomic, readonly) _Bool hasBirdwatchNotes;
 @property(nonatomic, readonly) NSNumber *isProfileBioTranslatableNumber;
 @property(nonatomic, readonly) _Bool isProfileBioTranslatable;
 @property(nonatomic, readonly) NSDate *updatedTimestamp;

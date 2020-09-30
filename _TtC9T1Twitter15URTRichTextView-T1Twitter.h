@@ -8,5 +8,7 @@
 
 @interface _TtC9T1Twitter15URTRichTextView (T1Twitter)
 @property(nonatomic) double preferredMaxLayoutWidth;
+- (void)attributedTextView:(id)arg1 didLongPressRange:(id)arg2 rect:(struct CGRect)arg3;
+- (void)attributedTextView:(id)arg1 didTapRange:(id)arg2 rect:(struct CGRect)arg3;
 @end
 

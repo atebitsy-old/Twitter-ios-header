@@ -12,5 +12,9 @@
 - (void)directMessageComposeViewControllerDidBeginEditing:(id)arg1;
 - (void)directMessageComposeViewControllerTextViewDidChange:(id)arg1;
 - (_Bool)directMessageComposeViewControllerShouldEnableSendButton:(id)arg1;
+- (void)modalSheetViewControllerDidDismiss:(id)arg1 fromGesture:(_Bool)arg2;
+- (void)modalSheetViewController:(id)arg1 willTransitionToLayoutMode:(long long)arg2 withTransitionCoordinator:(id)arg3;
+- (double)preferredHeightForModalSheetViewController:(id)arg1 modalContentViewVisibleEdgeInsets:(struct UIEdgeInsets)arg2;
+- (void)scrollViewWillBeginDragging:(id)arg1;
 @end
 

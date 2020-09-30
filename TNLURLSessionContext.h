@@ -23,20 +23,9 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) unsigned long long lastOperationRemovedMachTime; // @synthesize lastOperationRemovedMachTime=_lastOperationRemovedMachTime;
-@property(readonly, nonatomic) NSArray *URLSessionTaskOperations; // @synthesize URLSessionTaskOperations=_URLSessionTaskOperations;
-@property(readonly, nonatomic) long long executionMode; // @synthesize executionMode=_executionMode;
-@property(readonly, copy, nonatomic) NSString *reuseId; // @synthesize reuseId=_reuseId;
-@property(readonly, nonatomic) NSURLSession *URLSession; // @synthesize URLSession=_URLSession;
 @property(nonatomic) __weak id <TNLLRUEntry> previousLRUEntry; // @synthesize previousLRUEntry=_previousLRUEntry;
 @property(retain, nonatomic) id <TNLLRUEntry> nextLRUEntry; // @synthesize nextLRUEntry=_nextLRUEntry;
-- (void)changeOperation:(id)arg1 fromTask:(id)arg2 toTask:(id)arg3;
-- (id)operationForTask:(id)arg1;
-- (void)removeOperation:(id)arg1;
-- (void)addOperation:(id)arg1;
-- (unsigned long long)operationCount;
 - (void)dealloc;
-- (id)initWithURLSession:(id)arg1 reuseId:(id)arg2 executionMode:(long long)arg3;
 - (_Bool)shouldAccessMoveLRUEntryToHead;
 - (id)LRUEntryIdentifier;
 

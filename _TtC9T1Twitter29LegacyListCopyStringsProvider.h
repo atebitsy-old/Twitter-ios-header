@@ -14,6 +14,7 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (id)init;
+- (id)emptyPinnedListMessage;
 - (id)listRearrangeHomeAlertMessage;
 - (id)listTypeaheadEmptyQueryMessage;
 - (id)listSearchPlaceholderText;

@@ -8,5 +8,6 @@
 
 @interface _TtC9T1Twitter25URTHomeTimelineAPICommand (T1Twitter)
 - (id)requestConfigurationForAPIRequest:(id)arg1 requestConfiguration:(id)arg2;
+- (void)willCallCompletionBlock;
 @end
 

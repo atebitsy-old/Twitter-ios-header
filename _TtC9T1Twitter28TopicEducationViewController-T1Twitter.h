@@ -6,9 +6,15 @@
 
 #import <T1Twitter/_TtC9T1Twitter28TopicEducationViewController.h>
 
-@interface _TtC9T1Twitter28TopicEducationViewController (T1Twitter)
+#import <T1Twitter/TFNPresentationInterceptor-Protocol.h>
+
+@interface _TtC9T1Twitter28TopicEducationViewController (T1Twitter) <TFNPresentationInterceptor>
 - (id)scribeSection;
 - (id)scribePage;
 - (id)scribe;
+- (void)tfnPresentedCustomPresentFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)modalSheetViewController:(id)arg1 willTransitionToLayoutMode:(long long)arg2 withTransitionCoordinator:(id)arg3;
+- (id)viewController:(id)arg1 willPresentWithPresentationInfo:(id)arg2;
+- (double)preferredHeightForModalSheetViewController:(id)arg1 modalContentViewVisibleEdgeInsets:(struct UIEdgeInsets)arg2;
 @end
 

@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)createVideoViewFor:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 imageFetchHelper:(id)arg4 gestureResponder:(id)arg5;
++ (id)createVideoViewFor:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 imageFetchHelper:(id)arg4 gestureResponder:(id)arg5 displayContext:(long long)arg6;
 - (id)init;
 
 @end

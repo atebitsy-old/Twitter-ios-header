@@ -4,11 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <TFNUI/TFNPaddedButton.h>
+#import <TFNUI/TFNButton.h>
 
 @class NSString;
 
-@interface T1CameraControlButton : TFNPaddedButton
+@interface T1CameraControlButton : TFNButton
 {
     NSString *_accessibilityDefaultValue;
     NSString *_accessibilitySelectedValue;

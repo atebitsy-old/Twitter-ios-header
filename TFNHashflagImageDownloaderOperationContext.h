@@ -17,7 +17,6 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *completionHandlers; // @synthesize completionHandlers=_completionHandlers;
 @property(readonly, nonatomic) TFNHashflag *hashflag; // @synthesize hashflag=_hashflag;
-- (id)initWithHashflag:(id)arg1;
 
 @end
 

@@ -25,11 +25,6 @@ __attribute__((visibility("hidden")))
 }
 
 - (void).cxx_destruct;
-- (void)liveVideoPlayerChromeController:(id)arg1 setPlayerControlsHidden:(_Bool)arg2;
-- (void)liveVideoPlayerChromeController:(id)arg1 setPlayerControlsAlpha:(double)arg2;
-- (void)liveVideoPlayerChromeController:(id)arg1 setNavigationBarHidden:(_Bool)arg2;
-- (void)liveVideoPlayerChromeController:(id)arg1 setNavigationBarAlpha:(double)arg2;
-- (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

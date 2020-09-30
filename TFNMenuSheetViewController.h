@@ -66,7 +66,8 @@
 - (void)tfnPresentedCustomDismissAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)tfnPresentedCustomPresentFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)tfn_presentFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)_tfn_menuControl;
+- (id)_tfn_menuSource;
+- (void)presentAsMenuIfEnabledFromViewController:(id)arg1 withMenuSource:(id)arg2 animated:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)presentAsMenuIfEnabledFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)_tfn_didTapCloseButton;
 @property(readonly, nonatomic) TFNBarButtonItem *closeButton; // @synthesize closeButton=_closeButton;

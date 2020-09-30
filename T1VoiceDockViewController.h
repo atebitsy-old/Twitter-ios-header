@@ -11,23 +11,27 @@
 #import <T1Twitter/T1VoiceDockViewControllerContainer-Protocol.h>
 #import <T1Twitter/T1VoiceDockViewDelegate-Protocol.h>
 
-@class NSMutableArray, NSString, UIView, UIViewController;
+@class NSMutableArray, NSString, TFNTwitterAccount, UIView, UIViewController;
 @protocol T1VoiceDockableViewController, TFNTwitterCardDataSource;
 
 @interface T1VoiceDockViewController : TFNViewController <T1VoiceDockViewDelegate, T1VoiceDockViewControllerContainer, T1Dockable, T1DockingControllerDelegate>
 {
+    TFNTwitterAccount *_account;
     NSMutableArray *_contentViewControllers;
 }
 
-+ (id)currentVoiceDockViewControllerMakeIfNeededOnWindow:(id)arg1 userAction:(long long)arg2;
++ (id)currentOrCreateVoiceDockViewControllerWithAccount:(id)arg1 window:(id)arg2 userAction:(long long)arg3;
++ (void)setCurrentVoiceDockViewController:(id)arg1;
 + (id)currentVoiceDockViewController;
-+ (id)new;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *contentViewControllers; // @synthesize contentViewControllers=_contentViewControllers;
+@property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 - (void)voiceDockableViewControllerCanResignAudioFocus:(id)arg1;
 - (void)voiceDockableViewControllerRequestedAudioFocus:(id)arg1;
 - (void)voiceDockableViewControllerHasEndedSession:(id)arg1;
 - (_Bool)voiceDockableViewControllerExpandIfAble:(id)arg1;
+- (void)_t1_dockingControllerDidUpdate;
+@property(readonly, nonatomic) double currentHeight;
 - (void)voiceDockViewDidInvalidateLayout:(id)arg1;
 @property(readonly, nonatomic) double preferredPinnedHeight;
 @property(readonly, nonatomic) long long dockableStyle;
@@ -47,12 +51,12 @@
 - (void)pushVoiceDockViewController:(id)arg1;
 @property(readonly, nonatomic) UIViewController<T1VoiceDockableViewController> *baseContentViewController;
 @property(readonly, nonatomic) UIViewController<T1VoiceDockableViewController> *topContentViewController;
+- (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 - (id)_t1_dockView;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)loadView;
+- (id)initWithAccount:(id)arg1;
 - (id)init;
-- (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (id)initWithCoder:(id)arg1;
 
 // Remaining properties
 @property(readonly, nonatomic) id <TFNTwitterCardDataSource> cardDataSource;

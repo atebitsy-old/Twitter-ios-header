@@ -29,11 +29,6 @@
 @property(readonly, nonatomic) CIImage *originalCIImage; // @synthesize originalCIImage=_originalCIImage;
 @property(readonly, nonatomic) UIImage *originalImage; // @synthesize originalImage=_originalImage;
 @property(readonly, nonatomic) CIContext *coreImageContext;
-- (void)cropOutputIfNecessary;
-- (void)prepareForNextFilter:(float)arg1;
-- (id)initWithOriginalImage:(id)arg1 executeContext:(id)arg2;
-- (struct CGSize)originalDimensions;
-- (struct CGSize)targetDimensions;
 
 @end
 

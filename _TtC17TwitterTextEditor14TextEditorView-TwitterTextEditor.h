@@ -7,9 +7,26 @@
 #import <T1Twitter/_TtC17TwitterTextEditor14TextEditorView.h>
 
 #import <T1Twitter/NSTextStorageDelegate-Protocol.h>
+#import <T1Twitter/UITextDragDelegate-Protocol.h>
+#import <T1Twitter/UITextDropDelegate-Protocol.h>
+#import <T1Twitter/_TtP17TwitterTextEditor16TextViewDelegate_-Protocol.h>
+#import <T1Twitter/_TtP17TwitterTextEditor25TextViewTextPasteDelegate_-Protocol.h>
 
-@interface _TtC17TwitterTextEditor14TextEditorView (TwitterTextEditor) <NSTextStorageDelegate>
+@interface _TtC17TwitterTextEditor14TextEditorView (TwitterTextEditor) <NSTextStorageDelegate, _TtP17TwitterTextEditor16TextViewDelegate_, _TtP17TwitterTextEditor25TextViewTextPasteDelegate_, UITextDragDelegate, UITextDropDelegate>
 - (void)textStorage:(id)arg1 didProcessEditing:(unsigned long long)arg2 range:(struct _NSRange)arg3 changeInLength:(long long)arg4;
 - (void)textStorage:(id)arg1 willProcessEditing:(unsigned long long)arg2 range:(struct _NSRange)arg3 changeInLength:(long long)arg4;
+- (void)textView:(id)arg1 didChangeBaseWritingDirection:(long long)arg2 forRange:(id)arg3;
+- (void)textViewDidChange:(id)arg1;
+- (void)textViewDidChangeSelection:(id)arg1;
+- (_Bool)textView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
+- (void)textViewDidEndEditing:(id)arg1;
+- (void)textViewDidBeginEditing:(id)arg1;
+- (_Bool)textViewShouldBeginEditing:(id)arg1;
+- (_Bool)textPasteConfigurationSupporting:(id)arg1 shouldAnimatePasteOfAttributedString:(id)arg2 toRange:(id)arg3;
+- (void)textPasteConfigurationSupporting:(id)arg1 transformPasteItem:(id)arg2;
+- (_Bool)textPasteConfigurationSupporting:(id)arg1 canPaste:(id)arg2;
+- (void)textDraggableView:(id)arg1 dragSessionDidEnd:(id)arg2 withOperation:(unsigned long long)arg3;
+- (void)textDraggableView:(id)arg1 dragSessionWillBegin:(id)arg2;
+- (id)textDroppableView:(id)arg1 proposalForDrop:(id)arg2;
 @end
 

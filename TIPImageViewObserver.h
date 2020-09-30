@@ -19,7 +19,6 @@
 
 + (Class)layerClass;
 - (void).cxx_destruct;
-@property(retain, nonatomic) TIPImageViewFetchHelper *fetchHelper; // @synthesize fetchHelper=_fetchHelper;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)layoutSubviews;
@@ -29,7 +28,6 @@
 - (void)setBackgroundColor:(id)arg1;
 - (void)setOpaque:(_Bool)arg1;
 - (void)dealloc;
-- (void)_prep;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

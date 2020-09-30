@@ -6,7 +6,9 @@
 
 #import <swiftCore/_TtCs12_SwiftObject.h>
 
-@interface _TtC9T1Twitter50SpheresUsersShoppingCartViewControllerStateManager : _TtCs12_SwiftObject
+#import <T1Twitter/T1UserRecommendationListActionControlProviderDelegate-Protocol.h>
+
+@interface _TtC9T1Twitter50SpheresUsersShoppingCartViewControllerStateManager : _TtCs12_SwiftObject <T1UserRecommendationListActionControlProviderDelegate>
 {
     // Error parsing type: , name: listID
     // Error parsing type: , name: scribe
@@ -14,6 +16,10 @@
     // Error parsing type: , name: mutationsManager
     // Error parsing type: , name: delegate
 }
+
+- (_Bool)actionControlProvider:(id)arg1 shouldSelectUserReference:(id)arg2;
+- (void)actionControlProvider:(id)arg1 didDeselectUserReference:(id)arg2 actionControl:(id)arg3 scribeContext:(id)arg4;
+- (void)actionControlProvider:(id)arg1 didSelectUserReference:(id)arg2 actionControl:(id)arg3 scribeContext:(id)arg4;
 
 @end
 

@@ -11,5 +11,6 @@
 @property(nonatomic, readonly) _Bool shouldAutorotate;
 @property(nonatomic, readonly) unsigned long long supportedInterfaceOrientations;
 - (_Bool)canCollapseHeader;
+- (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 @end
 

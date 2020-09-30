@@ -10,5 +10,9 @@
 - (_Bool)actionControlProvider:(id)arg1 shouldSelectUserReference:(id)arg2;
 - (void)actionControlProvider:(id)arg1 didDeselectUserReference:(id)arg2 actionControl:(id)arg3 scribeContext:(id)arg4;
 - (void)actionControlProvider:(id)arg1 didSelectUserReference:(id)arg2 actionControl:(id)arg3 scribeContext:(id)arg4;
+- (id)scribeSection;
+- (id)scribePage;
+- (id)scribe;
+- (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
 @end
 

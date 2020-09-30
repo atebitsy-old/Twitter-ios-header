@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1URTConversationMediatorDelegate-Protocol.h>
 
-@class NSArray, NSMutableDictionary, NSMutableSet, NSString, T1ConversationNode, T1ConversationStatusNode, T1URTConversationMediator, TFNTwitterAccount, TFNTwitterStatus, TFSTwitterScribeContext;
+@class NSArray, NSMutableDictionary, NSMutableSet, NSString, T1ConversationNode, T1ConversationStatusNode, T1URTConversationMediator, T1URTTimelineTombstoneItemViewModel, TFNTwitterAccount, TFNTwitterStatus, TFSTwitterScribeContext;
 @protocol T1ConversationDataSourceDelegate;
 
 @interface T1ConversationDataSource : NSObject <T1URTConversationMediatorDelegate>
@@ -21,14 +21,17 @@
     id <T1ConversationDataSourceDelegate> _delegate;
     TFNTwitterAccount *_account;
     TFSTwitterScribeContext *_scribeContext;
-    TFNTwitterStatus *_rootStatus;
+    TFNTwitterStatus *_timelineRootStatus;
     T1ConversationNode *_rootNode;
     NSMutableDictionary *_supplementalStatuses;
     NSMutableSet *_composedStatusIDs;
     T1ConversationStatusNode *_lastStatusAddedToConversationFromComposer;
+    T1ConversationStatusNode *_focalStatusNode;
+    TFNTwitterStatus *_timelineFocalStatus;
+    T1URTTimelineTombstoneItemViewModel *_timelineFocalTombstone;
     NSString *_selectedNodeEntryID;
     long long _overflowCount;
-    long long _focalStatusID;
+    TFNTwitterStatus *_focalStatus;
     NSString *_focalEntryID;
     T1URTConversationMediator *_urtMediator;
     NSMutableDictionary *_statusIDToEntryIDCache;
@@ -50,13 +53,16 @@
 @property(nonatomic) _Bool initialSelectedStatusHasBeenSet; // @synthesize initialSelectedStatusHasBeenSet=_initialSelectedStatusHasBeenSet;
 @property(retain, nonatomic) T1URTConversationMediator *urtMediator; // @synthesize urtMediator=_urtMediator;
 @property(copy, nonatomic) NSString *focalEntryID; // @synthesize focalEntryID=_focalEntryID;
-@property(nonatomic) long long focalStatusID; // @synthesize focalStatusID=_focalStatusID;
+@property(retain, nonatomic) TFNTwitterStatus *focalStatus; // @synthesize focalStatus=_focalStatus;
 @property(nonatomic) _Bool initialPopulationHasCompleted; // @synthesize initialPopulationHasCompleted=_initialPopulationHasCompleted;
 @property(readonly, nonatomic) long long overflowCount; // @synthesize overflowCount=_overflowCount;
 @property(copy, nonatomic) NSString *selectedNodeEntryID; // @synthesize selectedNodeEntryID=_selectedNodeEntryID;
+@property(retain, nonatomic) T1URTTimelineTombstoneItemViewModel *timelineFocalTombstone; // @synthesize timelineFocalTombstone=_timelineFocalTombstone;
+@property(retain, nonatomic) TFNTwitterStatus *timelineFocalStatus; // @synthesize timelineFocalStatus=_timelineFocalStatus;
+@property(retain, nonatomic) T1ConversationStatusNode *focalStatusNode; // @synthesize focalStatusNode=_focalStatusNode;
 @property(readonly, nonatomic) T1ConversationStatusNode *lastStatusAddedToConversationFromComposer; // @synthesize lastStatusAddedToConversationFromComposer=_lastStatusAddedToConversationFromComposer;
-@property(retain, nonatomic) T1ConversationNode *rootNode; // @synthesize rootNode=_rootNode;
-@property(readonly, nonatomic) TFNTwitterStatus *rootStatus; // @synthesize rootStatus=_rootStatus;
+@property(readonly, nonatomic) T1ConversationNode *rootNode; // @synthesize rootNode=_rootNode;
+@property(readonly, nonatomic) TFNTwitterStatus *timelineRootStatus; // @synthesize timelineRootStatus=_timelineRootStatus;
 @property(readonly, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(nonatomic) __weak id <T1ConversationDataSourceDelegate> delegate; // @synthesize delegate=_delegate;
@@ -86,6 +92,7 @@
 - (void)_t1_calculateVisibleConnectorsForConversation:(id)arg1;
 - (_Bool)shouldShowAncestorHighlightingAtLevel:(unsigned long long)arg1 forNode:(id)arg2;
 - (_Bool)shouldShowParentHighlightingForNode:(id)arg1;
+- (long long)focalStatusID;
 - (void)nodeChildVisibilityChanged:(id)arg1;
 - (void)completedRenderingForUpdate;
 @property(readonly, nonatomic) _Bool isEmpty;
@@ -119,8 +126,8 @@
 - (id)_t1_composedRepliesToNode:(id)arg1;
 @property(readonly, nonatomic) NSMutableSet *composedStatusIDs; // @synthesize composedStatusIDs=_composedStatusIDs;
 @property(readonly, nonatomic) NSMutableDictionary *supplementalStatuses; // @synthesize supplementalStatuses=_supplementalStatuses;
-- (id)initWithAccount:(id)arg1 statusID:(long long)arg2 scribeContext:(id)arg3 referrer:(id)arg4 controllerData:(id)arg5 overflowCount:(long long)arg6;
-- (id)initWithAccount:(id)arg1 focalStatusID:(long long)arg2 scribeContext:(id)arg3 mediator:(id)arg4;
+- (id)initWithAccount:(id)arg1 focalStatus:(id)arg2 scribeContext:(id)arg3 referrer:(id)arg4 controllerData:(id)arg5 overflowCount:(long long)arg6;
+- (id)initWithAccount:(id)arg1 focalStatus:(id)arg2 scribeContext:(id)arg3 mediator:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -10,6 +10,7 @@
 {
 }
 
++ (id)reactionSummaryImageFromReactionKeys:(id)arg1 counts:(id)arg2 in:(struct CGRect)arg3 selectedReactionKey:(id)arg4;
 - (id)init;
 
 @end

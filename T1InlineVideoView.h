@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: $__lazy_storage_$_playerView
+    // Error parsing type: , name: playerViewIfLoaded
     // Error parsing type: , name: chromeOverlayView
     // Error parsing type: , name: $__lazy_storage_$_playbackAttachment
     // Error parsing type: , name: $__lazy_storage_$_videoBitrateManager

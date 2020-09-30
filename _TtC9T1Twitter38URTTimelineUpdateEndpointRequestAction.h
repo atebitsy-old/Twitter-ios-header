@@ -17,7 +17,6 @@
     // Error parsing type: , name: command
     // Error parsing type: , name: shouldStartOnMainThread
     // Error parsing type: , name: networkTransactionMetricsType
-    // Error parsing type: , name: scriber
     // Error parsing type: , name: progressiveAPIConfig
     // Error parsing type: , name: assimilationOptions
     // Error parsing type: , name: networkOperationId

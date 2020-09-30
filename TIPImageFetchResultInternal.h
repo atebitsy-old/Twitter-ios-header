@@ -21,7 +21,6 @@
     struct CGSize _imageOriginalDimensions;
 }
 
-+ (id)resultWithImageContainer:(id)arg1 identifier:(id)arg2 loadSource:(long long)arg3 URL:(id)arg4 originalDimensions:(struct CGSize)arg5 placeholder:(_Bool)arg6 transformed:(_Bool)arg7;
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *imageIdentifier; // @synthesize imageIdentifier=_imageIdentifier;
 @property(readonly, nonatomic) _Bool imageWasTransformed; // @synthesize imageWasTransformed=_imageWasTransformed;
@@ -30,7 +29,6 @@
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, nonatomic) long long imageSource; // @synthesize imageSource=_imageSource;
 @property(readonly, nonatomic) TIPImageContainer *imageContainer; // @synthesize imageContainer=_imageContainer;
-- (id)initWithImageContainer:(id)arg1 identifier:(id)arg2 source:(long long)arg3 URL:(id)arg4 originalDimensions:(struct CGSize)arg5 placeholder:(_Bool)arg6 transformed:(_Bool)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

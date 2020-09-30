@@ -14,12 +14,14 @@
 
 @interface TFSTwitterConversationControl : NSObject <NSCopying, NSCoding, TFSEncodable>
 {
+    _Bool _inviteViaMention;
     long long _conversationControlType;
     NSString *_conversationOwner;
 }
 
 + (id)encodableName;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool inviteViaMention; // @synthesize inviteViaMention=_inviteViaMention;
 @property(readonly, nonatomic) NSString *conversationOwner; // @synthesize conversationOwner=_conversationOwner;
 @property(readonly, nonatomic) long long conversationControlType; // @synthesize conversationControlType=_conversationControlType;
 - (_Bool)isEqual:(id)arg1;
@@ -29,7 +31,7 @@
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithEncoder:(id)arg1;
 - (id)initWithDecoder:(id)arg1;
-- (id)initWithConversationControlType:(long long)arg1 conversationOwner:(id)arg2;
+- (id)initWithConversationControlType:(long long)arg1 conversationOwner:(id)arg2 inviteViaMention:(_Bool)arg3;
 - (id)initWithJSONDictionary:(id)arg1 fromGraphQL:(_Bool)arg2;
 
 @end

@@ -52,12 +52,6 @@
 @property(readonly, nonatomic) id tip_config; // @synthesize tip_config=_config;
 @property(readonly, nonatomic) struct CGSize tip_dimensions; // @synthesize tip_dimensions=_dimensions;
 @property(readonly, nonatomic) NSData *tip_data; // @synthesize tip_data=_data;
-- (void)_clear;
-- (long long)finalizeDecoding;
-- (id)renderImageWithRenderMode:(long long)arg1 targetDimensions:(struct CGSize)arg2 targetContentMode:(long long)arg3;
-- (id)_firstFrameImageContainer;
-- (long long)appendData:(id)arg1;
-- (_Bool)_writeDataToTemporaryFile:(id)arg1;
 - (void)dealloc;
 - (id)initWithBuffer:(id)arg1 config:(id)arg2;
 @property(readonly, nonatomic) unsigned long long tip_frameCount;

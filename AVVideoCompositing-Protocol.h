@@ -17,6 +17,7 @@
 @optional
 - (void)prerollForRenderingUsingHint:(AVVideoCompositionRenderHint *)arg1;
 - (void)anticipateRenderingUsingHint:(AVVideoCompositionRenderHint *)arg1;
+@property(nonatomic, readonly) _Bool supportsHDRSourceFrames;
 @property(nonatomic, readonly) _Bool supportsWideColorSourceFrames;
 - (void)cancelAllPendingVideoCompositionRequests;
 @end

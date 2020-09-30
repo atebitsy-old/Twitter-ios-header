@@ -21,6 +21,7 @@
 - (_Bool)isSubbranchCursorType;
 - (_Bool)isShowMoreThreadCursorType;
 - (_Bool)isShowMoreCursorType;
+@property(nonatomic, readonly) long long cursorType;
 
 @end
 

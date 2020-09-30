@@ -9,25 +9,39 @@
 #import <T1Twitter/ASWebAuthenticationPresentationContextProviding-Protocol.h>
 #import <T1Twitter/T1LoginChallengeProtocol-Protocol.h>
 
-@class ASWebAuthenticationSession, NSString, UIViewController;
+@class ASWebAuthenticationSession, NSString, T1AccountOAuthTokenPoller, TFNHUD, UIViewController;
 
 @interface T1LoginChallengeWebAuthSession : NSObject <ASWebAuthenticationPresentationContextProviding, T1LoginChallengeProtocol>
 {
     CDUnknownBlockType _didAddAccountBlock;
-    UIViewController *_presentationAnchor;
     ASWebAuthenticationSession *_session;
+    T1AccountOAuthTokenPoller *_tokenRequester;
+    UIViewController *_presentationAnchor;
+    TFNHUD *_hud;
+    long long _userID;
+    NSString *_requestID;
 }
 
 + (_Bool)isAuthenticationInProgress;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) ASWebAuthenticationSession *session; // @synthesize session=_session;
+@property(copy, nonatomic) NSString *requestID; // @synthesize requestID=_requestID;
+@property(nonatomic) long long userID; // @synthesize userID=_userID;
+@property(retain, nonatomic) TFNHUD *hud; // @synthesize hud=_hud;
 @property(nonatomic) __weak UIViewController *presentationAnchor; // @synthesize presentationAnchor=_presentationAnchor;
+@property(retain, nonatomic) T1AccountOAuthTokenPoller *tokenRequester; // @synthesize tokenRequester=_tokenRequester;
+@property(readonly, nonatomic) ASWebAuthenticationSession *session; // @synthesize session=_session;
 @property(copy, nonatomic) CDUnknownBlockType didAddAccountBlock; // @synthesize didAddAccountBlock=_didAddAccountBlock;
+- (void)_t1_dismissHUD:(_Bool)arg1 message:(id)arg2;
+- (void)_t1_updateHUD:(id)arg1;
 - (id)presentationAnchorForWebAuthenticationSession:(id)arg1;
 - (void)presentLoginChallengeFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)cancel;
-- (void)start;
-- (id)initWithURL:(id)arg1;
+- (void)showGenericErrorAndDismiss;
+- (void)_t1_cancelAuthSession;
+- (void)_t1_startAuthSession;
+- (void)_t1_dismissAuthSessionWithAccount:(id)arg1;
+- (CDUnknownBlockType)_t1_authSessionCallback;
+- (id)_t1_setupDeeplinkRedirectURL:(id)arg1;
+- (id)initWithRequestID:(id)arg1 user:(id)arg2 userID:(long long)arg3 URL:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

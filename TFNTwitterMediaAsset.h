@@ -45,13 +45,8 @@
 + (void)mediaAssetForPasteboardWithAccount:(id)arg1 types:(unsigned long long)arg2 memojiCanvasEnabled:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 + (_Bool)validatePasteboardWithTypes:(unsigned long long)arg1;
 + (void)mediaAssetForItemProviderOptions:(id)arg1 completion:(CDUnknownBlockType)arg2;
-+ (void)_background_mediaAssetForLocalFileURL:(id)arg1 typeIdentifier:(id)arg2 options:(id)arg3 completion:(CDUnknownBlockType)arg4;
-+ (void)_background_mediaAssetForImageData:(id)arg1 typeIdentifier:(id)arg2 options:(id)arg3 completion:(CDUnknownBlockType)arg4;
-+ (void)_background_memojiMediaAssetWithImageContainer:(id)arg1 memojiCanvasEnabled:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 + (void)mediaAssetForAsset:(id)arg1 account:(id)arg2 types:(unsigned long long)arg3 sourceType:(unsigned long long)arg4 livePhotoAttachmentEnabled:(_Bool)arg5 completion:(CDUnknownBlockType)arg6;
 + (void)mediaAssetTypeForAsset:(id)arg1 account:(id)arg2 types:(unsigned long long)arg3 completion:(CDUnknownBlockType)arg4;
-+ (void)_main_validateAsset:(id)arg1 forAnimatedGIFWithAccount:(id)arg2 completion:(CDUnknownBlockType)arg3;
-+ (_Bool)_main_validateAsset:(id)arg1;
 + (void)scribeSendMediaAttachmentsWithScribe:(id)arg1 scribePage:(id)arg2 scribeParameters:(id)arg3 attachments:(id)arg4 isReply:(_Bool)arg5;
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *uploadingAccountID; // @synthesize uploadingAccountID=_uploadingAccountID;

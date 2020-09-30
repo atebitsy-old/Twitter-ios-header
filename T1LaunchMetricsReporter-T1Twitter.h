@@ -8,5 +8,8 @@
 
 @interface T1LaunchMetricsReporter (T1Twitter)
 - (void)viewControllerViewWillFullyDisappear:(id)arg1;
+- (void)applicationLaunchPrepareForWarmLaunch:(id)arg1;
+- (void)applicationLaunchDidComplete:(id)arg1;
+- (void)applicationLaunchDidBegin:(id)arg1;
 @end
 

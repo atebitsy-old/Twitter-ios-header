@@ -8,5 +8,13 @@
 
 @interface _TtC9T1Twitter42SphereDetailsResizableHeaderViewController (T1Twitter)
 - (void)resizableHeaderViewDidTapBannerImage:(id)arg1;
+- (void)blockListDidChangeWithNotification:(id)arg1;
+- (void)resizableHeaderView:(id)arg1 didTapMoreActionsButton:(id)arg2;
+- (void)resizableHeaderView:(id)arg1 didTapShareHeaderButton:(id)arg2;
+- (void)resizableHeaderViewDidTapBackButton:(id)arg1;
+- (_Bool)imageTransitionViewController:(id)arg1 previewImageFrameIsAspectFillForObject:(id)arg2;
+- (struct CGRect)imageTransitionViewController:(id)arg1 previewImageFrameInWindow:(id)arg2 forObject:(id)arg3;
+- (id)scribePage;
+- (id)scribe;
 @end
 

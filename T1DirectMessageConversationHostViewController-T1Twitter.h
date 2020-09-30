@@ -13,5 +13,17 @@
 - (void)directMessageComposeViewControllerDidEndEditing:(id)arg1;
 - (void)directMessageComposeViewControllerDidBeginEditing:(id)arg1;
 - (void)directMessageComposeViewControllerDidTapSend:(id)arg1;
+- (void)sendDidFailWithError:(id)arg1 presentErrors:(_Bool)arg2;
+- (void)dismissComposer;
+- (void)addPeopleBehaviorDidFinish:(id)arg1;
+- (void)directMessageConversationParticipantsListViewController:(id)arg1 didTapAddParticipantsRow:(id)arg2;
+- (void)directMessageConversationParticipantsListViewController:(id)arg1 didSelectUser:(id)arg2;
+- (void)presentUser:(id)arg1;
+- (id)scribeParameters;
+- (id)scribeElement;
+- (id)scribeSection;
+- (id)scribePage;
+- (id)scribe;
+- (double)preferredHeightForModalSheetViewController:(id)arg1 modalContentViewVisibleEdgeInsets:(struct UIEdgeInsets)arg2;
 @end
 

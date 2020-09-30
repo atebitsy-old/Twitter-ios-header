@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: restId
     // Error parsing type: , name: isProfileBioTranslatable
+    // Error parsing type: , name: hasBirdwatchNotes
     // Error parsing type: , name: identityProfileLabelsHighlightedLabel
     // Error parsing type: , name: legacy
 }

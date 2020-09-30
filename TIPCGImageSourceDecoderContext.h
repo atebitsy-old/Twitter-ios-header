@@ -47,18 +47,6 @@
 @property(readonly, nonatomic) _Bool tip_isAnimated; // @synthesize tip_isAnimated=_tip_isAnimated;
 @property(readonly, nonatomic) struct CGSize tip_dimensions; // @synthesize tip_dimensions=_tip_dimensions;
 @property(readonly, nonatomic) _Bool tip_hasAlpha; // @synthesize tip_hasAlpha=_tip_hasAlpha;
-- (void)_tip_appendAttemptToFinishLoadingContextualHeaders;
-- (void)_tip_appendAttemptToLoadPropertiesFromHeaders;
-- (void)_tip_appendCheckType;
-- (void)_tip_updateImageSource:(id)arg1 didComplete:(_Bool)arg2;
-- (void)_tip_attemptToReadHeaders:(inout long long *)arg1 didComplete:(_Bool)arg2;
-- (void)_tip_attemptToLoadMoreImage:(inout long long *)arg1 didComplete:(_Bool)arg2;
-- (long long)_tip_appendData:(id)arg1 didComplete:(_Bool)arg2;
-- (void)_tip_appendPrep;
-- (id)_tip_generateImageWithChunk:(id)arg1 didComplete:(_Bool)arg2 targetDimensions:(struct CGSize)arg3 targetContentMode:(long long)arg4;
-- (id)_tip_extractChunkWithRenderMode:(long long)arg1;
-- (id)_tip_getCachedImageWithRenderMode:(long long)arg1 scaledDimensions:(struct CGSize)arg2;
-- (void)_tip_cacheImage:(id)arg1 renderMode:(long long)arg2 scaledDimensions:(struct CGSize)arg3;
 - (long long)finalizeDecoding;
 - (id)renderImage:(long long)arg1 targetDimensions:(struct CGSize)arg2 targetContentMode:(long long)arg3;
 - (long long)appendData:(id)arg1;

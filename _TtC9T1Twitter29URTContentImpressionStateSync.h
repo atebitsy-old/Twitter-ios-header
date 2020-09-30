@@ -19,6 +19,11 @@
 }
 
 - (void)processImpressionsIfNeeded;
+- (void)handleDidRecordPromotedImpression:(id)arg1;
+- (void)handleIsCurrentlyFirstImpressionUpdate:(id)arg1;
+- (void)handleIsDuplicateContentIDInstanceUpdate:(id)arg1;
+- (void)handleHasRecordedDwellImpressionUpdate:(id)arg1;
+- (void)handleHasRecordedImpressionUpdate:(id)arg1;
 
 @end
 

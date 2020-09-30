@@ -9,7 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter22ScoreCardItemViewModel : NSObject
 {
-    // Error parsing type: , name: scoreEventSummary
+    // Error parsing type: , name: scoreEvent
     // Error parsing type: , name: caretHidden
     // Error parsing type: , name: $__lazy_storage_$_gameState
     // Error parsing type: , name: $__lazy_storage_$_gameStateTextColor

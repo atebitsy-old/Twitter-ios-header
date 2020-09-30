@@ -7,8 +7,10 @@
 #import <T1Twitter/_TtC9T1Twitter41FleetComposerMediaFleetcastViewController.h>
 
 #import <T1Twitter/PTVTwitterCameraLiveDelegate-Protocol.h>
+#import <T1Twitter/T1CameraLiveInviteeSelectionViewControllerDelegate-Protocol.h>
 
-@interface _TtC9T1Twitter41FleetComposerMediaFleetcastViewController (T1Twitter) <PTVTwitterCameraLiveDelegate>
+@interface _TtC9T1Twitter41FleetComposerMediaFleetcastViewController (T1Twitter) <PTVTwitterCameraLiveDelegate, T1CameraLiveInviteeSelectionViewControllerDelegate>
+- (double)twitterCameraLiveGuestViewsTopMargin;
 - (long long)twitterCameraLiveClient;
 - (_Bool)twitterCameraLiveShouldUseModalSheetForUserProfile;
 - (_Bool)twitterCameraLiveIsGuestBroadcastingCreationEnabled;
@@ -21,5 +23,7 @@
 - (void)twitterCameraLiveDidObserveAuthErrorWithInfo:(id)arg1;
 - (id)twitterCameraLiveCopyrightViolationLearnMoreURL;
 - (void)twitterCameraLiveDidDetectCopyrightViolation;
+- (void)liveInviteeSelectionViewControllerDidChangeUserSelection:(id)arg1;
+- (id)scribe;
 @end
 

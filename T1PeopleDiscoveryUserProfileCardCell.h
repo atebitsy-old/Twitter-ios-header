@@ -6,9 +6,11 @@
 
 #import <UIKit/UICollectionViewCell.h>
 
+#import <T1Twitter/T1PeopleDiscoveryCarouselReusableView-Protocol.h>
+
 @class NSString, T1PeopleDiscoveryUserProfileCardView, T1PeopleDiscoveryUserRecommendationProfileDataSource;
 
-@interface T1PeopleDiscoveryUserProfileCardCell : UICollectionViewCell
+@interface T1PeopleDiscoveryUserProfileCardCell : UICollectionViewCell <T1PeopleDiscoveryCarouselReusableView>
 {
     // Error parsing type: , name: reusableViewIdentifier
     // Error parsing type: , name: userProfileCardView
@@ -23,6 +25,7 @@
 @property(nonatomic, retain) T1PeopleDiscoveryUserProfileCardView *userProfileCardView; // @synthesize userProfileCardView;
 @property(nonatomic, copy) NSString *reusableViewIdentifier;
 @property(nonatomic, retain) T1PeopleDiscoveryUserRecommendationProfileDataSource *dataSource;
+- (void)updateWithPeopleDiscoveryCarouselItem:(id)arg1 pageIndex:(unsigned long long)arg2 options:(id)arg3 account:(id)arg4 scribeContext:(id)arg5;
 
 @end
 

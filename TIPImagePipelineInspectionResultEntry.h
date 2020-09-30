@@ -20,7 +20,6 @@
     struct CGSize _dimensions;
 }
 
-+ (id)entryWithCacheEntry:(id)arg1 class:(Class)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(nonatomic) float progress; // @synthesize progress=_progress;

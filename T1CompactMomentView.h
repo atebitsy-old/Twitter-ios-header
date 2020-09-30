@@ -20,6 +20,7 @@
 @property(nonatomic, retain) TIPImagePipeline *imagePipeline; // @synthesize imagePipeline;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)setMomentCapsule:(id)arg1 featureSwitches:(id)arg2;
 
 @end
 

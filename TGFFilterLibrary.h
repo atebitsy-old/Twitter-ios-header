@@ -21,8 +21,6 @@
 + (id)predefinedFilters;
 + (id)sharedLibrary;
 - (void).cxx_destruct;
-@property(copy) NSDictionary *filtersLookup; // @synthesize filtersLookup=_filtersLookup;
-@property(copy) NSArray *filtersOrder; // @synthesize filtersOrder=_filtersOrder;
 - (void)sortFiltersByIdentifiers:(id)arg1;
 - (id)filterWithIdentifier:(id)arg1;
 @property(readonly, copy) NSDictionary *availableFiltersDictionary;

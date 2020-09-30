@@ -13,7 +13,6 @@
     // Error parsing type: , name: content
     // Error parsing type: , name: displayTime
     // Error parsing type: , name: accessibilityDisplayTime
-    // Error parsing type: , name: bubbleGradient
     // Error parsing type: , name: read
     // Error parsing type: , name: viewCount
     // Error parsing type: , name: isCofleet

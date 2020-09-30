@@ -24,22 +24,17 @@
 + (void)getKnownImagePipelineIdentifiers:(CDUnknownBlockType)arg1;
 + (id)allRegisteredImagePipelines;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) TIPImageDownloader *downloader; // @synthesize downloader=_downloader;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(retain) id <TIPImagePipelineObserver> observer; // @synthesize observer=_observer;
 @property(copy) NSArray *additionalCaches; // @synthesize additionalCaches=_additionalCaches;
 - (void)_tip_applicationDidEnterBackground;
 - (id)cacheOfType:(long long)arg1;
-- (void)postCompletedEntry:(id)arg1 manual:(_Bool)arg2;
-- (void)_background_copyDiskCacheFileWithIdentifier:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)copyDiskCacheFileWithIdentifier:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)clearDiskCache;
 - (void)clearMemoryCaches;
 - (void)dirtyRenderedMemoryCacheImageWithIdentifier:(id)arg1;
 - (void)clearRenderedMemoryCacheImageWithIdentifier:(id)arg1;
 - (void)clearImageWithIdentifier:(id)arg1;
-- (id)_createHydrationOperationWithRequest:(id)arg1;
-- (id)storeOperationWithRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)storeImageWithRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)changeIdentifierForImageWithIdentifier:(id)arg1 toIdentifier:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchImageWithOperation:(id)arg1;
@@ -48,9 +43,6 @@
 - (id)initWithIdentifier:(id)arg1;
 - (void)dealloc;
 - (id)init;
-@property(readonly, nonatomic) TIPImageDiskCache *diskCache; // @synthesize diskCache=_diskCache;
-@property(readonly, nonatomic) TIPImageMemoryCache *memoryCache; // @synthesize memoryCache=_memoryCache;
-@property(readonly, nonatomic) TIPImageRenderedCache *renderedCache; // @synthesize renderedCache=_renderedCache;
 - (void)inspect:(CDUnknownBlockType)arg1;
 
 @end

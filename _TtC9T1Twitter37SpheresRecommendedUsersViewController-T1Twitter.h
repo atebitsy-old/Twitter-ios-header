@@ -6,10 +6,21 @@
 
 #import <T1Twitter/_TtC9T1Twitter37SpheresRecommendedUsersViewController.h>
 
-@interface _TtC9T1Twitter37SpheresRecommendedUsersViewController (T1Twitter)
+#import <T1Twitter/UISearchBarDelegate-Protocol.h>
+#import <T1Twitter/UISearchControllerDelegate-Protocol.h>
+
+@interface _TtC9T1Twitter37SpheresRecommendedUsersViewController (T1Twitter) <UISearchBarDelegate, UISearchControllerDelegate>
 @property(nonatomic, readonly) _Bool shouldAutorotate;
 @property(nonatomic, readonly) unsigned long long supportedInterfaceOrientations;
 @property(nonatomic, readonly) long long preferredInterfaceOrientationForPresentation;
 - (_Bool)t1_showsExpandedSearchBox;
+- (void)searchBarCancelButtonClicked:(id)arg1;
+- (void)searchBar:(id)arg1 textDidChange:(id)arg2;
+- (void)didDismissSearchController:(id)arg1;
+- (void)willPresentSearchController:(id)arg1;
+- (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
+- (id)scribeSection;
+- (id)scribePage;
+- (id)scribe;
 @end
 

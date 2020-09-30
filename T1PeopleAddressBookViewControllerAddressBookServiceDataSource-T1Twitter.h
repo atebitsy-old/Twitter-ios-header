@@ -9,5 +9,7 @@
 @interface T1PeopleAddressBookViewControllerAddressBookServiceDataSource (T1Twitter)
 - (void)fetchActiveContactsRecommendationsOperation:(id)arg1 didFailWithError:(id)arg2;
 - (void)fetchActiveContactsRecommendationsOperation:(id)arg1 didReceiveRecommendations:(id)arg2;
+- (void)fetchContactsOperation:(id)arg1 didFailWithError:(id)arg2 retryCursor:(id)arg3;
+- (void)fetchContactsOperation:(id)arg1 didReceiveUsers:(id)arg2 finished:(_Bool)arg3;
 @end
 

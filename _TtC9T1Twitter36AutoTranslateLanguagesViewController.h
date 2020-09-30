@@ -6,6 +6,7 @@
 
 #import <TFNUI/TFNItemsDataViewController.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter36AutoTranslateLanguagesViewController : TFNItemsDataViewController
 {
     // Error parsing type: , name: account

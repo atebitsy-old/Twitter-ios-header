@@ -15,5 +15,7 @@
 @property(nonatomic, readonly) UIImage *playerPreviewImage;
 @property(nonatomic, readonly) UIView *playerContainerView;
 @property(nonatomic, readonly) id <TFNTwitterAVPlayerSessionSource> playerSessionSource;
+- (id)previewConfigurationForLocation:(struct CGPoint)arg1;
+- (id)handleStatusViewEvent:(id)arg1;
 @end
 

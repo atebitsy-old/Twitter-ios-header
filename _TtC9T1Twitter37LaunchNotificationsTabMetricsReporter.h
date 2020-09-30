@@ -19,6 +19,12 @@
 }
 
 @property(nonatomic, readonly) long long launchDestination; // @synthesize launchDestination;
+- (_Bool)shouldCancelMetricReportingWhenViewWillFullyDisappear:(id)arg1 uiInspector:(id)arg2;
+- (_Bool)canReportMetricsForTimelineIn:(long long)arg1;
+- (_Bool)canMetricsBeReportedWithUiInspector:(id)arg1;
+- (void)timelineInitializedForPanelID:(long long)arg1;
+- (void)didNotBecomeLaunchDestination;
+- (void)didBecomeColdLaunchDestination;
 
 @end
 

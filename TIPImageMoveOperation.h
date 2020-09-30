@@ -17,11 +17,7 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) TIPImagePipeline *pipeline; // @synthesize pipeline=_pipeline;
-@property(readonly, copy, nonatomic) NSString *updatedIdentifier; // @synthesize updatedIdentifier=_updatedIdentifier;
-@property(readonly, copy, nonatomic) NSString *originalIdentifier; // @synthesize originalIdentifier=_originalIdentifier;
 - (void)main;
-- (id)initWithPipeline:(id)arg1 originalIdentifier:(id)arg2 updatedIdentifier:(id)arg3 completion:(CDUnknownBlockType)arg4;
 
 @end
 

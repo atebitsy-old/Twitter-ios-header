@@ -14,7 +14,7 @@
     TFSDatabaseUIApplicationLink *_applicationLink;
 }
 
-+ (id)operationAddedToQueue:(id)arg1 withApplicationLink:(id)arg2 block:(CDUnknownBlockType)arg3;
++ (id)operationAddedToQueue:(id)arg1 withApplicationLink:(id)arg2 block:(CDUnknownBlockType)arg3 qos:(id)arg4;
 - (void).cxx_destruct;
 @property _Bool didExpire; // @synthesize didExpire=_didExpire;
 @property(readonly, nonatomic) TFSDatabaseUIApplicationLink *applicationLink; // @synthesize applicationLink=_applicationLink;

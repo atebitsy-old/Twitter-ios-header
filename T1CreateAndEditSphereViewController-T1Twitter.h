@@ -6,7 +6,18 @@
 
 #import <T1Twitter/T1CreateAndEditSphereViewController.h>
 
-@interface T1CreateAndEditSphereViewController (T1Twitter)
+#import <T1Twitter/UIDropInteractionDelegate-Protocol.h>
+
+@interface T1CreateAndEditSphereViewController (T1Twitter) <UIDropInteractionDelegate>
 - (void)form:(id)arg1 didChangeSubmittability:(_Bool)arg2;
+- (_Bool)shouldRemoveWithUser:(id)arg1 in:(id)arg2;
+- (void)didRemoveWithUser:(id)arg1 forViewModel:(id)arg2 in:(id)arg3;
+- (void)didAddWithUser:(id)arg1 forViewModel:(id)arg2 in:(id)arg3;
+- (id)scribeSection;
+- (id)scribePage;
+- (id)scribe;
+- (_Bool)dropInteraction:(id)arg1 canHandleSession:(id)arg2;
+- (id)dropInteraction:(id)arg1 sessionDidUpdate:(id)arg2;
+- (void)dropInteraction:(id)arg1 performDrop:(id)arg2;
 @end
 

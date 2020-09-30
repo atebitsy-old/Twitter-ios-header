@@ -99,6 +99,7 @@
 - (id)_t1_visibleTabContent;
 - (void)_t1_dockingControllerDidDismissCurrentDockedView;
 - (void)_t1_dockingControllerDidDockView;
+- (void)_t1_voiceDockDidUpdate;
 - (void)dockingControllerDockedViewDragEnded:(id)arg1;
 - (void)dockingControllerDockedViewDragUpdated:(id)arg1;
 - (void)dockingControllerDockedViewDragBegan:(id)arg1;

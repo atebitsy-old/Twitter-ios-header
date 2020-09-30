@@ -6,12 +6,23 @@
 
 #import <T1Twitter/T1DirectMessageConversationEntriesViewController.h>
 
-@interface T1DirectMessageConversationEntriesViewController (T1Twitter)
+#import <T1Twitter/T1StatusViewEventScribeHandler-Protocol.h>
+
+@interface T1DirectMessageConversationEntriesViewController (T1Twitter) <T1StatusViewEventScribeHandler>
 - (void)conversationDidUpdateMetadata:(id)arg1;
 - (void)conversationDidUpdateTimeline:(id)arg1;
 - (void)conversationDidReplaceEntry:(id)arg1;
 - (void)conversationDidUpdateEntry:(id)arg1;
 - (void)conversationDidSendMessage:(id)arg1;
 - (void)inboxDidRefresh:(id)arg1;
+- (id)scribeParameters;
+- (id)scribeElement;
+- (id)scribeSection;
+- (id)scribePage;
+- (id)scribeContext;
+- (id)scribeParametersForObject:(id)arg1 controller:(id)arg2 indexPath:(id)arg3;
+- (id)scribeElementForObject:(id)arg1 controller:(id)arg2 indexPath:(id)arg3;
+- (id)scribeComponentForObject:(id)arg1 controller:(id)arg2;
+- (id)scribeSectionForObject:(id)arg1 controller:(id)arg2 indexPath:(id)arg3;
 @end
 

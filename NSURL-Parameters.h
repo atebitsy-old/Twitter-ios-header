@@ -7,6 +7,7 @@
 #import <Foundation/NSURL.h>
 
 @interface NSURL (Parameters)
++ (void)tnl_resolveHost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)tnl_fragmentCollectionWithOptions:(long long)arg1;
 - (id)tnl_fragmentCollection;
 - (id)tnl_queryCollectionWithOptions:(long long)arg1;

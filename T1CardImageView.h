@@ -18,7 +18,6 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *dominantBackgroundColor; // @synthesize dominantBackgroundColor=_dominantBackgroundColor;
 - (void)t1_fetchHelper:(id)arg1 didFailToLoadImageWithError:(id)arg2;
-- (id)_t1_templateImageNamed:(id)arg1 fillColor:(id)arg2;
 - (id)_t1_missingImage;
 - (id)_t1_loadFailureImage;
 - (void)cleanup;

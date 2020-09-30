@@ -12,6 +12,7 @@
 
 + (id)colorWithHexString:(id)arg1;
 + (id)colorWithRGBHex:(unsigned int)arg1;
++ (_Bool)showFocalStatusWhileLoadingEnabled;
 + (_Bool)selectedStateTapExtendedSendReplyButtonNoOpEnabled;
 + (_Bool)selectedStateTapInlineActionsViewNoOpEnabled;
 + (_Bool)selectedStateTapInlineReplyViewNoOpEnabled;

@@ -6,11 +6,19 @@
 
 #import <T1Twitter/T1SpheresManageMembersScrollingSegmentedViewController.h>
 
+#import <T1Twitter/T1ScrollingSegmentedViewControllerDataSource-Protocol.h>
 #import <T1Twitter/T1ScrollingSegmentedViewControllerDelegate-Protocol.h>
 
-@interface T1SpheresManageMembersScrollingSegmentedViewController (T1Twitter) <T1ScrollingSegmentedViewControllerDelegate>
+@interface T1SpheresManageMembersScrollingSegmentedViewController (T1Twitter) <T1ScrollingSegmentedViewControllerDelegate, T1ScrollingSegmentedViewControllerDataSource>
 - (double)preferredMaximumBarHeightInSegmentedViewController:(id)arg1;
 - (void)segmentedViewController:(id)arg1 willSelectContentViewController:(id)arg2 atIndex:(long long)arg3 indexChanged:(_Bool)arg4;
 - (void)segmentedViewController:(id)arg1 didSelectContentViewController:(id)arg2 atIndex:(long long)arg3 indexChanged:(_Bool)arg4 userGestureType:(long long)arg5;
+- (id)segmentedViewController:(id)arg1 viewControllerAtIndex:(long long)arg2;
+- (id)segmentedViewController:(id)arg1 titleAtIndex:(long long)arg2;
+- (long long)numberOfEntriesForSegmentedViewController:(id)arg1;
+- (void)tfn_addDirectlyOwnedViewControllersToMutableArray:(id)arg1;
+- (id)scribeSection;
+- (id)scribePage;
+- (id)scribe;
 @end
 

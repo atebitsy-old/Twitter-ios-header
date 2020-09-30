@@ -7,9 +7,9 @@
 @class NSData, NSDictionary;
 
 @protocol TFSModelBuilder
-- (id)modelObjectWithJSONData:(NSData *)arg1 headerFields:(NSDictionary *)arg2 error:(id *)arg3;
+- (id)modelObjectWithJSONData:(NSData *)arg1 headerFields:(NSDictionary *)arg2 error:(out id *)arg3;
 
 @optional
-- (id)modelObjectWithJSONObject:(id)arg1 headerFields:(NSDictionary *)arg2 error:(id *)arg3;
+- (id)modelObjectWithJSONObject:(id)arg1 headerFields:(NSDictionary *)arg2 error:(out id *)arg3;
 @end
 

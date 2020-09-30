@@ -6,7 +6,7 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class T1ToastAction, T1Toaster;
+@class NSString, T1ToastAction, T1Toaster;
 @protocol T1ToastViewModel;
 
 @protocol T1ToasterContextDelegate <NSObject>
@@ -14,5 +14,6 @@
 @optional
 - (T1ToastAction *)toaster:(T1Toaster *)arg1 overrideAction:(T1ToastAction *)arg2 forToast:(id <T1ToastViewModel>)arg3;
 - (_Bool)toaster:(T1Toaster *)arg1 canDisplayToast:(id <T1ToastViewModel>)arg2 withPriority:(unsigned long long)arg3;
+- (NSString *)scribePageForToaster:(T1Toaster *)arg1;
 @end
 

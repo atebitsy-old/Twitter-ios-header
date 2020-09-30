@@ -19,16 +19,13 @@
 
 + (id)sharedManager;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) TFSObjectCache *hashflagCache; // @synthesize hashflagCache=_hashflagCache;
 @property(retain, nonatomic) id <TFNHashflagProvider> hashflagProvider; // @synthesize hashflagProvider=_hashflagProvider;
 @property(readonly, nonatomic) TFNHashflagImageDownloader *imageDownloader; // @synthesize imageDownloader=_imageDownloader;
 @property(retain, nonatomic) TFNHashflagImageCache *cache; // @synthesize cache=_cache;
-- (id)_tfn_cachedHashflagsForHashtag:(id)arg1;
 @property(readonly, nonatomic) NSArray *hashtagsWithCachedImages;
 @property(readonly, nonatomic) long long hashflagVersion;
 - (id)hashtags;
 - (id)animationForHashtags:(id)arg1 animationViewContext:(id)arg2;
-- (id)hashflagForHashtag:(id)arg1 ignoreDates:(_Bool)arg2;
 - (id)hashflagForHashtag:(id)arg1;
 - (void)fetchImageForHashflag:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)imageForHashflag:(id)arg1;

@@ -6,7 +6,9 @@
 
 #import <T1Twitter/_TtC9T1Twitter39FleetComposerMediaPreviewAnnotationView.h>
 
-@interface _TtC9T1Twitter39FleetComposerMediaPreviewAnnotationView (T1Twitter)
+#import <T1Twitter/T1AutocompleteViewControllerDelegate-Protocol.h>
+
+@interface _TtC9T1Twitter39FleetComposerMediaPreviewAnnotationView (T1Twitter) <T1AutocompleteViewControllerDelegate>
 - (void)autocompleteViewController:(id)arg1 didSelectItem:(id)arg2;
 @end
 

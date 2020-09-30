@@ -13,17 +13,19 @@
 @interface T1PromptTextSpec : NSObject <TFNAttributedTextViewDelegate>
 {
     NSArray *_boldRanges;
-    long long _forcedTextAlignment;
     _Bool _shouldForceTextAlignment;
     NSString *_text;
     NSArray *_activeRanges;
     CDUnknownBlockType _handler;
     CDUnknownBlockType _fontBlock;
+    long long _forcedTextAlignment;
 }
 
 + (id)textSpecForRichText:(id)arg1 subtaskController:(id)arg2 subtaskDataProvider:(id)arg3 textAlignment:(long long)arg4 defaultFont:(id)arg5;
 + (id)textSpecForRichText:(id)arg1 subtaskController:(id)arg2 subtaskDataProvider:(id)arg3 textAlignment:(long long)arg4;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool shouldForceTextAlignment; // @synthesize shouldForceTextAlignment=_shouldForceTextAlignment;
+@property(readonly, nonatomic) long long forcedTextAlignment; // @synthesize forcedTextAlignment=_forcedTextAlignment;
 @property(readonly, nonatomic) CDUnknownBlockType fontBlock; // @synthesize fontBlock=_fontBlock;
 @property(readonly, nonatomic) CDUnknownBlockType handler; // @synthesize handler=_handler;
 @property(readonly, nonatomic) NSArray *activeRanges; // @synthesize activeRanges=_activeRanges;

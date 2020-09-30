@@ -6,9 +6,13 @@
 
 #import <T1Twitter/_TtC9T1Twitter35SphereImageBannerPickFlowController.h>
 
-@interface _TtC9T1Twitter35SphereImageBannerPickFlowController (T1Twitter)
+#import <T1Twitter/T1CropViewControllerDelegate-Protocol.h>
+
+@interface _TtC9T1Twitter35SphereImageBannerPickFlowController (T1Twitter) <T1CropViewControllerDelegate>
 - (void)photoGalleryViewController:(id)arg1 didEndSessionWithAttachments:(id)arg2;
 - (void)photoGalleryViewControllerDidTapRemoveProfileBannerButton:(id)arg1;
 - (void)photoGalleryViewControllerDidCancelSession:(id)arg1;
+- (void)cropViewController:(id)arg1 didApplyParameters:(id)arg2;
+- (void)cropViewControllerDidCancel:(id)arg1;
 @end
 

@@ -6,7 +6,7 @@
 
 #import <TFNUI/TFNTappableImageView.h>
 
-@class TIPImagePipeline, UIImage;
+@class TFNDirectMessageUser, TIPImagePipeline, UIImage;
 
 @interface T1DirectMessageAvatarImageView : TFNTappableImageView
 {
@@ -37,6 +37,11 @@
 - (void)setAvatarImageURL:(id)arg1 originalDimensions:(struct CGSize)arg2 loadingSources:(long long)arg3;
 @property(nonatomic, retain) TIPImagePipeline *imagePipeline;
 @property(nonatomic) long long size; // @synthesize size;
+@property(nonatomic, readonly) TFNDirectMessageUser *directMessageUser;
+- (void)configureWithDirectMessageCustomProfile:(id)arg1;
+- (void)configureWithDirectMessageConversation:(id)arg1;
+- (void)configureWithDirectMessageUser:(id)arg1;
+- (void)reset;
 
 @end
 
