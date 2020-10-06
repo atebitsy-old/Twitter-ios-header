@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class TFNRoundedCornerView, UIButton, UIImageView, UILabel;
+@class NSString, TFNRoundedCornerView, UIButton, UIImageView, UILabel;
 
 @interface T1ModuleHeaderContentView : UIView
 {
@@ -16,10 +16,12 @@
     UILabel *_detailHeaderTextLabel;
     UIImageView *_iconImageView;
     UIButton *_actionButton;
+    NSString *_entityToken;
 }
 
 + (double)heightWithHeaderText:(id)arg1 andDetailText:(id)arg2 actionText:(id)arg3 iconHidden:(_Bool)arg4 caretHidden:(_Bool)arg5 layoutMetrics:(id)arg6;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *entityToken; // @synthesize entityToken=_entityToken;
 @property(readonly, nonatomic) UIButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(readonly, nonatomic) UILabel *detailHeaderTextLabel; // @synthesize detailHeaderTextLabel=_detailHeaderTextLabel;

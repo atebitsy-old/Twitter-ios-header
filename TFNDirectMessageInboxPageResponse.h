@@ -19,7 +19,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNDirectMessageEntriesResponse *entriesResponse; // @synthesize entriesResponse=_entriesResponse;
 @property(readonly, nonatomic) TFNDirectMessageTimelineCursor *cursor; // @synthesize cursor=_cursor;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
 - (id)init;
 
 @end

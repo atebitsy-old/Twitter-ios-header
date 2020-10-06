@@ -21,11 +21,13 @@
     T1ScrollingSegmentedViewController *_contentViewController;
     T1ScrollingHorizontalLabelTitleView *_labelBarTitleView;
     TFNBarButtonItem *_timelineContentPreferencesButton;
+    NSArray *_pinnedListModels;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool didLayoutBarItems; // @synthesize didLayoutBarItems=_didLayoutBarItems;
 @property(nonatomic, getter=isLayoutSubviewsDone) _Bool layoutSubviewsDone; // @synthesize layoutSubviewsDone=_layoutSubviewsDone;
+@property(retain, nonatomic) NSArray *pinnedListModels; // @synthesize pinnedListModels=_pinnedListModels;
 @property(retain, nonatomic) TFNBarButtonItem *timelineContentPreferencesButton; // @synthesize timelineContentPreferencesButton=_timelineContentPreferencesButton;
 @property(retain, nonatomic) T1ScrollingHorizontalLabelTitleView *labelBarTitleView; // @synthesize labelBarTitleView=_labelBarTitleView;
 @property(retain, nonatomic) T1ScrollingSegmentedViewController *contentViewController; // @synthesize contentViewController=_contentViewController;

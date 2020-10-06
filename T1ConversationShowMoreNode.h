@@ -12,16 +12,18 @@
 {
     // Error parsing type: , name: cursorViewModel
     // Error parsing type: , name: coalescedShowMoreNodes
+    // Error parsing type: , name: isAttachedCursorEnabled
 }
 
 - (void).cxx_destruct;
+@property(nonatomic, readonly) _Bool isAttachedCursor;
 @property(nonatomic, readonly) _Bool isResolved;
 @property(nonatomic, readonly) _Bool isLoadable;
 @property(nonatomic, readonly) NSString *labelText;
 @property(nonatomic, readonly) NSString *actionText;
 @property(nonatomic, readonly) long long cursorType;
 - (void)updateWithCursorViewModel:(id)arg1;
-- (id)initWithCursor:(id)arg1 entryID:(id)arg2;
+- (id)initWithCursor:(id)arg1 entryID:(id)arg2 isAttachedCursorEnabled:(_Bool)arg3;
 - (id)initWithEntryID:(id)arg1;
 @property(nonatomic, copy) NSArray *coalescedShowMoreNodes;
 @property(nonatomic, retain) T1URTTimelineCursorViewModel *cursorViewModel; // @synthesize cursorViewModel;

@@ -9,7 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter43URTTimelineTopicFollowPromptDataViewAdapter : TFNItemsDataViewAdapter
 {
-    // Error parsing type: , name: prototypeEntityFollowView
+    // Error parsing type: , name: prototypeTopicFollowView
     // Error parsing type: , name: account
     // Error parsing type: , name: feedbackExecutor
     // Error parsing type: , name: scribeContext

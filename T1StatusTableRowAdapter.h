@@ -22,7 +22,6 @@
     _Bool _supportsCellLayoutOperations;
     _Bool _supportsSwipingBetweenStatusesInSlideshow;
     _Bool _forceMediaForward;
-    _Bool _shouldUseContentOriginXAsCarouselLeadingInset;
     TFNDataViewController *_tableViewController;
     TFNTwitterAccount *_account;
     CDUnknownBlockType _statusOptionsBlock;
@@ -61,7 +60,6 @@
 @property(copy, nonatomic) CDUnknownBlockType statusEventHandlerProviderBlock; // @synthesize statusEventHandlerProviderBlock=_statusEventHandlerProviderBlock;
 @property(copy, nonatomic) CDUnknownBlockType statusCellSeparatorTypeBlock; // @synthesize statusCellSeparatorTypeBlock=_statusCellSeparatorTypeBlock;
 @property(copy, nonatomic) CDUnknownBlockType statusOptionsBlock; // @synthesize statusOptionsBlock=_statusOptionsBlock;
-@property(nonatomic) _Bool shouldUseContentOriginXAsCarouselLeadingInset; // @synthesize shouldUseContentOriginXAsCarouselLeadingInset=_shouldUseContentOriginXAsCarouselLeadingInset;
 @property(nonatomic) _Bool forceMediaForward; // @synthesize forceMediaForward=_forceMediaForward;
 @property(nonatomic) _Bool supportsSwipingBetweenStatusesInSlideshow; // @synthesize supportsSwipingBetweenStatusesInSlideshow=_supportsSwipingBetweenStatusesInSlideshow;
 @property(nonatomic) _Bool supportsCellLayoutOperations; // @synthesize supportsCellLayoutOperations=_supportsCellLayoutOperations;
@@ -97,7 +95,6 @@
 - (unsigned long long)tableViewController:(id)arg1 defaultOptionsForViewModel:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (void)dataViewController:(id)arg1 didSelectItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (_Bool)dataViewController:(id)arg1 shouldHighlightItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
-- (void)_t1_addCarouselViewControllerForCarouselView:(id)arg1 toParentViewController:(id)arg2 account:(id)arg3;
 - (id)dataViewController:(id)arg1 tableViewCellForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (id)dataViewController:(id)arg1 cellLayoutObjectIdentifierForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (id)dataViewController:(id)arg1 cellLayoutForItem:(id)arg2 withObjectIdentifier:(id)arg3 options:(id)arg4 previousLayout:(id)arg5 atIndexPath:(id)arg6;

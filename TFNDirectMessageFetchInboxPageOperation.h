@@ -11,6 +11,7 @@
 
 @interface TFNDirectMessageFetchInboxPageOperation : TFNDirectMessageAPICommandOperation
 {
+    _Bool _filterNSFW;
     id <TFNDirectMessageFetchInboxPageOperationDelegate> _delegate;
     NSString *_accountID;
     TFNDirectMessageInboxTimeline *_timeline;
@@ -20,6 +21,7 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool filterNSFW; // @synthesize filterNSFW=_filterNSFW;
 @property(readonly, nonatomic) NSNumber *filterLowQuality; // @synthesize filterLowQuality=_filterLowQuality;
 @property(readonly, nonatomic) long long maxEntryID; // @synthesize maxEntryID=_maxEntryID;
 @property(readonly, nonatomic) TFNDirectMessageModel *model; // @synthesize model=_model;
@@ -29,7 +31,7 @@
 - (void)failedWithError:(id)arg1;
 - (void)succeededWithObject:(id)arg1;
 - (id)makeCommandWithContext:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithAccountID:(id)arg1 timeline:(id)arg2 maxEntryID:(long long)arg3 model:(id)arg4 filterLowQuality:(id)arg5 commandService:(id)arg6 context:(id)arg7;
+- (id)initWithAccountID:(id)arg1 timeline:(id)arg2 maxEntryID:(long long)arg3 model:(id)arg4 filterLowQuality:(id)arg5 filterNSFW:(_Bool)arg6 commandService:(id)arg7 context:(id)arg8;
 - (id)init;
 
 @end

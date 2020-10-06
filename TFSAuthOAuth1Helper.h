@@ -11,10 +11,8 @@
     double _oAuthClockDelta;
 }
 
-+ (id)_OAuth1Queue;
-@property(readonly, nonatomic) double oAuthClockDelta; // @synthesize oAuthClockDelta=_oAuthClockDelta;
-- (void)updateOAuthClockDelta:(double)arg1;
-- (void)signRequestInBackground:(id)arg1 parameters:(id)arg2 appCredential:(id)arg3 accountCredential:(id)arg4 callbackURLString:(id)arg5 completion:(CDUnknownBlockType)arg6;
+@property double oAuthClockDelta; // @synthesize oAuthClockDelta=_oAuthClockDelta;
+- (void)signRequest:(id)arg1 parameters:(id)arg2 appCredential:(id)arg3 accountCredential:(id)arg4 callbackURLString:(id)arg5 completion:(CDUnknownBlockType)arg6;
 
 @end
 

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSMutableArray, NSNumber, NSString, T1ConversationDataSource;
+@class NSArray, NSMutableArray, NSNumber, NSString, T1ConversationDataSource, T1ConversationShowMoreNode;
 
 @interface T1ConversationNode : NSObject
 {
@@ -44,6 +44,7 @@
 @property(readonly, nonatomic) NSString *scribeSection;
 @property(readonly, nonatomic) _Bool isHidden;
 - (void)_t1_parentVisibilityDidChange;
+@property(readonly, nonatomic) T1ConversationShowMoreNode *loadableChildCursorNode;
 - (void)setParentNode:(id)arg1;
 - (void)removeFromParent;
 - (void)insertChildNode:(id)arg1 atIndex:(unsigned long long)arg2;

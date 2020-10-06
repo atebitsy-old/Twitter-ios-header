@@ -32,7 +32,7 @@
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) _Bool shouldShowAppRatings;
 @property(readonly, copy, nonatomic) NSString *ratingCount;
-@property(readonly, copy, nonatomic) NSString *ratingStars;
+@property(readonly, nonatomic) double ratingStars;
 @property(readonly, nonatomic) long long appMetadataLineTwoType;
 @property(readonly, nonatomic) _Bool isFreeApp;
 @property(readonly, nonatomic) _Bool isEditorsChoice;

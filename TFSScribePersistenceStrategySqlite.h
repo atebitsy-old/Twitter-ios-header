@@ -67,7 +67,9 @@
 - (void)deleteGroups:(id)arg1;
 - (void)_setSequenceTimestampAndNumberForSerializer:(id)arg1;
 - (id)_retryDistributionForEvents:(id)arg1;
+- (void)_didFlushEvents:(id)arg1 retrySubsetEvents:(id)arg2;
 - (void)_didFlushEvents:(id)arg1 behavior:(unsigned long long)arg2;
+- (void)_didFlushEvents:(id)arg1 behavior:(unsigned long long)arg2 retryEvents:(id)arg3;
 - (id)_flushEventsWithGroups:(id)arg1 fetchLimit:(unsigned long long)arg2;
 - (void)_batchImpressionsForGroups:(id)arg1 requestHandler:(id)arg2;
 - (void)flushGroups:(id)arg1 fetchLimit:(unsigned long long)arg2 batchSize:(unsigned long long)arg3 eventsHandler:(id)arg4 impressionsHandler:(id)arg5 didFlushBatch:(CDUnknownBlockType)arg6 completion:(CDUnknownBlockType)arg7;

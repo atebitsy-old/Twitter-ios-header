@@ -29,7 +29,7 @@
 @property(readonly, nonatomic) NSNumber *lastSeenEventID; // @synthesize lastSeenEventID=_lastSeenEventID;
 @property(readonly, copy, nonatomic) NSString *cursor; // @synthesize cursor=_cursor;
 @property(readonly, nonatomic) TFNDirectMessageEntriesResponse *entriesResponse; // @synthesize entriesResponse=_entriesResponse;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
 - (id)initWithEntriesResponse:(id)arg1 cursor:(id)arg2 lastSeenEventID:(id)arg3 trustedLastSeenEventID:(id)arg4 untrustedLastSeenEventID:(id)arg5 trustedConversationsTimelineCursor:(id)arg6 untrustedConversationsTimelineCursor:(id)arg7 lowQualityConversationsTimelineCursor:(id)arg8;
 - (id)init;
 

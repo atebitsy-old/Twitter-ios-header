@@ -8,11 +8,7 @@
 
 @protocol T1TimelinesFeatureSwitches
 @property(nonatomic, readonly) _Bool isHomeLegacyToURTFeedbackBridgeEnabled;
-@property(nonatomic, readonly) _Bool isTopicsDismissControlEnabled;
-@property(nonatomic, readonly) _Bool isTopicsNewManagementEnabled;
-@property(nonatomic, readonly) _Bool isTopicsDescriptionsEnabled;
 @property(nonatomic, readonly) _Bool isTopicsProfileEntryPointEnabled;
-@property(nonatomic, readonly) _Bool isTopicsDashItemEnabled;
 @property(nonatomic, readonly) NSNumber *tileCustomTitleLineCount;
 @end
 

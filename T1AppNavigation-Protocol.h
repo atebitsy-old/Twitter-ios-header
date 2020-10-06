@@ -50,6 +50,8 @@
 - (void)muteActionForUser:(id <TFSTwitterCanonicalUser>)arg1 isMuting:(_Bool)arg2 showConfirmationIfNeeded:(_Bool)arg3 scribePage:(NSString *)arg4 scribeSection:(NSString *)arg5 scribeComponent:(NSString *)arg6 scribeParameters:(NSDictionary *)arg7;
 - (void)showBlockOrReportWithContext:(T1BlockOrReportActionContext *)arg1 source:(long long)arg2;
 - (void)showMyFollowersWithTab:(unsigned long long)arg1 source:(long long)arg2 sourceNavigationMetadata:(T1NavigationMetadata *)arg3 completion:(void (^)(void))arg4;
+- (void)showFollowingForUsername:(NSString *)arg1 orUserID:(long long)arg2 fromPanel:(long long)arg3 source:(long long)arg4 completion:(void (^)(void))arg5;
+- (void)showFollowersForUsername:(NSString *)arg1 orUserID:(long long)arg2 fromPanel:(long long)arg3 source:(long long)arg4 completion:(void (^)(void))arg5;
 - (void)showAdsCompanionForPath:(NSString *)arg1 source:(long long)arg2 completion:(void (^)(void))arg3;
 - (void)showTeamsInvitationFromPanel:(long long)arg1 navigationContext:(T1AppNavigationContext *)arg2 source:(long long)arg3 completion:(void (^)(void))arg4;
 - (void)showFollowerRequestsFromPanel:(long long)arg1 navigationContext:(T1AppNavigationContext *)arg2 source:(long long)arg3 completion:(void (^)(void))arg4;

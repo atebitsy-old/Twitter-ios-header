@@ -56,12 +56,12 @@
     _Bool enableStabilisation;
     _Bool _isInBackground;
     _Bool _saveAsHQEnabled;
-    _Bool _isRecording;
     _Bool _isAudioScopeEnabled;
     _Bool _connectionActive;
     _Bool _connectionFailed;
     _Bool _inInternalReconnect;
     _Bool _timerPending;
+    _Bool _isRecording;
     int _videoBitrateIndex;
     int _inputsReceived;
     PTVPublishLadder *_publishLadder;
@@ -81,6 +81,7 @@
 }
 
 - (void).cxx_destruct;
+@property _Bool isRecording; // @synthesize isRecording=_isRecording;
 @property(nonatomic) int inputsReceived; // @synthesize inputsReceived=_inputsReceived;
 @property(nonatomic) double initialBandwidth; // @synthesize initialBandwidth=_initialBandwidth;
 @property(retain) NSArray *pspVersion; // @synthesize pspVersion=_pspVersion;
@@ -99,7 +100,6 @@
 @property __weak id <PTVPublishingViewControllerAudioDelegate> audioDelegate; // @synthesize audioDelegate=_audioDelegate;
 @property __weak id <PTVPublishingViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <PTVModelSSLPinningDelegate> sslPinningDelegate; // @synthesize sslPinningDelegate=_sslPinningDelegate;
-@property _Bool isRecording; // @synthesize isRecording=_isRecording;
 @property(nonatomic) int videoBitrateIndex; // @synthesize videoBitrateIndex=_videoBitrateIndex;
 @property(readonly) unsigned long long nTimesReconnected; // @synthesize nTimesReconnected=_nTimesReconnected;
 @property _Bool saveAsHQEnabled; // @synthesize saveAsHQEnabled=_saveAsHQEnabled;
@@ -118,15 +118,6 @@
 @property(retain) NSDictionary *metadata;
 @property(readonly) _Bool transmitOK;
 - (id)getStatistics;
-@property double freeSpaceLimitinMB;
-- (_Bool)canSaveToCameraRoll;
-- (void)deleteSavedClips;
-- (void)combineAndSaveToCameraRoll:(CDUnknownBlockType)arg1;
-- (void)finishRecordingWithCompletionHandler:(CDUnknownBlockType)arg1;
-- (void)pauseLocalRecording;
-- (void)startLocalRecording;
-- (void)setRecordingDelegate:(id)arg1;
-- (id)getClipURLs;
 - (_Bool)audioPresent;
 @property int bytesPerSecond;
 - (double)videoDuration;

@@ -27,7 +27,7 @@
 @property(readonly, nonatomic) NSArray *userReferences; // @synthesize userReferences=_userReferences;
 @property(readonly, nonatomic) NSString *badge; // @synthesize badge=_badge;
 @property(readonly, nonatomic) NSString *bannerText; // @synthesize bannerText=_bannerText;
-- (_Bool)isFollowingTopic;
+- (id)educationText;
 - (id)associatedTopic;
 - (id)landingURL;
 - (long long)contextType;

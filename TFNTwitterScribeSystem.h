@@ -21,17 +21,21 @@
 
 + (void)setSharedSystemClientProvider:(id)arg1;
 + (id)sharedSystem;
++ (id)flushAllPersistenceSwitch;
++ (id)compactPersistenceSwitch;
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNTwitterScribeBackgroundTaskManager *backgroundTaskManager; // @synthesize backgroundTaskManager=_backgroundTaskManager;
 @property(retain, nonatomic) TFNTwitterScribeWriter *scribeWriter; // @synthesize scribeWriter=_scribeWriter;
 @property(retain, nonatomic) TFNTwitterScribeLifecycleObserver *lifecycleObserver; // @synthesize lifecycleObserver=_lifecycleObserver;
 @property(retain, nonatomic) TFSTwitterScribeErrorHandler *errorHandler; // @synthesize errorHandler=_errorHandler;
 @property(retain, nonatomic) TFSScribe *scribeService; // @synthesize scribeService=_scribeService;
+- (void)_deviceFeatureSwitchesDidChange:(id)arg1;
 - (void)_invalidateScribeWriter;
 - (void)_openService;
 - (void)_openServiceIfNecessary;
 - (void)_purgeScribeDirectory;
 - (void)_purgeScribeDirectoryIfNecessary;
+- (void)dealloc;
 - (id)init;
 - (id)clientName;
 

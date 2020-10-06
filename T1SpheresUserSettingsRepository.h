@@ -26,6 +26,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)featureSwitchesDidUpdate:(id)arg1;
 - (void)didRemoveAccount:(id)arg1;
 - (void)unarchiveSphereViewModelsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)archivePinnedListIDs:(id)arg1;

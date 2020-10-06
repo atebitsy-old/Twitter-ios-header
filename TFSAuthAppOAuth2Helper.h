@@ -10,9 +10,8 @@
 {
 }
 
-+ (id)_appOAuthQueue;
-- (void)signRequestInBackground:(id)arg1 bearerToken:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)signRequestInBackground:(id)arg1 appCredential:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)signRequest:(id)arg1 bearerToken:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)signRequest:(id)arg1 appCredential:(id)arg2 completion:(CDUnknownBlockType)arg3;
 
 @end
 

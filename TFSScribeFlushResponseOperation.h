@@ -18,9 +18,11 @@
     CDUnknownBlockType _didFlushBatch;
     CDUnknownBlockType _didFlushAllBatches;
     NSArray *_eventsFlushedThisBatchSoLongAsThisIsStillNecessary;
+    NSArray *_eventsToRetry;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *eventsToRetry; // @synthesize eventsToRetry=_eventsToRetry;
 @property(readonly, nonatomic) NSArray *eventsFlushedThisBatchSoLongAsThisIsStillNecessary; // @synthesize eventsFlushedThisBatchSoLongAsThisIsStillNecessary=_eventsFlushedThisBatchSoLongAsThisIsStillNecessary;
 @property(readonly, copy, nonatomic) CDUnknownBlockType didFlushAllBatches; // @synthesize didFlushAllBatches=_didFlushAllBatches;
 @property(readonly, copy, nonatomic) CDUnknownBlockType didFlushBatch; // @synthesize didFlushBatch=_didFlushBatch;
@@ -30,7 +32,7 @@
 @property(readonly, nonatomic) NSMutableSet *thisFlushEventKeysAwaitingResponse; // @synthesize thisFlushEventKeysAwaitingResponse=_thisFlushEventKeysAwaitingResponse;
 @property(readonly, nonatomic) __weak id notificationObject; // @synthesize notificationObject=_notificationObject;
 - (void)main;
-- (id)initWithDatabaseProvider:(id)arg1 thisFlushEventKeysAwaitingResponse:(id)arg2 allFlushedEventKeysAwaitingResponse:(id)arg3 eventKeysFlushedThisBatch:(id)arg4 completionBehavior:(unsigned long long)arg5 didFlushBatch:(CDUnknownBlockType)arg6 didFlushAllBatches:(CDUnknownBlockType)arg7 eventsFlushedThisBatch:(id)arg8;
+- (id)initWithDatabaseProvider:(id)arg1 thisFlushEventKeysAwaitingResponse:(id)arg2 allFlushedEventKeysAwaitingResponse:(id)arg3 eventKeysFlushedThisBatch:(id)arg4 completionBehavior:(unsigned long long)arg5 eventsToRetry:(id)arg6 didFlushBatch:(CDUnknownBlockType)arg7 didFlushAllBatches:(CDUnknownBlockType)arg8 eventsFlushedThisBatch:(id)arg9;
 
 @end
 

@@ -20,9 +20,9 @@
     TFNTouchDownGestureRecognizer *_tapGestureRecognizer;
 }
 
-+ (id)cellLayoutWithActionText:(id)arg1 indentationLevel:(double)arg2 layoutMetrics:(id)arg3;
++ (id)cellLayoutWithShowMoreNode:(id)arg1 layoutMetrics:(id)arg2;
 + (double)heightWithActionText:(id)arg1;
-+ (id)calculatedLayoutMetricsForViewWithIndentationLevel:(double)arg1 layoutMetrics:(id)arg2;
++ (id)calculatedLayoutMetricsForViewWithShowMoreNode:(id)arg1 layoutMetrics:(id)arg2;
 + (id)_t1_buttonTextFont;
 + (id)textLabelColor;
 - (void).cxx_destruct;

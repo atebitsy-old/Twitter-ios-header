@@ -16,6 +16,7 @@
     _Bool _periscopeBroadcastIsLive;
     _Bool _nudgeEnabled;
     _Bool _nudgeTestingKeywordEnabled;
+    _Bool _conversationControlInviteViaMention;
     NSString *_status;
     NSNumber *_inReplyToStatusID;
     NSArray *_excludeReplyUserIDs;
@@ -40,6 +41,7 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool conversationControlInviteViaMention; // @synthesize conversationControlInviteViaMention=_conversationControlInviteViaMention;
 @property(nonatomic) unsigned long long conversationControlType; // @synthesize conversationControlType=_conversationControlType;
 @property(nonatomic) unsigned long long batchMode; // @synthesize batchMode=_batchMode;
 @property(copy, nonatomic) NSArray *nudgeTypes; // @synthesize nudgeTypes=_nudgeTypes;

@@ -188,6 +188,7 @@
 - (void)lockFocusExposureAtPoint:(struct CGPoint)arg1;
 - (long long)cameraDevicePosition;
 - (void)setCameraDevicePosition:(long long)arg1;
+- (id)ptv_publishingPipelineIfLoaded;
 - (id)ptv_publishingPipeline;
 - (id)ptv_publishingViewController;
 - (void)ptv_didStopCaptureSession;

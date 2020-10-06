@@ -19,7 +19,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNDirectMessageInboxResetResponse *resetResponse; // @synthesize resetResponse=_resetResponse;
 @property(readonly, nonatomic) TFNDirectMessageIncrementalUpdatesResponse *updatesResponse; // @synthesize updatesResponse=_updatesResponse;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
 - (id)init;
 
 @end

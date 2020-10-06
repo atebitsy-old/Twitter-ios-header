@@ -94,15 +94,13 @@
 - (double)makeNTPfor:(double)arg1;
 - (void)sendMetadata:(id)arg1 immediate:(_Bool)arg2;
 - (double)videoDuration;
-- (_Bool)canSaveToCameraRoll;
 - (void)deleteSavedClips;
-- (void)combineAndSaveToCameraRoll:(CDUnknownBlockType)arg1;
 - (void)finishRecordingWithCompletionHandler:(CDUnknownBlockType)arg1;
 - (void)renderVideo:(id)arg1 withWorkingFolder:(id)arg2 muteAudio:(_Bool)arg3 captureOrientation:(long long)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)pauseLocalRecording;
 - (void)startLocalRecording;
+@property(readonly) _Bool isRecording;
 - (void)setRecordingDelegate:(id)arg1;
-- (id)getClipURLs;
 @property(nonatomic) _Bool mirrorRecordedVideo;
 @property(nonatomic) int videoKBytesPerSecond;
 @property(nonatomic) int audioKBitsPerSecond;

@@ -30,7 +30,7 @@
 - (void)_t1_updateBorderDrawing;
 - (void)_t1_updateCornerMask;
 @property(readonly, nonatomic) _Bool isRTL;
-- (void)configureSwipeableCollectionViewCellWithData:(id)arg1 imagePipeline:(id)arg2 cellPosition:(long long)arg3 account:(id)arg4 scribeContext:(id)arg5;
+- (void)configureSwipeableCollectionViewCellWithData:(id)arg1 imagePipeline:(id)arg2 cellPosition:(long long)arg3;
 - (void)prepareForReuse;
 - (void)layoutSublayersOfLayer:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

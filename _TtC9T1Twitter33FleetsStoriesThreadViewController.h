@@ -30,6 +30,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_selfThread
     // Error parsing type: , name: $__lazy_storage_$_composerViewModel
     // Error parsing type: , name: $__lazy_storage_$_selfHasEntries
+    // Error parsing type: , name: $__lazy_storage_$_isSelfShowing
+    // Error parsing type: , name: selfDismissThreadVM
     // Error parsing type: , name: showsComposer
     // Error parsing type: , name: $__lazy_storage_$_didStartComposition
     // Error parsing type: , name: $__lazy_storage_$_composerInputMode

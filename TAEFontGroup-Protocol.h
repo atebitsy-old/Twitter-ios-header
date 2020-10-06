@@ -10,6 +10,7 @@
 
 @protocol TAEFontGroup <TFNUIFontGroup>
 + (id)sharedFontGroup;
+@property(readonly, nonatomic) UIFont *conversationControlReplyEducationFont;
 @property(readonly, nonatomic) UIFont *conversationControlSelectionHeaderCellDetailFont;
 @property(readonly, nonatomic) UIFont *conversationControlSelectionHeaderCellTitleFont;
 @property(readonly, nonatomic) UIFont *conversationControlSelectionCellTitleFont;

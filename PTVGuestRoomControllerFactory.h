@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)guestRoomControllerWithLoggedInUser:(id)arg1 mode:(unsigned long long)arg2 maximumNumberOfGuestCallers:(unsigned long long)arg3;
++ (id)guestRoomControllerWithLoggedInUser:(id)arg1 mode:(unsigned long long)arg2 maximumNumberOfGuestCallers:(unsigned long long)arg3 preferredLanguages:(id)arg4;
 
 @end
 

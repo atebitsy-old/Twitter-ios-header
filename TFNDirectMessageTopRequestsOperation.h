@@ -11,6 +11,7 @@
 
 @interface TFNDirectMessageTopRequestsOperation : TFNDirectMessageAPICommandOperation
 {
+    _Bool _filterNSFW;
     NSString *_accountID;
     id <TFNDirectMessageUserCache> _userCache;
     id <TFNDirectMessageTopRequestsOperationDelegate> _delegate;
@@ -20,12 +21,13 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNDirectMessageProcessUserUpdatesResponseOperation *processResponseOperation; // @synthesize processResponseOperation=_processResponseOperation;
 @property __weak id <TFNDirectMessageTopRequestsOperationDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) _Bool filterNSFW; // @synthesize filterNSFW=_filterNSFW;
 @property(readonly, nonatomic) id <TFNDirectMessageUserCache> userCache; // @synthesize userCache=_userCache;
 @property(readonly, copy, nonatomic) NSString *accountID; // @synthesize accountID=_accountID;
 - (void)failedWithError:(id)arg1;
 - (void)succeededWithObject:(id)arg1;
 - (id)makeCommandWithContext:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithAccountID:(id)arg1 model:(id)arg2 commandService:(id)arg3 context:(id)arg4;
+- (id)initWithAccountID:(id)arg1 model:(id)arg2 commandService:(id)arg3 context:(id)arg4 filterNSFW:(_Bool)arg5;
 
 @end
 

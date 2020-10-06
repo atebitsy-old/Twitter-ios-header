@@ -75,11 +75,11 @@
 - (void)fetchPermissionForUsername:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchPermissionForUserID:(long long)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)_markAsSeen;
-- (void)fetchTopRequests;
+- (void)fetchTopRequests:(_Bool)arg1;
 - (void)markAsSeenThroughConversation:(id)arg1;
 - (void)markAsSeen;
-- (void)loadMoreConversationsWithCursor:(id)arg1;
-- (void)refresh:(long long)arg1 activeConversationID:(id)arg2 filterLowQuality:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)loadMoreConversationsWithCursor:(id)arg1 filterNSFW:(_Bool)arg2;
+- (void)refresh:(long long)arg1 activeConversationID:(id)arg2 filterLowQuality:(id)arg3 filterNSFW:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 @property(readonly, nonatomic, getter=isRefreshing) _Bool refreshing;
 @property(readonly, nonatomic) id <TFNDirectMessageInbox> inbox;
 - (id)conversationByID:(id)arg1;

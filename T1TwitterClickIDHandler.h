@@ -10,7 +10,8 @@
 {
 }
 
-+ (id)URLByAppendingTwitterClickIDIfNecessary:(id)arg1 promotedContent:(id)arg2;
++ (void)scribeClickIDEmbeddingForOriginalURL:(id)arg1 embeddedURL:(id)arg2 error:(id)arg3 status:(id)arg4 account:(id)arg5 scribePage:(id)arg6 scribeComponent:(id)arg7;
++ (id)URLByAppendingTwitterClickIDIfNecessary:(id)arg1 status:(id)arg2 account:(id)arg3 scribePage:(id)arg4 scribeComponent:(id)arg5;
 
 @end
 

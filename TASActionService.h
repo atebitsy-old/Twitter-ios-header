@@ -19,6 +19,8 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (id)initWithServiceLocator:(id)arg1;
+- (id)submitAction:(id)arg1 error:(id *)arg2;
 
 @end
 

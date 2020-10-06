@@ -20,6 +20,7 @@
     struct CGRect _socialBadgeFrame;
     struct CGRect _socialTextFrame;
     struct CGRect _socialSubtextFrame;
+    struct CGRect _topicTooltipFrame;
     struct CGRect _followButtonFrame;
     struct CGRect _followingButtonFrame;
 }
@@ -29,6 +30,7 @@
 @property(nonatomic) struct CGRect followButtonFrame; // @synthesize followButtonFrame=_followButtonFrame;
 @property(nonatomic, getter=isSocialTextMaxLinesExceeded) _Bool socialTextMaxLinesExceeded; // @synthesize socialTextMaxLinesExceeded=_socialTextMaxLinesExceeded;
 @property(nonatomic, getter=isSocialTextMultipleLines) _Bool socialTextMultipleLines; // @synthesize socialTextMultipleLines=_socialTextMultipleLines;
+@property(nonatomic) struct CGRect topicTooltipFrame; // @synthesize topicTooltipFrame=_topicTooltipFrame;
 @property(nonatomic) struct CGRect socialSubtextFrame; // @synthesize socialSubtextFrame=_socialSubtextFrame;
 @property(nonatomic) struct CGRect socialTextFrame; // @synthesize socialTextFrame=_socialTextFrame;
 @property(nonatomic) struct CGRect socialBadgeFrame; // @synthesize socialBadgeFrame=_socialBadgeFrame;

@@ -78,7 +78,6 @@
 + (id)phoneSignupCountriesRestrictedList;
 + (double)ambientNotificationCooldownPeriod;
 + (long long)maxQueuedAmbientNotifications;
-+ (_Bool)isRightToLeftModeEnabled;
 + (_Bool)isTwitterEventKitEnabled;
 + (_Bool)isFeatureSwitchesCrashlyticsLoggingEnabled;
 + (long long)appStoreReviewPromptDaysAfterCrashMin;

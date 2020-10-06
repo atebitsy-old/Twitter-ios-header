@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, TFNTwitterAccount, TFNTwitterLiveEventRemindMeSubscription, TFSTwitterAPICommand;
+@class NSString, TFNTwitterAccount, TFSTwitterAPICommand, TFSTwitterLiveEventRemindMeSubscription;
 @protocol T1LiveEventRemindMeViewModelDelegate, TFSTwitterAPICommandCancellable;
 
 @interface T1LiveEventRemindMeViewModel : NSObject
 {
-    TFNTwitterLiveEventRemindMeSubscription *_remindMeSubscription;
+    TFSTwitterLiveEventRemindMeSubscription *_remindMeSubscription;
     id <T1LiveEventRemindMeViewModelDelegate> _delegate;
     NSString *_eventID;
     TFNTwitterAccount *_account;
@@ -25,7 +25,7 @@
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) NSString *eventID; // @synthesize eventID=_eventID;
 @property(nonatomic) __weak id <T1LiveEventRemindMeViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-@property(readonly, nonatomic) TFNTwitterLiveEventRemindMeSubscription *remindMeSubscription; // @synthesize remindMeSubscription=_remindMeSubscription;
+@property(readonly, nonatomic) TFSTwitterLiveEventRemindMeSubscription *remindMeSubscription; // @synthesize remindMeSubscription=_remindMeSubscription;
 - (void)_t1_remindMeSubscriptionDidUpdate:(id)arg1;
 - (void)_t1_callSubscriptionEndpointWithSubscribedForRemindMeNotification:(_Bool)arg1 commandCompletionBlock:(CDUnknownBlockType)arg2;
 - (void)_t1_requestNotificationAuthorizationWithCompletionHandler:(CDUnknownBlockType)arg1;

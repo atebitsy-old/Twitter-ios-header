@@ -153,7 +153,7 @@
 - (void)_t1_statusDidUpdate:(id)arg1;
 - (void)_t1_viewModelDidUpdate;
 - (void)_t1_logCardInconsistencyIfNeeded;
-- (void)_t1_dismissStatusTapActionForViewModel:(id)arg1 frame:(struct CGRect)arg2;
+- (void)_t1_dismissStatusTapActionForViewModel:(id)arg1 sourceView:(id)arg2 frame:(struct CGRect)arg3;
 - (void)_t1_tapCaretActionForCaretView:(id)arg1 caretFrameWithinStatusView:(struct CGRect)arg2;
 - (void)_t1_handleTimelineStatusItemViewModelUpdateNotification:(id)arg1;
 - (id)_t1_handleDesignatorBadgePreviewEventWithSender:(id)arg1;
@@ -190,7 +190,6 @@
 - (id)cardViewLayoutStateForLayoutState:(id)arg1;
 - (id)quotedStatusViewLayoutStateForLayoutState:(id)arg1;
 - (id)userRecommendationViewLayoutStateForLayoutState:(id)arg1;
-- (void)_t1_dismissStatusTapAction:(id)arg1;
 - (void)_t1_dismissInfoTextTapAction:(id)arg1;
 - (id)_t1_handleAvatarEventWithType:(id)arg1 sender:(id)arg2;
 - (void)_t1_avatarLongPressAction:(id)arg1;

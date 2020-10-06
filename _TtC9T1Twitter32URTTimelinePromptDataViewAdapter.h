@@ -11,7 +11,6 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: account
     // Error parsing type: , name: scribeContext
-    // Error parsing type: , name: prototypeEntityFollowView
     // Error parsing type: , name: prototypeRelevancePromptView
     // Error parsing type: , name: presentationViewController
     // Error parsing type: , name: followedProperties

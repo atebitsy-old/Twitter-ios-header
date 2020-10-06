@@ -26,7 +26,7 @@
 - (void)fetchUpdatesOperation:(id)arg1 didFailWithError:(id)arg2;
 - (void)fetchUpdatesOperation:(id)arg1 didSucceedWithResponse:(id)arg2;
 - (void)completeOperation;
-- (id)initWithInbox:(id)arg1 model:(id)arg2 source:(long long)arg3 activeConversationID:(id)arg4 filterLowQuality:(id)arg5 commandService:(id)arg6 context:(id)arg7;
+- (id)initWithInbox:(id)arg1 model:(id)arg2 source:(long long)arg3 activeConversationID:(id)arg4 filterLowQuality:(id)arg5 filterNSFW:(_Bool)arg6 commandService:(id)arg7 context:(id)arg8;
 - (id)init;
 
 @end

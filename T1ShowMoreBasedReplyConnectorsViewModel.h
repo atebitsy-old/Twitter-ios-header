@@ -24,8 +24,7 @@
 - (double)ancestorConnectorViewOffsetForLayoutMetrics:(id)arg1;
 - (double)ancestorConnectorViewHeightAtLevel:(unsigned long long)arg1;
 @property(readonly, nonatomic) double ancestorConnectorViewOriginY;
-@property(readonly, nonatomic) double elbowParentConnectorViewHeight;
-@property(readonly, nonatomic) double elbowParentConnectorViewWidth;
+- (struct CGSize)elbowParentConnectorViewSizeForLayoutMetrics:(id)arg1;
 @property(readonly, nonatomic) double verticalParentConnectorViewHeight;
 - (_Bool)shouldFadeOutAncestorConnectorForLevel:(unsigned long long)arg1;
 - (_Bool)shouldShowAncestorHighlightingAtLevel:(unsigned long long)arg1;

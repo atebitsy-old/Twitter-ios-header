@@ -373,6 +373,7 @@
 - (_Bool)encrypted;
 @property(readonly, nonatomic) _Bool sparkles;
 - (_Bool)cameFromTwitter;
+- (id)sourcePipelineIfLoaded;
 - (id)sourcePipeline;
 - (id)guestPublishingCoordinator;
 - (id)guestPublishingViewController;

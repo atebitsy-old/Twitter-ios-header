@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNPreviewable-Protocol.h>
 
-@class NSString, T1DismissButton, T1TimelinesItemProminentSocialContextViewModel, TFNLegacyButton, TFNSolidColorView, TFNTappableHighlightView, UIImageView, UILabel;
+@class NSString, T1DismissButton, T1TimelinesItemProminentSocialContextViewModel, T1TopicEducationTooltipContentView, TFNLegacyButton, TFNSolidColorView, TFNTappableHighlightView, TFNTooltipView, UIImageView, UILabel;
 @protocol T1TimelinesItemProminentSocialContextViewDelegate;
 
 @interface T1TimelinesItemProminentSocialContextView : UIView <TFNPreviewable>
@@ -17,6 +17,7 @@
     id <T1TimelinesItemProminentSocialContextViewDelegate> _delegate;
     T1TimelinesItemProminentSocialContextViewModel *_viewModel;
     long long _overrideMode;
+    UIView *_socialContextContainerView;
     UIImageView *_badgeImageView;
     UILabel *_textLabel;
     UILabel *_subtextLabel;
@@ -26,9 +27,13 @@
     T1DismissButton *_caretButton;
     TFNLegacyButton *_followButton;
     TFNLegacyButton *_followingButton;
+    TFNTooltipView *_topicEducationTooltip;
+    T1TopicEducationTooltipContentView *_tooltipAttributedTextView;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) T1TopicEducationTooltipContentView *tooltipAttributedTextView; // @synthesize tooltipAttributedTextView=_tooltipAttributedTextView;
+@property(retain, nonatomic) TFNTooltipView *topicEducationTooltip; // @synthesize topicEducationTooltip=_topicEducationTooltip;
 @property(nonatomic) _Bool socialContextUserInteractionEnabled; // @synthesize socialContextUserInteractionEnabled=_socialContextUserInteractionEnabled;
 @property(retain, nonatomic) TFNLegacyButton *followingButton; // @synthesize followingButton=_followingButton;
 @property(retain, nonatomic) TFNLegacyButton *followButton; // @synthesize followButton=_followButton;
@@ -39,6 +44,7 @@
 @property(retain, nonatomic) UILabel *subtextLabel; // @synthesize subtextLabel=_subtextLabel;
 @property(retain, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(retain, nonatomic) UIImageView *badgeImageView; // @synthesize badgeImageView=_badgeImageView;
+@property(retain, nonatomic) UIView *socialContextContainerView; // @synthesize socialContextContainerView=_socialContextContainerView;
 @property(nonatomic) long long overrideMode; // @synthesize overrideMode=_overrideMode;
 @property(retain, nonatomic) T1TimelinesItemProminentSocialContextViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <T1TimelinesItemProminentSocialContextViewDelegate> delegate; // @synthesize delegate=_delegate;

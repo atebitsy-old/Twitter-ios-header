@@ -14,7 +14,7 @@
 #import <T1Twitter/T1VoiceViewDelegate-Protocol.h>
 #import <T1Twitter/TAVPlaybackObserver-Protocol.h>
 
-@class NSString, T1ImageViewFetchHelper, T1InlineMediaContainerView, T1InlineMediaView, T1InlineVideoView, T1MultiPhotoView, T1PrerollCTAModel, T1StatusPhotoVideoDetailsView, T1VoiceView, TAVPlaybackState, TFNTwitterAccount, TFSTwitterScribeContext;
+@class NSString, T1ImageViewFetchHelper, T1InlineMediaContainerView, T1InlineMediaView, T1InlineVideoFacadeView, T1InlineVideoView, T1MultiPhotoView, T1PrerollCTAModel, T1StatusPhotoVideoDetailsView, T1VoiceView, TAVPlaybackState, TFNTwitterAccount, TFSTwitterScribeContext;
 @protocol T1StatusPhotoVideoForwardViewDelegate, T1StatusViewModel;
 
 @interface T1StatusPhotoVideoForwardView : UIView <T1InlineMediaViewDelegate, T1VoiceViewDelegate, T1StatusPhotoVideoDetailsViewDelegate, T1ImageViewFetchHelperDelegate, TAVPlaybackObserver, T1InlineMediaContainerViewDelegate, T1StatusViewInlineImages>
@@ -33,6 +33,7 @@
     unsigned long long _attachmentType;
     T1InlineMediaView *_inlineMediaView;
     T1InlineVideoView *_inlineVideoView;
+    T1InlineVideoFacadeView *_inlineVideoFacadeView;
     T1MultiPhotoView *_multiPhotoView;
     T1VoiceView *_voiceView;
     T1StatusPhotoVideoDetailsView *_attributionView;
@@ -60,6 +61,7 @@
 @property(readonly, nonatomic) T1StatusPhotoVideoDetailsView *attributionView; // @synthesize attributionView=_attributionView;
 @property(retain, nonatomic) T1VoiceView *voiceView; // @synthesize voiceView=_voiceView;
 @property(retain, nonatomic) T1MultiPhotoView *multiPhotoView; // @synthesize multiPhotoView=_multiPhotoView;
+@property(readonly, nonatomic) T1InlineVideoFacadeView *inlineVideoFacadeView; // @synthesize inlineVideoFacadeView=_inlineVideoFacadeView;
 @property(readonly, nonatomic) T1InlineVideoView *inlineVideoView; // @synthesize inlineVideoView=_inlineVideoView;
 @property(readonly, nonatomic) T1InlineMediaView *inlineMediaView; // @synthesize inlineMediaView=_inlineMediaView;
 @property(readonly, nonatomic) unsigned long long attachmentType; // @synthesize attachmentType=_attachmentType;

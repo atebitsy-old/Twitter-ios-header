@@ -24,6 +24,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_container
     // Error parsing type: , name: $__lazy_storage_$_closeButton
     // Error parsing type: , name: $__lazy_storage_$_postFleetButton
+    // Error parsing type: , name: $__lazy_storage_$_backgroundColorSwatch
     // Error parsing type: , name: $__lazy_storage_$_addTextButton
     // Error parsing type: , name: $__lazy_storage_$_muteButton
     // Error parsing type: , name: $__lazy_storage_$_altTextButton
@@ -31,7 +32,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_assetLibraryNavigationController
     // Error parsing type: , name: $__lazy_storage_$_isFullscreen
     // Error parsing type: , name: $__lazy_storage_$_cameraInputView
-    // Error parsing type: , name: $__lazy_storage_$_textBackgroundView
+    // Error parsing type: , name: $__lazy_storage_$_backgroundView
     // Error parsing type: , name: $__lazy_storage_$_mediaPreviewInputView
     // Error parsing type: , name: $__lazy_storage_$_authorizationViewController
     // Error parsing type: , name: showAutocomplete
@@ -48,6 +49,7 @@ __attribute__((visibility("hidden")))
 - (void)photoGalleryViewControllerDidCancelSession:(id)arg1;
 - (void)photoGalleryViewController:(id)arg1 didEndSessionWithAttachments:(id)arg2;
 - (void)postFleet;
+- (void)changeBackground:(id)arg1;
 - (void)altTextAction:(id)arg1;
 - (void)muteAction:(id)arg1;
 - (void)addTextAction:(id)arg1;

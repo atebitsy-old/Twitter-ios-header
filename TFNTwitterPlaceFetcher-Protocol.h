@@ -10,7 +10,7 @@
 @protocol TFNTwitterPlaceFetcherOperation;
 
 @protocol TFNTwitterPlaceFetcher <NSObject>
-- (id <TFNTwitterPlaceFetcherOperation>)searchPlacesWithLocation:(TFSTwitterLocation *)arg1 query:(NSString *)arg2 queryType:(long long)arg3 response:(void (^)(TFNTwitterPlaceResponse *, NSError *))arg4;
-- (id <TFNTwitterPlaceFetcherOperation>)fetchPlacesWithLocation:(TFSTwitterLocation *)arg1 queryType:(long long)arg2 includeLatLonParams:(_Bool)arg3 response:(void (^)(TFNTwitterPlaceResponse *, NSError *))arg4;
+- (id <TFNTwitterPlaceFetcherOperation>)searchPlacesWithLocation:(TFSTwitterLocation *)arg1 query:(NSString *)arg2 queryType:(long long)arg3 response:(void (^)(TFSTwitterPlaceResponse *, NSError *))arg4;
+- (id <TFNTwitterPlaceFetcherOperation>)fetchPlacesWithLocation:(TFSTwitterLocation *)arg1 queryType:(long long)arg2 includeLatLonParams:(_Bool)arg3 response:(void (^)(TFSTwitterPlaceResponse *, NSError *))arg4;
 @end
 

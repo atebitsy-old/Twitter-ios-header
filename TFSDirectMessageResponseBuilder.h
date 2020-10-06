@@ -12,13 +12,16 @@
 
 @interface TFSDirectMessageResponseBuilder : NSObject <TFSModelBuilder>
 {
+    _Bool _filterNSFW;
     id <TFNDirectMessageUserCache> _userCache;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool filterNSFW; // @synthesize filterNSFW=_filterNSFW;
 @property(readonly, nonatomic) id <TFNDirectMessageUserCache> userCache; // @synthesize userCache=_userCache;
 - (id)modelObjectWithJSONData:(id)arg1 headerFields:(id)arg2 error:(out id *)arg3;
 - (id)modelObjectWithJSONDictionary:(id)arg1 headerFields:(id)arg2 error:(out id *)arg3;
+- (id)initWithUserCache:(id)arg1 filterNSFW:(_Bool)arg2;
 - (id)initWithUserCache:(id)arg1;
 - (id)init;
 

@@ -12,6 +12,10 @@
 
 + (id)colorWithHexString:(id)arg1;
 + (id)colorWithRGBHex:(unsigned int)arg1;
++ (double)peekHeight;
++ (double)attachedCursorBottomContentEdgeScaleFactor;
++ (double)attachedCursorTopContentEdgeScaleFactor;
++ (_Bool)showAttachedCursorOrdering;
 + (double)inlineActionRightMargin;
 + (double)selectedStateShadowOffsetHeight;
 + (double)selectedStateShadowOffsetWidth;

@@ -22,6 +22,7 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (_Bool)accessibilityActivate;
 - (void)textStorage:(id)arg1 willProcessEditing:(unsigned long long)arg2 range:(struct _NSRange)arg3 changeInLength:(long long)arg4;
 - (void)textViewDidChangeSelection:(id)arg1;
 - (void)textViewDidChange:(id)arg1;

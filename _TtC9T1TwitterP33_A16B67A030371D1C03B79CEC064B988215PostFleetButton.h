@@ -9,6 +9,7 @@
 @interface _TtC9T1TwitterP33_A16B67A030371D1C03B79CEC064B988215PostFleetButton : UIButton
 {
     // Error parsing type: , name: highlightView
+    // Error parsing type: , name: style
 }
 
 - (void).cxx_destruct;

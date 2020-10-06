@@ -15,6 +15,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: summaryPrototypeCell
     // Error parsing type: , name: updatePipeline
+    // Error parsing type: , name: topicMutationsManager
     // Error parsing type: , name: statusMediaHandler
     // Error parsing type: , name: impressedPromotedViewModels
 }

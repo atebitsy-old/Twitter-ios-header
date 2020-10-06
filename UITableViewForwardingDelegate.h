@@ -21,6 +21,8 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSSet *overriddenSelectorStrings; // @synthesize overriddenSelectorStrings=_overriddenSelectorStrings;
 @property(nonatomic) __weak id <UITableViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)tableView:(id)arg1 didEndDisplayingHeaderView:(id)arg2 forSection:(long long)arg3;
+- (void)tableView:(id)arg1 willDisplayHeaderView:(id)arg2 forSection:(long long)arg3;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;

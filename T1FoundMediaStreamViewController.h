@@ -11,15 +11,13 @@
 #import <T1Twitter/T1FoundMediaCollectionViewCellDelegate-Protocol.h>
 #import <T1Twitter/T1FoundMediaCollectionViewDelegate-Protocol.h>
 #import <T1Twitter/T1FoundMediaCollectionViewDelegateLayout-Protocol.h>
-#import <T1Twitter/T1FoundMediaImagePreviewViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1ImageTransitionDelegate-Protocol.h>
 
 @class NSString, T1FoundMediaAutoplaySwitchView, T1FoundMediaStream, T1FoundMediaStreamViewGroupAdapter, UICollectionViewCell, UIView;
 @protocol T1FoundMediaStreamViewControllerDelegate;
 
-@interface T1FoundMediaStreamViewController : TFNItemsDataViewController <T1FoundMediaCollectionViewDelegate, T1FoundMediaCollectionViewCellDelegate, T1FoundMediaImagePreviewViewControllerDelegate, T1FoundMediaAutoplaySwitchViewDelegate, T1FoundMediaCollectionViewDelegateLayout, T1ImageTransitionDelegate, T1ErrorDataViewAdapterDelegate>
+@interface T1FoundMediaStreamViewController : TFNItemsDataViewController <T1FoundMediaCollectionViewDelegate, T1FoundMediaCollectionViewCellDelegate, T1FoundMediaAutoplaySwitchViewDelegate, T1FoundMediaCollectionViewDelegateLayout, T1ImageTransitionDelegate, T1ErrorDataViewAdapterDelegate>
 {
-    _Bool _previewEnabled;
     _Bool _needsUpdateAdapterOption;
     _Bool _needsResetContentOffsetWhenUpdate;
     _Bool _showsHeaderView;
@@ -60,7 +58,6 @@
 @property(retain, nonatomic) NSString *scribeElement; // @synthesize scribeElement=_scribeElement;
 @property(retain, nonatomic) NSString *scribeSection; // @synthesize scribeSection=_scribeSection;
 @property(retain, nonatomic) NSString *scribePage; // @synthesize scribePage=_scribePage;
-@property(nonatomic, getter=isPreviewEnabled) _Bool previewEnabled; // @synthesize previewEnabled=_previewEnabled;
 @property(retain, nonatomic) T1FoundMediaStream *stream; // @synthesize stream=_stream;
 @property(nonatomic) __weak id <T1FoundMediaStreamViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (_Bool)tfn_sendContentScrollEventsToParentViewController;
@@ -70,9 +67,6 @@
 - (struct CGRect)imageTransitionViewController:(id)arg1 previewImageHostViewFrameInWindow:(id)arg2 forObject:(id)arg3;
 - (struct CGRect)imageTransitionViewController:(id)arg1 previewImageFrameInWindow:(id)arg2 forObject:(id)arg3;
 - (void)setPreviewImageHidden:(_Bool)arg1 forImageTransitionViewController:(id)arg2 object:(id)arg3;
-- (void)_dismissImagePreviewViewController:(id)arg1 transitionAnimated:(_Bool)arg2;
-- (void)foundMediaImagePreviewViewController:(id)arg1 didCancelShouldAnimateTransition:(_Bool)arg2;
-- (void)foundMediaImagePreviewViewController:(id)arg1 didAddItem:(id)arg2;
 - (void)foundMediaCollectionViewCell:(id)arg1 didFailToLoadAnimatedImageForFoundMediaObject:(id)arg2;
 - (void)foundMediaCollectionViewCellDidLongPress:(id)arg1;
 - (void)foundMediaCollectionViewCellDidEndTrackingLongPressGesture:(id)arg1;

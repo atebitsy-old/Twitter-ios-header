@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1URTConversationMediatorDelegate-Protocol.h>
 
-@class NSArray, NSMutableDictionary, NSMutableSet, NSString, T1ConversationNode, T1ConversationStatusNode, T1URTConversationMediator, T1URTTimelineTombstoneItemViewModel, TFNTwitterAccount, TFNTwitterStatus, TFSTwitterScribeContext;
+@class NSArray, NSMutableArray, NSMutableDictionary, NSMutableSet, NSString, T1ConversationNode, T1ConversationStatusNode, T1URTConversationMediator, T1URTTimelineTombstoneItemViewModel, TFNTwitterAccount, TFNTwitterStatus, TFSTwitterScribeContext;
 @protocol T1ConversationDataSourceDelegate;
 
 @interface T1ConversationDataSource : NSObject <T1URTConversationMediatorDelegate>
@@ -37,7 +37,7 @@
     NSMutableDictionary *_statusIDToEntryIDCache;
     NSMutableDictionary *_nodeCache;
     NSArray *_cachedFlattenedNodeTreeNodes;
-    NSMutableSet *_orphanNodes;
+    NSMutableArray *_orphanNodes;
     NSMutableSet *_moderatedEntryIDs;
 }
 
@@ -46,7 +46,7 @@
 @property(readonly, nonatomic) _Bool connectorEmphasisDirectAncestorOnly; // @synthesize connectorEmphasisDirectAncestorOnly=_connectorEmphasisDirectAncestorOnly;
 @property(readonly, nonatomic) _Bool conversationEmphasizedConnectorLinesEnabled; // @synthesize conversationEmphasizedConnectorLinesEnabled=_conversationEmphasizedConnectorLinesEnabled;
 @property(retain, nonatomic) NSMutableSet *moderatedEntryIDs; // @synthesize moderatedEntryIDs=_moderatedEntryIDs;
-@property(retain, nonatomic) NSMutableSet *orphanNodes; // @synthesize orphanNodes=_orphanNodes;
+@property(retain, nonatomic) NSMutableArray *orphanNodes; // @synthesize orphanNodes=_orphanNodes;
 @property(retain, nonatomic) NSArray *cachedFlattenedNodeTreeNodes; // @synthesize cachedFlattenedNodeTreeNodes=_cachedFlattenedNodeTreeNodes;
 @property(retain, nonatomic) NSMutableDictionary *nodeCache; // @synthesize nodeCache=_nodeCache;
 @property(retain, nonatomic) NSMutableDictionary *statusIDToEntryIDCache; // @synthesize statusIDToEntryIDCache=_statusIDToEntryIDCache;
@@ -97,6 +97,12 @@
 - (void)completedRenderingForUpdate;
 @property(readonly, nonatomic) _Bool isEmpty;
 - (id)_t1_flattenedCompositionChainForNode:(id)arg1;
+- (void)_t1_updateCursorWithItemWrapper:(id)arg1;
+- (id)_t1_processURTItemWrapper:(id)arg1;
+- (_Bool)_t1_canShowConversationNode:(id)arg1;
+- (id)_t1_orderedDescendantNodesForNode:(id)arg1;
+- (id)_t1_flattenedConversationFromNodeOrdering;
+- (id)_t1_flattenedConversationFromURTOrdering;
 - (id)flattenedNodeTreeNodes;
 @property(readonly, nonatomic) _Bool shouldAssertOnDuplicateItems;
 - (void)urtConversationMediatorDidRecieveError:(id)arg1;

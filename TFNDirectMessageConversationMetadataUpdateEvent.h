@@ -14,6 +14,7 @@
 {
     _Bool _isMuted;
     _Bool _isNSFW;
+    _Bool _filterNSFW;
     long long _eventID;
     NSDate *_time;
     NSString *_requestID;
@@ -22,6 +23,7 @@
 
 + (id)_validUpdateEventKeys;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool filterNSFW; // @synthesize filterNSFW=_filterNSFW;
 @property(readonly, nonatomic) _Bool isNSFW; // @synthesize isNSFW=_isNSFW;
 @property(readonly, nonatomic) _Bool isMuted; // @synthesize isMuted=_isMuted;
 @property(readonly, copy, nonatomic) NSString *conversationID; // @synthesize conversationID=_conversationID;
@@ -29,7 +31,7 @@
 @property(readonly, nonatomic) NSDate *time; // @synthesize time=_time;
 @property(readonly, nonatomic) long long eventID; // @synthesize eventID=_eventID;
 - (void)performUpdatesWithModel:(id)arg1;
-- (id)initWithEventID:(long long)arg1 time:(id)arg2 requestID:(id)arg3 conversationID:(id)arg4 updateEventDictionary:(id)arg5;
+- (id)initWithEventID:(long long)arg1 time:(id)arg2 requestID:(id)arg3 conversationID:(id)arg4 updateEventDictionary:(id)arg5 filterNSFW:(_Bool)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

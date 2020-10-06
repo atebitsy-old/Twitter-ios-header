@@ -21,7 +21,7 @@
 @property(readonly, nonatomic) TFNDirectMessageEntriesResponse *entriesResponse; // @synthesize entriesResponse=_entriesResponse;
 @property(readonly, nonatomic) _Bool hasMore; // @synthesize hasMore=_hasMore;
 @property(readonly, nonatomic) NSNumber *minID; // @synthesize minID=_minID;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
 - (id)init;
 
 @end

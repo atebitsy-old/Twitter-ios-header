@@ -21,7 +21,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNTwitterUnifiedCardMediaComponentModel *videoModel; // @synthesize videoModel=_videoModel;
 @property(retain, nonatomic) T1UnifiedCardVideoComponentView *videoView; // @synthesize videoView=_videoView;
-- (void)configureSwipeableCollectionViewCellWithData:(id)arg1 imagePipeline:(id)arg2 cellPosition:(long long)arg3 account:(id)arg4 scribeContext:(id)arg5;
+- (void)configureSwipeableCollectionViewCellWithData:(id)arg1 imagePipeline:(id)arg2 cellPosition:(long long)arg3;
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;
 - (void)didTapOnVideoView:(id)arg1;
 - (void)prepareForReuse;

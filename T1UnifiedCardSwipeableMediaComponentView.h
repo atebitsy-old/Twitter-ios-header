@@ -11,7 +11,7 @@
 #import <T1Twitter/T1UnifiedCardComponentView-Protocol.h>
 #import <T1Twitter/TFNLayoutMetricsEnvironment-Protocol.h>
 
-@class NSString, T1UnifiedCardCarouselViewController, TFNTwitterUnifiedCard, TFNTwitterUnifiedCardSwipeableMediaComponentModel, TIPImagePipeline, UIView;
+@class NSString, T1UnifiedCardCarouselViewController, TFNTwitterAccount, TFNTwitterUnifiedCard, TFNTwitterUnifiedCardSwipeableMediaComponentModel, TFSTwitterScribeContext, TIPImagePipeline, UIView;
 @protocol T1UnifiedCardComponentViewEventDelegate, TFNTwitterUnifiedCardComponentModel;
 
 @interface T1UnifiedCardSwipeableMediaComponentView : TFNLayoutableView <TFNLayoutMetricsEnvironment, T1UnifiedCardComponentView, T1AutoplayableContainer, T1UnifiedCardCarouselViewControllerDelegate>
@@ -21,10 +21,16 @@
     TIPImagePipeline *_imagePipeline;
     id <T1UnifiedCardComponentViewEventDelegate> _eventDelegate;
     T1UnifiedCardCarouselViewController *_carouselViewController;
+    TFNTwitterAccount *_account;
+    double _leadingInset;
+    TFSTwitterScribeContext *_scribeContext;
 }
 
 + (id)sharedLayoutDelegate;
 - (void).cxx_destruct;
+@property(copy, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
+@property(nonatomic) double leadingInset; // @synthesize leadingInset=_leadingInset;
+@property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(retain, nonatomic) T1UnifiedCardCarouselViewController *carouselViewController; // @synthesize carouselViewController=_carouselViewController;
 @property(nonatomic) __weak id <T1UnifiedCardComponentViewEventDelegate> eventDelegate; // @synthesize eventDelegate=_eventDelegate;
 @property(retain, nonatomic) TIPImagePipeline *imagePipeline; // @synthesize imagePipeline=_imagePipeline;
@@ -36,7 +42,7 @@
 - (void)carouselViewController:(id)arg1 didSwipeFrom:(unsigned long long)arg2 to:(unsigned long long)arg3;
 - (void)carouselViewController:(id)arg1 didSelectItemAtIndex:(unsigned long long)arg2 eventType:(unsigned long long)arg3;
 - (void)_t1_removeCarouselViewController;
-- (void)addCarouselViewControllerToParent:(id)arg1 account:(id)arg2 carouselViewLeadingInset:(id)arg3;
+- (void)addCarouselViewControllerToParent:(id)arg1;
 @property(readonly, nonatomic) TFNTwitterUnifiedCardSwipeableMediaComponentModel *model;
 @property(readonly, nonatomic) _Bool shouldDelayContainerTouchDownHighlighting;
 @property(readonly, nonatomic) UIView *autoplayableContainerView;
@@ -48,6 +54,7 @@
 - (_Bool)accessibilityScroll:(long long)arg1;
 - (void)accessibilityElementDidBecomeFocused;
 - (id)accessibilityLabel;
+- (void)didMoveToSuperview;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties

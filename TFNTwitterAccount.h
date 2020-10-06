@@ -245,6 +245,7 @@
 - (void)setCurrentAccountForBadgingWithCompletion:(CDUnknownBlockType)arg1;
 - (void)unhideTweetStatus:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)hideTweetStatus:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;
+- (void)ouchTweetStatus:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)private_homeMutingSetStartObserving;
 - (unsigned long long)mutedUsersCount;
 - (void)private_updateUserWithUserReference:(id)arg1 muted:(_Bool)arg2 responseBlock:(CDUnknownBlockType)arg3;
@@ -402,7 +403,6 @@
 - (_Bool)isSimpleQuoteActionLabelEnabled;
 - (_Bool)isQuoteStatRearrangeEnabled;
 - (_Bool)isRetweetsAndCommentsLabelEnabled;
-- (_Bool)isConversationControlFlexibleParticipationEnabled;
 - (_Bool)isConversationControlNotifyingParticipantsEnabled;
 - (_Bool)isConversationControlCreationEnabled;
 - (_Bool)isVerificationV2ElectionsBadgeEnabled;
@@ -451,6 +451,9 @@
 - (_Bool)areAEMAuthenticatedWebviewsEnabled;
 - (_Bool)isReportFlowIdReportTypeEnabled;
 - (_Bool)isReportFlowIdEnabled;
+- (_Bool)isSoftInterventionsRetweetNudgeEnabled;
+- (_Bool)isSoftInterventionsNudgeBackendControlEnabled;
+- (_Bool)isSoftInterventionsLikeNudgeEnabled;
 - (_Bool)isSoftInterventionsInnerQuoteTweetForwardPivotEnabled;
 - (_Bool)isSoftInterventionsForwardPivotEnabled;
 - (_Bool)isNavigationStackReportClientEventsEnabled;
@@ -486,7 +489,6 @@
 - (_Bool)isIndividuallyURLRegexCompilationEnabled;
 - (_Bool)isIgnoreTraitCollectionUIStyleInEqualityEnabled;
 - (_Bool)isAttributedTextModelColorDifferenceOptimizationEnabled;
-- (long long)_tfn_isLaunchSwitchEnabled:(id)arg1 withImpression:(_Bool)arg2;
 - (long long)isAppShortcutAsyncCameraLoadingEnabledWithImpression:(_Bool)arg1;
 - (long long)isCanaryAsyncKeychainLoadingEnabledWithImpression:(_Bool)arg1;
 - (long long)isTwitterTextAsyncConfigLoadingEnabledWithImpression:(_Bool)arg1;
@@ -535,10 +537,12 @@
 - (_Bool)isCountryWithheldContentTweetInterstitialEnabled;
 - (_Bool)isCountryWithheldContentProfileInterstitialEnabled;
 - (_Bool)isAuthorModeratedReplyURTContainerEnabled;
+- (_Bool)isConversationalSafetyOuchEnabled;
 - (_Bool)isTOTPGeneratorEnabled;
 - (_Bool)isSMS2faEnabled;
 - (_Bool)performAnimationOnSkippedStatusNavigation;
 - (_Bool)isRedundantStatusNavigationDisabled;
+- (double)conversationPeekHeight;
 - (_Bool)isConversationThreadingEmptyModuleRetryEnabled;
 - (_Bool)isConversationThreadingSelectedStateExtendedSendReplyViewNoOpEnabled;
 - (_Bool)isConversationThreadingSelectedStateTapInlineActionsViewNoOpEnabled;
@@ -558,6 +562,7 @@
 - (_Bool)isConversationThreadingCaretAlwaysVisible;
 - (_Bool)isConversationThreadingInlineActionsCountsAlwaysVisible;
 - (_Bool)isConversationThreadingInlineActionsAlwaysVisible;
+- (_Bool)isConversationAttachedCursorEnabled;
 - (_Bool)isConversationThreadingPushNavigationEnabled;
 - (_Bool)isConversationMaximumIndentationSentWithCursorsEnabled;
 - (_Bool)isConversationThreadingInlineActionsVerticallyAlignedEnabled;
@@ -609,11 +614,7 @@
 - (_Bool)isTopicsNewSocialContextIconColorEnabled;
 - (_Bool)isTopicsNewSocialContextEnabled;
 - (_Bool)isTopicsMenuSeparatorEnabled;
-@property(readonly, nonatomic) _Bool isTopicsDismissControlEnabled;
-@property(readonly, nonatomic) _Bool isTopicsNewManagementEnabled;
-@property(readonly, nonatomic) _Bool isTopicsDescriptionsEnabled;
 @property(readonly, nonatomic) _Bool isTopicsProfileEntryPointEnabled;
-@property(readonly, nonatomic) _Bool isTopicsDashItemEnabled;
 - (_Bool)isVisibilityByItemPathTrackingEnabled;
 - (_Bool)isURTEmptyCursorChunkClearingEnabled;
 - (double)latestTimelineProgressiveAutoSwitchThresholdMultiplier;
@@ -765,6 +766,7 @@
 - (long long)directMessageMaxGroupSize;
 - (_Bool)isIOS13ShareSheetDonationEnabled;
 - (_Bool)isDMConversationNSFWMediaFilterEnabled;
+- (_Bool)isDMConversationMutingEnabled;
 - (_Bool)isDMConversationGroupJoinedEntryEnabled;
 - (_Bool)isDMConversationNavBarAvatarEnabled;
 - (_Bool)isDMRequestsInboxActionsButtonEnabled;
@@ -789,6 +791,8 @@
 - (unsigned long long)unseenDMCountForBadgingExcludingMuted:(_Bool)arg1 excludingUntrusted:(_Bool)arg2;
 @property(nonatomic, readonly) _Bool countOfUnseenConversationsForBadgingDiffersFromLegacy;
 @property(nonatomic, readonly) TFNDirectMessageService *directMessages;
+- (long long)articlesNudgeRateLimit;
+- (id)articlesNudgeNewsDomainSetWithImpression:(_Bool)arg1;
 - (void)markAllFollowerRequestsAsRead;
 - (void)_tfn_setNeedsFollowerRequestsRefresh;
 - (_Bool)hasFollowerRequestFromUserWithUserID:(long long)arg1;
@@ -895,8 +899,6 @@
 @property(readonly, nonatomic) long long scribeAPIErrorSampleSize;
 @property(readonly, nonatomic) long long scribeAPISampleSize;
 - (_Bool)isBlockMuteStatusFilteringOptimizationEnabled;
-- (long long)articlesNudgeRateLimit;
-- (id)articlesNudgeNewsDomainSetWithImpression:(_Bool)arg1;
 - (_Bool)isProvisionalAuthorizationEnabled;
 - (_Bool)isQuoteTweetCombinedEnabled;
 - (_Bool)isLivePipelineEventsScribeEnabled;
@@ -906,6 +908,7 @@
 - (_Bool)isGraphQLStatusesShowGraphQLModelBuilderEnabled;
 - (_Bool)_isVITModeEnabled;
 - (_Bool)isDMConvoUpdateNameUsingGraphQLEnabled;
+- (_Bool)isConversationControlFlexibleParticipationEnabled;
 - (_Bool)isDataSensitiveCountryDefaultsEnabled;
 - (_Bool)isDataInsensitiveCountryDefaultsEnabled;
 - (id)_dataSensitiveDefaultsBucketName;

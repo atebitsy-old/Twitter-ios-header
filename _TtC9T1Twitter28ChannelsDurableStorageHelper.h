@@ -8,11 +8,10 @@
 
 @interface _TtC9T1Twitter28ChannelsDurableStorageHelper : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: enabled
+    // Error parsing type: , name: spheresFeatureSwitches
     // Error parsing type: , name: writeDelaySecs
     // Error parsing type: , name: coldstartTTLSecs
     // Error parsing type: , name: accountID
-    // Error parsing type: , name: backendStorageMigrationEnabled
     // Error parsing type: , name: migrationQueue
     // Error parsing type: , name: writeTimer
     // Error parsing type: , name: api

@@ -7,9 +7,10 @@
 #import <T1Twitter/NSObject-Protocol.h>
 #import <T1Twitter/TFNTwitterStatusSocialContext-Protocol.h>
 
-@class NSArray, NSString, TFSTwitterTopic;
+@class NSArray, NSAttributedString, NSString, TFSTwitterTopic;
 
 @protocol TFNTwitterStatusBanner <NSObject, TFNTwitterStatusSocialContext>
+- (NSAttributedString *)educationText;
 - (TFSTwitterTopic *)associatedTopic;
 - (NSArray *)userReferences;
 - (NSString *)badgeName;

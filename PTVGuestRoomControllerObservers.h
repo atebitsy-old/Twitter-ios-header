@@ -20,7 +20,7 @@
 @property(nonatomic) __weak id <PTVGuestRoomController> controller; // @synthesize controller=_controller;
 - (void)notifyRoomDestruction;
 - (void)notifyUpdateOfUsers:(id)arg1 totalUsersCount:(unsigned long long)arg2;
-- (void)notifyReceptionOfText:(id)arg1 fromUser:(id)arg2;
+- (void)notifyReceptionOfText:(id)arg1 language:(id)arg2 fromUser:(id)arg3;
 - (void)notifyReceptionOfEmoji:(id)arg1 fromUser:(id)arg2;
 - (void)notifyRoomJoiningFailureWithError:(id)arg1;
 - (void)notifyRoomJoiningSuccess;

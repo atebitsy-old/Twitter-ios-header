@@ -330,7 +330,6 @@
 - (id)_t1_retweetMenuSheet;
 - (id)_t1_favoriteConfirmMenuSheet;
 - (void)_t1_toggleRetweetOnCurrentStatusFromRect:(struct CGRect)arg1 inView:(id)arg2;
-- (void)_t1_presentShareTweetSheetFromRect:(struct CGRect)arg1 inView:(id)arg2;
 - (void)_t1_toggleFavoriteOnCurrentStatus;
 - (void)_t1_replyAction;
 - (_Bool)_t1_inlineActionsDisabled;

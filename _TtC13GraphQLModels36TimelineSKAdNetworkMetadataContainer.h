@@ -15,6 +15,7 @@
     // Error parsing type: , name: nonce
     // Error parsing type: , name: signature
     // Error parsing type: , name: srcAppID
+    // Error parsing type: , name: version
 }
 
 @end

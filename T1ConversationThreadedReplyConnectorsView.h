@@ -26,7 +26,7 @@
 - (void)_t1_layoutConnectorView:(id)arg1 atLevel:(long long)arg2 withHeight:(double)arg3 layoutMetrics:(id)arg4;
 - (void)_t1_layoutLastAncestorConnectorView;
 - (void)_t1_layoutAncestorConnectorView:(id)arg1 atLevel:(long long)arg2 withLayoutMetrics:(id)arg3;
-- (void)_t1_layoutElbowParentConnectorView;
+- (void)_t1_layoutElbowParentConnectorViewWithLayoutMetrics:(id)arg1;
 - (void)_t1_layoutVerticalParentConnectorViewWithLayoutMetrics:(id)arg1;
 - (void)_t1_updateSubviewVisiblity;
 - (id)emphasizedConnectorColor;

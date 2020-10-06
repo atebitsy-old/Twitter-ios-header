@@ -29,6 +29,7 @@
     TAVSharedAudioSessionConfigurationToken *_sharedAudioSessionToken;
     _Bool _isObservingAVAudioSession;
     _Bool _isAudioScopeEnabled;
+    _Bool _isSaveInHQEnabled;
     _Bool _isLocallyMuted;
     id <PTVGuestCoordinatorDelegate> _delegate;
     long long _loggedInUserParticipantIndex;
@@ -52,6 +53,7 @@
 @property(retain, nonatomic) PTVJanusClient *janusClient; // @synthesize janusClient=_janusClient;
 @property(retain, nonatomic) PTVGuestRoomConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(nonatomic) _Bool isLocallyMuted; // @synthesize isLocallyMuted=_isLocallyMuted;
+@property(nonatomic) _Bool isSaveInHQEnabled; // @synthesize isSaveInHQEnabled=_isSaveInHQEnabled;
 @property(nonatomic) _Bool isAudioScopeEnabled; // @synthesize isAudioScopeEnabled=_isAudioScopeEnabled;
 @property(nonatomic) long long loggedInUserParticipantIndex; // @synthesize loggedInUserParticipantIndex=_loggedInUserParticipantIndex;
 @property(nonatomic) __weak id <PTVGuestCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;

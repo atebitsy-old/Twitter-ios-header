@@ -15,10 +15,10 @@
 - (void)pruneOldConversations;
 - (void)fetchPermissionForUsername:(NSString *)arg1 completion:(void (^)(_Bool, TFNDirectMessagePermission *, NSError *))arg2;
 - (void)fetchPermissionForUserID:(long long)arg1 completion:(void (^)(_Bool, TFNDirectMessagePermission *, NSError *))arg2;
-- (void)fetchTopRequests;
+- (void)fetchTopRequests:(_Bool)arg1;
 - (void)markAsSeenThroughConversation:(id <TFNDirectMessageConversation>)arg1;
 - (void)markAsSeen;
-- (void)loadMoreConversationsWithCursor:(TFNDirectMessageTimelineCursor *)arg1;
-- (void)refresh:(long long)arg1 activeConversationID:(NSString *)arg2 filterLowQuality:(NSNumber *)arg3 completion:(void (^)(void))arg4;
+- (void)loadMoreConversationsWithCursor:(TFNDirectMessageTimelineCursor *)arg1 filterNSFW:(_Bool)arg2;
+- (void)refresh:(long long)arg1 activeConversationID:(NSString *)arg2 filterLowQuality:(NSNumber *)arg3 filterNSFW:(_Bool)arg4 completion:(void (^)(void))arg5;
 @end
 

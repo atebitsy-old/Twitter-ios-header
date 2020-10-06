@@ -19,6 +19,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: authorUser
     // Error parsing type: , name: advertiserUser
     // Error parsing type: , name: promotableTrend
+    // Error parsing type: , name: socialContextTopic
     // Error parsing type: , name: mediaStatus
     // Error parsing type: , name: cropsMoment
     // Error parsing type: , name: mediaInfo

@@ -36,7 +36,9 @@
 @property(nonatomic, readonly) CDStruct_912cb5d2 readState;
 @property(nonatomic, readonly) TFSTwitterEntityImageInfo *avatarInfo;
 @property(nonatomic, readonly) id <TFNDirectMessageConversationSocialProof> socialProof;
+- (_Bool)isNSFW;
 - (_Bool)isMuted;
+- (_Bool)isFiltered;
 - (_Bool)isLowQuality;
 @property(nonatomic, readonly) NSNumber *topRequestRank;
 - (_Bool)isTopRequest;
@@ -52,8 +54,10 @@
 
 // Remaining properties
 @property(nonatomic, readonly) _Bool empty;
+@property(nonatomic, readonly) _Bool filtered;
 @property(nonatomic, readonly) _Bool lowQuality;
 @property(nonatomic, readonly) _Bool muted;
+@property(nonatomic, readonly) _Bool nsfw;
 @property(nonatomic, readonly) _Bool readOnly;
 @property(nonatomic, readonly) _Bool topRequest;
 @property(nonatomic, readonly) _Bool trusted;

@@ -9,7 +9,7 @@
 #import <T1Twitter/NSCopying-Protocol.h>
 #import <T1Twitter/T1SharableProtocol-Protocol.h>
 
-@class NSArray, NSDictionary, NSString, TFNTwitterLiveEventRemindMeSubscription, TFNTwitterLiveEventSponsorshipDetails, TFNTwitterUser, TFSTwitterEntityImageInfo, TFSTwitterRect;
+@class NSArray, NSDictionary, NSString, TFNTwitterUser, TFSTwitterEntityImageInfo, TFSTwitterLiveEventRemindMeSubscription, TFSTwitterLiveEventSponsorshipDetails, TFSTwitterRect;
 
 @interface TFNTwitterLiveEvent : NSObject <T1SharableProtocol, NSCopying>
 {
@@ -26,8 +26,8 @@
     NSString *_descriptionText;
     NSString *_badge;
     NSString *_hashtag;
-    TFNTwitterLiveEventRemindMeSubscription *_remindMeSubscription;
-    TFNTwitterLiveEventSponsorshipDetails *_sponsorshipDetails;
+    TFSTwitterLiveEventRemindMeSubscription *_remindMeSubscription;
+    TFSTwitterLiveEventSponsorshipDetails *_sponsorshipDetails;
     TFSTwitterEntityImageInfo *_thumbnailImageInfo;
     TFSTwitterEntityImageInfo *_squareThumbnailImageInfo;
     NSArray *_timelineVariants;
@@ -43,8 +43,8 @@
 @property(readonly, copy, nonatomic) NSArray *timelineVariants; // @synthesize timelineVariants=_timelineVariants;
 @property(readonly, nonatomic) TFSTwitterEntityImageInfo *squareThumbnailImageInfo; // @synthesize squareThumbnailImageInfo=_squareThumbnailImageInfo;
 @property(readonly, nonatomic) TFSTwitterEntityImageInfo *thumbnailImageInfo; // @synthesize thumbnailImageInfo=_thumbnailImageInfo;
-@property(readonly, copy, nonatomic) TFNTwitterLiveEventSponsorshipDetails *sponsorshipDetails; // @synthesize sponsorshipDetails=_sponsorshipDetails;
-@property(readonly, nonatomic) TFNTwitterLiveEventRemindMeSubscription *remindMeSubscription; // @synthesize remindMeSubscription=_remindMeSubscription;
+@property(readonly, copy, nonatomic) TFSTwitterLiveEventSponsorshipDetails *sponsorshipDetails; // @synthesize sponsorshipDetails=_sponsorshipDetails;
+@property(readonly, nonatomic) TFSTwitterLiveEventRemindMeSubscription *remindMeSubscription; // @synthesize remindMeSubscription=_remindMeSubscription;
 @property(readonly, nonatomic, getter=isSensitive) _Bool sensitive; // @synthesize sensitive=_sensitive;
 @property(readonly, copy, nonatomic) NSString *hashtag; // @synthesize hashtag=_hashtag;
 @property(readonly, copy, nonatomic) NSString *badge; // @synthesize badge=_badge;

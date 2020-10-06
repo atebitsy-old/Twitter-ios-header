@@ -29,7 +29,7 @@
 @property(readonly, copy, nonatomic) NSString *accountID; // @synthesize accountID=_accountID;
 - (void)fetchInboxPageOperation:(id)arg1 didFailWithError:(id)arg2;
 - (void)fetchInboxPageOperation:(id)arg1 didSucceedWithResponse:(id)arg2;
-- (id)initWithAccountID:(id)arg1 timeline:(id)arg2 maxEntryID:(long long)arg3 model:(id)arg4 filterLowQuality:(id)arg5 commandService:(id)arg6 context:(id)arg7;
+- (id)initWithAccountID:(id)arg1 timeline:(id)arg2 maxEntryID:(long long)arg3 model:(id)arg4 filterLowQuality:(id)arg5 filterNSFW:(_Bool)arg6 commandService:(id)arg7 context:(id)arg8;
 - (id)init;
 
 @end

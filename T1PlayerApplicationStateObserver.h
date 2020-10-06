@@ -28,6 +28,7 @@
 @property(retain, nonatomic) TAVPlaybackState *lastPlaybackState; // @synthesize lastPlaybackState=_lastPlaybackState;
 @property(retain, nonatomic) TAVPlaybackState *lastActivePlaybackState; // @synthesize lastActivePlaybackState=_lastActivePlaybackState;
 @property(nonatomic) __weak id <TAVPlayback> observedPlayer; // @synthesize observedPlayer=_observedPlayer;
+- (_Bool)_t1_isAudioContent;
 - (void)_t1_interactivePopDidEnd:(id)arg1;
 - (void)_t1_interactivePopWillStart:(id)arg1;
 - (void)_t1_applicationDidBecomeActive:(id)arg1;

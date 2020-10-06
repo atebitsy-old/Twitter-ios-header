@@ -19,7 +19,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNTappableHighlightView *imageHighlightView; // @synthesize imageHighlightView=_imageHighlightView;
 @property(retain, nonatomic) T1CardImageView *imageView; // @synthesize imageView=_imageView;
-- (void)configureSwipeableCollectionViewCellWithData:(id)arg1 imagePipeline:(id)arg2 cellPosition:(long long)arg3 account:(id)arg4 scribeContext:(id)arg5;
+- (void)configureSwipeableCollectionViewCellWithData:(id)arg1 imagePipeline:(id)arg2 cellPosition:(long long)arg3;
 - (void)prepareForReuse;
 - (void)_t1_didLongPressImage:(id)arg1;
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;

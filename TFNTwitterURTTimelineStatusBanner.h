@@ -28,7 +28,7 @@
 @property(readonly, nonatomic) NSString *badgeName; // @synthesize badgeName=_badgeName;
 @property(readonly, copy, nonatomic) NSString *bannerText; // @synthesize bannerText=_bannerText;
 - (id)userReferences;
-- (_Bool)isFollowingTopic;
+- (id)educationText;
 - (id)associatedTopic;
 - (id)landingURL;
 - (long long)contextType;

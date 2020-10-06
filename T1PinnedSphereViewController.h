@@ -21,7 +21,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (_Bool)reconstructIfNeededWithDataModel:(id)arg1;
+- (void)reconstructIfNeededWithDataModel:(id)arg1;
 - (void)reconstructContentViewControllerIfNeeded;
 - (_Bool)tfn_isScrolledToTop;
 - (void)loadTop:(id)arg1;

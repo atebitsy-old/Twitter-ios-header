@@ -22,8 +22,8 @@
 @property(readonly, copy, nonatomic) NSArray *conversations; // @synthesize conversations=_conversations;
 @property(readonly, copy, nonatomic) NSArray *users; // @synthesize users=_users;
 - (id)_makeEntriesWithJSONDictionary:(id)arg1 userCache:(id)arg2;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 isTopRequests:(_Bool)arg3;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3 isTopRequests:(_Bool)arg4;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
 - (id)init;
 
 @end

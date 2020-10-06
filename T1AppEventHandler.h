@@ -155,6 +155,7 @@
 - (void)_t1_startScribingViewControllerLifecycleEvents;
 - (void)onApplicationDelegateInit;
 - (id)_t1_appCoreServicesConfiguration;
+- (void)dealloc;
 - (id)init;
 - (void)recurringTaskService:(id)arg1 didEncounterProblem:(long long)arg2 userInfo:(id)arg3;
 - (void)recurringTaskService:(id)arg1 didCompleteTask:(id)arg2 duration:(double)arg3;

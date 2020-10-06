@@ -14,7 +14,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: compositionSize
     // Error parsing type: , name: includeAudio
     // Error parsing type: , name: transform
-    // Error parsing type: , name: gradientBackgroundColors
+    // Error parsing type: , name: backgroundType
     // Error parsing type: , name: compositionResult
 }
 

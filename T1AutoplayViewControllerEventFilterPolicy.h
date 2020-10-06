@@ -22,6 +22,8 @@
 @property(nonatomic) _Bool isPerformingFullscreenMediaTransition; // @synthesize isPerformingFullscreenMediaTransition=_isPerformingFullscreenMediaTransition;
 @property(copy, nonatomic) CDUnknownBlockType autoplayConditionsDidChangeBlock; // @synthesize autoplayConditionsDidChangeBlock=_autoplayConditionsDidChangeBlock;
 @property(nonatomic) __weak TFNViewController *observedViewController; // @synthesize observedViewController=_observedViewController;
+- (void)appStoreProductViewControllerDidDismissNotification:(id)arg1;
+- (void)appStoreProductViewControllerDidPresentNotification:(id)arg1;
 - (void)presentedActivityViewControllerDidDismissNotification:(id)arg1;
 - (void)presentedDidDismissViewControllerNotification:(id)arg1;
 - (void)viewControllerViewDidFullyAppear:(id)arg1;

@@ -27,10 +27,6 @@
 @property(readonly, nonatomic) double backendStorageColdstartTTLSecs;
 @property(readonly, nonatomic, getter=isBackendStorageEnabled) _Bool backendStorageEnabled;
 @property(readonly, nonatomic, getter=isSpheresURTListManagementPageEnabled) _Bool spheresURTListManagementPageEnabled;
-@property(readonly, nonatomic) long long spheresRankingModePerspectivalDefaultMinMembersNoImpression;
-@property(readonly, nonatomic) long long spheresRankingModePerspectivalDefaultMinMembers;
-@property(readonly, nonatomic, getter=isSpheresRankingModeControlDefaultModeLatestNoImpression) _Bool spheresRankingModeControlDefaultModeLatestNoImpression;
-@property(readonly, nonatomic, getter=isSpheresRankingModeControlDefaultModeLatest) _Bool spheresRankingModeControlDefaultModeLatest;
 @property(readonly, nonatomic, getter=isSpheresRankingModeControlEnabled) _Bool spheresRankingModeControlEnabled;
 @property(readonly, nonatomic, getter=isSphereDetailsPageReportListEnabled) _Bool sphereDetailsPageReportListEnabled;
 @property(readonly, nonatomic, getter=isSphereDetailsPageSharingEnabled) _Bool sphereDetailsPageSharingEnabled;

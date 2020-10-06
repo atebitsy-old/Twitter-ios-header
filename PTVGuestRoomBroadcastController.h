@@ -37,9 +37,11 @@
     NSTimer *_isTalkingTimer;
     NSTimer *_frameTimer;
     NSString *_channelID;
+    NSArray *_preferredLanguages;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *preferredLanguages; // @synthesize preferredLanguages=_preferredLanguages;
 @property(retain, nonatomic) NSString *channelID; // @synthesize channelID=_channelID;
 @property(retain, nonatomic) NSTimer *frameTimer; // @synthesize frameTimer=_frameTimer;
 @property(retain, nonatomic) NSTimer *isTalkingTimer; // @synthesize isTalkingTimer=_isTalkingTimer;
@@ -78,6 +80,9 @@
 - (id)broadcastControllerProgramDateTime:(id)arg1;
 - (unsigned long long)broadcastControllerNTPForNow:(id)arg1;
 - (unsigned long long)broadcastControllerNTPForCurrentFrame:(id)arg1;
+- (id)programDateTime;
+- (unsigned long long)ntpForNow;
+- (unsigned long long)ntpForCurrentFrame;
 - (void)guestCoordinatorCameraStartDidComplete:(id)arg1;
 - (void)guestCoordinator:(id)arg1 updateVideoOrientationWithCameraPreferredOrientation:(long long)arg2;
 - (void)guestCoordinator:(id)arg1 updateCameraPreviewView:(id)arg2;
@@ -136,7 +141,7 @@
 - (void)removeGuestRoomControllerObserver:(id)arg1;
 - (void)addGuestRoomControllerObserver:(id)arg1;
 - (void)dealloc;
-- (id)initWithLoggedInUser:(id)arg1 maximumNumberOfGuestCallers:(unsigned long long)arg2;
+- (id)initWithLoggedInUser:(id)arg1 maximumNumberOfGuestCallers:(unsigned long long)arg2 preferredLanguages:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

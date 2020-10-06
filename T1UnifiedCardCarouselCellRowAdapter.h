@@ -9,6 +9,7 @@
 #import <T1Twitter/TFNCellVisibilityBroadcasterDelegate-Protocol.h>
 
 @class NSString, T1AdFormatsFeatures, TAVUIAutoplayManager, TFNTwitterAccount, TFNTwitterUnifiedCardSwipeableMediaComponentModel, TFSTwitterScribeContext, TIPImagePipeline;
+@protocol T1UnifiedCardCarouselCellRowAdapterDelegate;
 
 @interface T1UnifiedCardCarouselCellRowAdapter : TFNItemsCollectionItemAdapter <TFNCellVisibilityBroadcasterDelegate>
 {
@@ -18,9 +19,11 @@
     TAVUIAutoplayManager *_policyBasedAutoplayManager;
     TFSTwitterScribeContext *_scribeContext;
     T1AdFormatsFeatures *_featureSwitches;
+    id <T1UnifiedCardCarouselCellRowAdapterDelegate> _delegate;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <T1UnifiedCardCarouselCellRowAdapterDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) T1AdFormatsFeatures *featureSwitches; // @synthesize featureSwitches=_featureSwitches;
 @property(readonly, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(readonly, nonatomic) TAVUIAutoplayManager *policyBasedAutoplayManager; // @synthesize policyBasedAutoplayManager=_policyBasedAutoplayManager;
@@ -31,7 +34,7 @@
 - (void)_t1_setupCellVisibilityBroadcasterForDataViewController:(id)arg1 cell:(id)arg2 indexPath:(id)arg3 viewModel:(id)arg4;
 - (struct CGSize)dataViewController:(id)arg1 collectionViewSizeForItem:(id)arg2 constrainedToSize:(struct CGSize)arg3 withOptions:(id)arg4 atIndexPath:(id)arg5;
 - (id)dataViewController:(id)arg1 collectionViewCellForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
-- (id)initWithImagePipeline:(id)arg1 swipeableComponent:(id)arg2 account:(id)arg3 policyAutoplayManager:(id)arg4 scribeContext:(id)arg5;
+- (id)initWithImagePipeline:(id)arg1 swipeableComponent:(id)arg2 account:(id)arg3 policyAutoplayManager:(id)arg4 delegate:(id)arg5;
 - (id)init;
 
 // Remaining properties

@@ -17,11 +17,14 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: keyboardFrame
     // Error parsing type: , name: canvasSize
     // Error parsing type: , name: isTextFleetMode
+    // Error parsing type: , name: isFleetBackgroundLightColor
     // Error parsing type: , name: scribeDelegate
+    // Error parsing type: , name: accessibilityDelegate
     // Error parsing type: , name: trashRadius
     // Error parsing type: , name: $__lazy_storage_$_canvasArea
     // Error parsing type: , name: $__lazy_storage_$_annotationVMs
     // Error parsing type: , name: $__lazy_storage_$_shouldShowPlaceholder
+    // Error parsing type: , name: $__lazy_storage_$_placeholderTextColor
     // Error parsing type: , name: $__lazy_storage_$_placeholderPosition
     // Error parsing type: , name: $__lazy_storage_$_shouldShowDimmer
     // Error parsing type: , name: $__lazy_storage_$_trashPosition

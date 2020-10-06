@@ -15,7 +15,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: videoPreviewView
     // Error parsing type: , name: imagePreviewView
     // Error parsing type: , name: videoActivityIndicatorView
-    // Error parsing type: , name: backgroundView
     // Error parsing type: , name: colorExtractionQueue
     // Error parsing type: , name: gifView
     // Error parsing type: , name: guidelineView

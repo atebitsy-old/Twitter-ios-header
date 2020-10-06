@@ -17,6 +17,7 @@
     _Bool _mentionNotificationsDisabled;
     _Bool _lowQuality;
     _Bool _muted;
+    _Bool _nsfw;
     NSString *_conversationID;
     long long _lastReadEventID;
     NSDate *_muteExpirationTime;
@@ -33,6 +34,7 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNDirectMessageConversationSocialProof *socialProof; // @synthesize socialProof=_socialProof;
+@property(readonly, nonatomic) _Bool nsfw; // @synthesize nsfw=_nsfw;
 @property(readonly, nonatomic) _Bool muted; // @synthesize muted=_muted;
 @property(readonly, nonatomic) _Bool lowQuality; // @synthesize lowQuality=_lowQuality;
 @property(readonly, nonatomic) _Bool mentionNotificationsDisabled; // @synthesize mentionNotificationsDisabled=_mentionNotificationsDisabled;
@@ -51,9 +53,9 @@
 @property(readonly, nonatomic) _Bool notificationsDisabled; // @synthesize notificationsDisabled=_notificationsDisabled;
 @property(readonly, nonatomic) long long lastReadEventID; // @synthesize lastReadEventID=_lastReadEventID;
 @property(readonly, copy, nonatomic) NSString *conversationID; // @synthesize conversationID=_conversationID;
-- (id)initWithConversationID:(id)arg1 lastReadEventID:(long long)arg2 notificationsDisabled:(_Bool)arg3 muteExpirationTime:(id)arg4 participants:(id)arg5 readOnly:(_Bool)arg6 trusted:(_Bool)arg7 topRequest:(_Bool)arg8 topRequestRank:(id)arg9 sortEventID:(id)arg10 sortTimestamp:(id)arg11 createTime:(id)arg12 createdByUserID:(long long)arg13 name:(id)arg14 avatarInfo:(id)arg15 mentionNotificationsDisabled:(_Bool)arg16 lowQuality:(_Bool)arg17 muted:(_Bool)arg18 socialProof:(id)arg19;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 isTopRequest:(_Bool)arg3 topRequestRank:(id)arg4;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2;
+- (id)initWithConversationID:(id)arg1 lastReadEventID:(long long)arg2 notificationsDisabled:(_Bool)arg3 muteExpirationTime:(id)arg4 participants:(id)arg5 readOnly:(_Bool)arg6 trusted:(_Bool)arg7 topRequest:(_Bool)arg8 topRequestRank:(id)arg9 sortEventID:(id)arg10 sortTimestamp:(id)arg11 createTime:(id)arg12 createdByUserID:(long long)arg13 name:(id)arg14 avatarInfo:(id)arg15 mentionNotificationsDisabled:(_Bool)arg16 lowQuality:(_Bool)arg17 muted:(_Bool)arg18 nsfw:(_Bool)arg19 socialProof:(id)arg20;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3 isTopRequest:(_Bool)arg4 topRequestRank:(id)arg5;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
 - (id)init;
 
 @end

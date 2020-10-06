@@ -16,7 +16,6 @@
 {
     _Bool _showsSearchButton;
     _Bool _showsDoneButton;
-    _Bool _previewEnabled;
     _Bool _shouldScribeFoundMediaDataUsage;
     _Bool _shouldShowSearchTextView;
     id <T1FoundMediaSearchContainerStreamViewControllerDelegate> _delegate;
@@ -56,7 +55,6 @@
 @property(retain, nonatomic) NSString *scribePage; // @synthesize scribePage=_scribePage;
 @property(readonly, nonatomic) T1FoundMediaStreamViewController *streamViewController; // @synthesize streamViewController=_streamViewController;
 @property(nonatomic) _Bool shouldScribeFoundMediaDataUsage; // @synthesize shouldScribeFoundMediaDataUsage=_shouldScribeFoundMediaDataUsage;
-@property(nonatomic, getter=isPreviewEnabled) _Bool previewEnabled; // @synthesize previewEnabled=_previewEnabled;
 @property(nonatomic) _Bool showsDoneButton; // @synthesize showsDoneButton=_showsDoneButton;
 @property(nonatomic) _Bool showsSearchButton; // @synthesize showsSearchButton=_showsSearchButton;
 @property(retain, nonatomic) T1FoundMediaStream *stream; // @synthesize stream=_stream;

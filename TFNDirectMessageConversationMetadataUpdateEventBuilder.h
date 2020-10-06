@@ -10,9 +10,12 @@
 
 @interface TFNDirectMessageConversationMetadataUpdateEventBuilder : NSObject <TFNDirectMessageEventBuilder>
 {
+    _Bool _filterNSFW;
 }
 
+@property(readonly, nonatomic) _Bool filterNSFW; // @synthesize filterNSFW=_filterNSFW;
 - (id)eventWithJSONDictionary:(id)arg1 userCache:(id)arg2;
+- (id)init:(_Bool)arg1;
 
 @end
 

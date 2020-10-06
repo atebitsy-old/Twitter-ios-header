@@ -14,5 +14,6 @@
 - (void)altTextEducationViewControllerDidTapWriteAltText:(id)arg1 forMediaAsset:(id)arg2;
 - (void)altTextEducationViewControllerDidTapCancel:(id)arg1;
 - (void)modalSheetViewControllerDidDismiss:(id)arg1 fromGesture:(_Bool)arg2;
+- (void)viewControllerDidTakeScreenshot:(id)arg1;
 @end
 

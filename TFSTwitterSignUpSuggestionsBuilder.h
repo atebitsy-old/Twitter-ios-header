@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import <T1Twitter/TFSModelBuilder-Protocol.h>
+#import <TFSTwitterCore/TFSModelBuilder-Protocol.h>
 
 @interface TFSTwitterSignUpSuggestionsBuilder : NSObject <TFSModelBuilder>
 {

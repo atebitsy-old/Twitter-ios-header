@@ -29,6 +29,7 @@
 - (id)t1_hideTweetActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 shouldIncludeAMRSubtitlesIfNeeded:(_Bool)arg4;
 - (id)t1_contributeToBirdwatchActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
 - (id)t1_translationsSettingActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
+- (id)t1_ouchTweetActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
 - (id)t1_reportTweetActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 shouldIncludeAMRSubtitlesIfNeeded:(_Bool)arg4;
 - (id)t1_deleteTweetActionItemForStatus:(id)arg1 account:(id)arg2 isInlineSource:(_Bool)arg3 scribeContext:(id)arg4;
 - (id)t1_muteConversationActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 shouldIncludeAMRSubtitlesIfNeeded:(_Bool)arg4;
@@ -94,11 +95,8 @@
 - (id)_t1_editExistingContactActionItemForUserReference:(id)arg1 withAvatar:(id)arg2 scribeContext:(id)arg3;
 - (id)_t1_createNewContactActionItemWithUserReference:(id)arg1 avatar:(id)arg2 scribeContext:(id)arg3 account:(id)arg4;
 - (id)t1_contactsMenuActionItemsWithUserReference:(id)arg1 avatar:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 account:(id)arg5;
-- (id)t1_contactsActionItemsWithUserReference:(id)arg1 avatar:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 account:(id)arg5;
-- (id)_t1_contactsActionSheetWithActionItems:(id)arg1 source:(id)arg2;
 - (id)_t1_contactsMenuSheetWithActionItems:(id)arg1 source:(id)arg2;
 - (id)t1_contactsMenuSheetWithUserReference:(id)arg1 avatar:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 account:(id)arg5;
-- (id)t1_contactsMenuActionSheetWithUserReference:(id)arg1 avatar:(id)arg2 source:(id)arg3 scribeContext:(id)arg4 account:(id)arg5;
 - (_Bool)_hasDuplicateUsernameInPeoplePicker:(id)arg1 forSocialProfiles:(id)arg2;
 - (void)contactViewController:(id)arg1 didCompleteWithContact:(id)arg2;
 - (_Bool)contactViewController:(id)arg1 shouldPerformDefaultActionForContactProperty:(id)arg2;

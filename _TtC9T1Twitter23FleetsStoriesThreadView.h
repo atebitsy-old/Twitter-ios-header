@@ -33,6 +33,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: setProgress
     // Error parsing type: , name: active
     // Error parsing type: , name: threadPlaying
+    // Error parsing type: , name: panning
     // Error parsing type: , name: parentIsForeground
     // Error parsing type: , name: showsAddButton
     // Error parsing type: , name: canNavigateToNextThread

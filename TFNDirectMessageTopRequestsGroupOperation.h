@@ -24,7 +24,7 @@
 - (void)fetchTopRequestsOperation:(id)arg1 didFailWithError:(id)arg2;
 - (void)fetchTopRequestsOperation:(id)arg1 didSucceedWithResponse:(id)arg2;
 - (void)completeOperation;
-- (id)initWithInbox:(id)arg1 accountID:(id)arg2 model:(id)arg3 commandService:(id)arg4 context:(id)arg5;
+- (id)initWithInbox:(id)arg1 accountID:(id)arg2 model:(id)arg3 commandService:(id)arg4 context:(id)arg5 filterNSFW:(_Bool)arg6;
 
 @end
 

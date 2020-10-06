@@ -19,12 +19,15 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: headerView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: detailLabel
+    // Error parsing type: , name: topicSocialContextView
     // Error parsing type: , name: socialProofView
     // Error parsing type: , name: thumbnailImageView
     // Error parsing type: , name: scoreView
     // Error parsing type: , name: relatedTrendsView
     // Error parsing type: , name: relatedTrendsAccessibility
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: onTopicNameTouched
+    // Error parsing type: , name: onTopicFollowButtonTouched
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: interactionHandler
     // Error parsing type: , name: navigationHelper

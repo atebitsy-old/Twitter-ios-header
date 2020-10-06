@@ -10,8 +10,8 @@
 {
 }
 
-- (id)_eventWithJSONDictionary:(id)arg1 userCache:(id)arg2;
-- (id)eventsWithJSONDictionaries:(id)arg1 userCache:(id)arg2;
+- (id)_eventWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
+- (id)eventsWithJSONDictionaries:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
 
 @end
 

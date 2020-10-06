@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, TFNTwitterAccount, TFSTwitterScribeContext, TFSTwitterTopic, TFSTwitterUserReference, UIColor, UIFont, UIImage;
+@class NSAttributedString, NSString, TFNTwitterAccount, TFSTwitterScribeContext, TFSTwitterTopic, TFSTwitterUserReference, UIColor, UIFont, UIImage;
 
 @interface T1TimelinesItemProminentSocialContextViewModel : NSObject
 {
@@ -20,11 +20,11 @@
     UIColor *_textColor;
     UIFont *_textFont;
     UIImage *_badgeImage;
-    UIColor *_badgeImageBackgroundColor;
     TFSTwitterTopic *_topic;
     TFSTwitterUserReference *_representedUser;
     TFSTwitterScribeContext *_scribeContext;
     TFNTwitterAccount *_account;
+    NSAttributedString *_topicTooltipAttributedString;
     NSString *_followButtonText;
     NSString *_followingButtonText;
 }
@@ -38,16 +38,16 @@
 @property(readonly, nonatomic) _Bool showFollowControl; // @synthesize showFollowControl=_showFollowControl;
 @property(readonly, nonatomic) _Bool showCaretButton; // @synthesize showCaretButton=_showCaretButton;
 @property(readonly, nonatomic) _Bool socialContextUserInteractionEnabled; // @synthesize socialContextUserInteractionEnabled=_socialContextUserInteractionEnabled;
+@property(readonly, nonatomic) NSAttributedString *topicTooltipAttributedString; // @synthesize topicTooltipAttributedString=_topicTooltipAttributedString;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(readonly, nonatomic) TFSTwitterUserReference *representedUser; // @synthesize representedUser=_representedUser;
 @property(readonly, nonatomic) TFSTwitterTopic *topic; // @synthesize topic=_topic;
-@property(readonly, nonatomic) UIColor *badgeImageBackgroundColor; // @synthesize badgeImageBackgroundColor=_badgeImageBackgroundColor;
 @property(readonly, nonatomic) UIImage *badgeImage; // @synthesize badgeImage=_badgeImage;
 @property(readonly, nonatomic) UIFont *textFont; // @synthesize textFont=_textFont;
 @property(readonly, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (id)initWithText:(id)arg1 textColor:(id)arg2 textFont:(id)arg3 badgeImage:(id)arg4 badgeImageBackgroundColor:(id)arg5 topic:(id)arg6 representedUser:(id)arg7 scribeContext:(id)arg8 account:(id)arg9 socialContextUserInteractionEnabled:(_Bool)arg10 showCaretButton:(_Bool)arg11 showFollowControl:(_Bool)arg12 showBottomSeparator:(_Bool)arg13 following:(_Bool)arg14 showMidDot:(_Bool)arg15 followButtonText:(id)arg16 followingButtonText:(id)arg17;
+- (id)initWithText:(id)arg1 textColor:(id)arg2 textFont:(id)arg3 badgeImage:(id)arg4 topic:(id)arg5 representedUser:(id)arg6 scribeContext:(id)arg7 account:(id)arg8 topicTooltipAttributedString:(id)arg9 socialContextUserInteractionEnabled:(_Bool)arg10 showCaretButton:(_Bool)arg11 showFollowControl:(_Bool)arg12 showBottomSeparator:(_Bool)arg13 following:(_Bool)arg14 showMidDot:(_Bool)arg15 followButtonText:(id)arg16 followingButtonText:(id)arg17;
 
 @end
 

@@ -6,7 +6,7 @@
 
 #import <TFNUI/TFNTableViewCell.h>
 
-@class TFNTwitterLoginRequest, UIButton, UILabel;
+@class TFSTwitterLoginRequest, UIButton, UILabel;
 @protocol T1SecurityLoginRequestCellDelegate;
 
 @interface T1SecurityLoginRequestCell : TFNTableViewCell
@@ -14,7 +14,7 @@
     UILabel *_messageLabel;
     UIButton *_acceptButton;
     UIButton *_denyButton;
-    TFNTwitterLoginRequest *_loginRequest;
+    TFSTwitterLoginRequest *_loginRequest;
     id <T1SecurityLoginRequestCellDelegate> _delegate;
 }
 
@@ -22,7 +22,7 @@
 + (double)heightForLoginRequest:(id)arg1 tableWidth:(double)arg2 contentPadding:(struct UIEdgeInsets)arg3;
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <T1SecurityLoginRequestCellDelegate> delegate; // @synthesize delegate=_delegate;
-@property(retain, nonatomic) TFNTwitterLoginRequest *loginRequest; // @synthesize loginRequest=_loginRequest;
+@property(retain, nonatomic) TFSTwitterLoginRequest *loginRequest; // @synthesize loginRequest=_loginRequest;
 - (void)_denyButtonTapped;
 - (void)_acceptButtonTapped;
 - (void)layoutSubviews;

@@ -29,6 +29,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) _Bool isHostedByNewsCamera; // @synthesize isHostedByNewsCamera=_isHostedByNewsCamera;
 @property(nonatomic) __weak id <PTVPipelineContainerViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly) _Bool saveAsHQEnabled; // @synthesize saveAsHQEnabled=_saveAsHQEnabled;
 - (_Bool)publishingPipelineDefaultsInFrontPosition;
 - (void)publishingPipeline:(id)arg1 didReceiveLogEntry:(id)arg2;
 - (void)didChangeLocalAudioSource:(_Bool)arg1 isUsingHeadphones:(_Bool)arg2;

@@ -23,7 +23,7 @@
 @property(readonly, copy, nonatomic) NSArray *conversationsMetadata; // @synthesize conversationsMetadata=_conversationsMetadata;
 @property(readonly, copy, nonatomic) NSArray *users; // @synthesize users=_users;
 @property(readonly, copy, nonatomic) NSArray *events; // @synthesize events=_events;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
 - (id)initWithEvents:(id)arg1 users:(id)arg2 conversationsMetadata:(id)arg3 customProfiles:(id)arg4;
 - (id)init;
 

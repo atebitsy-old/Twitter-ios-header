@@ -7,6 +7,6 @@
 @class NSArray;
 
 @protocol TFSScribeOutgoingEventsHandler
-- (void)handleScribeOutgoingEvents:(NSArray *)arg1 retryDistribution:(NSArray *)arg2 completionHandler:(void (^)(unsigned long long))arg3;
+- (void)handleScribeOutgoingEvents:(NSArray *)arg1 retryDistribution:(NSArray *)arg2 completionHandler:(void (^)(unsigned long long, NSArray *))arg3;
 @end
 

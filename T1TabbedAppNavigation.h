@@ -144,6 +144,8 @@
 - (void)showAdsCompanionForPath:(id)arg1 source:(long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)showTeamsInvitationFromPanel:(long long)arg1 navigationContext:(id)arg2 source:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)showFollowerRequestsFromPanel:(long long)arg1 navigationContext:(id)arg2 source:(long long)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)showFollowingForUsername:(id)arg1 orUserID:(long long)arg2 fromPanel:(long long)arg3 source:(long long)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)showFollowersForUsername:(id)arg1 orUserID:(long long)arg2 fromPanel:(long long)arg3 source:(long long)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)showEditProfileBirthdayWithSource:(long long)arg1 sourceNavigationMetadata:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)showEditProfileWithSource:(long long)arg1 sourceNavigationMetadata:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)showProfileForUsername:(id)arg1 orUserID:(long long)arg2 fromPanel:(long long)arg3 source:(long long)arg4 navigationContext:(id)arg5 sourceNavigationMetadata:(id)arg6 options:(unsigned long long)arg7 completion:(CDUnknownBlockType)arg8;

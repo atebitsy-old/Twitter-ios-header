@@ -23,7 +23,7 @@
 @property(readonly, nonatomic) NSNumber *lastSeenEventID; // @synthesize lastSeenEventID=_lastSeenEventID;
 @property(readonly, nonatomic) TFNDirectMessageEventsResponse *eventsResponse; // @synthesize eventsResponse=_eventsResponse;
 @property(readonly, nonatomic) NSString *cursor; // @synthesize cursor=_cursor;
-- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2;
+- (id)initWithJSONDictionary:(id)arg1 userCache:(id)arg2 filterNSFW:(_Bool)arg3;
 
 @end
 

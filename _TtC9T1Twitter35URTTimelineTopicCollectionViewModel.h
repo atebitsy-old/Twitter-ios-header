@@ -9,9 +9,8 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter35URTTimelineTopicCollectionViewModel : NSObject
 {
-    // Error parsing type: , name: topicItems
-    // Error parsing type: , name: topicCollection
-    // Error parsing type: , name: clientEventInfo
+    // Error parsing type: , name: topics
+    // Error parsing type: , name: rowCount
 }
 
 - (void).cxx_destruct;

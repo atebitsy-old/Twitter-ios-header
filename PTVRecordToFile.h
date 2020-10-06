@@ -56,7 +56,6 @@
 @property _Bool hasVideo; // @synthesize hasVideo;
 @property _Bool hasAudio; // @synthesize hasAudio;
 - (void)deleteSavedClips;
-- (void)combineAndSaveToCameraRoll:(CDUnknownBlockType)arg1;
 - (_Bool)canSaveToCameraRoll;
 - (double)videoDuration;
 - (void)syncFlushAudioPriorTo:(CDStruct_1b6d18a9)arg1;
@@ -73,7 +72,6 @@
 - (void)createRecorder:(CDStruct_1b6d18a9)arg1;
 - (void)startNewClipWithFlush:(_Bool)arg1;
 - (void)writeRecording:(id)arg1 sample:(struct opaqueCMSampleBuffer *)arg2 toVideo:(_Bool)arg3 time:(double)arg4 decode:(double)arg5;
-- (id)getClipURLs;
 - (void)finishRecordingWithCompletionHandler:(CDUnknownBlockType)arg1;
 - (void)pauseRecording;
 - (void)startRecording;

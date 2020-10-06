@@ -11,6 +11,7 @@
 
 @interface TFNDirectMessageFetchUpdatesOperation : TFNDirectMessageAPICommandOperation
 {
+    _Bool _filterNSFW;
     TFNDirectMessageInbox *_inbox;
     long long _source;
     NSString *_activeConversationID;
@@ -26,6 +27,7 @@
 @property(readonly, copy, nonatomic) NSString *accountID; // @synthesize accountID=_accountID;
 @property __weak id <TFNDirectMessageFetchUpdatesOperationDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <TFNDirectMessageUserCache> userCache; // @synthesize userCache=_userCache;
+@property(readonly, nonatomic) _Bool filterNSFW; // @synthesize filterNSFW=_filterNSFW;
 @property(readonly, nonatomic) NSNumber *filterLowQuality; // @synthesize filterLowQuality=_filterLowQuality;
 @property(readonly, copy, nonatomic) NSString *activeConversationID; // @synthesize activeConversationID=_activeConversationID;
 @property(readonly, nonatomic) long long source; // @synthesize source=_source;
@@ -33,7 +35,7 @@
 - (void)failedWithError:(id)arg1;
 - (void)succeededWithObject:(id)arg1;
 - (id)makeCommandWithContext:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithInbox:(id)arg1 userCache:(id)arg2 source:(long long)arg3 activeConversationID:(id)arg4 cursor:(id)arg5 filterLowQuality:(id)arg6 commandService:(id)arg7 context:(id)arg8;
+- (id)initWithInbox:(id)arg1 userCache:(id)arg2 source:(long long)arg3 activeConversationID:(id)arg4 cursor:(id)arg5 filterLowQuality:(id)arg6 filterNSFW:(_Bool)arg7 commandService:(id)arg8 context:(id)arg9;
 - (id)init;
 
 @end

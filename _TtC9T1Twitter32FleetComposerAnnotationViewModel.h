@@ -11,6 +11,7 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: fleetAnnotation
     // Error parsing type: , name: displayTransform
+    // Error parsing type: , name: accessbilityDelegate
 }
 
 - (void).cxx_destruct;

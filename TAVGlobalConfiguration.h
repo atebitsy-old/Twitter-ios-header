@@ -11,6 +11,7 @@
     _Bool _areAssertionsEnabled;
 }
 
++ (id)rootAnalyticsQueue;
 + (id)sharedInstance;
 @property(nonatomic) _Bool areAssertionsEnabled; // @synthesize areAssertionsEnabled=_areAssertionsEnabled;
 - (id)init;
