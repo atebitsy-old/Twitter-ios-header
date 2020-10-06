@@ -12,13 +12,12 @@
 
 @interface T1OnboardingScrollToBottomPillAnimation : NSObject <TFNPillAnimationProvider>
 {
-    _Bool _shouldSuppressTransformAnimation;
 }
 
-@property(nonatomic) _Bool shouldSuppressTransformAnimation; // @synthesize shouldSuppressTransformAnimation=_shouldSuppressTransformAnimation;
 - (void)resetAllAnimationsOnPillControl:(id)arg1;
-- (void)hidePillControl:(id)arg1 pillTapped:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)presentPillControl:(id)arg1 fromView:(id)arg2 withOffset:(double)arg3 autoHideInterval:(double)arg4;
+- (void)pillControlIntrinsicContentSizeDidChange:(id)arg1;
+- (void)hidePillControl:(id)arg1 animated:(_Bool)arg2 pillTapped:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)presentPillControl:(id)arg1 fromView:(id)arg2 animated:(_Bool)arg3 withOffset:(double)arg4 autoHideInterval:(double)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

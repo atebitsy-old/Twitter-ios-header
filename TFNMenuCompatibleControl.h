@@ -11,17 +11,26 @@
 @interface TFNMenuCompatibleControl : UIControl
 {
     UIMenu *_menu;
+    CDUnknownBlockType _willDisplayMenuBlock;
     CDUnknownBlockType _willDismissMenuBlock;
     struct CGPoint _menuAttachmentPoint;
 }
 
++ (id)menuCompatibleControlWithFrame:(struct CGRect)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType willDismissMenuBlock; // @synthesize willDismissMenuBlock=_willDismissMenuBlock;
+@property(copy, nonatomic) CDUnknownBlockType willDisplayMenuBlock; // @synthesize willDisplayMenuBlock=_willDisplayMenuBlock;
 @property(nonatomic) struct CGPoint menuAttachmentPoint; // @synthesize menuAttachmentPoint=_menuAttachmentPoint;
 @property(retain, nonatomic) UIMenu *menu; // @synthesize menu=_menu;
+- (void)_tfn_menuActionTriggered;
 - (struct CGPoint)menuAttachmentPointForConfiguration:(id)arg1;
 - (void)contextMenuInteraction:(id)arg1 willEndForConfiguration:(id)arg2 animator:(id)arg3;
 - (id)contextMenuInteraction:(id)arg1 configurationForMenuAtLocation:(struct CGPoint)arg2;
+- (id)initWithFrame:(struct CGRect)arg1 primaryAction:(id)arg2;
+- (id)initWithCoder:(id)arg1;
+- (id)initWithFrame:(struct CGRect)arg1;
+- (id)init;
+- (id)initWithFramePrivate:(struct CGRect)arg1;
 
 @end
 

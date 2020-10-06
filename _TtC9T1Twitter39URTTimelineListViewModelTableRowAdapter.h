@@ -16,6 +16,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: spheresFeatureSwitches
     // Error parsing type: , name: listMutationsManager
+    // Error parsing type: , name: persistentModelObservable
+    // Error parsing type: , name: delegate
     // Error parsing type: , name: $__lazy_storage_$_cellStyle
     // Error parsing type: , name: $__lazy_storage_$_stringsProvider
     // Error parsing type: , name: $__lazy_storage_$_userBadger

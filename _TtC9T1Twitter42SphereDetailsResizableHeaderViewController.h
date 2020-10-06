@@ -13,6 +13,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: bottomSeparatorView
     // Error parsing type: , name: mutationsManager
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: rankingMode
     // Error parsing type: , name: spheresFeatureSwitches
 }
 

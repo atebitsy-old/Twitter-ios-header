@@ -9,7 +9,5 @@
 @interface TFNLegacyButtonAnimationType (T1HashflagAnimations)
 + (id)hashflagAnimationTypeWithAnimation:(id)arg1;
 + (id)hashflagAnimationTypeWithStatus:(id)arg1 displayTextOptions:(unsigned long long)arg2 context:(id)arg3;
-+ (id)actionBarHeartSequenceAnimationType;
-+ (id)inlineHeartSequenceAnimationType;
 @end
 

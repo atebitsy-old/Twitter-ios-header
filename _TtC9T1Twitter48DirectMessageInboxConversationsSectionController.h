@@ -19,6 +19,7 @@ __attribute__((visibility("hidden")))
 - (void).cxx_destruct;
 - (id)init;
 - (void)markAsViewedHelper:(id)arg1 didViewCells:(id)arg2;
+- (void)willBeginEditingItem:(id)arg1 atIndexPath:(id)arg2;
 - (_Bool)canEditItem:(id)arg1 atIndexPath:(id)arg2;
 - (void)didSelectItem:(id)arg1 atIndexPath:(id)arg2;
 - (_Bool)shouldSelectItem:(id)arg1 atIndexPath:(id)arg2;

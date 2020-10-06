@@ -22,7 +22,7 @@ __attribute__((visibility("hidden")))
 - (void).cxx_destruct;
 - (id)initWithForm:(id)arg1 appearance:(id)arg2;
 - (id)scribe;
-- (void)avatarCellDidTapAvatar:(id)arg1;
+- (void)didTapAvatarImageView:(id)arg1 inCell:(id)arg2;
 - (void)submitForm;
 @property(nonatomic, readonly) UIBarButtonItem *doneBarButtonItem;
 @property(nonatomic, readonly) unsigned long long inputRequiredBehavior;

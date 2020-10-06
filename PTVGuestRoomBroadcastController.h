@@ -36,9 +36,11 @@
     PTVGuestRoomControllerObservers *_observers;
     NSTimer *_isTalkingTimer;
     NSTimer *_frameTimer;
+    NSString *_channelID;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *channelID; // @synthesize channelID=_channelID;
 @property(retain, nonatomic) NSTimer *frameTimer; // @synthesize frameTimer=_frameTimer;
 @property(retain, nonatomic) NSTimer *isTalkingTimer; // @synthesize isTalkingTimer=_isTalkingTimer;
 @property(retain, nonatomic) PTVGuestRoomControllerObservers *observers; // @synthesize observers=_observers;
@@ -128,8 +130,9 @@
 - (void)switchAsListener;
 - (void)cancelSwitchAsSpeaker;
 - (void)switchAsSpeaker;
+- (void)shutdown;
 - (void)joinExistingRoomWithRoomID:(id)arg1;
-- (void)createNewRoom;
+- (void)createNewRoomWithChannelID:(id)arg1;
 - (void)removeGuestRoomControllerObserver:(id)arg1;
 - (void)addGuestRoomControllerObserver:(id)arg1;
 - (void)dealloc;

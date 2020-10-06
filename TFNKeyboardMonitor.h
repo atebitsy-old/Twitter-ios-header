@@ -49,8 +49,6 @@
 - (void)_keyboardWillHide:(id)arg1;
 - (void)_keyboardDidShow:(id)arg1;
 - (void)_keyboardWillShow:(id)arg1;
-- (void)_applicationWillEnterForeground:(id)arg1;
-- (void)_applicationDidEnterBackground:(id)arg1;
 - (void)beginMonitoringKeyboardNotifications;
 - (void)dealloc;
 - (id)init;

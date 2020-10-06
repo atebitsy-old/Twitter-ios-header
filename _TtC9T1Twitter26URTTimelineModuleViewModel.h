@@ -13,6 +13,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: entry
     // Error parsing type: , name: moduleItemsViewModels
     // Error parsing type: , name: feedbackContext
+    // Error parsing type: , name: failedEntryErrors
     // Error parsing type: , name: $__lazy_storage_$_header
     // Error parsing type: , name: $__lazy_storage_$_footer
 }

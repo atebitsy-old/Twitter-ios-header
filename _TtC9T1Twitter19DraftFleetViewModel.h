@@ -21,6 +21,7 @@
     // Error parsing type: , name: isFeatureHighlightEntry
     // Error parsing type: , name: isFleetcast
     // Error parsing type: , name: entryState
+    // Error parsing type: , name: __fleetATweetStatus
     // Error parsing type: , name: entryStateObservable
     // Error parsing type: , name: entryStateInput
     // Error parsing type: , name: $__lazy_storage_$_attributedTextModel

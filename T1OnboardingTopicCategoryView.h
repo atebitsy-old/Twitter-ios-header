@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNTappableView-Protocol.h>
 
-@class NSString, TFNTappableViewHelper, TFNTouchDownGestureRecognizer, UIFont, UILabel, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class NSString, TFNLongPressGestureRecognizer, TFNTappableViewHelper, TFNTouchDownGestureRecognizer, UIFont, UILabel, UITapGestureRecognizer;
 
 @interface T1OnboardingTopicCategoryView : UIView <TFNTappableView>
 {
@@ -30,7 +30,7 @@
 @property(nonatomic, getter=isPressed) _Bool pressed; // @synthesize pressed=_pressed;
 @property(nonatomic) struct UIEdgeInsets touchInsets; // @synthesize touchInsets=_touchInsets;
 @property(readonly, nonatomic) TFNTouchDownGestureRecognizer *touchDownGestureRecognizer;
-@property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property(readonly, nonatomic) TFNLongPressGestureRecognizer *longPressGestureRecognizer;
 @property(readonly, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
 @property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 - (void)setPressedStateDidChangeTarget:(id)arg1 action:(SEL)arg2;

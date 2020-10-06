@@ -9,15 +9,20 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter34FleetComposerMediaPreviewInputView : UIView
 {
+    // Error parsing type: , name: state
+    // Error parsing type: , name: updateState
     // Error parsing type: , name: mediaPreviewView
     // Error parsing type: , name: account
-    // Error parsing type: , name: backButton
-    // Error parsing type: , name: annotationView
+    // Error parsing type: , name: $__lazy_storage_$_backButton
+    // Error parsing type: , name: annotationCanvas
     // Error parsing type: , name: overflowGradientView
     // Error parsing type: , name: guidelineView
     // Error parsing type: , name: transformManager
-    // Error parsing type: , name: autocompleteViewController
+    // Error parsing type: , name: scribeDelegate
+    // Error parsing type: , name: isTextFleetMode
+    // Error parsing type: , name: $__lazy_storage_$_isInteracting
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: $__lazy_storage_$_canAddAnnotation
 }
 
 - (void).cxx_destruct;

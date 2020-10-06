@@ -117,7 +117,7 @@
 - (void)cell:(id)arg1 didTapGroupAvatarImageView:(id)arg2;
 - (void)autoplayBehavior:(id)arg1 didTapPlayerViewInMessageEntryCell:(id)arg2;
 - (void)cellDidTapShowMore:(id)arg1;
-- (void)cell:(id)arg1 didLongPressAvatar:(id)arg2 forUser:(id)arg3;
+- (void)cell:(id)arg1 didLongPressAvatar:(id)arg2 forUser:(id)arg3 menuSource:(id)arg4;
 - (void)cell:(id)arg1 didSelectUser:(id)arg2 forEntry:(id)arg3;
 
 @end

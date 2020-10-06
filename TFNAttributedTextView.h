@@ -10,7 +10,7 @@
 #import <TFNUI/TFNPreferredMaxLayoutWidthSizable-Protocol.h>
 #import <TFNUI/UIGestureRecognizerDelegate-Protocol.h>
 
-@class NSArray, NSString, T1AccessibilityProxyView, TFNActiveTextItem, TFNAttributedTextModel, TFNAttributedTextRenderer, TFNTouchDownGestureRecognizer, UIColor, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class NSArray, NSString, T1AccessibilityProxyView, TFNActiveTextItem, TFNAttributedTextModel, TFNAttributedTextRenderer, TFNLongPressGestureRecognizer, TFNTouchDownGestureRecognizer, UIColor, UITapGestureRecognizer;
 @protocol TFNAttributedTextViewDelegate;
 
 @interface TFNAttributedTextView : UIView <TFNAttributedTextRendererDelegate, UIGestureRecognizerDelegate, TFNPreferredMaxLayoutWidthSizable>
@@ -21,9 +21,6 @@
     TFNAttributedTextRenderer *_textRenderer;
     NSArray *_activeRanges;
     TFNTouchDownGestureRecognizer *_touchDownGestureRecognizer;
-    UITapGestureRecognizer *_tapGestureRecognizer;
-    UITapGestureRecognizer *_doubleTapGestureRecognizer;
-    UILongPressGestureRecognizer *_longPressGestureRecognizer;
     NSString *_lastSelectedString;
     UIView *_firstBaselineView;
     UIView *_lastBaselineView;
@@ -34,6 +31,9 @@
     id <TFNAttributedTextViewDelegate> _delegate;
     TFNAttributedTextModel *_textModel;
     long long _verticalAlignment;
+    UITapGestureRecognizer *_tapGestureRecognizer;
+    UITapGestureRecognizer *_doubleTapGestureRecognizer;
+    TFNLongPressGestureRecognizer *_longPressGestureRecognizer;
     T1AccessibilityProxyView *_accessibilityProxyView;
 }
 
@@ -42,6 +42,9 @@
 + (double)selectionPadding;
 - (void).cxx_destruct;
 @property(retain, nonatomic) T1AccessibilityProxyView *accessibilityProxyView; // @synthesize accessibilityProxyView=_accessibilityProxyView;
+@property(readonly, nonatomic) TFNLongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
+@property(readonly, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer; // @synthesize doubleTapGestureRecognizer=_doubleTapGestureRecognizer;
+@property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(nonatomic, getter=isSelectionPaddingEnabled) _Bool selectionPaddingEnabled; // @synthesize selectionPaddingEnabled=_selectionPaddingEnabled;
 @property(nonatomic) _Bool pressed; // @synthesize pressed=_pressed;
 @property(nonatomic) _Bool highlighted; // @synthesize highlighted=_highlighted;

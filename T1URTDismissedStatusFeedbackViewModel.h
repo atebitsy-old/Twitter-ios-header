@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, T1URTFeedbackContext, _TtC9T1Twitter23FeedbackActionViewModel;
+@class NSString, T1URTFeedbackContext, T1URTTimelineStatusItemViewModel, _TtC9T1Twitter23FeedbackActionViewModel;
 
 @interface T1URTDismissedStatusFeedbackViewModel : NSObject
 {
@@ -20,6 +20,7 @@
 - (id)expandedWithChildren;
 @property(nonatomic, readonly) T1URTFeedbackContext *feedbackContext;
 @property(nonatomic, readonly) NSString *entryID;
+@property(nonatomic, readonly) T1URTTimelineStatusItemViewModel *statusViewModel; // @synthesize statusViewModel;
 @property(nonatomic, readonly) _TtC9T1Twitter23FeedbackActionViewModel *feedbackActionViewModel; // @synthesize feedbackActionViewModel;
 
 @end

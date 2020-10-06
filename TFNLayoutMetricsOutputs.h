@@ -14,8 +14,7 @@
     double _lineHeight;
     double _emWidth;
     double _standardContentInset;
-    double _leadingContentAreaWidth;
-    double _trailingContentAreaWidth;
+    double _accessoryWidth;
     double _bodyPadding;
     struct CGSize _avatarSize;
     struct CGSize _xxSmallAvatarSize;
@@ -40,8 +39,7 @@
 @property(nonatomic) struct CGSize xSmallAvatarSize; // @synthesize xSmallAvatarSize=_xSmallAvatarSize;
 @property(nonatomic) struct CGSize xxSmallAvatarSize; // @synthesize xxSmallAvatarSize=_xxSmallAvatarSize;
 @property(nonatomic) struct CGSize avatarSize; // @synthesize avatarSize=_avatarSize;
-@property(nonatomic) double trailingContentAreaWidth; // @synthesize trailingContentAreaWidth=_trailingContentAreaWidth;
-@property(nonatomic) double leadingContentAreaWidth; // @synthesize leadingContentAreaWidth=_leadingContentAreaWidth;
+@property(nonatomic) double accessoryWidth; // @synthesize accessoryWidth=_accessoryWidth;
 @property(nonatomic) struct UIEdgeInsets barItemInsets; // @synthesize barItemInsets=_barItemInsets;
 @property(nonatomic) struct UIEdgeInsets minimumContentEdgeInsets; // @synthesize minimumContentEdgeInsets=_minimumContentEdgeInsets;
 @property(nonatomic) struct UIEdgeInsets contentEdgeInsets; // @synthesize contentEdgeInsets=_contentEdgeInsets;

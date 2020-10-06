@@ -7,6 +7,8 @@
 #import <T1Twitter/NSObject-Protocol.h>
 
 @protocol TFNTwitterHomeFeatureSwitchParameters <NSObject>
+@property(nonatomic, getter=isVisibilityByItemPathTrackingEnabled) _Bool visibilityByItemPathTrackingEnabled;
+@property(nonatomic, getter=isConsecutiveAdDedupPreventionEnabled) _Bool consecutiveAdDedupPreventionEnabled;
 @property(nonatomic, getter=isAsyncPrefetchRequestEnabled) _Bool asyncPrefetchRequestEnabled;
 @property(nonatomic, getter=isHomeConversationHoistingPreventionEnabled) _Bool homeConversationHoistingPreventionEnabled;
 @property(nonatomic, getter=isEmptyChunkClearingEnabled) _Bool emptyChunkClearingEnabled;

@@ -11,7 +11,7 @@
 #import <T1Twitter/TAVUIAutoplayable-Protocol.h>
 #import <T1Twitter/TIPImageFetchable-Protocol.h>
 
-@class NSString, T1DeadVideoErrorView, T1DynamicVideoAdViewModel, T1EqualizerChromeComponentWrapper, T1PrerollCTAModel, T1TimeChromeComponentWrapper, T1VideoAdButton, T1VideoBitRateManager, T1VideoCaptionsView, T1VideoSkipCountdownLabel, TAVPlaybackState, TAVPlayerView, TAVScribeContext, TAVUIVideoButtonOverlay, TFNLegacyButton, TFNSolidColorView, TFNTwitterAccount, TFSKVODispatcher, TFSTimer, TIPImageContainer, UIActivityIndicatorView, UIButton, UIColor, UIImage, UIImageView, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class NSString, T1DeadVideoErrorView, T1DynamicVideoAdViewModel, T1EqualizerChromeComponentWrapper, T1PrerollCTAModel, T1TimeChromeComponentWrapper, T1VideoAdButton, T1VideoBitRateManager, T1VideoCaptionsView, T1VideoSkipCountdownLabel, TAVPlaybackState, TAVPlayerView, TAVScribeContext, TAVUIVideoButtonOverlay, TFNLegacyButton, TFNLongPressGestureRecognizer, TFNSolidColorView, TFNTwitterAccount, TFSKVODispatcher, TFSTimer, TIPImageContainer, UIActivityIndicatorView, UIButton, UIColor, UIImage, UIImageView, UITapGestureRecognizer;
 @protocol T1InlineMediaViewDelegate, T1InlineMediaViewModel, T1InlineMediaViewPrerollDelegate;
 
 @interface T1InlineMediaView : UIView <TAVUIAutoplayable, TAVPlaybackObserver, T1VideoCaptionsViewDelegate, TIPImageFetchable>
@@ -42,6 +42,9 @@
     TFNTwitterAccount *_account;
     double _playButtonOffsetAsFractionOfViewHeight;
     UIColor *_dominantBackgroundColor;
+    UITapGestureRecognizer *_tapGestureRecognizer;
+    UITapGestureRecognizer *_doubleTapGestureRecognizer;
+    TFNLongPressGestureRecognizer *_longPressGestureRecognizer;
     UIImageView *_previewImageView;
     UIView *_shadedOverlayContainerView;
     TFNSolidColorView *_shadedOverlayColorView;
@@ -61,9 +64,6 @@
     T1DynamicVideoAdViewModel *_adViewModel;
     TFSKVODispatcher *_outputVolumeKVODispatcher;
     NSString *_periscopeTotalParticipants;
-    UITapGestureRecognizer *_tapGestureRecognizer;
-    UITapGestureRecognizer *_doubleTapGestureRecognizer;
-    UILongPressGestureRecognizer *_longPressGestureRecognizer;
     UIView *_watchAgainButtonContainer;
     TFNLegacyButton *_watchAgainButton;
     TAVUIVideoButtonOverlay *_contentGuardOverlay;
@@ -82,9 +82,6 @@
 @property(nonatomic) _Bool playbackDesired; // @synthesize playbackDesired=_playbackDesired;
 @property(nonatomic) _Bool shouldAlwaysHidePlayButton; // @synthesize shouldAlwaysHidePlayButton=_shouldAlwaysHidePlayButton;
 @property(nonatomic) _Bool isAudioPlaybackEnabled; // @synthesize isAudioPlaybackEnabled=_isAudioPlaybackEnabled;
-@property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
-@property(readonly, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer; // @synthesize doubleTapGestureRecognizer=_doubleTapGestureRecognizer;
-@property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(copy, nonatomic) NSString *periscopeTotalParticipants; // @synthesize periscopeTotalParticipants=_periscopeTotalParticipants;
 @property(retain, nonatomic) TFSKVODispatcher *outputVolumeKVODispatcher; // @synthesize outputVolumeKVODispatcher=_outputVolumeKVODispatcher;
 @property(retain, nonatomic) T1DynamicVideoAdViewModel *adViewModel; // @synthesize adViewModel=_adViewModel;
@@ -105,6 +102,9 @@
 @property(readonly, nonatomic) TFNSolidColorView *shadedOverlayColorView; // @synthesize shadedOverlayColorView=_shadedOverlayColorView;
 @property(retain, nonatomic) UIView *shadedOverlayContainerView; // @synthesize shadedOverlayContainerView=_shadedOverlayContainerView;
 @property(readonly, nonatomic) UIImageView *previewImageView; // @synthesize previewImageView=_previewImageView;
+@property(readonly, nonatomic) TFNLongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
+@property(readonly, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer; // @synthesize doubleTapGestureRecognizer=_doubleTapGestureRecognizer;
+@property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(retain, nonatomic) UIColor *dominantBackgroundColor; // @synthesize dominantBackgroundColor=_dominantBackgroundColor;
 @property(nonatomic, getter=isPlayerIconViewHidden) _Bool playerIconViewHidden; // @synthesize playerIconViewHidden=_playerIconViewHidden;
 @property(nonatomic) double playButtonOffsetAsFractionOfViewHeight; // @synthesize playButtonOffsetAsFractionOfViewHeight=_playButtonOffsetAsFractionOfViewHeight;

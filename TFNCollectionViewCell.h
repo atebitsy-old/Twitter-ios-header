@@ -7,16 +7,18 @@
 #import <UIKit/UICollectionViewCell.h>
 
 #import <TFNUI/TFNDataViewCell-Protocol.h>
+#import <TFNUI/TFNMenuSupport-Protocol.h>
 
-@class NSIndexPath, NSString, TFNDataViewCellLayout, TFNReusableViewCache, UICollectionView, UIView;
+@class NSIndexPath, NSString, TFNDataViewCellLayout, TFNMenuCompatibleControl, TFNReusableViewCache, UICollectionView, UIView;
 
-@interface TFNCollectionViewCell : UICollectionViewCell <TFNDataViewCell>
+@interface TFNCollectionViewCell : UICollectionViewCell <TFNDataViewCell, TFNMenuSupport>
 {
     UICollectionView *_collectionView;
     _Bool _initialized;
     _Bool _hasSentDidFirstDisplay;
     _Bool _highlighted;
     NSIndexPath *_preDisplayIndexPath;
+    TFNMenuCompatibleControl *_menuControl;
     _Bool _keyboardHighlighted;
     TFNReusableViewCache *_reusableViewCache;
     TFNDataViewCellLayout *_cellLayout;
@@ -47,6 +49,11 @@
 @property(nonatomic) unsigned long long sectionBreaks; // @synthesize sectionBreaks=_sectionBreaks;
 @property(retain, nonatomic) TFNDataViewCellLayout *cellLayout; // @synthesize cellLayout=_cellLayout;
 @property(retain, nonatomic) TFNReusableViewCache *reusableViewCache; // @synthesize reusableViewCache=_reusableViewCache;
+- (void)_tfn_populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
+- (void)populateMenuWithActionItems:(id)arg1;
+- (void)populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
+- (_Bool)isPreparedToDisplayMenuOnPrimaryAction;
+- (void)prepareToDisplayMenuOnPrimaryAction;
 - (id)keyCommands;
 - (id)calculatedLayoutMetrics;
 - (void)didKeyboardSelectInDataViewController:(id)arg1 atIndexPath:(id)arg2;

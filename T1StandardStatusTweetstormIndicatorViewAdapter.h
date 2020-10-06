@@ -19,7 +19,6 @@
 - (id)layoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2;
 - (void)setViewModel:(id)arg1 forView:(id)arg2;
 - (void)view:(id)arg1 willMoveToHostView:(id)arg2;
-- (id)_t1_initializeContextIndicatorView;
 - (id)initializeView;
 - (_Bool)shouldBeVisibleForViewModel:(id)arg1;
 

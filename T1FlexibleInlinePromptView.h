@@ -9,7 +9,7 @@
 #import <T1Twitter/T1PromptView-Protocol.h>
 #import <T1Twitter/TFNLayoutMetricsSizing-Protocol.h>
 
-@class NSArray, NSString, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, UIButton, UIImageView;
+@class NSArray, NSString, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, UIButton, UIImageView, UIView;
 
 @interface T1FlexibleInlinePromptView : T1FlexibleLayoutView <T1PromptView, TFNLayoutMetricsSizing>
 {
@@ -19,17 +19,21 @@
     TFNAttributedTextView *_secondaryTextView;
     T1PromptTextSpec *_detailTextSpec;
     TFNAttributedTextView *_detailTextView;
+    T1PromptContentViewSpec *_contentViewSpec;
     NSArray *_buttonSpecs;
     NSArray *_buttons;
     T1PromptImageSpec *_imageSpec;
     UIImageView *_imageView;
+    UIView *_view;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *view; // @synthesize view=_view;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) T1PromptImageSpec *imageSpec; // @synthesize imageSpec=_imageSpec;
 @property(readonly, nonatomic) NSArray *buttons; // @synthesize buttons=_buttons;
 @property(retain, nonatomic) NSArray *buttonSpecs; // @synthesize buttonSpecs=_buttonSpecs;
+@property(retain, nonatomic) T1PromptContentViewSpec *contentViewSpec; // @synthesize contentViewSpec=_contentViewSpec;
 @property(retain, nonatomic) TFNAttributedTextView *detailTextView; // @synthesize detailTextView=_detailTextView;
 @property(retain, nonatomic) T1PromptTextSpec *detailTextSpec; // @synthesize detailTextSpec=_detailTextSpec;
 @property(retain, nonatomic) TFNAttributedTextView *secondaryTextView; // @synthesize secondaryTextView=_secondaryTextView;

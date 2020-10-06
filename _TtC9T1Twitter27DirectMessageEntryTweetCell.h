@@ -21,8 +21,6 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (void)didLongPressStatus:(id)arg1;
-- (void)didLongPressStatus;
-- (void)didLongPressStatusCommon;
 - (void)didDoubleTapStatus:(id)arg1;
 - (void)didDoubleTapStatusCommon;
 - (void)didTapStatus:(id)arg1;

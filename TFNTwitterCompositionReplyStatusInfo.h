@@ -8,7 +8,7 @@
 
 #import <T1Twitter/NSCoding-Protocol.h>
 
-@class NSArray, NSDictionary, NSString, TFSTwitterUserReference;
+@class NSArray, NSDictionary, NSString, TFSTwitterConversationControl, TFSTwitterUserReference;
 
 @interface TFNTwitterCompositionReplyStatusInfo : NSObject <NSCoding>
 {
@@ -25,10 +25,12 @@
     NSString *_promotedContentImpressionID;
     NSDictionary *_scribeItem;
     long long _selfThreadID;
+    TFSTwitterConversationControl *_conversationControl;
 }
 
 + (_Bool)isSelfThreadReplyFromUserID:(long long)arg1 toReplyStatusInfo:(id)arg2;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) TFSTwitterConversationControl *conversationControl; // @synthesize conversationControl=_conversationControl;
 @property(readonly, nonatomic) long long selfThreadID; // @synthesize selfThreadID=_selfThreadID;
 @property(readonly, copy, nonatomic) NSDictionary *scribeItem; // @synthesize scribeItem=_scribeItem;
 @property(readonly, copy, nonatomic) NSString *promotedContentImpressionID; // @synthesize promotedContentImpressionID=_promotedContentImpressionID;
@@ -49,7 +51,7 @@
 @property(readonly, nonatomic) _Bool hasOnlyStatusID;
 - (id)initWithStatus:(id)arg1;
 - (id)initWithStatusID:(long long)arg1;
-- (id)initWithStatusID:(long long)arg1 retweetID:(long long)arg2 displayText:(id)arg3 fromUserReference:(id)arg4 retweeterReference:(id)arg5 mentionUserReferences:(id)arg6 taggedUserReferences:(id)arg7 cardAuthorReference:(id)arg8 reply:(_Bool)arg9 earned:(_Bool)arg10 promotedContentImpressionID:(id)arg11 scribeItem:(id)arg12 selfThreadID:(long long)arg13;
+- (id)initWithStatusID:(long long)arg1 retweetID:(long long)arg2 displayText:(id)arg3 fromUserReference:(id)arg4 retweeterReference:(id)arg5 mentionUserReferences:(id)arg6 taggedUserReferences:(id)arg7 cardAuthorReference:(id)arg8 reply:(_Bool)arg9 earned:(_Bool)arg10 promotedContentImpressionID:(id)arg11 scribeItem:(id)arg12 selfThreadID:(long long)arg13 conversationControl:(id)arg14;
 - (id)init;
 
 @end

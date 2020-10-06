@@ -17,6 +17,7 @@
 - (_Bool)isHashtagPronounciationAllowed;
 - (_Bool)isUndoScrollToTopEnabled;
 - (_Bool)isNestedActionButtonEnabled;
+- (void)setupAppearance;
 
 @end
 

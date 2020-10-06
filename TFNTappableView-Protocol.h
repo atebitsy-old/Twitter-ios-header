@@ -6,11 +6,11 @@
 
 #import <TFNUI/NSObject-Protocol.h>
 
-@class TFNTouchDownGestureRecognizer, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class TFNLongPressGestureRecognizer, TFNTouchDownGestureRecognizer, UITapGestureRecognizer;
 
 @protocol TFNTappableView <NSObject>
 @property(readonly, nonatomic) TFNTouchDownGestureRecognizer *touchDownGestureRecognizer;
-@property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property(readonly, nonatomic) TFNLongPressGestureRecognizer *longPressGestureRecognizer;
 @property(readonly, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
 @property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 @property(nonatomic, getter=isPressed) _Bool pressed;

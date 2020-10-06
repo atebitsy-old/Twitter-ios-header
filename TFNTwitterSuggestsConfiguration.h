@@ -22,6 +22,8 @@
     _Bool _isEmptyChunkClearingEnabled;
     _Bool _isHomeConversationHoistingPreventionEnabled;
     _Bool _isAsyncPrefetchRequestEnabled;
+    _Bool _isConsecutiveAdDedupPreventionEnabled;
+    _Bool _isVisibilityByItemPathTrackingEnabled;
     unsigned long long _streamOptions;
     long long _userID;
     NSString *_username;
@@ -35,6 +37,8 @@
 + (id)suggestsConfigurationForAccount:(id)arg1 configType:(long long)arg2;
 + (id)suggestsConfigurationForAccount:(id)arg1;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool isVisibilityByItemPathTrackingEnabled; // @synthesize isVisibilityByItemPathTrackingEnabled=_isVisibilityByItemPathTrackingEnabled;
+@property(readonly, nonatomic) _Bool isConsecutiveAdDedupPreventionEnabled; // @synthesize isConsecutiveAdDedupPreventionEnabled=_isConsecutiveAdDedupPreventionEnabled;
 @property(readonly, nonatomic) _Bool isAsyncPrefetchRequestEnabled; // @synthesize isAsyncPrefetchRequestEnabled=_isAsyncPrefetchRequestEnabled;
 @property(readonly, nonatomic) _Bool isHomeConversationHoistingPreventionEnabled; // @synthesize isHomeConversationHoistingPreventionEnabled=_isHomeConversationHoistingPreventionEnabled;
 @property(readonly, nonatomic) _Bool isEmptyChunkClearingEnabled; // @synthesize isEmptyChunkClearingEnabled=_isEmptyChunkClearingEnabled;

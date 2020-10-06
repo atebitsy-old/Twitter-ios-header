@@ -22,6 +22,7 @@
 + (id)viewModelForFleetWithMessageEntry:(id)arg1 accountID:(id)arg2;
 - (void).cxx_destruct;
 - (id)init;
+- (id)accessibilityStringForAccount:(id)arg1;
 
 @end
 

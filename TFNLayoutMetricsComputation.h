@@ -24,8 +24,8 @@
 + (id)_computeOutputsForUncustomizedInputs:(id)arg1;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) TFNLayoutMetricsInputs *inputs; // @synthesize inputs=_inputs;
-- (void)_applyCustomTrailingContentAreaWidth;
-- (void)_applyCustomLeadingContentAreaWidthAndAvatarSize;
+- (void)_applyCustomAccessoryWidth;
+- (void)_applyCustomAvatarSize;
 - (void)_applyCustomHorizontalSafeAreaAndContentEdgeInsets;
 - (void)_applyCustomDisplayAreaEdgeInsets;
 - (void)_applyCustomDisplayAreaInsetForLineLength;

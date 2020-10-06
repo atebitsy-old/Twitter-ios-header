@@ -21,7 +21,7 @@
     // Error parsing type: , name: $__lazy_storage_$_isReadyToPost
     // Error parsing type: , name: $__lazy_storage_$_didStartComposition
     // Error parsing type: , name: hasScribedBeganTyping
-    // Error parsing type: , name: scribedAnnotationPositioningModes
+    // Error parsing type: , name: scribedAnnotationTransformKinds
 }
 
 - (void)updateKeyboardFrame;

@@ -398,11 +398,12 @@
 - (_Bool)isAutoTranslateSourceMicrosoftEnabled;
 - (_Bool)isAutoTranslateExpandedViewEnabled;
 - (_Bool)isAutoTranslateEnabled;
+- (id)eligibleURLEntityForArticleNudgeWithStatus:(id)arg1;
 - (_Bool)isSimpleQuoteActionLabelEnabled;
 - (_Bool)isQuoteStatRearrangeEnabled;
 - (_Bool)isRetweetsAndCommentsLabelEnabled;
+- (_Bool)isConversationControlFlexibleParticipationEnabled;
 - (_Bool)isConversationControlNotifyingParticipantsEnabled;
-- (_Bool)isConversationControlHighlightedEducationEnabled;
 - (_Bool)isConversationControlCreationEnabled;
 - (_Bool)isVerificationV2ElectionsBadgeEnabled;
 - (_Bool)isVerificationV2AffiliateBadgingM2Enabled;
@@ -450,7 +451,6 @@
 - (_Bool)areAEMAuthenticatedWebviewsEnabled;
 - (_Bool)isReportFlowIdReportTypeEnabled;
 - (_Bool)isReportFlowIdEnabled;
-- (_Bool)isAuthWebViewDeeplinksEnabled;
 - (_Bool)isSoftInterventionsInnerQuoteTweetForwardPivotEnabled;
 - (_Bool)isSoftInterventionsForwardPivotEnabled;
 - (_Bool)isNavigationStackReportClientEventsEnabled;
@@ -466,11 +466,9 @@
 - (_Bool)shouldCardComposePreviewTombstoneIfNotDisplayed;
 - (long long)cardComposePreviewFetchDelayMsec;
 - (id)composerRetweetButtonName;
-- (_Bool)isComposerTwitterTextEditorEnabled;
 - (_Bool)isComposerPulldownThreadingLookbackLimited;
 - (_Bool)isComposerProtectedAccountPulldownThreadingEnabled;
 - (_Bool)isComposerPulldownThreadingEnabled;
-- (_Bool)isComposerHighlightEntitiesEnabled;
 - (_Bool)isComposerGeoPreciseLocationEnabled;
 - (long long)selfThreadComposerAddToThreadTooltipCharacterLimit;
 - (_Bool)selfThreadComposerLimitAttachments;
@@ -528,7 +526,6 @@
 - (_Bool)isOnboardingAccountFollowPromptEnabled;
 - (_Bool)isOnboardingConnectTabUrtEnabled;
 - (_Bool)isOnboardingNotificationsBackstopPromptEnabled;
-- (_Bool)isOnboardingLocationBackstopPromptEnabled;
 - (_Bool)isOnboardingAddressBookReuploadEnabled;
 - (_Bool)isProfileOnboardingBioAutoFocusEnabled;
 - (id)replyControlLimitedActionsConfig;
@@ -542,6 +539,7 @@
 - (_Bool)isSMS2faEnabled;
 - (_Bool)performAnimationOnSkippedStatusNavigation;
 - (_Bool)isRedundantStatusNavigationDisabled;
+- (_Bool)isConversationThreadingEmptyModuleRetryEnabled;
 - (_Bool)isConversationThreadingSelectedStateExtendedSendReplyViewNoOpEnabled;
 - (_Bool)isConversationThreadingSelectedStateTapInlineActionsViewNoOpEnabled;
 - (_Bool)isConversationThreadingSelectedStateTapInInlineReplyViewNoOpEnabled;
@@ -560,6 +558,7 @@
 - (_Bool)isConversationThreadingCaretAlwaysVisible;
 - (_Bool)isConversationThreadingInlineActionsCountsAlwaysVisible;
 - (_Bool)isConversationThreadingInlineActionsAlwaysVisible;
+- (_Bool)isConversationThreadingPushNavigationEnabled;
 - (_Bool)isConversationMaximumIndentationSentWithCursorsEnabled;
 - (_Bool)isConversationThreadingInlineActionsVerticallyAlignedEnabled;
 - (_Bool)isConversationThreadingReplyInlineActionFocusesInlineReplyFieldEnabled;
@@ -592,6 +591,7 @@
 - (id)profileBirthdayBalloonOverrides;
 - (_Bool)isProfileBirthdayBalloonOverridesEnabled;
 - (_Bool)isEditProfileUsernameEnabled;
+- (_Bool)isConsecutiveAdDedupPreventionEnabled;
 - (id)pinToTopManagerConfiguration;
 @property(readonly, nonatomic) _Bool isHomeLegacyToURTFeedbackBridgeEnabled;
 - (_Bool)isHomeTimelineFeedbackCaretDisplayTreatmentOverflowInlineEnabled;
@@ -614,6 +614,7 @@
 @property(readonly, nonatomic) _Bool isTopicsDescriptionsEnabled;
 @property(readonly, nonatomic) _Bool isTopicsProfileEntryPointEnabled;
 @property(readonly, nonatomic) _Bool isTopicsDashItemEnabled;
+- (_Bool)isVisibilityByItemPathTrackingEnabled;
 - (_Bool)isURTEmptyCursorChunkClearingEnabled;
 - (double)latestTimelineProgressiveAutoSwitchThresholdMultiplier;
 - (double)latestTimelineProgressiveAutoSwitchHalfLife;
@@ -752,6 +753,7 @@
 - (_Bool)isDMVoiceRenderingEnabled;
 - (_Bool)isDMVoiceCreationEnabled;
 - (_Bool)isDMShareSheetReplyToAuthorEnabled;
+- (_Bool)dmSearchServerEnabled;
 - (long long)dmSearchAdditionalPagesCount;
 - (id)reactionsConfiguration;
 - (id)_fetchFreshConfiguration;
@@ -762,6 +764,7 @@
 - (double)conversationPollingInterval;
 - (long long)directMessageMaxGroupSize;
 - (_Bool)isIOS13ShareSheetDonationEnabled;
+- (_Bool)isDMConversationNSFWMediaFilterEnabled;
 - (_Bool)isDMConversationGroupJoinedEntryEnabled;
 - (_Bool)isDMConversationNavBarAvatarEnabled;
 - (_Bool)isDMRequestsInboxActionsButtonEnabled;
@@ -892,6 +895,7 @@
 @property(readonly, nonatomic) long long scribeAPIErrorSampleSize;
 @property(readonly, nonatomic) long long scribeAPISampleSize;
 - (_Bool)isBlockMuteStatusFilteringOptimizationEnabled;
+- (long long)articlesNudgeRateLimit;
 - (id)articlesNudgeNewsDomainSetWithImpression:(_Bool)arg1;
 - (_Bool)isProvisionalAuthorizationEnabled;
 - (_Bool)isQuoteTweetCombinedEnabled;
@@ -976,6 +980,7 @@
 - (void)updateSettingsAllowMediaTagging:(unsigned long long)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)updateSettingsAccountProtection:(_Bool)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)updateSettingsAcceptDirectMessagesFrom:(unsigned long long)arg1 responseBlock:(CDUnknownBlockType)arg2;
+- (void)updateSettingsDmNSFWMediaFilter:(unsigned long long)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)updateSettingsDmLowQualityFilter:(unsigned long long)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)updateSettingsDmReadReceipts:(unsigned long long)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)updateSettingsScreenName:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;

@@ -6,6 +6,8 @@
 
 #import <UIKit/UIView.h>
 
+@class NSArray;
+
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter18FleetEntryTextView : UIView
 {
@@ -14,6 +16,7 @@ __attribute__((visibility("hidden")))
 }
 
 - (void).cxx_destruct;
+@property(nonatomic, copy) NSArray *accessibilityElements;
 - (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

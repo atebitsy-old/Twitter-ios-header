@@ -6,7 +6,7 @@
 
 #import <TFNUI/TFNViewController.h>
 
-@class CAShapeLayer, NSMutableArray, NSString, T1AvatarImageView, TFNMenuCompatibleLongPressGestureRecognizer, TFNQRCodeImageView, TFNTwitterAccount, UIImage, UILabel, UITapGestureRecognizer;
+@class CAShapeLayer, NSMutableArray, NSString, T1AvatarImageView, TFNLongPressGestureRecognizer, TFNQRCodeImageView, TFNTwitterAccount, UIImage, UILabel, UITapGestureRecognizer;
 
 @interface T1QRCodeViewController : TFNViewController
 {
@@ -19,7 +19,7 @@
     UILabel *_helpLabel;
     TFNQRCodeImageView *_qrCardView;
     T1AvatarImageView *_avatarImageView;
-    TFNMenuCompatibleLongPressGestureRecognizer *_longPressGestureRecognizer;
+    TFNLongPressGestureRecognizer *_longPressGestureRecognizer;
     UITapGestureRecognizer *_tapGestureRecognizer;
     NSMutableArray *_qrBackgroundColors;
 }
@@ -27,7 +27,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *qrBackgroundColors; // @synthesize qrBackgroundColors=_qrBackgroundColors;
 @property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
-@property(readonly, nonatomic) TFNMenuCompatibleLongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
+@property(readonly, nonatomic) TFNLongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
 @property(readonly, nonatomic) T1AvatarImageView *avatarImageView; // @synthesize avatarImageView=_avatarImageView;
 @property(readonly, nonatomic) TFNQRCodeImageView *qrCardView; // @synthesize qrCardView=_qrCardView;
 @property(readonly, nonatomic) UILabel *helpLabel; // @synthesize helpLabel=_helpLabel;

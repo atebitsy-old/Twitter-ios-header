@@ -26,6 +26,7 @@
 @property(readonly, nonatomic) _Bool isHashtagPronounciationAllowed;
 @property(readonly, nonatomic) _Bool isUndoScrollToTopEnabled;
 @property(readonly, nonatomic) _Bool isNestedActionButtonEnabled;
+- (void)setupAppearance;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

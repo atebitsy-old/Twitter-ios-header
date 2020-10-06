@@ -16,9 +16,8 @@ __attribute__((visibility("hidden")))
 }
 
 - (void).cxx_destruct;
-- (id)initWithText:(id)arg1 userDefaultsKey:(id)arg2 onUpdate:(CDUnknownBlockType)arg3;
-- (id)initWithStyle:(long long)arg1 text:(id)arg2 value:(_Bool)arg3 updateTarget:(id)arg4 action:(SEL)arg5;
-- (id)initWithStyle:(long long)arg1 text:(id)arg2 value:(_Bool)arg3 updateAction:(CDUnknownBlockType)arg4;
+- (id)initWithStyle:(long long)arg1 text:(id)arg2 value:(_Bool)arg3 showsMenuOnPrimaryAction:(_Bool)arg4 updateTarget:(id)arg5 action:(SEL)arg6;
+- (id)initWithStyle:(long long)arg1 text:(id)arg2 value:(_Bool)arg3 showsMenuOnPrimaryAction:(_Bool)arg4 updateAction:(CDUnknownBlockType)arg5;
 - (void)propertyUpdated:(id)arg1;
 
 @end

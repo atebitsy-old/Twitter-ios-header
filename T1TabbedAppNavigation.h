@@ -60,6 +60,7 @@
 - (void)_presentSentTweetAmbientNotificationContainerIfActive:(id)arg1;
 - (void)_presentSentTweetToastIfActive:(id)arg1;
 - (void)_applicationDidBecomeActive:(id)arg1;
+- (void)_tweetComposerDidRetweetFromComposition:(id)arg1;
 - (void)_tweetComposerDidCancelComposition:(id)arg1;
 - (void)_createNudgeOperationDidIgnoreNudge:(id)arg1;
 - (void)_compositionOutboxDidCancelFailedComposition:(id)arg1;
@@ -92,6 +93,7 @@
 - (void)showGenericURTPage:(id)arg1 title:(id)arg2 subtitle:(id)arg3 cacheID:(id)arg4 queryParameters:(id)arg5 source:(long long)arg6 completion:(CDUnknownBlockType)arg7;
 - (void)showQRProfileWithSource:(long long)arg1 sourceNavigationMetadata:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)dockViewController:(id)arg1 delegate:(id)arg2 userAction:(long long)arg3 animationTransition:(long long)arg4;
+- (void)_t1_recordArticleNudgeRetweetActionIfNeeded:(id)arg1 retweetID:(id)arg2 forAccount:(id)arg3;
 - (void)_t1_recordDidSendNudgedCompositionIfNeeded:(id)arg1 resultStatus:(id)arg2 forAccount:(id)arg3;
 - (void)_t1_recordTweetSentWithoutShowingNudgeIdentifier:(id)arg1 forAccount:(id)arg2;
 - (void)didDismissNudge:(id)arg1;
@@ -105,6 +107,7 @@
 - (void)showProfileMomentsWithSource:(long long)arg1 sourceNavigationMetadata:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)showMomentCapsuleWithMomentID:(id)arg1 source:(long long)arg2 navigationContext:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)showPurchaseHistoryWithCompletion:(CDUnknownBlockType)arg1;
+- (void)showContributeToBirdwatchWithStatusViewModel:(id)arg1 source:(long long)arg2;
 - (_Bool)handleAutomaticHomeNavigationIfNecessaryWithActiveTimeStamp:(double)arg1 inactiveTimeStamp:(double)arg2;
 - (void)showPeopleScreenWithSource:(long long)arg1 pivotParameters:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)showPeopleScreenWithSource:(long long)arg1 fromPanel:(long long)arg2 pivotParameters:(id)arg3 completion:(CDUnknownBlockType)arg4;

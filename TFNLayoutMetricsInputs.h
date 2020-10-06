@@ -22,8 +22,7 @@
     NSValue *_customDisplayAreaEdgeInsets;
     NSValue *_customContentEdgeInsets;
     NSValue *_customHorizontalSafeAreaInsets;
-    NSNumber *_customLeadingContentAreaWidth;
-    NSNumber *_customTrailingContentAreaWidth;
+    NSNumber *_customAccessoryWidth;
     NSValue *_customAvatarSize;
     _Bool _mutable;
     unsigned long long _hash;
@@ -33,8 +32,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) long long parametersVersion; // @synthesize parametersVersion=_parametersVersion;
 @property(readonly, nonatomic) NSValue *customAvatarSize; // @synthesize customAvatarSize=_customAvatarSize;
-@property(readonly, nonatomic) NSNumber *customTrailingContentAreaWidth; // @synthesize customTrailingContentAreaWidth=_customTrailingContentAreaWidth;
-@property(readonly, nonatomic) NSNumber *customLeadingContentAreaWidth; // @synthesize customLeadingContentAreaWidth=_customLeadingContentAreaWidth;
+@property(readonly, nonatomic) NSNumber *customAccessoryWidth; // @synthesize customAccessoryWidth=_customAccessoryWidth;
 @property(readonly, nonatomic) NSValue *customHorizontalSafeAreaInsets; // @synthesize customHorizontalSafeAreaInsets=_customHorizontalSafeAreaInsets;
 @property(readonly, nonatomic) NSValue *customContentEdgeInsets; // @synthesize customContentEdgeInsets=_customContentEdgeInsets;
 @property(readonly, nonatomic) NSValue *customDisplayAreaEdgeInsets; // @synthesize customDisplayAreaEdgeInsets=_customDisplayAreaEdgeInsets;

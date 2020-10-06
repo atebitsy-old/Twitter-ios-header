@@ -7,7 +7,6 @@
 @class NSArray, T1PinnedListDataModel, T1SpheresUserSettingsRepository;
 
 @protocol T1SpheresUserSettingsRepositoryDelegate
-- (void)spheresUserSettingsRepository:(T1SpheresUserSettingsRepository *)arg1 didChangeRankingForListID:(long long)arg2;
 - (void)spheresUserSettingsRepository:(T1SpheresUserSettingsRepository *)arg1 didUpdateWithPinnedListDataModel:(T1PinnedListDataModel *)arg2;
 - (void)spheresUserSettingsRepositoryPinnedListsDidChange:(T1SpheresUserSettingsRepository *)arg1 withPinnedListModels:(NSArray *)arg2;
 @end

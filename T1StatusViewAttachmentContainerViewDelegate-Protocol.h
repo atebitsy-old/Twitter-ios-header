@@ -9,15 +9,15 @@
 #import <T1Twitter/T1UnifiedCardComponentViewEventDelegate-Protocol.h>
 #import <T1Twitter/T1UserRecommendationViewDataSource-Protocol.h>
 
-@class T1CardViewEvent, T1CardViewLayoutState, T1QuotedStatusView, T1StatusViewAttachmentContainerView, T1StatusViewEvent, T1TombstoneView, T1URTRichTextStatusEventInteractionHandler, T1UnifiedCardViewLayoutState, T1UserRecommendationView, T1UserRecommendationViewLayoutState, TFNLayoutMetrics, TFNPreviewConfiguration, TFNTwitterAccount;
+@class T1CardViewEvent, T1CardViewLayoutState, T1StatusViewAttachmentContainerView, T1StatusViewEvent, T1TombstoneView, T1URTRichTextStatusEventInteractionHandler, T1UnifiedCardViewLayoutState, T1UserRecommendationView, T1UserRecommendationViewLayoutState, TFNLayoutMetrics, TFNPreviewConfiguration, TFNTwitterAccount, UIView;
 @protocol T1StatusViewModel;
 
 @protocol T1StatusViewAttachmentContainerViewDelegate <T1StatusPhotoVideoForwardViewDelegate, T1UserRecommendationViewDataSource, T1CardViewDelegate, T1UnifiedCardComponentViewEventDelegate>
 - (void)didCreateTombstoneViewWithInteractionHandler:(T1URTRichTextStatusEventInteractionHandler *)arg1;
 - (void)didTapActionOnTombstoneView:(T1TombstoneView *)arg1;
-- (TFNPreviewConfiguration *)quotedStatusView:(T1QuotedStatusView *)arg1 didSendEvent:(T1StatusViewEvent *)arg2;
-- (void)didLongPressOnQuotedStatusView:(T1QuotedStatusView *)arg1;
-- (void)didTapOnQuotedStatusView:(T1QuotedStatusView *)arg1;
+- (TFNPreviewConfiguration *)quotedStatusView:(UIView *)arg1 didSendEvent:(T1StatusViewEvent *)arg2;
+- (void)didLongPressOnQuotedStatusView:(UIView *)arg1;
+- (void)didTapOnQuotedStatusView:(UIView *)arg1;
 - (void)didProfileTapOnUserRecommendationView:(T1UserRecommendationView *)arg1 cardEvent:(T1CardViewEvent *)arg2;
 - (struct CGSize)mediaForwardImageDownloadSizeForViewModel:(id <T1StatusViewModel>)arg1 options:(unsigned long long)arg2 account:(TFNTwitterAccount *)arg3 layoutMetrics:(TFNLayoutMetrics *)arg4 attachmentType:(unsigned long long)arg5;
 - (long long)cardDisplayModeForOptions:(unsigned long long)arg1;

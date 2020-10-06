@@ -16,6 +16,7 @@
 }
 
 @property(nonatomic) unsigned long long displayType; // @synthesize displayType=_displayType;
+- (void)tweetDetailsFooterTextViewDidTapBirdwatchButton:(id)arg1;
 - (void)tweetDetailsFooterTextViewDidTapHiddenRepliesButton:(id)arg1;
 - (void)tweetDetailsFooterTextView:(id)arg1 didTapRange:(id)arg2 rect:(struct CGRect)arg3;
 - (_Bool)isLayoutState:(id)arg1 validForViewModel:(id)arg2 layoutMetrics:(id)arg3;

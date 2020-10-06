@@ -10,9 +10,9 @@
 {
 }
 
++ (id)buildWithDictionary:(id)arg1;
 - (void).cxx_destruct;
 - (id)init;
-- (id)buildWithDictionary:(id)arg1;
 
 @end
 

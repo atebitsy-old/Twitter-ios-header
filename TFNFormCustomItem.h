@@ -13,6 +13,7 @@
 @interface TFNFormCustomItem : NSObject <TFNFormItem>
 {
     _Bool _destructive;
+    _Bool _showsMenuOnPrimaryAction;
     TFNFormAppearance *_appearance;
     NSString *_text;
     NSString *_detailText;
@@ -26,12 +27,14 @@
 @property(copy, nonatomic) CDUnknownBlockType didSelectAtIndexPath; // @synthesize didSelectAtIndexPath=_didSelectAtIndexPath;
 @property(copy, nonatomic) CDUnknownBlockType cellAtIndexPath; // @synthesize cellAtIndexPath=_cellAtIndexPath;
 @property(copy, nonatomic) CDUnknownBlockType sizeAtIndexPath; // @synthesize sizeAtIndexPath=_sizeAtIndexPath;
+@property(readonly, nonatomic) _Bool showsMenuOnPrimaryAction; // @synthesize showsMenuOnPrimaryAction=_showsMenuOnPrimaryAction;
 @property(readonly, nonatomic) _Bool destructive; // @synthesize destructive=_destructive;
 @property(readonly, nonatomic) unsigned long long disclosureStyle; // @synthesize disclosureStyle=_disclosureStyle;
 @property(copy, nonatomic) NSString *detailText; // @synthesize detailText=_detailText;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(retain, nonatomic) TFNFormAppearance *appearance; // @synthesize appearance=_appearance;
 - (void)setDidSelectAtIndexPathTarget:(id)arg1 action:(SEL)arg2;
+- (id)initWithText:(id)arg1 disclosureStyle:(unsigned long long)arg2 destructive:(_Bool)arg3 showsMenuOnPrimaryAction:(_Bool)arg4;
 - (id)initWithText:(id)arg1 disclosureStyle:(unsigned long long)arg2 destructive:(_Bool)arg3;
 
 @end

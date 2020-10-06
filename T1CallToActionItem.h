@@ -16,7 +16,9 @@
     NSString *_titleText;
     NSString *_detailText;
     NSString *_callToActionText;
+    NSString *_secondaryCallToActionText;
     CDUnknownBlockType _actionBlock;
+    CDUnknownBlockType _secondaryActionBlock;
     CDUnknownBlockType _dismissBlock;
     CDUnknownBlockType _activeRangeBlock;
     struct _NSRange _activeRange;
@@ -25,8 +27,10 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType activeRangeBlock; // @synthesize activeRangeBlock=_activeRangeBlock;
 @property(copy, nonatomic) CDUnknownBlockType dismissBlock; // @synthesize dismissBlock=_dismissBlock;
+@property(copy, nonatomic) CDUnknownBlockType secondaryActionBlock; // @synthesize secondaryActionBlock=_secondaryActionBlock;
 @property(copy, nonatomic) CDUnknownBlockType actionBlock; // @synthesize actionBlock=_actionBlock;
 @property(nonatomic) struct _NSRange activeRange; // @synthesize activeRange=_activeRange;
+@property(copy, nonatomic) NSString *secondaryCallToActionText; // @synthesize secondaryCallToActionText=_secondaryCallToActionText;
 @property(copy, nonatomic) NSString *callToActionText; // @synthesize callToActionText=_callToActionText;
 @property(copy, nonatomic) NSString *detailText; // @synthesize detailText=_detailText;
 @property(copy, nonatomic) NSString *titleText; // @synthesize titleText=_titleText;

@@ -91,6 +91,7 @@
 - (void)viewControllerDidDismissAnimated:(_Bool)arg1;
 - (void)viewControllerDidPresent:(id)arg1;
 - (void)tfnPresentedCustomPresentFromViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
+- (_Bool)_t1_doesURLResultTypeOpenInWebview:(long long)arg1;
 - (void)_openViewControllerForURLParserResult:(id)arg1;
 - (_Bool)_isAccountWebViewAuthURL:(id)arg1;
 - (_Bool)_hasAuthorizationHeader:(id)arg1;

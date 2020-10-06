@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1PromptView-Protocol.h>
 
-@class NSArray, NSString, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, TFNToolbar, UIButton, UIImageView;
+@class NSArray, NSString, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, TFNToolbar, UIButton, UIImageView;
 
 @interface T1HalfPromptView : UIView <T1PromptView>
 {
@@ -41,6 +41,7 @@
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties
+@property(retain, nonatomic) T1PromptContentViewSpec *contentViewSpec;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(retain, nonatomic) T1PromptTextSpec *detailTextSpec;

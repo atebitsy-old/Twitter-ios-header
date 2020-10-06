@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1PromptDataSource-Protocol.h>
 
-@class NSArray, NSMutableArray, NSString, T1OnboardingSubtaskController, T1PromptImageSpec, T1PromptTextSpec, TFNTwitterAccount, TFSTwitterOnboardingHeaderImage, TFSTwitterOnboardingRichText, UIImage;
+@class NSArray, NSMutableArray, NSString, T1OnboardingSubtaskController, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, TFNTwitterAccount, TFSTwitterOnboardingHeaderImage, TFSTwitterOnboardingRichText, UIImage;
 @protocol TFSTwitterOnboardingSubtaskDataProvider;
 
 @interface T1OnboardingPromptDataSource : NSObject <T1PromptDataSource>
@@ -42,6 +42,7 @@
 
 // Remaining properties
 @property(readonly, nonatomic) unsigned long long buttonLayout;
+@property(readonly, nonatomic) T1PromptContentViewSpec *contentViewSpec;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) CDUnknownBlockType dismissOptionAction;

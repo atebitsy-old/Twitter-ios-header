@@ -35,7 +35,6 @@
 - (void)_t1_refreshSphereViewControllerIfNeeded:(id)arg1;
 - (void)refreshTimelineAtIndex:(long long)arg1;
 - (_Bool)attemptToNavigateToTimelineWithListID:(long long)arg1;
-- (void)userDidChangeRankingForListID:(long long)arg1;
 - (void)reconstructTimelineViewControllerIfNeededForPinnedListDataModel:(id)arg1;
 - (void)updateTimelineViewControllersForPinnedListModels:(id)arg1;
 - (_Bool)_homeTimelineIsEmptyAfterLoading;

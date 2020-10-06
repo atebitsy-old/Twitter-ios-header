@@ -14,20 +14,25 @@
 {
     T1TweetDetailsFooterTextView *_footerTextView;
     TFNLegacyButton *_hiddenRepliesButton;
+    TFNLegacyButton *_birdwatchButton;
     CDUnknownBlockType _footerPlaceTappedBlock;
     CDUnknownBlockType _footerTimestampTappedBlock;
     CDUnknownBlockType _footerSourceTappedBlock;
     CDUnknownBlockType _footerHiddenRepliesIconTappedBlock;
+    CDUnknownBlockType _footerBirdwatchIconTappedBlock;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType footerBirdwatchIconTappedBlock; // @synthesize footerBirdwatchIconTappedBlock=_footerBirdwatchIconTappedBlock;
 @property(copy, nonatomic) CDUnknownBlockType footerHiddenRepliesIconTappedBlock; // @synthesize footerHiddenRepliesIconTappedBlock=_footerHiddenRepliesIconTappedBlock;
 @property(copy, nonatomic) CDUnknownBlockType footerSourceTappedBlock; // @synthesize footerSourceTappedBlock=_footerSourceTappedBlock;
 @property(copy, nonatomic) CDUnknownBlockType footerTimestampTappedBlock; // @synthesize footerTimestampTappedBlock=_footerTimestampTappedBlock;
 @property(copy, nonatomic) CDUnknownBlockType footerPlaceTappedBlock; // @synthesize footerPlaceTappedBlock=_footerPlaceTappedBlock;
+@property(retain, nonatomic) TFNLegacyButton *birdwatchButton; // @synthesize birdwatchButton=_birdwatchButton;
 @property(retain, nonatomic) TFNLegacyButton *hiddenRepliesButton; // @synthesize hiddenRepliesButton=_hiddenRepliesButton;
 @property(retain, nonatomic) T1TweetDetailsFooterTextView *footerTextView; // @synthesize footerTextView=_footerTextView;
 - (void)attributedTextView:(id)arg1 didTapRange:(id)arg2 rect:(struct CGRect)arg3;
+- (void)_t1_didTapBirdwatchButton:(id)arg1;
 - (void)_t1_didTapHiddenRepliesButton:(id)arg1;
 - (void)setFooterItem:(id)arg1;
 - (void)layoutSubviews;

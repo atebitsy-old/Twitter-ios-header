@@ -157,8 +157,6 @@
 - (id)childViewControllerForStatusBarStyle;
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)viewSafeAreaInsetsDidChange;
-- (void)viewDidFullyDisappear:(_Bool)arg1;
-- (void)viewDidFullyAppear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

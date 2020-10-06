@@ -8,14 +8,15 @@
 
 #import <T1Twitter/T1InfoTextLayoutSpec-Protocol.h>
 
-@class NSSet, NSString, UIColor, UIFont, UIImage;
+@class NSSet, NSString, UIColor, UIFont;
 
 @interface T1InfoTextLayoutSpec : NSObject <T1InfoTextLayoutSpec>
 {
     _Bool _isTitleMultiline;
     _Bool _renderFromRight;
     _Bool _hasSponsorship;
-    UIImage *_badge;
+    NSString *_badgeName;
+    UIColor *_badgeFillColor;
     NSString *_title;
     UIFont *_font;
     UIColor *_color;
@@ -26,15 +27,9 @@
     struct CGSize _badgeSize;
 }
 
-+ (id)_t1_defaultTextColor;
-+ (id)_t1_badgeForOptions:(unsigned long long)arg1 fillColor:(id)arg2;
-+ (id)_t1_badgeForOptions:(unsigned long long)arg1 account:(id)arg2;
-+ (struct CGSize)_t1_badgeSizeForOptions:(unsigned long long)arg1;
-+ (id)_t1_userTextColorForOptions:(unsigned long long)arg1;
 + (_Bool)shouldShowInfoTextForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
 + (id)analyticsButtonLayoutForViewModel:(id)arg1 options:(unsigned long long)arg2 willLayout:(_Bool)arg3;
 + (id)layoutForSetting:(id)arg1 options:(unsigned long long)arg2 willLayout:(_Bool)arg3;
-+ (id)layoutWithOriginalSpec:(id)arg1 replacedTitle:(id)arg2;
 + (id)layoutForUserViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3 font:(id)arg4 willLayout:(_Bool)arg5;
 + (id)layoutForViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3 willLayout:(_Bool)arg4;
 - (void).cxx_destruct;
@@ -49,9 +44,10 @@
 @property(readonly, nonatomic) UIColor *color; // @synthesize color=_color;
 @property(readonly, nonatomic) UIFont *font; // @synthesize font=_font;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-@property(readonly, nonatomic) UIImage *badge; // @synthesize badge=_badge;
+@property(readonly, nonatomic) UIColor *badgeFillColor; // @synthesize badgeFillColor=_badgeFillColor;
+@property(readonly, copy, nonatomic) NSString *badgeName; // @synthesize badgeName=_badgeName;
 - (_Bool)isEqualToLayoutSpec:(id)arg1;
-- (id)initWithBadge:(id)arg1 title:(id)arg2 details:(id)arg3 titleHyperlinks:(id)arg4 detailsHyperlinks:(id)arg5 color:(id)arg6 font:(id)arg7 badgeSize:(struct CGSize)arg8 isTitleMultiline:(_Bool)arg9 renderFromRight:(_Bool)arg10 hasSponsorship:(_Bool)arg11 sponsorshipScribeComponent:(id)arg12;
+- (id)initWithBadgeName:(id)arg1 badgeFillColor:(id)arg2 title:(id)arg3 details:(id)arg4 titleHyperlinks:(id)arg5 detailsHyperlinks:(id)arg6 color:(id)arg7 font:(id)arg8 badgeSize:(struct CGSize)arg9 isTitleMultiline:(_Bool)arg10 renderFromRight:(_Bool)arg11 hasSponsorship:(_Bool)arg12 sponsorshipScribeComponent:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

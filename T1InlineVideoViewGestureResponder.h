@@ -16,8 +16,8 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (void)onLongPress;
-- (void)onTap;
+- (void)onLongPressWithLongPressRecognizer:(id)arg1;
+- (void)onTapWithTapRecognizer:(id)arg1;
 - (id)initOnTapBlock:(CDUnknownBlockType)arg1 onLongPressBlock:(CDUnknownBlockType)arg2 onPrerollCTATapBlock:(CDUnknownBlockType)arg3 didTapAttributionBlock:(CDUnknownBlockType)arg4;
 
 @end

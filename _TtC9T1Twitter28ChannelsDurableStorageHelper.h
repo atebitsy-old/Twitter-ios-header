@@ -20,5 +20,7 @@
     // Error parsing type: , name: pinnedListsLastUpdated
 }
 
+- (void)applicationDidEnterBackground:(id)arg1;
+
 @end
 

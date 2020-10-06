@@ -9,6 +9,7 @@
 @interface _TtC13GraphQLModels19TimelineTwitterList : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: list
+    // Error parsing type: , name: listContextualData
     // Error parsing type: , name: listDisplayType
 }
 

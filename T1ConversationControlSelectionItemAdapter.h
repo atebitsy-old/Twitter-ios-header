@@ -8,16 +8,18 @@
 
 @interface T1ConversationControlSelectionItemAdapter : TFNItemsDataViewAdapter
 {
+    _Bool _flexibleParticipationEnabled;
     CDUnknownBlockType _isSelectedCallback;
     CDUnknownBlockType _selectionHandler;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic, getter=isFlexibleParticipationEnabled) _Bool flexibleParticipationEnabled; // @synthesize flexibleParticipationEnabled=_flexibleParticipationEnabled;
 @property(copy, nonatomic) CDUnknownBlockType selectionHandler; // @synthesize selectionHandler=_selectionHandler;
 @property(copy, nonatomic) CDUnknownBlockType isSelectedCallback; // @synthesize isSelectedCallback=_isSelectedCallback;
 - (double)dataViewController:(id)arg1 tableViewHeightForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
 - (id)dataViewController:(id)arg1 tableViewCellForItem:(id)arg2 withOptions:(id)arg3 atIndexPath:(id)arg4;
-- (id)initWithIsSelectedCallback:(CDUnknownBlockType)arg1 selectionHandler:(CDUnknownBlockType)arg2;
+- (id)initWithFlexibleParticipationEnabled:(_Bool)arg1 isSelectedCallback:(CDUnknownBlockType)arg2 selectionHandler:(CDUnknownBlockType)arg3;
 
 @end
 

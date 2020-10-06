@@ -12,47 +12,30 @@
 
 + (id)colorWithHexString:(id)arg1;
 + (id)colorWithRGBHex:(unsigned int)arg1;
-+ (_Bool)showFocalStatusWhileLoadingEnabled;
-+ (_Bool)selectedStateTapExtendedSendReplyButtonNoOpEnabled;
-+ (_Bool)selectedStateTapInlineActionsViewNoOpEnabled;
-+ (_Bool)selectedStateTapInlineReplyViewNoOpEnabled;
-+ (_Bool)maximumIndentationSentWithCursorsEnabled;
-+ (_Bool)emphasizedConnectorLinesEnabled;
 + (double)inlineActionRightMargin;
-+ (_Bool)inlineActionsVerticallyAligned;
 + (double)selectedStateShadowOffsetHeight;
 + (double)selectedStateShadowOffsetWidth;
 + (double)selectedStateStrokeWidth;
 + (double)selectedStateShadowOpacity;
 + (double)selectedStateShadowRadius;
 + (_Bool)longPressCopyForSelectedStateOnly;
-+ (_Bool)floatingReplyBarHiddenForSelectedInlineReplyBar;
 + (_Bool)replyInlineActionFocusesInTwoSteps;
-+ (_Bool)replyInlineActionFocusesInlineReply;
 + (_Bool)assertOnDuplicateItems;
-+ (_Bool)enableConnectorLinesToSelectedStateContainer;
 + (_Bool)disableRootAttachedThread;
-+ (_Bool)focalIsInitiallySelected;
 + (_Bool)selectedAnimationAlwaysKeepFullTweetOnscreen;
 + (_Bool)selectedAnimationScrollTextStable;
 + (_Bool)tapToCollapseEnabled;
 + (_Bool)tweetTextSelectionEnabled;
 + (_Bool)showOverflowButtonsOnTombstones;
-+ (_Bool)conversationOverflowIncludedInGQLQueryEnabled;
-+ (_Bool)alwaysShowAQCursors;
-+ (_Bool)alwaysShowLQCursors;
 + (_Bool)showMoreGrayThemeEnabled;
 + (_Bool)showMoreExpandedHitTestingEnabled;
 + (_Bool)showMoreCoalescingDebugLabelsEnabled;
 + (long long)showMoreCoalescingLoadLimit;
 + (_Bool)showMoreCoalescingEnabled;
-+ (_Bool)conversationThreadingCollapseEnabled;
++ (_Bool)collapseUniformChevronColorEnabled;
 + (id)connectorEmphasisColorDark;
 + (id)connectorEmphasisColor;
 + (_Bool)connectorEmphasisCustomColorsEnabled;
-+ (_Bool)connectorEmphasisDirectDescendentsOnly;
-+ (_Bool)connectorEmphasisDirectAncestorOnly;
-+ (_Bool)connectorEmphasisInBlueEnabled;
 
 @end
 

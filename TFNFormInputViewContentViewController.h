@@ -6,28 +6,21 @@
 
 #import <TFNUI/TFNViewController.h>
 
-#import <T1Twitter/TFNModalSheetViewControllerLayoutDelegate-Protocol.h>
+@class UIView;
 
-@class NSString, UIView;
-
-@interface TFNFormInputViewContentViewController : TFNViewController <TFNModalSheetViewControllerLayoutDelegate>
+@interface TFNFormInputViewContentViewController : TFNViewController
 {
-    struct CGSize _intrinsicSize;
     UIView *_inputView;
+    CDUnknownBlockType _willLoseFocusCallback;
 }
 
-+ (id)popoverForInputView:(id)arg1 sourceView:(id)arg2;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType willLoseFocusCallback; // @synthesize willLoseFocusCallback=_willLoseFocusCallback;
 @property(readonly, nonatomic) UIView *inputView; // @synthesize inputView=_inputView;
-- (double)preferredHeightForModalSheetViewController:(id)arg1 modalContentViewVisibleEdgeInsets:(struct UIEdgeInsets)arg2;
-- (void)viewDidLoad;
+- (void)resignFocus;
+- (void)_tfn_didTapOutsideContent:(id)arg1;
+- (void)pinContentToHostController:(id)arg1 hostCell:(id)arg2;
 - (id)initWithInputView:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

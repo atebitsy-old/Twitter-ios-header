@@ -26,12 +26,14 @@
     id <T1UpdateIndicatorDelegate> _delegate;
     TFNDataViewController<T1UpdateIndicatorDelegate> *_controller;
     NSTimer *_displayTimer;
+    unsigned long long _displayLocation;
     NSMutableArray *_contentNotifications;
 }
 
-+ (id)_pillControlForContentNotification:(id)arg1 imagePipeline:(id)arg2;
++ (id)_pillControlForContentNotification:(id)arg1 imagePipeline:(id)arg2 getDisplayLocation:(out unsigned long long *)arg3;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *contentNotifications; // @synthesize contentNotifications=_contentNotifications;
+@property(nonatomic) unsigned long long displayLocation; // @synthesize displayLocation=_displayLocation;
 @property(retain, nonatomic) NSTimer *displayTimer; // @synthesize displayTimer=_displayTimer;
 @property(nonatomic) __weak TFNDataViewController<T1UpdateIndicatorDelegate> *controller; // @synthesize controller=_controller;
 @property(nonatomic) __weak id <T1UpdateIndicatorDelegate> delegate; // @synthesize delegate=_delegate;

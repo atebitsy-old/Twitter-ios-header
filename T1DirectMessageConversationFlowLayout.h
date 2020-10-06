@@ -8,24 +8,21 @@
 
 #import <T1Twitter/T1DirectMessageConversationActivityIndicatorLayoutDelegate-Protocol.h>
 
-@class NSString, T1DirectMessageConversationActivityIndicatorLayout, T1DirectMessageConversationTypingIndicatorLayout;
+@class NSString, T1DirectMessageConversationActivityIndicatorLayout;
 
 @interface T1DirectMessageConversationFlowLayout : UICollectionViewFlowLayout <T1DirectMessageConversationActivityIndicatorLayoutDelegate>
 {
     T1DirectMessageConversationActivityIndicatorLayout *_activityIndicator;
-    T1DirectMessageConversationTypingIndicatorLayout *_typingIndicator;
     NSString *_supplementaryViewKind;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSString *supplementaryViewKind; // @synthesize supplementaryViewKind=_supplementaryViewKind;
-@property(retain, nonatomic) T1DirectMessageConversationTypingIndicatorLayout *typingIndicator; // @synthesize typingIndicator=_typingIndicator;
 @property(retain, nonatomic) T1DirectMessageConversationActivityIndicatorLayout *activityIndicator; // @synthesize activityIndicator=_activityIndicator;
 - (_Bool)_shouldShowTypingIndicator;
 - (_Bool)_shouldShowLoadTopActivityIndicator;
 - (_Bool)activityIndicatorLayoutShouldShowLoadTopActivityIndicator:(id)arg1;
 - (double)widthForActivityIndicatorLayout:(id)arg1;
-- (id)layoutAttributesForSupplementaryViewOfKind:(id)arg1 atIndexPath:(id)arg2;
 - (id)layoutAttributesForDecorationViewOfKind:(id)arg1 atIndexPath:(id)arg2;
 - (id)layoutAttributesForElementsInRect:(struct CGRect)arg1;
 @property(readonly, nonatomic) struct UIEdgeInsets collectionViewInsets;

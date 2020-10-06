@@ -27,9 +27,8 @@
 - (void).cxx_destruct;
 - (id)init;
 - (void)didRemoveAccount:(id)arg1;
-- (_Bool)isLatestRankingModeActiveForListID:(long long)arg1 memberCount:(long long)arg2;
-- (void)setIsLatestRankingModeActive:(_Bool)arg1 forListID:(long long)arg2 andPersistData:(_Bool)arg3;
 - (void)unarchiveSphereViewModelsWithCompletion:(CDUnknownBlockType)arg1;
+- (void)archivePinnedListIDs:(id)arg1;
 - (void)archiveSphereViewModels:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)loadInitialPinnedListModels;
 - (id)initWithAccount:(id)arg1;

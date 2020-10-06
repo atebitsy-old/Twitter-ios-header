@@ -19,7 +19,7 @@
     _Bool _lowQuality;
     _Bool _notificationsDisabled;
     _Bool _mentionNotificationsDisabled;
-    _Bool _trustedPending;
+    _Bool _muted;
     _Bool _hasMoreEntries;
     _Bool _readOnly;
     _Bool _partial;
@@ -79,7 +79,6 @@
 @property(nonatomic, getter=isReadOnly) _Bool readOnly; // @synthesize readOnly=_readOnly;
 @property(nonatomic) _Bool hasMoreEntries; // @synthesize hasMoreEntries=_hasMoreEntries;
 @property(retain, nonatomic) TFNDirectMessageComposition *composition; // @synthesize composition=_composition;
-@property(nonatomic) _Bool trustedPending; // @synthesize trustedPending=_trustedPending;
 @property(nonatomic) long long minEntryID; // @synthesize minEntryID=_minEntryID;
 @property(nonatomic) __weak TFNDirectMessageInbox *inbox; // @synthesize inbox=_inbox;
 @property(retain, nonatomic) TFNDirectMessageModel *directMessageModel; // @synthesize directMessageModel=_directMessageModel;
@@ -99,6 +98,7 @@
 - (void)assimilateCursor:(id)arg1;
 - (void)assimilateConversation:(id)arg1;
 - (void)_postTrustStateChanged;
+@property(nonatomic, getter=isMuted) _Bool muted; // @synthesize muted=_muted;
 @property(nonatomic, getter=isTrusted) _Bool trusted; // @synthesize trusted=_trusted;
 @property(retain, nonatomic) id <TFNDirectMessageConversationSocialProof> socialProof; // @synthesize socialProof=_socialProof;
 - (void)removeParticipants:(id)arg1;

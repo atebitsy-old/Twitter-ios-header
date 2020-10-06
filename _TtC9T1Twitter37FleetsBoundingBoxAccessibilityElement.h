@@ -17,6 +17,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: boundingBox
     // Error parsing type: , name: canvasSize
     // Error parsing type: , name: containerView
+    // Error parsing type: , name: fleetATweetStatus
+    // Error parsing type: , name: account
 }
 
 - (void).cxx_destruct;

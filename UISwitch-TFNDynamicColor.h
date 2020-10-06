@@ -6,10 +6,25 @@
 
 #import <UIKit/UISwitch.h>
 
-@class UIColor;
+#import <TFNUI/TFNMenuSupport-Protocol.h>
 
-@interface UISwitch (TFNDynamicColor)
+@class NSString, TFNMenuCompatibleControl, UIColor;
+
+@interface UISwitch (TFNDynamicColor) <TFNMenuSupport>
 + (_Bool)tfn_defaultShouldFlipForRightToLeftTransform;
 @property(retain, nonatomic) UIColor *tfn_onTintColor;
+- (void)_tfn_populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
+- (void)populateMenuWithActionItems:(id)arg1;
+- (void)populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
+- (_Bool)isPreparedToDisplayMenuOnPrimaryAction;
+- (void)prepareToDisplayMenuOnPrimaryAction;
+@property(nonatomic) _Bool hasSelectedMenuItem;
+@property(retain, nonatomic) TFNMenuCompatibleControl *menuControl;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 @end
 

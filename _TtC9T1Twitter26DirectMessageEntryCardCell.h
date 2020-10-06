@@ -12,6 +12,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter26DirectMessageEntryCardCell : T1DirectMessageEntryBaseCell
 {
+    // Error parsing type: , name: tappableHighlightView
     // Error parsing type: , name: cardDelegate
     // Error parsing type: , name: unifiedCardDelegate
     // Error parsing type: , name: cardContainerView

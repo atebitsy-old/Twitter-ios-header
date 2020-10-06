@@ -6,7 +6,7 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSArray, NSDictionary, NSNumber, NSString;
+@class NSArray, NSDictionary, NSNumber, NSSet, NSString;
 
 @protocol TFNTwitterFeatureSwitches <NSObject>
 - (NSDictionary *)rawFeatureSwitchesDictionary;
@@ -18,6 +18,7 @@
 - (NSString *)bucketNameForExperimentKey:(NSString *)arg1 honoringLongtermHoldbackKey:(NSString *)arg2;
 - (double)unsafePeekDoubleForKey:(NSString *)arg1;
 - (_Bool)unsafePeekBoolForKey:(NSString *)arg1;
+- (NSSet *)unsafePeekSetForKey:(NSString *)arg1;
 - (NSArray *)unsafePeekArrayForKey:(NSString *)arg1;
 - (NSString *)unsafePeekStringForKey:(NSString *)arg1;
 - (long long)unsafePeekIntegerForKey:(NSString *)arg1;
@@ -33,6 +34,7 @@
 - (void)refreshWithAccountID:(NSString *)arg1 maxStale:(double)arg2 timeout:(double)arg3 completion:(void (^)(_Bool))arg4;
 - (void)refreshWithAccountID:(NSString *)arg1 maxStale:(double)arg2 completion:(void (^)(_Bool))arg3;
 - (id)rawValueForKey:(NSString *)arg1;
+- (NSSet *)setForKey:(NSString *)arg1;
 - (NSArray *)arrayForKey:(NSString *)arg1;
 - (NSString *)stringForKey:(NSString *)arg1;
 - (NSNumber *)numberForKey:(NSString *)arg1;

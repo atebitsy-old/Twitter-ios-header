@@ -180,6 +180,7 @@
 @property(nonatomic, readonly) _Bool hasReplyBadgeIcon;
 @property(nonatomic, readonly) _Bool hasReplyBadge;
 @property(nonatomic, readonly) unsigned long long replyBadgeType;
+@property(nonatomic, readonly) _Bool hasBirdwatchNotes;
 @property(nonatomic, readonly) _Bool hasModeratedReplies;
 @property(nonatomic, readonly) _Bool hasSoftIntervention;
 @property(nonatomic, readonly) _Bool hasForwardPivot;

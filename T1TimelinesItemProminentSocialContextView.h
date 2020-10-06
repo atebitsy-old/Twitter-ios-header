@@ -8,7 +8,7 @@
 
 #import <T1Twitter/TFNPreviewable-Protocol.h>
 
-@class NSString, T1DismissButton, T1TimelinesItemProminentSocialContextViewModel, TFNLegacyButton, TFNTappableHighlightView, UIImageView, UILabel;
+@class NSString, T1DismissButton, T1TimelinesItemProminentSocialContextViewModel, TFNLegacyButton, TFNSolidColorView, TFNTappableHighlightView, UIImageView, UILabel;
 @protocol T1TimelinesItemProminentSocialContextViewDelegate;
 
 @interface T1TimelinesItemProminentSocialContextView : UIView <TFNPreviewable>
@@ -21,6 +21,7 @@
     UILabel *_textLabel;
     UILabel *_subtextLabel;
     UILabel *_midDotLabel;
+    TFNSolidColorView *_bottomSeparatorLine;
     TFNTappableHighlightView *_highlightView;
     T1DismissButton *_caretButton;
     TFNLegacyButton *_followButton;
@@ -33,6 +34,7 @@
 @property(retain, nonatomic) TFNLegacyButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) T1DismissButton *caretButton; // @synthesize caretButton=_caretButton;
 @property(retain, nonatomic) TFNTappableHighlightView *highlightView; // @synthesize highlightView=_highlightView;
+@property(retain, nonatomic) TFNSolidColorView *bottomSeparatorLine; // @synthesize bottomSeparatorLine=_bottomSeparatorLine;
 @property(retain, nonatomic) UILabel *midDotLabel; // @synthesize midDotLabel=_midDotLabel;
 @property(retain, nonatomic) UILabel *subtextLabel; // @synthesize subtextLabel=_subtextLabel;
 @property(retain, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;

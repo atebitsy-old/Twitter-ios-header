@@ -13,6 +13,7 @@
 + (struct CGRect)imageTransitionViewController:(id)arg1 previewImageHostViewFrameInWindow:(id)arg2 forObject:(id)arg3;
 + (void)setPreviewImageHidden:(_Bool)arg1 forImageTransitionViewController:(id)arg2 object:(id)arg3;
 + (struct CGRect)imageTransitionViewController:(id)arg1 previewImageFrameInWindow:(id)arg2 forObject:(id)arg3;
++ (void)_t1_saveVisitedLinkURLIfNeededForDestination:(id)arg1 status:(id)arg2 account:(id)arg3;
 + (void)_t1_scribeActionForDestination:(id)arg1 scribeContext:(id)arg2 account:(id)arg3 result:(id)arg4;
 + (id)_t1_itemUniquelyIdentifyingPlayerForPresentingViewController:(id)arg1 presentingCell:(id)arg2;
 + (void)_t1_openDeeplinkOrPresentDockedVideoAppStoreViewControllerForDestination:(id)arg1 componentViewEvent:(id)arg2 presentingViewController:(id)arg3 account:(id)arg4 sourceStatus:(id)arg5 promotedContent:(id)arg6 promotedLoggingBlock:(CDUnknownBlockType)arg7 completion:(CDUnknownBlockType)arg8;

@@ -75,6 +75,7 @@
 @property(readonly, nonatomic) id <TFNPickableValue> pickedValue;
 @property(readonly, nonatomic) _Bool canPickMultipleValues;
 - (void)pickerViewController:(id)arg1 didPickValue:(id)arg2 inSectionAtIndex:(unsigned long long)arg3 willConfirm:(_Bool)arg4 willDismiss:(_Bool)arg5;
+- (id)_t1_viewForDatePickerVisible;
 - (void)update:(_Bool)arg1;
 - (void)profileBirthdayDisplayFormViewControllerWillChange:(id)arg1;
 - (struct CGSize)constraintSizeForProfileBirthdayDisplayFormViewController:(id)arg1;

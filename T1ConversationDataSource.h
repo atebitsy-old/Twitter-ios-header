@@ -104,6 +104,7 @@
 - (void)_t1_notifyDelegate;
 - (void)_t1_didUpdateTree;
 - (void)errorItemTapped:(id)arg1;
+@property(readonly, nonatomic) _Bool isEmptyConversationTimeline;
 @property(readonly, nonatomic) _Bool isLoading;
 - (_Bool)cursorIsLoading:(id)arg1;
 - (_Bool)loadMoreAncestorsIfNeeded;

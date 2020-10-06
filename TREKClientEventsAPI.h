@@ -14,7 +14,6 @@
 + (void)handleTapEvent:(id)arg1 tapCount:(long long)arg2 touchCount:(long long)arg3;
 + (void)handlePullToRefreshEvent:(id)arg1;
 + (void)handleSwipeEvent:(id)arg1 direction:(int)arg2;
-+ (void)handleClickEvent:(id)arg1;
 + (void)setupWithEventProcessingPipeline:(id)arg1;
 - (void).cxx_destruct;
 - (id)init;

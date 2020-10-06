@@ -15,7 +15,7 @@
 + (void)TransformBroadcastsIntoGuestRooms:(id)arg1 LoggedInUser:(id)arg2 Completion:(CDUnknownBlockType)arg3;
 + (void)GetBroadcastsWithChannelID:(id)arg1 LoggedInUser:(id)arg2 CleanupOldBroadcasts:(_Bool)arg3 Completion:(CDUnknownBlockType)arg4;
 + (void)GetGuestRoomWithID:(id)arg1 LoggedInUser:(id)arg2 Completion:(CDUnknownBlockType)arg3;
-+ (void)GetGuestRoomsWithMode:(unsigned long long)arg1 LoggedInUser:(id)arg2 Completion:(CDUnknownBlockType)arg3;
++ (void)GetGuestRoomsWithMode:(unsigned long long)arg1 ChannelID:(id)arg2 LoggedInUser:(id)arg3 Completion:(CDUnknownBlockType)arg4;
 
 @end
 

@@ -11,6 +11,7 @@
 @interface TFSFeatureSwitchesValue : NSObject
 {
     id _value;
+    id _computedValue;
     NSSet *_impressions;
 }
 
@@ -20,6 +21,7 @@
 - (_Bool)isEqualToValue:(id)arg1;
 - (id)rawValue;
 - (id)dictionaryValue;
+- (id)setValue;
 - (id)arrayValue;
 - (id)stringValue;
 - (id)numberValue;

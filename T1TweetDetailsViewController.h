@@ -248,8 +248,6 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)_t1_setupFromStatus;
-- (void)viewDidFullyDisappear:(_Bool)arg1;
-- (void)viewDidFullyAppear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)tfn_previewingStateDidChange;
 - (void)viewWillAppear:(_Bool)arg1;

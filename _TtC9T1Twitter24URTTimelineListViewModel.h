@@ -12,6 +12,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: entryID
     // Error parsing type: , name: list
     // Error parsing type: , name: listDisplayType
+    // Error parsing type: , name: isMember
     // Error parsing type: , name: clientEventInfo
     // Error parsing type: , name: feedbackContext
 }

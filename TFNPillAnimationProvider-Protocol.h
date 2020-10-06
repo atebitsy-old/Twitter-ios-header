@@ -9,9 +9,9 @@
 @class TFNPillControl, UIView;
 
 @protocol TFNPillAnimationProvider <NSObject>
-@property(nonatomic) _Bool shouldSuppressTransformAnimation;
 - (void)resetAllAnimationsOnPillControl:(TFNPillControl *)arg1;
-- (void)hidePillControl:(TFNPillControl *)arg1 pillTapped:(_Bool)arg2 completion:(void (^)(_Bool))arg3;
-- (void)presentPillControl:(TFNPillControl *)arg1 fromView:(UIView *)arg2 withOffset:(double)arg3 autoHideInterval:(double)arg4;
+- (void)pillControlIntrinsicContentSizeDidChange:(TFNPillControl *)arg1;
+- (void)hidePillControl:(TFNPillControl *)arg1 animated:(_Bool)arg2 pillTapped:(_Bool)arg3 completion:(void (^)(_Bool))arg4;
+- (void)presentPillControl:(TFNPillControl *)arg1 fromView:(UIView *)arg2 animated:(_Bool)arg3 withOffset:(double)arg4 autoHideInterval:(double)arg5;
 @end
 

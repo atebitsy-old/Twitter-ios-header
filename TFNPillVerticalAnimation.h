@@ -8,53 +8,38 @@
 
 #import <TFNUI/TFNPillAnimationProvider-Protocol.h>
 
-@class NSString, TFNPillControl, UIColor;
+@class NSString, TFNPillControl;
 
 @interface TFNPillVerticalAnimation : NSObject <TFNPillAnimationProvider>
 {
-    _Bool _shouldSuppressTransformAnimation;
     _Bool _hasDismissScaleAnimation;
     _Bool _isDismissingPill;
     double _textPromptInterval;
     TFNPillControl *_pillControl;
-    UIColor *_startingBackgroundColor;
     unsigned long long _animationDirection;
     struct CGPoint _startingCenter;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) unsigned long long animationDirection; // @synthesize animationDirection=_animationDirection;
-@property(retain, nonatomic) UIColor *startingBackgroundColor; // @synthesize startingBackgroundColor=_startingBackgroundColor;
 @property(nonatomic) _Bool isDismissingPill; // @synthesize isDismissingPill=_isDismissingPill;
 @property(nonatomic) __weak TFNPillControl *pillControl; // @synthesize pillControl=_pillControl;
 @property(nonatomic) struct CGPoint startingCenter; // @synthesize startingCenter=_startingCenter;
 @property(nonatomic) double textPromptInterval; // @synthesize textPromptInterval=_textPromptInterval;
 @property(nonatomic) _Bool hasDismissScaleAnimation; // @synthesize hasDismissScaleAnimation=_hasDismissScaleAnimation;
-@property(nonatomic) _Bool shouldSuppressTransformAnimation; // @synthesize shouldSuppressTransformAnimation=_shouldSuppressTransformAnimation;
-- (id)_arrowCenterAnimationWithStartingWidth:(double)arg1;
-- (id)_arrowRotationAnimation;
-- (id)_arrowOpacityAnimation;
-- (id)_labelCenterAnimationWithStartingWidth:(double)arg1;
-- (id)_labelScaleAnimation;
-- (id)_labelOpacityAnimation;
 - (id)_pillOpacityAnimation;
 - (id)_pillDismissMoveAnimation;
 - (id)_pillDismissScaleAnimation;
-- (id)_pillWidthAnimation;
-- (id)_pillColorAnimation;
 - (id)_pillPresentAnimationWithOffset:(double)arg1;
-- (id)_yPositionAnimationWithFrames:(const CDStruct_56705b1e *)arg1 numberOfFrames:(unsigned long long)arg2 duration:(double)arg3 layer:(id)arg4 offset:(double)arg5;
-- (id)_widthAnimationWithFrames:(const CDStruct_56705b1e *)arg1 numberOfFrames:(unsigned long long)arg2 duration:(double)arg3 layer:(id)arg4;
-- (id)_transformAnimationWithFrames:(const CDStruct_56705b1e *)arg1 numberOfFrames:(unsigned long long)arg2 duration:(double)arg3 layer:(id)arg4;
-- (id)_opacityAnimationWithFrames:(const CDStruct_56705b1e *)arg1 numberOfFrames:(unsigned long long)arg2 duration:(double)arg3 layer:(id)arg4;
-- (id)_centerAnimationWithFrames:(const CDStruct_56705b1e *)arg1 numberOfFrames:(unsigned long long)arg2 duration:(double)arg3 layer:(id)arg4 startingWidth:(double)arg5;
-- (id)_colorAnimationWithFrames:(const CDStruct_56705b1e *)arg1 numberOfFrames:(unsigned long long)arg2 duration:(double)arg3 layer:(id)arg4;
+- (id)_yPositionAnimationWithFrames:(const CDStruct_168b635b *)arg1 numberOfFrames:(unsigned long long)arg2 duration:(double)arg3 layer:(id)arg4 offset:(double)arg5;
+- (id)_transformAnimationWithFrames:(const CDStruct_168b635b *)arg1 numberOfFrames:(unsigned long long)arg2 duration:(double)arg3 layer:(id)arg4;
+- (id)_opacityAnimationWithFrames:(const CDStruct_168b635b *)arg1 numberOfFrames:(unsigned long long)arg2 duration:(double)arg3 layer:(id)arg4;
 - (id)_animationGroupWithAnimations:(id)arg1 duration:(double)arg2;
 - (id)_keyFrameAnimationWithKeyPath:(id)arg1 values:(id)arg2 keyTimes:(id)arg3 duration:(double)arg4;
-- (void)_performArrowAnimation;
 - (void)resetAllAnimationsOnPillControl:(id)arg1;
-- (void)hidePillControl:(id)arg1 pillTapped:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)presentPillControl:(id)arg1 fromView:(id)arg2 withOffset:(double)arg3 autoHideInterval:(double)arg4;
+- (void)pillControlIntrinsicContentSizeDidChange:(id)arg1;
+- (void)hidePillControl:(id)arg1 animated:(_Bool)arg2 pillTapped:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)presentPillControl:(id)arg1 fromView:(id)arg2 animated:(_Bool)arg3 withOffset:(double)arg4 autoHideInterval:(double)arg5;
 - (void)_autoHideAfterDelay:(double)arg1;
 @property(readonly, nonatomic) double dismissDuration;
 @property(readonly, nonatomic) double dropDuration;

@@ -6,7 +6,7 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSArray, T1PromptImageSpec, T1PromptTextSpec, UIImage;
+@class NSArray, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, UIImage;
 
 @protocol T1PromptDataSource <NSObject>
 
@@ -18,6 +18,7 @@
 @property(readonly, nonatomic) _Bool showDismissOption;
 @property(readonly, nonatomic) NSArray *buttonSpecs;
 @property(readonly, nonatomic) T1PromptTextSpec *detailTextSpec;
+@property(readonly, nonatomic) T1PromptContentViewSpec *contentViewSpec;
 @property(readonly, nonatomic) T1PromptTextSpec *secondaryTextSpec;
 @property(readonly, nonatomic) T1PromptTextSpec *primaryTextSpec;
 @property(readonly, nonatomic) long long promptLayout;

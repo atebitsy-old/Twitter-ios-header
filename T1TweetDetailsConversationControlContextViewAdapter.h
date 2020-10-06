@@ -11,7 +11,6 @@
 }
 
 - (id)_t1_richTextConversationEducationText:(id)arg1;
-- (id)_t1_textForViewModel:(id)arg1;
 - (void)_t1_updateView:(id)arg1 forViewModel:(id)arg2;
 - (_Bool)isLayoutState:(id)arg1 validForViewModel:(id)arg2 layoutMetrics:(id)arg3;
 - (id)layoutStateForViewModel:(id)arg1 layoutMetrics:(id)arg2;

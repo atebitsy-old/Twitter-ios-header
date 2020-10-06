@@ -8,7 +8,7 @@
 
 #import <T1Twitter/UIGestureRecognizerDelegate-Protocol.h>
 
-@class NSString, T1AnimatedGIFImageView, TFNAnimatedGifImage, TFNFoundMediaFetchOperation, TFSTwitterFoundMediaObject, TIPImagePipeline, UIColor, UILongPressGestureRecognizer;
+@class NSString, T1AnimatedGIFImageView, TFNAnimatedGifImage, TFNFoundMediaFetchOperation, TFNLongPressGestureRecognizer, TFSTwitterFoundMediaObject, TIPImagePipeline, UIColor;
 @protocol T1FoundMediaCollectionViewCellDelegate;
 
 @interface T1FoundMediaCollectionViewCell : TFNCollectionViewCell <UIGestureRecognizerDelegate>
@@ -18,7 +18,7 @@
     TFSTwitterFoundMediaObject *_foundMediaObject;
     T1AnimatedGIFImageView *_animatedGIFImageView;
     TIPImagePipeline *_imagePipeline;
-    UILongPressGestureRecognizer *_longPressGestureRecognizer;
+    TFNLongPressGestureRecognizer *_longPressGestureRecognizer;
     TFNFoundMediaFetchOperation *_fetchOperation;
     TFNAnimatedGifImage *_animatedGIFImage;
     TFNAnimatedGifImage *_stillAnimatedGIFImage;
@@ -28,7 +28,7 @@
 @property(retain, nonatomic) TFNAnimatedGifImage *stillAnimatedGIFImage; // @synthesize stillAnimatedGIFImage=_stillAnimatedGIFImage;
 @property(retain, nonatomic) TFNAnimatedGifImage *animatedGIFImage; // @synthesize animatedGIFImage=_animatedGIFImage;
 @property(retain, nonatomic) TFNFoundMediaFetchOperation *fetchOperation; // @synthesize fetchOperation=_fetchOperation;
-@property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
+@property(readonly, nonatomic) TFNLongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
 @property(retain, nonatomic) TIPImagePipeline *imagePipeline; // @synthesize imagePipeline=_imagePipeline;
 @property(readonly, nonatomic) T1AnimatedGIFImageView *animatedGIFImageView; // @synthesize animatedGIFImageView=_animatedGIFImageView;
 @property(nonatomic, getter=isAutoplayEnabled) _Bool autoplayEnabled; // @synthesize autoplayEnabled=_autoplayEnabled;

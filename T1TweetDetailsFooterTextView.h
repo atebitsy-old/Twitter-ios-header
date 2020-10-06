@@ -23,10 +23,12 @@
     T1TweetDetailsFooterItemSourceRange *_activeSourceRange;
     TFNAttributedTextView *_textView;
     TFNLegacyButton *_hiddenRepliesButton;
+    TFNLegacyButton *_birdwatchButton;
 }
 
 + (struct CGSize)sizeForViewModel:(id)arg1 footerItem:(id)arg2 maximumWidth:(double)arg3;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) TFNLegacyButton *birdwatchButton; // @synthesize birdwatchButton=_birdwatchButton;
 @property(retain, nonatomic) TFNLegacyButton *hiddenRepliesButton; // @synthesize hiddenRepliesButton=_hiddenRepliesButton;
 @property(retain, nonatomic) TFNAttributedTextView *textView; // @synthesize textView=_textView;
 @property(retain, nonatomic) T1TweetDetailsFooterItemSourceRange *activeSourceRange; // @synthesize activeSourceRange=_activeSourceRange;
@@ -38,6 +40,7 @@
 @property(nonatomic) __weak id <T1TweetDetailsFooterTextViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 - (void)attributedTextView:(id)arg1 didTapRange:(id)arg2 rect:(struct CGRect)arg3;
+- (void)_t1_didTapHiddenBirdwatchButton:(id)arg1;
 - (void)_t1_didTapHiddenRepliesButton:(id)arg1;
 - (void)layoutSubviews;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;

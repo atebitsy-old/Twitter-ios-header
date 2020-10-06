@@ -16,7 +16,7 @@
     UIImageView *_iconView;
 }
 
-+ (struct CGSize)sizeForConversationControlType:(unsigned long long)arg1 fitSize:(struct CGSize)arg2 numberOfLines:(unsigned long long)arg3;
++ (struct CGSize)sizeForConversationControlType:(unsigned long long)arg1 fitSize:(struct CGSize)arg2 numberOfLines:(unsigned long long)arg3 flexibleParticipationEnabled:(_Bool)arg4;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *iconView; // @synthesize iconView=_iconView;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;

@@ -28,11 +28,11 @@
 - (void)tfn_dismissAnimated:(_Bool)arg1;
 - (void)tfn_presentFromViewController:(id)arg1 animated:(_Bool)arg2 sourceInfo:(id)arg3;
 - (void)_tfn_callCompletionOnce:(unsigned long long)arg1 cancelled:(_Bool)arg2;
-- (id)initWithInitialConversationControlType:(unsigned long long)arg1 action:(CDUnknownBlockType)arg2;
-- (id)_t1_createAdapterForInitialConversationControlType:(unsigned long long)arg1;
+- (id)initWithInitialConversationControlType:(unsigned long long)arg1 flexibleParticipationEnabled:(_Bool)arg2 action:(CDUnknownBlockType)arg3;
+- (id)_t1_createAdapterForInitialConversationControlType:(unsigned long long)arg1 flexibleParticipationEnabled:(_Bool)arg2;
 - (id)_t1_createConversationControlSelectionItemActionForType:(unsigned long long)arg1;
-- (void)_t1_selectConversationControlType:(unsigned long long)arg1 initialSetting:(_Bool)arg2;
-- (void)_t1_selectConversationControlType:(unsigned long long)arg1;
+- (void)_t1_selectConversationControlType:(unsigned long long)arg1 initialSetting:(_Bool)arg2 flexibleParticipationEnabled:(_Bool)arg3;
+- (void)_t1_selectConversationControlType:(unsigned long long)arg1 flexibleParticipationEnabled:(_Bool)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

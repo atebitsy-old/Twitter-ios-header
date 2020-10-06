@@ -12,8 +12,7 @@
 
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)setCustomAvatarSize:(id)arg1;
-- (void)setCustomTrailingContentAreaWidth:(id)arg1;
-- (void)setCustomLeadingContentAreaWidth:(id)arg1;
+- (void)setCustomAccessoryWidth:(id)arg1;
 - (void)setCustomHorizontalSafeAreaInsets:(id)arg1;
 - (void)setCustomContentEdgeInsets:(id)arg1;
 - (void)setCustomDisplayAreaEdgeInsets:(id)arg1;

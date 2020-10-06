@@ -6,40 +6,45 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, TFNTwitterAccount, TFNTwitterStatus, UIColor;
+@class NSString, UIColor;
 
 @interface T1NudgeItem : NSObject
 {
+    _Bool _contextViewShouldFillWidth;
     long long _style;
     NSString *_iconName;
     NSString *_condensedTitle;
     NSString *_title;
     NSString *_subtitle;
-    TFNTwitterStatus *_status;
-    TFNTwitterAccount *_account;
+    CDUnknownBlockType _contextViewBlock;
+    CDUnknownBlockType _contextAction;
     double _contentVerticalSpacing;
     UIColor *_backgroundColor;
     UIColor *_iconImageColor;
+    UIColor *_iconImageBackgroundColor;
     struct CGSize _iconImageSize;
+    struct CGSize _iconImageBackgroundSize;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIColor *iconImageBackgroundColor; // @synthesize iconImageBackgroundColor=_iconImageBackgroundColor;
+@property(nonatomic) struct CGSize iconImageBackgroundSize; // @synthesize iconImageBackgroundSize=_iconImageBackgroundSize;
 @property(retain, nonatomic) UIColor *iconImageColor; // @synthesize iconImageColor=_iconImageColor;
 @property(nonatomic) struct CGSize iconImageSize; // @synthesize iconImageSize=_iconImageSize;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
+@property(nonatomic) _Bool contextViewShouldFillWidth; // @synthesize contextViewShouldFillWidth=_contextViewShouldFillWidth;
 @property(nonatomic) double contentVerticalSpacing; // @synthesize contentVerticalSpacing=_contentVerticalSpacing;
-@property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
-@property(retain, nonatomic) TFNTwitterStatus *status; // @synthesize status=_status;
+@property(copy, nonatomic) CDUnknownBlockType contextAction; // @synthesize contextAction=_contextAction;
+@property(copy, nonatomic) CDUnknownBlockType contextViewBlock; // @synthesize contextViewBlock=_contextViewBlock;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) NSString *condensedTitle; // @synthesize condensedTitle=_condensedTitle;
 @property(copy, nonatomic) NSString *iconName; // @synthesize iconName=_iconName;
 @property(nonatomic) long long style; // @synthesize style=_style;
-- (id)initWithIconName:(id)arg1 condensedTitle:(id)arg2 title:(id)arg3 subtitle:(id)arg4 status:(id)arg5 account:(id)arg6 style:(long long)arg7;
-- (id)initWithIconName:(id)arg1 title:(id)arg2 subtitle:(id)arg3 status:(id)arg4 account:(id)arg5;
-- (id)initWithTitle:(id)arg1 subtitle:(id)arg2 status:(id)arg3 account:(id)arg4;
+- (id)initWithIconName:(id)arg1 condensedTitle:(id)arg2 title:(id)arg3 subtitle:(id)arg4 style:(long long)arg5;
 - (id)initWithIconName:(id)arg1 title:(id)arg2 subtitle:(id)arg3;
 - (id)initWithIconName:(id)arg1 title:(id)arg2;
+- (id)initWithTitle:(id)arg1 subtitle:(id)arg2;
 - (id)initWithIconName:(id)arg1 condensedTitle:(id)arg2;
 
 @end

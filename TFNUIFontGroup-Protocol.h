@@ -9,15 +9,17 @@
 @class UIFont;
 
 @protocol TFNUIFontGroup <NSObject>
-@property(readonly, nonatomic) UIFont *fixedLargeBoldFont;
-@property(readonly, nonatomic) UIFont *fixedNormalBoldFont;
-@property(readonly, nonatomic) UIFont *fixedSmallBoldFont;
-@property(readonly, nonatomic) UIFont *fixedSmallFont;
+@property(readonly, nonatomic) UIFont *searchTextFieldFont;
 @property(readonly, nonatomic) UIFont *tabBadgeFont;
+@property(readonly, nonatomic) UIFont *pillControlFont;
 @property(readonly, nonatomic) UIFont *navigationButtonFont;
 @property(readonly, nonatomic) UIFont *navigationSubtitleFont;
 @property(readonly, nonatomic) UIFont *navigationTitleFont;
 @property(readonly, nonatomic) UIFont *contentTitleFont;
+@property(readonly, nonatomic) UIFont *fixedLargeBoldFont;
+@property(readonly, nonatomic) UIFont *fixedNormalBoldFont;
+@property(readonly, nonatomic) UIFont *fixedSmallBoldFont;
+@property(readonly, nonatomic) UIFont *fixedSmallFont;
 @property(readonly, nonatomic) UIFont *largeBoldFont;
 @property(readonly, nonatomic) UIFont *largeFont;
 @property(readonly, nonatomic) UIFont *smallFont;

@@ -128,7 +128,6 @@
 - (_Bool)tfn_prefersNavigationBarShadowHidden;
 - (void)tfn_contentScrollViewWillBeginDragging:(id)arg1;
 - (unsigned long long)supportedInterfaceOrientations;
-- (void)viewDidFullyDisappear:(_Bool)arg1;
 - (void)viewWillFullyDisappear:(_Bool)arg1;
 - (void)viewWillFullyAppear:(_Bool)arg1;
 - (void)viewDidLoad;

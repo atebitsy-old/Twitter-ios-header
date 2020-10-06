@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1PromptView-Protocol.h>
 
-@class NSArray, NSString, T1FlexibleLayoutView, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, UIButton, UIImageView, UIScrollView;
+@class NSArray, NSString, T1FlexibleLayoutView, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, UIButton, UIImageView, UIScrollView;
 
 @interface T1OnboardingFullPromptView : UIView <T1PromptView>
 {
@@ -52,6 +52,7 @@
 
 // Remaining properties
 @property(readonly, nonatomic) unsigned long long buttonLayout;
+@property(retain, nonatomic) T1PromptContentViewSpec *contentViewSpec;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) UIButton *dismissButton;

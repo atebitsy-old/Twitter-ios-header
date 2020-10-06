@@ -6,32 +6,41 @@
 
 #import <TFNUI/TFNTableViewCell.h>
 
-@class UIColor, UIImageView, UILabel, UIStackView, UIView;
+@class UIColor, UILabel, UIStackView, UITapGestureRecognizer, UIView;
 
 @interface T1NudgeItemCell : TFNTableViewCell
 {
+    _Bool _contextViewShouldFillWidth;
     double _contentVerticalSpacing;
     UIColor *_nudgeBackgroundColor;
-    UIImageView *_iconImageView;
+    UIView *_iconView;
     UILabel *_titleLabel;
     UILabel *_subtitleLabel;
-    UIView *_cardView;
+    UIView *_contextView;
+    CDUnknownBlockType _contextAction;
     UIView *_nudgeContainerView;
     UIStackView *_expandedStackView;
+    UITapGestureRecognizer *_contextViewTapGesture;
     struct UIEdgeInsets _contentEdgeInsets;
+    struct UIEdgeInsets _containerEdgeInsets;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UITapGestureRecognizer *contextViewTapGesture; // @synthesize contextViewTapGesture=_contextViewTapGesture;
+@property(readonly, nonatomic) struct UIEdgeInsets containerEdgeInsets; // @synthesize containerEdgeInsets=_containerEdgeInsets;
 @property(readonly, nonatomic) struct UIEdgeInsets contentEdgeInsets; // @synthesize contentEdgeInsets=_contentEdgeInsets;
 @property(retain, nonatomic) UIStackView *expandedStackView; // @synthesize expandedStackView=_expandedStackView;
 @property(retain, nonatomic) UIView *nudgeContainerView; // @synthesize nudgeContainerView=_nudgeContainerView;
-@property(retain, nonatomic) UIView *cardView; // @synthesize cardView=_cardView;
+@property(copy, nonatomic) CDUnknownBlockType contextAction; // @synthesize contextAction=_contextAction;
+@property(retain, nonatomic) UIView *contextView; // @synthesize contextView=_contextView;
 @property(retain, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
+@property(retain, nonatomic) UIView *iconView; // @synthesize iconView=_iconView;
 @property(retain, nonatomic) UIColor *nudgeBackgroundColor; // @synthesize nudgeBackgroundColor=_nudgeBackgroundColor;
+@property(nonatomic) _Bool contextViewShouldFillWidth; // @synthesize contextViewShouldFillWidth=_contextViewShouldFillWidth;
 @property(nonatomic) double contentVerticalSpacing; // @synthesize contentVerticalSpacing=_contentVerticalSpacing;
 - (void)_t1_setArrangedSubviews;
+- (void)_t1_contextViewTapped:(id)arg1;
 - (double)_t1_labelPreferredMaxLayoutWidthForSize:(struct CGSize)arg1;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)layoutSubviews;

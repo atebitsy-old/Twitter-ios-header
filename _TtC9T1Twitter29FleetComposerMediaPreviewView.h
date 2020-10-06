@@ -19,6 +19,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: colorExtractionQueue
     // Error parsing type: , name: gifView
     // Error parsing type: , name: guidelineView
+    // Error parsing type: , name: annotationCanvasIsIdle
     // Error parsing type: , name: shouldMuteObserver
     // Error parsing type: , name: mediaProcessingToken
     // Error parsing type: , name: mediaTransform

@@ -14,6 +14,7 @@
     // Error parsing type: , name: $__lazy_storage_$_receiveDMsFromAnyoneEnabled
     // Error parsing type: , name: $__lazy_storage_$_dmReadReceiptsEnabled
     // Error parsing type: , name: $__lazy_storage_$_dmLowQualityFilterEnabled
+    // Error parsing type: , name: $__lazy_storage_$_dmNSFWMediaFilterEnabled
 }
 
 @end

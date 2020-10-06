@@ -8,7 +8,7 @@
 
 #import <TFNUI/TFNTappableView-Protocol.h>
 
-@class NSString, TFNTappableViewHelper, TFNTouchDownGestureRecognizer, UIColor, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class NSString, TFNLongPressGestureRecognizer, TFNTappableViewHelper, TFNTouchDownGestureRecognizer, UIColor, UITapGestureRecognizer;
 
 @interface TFNTappableHighlightView : UIView <TFNTappableView>
 {
@@ -37,7 +37,7 @@
 - (void)setBackgroundColor:(id)arg1;
 - (void)_tfn_didHover;
 @property(readonly, nonatomic) TFNTouchDownGestureRecognizer *touchDownGestureRecognizer;
-@property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property(readonly, nonatomic) TFNLongPressGestureRecognizer *longPressGestureRecognizer;
 @property(readonly, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
 @property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 - (void)setPressedStateDidChangeTarget:(id)arg1 action:(SEL)arg2;

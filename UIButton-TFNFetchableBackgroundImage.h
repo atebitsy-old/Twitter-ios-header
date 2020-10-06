@@ -13,13 +13,15 @@
 
 @interface UIButton (TFNFetchableBackgroundImage) <TIPImageFetchable, TFNMenuSupport>
 @property(retain, nonatomic) UIImage *tip_fetchedImage;
-- (void)tfn_removePointerInteraction;
-- (void)tfn_setupPointerInteractionsWithStyleProvider:(CDUnknownBlockType)arg1;
-@property(nonatomic, getter=tfn_isPointerInteractionEnabled) _Bool tfn_pointerInteractionEnabled;
+- (void)_tfn_populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
 - (void)populateMenuWithActionItems:(id)arg1;
+- (void)populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
 - (_Bool)isPreparedToDisplayMenuOnPrimaryAction;
 - (void)_t1_menuActionTriggered;
 - (void)prepareToDisplayMenuOnPrimaryAction;
+- (void)tfn_removePointerInteraction;
+- (void)tfn_setupPointerInteractionsWithStyleProvider:(CDUnknownBlockType)arg1;
+@property(nonatomic, getter=tfn_isPointerInteractionEnabled) _Bool tfn_pointerInteractionEnabled;
 - (void)tfn_convertToAttributedTitleLinkForState:(unsigned long long)arg1;
 
 // Remaining properties

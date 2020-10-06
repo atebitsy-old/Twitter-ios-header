@@ -12,6 +12,8 @@
 #import <T1Twitter/T1TweetDetailsPresenting-Protocol.h>
 
 @interface T1ConversationContainerViewController (T1Twitter) <T1MediaInlineComposeControllerDelegate, T1TweetDetailsFocalStatusTableRowAdapterDelegate, T1TweetDetailsPresenting, T1ToasterContextDelegate>
+- (_Bool)becomeFirstResponder;
+@property(nonatomic, readonly) _Bool canBecomeFirstResponder;
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (struct CGSize)sizeForChildContentContainer:(id)arg1 withParentContainerSize:(struct CGSize)arg2;

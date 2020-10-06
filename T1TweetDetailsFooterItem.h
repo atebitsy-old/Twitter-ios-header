@@ -14,6 +14,7 @@
     _Bool _includesTopPadding;
     _Bool _showsHiddenRepliesButton;
     _Bool _showsConversationOwnerString;
+    _Bool _showsBirdwatchButton;
     NSString *_timeAgo;
     NSString *_accessibilityTimestamp;
     TFSTwitterPlace *_place;
@@ -24,6 +25,7 @@
 
 + (id)t1_tweetDetailsFooterItemWithViewModel:(id)arg1;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool showsBirdwatchButton; // @synthesize showsBirdwatchButton=_showsBirdwatchButton;
 @property(nonatomic) _Bool showsConversationOwnerString; // @synthesize showsConversationOwnerString=_showsConversationOwnerString;
 @property(nonatomic) _Bool showsHiddenRepliesButton; // @synthesize showsHiddenRepliesButton=_showsHiddenRepliesButton;
 @property(nonatomic) _Bool includesTopPadding; // @synthesize includesTopPadding=_includesTopPadding;

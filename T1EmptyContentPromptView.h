@@ -9,7 +9,7 @@
 #import <T1Twitter/T1PromptView-Protocol.h>
 #import <T1Twitter/TFNLayoutMetricsSizing-Protocol.h>
 
-@class NSArray, NSString, T1PromptButtonSpec, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, UIButton;
+@class NSArray, NSString, T1PromptButtonSpec, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, TFNAttributedTextView, UIButton;
 
 @interface T1EmptyContentPromptView : UIView <TFNLayoutMetricsSizing, T1PromptView>
 {
@@ -40,6 +40,7 @@
 // Remaining properties
 @property(readonly, nonatomic) unsigned long long buttonLayout;
 @property(readonly, nonatomic) NSArray *buttons;
+@property(retain, nonatomic) T1PromptContentViewSpec *contentViewSpec;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(retain, nonatomic) T1PromptTextSpec *detailTextSpec;

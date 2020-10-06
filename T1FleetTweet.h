@@ -17,8 +17,11 @@
 }
 
 - (void).cxx_destruct;
+- (id)_t1_accessibilityLabelForStatus:(id)arg1 layoutMetrics:(id)arg2 account:(id)arg3;
+- (id)_t1_statusViewForStatus:(id)arg1 layoutMetrics:(id)arg2 account:(id)arg3;
 - (unsigned long long)_t1_statusOptionsForStatus:(id)arg1 account:(id)arg2;
 - (void)_t1_renderTweetForStatus:(id)arg1 account:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (id)accessibilityLabel;
 - (void)renderTweetToContext:(CDUnknownBlockType)arg1;
 - (id)initWithStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 layoutMetrics:(id)arg4;
 

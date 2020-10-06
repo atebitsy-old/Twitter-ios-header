@@ -15,15 +15,16 @@
     _Bool _shouldRenderFullBleed;
     _Bool _useDominantColor;
     TFNTwitterUnifiedCardDestinationModel *_destination;
-    TFNTwitterUnifiedCardDominantColorConfig *dominantColorConfig;
+    TFNTwitterUnifiedCardDominantColorConfig *_dominantColorConfig;
 }
 
 + (id)componentWithJSON:(id)arg1 destinationDict:(id)arg2 mediaEntitiesDict:(id)arg3 appStoreData:(id)arg4 promotedContent:(id)arg5 usersDict:(id)arg6;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool useDominantColor; // @synthesize useDominantColor=_useDominantColor;
-@property(readonly, nonatomic) TFNTwitterUnifiedCardDominantColorConfig *dominantColorConfig; // @synthesize dominantColorConfig;
+@property(readonly, nonatomic) TFNTwitterUnifiedCardDominantColorConfig *dominantColorConfig; // @synthesize dominantColorConfig=_dominantColorConfig;
 @property(readonly, nonatomic) _Bool shouldRenderFullBleed; // @synthesize shouldRenderFullBleed=_shouldRenderFullBleed;
 @property(readonly, nonatomic) TFNTwitterUnifiedCardDestinationModel *destination; // @synthesize destination=_destination;
+- (id)copyWithZone:(struct _NSZone *)arg1;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)withButton:(id)arg1;
@@ -32,6 +33,7 @@
 @property(readonly, nonatomic) NSArray *axDestinations;
 - (id)allUsers;
 - (id)withPromotedContent:(id)arg1;
+- (id)withExperimentationConfig:(id)arg1;
 @property(readonly, nonatomic) unsigned long long type;
 - (id)init;
 

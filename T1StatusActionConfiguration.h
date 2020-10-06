@@ -13,6 +13,8 @@
 + (unsigned long long)_t1_statusActionTypesForInlineAction:(unsigned long long)arg1;
 + (unsigned long long)_t1_actionsFromStrings:(id)arg1;
 + (unsigned long long)_t1_disabledActionsForPolicy:(id)arg1 account:(id)arg2;
++ (void)_t1_scribeArticleNudgeActionIfNeeded:(id)arg1 forURLEntities:(id)arg2 status:(id)arg3 account:(id)arg4;
++ (id)eligbleURLEntityForArticleNudgeWithStatus:(id)arg1 account:(id)arg2;
 + (unsigned long long)disabledEngagementReasonForActionType:(unsigned long long)arg1 status:(id)arg2 account:(id)arg3;
 + (unsigned long long)availableActionsForStatus:(id)arg1 account:(id)arg2;
 + (_Bool)areAnyActionsAvailable:(unsigned long long)arg1 forStatus:(id)arg2 account:(id)arg3;

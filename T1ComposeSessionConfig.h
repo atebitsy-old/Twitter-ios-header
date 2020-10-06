@@ -30,6 +30,7 @@
     NSString *_scribePage;
     CDUnknownBlockType _dismissCompletionBlock;
     CDUnknownBlockType _presentCompletionBlock;
+    CDUnknownBlockType _willCompleteComposingBlock;
     long long _source;
     TFNTwitterAccount *_account;
     NSMutableDictionary *_statusForId;
@@ -47,6 +48,7 @@
 @property(readonly, nonatomic) NSMutableDictionary *statusForId; // @synthesize statusForId=_statusForId;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(nonatomic) long long source; // @synthesize source=_source;
+@property(copy, nonatomic) CDUnknownBlockType willCompleteComposingBlock; // @synthesize willCompleteComposingBlock=_willCompleteComposingBlock;
 @property(copy, nonatomic) CDUnknownBlockType presentCompletionBlock; // @synthesize presentCompletionBlock=_presentCompletionBlock;
 @property(copy, nonatomic) CDUnknownBlockType dismissCompletionBlock; // @synthesize dismissCompletionBlock=_dismissCompletionBlock;
 @property(retain, nonatomic) NSString *scribePage; // @synthesize scribePage=_scribePage;

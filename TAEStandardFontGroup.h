@@ -239,7 +239,7 @@
 @property(readonly, nonatomic) UIFont *profilesUsernameFont;
 @property(readonly, nonatomic) UIFont *profilesFullNameFont;
 @property(readonly, nonatomic) UIFont *seeMoreFont;
-@property(readonly, nonatomic) UIFont *newTweetsPillFont;
+@property(readonly, nonatomic) UIFont *pillControlFont;
 - (id)buttonHeavyNavigationBarFont_Fixed;
 @property(readonly, nonatomic) UIFont *buttonHeavyNavigationBarFont;
 - (id)buttonNavigationBarFont_Fixed;

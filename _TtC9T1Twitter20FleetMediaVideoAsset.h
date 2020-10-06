@@ -10,7 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter20FleetMediaVideoAsset : TFNTwitterMediaAsset
 {
     // Error parsing type: , name: asset
-    // Error parsing type: , name: annotationState
+    // Error parsing type: , name: annotations
     // Error parsing type: , name: compositionSize
     // Error parsing type: , name: includeAudio
     // Error parsing type: , name: transform

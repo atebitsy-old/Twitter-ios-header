@@ -10,7 +10,6 @@
 #import <T1Twitter/T1ComposeCardPreviewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1ComposePollingCardPreviewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1ComposeTagLocationViewControllerDelegate-Protocol.h>
-#import <T1Twitter/T1ComposeTextViewDelegate-Protocol.h>
 #import <T1Twitter/T1MediaAttachmentsViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1TaggingViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1TweetComposeLocatorDelegate-Protocol.h>
@@ -22,16 +21,15 @@
 #import <T1Twitter/TFNLayoutMetricsEnvironment-Protocol.h>
 #import <T1Twitter/UIGestureRecognizerDelegate-Protocol.h>
 
-@class NSArray, NSString, T1AutocompleteTextInputUITextView, T1ComposeAccountAvatarImageView, T1ComposeCardPreviewController, T1ComposePollingCardPreviewController, T1ComposeRTLTextViewDelegate, T1ComposeTagLocationViewController, T1ComposeTextView, T1ConversationConnectorView, T1MediaAttachmentsViewController, T1QuotedStatusView, T1TaggingPromptButton, T1TweetComposeLocator, T1TweetComposeTextEditorView, TFNLegacyButton, TFNTwitterAccount, TFNTwitterComposePlaceStore, TFNTwitterComposition, TFSMainThreadRunLoopDeferredTask, TFSTwitterLocation, TFSTwitterPlace, TFSTwitterScribeContext, UIButton, UIColor, UIFont, UIImage, UIView, UIViewController;
-@protocol T1AutocompleteTextInput, T1ComposeTextView, T1TweetComposeSingleTweetViewControllerDelegate, T1TweetComposeSingleTweetViewControllerTextView;
+@class NSArray, NSString, T1ComposeAccountAvatarImageView, T1ComposeCardPreviewController, T1ComposePollingCardPreviewController, T1ComposeTagLocationViewController, T1ConversationConnectorView, T1MediaAttachmentsViewController, T1QuotedStatusView, T1TaggingPromptButton, T1TweetComposeLocator, T1TweetComposeTextEditorView, TFNLegacyButton, TFNTwitterAccount, TFNTwitterComposePlaceStore, TFNTwitterComposition, TFSTwitterLocation, TFSTwitterPlace, TFSTwitterScribeContext, UIButton, UIImage, UIView, UIViewController;
+@protocol T1AutocompleteTextInput, T1TweetComposeSingleTweetViewControllerDelegate, T1TweetComposeSingleTweetViewControllerTextView;
 
-@interface T1TweetComposeSingleTweetViewController : TFNViewController <NSLayoutManagerDelegate, T1ComposeCardPreviewControllerDelegate, T1ComposePollingCardPreviewControllerDelegate, T1ComposeTagLocationViewControllerDelegate, T1ComposeTextViewDelegate, T1MediaAttachmentsViewControllerDelegate, T1TaggingViewControllerDelegate, T1TweetComposeLocatorDelegate, T1TweetComposeTextEditorViewAttachmentPasteObserverDelegate, T1TweetComposeTextEditorViewURLPasteObserverDelegate, T1TweetComposeTextEditorViewDelegate, T1VideoMonetizationSettingsViewControllerDelegate, TFNLayoutMetricsEnvironment, UIGestureRecognizerDelegate, TFNCircularCountProgressDataSource>
+@interface T1TweetComposeSingleTweetViewController : TFNViewController <NSLayoutManagerDelegate, T1ComposeCardPreviewControllerDelegate, T1ComposePollingCardPreviewControllerDelegate, T1ComposeTagLocationViewControllerDelegate, T1MediaAttachmentsViewControllerDelegate, T1TaggingViewControllerDelegate, T1TweetComposeLocatorDelegate, T1TweetComposeTextEditorViewAttachmentPasteObserverDelegate, T1TweetComposeTextEditorViewURLPasteObserverDelegate, T1TweetComposeTextEditorViewDelegate, T1VideoMonetizationSettingsViewControllerDelegate, TFNLayoutMetricsEnvironment, UIGestureRecognizerDelegate, TFNCircularCountProgressDataSource>
 {
     _Bool _shouldShowConnectingLine;
     _Bool _partOfTweetstorm;
     _Bool _headOfTweetstorm;
     _Bool _inWindowScene;
-    _Bool _twitterTextEditorEnabled;
     _Bool _needsLayout;
     _Bool _deleting;
     _Bool _mixedMediaGIFCreationEnabled;
@@ -45,8 +43,7 @@
     T1ComposeAccountAvatarImageView *_avatarImageView;
     T1ConversationConnectorView *_connectorView;
     T1TweetComposeTextEditorView *_textEditorView;
-    T1ComposeTextView *_tweetTextView;
-    T1AutocompleteTextInputUITextView *_autocompleteTextInputUITextView;
+    long long _firstBaseWritingDirection;
     T1MediaAttachmentsViewController *_attachmentsViewController;
     T1ComposePollingCardPreviewController *_pollingCardPreviewController;
     T1ComposeTagLocationViewController *_tagLocationViewController;
@@ -56,24 +53,12 @@
     T1QuotedStatusView *_quotedStatusView;
     T1ComposeCardPreviewController *_cardPreviewController;
     UIView *_fadeOverlayView;
-    T1ComposeRTLTextViewDelegate *_composeRTLTextViewDelegate;
-    long long _firstBaseWritingDirection;
-    UIFont *_defaultTextFont;
-    UIColor *_defaultTextForegroundColor;
-    NSArray *_overflowViewsArray;
-    TFSMainThreadRunLoopDeferredTask *_currentOverflowViewsLayoutTask;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) TFSMainThreadRunLoopDeferredTask *currentOverflowViewsLayoutTask; // @synthesize currentOverflowViewsLayoutTask=_currentOverflowViewsLayoutTask;
-@property(copy, nonatomic) NSArray *overflowViewsArray; // @synthesize overflowViewsArray=_overflowViewsArray;
-@property(readonly, nonatomic) UIColor *defaultTextForegroundColor; // @synthesize defaultTextForegroundColor=_defaultTextForegroundColor;
-@property(readonly, nonatomic) UIFont *defaultTextFont; // @synthesize defaultTextFont=_defaultTextFont;
 @property(nonatomic, getter=isMixedMediaGIFCreationEnabled) _Bool mixedMediaGIFCreationEnabled; // @synthesize mixedMediaGIFCreationEnabled=_mixedMediaGIFCreationEnabled;
 @property(nonatomic, getter=isDeleting) _Bool deleting; // @synthesize deleting=_deleting;
 @property(nonatomic) _Bool needsLayout; // @synthesize needsLayout=_needsLayout;
-@property(nonatomic) long long firstBaseWritingDirection; // @synthesize firstBaseWritingDirection=_firstBaseWritingDirection;
-@property(retain, nonatomic) T1ComposeRTLTextViewDelegate *composeRTLTextViewDelegate; // @synthesize composeRTLTextViewDelegate=_composeRTLTextViewDelegate;
 @property(retain, nonatomic) UIView *fadeOverlayView; // @synthesize fadeOverlayView=_fadeOverlayView;
 @property(retain, nonatomic) T1ComposeCardPreviewController *cardPreviewController; // @synthesize cardPreviewController=_cardPreviewController;
 @property(retain, nonatomic) T1QuotedStatusView *quotedStatusView; // @synthesize quotedStatusView=_quotedStatusView;
@@ -83,10 +68,8 @@
 @property(retain, nonatomic) T1ComposeTagLocationViewController *tagLocationViewController; // @synthesize tagLocationViewController=_tagLocationViewController;
 @property(retain, nonatomic) T1ComposePollingCardPreviewController *pollingCardPreviewController; // @synthesize pollingCardPreviewController=_pollingCardPreviewController;
 @property(retain, nonatomic) T1MediaAttachmentsViewController *attachmentsViewController; // @synthesize attachmentsViewController=_attachmentsViewController;
-@property(retain, nonatomic) T1AutocompleteTextInputUITextView *autocompleteTextInputUITextView; // @synthesize autocompleteTextInputUITextView=_autocompleteTextInputUITextView;
-@property(retain, nonatomic) T1ComposeTextView *tweetTextView; // @synthesize tweetTextView=_tweetTextView;
+@property(nonatomic) long long firstBaseWritingDirection; // @synthesize firstBaseWritingDirection=_firstBaseWritingDirection;
 @property(retain, nonatomic) T1TweetComposeTextEditorView *textEditorView; // @synthesize textEditorView=_textEditorView;
-@property(readonly, nonatomic, getter=isTwitterTextEditorEnabled) _Bool twitterTextEditorEnabled; // @synthesize twitterTextEditorEnabled=_twitterTextEditorEnabled;
 @property(retain, nonatomic) T1ConversationConnectorView *connectorView; // @synthesize connectorView=_connectorView;
 @property(retain, nonatomic) T1ComposeAccountAvatarImageView *avatarImageView; // @synthesize avatarImageView=_avatarImageView;
 @property(retain, nonatomic) T1TweetComposeLocator *locator; // @synthesize locator=_locator;
@@ -100,11 +83,6 @@
 @property(nonatomic) int displayStyle; // @synthesize displayStyle=_displayStyle;
 @property(nonatomic) __weak id <T1TweetComposeSingleTweetViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
-- (void)_t1_hideOverflowViews;
-- (void)_t1_deferred_showOverflowViewsFromIndex:(long long)arg1;
-- (void)_t1_showOverflowViewsFromIndex:(long long)arg1;
-- (void)_t1_layoutOverflowHighlight;
-- (void)layoutManager:(id)arg1 didCompleteLayoutForTextContainer:(id)arg2 atEnd:(_Bool)arg3;
 - (void)layoutMetricsDidChange:(id)arg1 to:(id)arg2;
 - (id)calculatedLayoutMetrics;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
@@ -163,8 +141,6 @@
 - (void)focusPollCard;
 - (void)setPollCard:(id)arg1;
 - (void)_t1_updatePollComposeWithComposition:(id)arg1;
-- (void)_t1_resetBaseTypingAttributes:(id)arg1;
-- (void)_t1_highlightEntities:(id)arg1;
 - (_Bool)hasAttachmentsAndMixedMediaGIFCreationIsEnabled;
 - (_Bool)_t1_areAttachmentsAllowed;
 - (void)_t1_scribeRemovedAttachment:(id)arg1;
@@ -201,19 +177,6 @@
 - (_Bool)hasPoll;
 - (_Bool)hasAtLeastOneAttachment;
 - (_Bool)hasText;
-- (void)textView:(id)arg1 didChangeBaseWritingDirection:(long long)arg2;
-- (_Bool)_t1_canPerformPasteAsURL;
-- (_Bool)_t1_canPerformPasteAsAttachment;
-- (_Bool)performPasteWithSender:(id)arg1;
-- (_Bool)_t1_pasteAsStatusFromURL:(id)arg1;
-- (void)_t1_pasteStatus:(id)arg1;
-- (_Bool)_t1_pasteURL:(id)arg1;
-- (_Bool)canPerformPasteWithSender:(id)arg1;
-- (_Bool)textViewShouldBeginEditing:(id)arg1;
-- (void)_t1_textViewDidChange:(id)arg1;
-- (void)textViewDidChange:(id)arg1;
-- (void)textViewDidChangeSelection:(id)arg1;
-- (_Bool)textView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
 - (void)tweetComposeTextEditorViewURLPasteObserverDidPasteURL:(id)arg1;
 - (void)tweetComposeTextEditorViewURLPasteObserver:(id)arg1 addQuotedTweet:(id)arg2;
 - (_Bool)tweetComposeTextEditorViewURLPasteObserverCanAddQuotedTweet:(id)arg1;
@@ -250,9 +213,8 @@
 - (void)_t1_animateLocationView;
 - (void)_t1_updateAccessibilityViews;
 - (void)_t1_updateViewState;
-@property(readonly, nonatomic) UIView<T1TweetComposeSingleTweetViewControllerTextView> *singleTweetViewControllerTextView;
 @property(readonly, nonatomic) id <T1AutocompleteTextInput> autocompleteTextInput;
-@property(readonly, nonatomic) id <T1ComposeTextView> textView;
+@property(readonly, nonatomic) id <T1TweetComposeSingleTweetViewControllerTextView> textView;
 @property(readonly, nonatomic) UIImage *avatarImage;
 @property(readonly, nonatomic) struct CGRect caretRect;
 @property(readonly, nonatomic, getter=isDragging) _Bool dragging;
@@ -283,7 +245,7 @@
 - (void)viewDidLoad;
 - (void)loadView;
 - (void)tfn_fontSizeChanged;
-- (id)initWithComposition:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 mixedMediaGIFCreationEnabled:(_Bool)arg4 twitterTextEditorEnabled:(_Bool)arg5 inWindowScene:(_Bool)arg6;
+- (id)initWithComposition:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 mixedMediaGIFCreationEnabled:(_Bool)arg4 inWindowScene:(_Bool)arg5;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 

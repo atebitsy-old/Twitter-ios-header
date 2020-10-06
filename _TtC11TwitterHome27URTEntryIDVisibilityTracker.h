@@ -6,6 +6,7 @@
 
 #import <objc/NSObject.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtC11TwitterHome27URTEntryIDVisibilityTracker : NSObject
 {
     // Error parsing type: , name: accessQueue

@@ -12,8 +12,10 @@
 
 @interface UIBarButtonItem (TFNMenuSupport) <TFNMenuSupport>
 - (id)_tfn_button;
-- (void)_t1_menuMayBeTriggered;
+- (void)_tfn_menuMayBeTriggered;
+- (void)_tfn_populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
 - (void)populateMenuWithActionItems:(id)arg1;
+- (void)populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
 - (_Bool)isPreparedToDisplayMenuOnPrimaryAction;
 - (void)prepareToDisplayMenuOnPrimaryAction;
 @property(retain, nonatomic) NSInvocation *invocation;

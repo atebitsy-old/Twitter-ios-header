@@ -148,6 +148,7 @@
 @property(readonly, nonatomic) _Bool hasForwardPivot;
 @property(readonly, nonatomic) _Bool hasReplyBadgeIcon;
 @property(readonly, nonatomic) _Bool hasReplyBadge;
+@property(readonly, nonatomic) _Bool hasBirdwatchNotes;
 @property(readonly, nonatomic) _Bool hasModeratedReplies;
 @property(readonly, nonatomic) TFSTwitterForwardPivot *innerForwardPivot;
 @property(readonly, nonatomic) TFSTwitterForwardPivot *forwardPivot;

@@ -135,8 +135,8 @@
 @property(readonly, nonatomic) UIColor *eventsScoreCardBottomParticipantFallbackColor;
 - (id)_eventsScoreCardTopParticipantFallbackColor;
 @property(readonly, nonatomic) UIColor *eventsScoreCardTopParticipantFallbackColor;
-- (id)_nudgeBackgroundColor;
-@property(readonly, nonatomic) UIColor *nudgeBackgroundColor;
+- (id)_articleCardBorderColor;
+@property(readonly, nonatomic) UIColor *articleCardBorderColor;
 - (id)_momentsLoadingColor;
 @property(readonly, nonatomic) UIColor *momentsLoadingColor;
 - (id)_voiceProgressBackgroundColor;

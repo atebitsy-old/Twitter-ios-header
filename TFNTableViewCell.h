@@ -7,10 +7,11 @@
 #import <UIKit/UITableViewCell.h>
 
 #import <TFNUI/TFNDataViewCell-Protocol.h>
+#import <TFNUI/TFNMenuSupport-Protocol.h>
 
-@class CALayer, CAShapeLayer, NSIndexPath, NSString, TFNDataViewCellLayout, TFNReusableViewCache, UIColor, UIImageView, UITableView, UIView;
+@class CALayer, CAShapeLayer, NSIndexPath, NSString, TFNDataViewCellLayout, TFNMenuCompatibleControl, TFNReusableViewCache, UIColor, UIImageView, UITableView, UIView;
 
-@interface TFNTableViewCell : UITableViewCell <TFNDataViewCell>
+@interface TFNTableViewCell : UITableViewCell <TFNDataViewCell, TFNMenuSupport>
 {
     UITableView *_tableView;
     struct CGRect _contentFrame;
@@ -33,6 +34,7 @@
     NSIndexPath *_preDisplayIndexPath;
     NSString *_backgroundDynamicColorIdentifier;
     UIColor *_backgroundDynamicColor;
+    TFNMenuCompatibleControl *_menuControl;
     _Bool _keyboardHighlighted;
     _Bool _deselectsButtonsOnCellSelection;
     TFNReusableViewCache *_reusableViewCache;
@@ -87,6 +89,11 @@
 - (id)accessibilityValue;
 - (id)accessibilityLabel;
 - (_Bool)tableViewCellAccessibilityMagicTap;
+- (void)_tfn_populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
+- (void)populateMenuWithActionItems:(id)arg1;
+- (void)populateMenuWithTitle:(id)arg1 actionItems:(id)arg2;
+- (_Bool)isPreparedToDisplayMenuOnPrimaryAction;
+- (void)prepareToDisplayMenuOnPrimaryAction;
 - (id)keyCommands;
 - (id)calculatedLayoutMetrics;
 - (void)didKeyboardSelectInDataViewController:(id)arg1 atIndexPath:(id)arg2;

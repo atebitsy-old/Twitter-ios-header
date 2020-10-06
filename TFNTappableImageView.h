@@ -8,7 +8,7 @@
 
 #import <TFNUI/TFNTappableView-Protocol.h>
 
-@class NSString, TFNTappableViewHelper, TFNTouchDownGestureRecognizer, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class NSString, TFNLongPressGestureRecognizer, TFNTappableViewHelper, TFNTouchDownGestureRecognizer, UITapGestureRecognizer;
 
 @interface TFNTappableImageView : UIImageView <TFNTappableView>
 {
@@ -26,7 +26,7 @@
 - (void)setIsAccessibilityElement:(_Bool)arg1;
 - (void)setUserInteractionEnabled:(_Bool)arg1;
 @property(readonly, nonatomic) TFNTouchDownGestureRecognizer *touchDownGestureRecognizer;
-@property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property(readonly, nonatomic) TFNLongPressGestureRecognizer *longPressGestureRecognizer;
 @property(readonly, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
 @property(readonly, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 - (void)setPressedStateDidChangeTarget:(id)arg1 action:(SEL)arg2;

@@ -28,7 +28,6 @@
     _Bool _isPresentingRectifyViewController;
     _Bool _reauthenticating;
     _Bool _isInWindowScene;
-    _Bool _isFleetcast;
     _Bool _isPresentedFromFleets;
     T1WatchBroadcastViewControllerModel *_model;
     id <T1WatchBroadcastViewControllerDelegate> _delegate;
@@ -49,7 +48,6 @@
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool isPresentedFromFleets; // @synthesize isPresentedFromFleets=_isPresentedFromFleets;
-@property(nonatomic) _Bool isFleetcast; // @synthesize isFleetcast=_isFleetcast;
 @property(nonatomic) _Bool isInWindowScene; // @synthesize isInWindowScene=_isInWindowScene;
 @property(nonatomic) unsigned long long reauthenticationCount; // @synthesize reauthenticationCount=_reauthenticationCount;
 @property(nonatomic) _Bool reauthenticating; // @synthesize reauthenticating=_reauthenticating;

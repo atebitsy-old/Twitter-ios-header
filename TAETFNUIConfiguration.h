@@ -10,8 +10,10 @@
 {
 }
 
++ (void)setAdditionalVectorImageSearchDirectoryURLs:(id)arg1;
 - (id)fontGroup;
 - (id)colorPalette;
+- (void)setupAppearance;
 
 @end
 

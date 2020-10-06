@@ -21,11 +21,15 @@
     _Bool _emptyChunkClearingEnabled;
     _Bool _homeConversationHoistingPreventionEnabled;
     _Bool _asyncPrefetchRequestEnabled;
+    _Bool _consecutiveAdDedupPreventionEnabled;
+    _Bool _visibilityByItemPathTrackingEnabled;
     unsigned long long _homeRequestMaxSeenIDs;
     long long _progressiveAPISegmentSize;
     unsigned long long _clientDedupingMaxRecentCacheEntries;
 }
 
+@property(nonatomic, getter=isVisibilityByItemPathTrackingEnabled) _Bool visibilityByItemPathTrackingEnabled; // @synthesize visibilityByItemPathTrackingEnabled=_visibilityByItemPathTrackingEnabled;
+@property(nonatomic, getter=isConsecutiveAdDedupPreventionEnabled) _Bool consecutiveAdDedupPreventionEnabled; // @synthesize consecutiveAdDedupPreventionEnabled=_consecutiveAdDedupPreventionEnabled;
 @property(nonatomic, getter=isAsyncPrefetchRequestEnabled) _Bool asyncPrefetchRequestEnabled; // @synthesize asyncPrefetchRequestEnabled=_asyncPrefetchRequestEnabled;
 @property(nonatomic, getter=isHomeConversationHoistingPreventionEnabled) _Bool homeConversationHoistingPreventionEnabled; // @synthesize homeConversationHoistingPreventionEnabled=_homeConversationHoistingPreventionEnabled;
 @property(nonatomic, getter=isEmptyChunkClearingEnabled) _Bool emptyChunkClearingEnabled; // @synthesize emptyChunkClearingEnabled=_emptyChunkClearingEnabled;

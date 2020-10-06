@@ -58,6 +58,7 @@
 + (id)_t1_defaultRoutingProtocolHandler;
 + (id)currentAccountID;
 + (void)onApplicationDelegateLoad;
++ (long long)bugReportDestination;
 - (void).cxx_destruct;
 - (void)tip_problemWasEncountered:(id)arg1 userInfo:(id)arg2;
 - (void)_t1_dmDidRefresh:(id)arg1;
@@ -123,6 +124,7 @@
 - (void)onApplicationReconnectWithOptions:(id)arg1;
 - (void)onApplicationDidBecomeActive;
 - (_Bool)onApplicationStartWithOptions:(id)arg1;
+- (void)_t1_startSentinelManagerAndFabricCrashlyticsWithApplicationState:(long long)arg1 stopwatch:(id)arg2;
 - (void)onApplicationDidFinishLaunching:(_Bool)arg1;
 - (void)_t1_configureFonts;
 - (void)_t1_configureRightToLeftSupport;
@@ -181,9 +183,10 @@
 - (void)didFinishGatheringBugReportInfo;
 - (void)willStartGatheringBugReportInfo;
 - (void)scribeCrashReport:(id)arg1;
+- (_Bool)didCrashDuringPreviousExecution;
 - (void)crashlyticsDidDetectCrash:(id)arg1;
 - (void)crashlyticsDidDetectReportForLastExecution:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (_Bool)didCrashDuringPreviousExecution;
+- (_Bool)didCrashDuringPreviousExecutionFabric;
 - (id)_t1_scribeUserInfoItemsArrayForAccount:(id)arg1;
 - (id)_t1_rootViewController;
 - (void)_t1_presentErrorViewControllerWithMessage:(id)arg1 subtext:(id)arg2 cancelButtonTitle:(id)arg3 inputItem:(id)arg4;

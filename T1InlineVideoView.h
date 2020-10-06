@@ -9,6 +9,7 @@
 @interface T1InlineVideoView : UIView
 {
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: longPressRecognizer
     // Error parsing type: , name: $__lazy_storage_$_playerView
     // Error parsing type: , name: playerViewIfLoaded
     // Error parsing type: , name: chromeOverlayView

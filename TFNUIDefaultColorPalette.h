@@ -15,11 +15,11 @@
 }
 
 + (id)sharedColorPalette;
-@property(readonly, nonatomic) UIColor *progressBarTrackColor;
 @property(readonly, nonatomic) UIColor *modalSheetCancelButtonHighlightColor;
 @property(readonly, nonatomic) UIColor *modalSheetCancelButtonBackgroundColor;
 @property(readonly, nonatomic) UIColor *modalSheetBackgroundOverlayPopoverColor;
 @property(readonly, nonatomic) UIColor *modalSheetBackgroundOverlayColor;
+@property(readonly, nonatomic) UIColor *progressBarTrackColor;
 @property(readonly, nonatomic) UIColor *invertedPrimaryButtonTextColor;
 @property(readonly, nonatomic) UIColor *actionButtonOverlayColor;
 @property(readonly, nonatomic) UIColor *cellAccessoryColor;
@@ -27,11 +27,11 @@
 @property(readonly, nonatomic) UIColor *uiPickerBackgroundColor;
 @property(readonly, nonatomic) UIColor *pillControlShadowColor;
 @property(readonly, nonatomic) UIColor *pillControlTextColor;
+@property(readonly, nonatomic) UIColor *activityIndicatorDarkBackgroundColor;
+@property(readonly, nonatomic) UIColor *activityIndicatorColor;
 @property(readonly, nonatomic) UIColor *navigationBarLogoColor;
 @property(readonly, nonatomic) UIColor *navigationBarShadowColor;
 @property(readonly, nonatomic) UIColor *navigationBarHandleColor;
-@property(readonly, nonatomic) UIColor *activityIndicatorDarkBackgroundColor;
-@property(readonly, nonatomic) UIColor *activityIndicatorColor;
 @property(readonly, nonatomic) UIColor *disabledColor;
 @property(readonly, nonatomic) UIColor *successColor;
 @property(readonly, nonatomic) UIColor *warningColor;

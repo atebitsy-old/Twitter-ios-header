@@ -53,7 +53,6 @@
 @property(nonatomic) _Bool tfn_sendContentScrollEventsToParentViewController;
 - (void)tfn_previewingStateDidChange;
 - (_Bool)toaster:(id)arg1 canDisplayToast:(id)arg2 withPriority:(unsigned long long)arg3;
-- (void)viewDidFullyDisappear:(_Bool)arg1;
 - (void)viewDidFullyAppear:(_Bool)arg1;
 - (_Bool)becomeFirstResponder;
 @property(nonatomic, readonly) _Bool canBecomeFirstResponder;

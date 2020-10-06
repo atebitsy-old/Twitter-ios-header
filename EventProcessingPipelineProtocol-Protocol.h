@@ -11,6 +11,5 @@
 - (void)handleTapEvent:(id <TREKViewComponent>)arg1 tapCount:(long long)arg2 touchCount:(long long)arg3;
 - (void)handlePullToRefreshEvent:(id <TREKViewComponent>)arg1;
 - (void)handleSwipeEvent:(id <TREKViewComponent>)arg1 direction:(int)arg2;
-- (void)handleClickEvent:(id <TREKViewComponent>)arg1;
 @end
 

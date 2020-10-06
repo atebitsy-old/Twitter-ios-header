@@ -41,10 +41,13 @@
 - (struct CGRect)_tfn_touchBounds;
 - (id)expandedImage;
 - (id)collapseImage;
+- (id)collapseImageFillColor;
 - (id)toggleButtonStrokeColor;
 - (void)setExpanded:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)invalidateEmphasis;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithFrame:(struct CGRect)arg1 delegate:(id)arg2;
+- (id)init;
+- (id)initWithCoder:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

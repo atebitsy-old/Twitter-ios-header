@@ -4,20 +4,15 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import <swiftCore/_TtCs12_SwiftObject.h>
 
-__attribute__((visibility("hidden")))
-@interface _TtC9T1Twitter26SpheresRankingModeArchiver : NSObject
+@interface _TtC9T1Twitter26SpheresRankingModeArchiver : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: accountID
     // Error parsing type: , name: inMemoryDictionary
     // Error parsing type: , name: lruDictionary
-    // Error parsing type: , name: defaultRankingMode
     // Error parsing type: , name: $__lazy_storage_$_spheresRankingModeFilePath
 }
-
-- (void).cxx_destruct;
-- (id)init;
 
 @end
 

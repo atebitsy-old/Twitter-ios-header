@@ -6,7 +6,7 @@
 
 #import <TFSFeatureSwitches/NSObject-Protocol.h>
 
-@class NSArray, NSDictionary, NSNumber, NSString, TFSFeatureSwitchesConfig, TFSFeatureSwitchesValue;
+@class NSArray, NSDictionary, NSNumber, NSSet, NSString, TFSFeatureSwitchesConfig, TFSFeatureSwitchesValue;
 @protocol TFSFeatureSwitchesFetchTask;
 
 @protocol TFSFeatureSwitches <NSObject>
@@ -23,6 +23,7 @@
 - (NSDictionary *)secondaryConfigurationForKey:(NSString *)arg1;
 - (double)unsafePeekDoubleForKey:(NSString *)arg1;
 - (_Bool)unsafePeekBoolForKey:(NSString *)arg1;
+- (NSSet *)unsafePeekSetForKey:(NSString *)arg1;
 - (NSArray *)unsafePeekArrayForKey:(NSString *)arg1;
 - (NSString *)unsafePeekStringForKey:(NSString *)arg1;
 - (long long)unsafePeekIntegerForKey:(NSString *)arg1;
@@ -35,6 +36,7 @@
 - (void)refreshWithFetchTask:(id <TFSFeatureSwitchesFetchTask>)arg1 timeout:(double)arg2 completion:(void (^)(_Bool))arg3;
 - (void)refreshWithFetchTask:(id <TFSFeatureSwitchesFetchTask>)arg1 timeout:(double)arg2 maxStale:(double)arg3 completion:(void (^)(_Bool))arg4;
 - (id)rawValueForKey:(NSString *)arg1;
+- (NSSet *)setForKey:(NSString *)arg1;
 - (NSArray *)arrayForKey:(NSString *)arg1;
 - (NSString *)stringForKey:(NSString *)arg1;
 - (NSNumber *)numberForKey:(NSString *)arg1;

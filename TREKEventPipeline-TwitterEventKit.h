@@ -10,7 +10,6 @@
 
 @interface TREKEventPipeline (TwitterEventKit) <EventProcessingPipelineProtocol>
 - (void)handleTapEvent:(id)arg1 tapCount:(long long)arg2 touchCount:(long long)arg3;
-- (void)handleClickEvent:(id)arg1;
 - (void)handlePullToRefreshEvent:(id)arg1;
 - (void)handleScrollEvent:(id)arg1 direction:(int)arg2;
 - (void)handleSwipeEvent:(id)arg1 direction:(int)arg2;

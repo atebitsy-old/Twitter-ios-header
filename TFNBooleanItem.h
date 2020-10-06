@@ -14,6 +14,7 @@
     TFNDataViewController *_controller;
     NSDictionary *_options;
     _Bool _value;
+    _Bool _showsMenuOnPrimaryAction;
     _Bool _executesUpdateActionOnSelection;
     long long _style;
     NSString *_text;
@@ -25,6 +26,7 @@
 @property(copy, nonatomic) CDUnknownBlockType updateAccessoryViews; // @synthesize updateAccessoryViews=_updateAccessoryViews;
 @property(nonatomic) _Bool executesUpdateActionOnSelection; // @synthesize executesUpdateActionOnSelection=_executesUpdateActionOnSelection;
 @property(copy, nonatomic) CDUnknownBlockType updateAction; // @synthesize updateAction=_updateAction;
+@property(readonly, nonatomic) _Bool showsMenuOnPrimaryAction; // @synthesize showsMenuOnPrimaryAction=_showsMenuOnPrimaryAction;
 @property(nonatomic) _Bool value; // @synthesize value=_value;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(nonatomic) long long style; // @synthesize style=_style;
@@ -34,8 +36,11 @@
 - (id)private_switchForDataViewController:(id)arg1 options:(id)arg2;
 - (void)setUpdateTarget:(id)arg1 action:(SEL)arg2;
 - (void)dealloc;
+- (id)initWithText:(id)arg1 userDefaultsKey:(id)arg2 showsMenuOnPrimaryAction:(_Bool)arg3 onUpdate:(CDUnknownBlockType)arg4;
 - (id)initWithText:(id)arg1 userDefaultsKey:(id)arg2 onUpdate:(CDUnknownBlockType)arg3;
+- (id)initWithStyle:(long long)arg1 text:(id)arg2 value:(_Bool)arg3 showsMenuOnPrimaryAction:(_Bool)arg4 updateTarget:(id)arg5 action:(SEL)arg6;
 - (id)initWithStyle:(long long)arg1 text:(id)arg2 value:(_Bool)arg3 updateTarget:(id)arg4 action:(SEL)arg5;
+- (id)initWithStyle:(long long)arg1 text:(id)arg2 value:(_Bool)arg3 showsMenuOnPrimaryAction:(_Bool)arg4 updateAction:(CDUnknownBlockType)arg5;
 - (id)initWithStyle:(long long)arg1 text:(id)arg2 value:(_Bool)arg3 updateAction:(CDUnknownBlockType)arg4;
 
 @end

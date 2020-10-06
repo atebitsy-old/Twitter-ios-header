@@ -42,6 +42,7 @@
     unsigned long long _dmReadReceiptsSetting;
     unsigned long long _acceptsDirectMessagesFrom;
     unsigned long long _dmLowQualityFilterSetting;
+    unsigned long long _dmNSFWMediaFilterSetting;
     unsigned long long _mentionFilterSetting;
     TFSTwitterTrendsLocation *_trendsLocation;
     NSDate *_extReuploadAddressBookTime;
@@ -62,6 +63,7 @@
 @property(nonatomic) unsigned long long mentionFilterSetting; // @synthesize mentionFilterSetting=_mentionFilterSetting;
 @property(nonatomic) _Bool universalQualityFilterEnabled; // @synthesize universalQualityFilterEnabled=_universalQualityFilterEnabled;
 @property(nonatomic) _Bool addressBookLiveSyncEnabled; // @synthesize addressBookLiveSyncEnabled=_addressBookLiveSyncEnabled;
+@property(nonatomic) unsigned long long dmNSFWMediaFilterSetting; // @synthesize dmNSFWMediaFilterSetting=_dmNSFWMediaFilterSetting;
 @property(nonatomic) unsigned long long dmLowQualityFilterSetting; // @synthesize dmLowQualityFilterSetting=_dmLowQualityFilterSetting;
 @property(nonatomic) unsigned long long acceptsDirectMessagesFrom; // @synthesize acceptsDirectMessagesFrom=_acceptsDirectMessagesFrom;
 @property(nonatomic) unsigned long long dmReadReceiptsSetting; // @synthesize dmReadReceiptsSetting=_dmReadReceiptsSetting;

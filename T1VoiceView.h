@@ -18,6 +18,7 @@
     id <T1VoiceViewModel> _viewModel;
     T1VoiceAvatarView *_avatarView;
     UILabel *_positionLabel;
+    UIImageView *_brandingImageView;
     UILabel *_brandingLabel;
     UILabel *_durationLabel;
     UIButton *_playPauseButton;
@@ -37,6 +38,7 @@
 @property(retain, nonatomic) UIButton *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
 @property(retain, nonatomic) UILabel *durationLabel; // @synthesize durationLabel=_durationLabel;
 @property(retain, nonatomic) UILabel *brandingLabel; // @synthesize brandingLabel=_brandingLabel;
+@property(retain, nonatomic) UIImageView *brandingImageView; // @synthesize brandingImageView=_brandingImageView;
 @property(retain, nonatomic) UILabel *positionLabel; // @synthesize positionLabel=_positionLabel;
 @property(retain, nonatomic) T1VoiceAvatarView *avatarView; // @synthesize avatarView=_avatarView;
 @property(retain, nonatomic) id <T1VoiceViewModel> viewModel; // @synthesize viewModel=_viewModel;

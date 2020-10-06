@@ -55,9 +55,11 @@
 - (id)featureSwitchValueForKey:(id)arg1;
 - (double)unsafePeekDoubleForKey:(id)arg1;
 - (_Bool)unsafePeekBoolForKey:(id)arg1;
+- (id)unsafePeekSetForKey:(id)arg1;
 - (id)unsafePeekArrayForKey:(id)arg1;
 - (id)unsafePeekStringForKey:(id)arg1;
 - (long long)unsafePeekIntegerForKey:(id)arg1;
+- (id)setForKey:(id)arg1;
 - (id)rawValueForKey:(id)arg1;
 - (id)arrayForKey:(id)arg1;
 - (id)stringForKey:(id)arg1;

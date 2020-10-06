@@ -122,6 +122,7 @@
 @property(nonatomic, readonly) long long displayFavoriteCount;
 @property(nonatomic, readonly) NSString *withheldScope;
 @property(nonatomic, readonly) _Bool displayAsWithheld;
+@property(nonatomic, readonly) _Bool hasBirdwatchNotes;
 @property(nonatomic, readonly) _Bool hasModeratedReplies;
 @property(nonatomic, readonly) _Bool hasReplyBadgeIcon;
 @property(nonatomic, readonly) unsigned long long replyBadgeType;

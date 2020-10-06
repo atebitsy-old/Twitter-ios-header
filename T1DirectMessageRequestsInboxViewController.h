@@ -8,6 +8,7 @@
 
 @interface T1DirectMessageRequestsInboxViewController : T1DirectMessageInboxTimelineViewController
 {
+    // Error parsing type: , name: nsfwPromptDismissed
     // Error parsing type: , name: moreButton
     // Error parsing type: , name: SortChronologicallyKey
     // Error parsing type: , name: InboxSortingTooltipEvent
@@ -18,6 +19,7 @@
     // Error parsing type: , name: $__lazy_storage_$_emptyOtherRequestsItem
     // Error parsing type: , name: $__lazy_storage_$_footerIntroItem
     // Error parsing type: , name: $__lazy_storage_$_lowQualityPivotItem
+    // Error parsing type: , name: $__lazy_storage_$_nsfwMediaFilterPromptItem
     // Error parsing type: , name: didRegisterTopRequestsImpression
 }
 

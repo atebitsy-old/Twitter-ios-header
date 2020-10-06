@@ -6,24 +6,45 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSMutableArray, NSString, TEKTwitterUserSource;
+#import <TwitterExtensionKit/TEKLocalFeatureSwitchesStore-Protocol.h>
+#import <TwitterExtensionKit/TFSAccountAttributeStore-Protocol.h>
 
-@interface TEKTwitterAccountSource : NSObject
+@class NSArray, NSMutableArray, NSString, TEKLocalFeatureSwitches, TEKTwitterAccount, TEKTwitterUserSource, TFSAccountService;
+
+@interface TEKTwitterAccountSource : NSObject <TFSAccountAttributeStore, TEKLocalFeatureSwitchesStore>
 {
     TEKTwitterUserSource *_userSource;
     NSMutableArray *_mutableAccounts;
     NSString *_applicationGroupName;
+    TFSAccountService *_accountService;
+    TEKTwitterAccount *__tfs_parentAppSelectedAccount;
+    TEKLocalFeatureSwitches *_localFeatureSwitches;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) TEKLocalFeatureSwitches *localFeatureSwitches; // @synthesize localFeatureSwitches=_localFeatureSwitches;
+@property(readonly, nonatomic) __weak TEKTwitterAccount *_tfs_parentAppSelectedAccount; // @synthesize _tfs_parentAppSelectedAccount=__tfs_parentAppSelectedAccount;
+@property(readonly, nonatomic) TFSAccountService *accountService; // @synthesize accountService=_accountService;
 @property(copy, nonatomic) NSString *applicationGroupName; // @synthesize applicationGroupName=_applicationGroupName;
 @property(readonly, nonatomic) NSMutableArray *mutableAccounts; // @synthesize mutableAccounts=_mutableAccounts;
 @property(retain, nonatomic) TEKTwitterUserSource *userSource; // @synthesize userSource=_userSource;
+- (id)_sharedUserDefaults;
 - (id)_applicationSavedTwitterState;
 - (void)_loadWithUserDefaultsDictionary:(id)arg1;
+- (id)_tek_parentAppSelectedAccount;
 - (id)parentAppSelectedAccount;
 @property(readonly, copy, nonatomic) NSArray *accounts;
 - (id)initWithApplicationGroupName:(id)arg1 userSource:(id)arg2;
+- (_Bool)save:(id)arg1 error:(id *)arg2;
+- (id)loadAndReturnError:(id *)arg1;
+- (void)storeValue:(id)arg1 forKey:(id)arg2;
+- (id)storedValueForKey:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

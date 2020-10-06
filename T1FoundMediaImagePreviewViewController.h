@@ -9,7 +9,7 @@
 #import <T1Twitter/TFNPresented-Protocol.h>
 #import <T1Twitter/UIScrollViewDelegate-Protocol.h>
 
-@class NSString, T1AnimatedGIFImageView, T1FoundMediaImagePreviewOverlayView, T1FoundMediaItemAttributionView, T1FullscreenMediaTransition, T1MediaAttachmentProgressView, TFNAnimatedGifImage, TFNAnimatedGifImageView, TFNFoundMediaFetchOperation, TFNLegacyButton, TFNPaddedButton, TFNTwitterAccount, TFSTwitterFoundMediaItem, UIImage, UILongPressGestureRecognizer, UIScrollView, UITapGestureRecognizer, UIView, UIViewController;
+@class NSString, T1AnimatedGIFImageView, T1FoundMediaImagePreviewOverlayView, T1FoundMediaItemAttributionView, T1FullscreenMediaTransition, T1MediaAttachmentProgressView, TFNAnimatedGifImage, TFNAnimatedGifImageView, TFNFoundMediaFetchOperation, TFNLegacyButton, TFNLongPressGestureRecognizer, TFNPaddedButton, TFNTwitterAccount, TFSTwitterFoundMediaItem, UIImage, UIScrollView, UITapGestureRecognizer, UIView, UIViewController;
 @protocol T1FoundMediaImagePreviewViewControllerDelegate, T1ImageTransitionDelegate;
 
 @interface T1FoundMediaImagePreviewViewController : TFNViewController <TFNPresented, UIScrollViewDelegate>
@@ -26,7 +26,7 @@
     T1FoundMediaItemAttributionView *_attributionView;
     T1FoundMediaImagePreviewOverlayView *_overlayView;
     UITapGestureRecognizer *_imagePreviewViewTapGestureRecognizer;
-    UILongPressGestureRecognizer *_attributionLongPressGestureRecognizer;
+    TFNLongPressGestureRecognizer *_attributionLongPressGestureRecognizer;
     T1FullscreenMediaTransition *_transition;
     TFNAnimatedGifImageView *_presentingTransitionImageView;
     UIViewController *_dismissingFromInHierarchyPresentingViewController;
@@ -48,7 +48,7 @@
 @property(retain, nonatomic) UIViewController *dismissingFromInHierarchyPresentingViewController; // @synthesize dismissingFromInHierarchyPresentingViewController=_dismissingFromInHierarchyPresentingViewController;
 @property(retain, nonatomic) TFNAnimatedGifImageView *presentingTransitionImageView; // @synthesize presentingTransitionImageView=_presentingTransitionImageView;
 @property(retain, nonatomic) T1FullscreenMediaTransition *transition; // @synthesize transition=_transition;
-@property(retain, nonatomic) UILongPressGestureRecognizer *attributionLongPressGestureRecognizer; // @synthesize attributionLongPressGestureRecognizer=_attributionLongPressGestureRecognizer;
+@property(retain, nonatomic) TFNLongPressGestureRecognizer *attributionLongPressGestureRecognizer; // @synthesize attributionLongPressGestureRecognizer=_attributionLongPressGestureRecognizer;
 @property(retain, nonatomic) UITapGestureRecognizer *imagePreviewViewTapGestureRecognizer; // @synthesize imagePreviewViewTapGestureRecognizer=_imagePreviewViewTapGestureRecognizer;
 @property(retain, nonatomic) T1FoundMediaImagePreviewOverlayView *overlayView; // @synthesize overlayView=_overlayView;
 @property(retain, nonatomic) T1FoundMediaItemAttributionView *attributionView; // @synthesize attributionView=_attributionView;

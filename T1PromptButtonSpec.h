@@ -10,6 +10,7 @@
 
 @interface T1PromptButtonSpec : NSObject
 {
+    _Bool _shouldUseLegacyButton;
     _Bool _preferFullWidth;
     NSString *_title;
     unsigned long long _strength;
@@ -21,7 +22,9 @@
     long long _style;
 }
 
++ (long long)private_styleForButtonStyle:(long long)arg1 emphasized:(_Bool)arg2;
 + (id)buttonSpecForTitle:(id)arg1 buttonStyle:(long long)arg2 iconName:(id)arg3 legacyEmphasized:(_Bool)arg4 preferFullWidth:(_Bool)arg5 action:(CDUnknownBlockType)arg6;
++ (long long)private_buttonStyleForPromptActionStyle:(unsigned long long)arg1;
 + (id)buttonSpecForNavigationLink:(id)arg1 preferFullWidth:(_Bool)arg2 style:(unsigned long long)arg3 subtaskController:(id)arg4;
 + (id)buttonSpecWithTitle:(id)arg1 preferFullWidth:(_Bool)arg2 style:(unsigned long long)arg3 action:(CDUnknownBlockType)arg4;
 - (void).cxx_destruct;
@@ -37,6 +40,7 @@
 - (void)private_buttonAction:(id)arg1;
 - (id)private_buttonForSizeClass:(long long)arg1;
 - (id)private_buttonForToolbarItem:(_Bool)arg1 withSize:(unsigned long long)arg2;
+- (unsigned long long)private_legacyButtonSizeForSizeClass:(long long)arg1;
 - (id)barButtonItem;
 - (id)buttonWithSizeClass:(long long)arg1;
 - (id)buttonWithSize:(unsigned long long)arg1;

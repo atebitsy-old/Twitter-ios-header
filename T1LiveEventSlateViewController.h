@@ -15,6 +15,7 @@
 
 @interface T1LiveEventSlateViewController : TFNViewController <TFNLayoutMetricsEnvironment, T1ImageViewFetchHelperDelegate, TFNAttributedTextViewDelegate>
 {
+    _Bool _hasConfiguredViewHierarchy;
     TFNTwitterLiveEventSlate *_slate;
     UIImageView *_imageView;
     T1LiveEventRemindMeViewModel *_remindMeViewModel;
@@ -34,6 +35,7 @@
 @property(retain, nonatomic) T1LiveEventRemindMeButton *remindMeButton; // @synthesize remindMeButton=_remindMeButton;
 @property(retain, nonatomic) TFNGradientView *infoLabelsGradientView; // @synthesize infoLabelsGradientView=_infoLabelsGradientView;
 @property(retain, nonatomic) TFNAttributedTextView *badgeTextView; // @synthesize badgeTextView=_badgeTextView;
+@property(nonatomic) _Bool hasConfiguredViewHierarchy; // @synthesize hasConfiguredViewHierarchy=_hasConfiguredViewHierarchy;
 @property(nonatomic) __weak id <T1LiveEventSlateViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) T1LiveEventRemindMeViewModel *remindMeViewModel; // @synthesize remindMeViewModel=_remindMeViewModel;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
@@ -55,6 +57,7 @@
 - (void)_t1_didTapRemindMeButton;
 - (void)updateRemindMeView;
 - (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
 - (id)initWithSlate:(id)arg1 imagePipeline:(id)arg2;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;

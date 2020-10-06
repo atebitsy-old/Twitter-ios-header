@@ -50,6 +50,7 @@
 @property(nonatomic, readonly) long long sortEventID;
 @property(nonatomic, readonly) id <TFNDirectMessageInbox> inbox;
 @property(nonatomic, readonly) TFNDirectMessageContext *context;
+- (_Bool)isMuted;
 - (void)pruneOldEntries;
 - (void)addWelcomeMessage:(id)arg1;
 - (void)updateReadOnlyState:(_Bool)arg1;
@@ -79,6 +80,7 @@
 // Remaining properties
 @property(nonatomic, readonly) _Bool empty;
 @property(nonatomic, readonly) _Bool lowQuality;
+@property(nonatomic, readonly) _Bool muted;
 @property(nonatomic, readonly) _Bool readOnly;
 @property(nonatomic, readonly) _Bool topRequest;
 @property(nonatomic, readonly) _Bool trusted;

@@ -19,6 +19,8 @@
 @property(readonly, nonatomic, getter=isUrtProfileTweetsAndRepliesTimelineEnabled) _Bool urtProfileTweetsAndRepliesTimelineEnabled;
 @property(readonly, nonatomic, getter=isUrtIncomingFollowRequestsTimelineEnabled) _Bool urtIncomingFollowRequestsTimelineEnabled;
 @property(readonly, nonatomic, getter=isUrtConversationTimelineEnabled) _Bool urtConversationTimelineEnabled;
+@property(readonly, nonatomic, getter=isRetweetersTimelineEnabled) _Bool retweetersTimelineEnabled;
+@property(readonly, nonatomic, getter=isFavoritersTimelineEnabled) _Bool favoritersTimelineEnabled;
 @property(readonly, nonatomic, getter=isEmailNotificationSettingsMutationEnabled) _Bool emailNotificationSettingsMutationEnabled;
 @property(readonly, nonatomic, getter=isComposeReplyUsersLookupEnabled) _Bool composeReplyUsersLookupEnabled;
 @property(readonly, nonatomic, getter=isBookmarkTimelineEnabled) _Bool bookmarkTimelineEnabled;

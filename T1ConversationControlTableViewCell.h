@@ -11,14 +11,16 @@
 @interface T1ConversationControlTableViewCell : TFNTableViewCell
 {
     _Bool _showCheckmark;
+    _Bool _flexibleParticipationEnabled;
     T1ConversationControlSelectionItem *_conversationControlSelection;
     CDUnknownBlockType _tapAction;
     UIImageView *_checkmarkImageView;
 }
 
-+ (double)cellHeightForTableView:(id)arg1 compositionConversationControlType:(unsigned long long)arg2;
++ (double)cellHeightForTableView:(id)arg1 compositionConversationControlType:(unsigned long long)arg2 flexibleParticipationEnabled:(_Bool)arg3;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *checkmarkImageView; // @synthesize checkmarkImageView=_checkmarkImageView;
+@property(nonatomic, getter=isFlexibleParticipationEnabled) _Bool flexibleParticipationEnabled; // @synthesize flexibleParticipationEnabled=_flexibleParticipationEnabled;
 @property(nonatomic) _Bool showCheckmark; // @synthesize showCheckmark=_showCheckmark;
 @property(copy, nonatomic) CDUnknownBlockType tapAction; // @synthesize tapAction=_tapAction;
 @property(retain, nonatomic) T1ConversationControlSelectionItem *conversationControlSelection; // @synthesize conversationControlSelection=_conversationControlSelection;

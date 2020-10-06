@@ -6,6 +6,8 @@
 
 #import <T1Twitter/_TtC9T1Twitter25MediaHeaderViewController.h>
 
+@class NSString;
+
 __attribute__((visibility("hidden")))
 @interface _TtC9T1Twitter25VideoHeaderViewController : _TtC9T1Twitter25MediaHeaderViewController
 {
@@ -20,6 +22,7 @@ __attribute__((visibility("hidden")))
 - (void)player:(id)arg1 didUpdatePlaybackState:(id)arg2;
 - (void)viewDidLoad;
 @property(nonatomic, readonly) _Bool prefersStatusBarHidden;
+@property(nonatomic, copy) NSString *title;
 
 @end
 

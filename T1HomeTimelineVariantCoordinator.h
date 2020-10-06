@@ -38,11 +38,9 @@
 - (double)mostRecentAutoSwitchInactiveTime;
 - (double)mostRecentAutoSwitchThreshold;
 - (_Bool)isLatestSwitchEnabled;
-- (void)setIsLatestRankingModeActive:(_Bool)arg1 forListID:(long long)arg2 andPersistData:(_Bool)arg3;
-- (_Bool)isLatestRankingModeActiveForListID:(long long)arg1 memberCount:(long long)arg2;
-- (void)spheresUserSettingsRepository:(id)arg1 didChangeRankingForListID:(long long)arg2;
 - (void)spheresUserSettingsRepository:(id)arg1 didUpdateWithPinnedListDataModel:(id)arg2;
 - (void)spheresUserSettingsRepositoryPinnedListsDidChange:(id)arg1 withPinnedListModels:(id)arg2;
+- (void)archivePinnedListIDs:(id)arg1;
 - (void)_t1_archiveSphereViewModels:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)_t1_archiveSphereViewModels:(id)arg1;
 - (void)setUserOwnedListsTimelines:(id)arg1 completion:(CDUnknownBlockType)arg2;

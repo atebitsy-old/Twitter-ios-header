@@ -9,7 +9,7 @@
 #import <T1Twitter/T1ComposeCardPreviewViewDelegate-Protocol.h>
 #import <T1Twitter/TFNAttributedTextViewDelegate-Protocol.h>
 
-@class NSString, T1ComposeCardPreviewView, T1ComposeHeaderView, T1ComposePlaceLabelView, T1ComposeTextView, T1QuotedStatusView, T1TaggingPromptButton, T1TwitterTooltip, TFNTwitterAccount, TFSMainThreadRunLoopDeferredTask, TFSTwitterTagSet, UIButton, UITapGestureRecognizer, UIView;
+@class NSString, T1ComposeCardPreviewView, T1ComposePlaceLabelView, T1ComposeTextView, T1QuotedStatusView, T1TaggingPromptButton, T1TwitterTooltip, TFNTwitterAccount, TFSMainThreadRunLoopDeferredTask, TFSTwitterTagSet, UIButton, UITapGestureRecognizer, UIView;
 @protocol T1ComposeRichTextViewDelegate, T1ComposeRichTextViewPlaceDataSource;
 
 @interface T1ComposeRichTextView : UIScrollView <T1ComposeCardPreviewViewDelegate, TFNAttributedTextViewDelegate>
@@ -22,7 +22,6 @@
     T1ComposeTextView *_textView;
     T1QuotedStatusView *_quotedStatusView;
     UIView *_tagLocationView;
-    T1ComposeHeaderView *_composeHeaderView;
     T1ComposeCardPreviewView *_cardPreviewView;
     UIView *_pollComposeView;
     UIView *_attachmentsView;
@@ -54,7 +53,6 @@
 @property(retain, nonatomic) UIView *attachmentsView; // @synthesize attachmentsView=_attachmentsView;
 @property(retain, nonatomic) UIView *pollComposeView; // @synthesize pollComposeView=_pollComposeView;
 @property(retain, nonatomic) T1ComposeCardPreviewView *cardPreviewView; // @synthesize cardPreviewView=_cardPreviewView;
-@property(retain, nonatomic) T1ComposeHeaderView *composeHeaderView; // @synthesize composeHeaderView=_composeHeaderView;
 @property(nonatomic) _Bool useTagLocationViewForGeo; // @synthesize useTagLocationViewForGeo=_useTagLocationViewForGeo;
 @property(nonatomic) _Bool useInlineLayout; // @synthesize useInlineLayout=_useInlineLayout;
 @property(retain, nonatomic) UIView *tagLocationView; // @synthesize tagLocationView=_tagLocationView;

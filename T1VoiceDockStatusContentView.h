@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1VoiceDockableContent-Protocol.h>
 
-@class NSLayoutConstraint, NSTimer, T1AmbientNotificationContainer, T1AvatarImageView, T1VoiceDockStatusViewModel, TAVPlaybackState, TFNBarProgressView, TFNPaddedButton, UIAccessibilityCustomAction, UIButton, UIImage, UILabel, UIStackView, UIView;
+@class NSLayoutConstraint, NSTimer, T1AmbientNotificationContainer, T1AvatarImageView, T1VoiceDockStatusViewModel, TAVPlaybackState, TFNBarProgressView, TFNButton, UIAccessibilityCustomAction, UIButton, UIImage, UILabel, UIStackView, UIView;
 @protocol T1VoiceDockContainer, T1VoiceDockStatusContentViewDelegate;
 
 @interface T1VoiceDockStatusContentView : T1VoicePlaybackView <T1VoiceDockableContent>
@@ -18,7 +18,7 @@
     T1VoiceDockStatusViewModel *_viewModel;
     TFNBarProgressView *_progressView;
     TAVPlaybackState *_lastKnownPlaybackState;
-    TFNPaddedButton *_progressThumbView;
+    TFNButton *_progressThumbView;
     NSLayoutConstraint *_progressThumbViewCenterXConstraint;
     NSTimer *_hideProgressThumbViewTimer;
     UIButton *_backgroundButton;
@@ -53,7 +53,7 @@
 @property(retain, nonatomic) NSTimer *hideProgressThumbViewTimer; // @synthesize hideProgressThumbViewTimer=_hideProgressThumbViewTimer;
 @property(nonatomic) struct CGPoint progressThumbOriginalPosition; // @synthesize progressThumbOriginalPosition=_progressThumbOriginalPosition;
 @property(retain, nonatomic) NSLayoutConstraint *progressThumbViewCenterXConstraint; // @synthesize progressThumbViewCenterXConstraint=_progressThumbViewCenterXConstraint;
-@property(retain, nonatomic) TFNPaddedButton *progressThumbView; // @synthesize progressThumbView=_progressThumbView;
+@property(retain, nonatomic) TFNButton *progressThumbView; // @synthesize progressThumbView=_progressThumbView;
 @property(retain, nonatomic) TAVPlaybackState *lastKnownPlaybackState; // @synthesize lastKnownPlaybackState=_lastKnownPlaybackState;
 @property(retain, nonatomic) TFNBarProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) T1VoiceDockStatusViewModel *viewModel; // @synthesize viewModel=_viewModel;

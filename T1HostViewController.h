@@ -13,13 +13,14 @@
 #import <T1Twitter/TFNTwitterRecurringTaskContextPanelIDProvider-Protocol.h>
 
 @class NSString, T1OnboardingFlowAssistant, T1OnboardingFlowController, T1OnboardingFlowMonitor, T1URLProtocolDefaultHandlerEvent, TFNTwitterAdsTPMIdSyncManager;
-@protocol T1AppNavigationProvider, T1AppNavigationProviderFactory, T1LaunchTransitionProvider, T1OnboardingFlow, T1SignedOutViewControllerFactory;
+@protocol T1AppNavigationProvider, T1AppNavigationProviderFactory, T1LaunchTransitionProvider, T1LoginChallengeProtocol, T1OnboardingFlow, T1SignedOutViewControllerFactory;
 
 @interface T1HostViewController : UIViewController <TFNTwitterRecurringTaskContextPanelIDProvider, T1OnboardingFlowControllerDelegate, T1AppLaunchTransitionDelegate, TFNPresentationInterceptor, T1SignedOutNavigation>
 {
     _Bool _showedSignedOutScreen;
     _Bool _performingLaunchTransition;
     UIViewController *_currentViewController;
+    id <T1LoginChallengeProtocol> _loginChallengeProvider;
     id <T1LaunchTransitionProvider> _launchTransitionProvider;
     T1URLProtocolDefaultHandlerEvent *_pendingLoggedInURLEvent;
     CDUnknownBlockType _launchTransitionCompletion;
@@ -50,6 +51,7 @@
 @property(nonatomic, getter=isPerformingLaunchTransition) _Bool performingLaunchTransition; // @synthesize performingLaunchTransition=_performingLaunchTransition;
 @property(retain, nonatomic) T1URLProtocolDefaultHandlerEvent *pendingLoggedInURLEvent; // @synthesize pendingLoggedInURLEvent=_pendingLoggedInURLEvent;
 @property(retain, nonatomic) id <T1LaunchTransitionProvider> launchTransitionProvider; // @synthesize launchTransitionProvider=_launchTransitionProvider;
+@property(retain, nonatomic) id <T1LoginChallengeProtocol> loginChallengeProvider; // @synthesize loginChallengeProvider=_loginChallengeProvider;
 @property(readonly, nonatomic) _Bool showedSignedOutScreen; // @synthesize showedSignedOutScreen=_showedSignedOutScreen;
 @property(readonly, nonatomic) UIViewController *currentViewController; // @synthesize currentViewController=_currentViewController;
 - (id)scribeSection;

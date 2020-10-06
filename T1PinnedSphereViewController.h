@@ -15,6 +15,8 @@
     // Error parsing type: , name: suggestionForYourListBlender
     // Error parsing type: , name: addedUsers
     // Error parsing type: , name: removedUsers
+    // Error parsing type: , name: rankingModeObserver
+    // Error parsing type: , name: rankingMode
 }
 
 - (void).cxx_destruct;

@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1PromptDataSource-Protocol.h>
 
-@class NSArray, NSString, T1PromptImageSpec, T1PromptTextSpec, TFNTwitterMediaAsset, UIImage;
+@class NSArray, NSString, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, TFNTwitterMediaAsset, UIImage;
 @protocol T1AltTextEducationPromptViewControllerDelegate;
 
 @interface T1AltTextEducationPromptViewController : T1PromptViewController <T1PromptDataSource>
@@ -34,6 +34,7 @@
 - (id)initWithAccount:(id)arg1 attachment:(id)arg2;
 
 // Remaining properties
+@property(readonly, nonatomic) T1PromptContentViewSpec *contentViewSpec;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) T1PromptTextSpec *detailTextSpec;

@@ -6,12 +6,12 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class T1InlineMediaView, UIEvent, UILongPressGestureRecognizer;
+@class T1InlineMediaView, TFNLongPressGestureRecognizer, UIEvent;
 @protocol TAVPlayerView;
 
 @protocol T1InlineMediaViewDelegate <NSObject>
 - (_Bool)inlineMediaViewShouldShowVideoDetailsInOverlay:(T1InlineMediaView *)arg1;
-- (void)inlineMediaView:(T1InlineMediaView *)arg1 wasLongPressedWithGestureRecognizer:(UILongPressGestureRecognizer *)arg2;
+- (void)inlineMediaView:(T1InlineMediaView *)arg1 wasLongPressedWithGestureRecognizer:(TFNLongPressGestureRecognizer *)arg2;
 - (void)inlineMediaViewWasTapped:(T1InlineMediaView *)arg1 withEvent:(UIEvent *)arg2;
 
 @optional

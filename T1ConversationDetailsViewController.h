@@ -83,6 +83,7 @@
     _Bool _isTranslationImpressionScribed;
     _Bool _isAutoTranslationImpressionScribed;
     _Bool _didLogCardEvents;
+    _Bool _didLogEmptyTimelineErrorImpression;
     TFNTwitterAccount *_composingAccount;
     NSMutableSet *_draftedRepliesWaitingForSend;
     TFSTwitterScribeContext *_sourceScribeContext;
@@ -140,6 +141,7 @@
 + (id)conversationDetailsViewControllerForStatus:(id)arg1 account:(id)arg2 sourceScribeContext:(id)arg3 sourceNavigationMetadata:(id)arg4;
 - (void).cxx_destruct;
 @property(retain, nonatomic) TFNBarButtonItem *subscribeButton; // @synthesize subscribeButton=_subscribeButton;
+@property(nonatomic) _Bool didLogEmptyTimelineErrorImpression; // @synthesize didLogEmptyTimelineErrorImpression=_didLogEmptyTimelineErrorImpression;
 @property(nonatomic) _Bool didLogCardEvents; // @synthesize didLogCardEvents=_didLogCardEvents;
 @property(nonatomic) unsigned long long loadState; // @synthesize loadState=_loadState;
 @property(readonly, nonatomic) long long overflowCount; // @synthesize overflowCount=_overflowCount;
@@ -284,6 +286,7 @@
 - (void)_t1_fetchMonetizationSettingsDefaults;
 - (void)_t1_fetchMonetizationSettingsIfNeeded;
 - (_Bool)_t1_shouldShowMonetizationSettings;
+- (void)scrollViewDidScrollToTop:(id)arg1;
 - (void)scrollViewWillProgrammaticallyScrollToTop:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)scrollViewWillBeginDecelerating:(id)arg1;
@@ -308,8 +311,6 @@
 - (void)viewDidLoad;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)_t1_setupFromStatus;
-- (void)viewDidFullyDisappear:(_Bool)arg1;
-- (void)viewDidFullyAppear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)tfn_previewingStateDidChange;
 - (void)viewWillAppear:(_Bool)arg1;
@@ -405,7 +406,7 @@
 - (void)didRotateFromInterfaceOrientation:(long long)arg1;
 - (id)_t1_navigationHighlightColor;
 - (void)_t1_flashHighlightForCellAtIndexPath:(id)arg1 withDuration:(double)arg2;
-- (void)_t1_reloadConversationAfterNotification;
+- (void)_t1_forceRebuildConversationTimeline;
 - (void)_t1_blockedAccountsDidChange:(id)arg1;
 - (void)_t1_tweetDeleted:(id)arg1;
 - (void)_t1_handleTweetDeleted:(id)arg1;

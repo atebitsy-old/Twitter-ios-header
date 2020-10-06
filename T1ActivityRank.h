@@ -9,6 +9,8 @@
 @interface T1ActivityRank : NSObject
 {
     // Error parsing type: , name: predefinedBaseRank
+    // Error parsing type: , name: copyLinkActivityIdentifier
+    // Error parsing type: , name: shareViaActivityIdentifier
     // Error parsing type: , name: account
     // Error parsing type: , name: predefinedRank
     // Error parsing type: , name: observer

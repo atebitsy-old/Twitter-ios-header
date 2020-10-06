@@ -263,7 +263,7 @@
 - (void)unpackAuthorMetadataFromDictionary:(id)arg1 dictionaryKeys:(id)arg2;
 - (void)repackAuthorMetadataFromMutableDictionary:(id)arg1;
 - (void)startBroadcastFailed;
-- (void)startBroadcast:(id)arg1 sharingLocation:(_Bool)arg2 isPrivate:(_Bool)arg3 acceptsGuests:(_Bool)arg4;
+- (void)startBroadcast:(id)arg1 sharingLocation:(_Bool)arg2 isPrivate:(_Bool)arg3 acceptsGuests:(_Bool)arg4 appComponent:(id)arg5;
 @property _Bool persistent;
 @property(retain) NSNumber *expiration;
 @property(retain) NSDate *timedout;

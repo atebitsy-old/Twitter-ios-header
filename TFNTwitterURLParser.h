@@ -17,7 +17,7 @@
 + (_Bool)isTwitterURLAllowedForWebViewAccess:(id)arg1;
 + (id)_tfn_parsePatternMatchingTopicLandingPageLinkWithSourceURL:(id)arg1 nonUsernamePaths:(id)arg2 path:(id)arg3 wholePathRange:(struct _NSRange)arg4;
 + (id)_tfn_parseStringMatchingSettingsNotificationsFiltersWithSourceURL:(id)arg1 nonUsernamePaths:(id)arg2 path:(id)arg3 wholePathRange:(struct _NSRange)arg4;
-+ (id)_tfn_parseStringMatchingExploreWithSourceURL:(id)arg1 nonUsernamePaths:(id)arg2 path:(id)arg3 wholePathRange:(struct _NSRange)arg4;
++ (id)_tfn_parsePatternMatchingExploreWithSourceURL:(id)arg1 nonUsernamePaths:(id)arg2 path:(id)arg3 wholePathRange:(struct _NSRange)arg4;
 + (id)_tfn_parseStringMatchingWhoToFollowWithSourceURL:(id)arg1 nonUsernamePaths:(id)arg2 path:(id)arg3 wholePathRange:(struct _NSRange)arg4;
 + (id)_tfn_parseStringMatchingSettingsTrendsLocationWithSourceURL:(id)arg1 nonUsernamePaths:(id)arg2 path:(id)arg3 wholePathRange:(struct _NSRange)arg4;
 + (id)_tfn_parseStringMatchingSettingsTrendsWithSourceURL:(id)arg1 nonUsernamePaths:(id)arg2 path:(id)arg3 wholePathRange:(struct _NSRange)arg4;

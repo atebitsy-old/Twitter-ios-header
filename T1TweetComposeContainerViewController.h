@@ -54,8 +54,6 @@
 - (id)childViewControllerForStatusBarHidden;
 - (id)childViewControllerForStatusBarStyle;
 - (void)_t1_main_loadContentView;
-- (void)viewDidFullyDisappear:(_Bool)arg1;
-- (void)viewDidFullyAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)prepareForDismissWithPrompting:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic) UIViewController *contentViewController;

@@ -6,10 +6,11 @@
 
 #import <TFNUI/NSObject-Protocol.h>
 
-@class NSArray;
+@class NSArray, NSString;
 
 @protocol TFNMenuSupport <NSObject>
 - (void)populateMenuWithActionItems:(NSArray *)arg1;
+- (void)populateMenuWithTitle:(NSString *)arg1 actionItems:(NSArray *)arg2;
 - (_Bool)isPreparedToDisplayMenuOnPrimaryAction;
 - (void)prepareToDisplayMenuOnPrimaryAction;
 @end

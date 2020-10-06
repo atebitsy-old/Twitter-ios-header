@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1PromptDataSource-Protocol.h>
 
-@class NSArray, NSString, T1PromptImageSpec, T1PromptTextSpec, UIImage;
+@class NSArray, NSString, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, UIImage;
 @protocol TFSURTCover;
 
 @interface T1TimelineCoverViewController : T1PromptViewController <T1PromptDataSource>
@@ -54,6 +54,7 @@
 - (id)initWithCover:(id)arg1 account:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4;
 
 // Remaining properties
+@property(readonly, nonatomic) T1PromptContentViewSpec *contentViewSpec;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

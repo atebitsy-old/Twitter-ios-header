@@ -8,7 +8,7 @@
 
 #import <TFNUI/UIGestureRecognizerDelegate-Protocol.h>
 
-@class NSString, TFNTouchDownGestureRecognizer, UIHoverGestureRecognizer, UILongPressGestureRecognizer, UITapGestureRecognizer, UIView;
+@class NSString, TFNLongPressGestureRecognizer, TFNTouchDownGestureRecognizer, UIHoverGestureRecognizer, UITapGestureRecognizer, UIView;
 @protocol TFNTappableView;
 
 @interface TFNTappableViewHelper : NSObject <UIGestureRecognizerDelegate>
@@ -30,7 +30,7 @@
     _Bool _generatingGestureRecognizers;
     UITapGestureRecognizer *_tapGestureRecognizer;
     UITapGestureRecognizer *_doubleTapGestureRecognizer;
-    UILongPressGestureRecognizer *_longPressGestureRecognizer;
+    TFNLongPressGestureRecognizer *_longPressGestureRecognizer;
     TFNTouchDownGestureRecognizer *_touchDownGestureRecognizer;
     UIHoverGestureRecognizer *_hoverGestureRecognizer;
 }
@@ -56,7 +56,7 @@
 - (void)performLongPressAction;
 - (void)setHoverTarget:(id)arg1 action:(SEL)arg2;
 - (void)setLongPressTarget:(id)arg1 action:(SEL)arg2;
-@property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
+@property(readonly, nonatomic) TFNLongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
 - (void)performDoubleTapAction;
 - (void)setDoubleTapTarget:(id)arg1 action:(SEL)arg2;
 @property(readonly, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer; // @synthesize doubleTapGestureRecognizer=_doubleTapGestureRecognizer;

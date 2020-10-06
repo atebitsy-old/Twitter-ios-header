@@ -48,6 +48,7 @@
 - (id)rawFeatureSwitchesDictionaryForAccountID:(id)arg1;
 - (id)secondaryConfigurationForKey:(id)arg1 accountID:(id)arg2;
 - (id)rawValueForKey:(id)arg1 accountID:(id)arg2;
+- (id)setForKey:(id)arg1 accountID:(id)arg2;
 - (id)arrayForKey:(id)arg1 accountID:(id)arg2;
 - (id)stringForKey:(id)arg1 accountID:(id)arg2;
 - (id)numberForKey:(id)arg1 accountID:(id)arg2;
@@ -66,6 +67,7 @@
 - (_Bool)accountID:(id)arg1 hasNonDefaultValueForKey:(id)arg2;
 - (double)unsafePeekDoubleForKey:(id)arg1 accountID:(id)arg2;
 - (_Bool)unsafePeekBoolForKey:(id)arg1 accountID:(id)arg2;
+- (id)unsafePeekSetForKey:(id)arg1 accountID:(id)arg2;
 - (id)unsafePeekArrayForKey:(id)arg1 accountID:(id)arg2;
 - (id)unsafePeekStringForKey:(id)arg1 accountID:(id)arg2;
 - (long long)unsafePeekIntegerForKey:(id)arg1 accountID:(id)arg2;

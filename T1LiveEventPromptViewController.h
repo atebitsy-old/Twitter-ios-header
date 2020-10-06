@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1PromptDataSource-Protocol.h>
 
-@class NSArray, NSString, T1PromptImageSpec, T1PromptTextSpec, TFNTwitterUser, UIImage;
+@class NSArray, NSString, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, TFNTwitterUser, UIImage;
 
 @interface T1LiveEventPromptViewController : T1PromptViewController <T1PromptDataSource>
 {
@@ -23,7 +23,7 @@
 @property(nonatomic) unsigned long long promptType; // @synthesize promptType=_promptType;
 @property(copy, nonatomic) CDUnknownBlockType dismissBlock; // @synthesize dismissBlock=_dismissBlock;
 @property(copy, nonatomic) CDUnknownBlockType proceedBlock; // @synthesize proceedBlock=_proceedBlock;
-- (id)_t1_buttonSpecWithTitle:(id)arg1 strength:(unsigned long long)arg2 variant:(unsigned long long)arg3 block:(CDUnknownBlockType)arg4;
+- (id)_t1_buttonSpecWithTitle:(id)arg1 style:(long long)arg2 block:(CDUnknownBlockType)arg3;
 @property(readonly, nonatomic) NSArray *buttonSpecs;
 @property(readonly, nonatomic) T1PromptTextSpec *secondaryTextSpec;
 @property(readonly, nonatomic) T1PromptTextSpec *primaryTextSpec;
@@ -31,6 +31,7 @@
 
 // Remaining properties
 @property(readonly, nonatomic) unsigned long long buttonLayout;
+@property(readonly, nonatomic) T1PromptContentViewSpec *contentViewSpec;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) T1PromptTextSpec *detailTextSpec;

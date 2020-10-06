@@ -6,17 +6,10 @@
 
 #import <TFNUI/TFNItemsDataViewAdapter.h>
 
-@class UIFont;
-
 @interface T1NudgeItemViewAdapter : TFNItemsDataViewAdapter
 {
-    UIFont *_titleLabelFont;
-    UIFont *_subtitleLabelFont;
 }
 
-- (void).cxx_destruct;
-@property(retain, nonatomic) UIFont *subtitleLabelFont; // @synthesize subtitleLabelFont=_subtitleLabelFont;
-@property(retain, nonatomic) UIFont *titleLabelFont; // @synthesize titleLabelFont=_titleLabelFont;
 - (id)_t1_subtitleForItem:(id)arg1;
 - (id)_t1_titleForItem:(id)arg1;
 - (id)_t1_iconForItem:(id)arg1;

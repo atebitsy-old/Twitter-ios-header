@@ -21,6 +21,7 @@
 @property(readonly, nonatomic) struct CGRect tfn_visibleContentRect;
 @property(readonly, nonatomic) struct UIEdgeInsets tfn_visibleCellsInset;
 @property(readonly, nonatomic) struct UIEdgeInsets tfn_visibleContentInset;
+- (void)prepareToDisplayMenuFromContextualItems;
 - (void)scrollViewDriverWillStopScrolling:(id)arg1;
 - (void)scrollViewDriverDidStartScrolling:(id)arg1;
 - (void)tfn_stopAutoScroll;

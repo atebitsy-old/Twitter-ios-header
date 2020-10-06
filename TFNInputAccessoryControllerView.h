@@ -6,18 +6,12 @@
 
 #import <UIKit/UIView.h>
 
-@protocol TFNInputAccessoryControllerViewDelegate;
-
 @interface TFNInputAccessoryControllerView : UIView
 {
-    id <TFNInputAccessoryControllerViewDelegate> _delegate;
     struct CGSize _intrinsicContentSize;
 }
 
-- (void).cxx_destruct;
 @property(nonatomic) struct CGSize intrinsicContentSize; // @synthesize intrinsicContentSize=_intrinsicContentSize;
-@property(nonatomic) __weak id <TFNInputAccessoryControllerViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void)willMoveToSuperview:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

@@ -33,8 +33,11 @@
 - (long long)_t1_mediaDestinationTypeFromString:(id)arg1;
 - (long long)_t1_unifiedCardMediaDestinationType;
 - (double)_t1_webViewDwellIntervalForKey:(id)arg1 withFallback:(double)arg2;
-- (unsigned long long)_t1_ctaButtonVariation;
-- (_Bool)_t1_isCTAButtonVariationsExperimentEnabled;
+- (unsigned long long)_t1_ctaButtonVariationForBucket:(id)arg1;
+- (unsigned long long)_t1_mapCtaButtonVariation;
+- (unsigned long long)_t1_wclCtaButtonVariation;
+- (_Bool)_t1_isMapCTAButtonVariationsExperimentEnabled;
+- (_Bool)_t1_isWclCTAButtonVariationsExperimentEnabled;
 - (_Bool)_t1_useAppStoreAsSubtitle;
 - (_Bool)_t1_shouldUnifiedCardCarouselsShowAppRatings;
 - (id)_t1_cardData:(id)arg1 withComponentsTransform:(CDUnknownBlockType)arg2;

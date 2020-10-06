@@ -9,7 +9,7 @@
 #import <T1Twitter/T1PromptDataSource-Protocol.h>
 #import <T1Twitter/TNLRequestDelegate-Protocol.h>
 
-@class NSArray, NSString, NSURL, T1PromptImageSpec, T1PromptTextSpec, UIImage;
+@class NSArray, NSString, NSURL, T1PromptContentViewSpec, T1PromptImageSpec, T1PromptTextSpec, UIImage;
 
 @interface T1DownloadPeriscopePromptViewController : T1PromptViewController <TNLRequestDelegate, T1PromptDataSource>
 {
@@ -40,6 +40,7 @@
 
 // Remaining properties
 @property(readonly, nonatomic) unsigned long long buttonLayout;
+@property(readonly, nonatomic) T1PromptContentViewSpec *contentViewSpec;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) T1PromptTextSpec *detailTextSpec;

@@ -28,6 +28,7 @@
     // Error parsing type: , name: isCustomCoFleetLayout
     // Error parsing type: , name: isFeatureHighlightEntry
     // Error parsing type: , name: isFleetcast
+    // Error parsing type: , name: fleetATweetStatus
     // Error parsing type: , name: tombstoneDisplay
     // Error parsing type: , name: attributedTextModel
 }

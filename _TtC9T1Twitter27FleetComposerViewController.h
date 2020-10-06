@@ -34,9 +34,12 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_textBackgroundView
     // Error parsing type: , name: $__lazy_storage_$_mediaPreviewInputView
     // Error parsing type: , name: $__lazy_storage_$_authorizationViewController
+    // Error parsing type: , name: showAutocomplete
     // Error parsing type: , name: $__lazy_storage_$_autocompleteViewController
+    // Error parsing type: , name: $__lazy_storage_$_visibleAutocompleteAreaLayoutGuide
     // Error parsing type: , name: $__lazy_storage_$_visibleCanvasLayoutGuide
     // Error parsing type: , name: $__lazy_storage_$_keyboardLayoutGuide
+    // Error parsing type: , name: $__lazy_storage_$_canAddAltText
 }
 
 - (void).cxx_destruct;

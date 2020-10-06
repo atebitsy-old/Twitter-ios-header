@@ -20,6 +20,7 @@
     // Error parsing type: , name: receiveDMsFromAnyone
     // Error parsing type: , name: dmReadReceiptsEnabled
     // Error parsing type: , name: dmLowQualityFilterEnabled
+    // Error parsing type: , name: dmNSFWMediaFilterEnabled
     // Error parsing type: , name: connectToPeriscopeEnabled
     // Error parsing type: , name: safetySectionHeader
     // Error parsing type: , name: markMediaSensitiveEnabledItem

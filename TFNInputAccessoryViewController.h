@@ -6,12 +6,10 @@
 
 #import <UIKit/UIInputViewController.h>
 
-#import <TFNUI/TFNInputAccessoryControllerViewDelegate-Protocol.h>
-
-@class NSString, TFNInputAccessoryControllerView, UIView;
+@class TFNInputAccessoryControllerView, UIView;
 @protocol TFNInputAccessoryViewControllerDelegate;
 
-@interface TFNInputAccessoryViewController : UIInputViewController <TFNInputAccessoryControllerViewDelegate>
+@interface TFNInputAccessoryViewController : UIInputViewController
 {
     id <TFNInputAccessoryViewControllerDelegate> _delegate;
     double _accessoryHeight;
@@ -24,7 +22,8 @@
 @property(retain, nonatomic) UIView *hostView; // @synthesize hostView=_hostView;
 @property(nonatomic) double accessoryHeight; // @synthesize accessoryHeight=_accessoryHeight;
 @property(nonatomic) __weak id <TFNInputAccessoryViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void)inputAccessoryControllerView:(id)arg1 willMoveToSuperView:(id)arg2;
+- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (void)_tfn_main_hostViewDidChangeCenter;
@@ -33,10 +32,6 @@
 - (void)dealloc;
 
 // Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 @property(retain, nonatomic) TFNInputAccessoryControllerView *view; // @dynamic view;
 
 @end

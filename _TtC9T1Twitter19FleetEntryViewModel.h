@@ -21,6 +21,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: dataStore
     // Error parsing type: , name: videoLoops
     // Error parsing type: , name: isFeatureHighlightEntry
+    // Error parsing type: , name: __fleetATweetStatus
     // Error parsing type: , name: $__lazy_storage_$_content
     // Error parsing type: , name: $__lazy_storage_$_attributedTextModel
     // Error parsing type: , name: $__lazy_storage_$_originalTextModel

@@ -9,7 +9,7 @@
 @interface NSBundle (TEKAdditions)
 + (id)tek_oAuthConsumerSecret;
 + (id)tek_oAuthConsumerKey;
-+ (_Bool)_tek_isEmployeeBuild;
++ (_Bool)tek_isEmployeeBuild;
 + (id)tek_applicationKeychainOAuthIdentifier;
 + (id)tek_applicationGroupName;
 @end

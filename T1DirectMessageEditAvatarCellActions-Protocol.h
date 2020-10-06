@@ -6,9 +6,10 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
+@class T1DirectMessageAvatarImageView;
 @protocol TFNDataViewCell;
 
 @protocol T1DirectMessageEditAvatarCellActions <NSObject>
-- (void)avatarCellDidTapAvatar:(id <TFNDataViewCell>)arg1;
+- (void)didTapAvatarImageView:(T1DirectMessageAvatarImageView *)arg1 inCell:(id <TFNDataViewCell>)arg2;
 @end
 

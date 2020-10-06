@@ -19,6 +19,8 @@
     // Error parsing type: , name: conversionsHelper
     // Error parsing type: , name: observer
     // Error parsing type: , name: listUpdateDelegate
+    // Error parsing type: , name: rankingModeObserver
+    // Error parsing type: , name: rankingMode
 }
 
 - (void).cxx_destruct;

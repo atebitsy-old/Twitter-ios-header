@@ -7,13 +7,13 @@
 #import <T1Twitter/NSObject-Protocol.h>
 
 @class T1DirectMessageAbstractConversationEntryCell, TFNDirectMessageUser, UIView;
-@protocol TFNDirectMessageConversationEntry;
+@protocol TFNDirectMessageConversationEntry, TFNMenuSupport;
 
 @protocol T1DirectMessageAbstractEntryCellDelegate <NSObject>
 
 @optional
 - (void)cellDidTapShowMore:(T1DirectMessageAbstractConversationEntryCell *)arg1;
-- (void)cell:(T1DirectMessageAbstractConversationEntryCell *)arg1 didLongPressAvatar:(UIView *)arg2 forUser:(TFNDirectMessageUser *)arg3;
+- (void)cell:(T1DirectMessageAbstractConversationEntryCell *)arg1 didLongPressAvatar:(UIView *)arg2 forUser:(TFNDirectMessageUser *)arg3 menuSource:(id <TFNMenuSupport>)arg4;
 - (void)cell:(T1DirectMessageAbstractConversationEntryCell *)arg1 didSelectUser:(TFNDirectMessageUser *)arg2 forEntry:(id <TFNDirectMessageConversationEntry>)arg3;
 @end
 

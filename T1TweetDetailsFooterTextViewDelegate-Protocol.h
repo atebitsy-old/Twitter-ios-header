@@ -8,6 +8,7 @@
 @protocol TFSActiveTextRange;
 
 @protocol T1TweetDetailsFooterTextViewDelegate
+- (void)tweetDetailsFooterTextViewDidTapBirdwatchButton:(T1TweetDetailsFooterTextView *)arg1;
 - (void)tweetDetailsFooterTextViewDidTapHiddenRepliesButton:(T1TweetDetailsFooterTextView *)arg1;
 - (void)tweetDetailsFooterTextView:(T1TweetDetailsFooterTextView *)arg1 didTapRange:(id <TFSActiveTextRange>)arg2 rect:(struct CGRect)arg3;
 @end

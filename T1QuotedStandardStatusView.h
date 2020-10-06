@@ -7,12 +7,14 @@
 #import <UIKit/UIView.h>
 
 #import <T1Twitter/T1LayoutableStatusView-Protocol.h>
+#import <T1Twitter/T1StatusViewEventHandler-Protocol.h>
 #import <T1Twitter/TFNComposableViewHost-Protocol.h>
+#import <T1Twitter/UIGestureRecognizerDelegate-Protocol.h>
 
-@class NSString, T1QuotedStatusErrorView, T1StatusLiveEngagementManager, T1StatusViewAccessibility, T1StatusViewCombinedViewModel, TFNComposableViewSet, TFNReusableViewCache, TFNTwitterAccount, TFSTwitterScribeContext;
+@class NSString, T1QuotedStatusErrorView, T1StatusLiveEngagementManager, T1StatusViewAccessibility, T1StatusViewCombinedViewModel, TFNComposableViewSet, TFNReusableViewCache, TFNTappableHighlightView, TFNTwitterAccount, TFSTwitterScribeContext;
 @protocol T1AutoplayViewContainer, T1BasicStatusView, T1CardViewDelegate, T1StatusViewEventHandler, T1StatusViewInlineActions, T1StatusViewInlineImages, T1StatusViewLayoutState, T1StatusViewModel, TFSTwitterScribableItem;
 
-@interface T1QuotedStandardStatusView : UIView <TFNComposableViewHost, T1LayoutableStatusView>
+@interface T1QuotedStandardStatusView : UIView <TFNComposableViewHost, T1StatusViewEventHandler, UIGestureRecognizerDelegate, T1LayoutableStatusView>
 {
     T1StatusViewCombinedViewModel *_viewModel;
     T1StatusViewAccessibility *_accessibility;
@@ -30,7 +32,11 @@
     UIView *_visibleInlineReplyView;
     TFNReusableViewCache *_reusableViewCache;
     unsigned long long _displayType;
+    CDUnknownBlockType _tapActionBlock;
+    CDUnknownBlockType _longPressActionBlock;
+    CDUnknownBlockType _statusViewEventHandlingBlock;
     T1QuotedStatusErrorView *_errorView;
+    TFNTappableHighlightView *_highlightView;
 }
 
 + (id)_t1_viewAdapterSetWithMaxWidth:(double)arg1;
@@ -38,7 +44,11 @@
 + (unsigned long long)defaultStatusOptionsForViewModel:(id)arg1 account:(id)arg2 options:(unsigned long long)arg3 displayType:(unsigned long long)arg4;
 + (id)layoutStateGenerator;
 - (void).cxx_destruct;
+@property(retain, nonatomic) TFNTappableHighlightView *highlightView; // @synthesize highlightView=_highlightView;
 @property(retain, nonatomic) T1QuotedStatusErrorView *errorView; // @synthesize errorView=_errorView;
+@property(copy, nonatomic) CDUnknownBlockType statusViewEventHandlingBlock; // @synthesize statusViewEventHandlingBlock=_statusViewEventHandlingBlock;
+@property(copy, nonatomic) CDUnknownBlockType longPressActionBlock; // @synthesize longPressActionBlock=_longPressActionBlock;
+@property(copy, nonatomic) CDUnknownBlockType tapActionBlock; // @synthesize tapActionBlock=_tapActionBlock;
 @property(readonly, nonatomic) unsigned long long displayType; // @synthesize displayType=_displayType;
 @property(retain, nonatomic) TFNReusableViewCache *reusableViewCache; // @synthesize reusableViewCache=_reusableViewCache;
 @property(nonatomic) unsigned long long conversationConnectorType; // @synthesize conversationConnectorType=_conversationConnectorType;
@@ -47,6 +57,10 @@
 @property(readonly, nonatomic) id <TFSTwitterScribableItem> scribableItem; // @synthesize scribableItem=_scribableItem;
 @property(copy, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(nonatomic) __weak id <T1StatusViewEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
+- (void)_t1_recognizerLongPressAction:(id)arg1;
+- (void)_t1_recognizerSingleTapAction:(id)arg1;
+- (void)_t1_pressedStateDidChange:(id)arg1;
+- (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)_t1_setupErrorView;
 - (void)_t1_setupViewBorder:(id)arg1;
 - (void)_t1_updateAccessibility:(id)arg1;
@@ -83,6 +97,7 @@
 @property(readonly, nonatomic) id <T1StatusViewModel> viewModel;
 - (void)unsetViewModelForView:(id)arg1;
 - (void)setViewModel:(id)arg1 options:(unsigned long long)arg2 account:(id)arg3;
+- (id)handleStatusViewEvent:(id)arg1;
 - (id)previewConfigurationForLocation:(struct CGPoint)arg1;
 - (_Bool)tfn_terminatesInvalidateIntrinsicContentSizeRecursion;
 - (void)invalidateIntrinsicContentSize;

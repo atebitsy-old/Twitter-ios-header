@@ -12,6 +12,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: delegate
     // Error parsing type: , name: imagePipeline
     // Error parsing type: , name: $__lazy_storage_$_placeholderBannerImage
+    // Error parsing type: , name: $__lazy_storage_$_listID
     // Error parsing type: , name: listNameLabel
     // Error parsing type: , name: listPrivateImageView
     // Error parsing type: , name: ownerAvatarImageView
@@ -29,13 +30,17 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: style
     // Error parsing type: , name: stringsProvider
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: isPinnedObserver
+    // Error parsing type: , name: cachedIsPinned
+    // Error parsing type: , name: isEnabledObserver
+    // Error parsing type: , name: cachedIsEnabled
 }
 
 - (void).cxx_destruct;
 - (void)followButtonWasTappedWithTapGestureRecognizer:(id)arg1;
 - (void)dismissButtonWasTapped;
 - (void)disabledPinTappedWithTapGestureRecognizer:(id)arg1;
-- (void)imageTappedWithTapGestureRecognizer:(id)arg1;
+- (void)pinnedImageTappedWithTapGestureRecognizer:(id)arg1;
 - (void)layoutSubviews;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)prepareForReuse;

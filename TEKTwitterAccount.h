@@ -34,6 +34,7 @@
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)initWithUserDefaultsDictionary:(id)arg1;
+- (id)initWithTFSAccount:(id)arg1;
 
 @end
 

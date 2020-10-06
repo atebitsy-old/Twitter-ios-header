@@ -12,10 +12,10 @@
 @interface T1ArchivedVisitedLinkService : NSObject
 {
     _Bool _hasLoadedFromDisk;
-    NSString *_visitedLinksCacheFile;
+    NSString *_serialLinksQueue_visitedLinksCacheFile;
     TFNTwitterAccount *_account;
     NSMutableSet *_visitedLinksSet;
-    NSObject<OS_dispatch_queue> *_concurrentLinksQueue;
+    NSObject<OS_dispatch_queue> *_serialLinksQueue;
 }
 
 + (void)purgeAllLinksFromDisk;
@@ -23,13 +23,14 @@
 + (id)sharedInstanceForAccount:(id)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool hasLoadedFromDisk; // @synthesize hasLoadedFromDisk=_hasLoadedFromDisk;
-@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *concurrentLinksQueue; // @synthesize concurrentLinksQueue=_concurrentLinksQueue;
+@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *serialLinksQueue; // @synthesize serialLinksQueue=_serialLinksQueue;
 @property(retain) NSMutableSet *visitedLinksSet; // @synthesize visitedLinksSet=_visitedLinksSet;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
-- (void)_t1_pruneExpiredVisitedLinks;
+- (void)_t1_serialLinksQueue_pruneExpiredVisitedLinks;
 - (void)loadLinksFromDisk;
 - (void)saveLinksToDisk;
-@property(readonly, nonatomic) NSString *visitedLinksCacheFile; // @synthesize visitedLinksCacheFile=_visitedLinksCacheFile;
+@property(readonly, nonatomic) NSString *serialLinksQueue_visitedLinksCacheFile; // @synthesize serialLinksQueue_visitedLinksCacheFile=_serialLinksQueue_visitedLinksCacheFile;
+- (void)markLinkAsVisited:(id)arg1;
 - (_Bool)isValidLink:(id)arg1;
 - (_Bool)hasVisitedLink:(id)arg1;
 - (_Bool)isLinkNewsArticle:(id)arg1;

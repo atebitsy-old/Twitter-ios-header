@@ -24,8 +24,9 @@
 - (void)switchAsListener;
 - (void)cancelSwitchAsSpeaker;
 - (void)switchAsSpeaker;
+- (void)shutdown;
 - (void)joinExistingRoomWithRoomID:(NSString *)arg1;
-- (void)createNewRoom;
+- (void)createNewRoomWithChannelID:(NSString *)arg1;
 - (void)removeGuestRoomControllerObserver:(id <PTVGuestRoomControllerObserver>)arg1;
 - (void)addGuestRoomControllerObserver:(id <PTVGuestRoomControllerObserver>)arg1;
 @end

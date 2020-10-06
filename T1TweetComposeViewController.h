@@ -20,21 +20,18 @@
 #import <T1Twitter/T1TweetDraftsViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1VideoTrimmerViewControllerDelegate-Protocol.h>
 #import <T1Twitter/T1VoiceRecordingViewControllerDelegate-Protocol.h>
-#import <T1Twitter/TFNInputAccessoryViewDelegate-Protocol.h>
 
 @class NSArray, NSString, T1AutocompleteController, T1ComposeDropManager, T1ComposeSessionConfig, T1CompositionState, T1ConversationControlTypeSelectionController, T1FoundMediaController, T1PhotoGalleryViewController, T1PhotoMediaRailViewController, T1TweetComposeAutocompleteViewController, T1TweetComposeConversationControlButton, T1TweetComposeTableViewController, T1TweetComposeTooltipper, T1VoiceRecordingPlaybackController, TFNBarButtonItem, TFNButtonBarView, TFNCircularCountProgressView, TFNDragDropIndicationView, TFNLegacyButton, TFNTwitterAccount, TFNTwitterComposition, TFNTwitterStatus, UIView;
 @protocol T1TweetComposeViewControllerDelegate;
 
-@interface T1TweetComposeViewController : TFNViewController <T1AltTextEducationPromptViewControllerDelegate, T1AltTextViewControllerDelegate, T1AutocompleteControllerDelegate, T1ComposeDropManagerDelegate, T1FiltersViewControllerDelegate, T1FoundMediaControllerDelegate, T1PeriscopeBroadcastViewControllerDelegate, T1PhotoGalleryViewControllerDelegate, T1PhotoMediaRailViewControllerDelegate, T1TweetComposeAutocompleteViewControllerDelegate, T1TweetComposeTableViewControllerDelegate, T1TweetDraftsViewControllerDelegate, T1VideoTrimmerViewControllerDelegate, TFNInputAccessoryViewDelegate, T1VoiceRecordingViewControllerDelegate>
+@interface T1TweetComposeViewController : TFNViewController <T1AltTextEducationPromptViewControllerDelegate, T1AltTextViewControllerDelegate, T1AutocompleteControllerDelegate, T1ComposeDropManagerDelegate, T1FiltersViewControllerDelegate, T1FoundMediaControllerDelegate, T1PeriscopeBroadcastViewControllerDelegate, T1PhotoGalleryViewControllerDelegate, T1PhotoMediaRailViewControllerDelegate, T1TweetComposeAutocompleteViewControllerDelegate, T1TweetComposeTableViewControllerDelegate, T1TweetDraftsViewControllerDelegate, T1VideoTrimmerViewControllerDelegate, T1VoiceRecordingViewControllerDelegate>
 {
     CDStruct_f33a756f _scribeFlags;
+    _Bool _isFlexibleParticipantsEnabled;
     _Bool _didChangeHasAttachments;
     _Bool _updatingCurrentComposeState;
     _Bool _isInWindowScene;
-    _Bool _twitterTextEditorEnabled;
     _Bool _mixedMediaGIFCreationEnabled;
-    _Bool _keyboardDocked;
-    _Bool _keyboardAnimating;
     _Bool _shouldFocusPollOnShow;
     TFNTwitterStatus *_repliedToStatus;
     id <T1TweetComposeViewControllerDelegate> _delegate;
@@ -67,14 +64,12 @@
     TFNLegacyButton *_sendButton;
     T1TweetComposeTooltipper *_tooltipper;
     TFNCircularCountProgressView *_progressView;
-    UIView *_inputAccessoryView;
     T1ComposeDropManager *_dropManager;
     TFNDragDropIndicationView *_dropIndicationView;
     TFNBarButtonItem *_closeButtonItem;
     TFNTwitterComposition *_originalFirstCompositionForSelfThreadPresentationScribeEvent;
     T1ConversationControlTypeSelectionController *_conversationControlTypeSelectionController;
     T1VoiceRecordingPlaybackController *_voiceRecordingPlaybackController;
-    struct CGRect _keyboardFrameInWindow;
 }
 
 - (void).cxx_destruct;
@@ -85,10 +80,6 @@
 @property(retain, nonatomic) TFNDragDropIndicationView *dropIndicationView; // @synthesize dropIndicationView=_dropIndicationView;
 @property(retain, nonatomic) T1ComposeDropManager *dropManager; // @synthesize dropManager=_dropManager;
 @property(nonatomic) _Bool shouldFocusPollOnShow; // @synthesize shouldFocusPollOnShow=_shouldFocusPollOnShow;
-@property(retain, nonatomic) UIView *inputAccessoryView; // @synthesize inputAccessoryView=_inputAccessoryView;
-@property(nonatomic) struct CGRect keyboardFrameInWindow; // @synthesize keyboardFrameInWindow=_keyboardFrameInWindow;
-@property(nonatomic) _Bool keyboardAnimating; // @synthesize keyboardAnimating=_keyboardAnimating;
-@property(nonatomic) _Bool keyboardDocked; // @synthesize keyboardDocked=_keyboardDocked;
 @property(retain, nonatomic) TFNCircularCountProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) T1TweetComposeTooltipper *tooltipper; // @synthesize tooltipper=_tooltipper;
 @property(retain, nonatomic) TFNLegacyButton *sendButton; // @synthesize sendButton=_sendButton;
@@ -115,7 +106,6 @@
 @property(retain, nonatomic) T1TweetComposeAutocompleteViewController *autocompleteViewController; // @synthesize autocompleteViewController=_autocompleteViewController;
 @property(nonatomic) __weak T1PhotoGalleryViewController *currentPhotoGalleryViewController; // @synthesize currentPhotoGalleryViewController=_currentPhotoGalleryViewController;
 @property(nonatomic, getter=isMixedMediaGIFCreationEnabled) _Bool mixedMediaGIFCreationEnabled; // @synthesize mixedMediaGIFCreationEnabled=_mixedMediaGIFCreationEnabled;
-@property(readonly, nonatomic, getter=isTwitterTextEditorEnabled) _Bool twitterTextEditorEnabled; // @synthesize twitterTextEditorEnabled=_twitterTextEditorEnabled;
 @property(readonly, nonatomic) _Bool isInWindowScene; // @synthesize isInWindowScene=_isInWindowScene;
 @property(retain, nonatomic) T1CompositionState *compositionState; // @synthesize compositionState=_compositionState;
 @property(nonatomic, getter=isUpdatingCurrentComposeState) _Bool updatingCurrentComposeState; // @synthesize updatingCurrentComposeState=_updatingCurrentComposeState;
@@ -180,7 +170,6 @@
 - (void)foundMediaController:(id)arg1 viewControllerDidCancel:(id)arg2;
 - (void)foundMediaController:(id)arg1 viewController:(id)arg2 didSelectFoundMediaItem:(id)arg3;
 - (_Bool)tfn_prefersNavigationBarShadowHidden;
-- (void)inputAccessoryView:(id)arg1 keyboardDidChangePosition:(struct CGPoint)arg2;
 - (void)_t1_presentModalViewController:(id)arg1 fromRect:(struct CGRect)arg2 inView:(id)arg3 preferredPresentationStyle:(long long)arg4 layoutDelegate:(id)arg5 delegate:(id)arg6;
 - (void)_t1_presentModalViewController:(id)arg1 fromRect:(struct CGRect)arg2 inView:(id)arg3 preferredPresentationStyle:(long long)arg4 layoutDelegate:(id)arg5;
 - (void)_t1_presentPopoverModalViewController:(id)arg1 fromRect:(struct CGRect)arg2 inView:(id)arg3;
@@ -257,6 +246,7 @@
 - (id)_t1_scribeSectionForMediaAttachment;
 - (void)_t1_presentFoundMediaViewControllerFromView:(id)arg1;
 - (_Bool)isFoundMediaEnabled;
+- (void)_t1_notifyDidRetweetFromCompositionIfNeeded:(id)arg1 retweetID:(id)arg2 account:(id)arg3;
 - (void)_t1_handleRetweet;
 - (id)_t1_prepareCompositionsWithReplyChain;
 - (void)_t1_ensureSavedToPhotoLibrary:(id)arg1;
@@ -272,6 +262,7 @@
 - (void)_t1_didTapFoundMediaButton:(id)arg1;
 - (void)_t1_didTapDraftsButton:(id)arg1;
 - (void)_t1_completeComposing;
+- (void)_t1_willCompleteComposing;
 - (void)_t1_cancelComposing;
 - (void)_t1_closeActionWithEvent:(id)arg1 shouldPresentAsMenu:(_Bool)arg2;
 - (void)_t1_didTapCloseButton:(id)arg1 event:(id)arg2;
@@ -306,10 +297,7 @@
 - (id)_t1_buttonWithImageName:(id)arg1 selectedImageName:(id)arg2;
 - (struct CGRect)_t1_visibleRect;
 - (struct CGRect)_t1_visibleRectWithoutKeyboard;
-- (void)_t1_updateKeyboardFrameWithUserInfo:(id)arg1;
-- (void)_t1_keyboardWillHide:(id)arg1;
-- (void)_t1_keyboardWillChangeFrame:(id)arg1;
-- (void)_t1_keyboardWillShow:(id)arg1;
+- (void)_t1_keyboardDidChange:(id)arg1;
 - (void)autocompleteController:(id)arg1 didReceiveResult:(id)arg2;
 - (void)autocompleteControllerDidEnd:(id)arg1;
 - (void)autocompleteControllerDidBegin:(id)arg1;

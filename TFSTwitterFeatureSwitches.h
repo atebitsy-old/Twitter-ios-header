@@ -43,6 +43,7 @@
 - (id)bucketNameForExperimentKey:(id)arg1 honoringLongtermHoldbackKey:(id)arg2;
 - (double)unsafePeekDoubleForKey:(id)arg1;
 - (_Bool)unsafePeekBoolForKey:(id)arg1;
+- (id)unsafePeekSetForKey:(id)arg1;
 - (id)unsafePeekArrayForKey:(id)arg1;
 - (id)unsafePeekStringForKey:(id)arg1;
 - (long long)unsafePeekIntegerForKey:(id)arg1;
@@ -57,6 +58,7 @@
 - (void)refreshIfNecessaryWithAccountID:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)refreshWithAccountID:(id)arg1 maxStale:(double)arg2 timeout:(double)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)refreshWithAccountID:(id)arg1 maxStale:(double)arg2 completion:(CDUnknownBlockType)arg3;
+- (id)setForKey:(id)arg1;
 - (id)rawValueForKey:(id)arg1;
 - (id)arrayForKey:(id)arg1;
 - (id)stringForKey:(id)arg1;

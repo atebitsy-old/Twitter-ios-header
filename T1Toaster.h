@@ -7,17 +7,18 @@
 #import <objc/NSObject.h>
 
 #import <T1Twitter/T1ToastViewControllerDelegate-Protocol.h>
+#import <T1Twitter/TFNViewControllerEventObserver-Protocol.h>
 
-@class NSDate, NSMutableArray, NSString, T1ToastBox, T1ToastViewController, TFNTwitterScribe, TFNViewController, TFSTimer, TIPImagePipeline, UINotificationFeedbackGenerator;
-@protocol T1ToasterContextDelegate;
+@class NSDate, NSMutableArray, NSString, T1ToastBox, T1ToastViewController, TFNTwitterScribe, TFSTimer, TIPImagePipeline, UINotificationFeedbackGenerator, UIViewController;
+@protocol TFNViewControllerVisibility><T1ToasterContextDelegate;
 
-@interface T1Toaster : NSObject <T1ToastViewControllerDelegate>
+@interface T1Toaster : NSObject <TFNViewControllerEventObserver, T1ToastViewControllerDelegate>
 {
     _Bool _enabled;
     _Bool _isTimerFiring;
     TIPImagePipeline *_imagePipeline;
     TFNTwitterScribe *_scribe;
-    TFNViewController<T1ToasterContextDelegate> *_contextDelegate;
+    UIViewController<TFNViewControllerVisibility><T1ToasterContextDelegate> *_contextDelegate;
     unsigned long long _state;
     NSMutableArray *_queue;
     T1ToastBox *_activeToastBox;
@@ -41,7 +42,7 @@
 @property(retain, nonatomic) T1ToastBox *activeToastBox; // @synthesize activeToastBox=_activeToastBox;
 @property(retain, nonatomic) NSMutableArray *queue; // @synthesize queue=_queue;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
-@property(nonatomic) __weak TFNViewController<T1ToasterContextDelegate> *contextDelegate; // @synthesize contextDelegate=_contextDelegate;
+@property(nonatomic) __weak UIViewController<TFNViewControllerVisibility><T1ToasterContextDelegate> *contextDelegate; // @synthesize contextDelegate=_contextDelegate;
 @property(retain, nonatomic) TFNTwitterScribe *scribe; // @synthesize scribe=_scribe;
 @property(retain, nonatomic) TIPImagePipeline *imagePipeline; // @synthesize imagePipeline=_imagePipeline;
 @property(nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
@@ -56,6 +57,8 @@
 - (void)toastViewController:(id)arg1 didPresentToast:(id)arg2;
 - (void)toastViewController:(id)arg1 willPresentToast:(id)arg2;
 - (void)toastViewController:(id)arg1 didInvokeToastAction:(id)arg2 forToast:(id)arg3;
+- (void)viewControllerViewDidFullyDisappear:(id)arg1;
+- (void)viewControllerViewDidFullyAppear:(id)arg1;
 - (void)_t1_applicationDidEnterBackground:(id)arg1;
 - (void)_t1_timerDidFinish;
 - (void)_t1_startToastTimerWithInterval:(double)arg1;
@@ -70,6 +73,7 @@
 - (void)pushToast:(id)arg1;
 - (void)registerToastViewController:(id)arg1;
 - (void)resetToaster;
+- (void)dealloc;
 - (id)init;
 
 // Remaining properties

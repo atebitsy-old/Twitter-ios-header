@@ -6,7 +6,7 @@
 
 #import <T1Twitter/NSObject-Protocol.h>
 
-@class NSSet, NSString, UIColor, UIFont, UIImage;
+@class NSSet, NSString, UIColor, UIFont;
 @protocol T1InfoTextLayoutSpec;
 
 @protocol T1InfoTextLayoutSpec <NSObject>
@@ -16,7 +16,8 @@
 @property(nonatomic, readonly) _Bool renderFromRight;
 @property(nonatomic, readonly) _Bool isTitleMultiline;
 @property(nonatomic, readonly) struct CGSize badgeSize;
-@property(nonatomic, readonly) UIImage *badge;
+@property(nonatomic, readonly) UIColor *badgeFillColor;
+@property(nonatomic, readonly) NSString *badgeName;
 @property(nonatomic, readonly) UIFont *font;
 @property(nonatomic, readonly) UIColor *color;
 @property(nonatomic, readonly) NSSet *detailsHyperlinks;

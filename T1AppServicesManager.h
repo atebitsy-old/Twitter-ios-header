@@ -54,7 +54,7 @@
 - (void)_scheduleSaveLoginVerification;
 - (void)_scheduleGeoDataStartup;
 - (void)_schedulePushRegistration;
-- (void)_beginMonitoringKeyboardNotifications;
+- (void)_beginObservingKeyboard;
 - (void)_t1_configureDismissButtonWithAccount:(id)arg1;
 - (void)_t1_configureTwitterText;
 - (void)_t1_startCacheManager;

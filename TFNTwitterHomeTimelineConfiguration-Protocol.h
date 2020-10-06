@@ -10,6 +10,8 @@
 @protocol TNUNetworkQualityProvider;
 
 @protocol TFNTwitterHomeTimelineConfiguration <NSObject>
+@property(nonatomic, readonly) _Bool isVisibilityByItemPathTrackingEnabled;
+@property(nonatomic, readonly) _Bool isConsecutiveAdDedupPreventionEnabled;
 @property(nonatomic, readonly) _Bool isAsyncPrefetchRequestEnabled;
 @property(nonatomic, readonly) _Bool isHomeConversationHoistingPreventionEnabled;
 @property(nonatomic, readonly) _Bool isEmptyChunkClearingEnabled;

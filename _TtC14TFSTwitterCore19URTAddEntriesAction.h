@@ -15,6 +15,7 @@
     // Error parsing type: , name: deduplicateStatusIDs
     // Error parsing type: , name: allowDuplicateContentToPreventHoisting
     // Error parsing type: , name: ancestorModuleConstruction
+    // Error parsing type: , name: consecutiveAdDedupPreventionEnabled
 }
 
 @end

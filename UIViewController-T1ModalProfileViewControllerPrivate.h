@@ -27,6 +27,7 @@
 - (id)t1_showHiddenTweetsActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
 - (id)t1_unhideTweetActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
 - (id)t1_hideTweetActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 shouldIncludeAMRSubtitlesIfNeeded:(_Bool)arg4;
+- (id)t1_contributeToBirdwatchActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
 - (id)t1_translationsSettingActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3;
 - (id)t1_reportTweetActionItemForStatus:(id)arg1 account:(id)arg2 scribeContext:(id)arg3 shouldIncludeAMRSubtitlesIfNeeded:(_Bool)arg4;
 - (id)t1_deleteTweetActionItemForStatus:(id)arg1 account:(id)arg2 isInlineSource:(_Bool)arg3 scribeContext:(id)arg4;
@@ -79,6 +80,7 @@
 - (id)t1_standardActionButtonItemsWithAccount:(id)arg1;
 - (id)t1_standardActionButtonItemCategoriesWithAccount:(id)arg1;
 - (id)t1_buttonItemForCategory:(unsigned long long)arg1;
+- (id)_t1_buttonItemForCategory:(unsigned long long)arg1 account:(id)arg2;
 - (id)t1_actionButtonItemsWithAccount:(id)arg1;
 - (id)t1_actionButtonItemCategoriesWithAccount:(id)arg1;
 @property(readonly, nonatomic) _Bool tav_isPlayerViewAlwaysVisibile;
@@ -102,6 +104,7 @@
 - (_Bool)contactViewController:(id)arg1 shouldPerformDefaultActionForContactProperty:(id)arg2;
 - (void)contactPicker:(id)arg1 didSelectContact:(id)arg2;
 - (void)contactPickerDidCancel:(id)arg1;
+- (CDUnknownBlockType)_t1_openURLActionForURL:(id)arg1 account:(id)arg2 scribeParameters:(id)arg3;
 - (id)_t1_togglePinnedTweetActionItemWithStatus:(id)arg1 account:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4 scribeComponent:(id)arg5;
 - (id)_t1_adsInfoActionItem:(id)arg1 account:(id)arg2;
 - (id)_t1_copyLinkToTweetActionItem:(id)arg1 account:(id)arg2;
@@ -146,10 +149,17 @@
 - (id)t1_retweetMenuSheetForStatus:(id)arg1 account:(id)arg2 source:(id)arg3 scribeParameters:(id)arg4 willQuoteRetweetBlock:(CDUnknownBlockType)arg5 doneBlock:(CDUnknownBlockType)arg6;
 - (id)t1_retweetMenuSheetForStatus:(id)arg1 account:(id)arg2 source:(id)arg3 doneBlock:(CDUnknownBlockType)arg4;
 - (CDUnknownBlockType)_t1_fleetActionForStatus:(id)arg1 account:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4 scribeComponent:(id)arg5 scribeElement:(id)arg6 parameters:(id)arg7;
-- (CDUnknownBlockType)_t1_retweetWithCommentActionForStatus:(id)arg1 account:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4 scribeComponent:(id)arg5 scribeElement:(id)arg6 parameters:(id)arg7 willQuoteRetweetBlock:(CDUnknownBlockType)arg8;
-- (CDUnknownBlockType)_t1_retweetActionForStatus:(id)arg1 account:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4 scribeComponent:(id)arg5 scribeElement:(id)arg6 parameters:(id)arg7;
+- (CDUnknownBlockType)_t1_retweetWithCommentActionForStatus:(id)arg1 account:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4 scribeComponent:(id)arg5 scribeElement:(id)arg6 parameters:(id)arg7 willQuoteRetweetBlock:(CDUnknownBlockType)arg8 articleNudgeScribeParameters:(id)arg9;
+- (CDUnknownBlockType)_t1_retweetActionForStatus:(id)arg1 account:(id)arg2 scribePage:(id)arg3 scribeSection:(id)arg4 scribeComponent:(id)arg5 scribeElement:(id)arg6 parameters:(id)arg7 articleNudgeScribeParameters:(id)arg8;
 - (id)t1_retweetActionSheetForStatus:(id)arg1 account:(id)arg2 source:(id)arg3 scribeParameters:(id)arg4 willQuoteRetweetBlock:(CDUnknownBlockType)arg5 doneBlock:(CDUnknownBlockType)arg6;
 - (id)t1_retweetActionSheetForStatus:(id)arg1 account:(id)arg2 source:(id)arg3 doneBlock:(CDUnknownBlockType)arg4;
+- (void)_t1_scribeArticleNudgeResult:(id)arg1 account:(id)arg2 parameters:(id)arg3;
+- (void)_t1_scribeArticleNudgeAction:(id)arg1 elementIfRead:(id)arg2 elementIfDidNotRead:(id)arg3 urlEntity:(id)arg4 account:(id)arg5 status:(id)arg6 withParameters:(id)arg7;
+- (void)_t1_scribeArticleNudgeDidCancelRetweetStatus:(id)arg1 withURL:(id)arg2 fromAccount:(id)arg3 withParameters:(id)arg4;
+- (void)_t1_scribeArticleNudgeDidRetweetStatusWithComment:(id)arg1 withURL:(id)arg2 fromAccount:(id)arg3 withParameters:(id)arg4;
+- (void)_t1_scribeArticleNudgeDidRetweetStatus:(id)arg1 withURL:(id)arg2 fromAccount:(id)arg3 withParameters:(id)arg4;
+- (void)_t1_scribeArticleNudgeDidReadArticleFromAccount:(id)arg1 withParameters:(id)arg2;
+- (void)_t1_scribeArticleNudgeImpressionForAccount:(id)arg1 withParameters:(id)arg2;
 - (void)_t1_scribeAction:(id)arg1 forStatus:(id)arg2 scribeSection:(id)arg3 element:(id)arg4 impressionParameters:(id)arg5 cardEvent:(id)arg6 account:(id)arg7;
 - (void)_t1_scribeProfileClickForStatus:(id)arg1 scribeSection:(id)arg2 element:(id)arg3 impressionParameters:(id)arg4 cardEvent:(id)arg5 account:(id)arg6;
 - (void)t1_scribeUserRecommendationTapForStatus:(id)arg1 scribeSection:(id)arg2 scribeAction:(id)arg3 impressionParameters:(id)arg4 cardEvent:(id)arg5 account:(id)arg6;

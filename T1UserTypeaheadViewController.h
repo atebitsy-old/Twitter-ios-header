@@ -8,7 +8,7 @@
 
 #import <T1Twitter/T1TypeaheadUserTableRowHost-Protocol.h>
 
-@class NSMutableSet, NSSet, NSString, T1TypeaheadUserTableRowAdapter, TFNTwitterAccount, TFSObjectCache;
+@class NSMapTable, NSMutableSet, NSSet, NSString, T1TypeaheadUserTableRowAdapter, T1UserTypeaheadViewControllerResults, TFNTwitterAccount, TFSObjectCache, TFSTwitterScribeContext;
 @protocol T1UserTypeaheadViewControllerDelegate;
 
 @interface T1UserTypeaheadViewController : TFNItemsDataViewController <T1TypeaheadUserTableRowHost>
@@ -20,17 +20,26 @@
     TFNTwitterAccount *_account;
     T1TypeaheadUserTableRowAdapter *_userAdapter;
     unsigned long long _typeaheadSource;
+    TFSTwitterScribeContext *_scribeContext;
     TFSObjectCache *_resultsCache;
+    T1UserTypeaheadViewControllerResults *_results;
+    NSMapTable *_scribeItemIndex;
 }
 
++ (id)_t1_scribeItemForUserReference:(id)arg1 token:(id)arg2;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSMapTable *scribeItemIndex; // @synthesize scribeItemIndex=_scribeItemIndex;
+@property(retain, nonatomic) T1UserTypeaheadViewControllerResults *results; // @synthesize results=_results;
 @property(retain, nonatomic) TFSObjectCache *resultsCache; // @synthesize resultsCache=_resultsCache;
 @property(readonly, nonatomic, getter=isLocalSearchEnabled) _Bool localSearchEnabled; // @synthesize localSearchEnabled=_localSearchEnabled;
+@property(readonly, copy, nonatomic) TFSTwitterScribeContext *scribeContext; // @synthesize scribeContext=_scribeContext;
 @property(readonly, nonatomic) unsigned long long typeaheadSource; // @synthesize typeaheadSource=_typeaheadSource;
 @property(readonly, nonatomic) T1TypeaheadUserTableRowAdapter *userAdapter; // @synthesize userAdapter=_userAdapter;
 @property(readonly, nonatomic) TFNTwitterAccount *account; // @synthesize account=_account;
 @property(copy, nonatomic) NSString *typeaheadString; // @synthesize typeaheadString=_typeaheadString;
 @property(nonatomic) __weak id <T1UserTypeaheadViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)_t1_scribeClickForItem:(id)arg1;
+- (void)_t1_scribeResultsImpression;
 - (void)_t1_applyCheckedStateForUser:(id)arg1 toCell:(id)arg2;
 - (void)_t1_invalidateCheckedStateForUsers:(id)arg1;
 - (void)typeaheadUserAdapter:(id)arg1 didSelectUser:(id)arg2 atIndexPath:(id)arg3;
@@ -41,7 +50,7 @@
 - (void)viewDidLoad;
 - (id)initWithCollectionViewLayout:(id)arg1;
 - (id)init;
-- (id)initWithAccount:(id)arg1 typeaheadSource:(unsigned long long)arg2 localSearchEnabled:(_Bool)arg3;
+- (id)initWithAccount:(id)arg1 typeaheadSource:(unsigned long long)arg2 scribeContext:(id)arg3 localSearchEnabled:(_Bool)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
